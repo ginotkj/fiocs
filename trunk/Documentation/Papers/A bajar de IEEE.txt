@@ -1,0 +1,6 @@
+Investigation of millisecond-long analog single-event transients in the LM6144 op amp
+
+web: http://ieeexplore.ieee.org/Xplore/login.jsp?url=/iel5/23/29973/01369521.pdf?temp=x
+
+
+----------------------------------------------------------------------------------------
