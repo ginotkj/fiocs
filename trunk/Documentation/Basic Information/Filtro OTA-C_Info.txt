@@ -1,0 +1,15 @@
+Resistencias en circuitos integrados
+- MRC (MOS Resistive Circuit)
+- DMDR (Double MOSFET Differential Resistor)
+- Czarnul-Song (cancela las no linealidades de un MOS y mejores resultados para altas frecuencuas)
+
+
+Problemas:
+- Variabilidad en el proceso de fabricacion
+- Ajusgte laser no viable por aumento de coste
+- Variabilidad por temperatura y envejecimiento de los componentes
+- Parasitos de magnitudes comparables a la de los componentes  del circuito
+
+Solucion
+- OAT (On-Chip Automatic Tuning)
+- AGC (Automatic Gain Control)
