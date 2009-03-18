@@ -4,3 +4,19 @@ web: http://ieeexplore.ieee.org/Xplore/login.jsp?url=/iel5/23/29973/01369521.pdf
 
 Status: Added.
 ----------------------------------------------------------------------------------------
+
+sIMULATION OF COSMIC-RAY INDUCED SOFT ERRORS and latchup in intregated-circuit computer memories
+
+
+
+
+-----------------------------------------------------------------------------------------
+
+Basic mechanisms and modeling of single event upset in digital microelectronics
+
+
+
+
+
+-----------------------------------------------------------------------------------------
+
