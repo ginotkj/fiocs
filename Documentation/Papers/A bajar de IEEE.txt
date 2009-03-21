@@ -1,22 +1,15 @@
 Investigation of millisecond-long analog single-event transients in the LM6144 op amp
-
-web: http://ieeexplore.ieee.org/Xplore/login.jsp?url=/iel5/23/29973/01369521.pdf?temp=x
-
+WEB: http://ieeexplore.ieee.org/Xplore/login.jsp?url=/iel5/23/29973/01369521.pdf?temp=x
 Status: Added.
 ----------------------------------------------------------------------------------------
-
 sIMULATION OF COSMIC-RAY INDUCED SOFT ERRORS and latchup in intregated-circuit computer memories
-
-
-
-
+DOI: 10.1109/TNS.1979.4330278
+Status: Added
 -----------------------------------------------------------------------------------------
-
 Basic mechanisms and modeling of single event upset in digital microelectronics
-
-
-
-
-
+DOI: 10.1109/TNS.2003.813129
+Status: Added
 -----------------------------------------------------------------------------------------
-
+Parameter-free, predictive modeling of single event upsets due to protons, neutrons, and pions in terrestrial cosmic rays
+DOI: 10.1109/23.340543
+Status: Pending
