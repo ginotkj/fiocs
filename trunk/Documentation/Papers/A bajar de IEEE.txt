@@ -10,6 +10,3 @@ Basic mechanisms and modeling of single event upset in digital microelectronics
 DOI: 10.1109/TNS.2003.813129
 Status: Added
 -----------------------------------------------------------------------------------------
-Parameter-free, predictive modeling of single event upsets due to protons, neutrons, and pions in terrestrial cosmic rays
-DOI: 10.1109/23.340543
-Status: Pending
