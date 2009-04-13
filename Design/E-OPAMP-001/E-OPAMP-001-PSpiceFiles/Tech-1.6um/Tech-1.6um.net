@@ -1,0 +1,17 @@
+* source E-OPAMP-001
+M_M9         D9 0 D12 0 NMOS           
+M_M2         D10 0 D1 VDC_5 PMOS           
+M_M10         D10 D6 D11 0 NMOS           
+V_V4         VDC_1_3 0 1.3Vdc
+M_M3         D3 D1 VDC_5 VDC_5 PMOS           
+V_V1         VDC_5 0 5Vdc
+M_M11         D11 0 D12 0 NMOS           
+M_M4         D4 0 D3 VDC_5 PMOS           
+V_V2         VDC_3_3 0 3.3Vdc
+M_M12         D12 D5 0 0 NMOS           
+M_M5         D5 D5 D6 VDC_5 PMOS           
+M_M7         D5 D5 0 0 NMOS           
+M_M6         D6 D6 VDC_5 VDC_5 MbreakP           
+M_M8         D4 D6 D9 0 NMOS           
+V_V3         VDC_2 0 2Vdc
+M_M1         D1 D1 VDC_5 VDC_5 PMOS           
