@@ -11,7 +11,7 @@ V_V2         VDC_3_3 0 3.3Vdc
 M_M12         D12 D5 0 0 NMOS           
 M_M5         D5 D5 D6 VDC_5 PMOS           
 M_M7         D5 D5 0 0 NMOS           
-M_M6         D6 D6 VDC_5 VDC_5 MbreakP           
+M_M6         D6 D6 VDC_5 VDC_5 PMOS           
 M_M8         D4 D6 D9 0 NMOS           
 V_V3         VDC_2 0 2Vdc
 M_M1         D1 D1 VDC_5 VDC_5 PMOS           
