@@ -100,19 +100,30 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\e-opamp-001.dsn")
-      (Path "Design Resources" ".\e-opamp-001.dsn" "Tech-1.6um")
-      (Path "Design Resources" ".\e-opamp-001.dsn" "N-Substrate")
-      (Path "Design Resources" ".\e-opamp-001.dsn" "P-Substrate")
-      (Path "Design Resources" ".\e-opamp-001.dsn" "Teorico")
+      (Path "Design Resources"
+         "C:\Documents and Settings\fjferre1\My Documents\NOBACKUP\Tesis\Repo\Design\E-OPAMP-001\e-opamp-001.dsn")
+      (Path "Design Resources"
+         "C:\Documents and Settings\fjferre1\My Documents\NOBACKUP\Tesis\Repo\Design\E-OPAMP-001\e-opamp-001.dsn"
+         "Tech-1.6um")
+      (Path "Design Resources"
+         "C:\Documents and Settings\fjferre1\My Documents\NOBACKUP\Tesis\Repo\Design\E-OPAMP-001\e-opamp-001.dsn"
+         "N-Substrate")
+      (Path "Design Resources"
+         "C:\Documents and Settings\fjferre1\My Documents\NOBACKUP\Tesis\Repo\Design\E-OPAMP-001\e-opamp-001.dsn"
+         "P-Substrate")
+      (Path "Design Resources"
+         "C:\Documents and Settings\fjferre1\My Documents\NOBACKUP\Tesis\Repo\Design\E-OPAMP-001\e-opamp-001.dsn"
+         "Teorico")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
       (Path "PSpice Resources" "Simulation Profiles")
-      (Select "Design Resources" ".\e-opamp-001.dsn" "Teorico" "MAIN"))
+      (Select "Design Resources"
+         "C:\Documents and Settings\fjferre1\My Documents\NOBACKUP\Tesis\Repo\Design\E-OPAMP-001\e-opamp-001.dsn"
+         "Teorico" "MAIN"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 308 0 729"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 227 0 547"))
       (Tab 0))))
