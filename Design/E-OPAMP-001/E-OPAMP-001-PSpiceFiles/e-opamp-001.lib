@@ -1,5 +1,4 @@
 * PSpice Model Editor - Version 16.2.0
-
 *$
 .MODEL PMOS PMOS (                                LEVEL   = 7
 +VERSION = 3.1            TNOM    = 27             TOX     = 3.12E-8
