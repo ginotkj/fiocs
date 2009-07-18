@@ -1,0 +1,42 @@
+#!/usr/bin/perl
+#
+# Automated frontend to do huge amount of simulations
+#
+# Author:
+#        Facundo J. Ferrer <facundo.j.ferrer@gmail.com>
+#
+
+use IO::Dir;
+use strict;
+
+#function for tieed hash. The value of each key is a call to a File::stat function and each of
+# the following attributtes could be used:
+#namely, dev, ino, mode, nlink, uid, gid, rdev, size, atime, mtime, ctime, blksize, and blocks.
+
+my $d = IO::Dir->new("..");
+if (defined $d) {
+    while (defined($_ = $d->read)) { print "sin rewind $_\n"; }
+    $d->rewind;
+    while (defined($_ = $d->read)) { print "con rewind $_\n"; }
+    undef $d;
+}
+
+print "############################################################################################################\n";
+
+tie my %dir, 'IO::Dir', ".";
+
+while ( my ($key, $value) = each(%dir) ) {
+    print "$key => $value\n";
+}
+
+print "############################################################################################################\n";
+
+foreach (keys %dir) {
+    print $_, " SIZE: " , $dir{$_}->size,"\n";
+    sleep(5);
+    print $_, " UID: " , $dir{$_}->uid,"\n";
+    print $_, " GID: " , $dir{$_}->gid,"\n";
+#    print $_, " NAME: " , $dir{$_}->name,"\n";
+    print $_, " DEV: " , $dir{$_}->dev,"\n";
+    print $_, " MODE: " , $dir{$_}->mode,"\n";
+}
