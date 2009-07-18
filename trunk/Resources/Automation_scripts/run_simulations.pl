@@ -13,6 +13,90 @@ use strict;
 # the following attributtes could be used:
 #namely, dev, ino, mode, nlink, uid, gid, rdev, size, atime, mtime, ctime, blksize, and blocks.
 
+
+my $path = shift (@ARGV);
+my @folders;
+my $folder;
+my @projects;
+my $project;
+
+#############  funcion leer solo carpetas ######################
+sub read_dir {
+    print "funcion read_dir\n"; #debug
+    my $dir = IO::Dir->new("$path") or die "Could not open the dir: $path";
+    
+    print "path: $path\n"; #debug
+    if (defined $dir) {
+	while  (defined($_ = $dir->read)) {
+	    print "carpeta leida: $_\n"; #debug
+	    if (($_ ne ".") & ($_ ne "..") & ($_ ne ".svn")) {
+		push(@folders , $_);
+	    }
+#	    foreach $folder (@folders) {
+#		
+#	    }
+	}
+
+#	foreach $folder ( @folders ) {
+#	my $new_dir = $dir->open("$folder");
+#	print "carpeta chequeada $folder\n"; #debug
+#	print "newdir: $new_dir\n"; #debug
+#	if (defined $new_dir) {
+#	    print "carpeta pushed $folder\n"; #debug
+#	}
+#	}
+    }
+}
+################################################################
+
+#############  funcion leer solo carpetas ######################
+sub read_dir_2 {
+    tie my %dir, 'IO::Dir', "$path" or die "Could not open path $path\n";
+    
+    foreach (keys %dir) {
+	if (($_ ne ".") & ($_ ne "..") & ($_ ne ".svn")) {
+	    if  ($dir{$_}->mode eq "16877") { #16877 modo directorio
+		push(@folders , $_);
+	    }
+	}
+    }
+    untie %dir;
+}
+################################################################
+
+############### funcion determinar proyectos ###################
+sub read_project {
+    foreach $folder (@folders) {
+	my $new_path = $path.'/'.$folder;
+	tie my %dir, 'IO::Dir', "$new_path";
+
+	foreach (keys %dir) {
+#	    print "carpeta: $_\n";#debug
+	    if ($_ =~ /(.+)\.opj$/) {
+#		print "project $1\n";#debug
+		if ($1 eq $folder) {
+#		    print "se pusheo $1\n";#debug
+		    push(@projects , $1);
+		}
+	    }
+	}
+    }
+}
+################################################################
+
+#&read_dir;
+&read_dir_2;
+&read_project;
+
+my $num_proj = $#projects + 1;
+print "Proyectos encontrads: $num_proj\n";
+foreach $project (@projects) {
+    print "Proyecto: $project\n";
+}
+
+
+exit 1;
+
 my $d = IO::Dir->new("..");
 if (defined $d) {
     while (defined($_ = $d->read)) {
@@ -30,7 +114,7 @@ if (defined $d) {
 	$d->close;
 	my $h = $d->open("../run_simulations.pl");
 	if (defined $h) { print "Is a directory!!!\n"; } else { print "FUNCKING!!!\n" }      
-	my $h = $d->open("../../");
+	$h = $d->open("../../");
 	if (defined $h) { print "Is a directory!!!\n"; }
 	print $d;
 	print "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n";
@@ -62,7 +146,7 @@ print "#########################################################################
 
 tie my %dir, 'IO::Dir', "..";
 
-#while ( my ($key, $value) = each(%dir) ) {
+#while ( ($key, $value) = each(%dir) ) {
 #    print "$key => $value\n";
 #}
 
