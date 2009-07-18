@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# Automated frontend to do huge amount of simulations
+# Automated frontend to do huge amount of simulations with ngspice
 #
 # Author:
 #        Facundo J. Ferrer <facundo.j.ferrer@gmail.com>
