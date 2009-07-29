@@ -1,0 +1,87 @@
+
+**** 07/28/09 22:46:10 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\i-testcurrent-001-pspicefiles\schematic1\test.sim
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-testcurrent-001-pspicefiles/i-testcurrent-001.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.2\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100p 0.1p 0.001u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source I-TESTCURRENT-001
+I_I2         N16014 0 DC 0Adc AC 0Aac
++PULSE 0 .3m 1p 15p 30p 10p 0
+I_I1         N16014 0 DC 0Adc AC 0Aac
++PULSE 0 1m 1p 10p 10p 0 0
+R_R2         0 ITEST  1k TC=0,0 
+R_R1         N16014 ITEST  1k TC=0,0 
+
+**** RESUMING test.cir ****
+.END
+
+**** 07/28/09 22:46:10 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\i-testcurrent-001-pspicefiles\schematic1\test.sim
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(ITEST)    0.0000  (N16014)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 07/28/09 22:46:10 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\i-testcurrent-001-pspicefiles\schematic1\test.sim
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+
