@@ -1,0 +1,281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    DO NOT EDIT THIS PAGE! See http://newton.ex.ac.uk/schooldocs/it/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<HEAD>
+<TITLE>SPICE 3 User&#039;s Manual - Appendix C</TITLE>
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<link REL='SHORTCUT ICON' HREF='/favicon.ico'> 
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/screen2.css'> 
+<link media='print' rel='stylesheet' TYPE='text/css' href='/css/print.css'>
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/nosidebar.css'>
+</head>
+<body>
+
+<!--  START OF NEW HEADER -->
+<div id="x_wrapper">
+
+<!--
+<div class='maybemobile'>View this page on our
+<a href='http://m-newton.ex.ac.uk/teaching/resources/CDHW/Electronics2/userguide/secC.html'>mobile-friendly site</a>
+</div>
+-->
+
+<table width='100%' id="x_header" cellpadding=0 cellspacing=0 border=0><tr>
+  <td valign=top id="x_logo">
+     <a href="http://www.ex.ac.uk/" title="University of Exeter"><img src="/furniture/logo.gif" alt="University of Exeter" class="logo" width="162" height="60"></a>
+
+  <td valign=top id="x_department" align=left>
+    <a href='/' class='verytop'>School of Physics</a>
+    
+      
+  <td id="x_topnav" align=right valign=top>
+      <div id="supernav">
+          <a href="http://newton.ex.ac.uk/contact.html">Contact Us</a>
+          | <a href="http://newton.ex.ac.uk/schooldocs/">Staff</a>
+          | <a href="http://newton.ex.ac.uk/teaching/">Students</a>
+          | <a href="http://www.ex.ac.uk/myexeter/">MyExeter</a>
+          | <a href="http://newton.ex.ac.uk/quick-links/">Site map</a>
+        </div>
+
+        <div id="search">
+	  <form method="get" action="/cgi-bin/htsearch" 
+name="htsearchform" id="searchbox">
+                        <input class="search" id="words" name ='words'
+type="text" size="23" maxlength="80" title="Search the site"
+onfocus='if(this.value==this.defaultValue)  this.value="";' 
+value='  Search Physics'>
+                       <input type=hidden name='config' value='htdig'>
+<input name="submit" class="button" value="Search"  type="submit">
+
+          </form>
+        </div>
+    </table>
+<!-- NB div "wrapper" remains open -->
+<!--  END OF NEW HEADER -->
+
+
+<table cellspacing=0 cellpadding=0 class='phy-toptable'>
+
+<tr>
+
+<!-- SIDEBARROWSPAN = 2 -->
+
+
+
+
+<td valign='top'>
+      <div class="mainnav">
+        <ul>
+	<li><a 
+	href="/" title="School" 
+	class="studying">Home page</a>
+
+<li><a	href="/teaching/" title="Teaching" 
+	class="alumni">Our Teaching</a>
+
+<li><a 	href="/research/" title="Research" 
+	class="research">Our Research</a>
+
+<li><a 	href="/admissions/" title="Admissions" 
+	class="working">How to apply</a>
+
+<li><a 	href="/features/" title="News" 
+	class="business">News</a>
+
+<li><a 	href="/research/positions/" title="Jobs" 
+	class="jobs">Jobs</a>
+
+      </ul>
+    </div>
+
+
+<tr>
+<td class='phy-content' id='top' valign=top>
+<div class='e-topcrumbs'>  <a href='/'>Home</a>  <b>&rsaquo;</b> <a href='./../../../../'>Our Teaching</a> <b>&rsaquo;</b> <a href='./../../../'>Resources</a> <b>&rsaquo;</b> <a href='./../../'>CDHW</a> <b>&rsaquo;</b> <a href='./../'>Electronics2</a> <b>&rsaquo;</b> <a href='./'>Userguide</a> <b>&rsaquo;</b> <span class='crumbs_here'>secC.html</span></div>
+
+
+<div class='phy-realcontent'>
+
+
+
+
+
+
+
+<h1>SPICE 3 User&#039;s Manual - Appendix&nbsp;C</h1>
+
+
+
+
+
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+
+
+
+
+
+<h2><a name="C">APPENDIX C:  SPICE2 NONLINEAR DEPENDENT SOURCES</a></h2>
+<p>
+[Note: The SPICE3 <a href="sec3.html#3.2.3">non-linear sources</a> are not compatible with the poly()
+       syntax used in SPICE2.
+       This appendix is included to facilitate conversion of old source. <a href="/staff/CDHW/">CDHW</a>.]</p>
+ 
+
+SPICE2 allows circuits to contain dependent  sources  characterized by any of the four equations
+<pre>
+i=f(v)  v=f(v)  i=f(i)  v=f(i)
+</pre>
+where the functions must be polynomials, and the arguments may be multidimensional.   The  polynomial  functions are specified by a set of coefficients p0, p1, ..., pn.  Both the number  of  dimensions  and the number of coefficients are arbitrary.  The meaning of the coefficients depends upon the dimension of the polynomial, as shown in the following examples:
+<p>
+ Suppose that the function is  one-dimensional  (that  is,  a function  of one argument).  Then the function value fv is determined by the following expression in fa (the function argument):
+<pre>
+fv = p0 + (p1*fa) + (p2*fa**2) + (p3*fa**3) + (p4*fa**4) + (p5*fa**5) + ...
+</pre>
+ Suppose now that the function is two-dimensional, with arguments fa and fb.  Then the function value fv is determined by the following expression:
+<pre>
+fv = p0 + (p1*fa) +  (p2*fb)  +  (p3*fa**2)  +  (p4*fa*fb)  +  (p5*fb**2)
+        + (p6*fa**3)  +   (p7*fa**2*fb)   +   (p8*fa*fb**2)   +  (p9*fb**3) + ...
+</pre>
+ Consider now the  case  of  a  three-dimensional  polynomial function  with arguments fa, fb, and fc.  Then the function value fv is determined by the following expression:
+<pre>
+fv = p0  +  (p1*fa)  +  (p2*fb)  +  (p3*fc)  +  (p4*fa**2)  + (p5*fa*fb)
+ + (p6*fa*fc) + (p7*fb**2) + (p8*fb*fc)  +  (p9*fc**2)  + (p10*fa**3)
+ + (p11*fa**2*fb) + (p12*fa**2*fc) + (p13*fa*fb**2) + (p14*fa*fb*fc)
+ +  (p15*fa*fc**2)  +  (p16*fb**3)  +  (p17*fb**2*fc)   + (p18*fb*fc**2)
+ + (p19*fc**3) + (p20*fa**4) + ...
+</pre>
+ Note:  if the polynomial is one-dimensional and exactly  one coefficient  is specified, then SPICE assumes it to be p1 (and p0 = 0.0), in order to facilitate the  input  of  linear  controlled sources.
+<p>
+ For all four of the dependent sources described  below,  the initial  condition  parameter  is  described as optional.  If not specified, SPICE assumes 0 the initial  condition  for  dependent sources  is  an  initial 'guess' for the value of the controlling variable.  The program uses this initial condition to obtain  the dc  operating  point  of the circuit.  After convergence has been obtained, the program continues iterating  to  obtain  the  exact value  for the controlling variable.  Hence, to reduce the computational effort for the dc operating point (or if the  polynomial specifies  a  strong  nonlinearity),  a value fairly close to the actual controlling variable should be specified for  the  initial condition.
+
+<h3><a name="C.1">C.1 Voltage-Controlled Current Sources</a></h3>
+<pre>
+General form:
+
+GXXXXXXX N+ N- &lt;POLY(ND)&gt; NC1+ NC1- ... P0 &lt;P1 ...&gt; &lt;IC=...&gt;
+
+Examples:
+G1 1 0 5 3 0 0.1M
+GR 17 3 17 3 0 1M 1.5M IC=2V
+GMLT 23 17 POLY(2) 3 5 1 2 0 1M 17M 3.5U IC=2.5, 1.3
+</pre>
+ N+ and N- are the positive and negative nodes, respectively. Current  flow  is  from the positive node, through the source, to the negative node.  POLY(ND) only has  to  be  specified  if  the source is multi-dimensional (one-dimensional is the default).  If specified, ND is the number of dimensions, which  must  be  positive.   NC1+, NC1-, ... Are the positive and negative controlling nodes, respectively.  One pair of nodes  must  be  specified  for each   dimension.   P0,  P1,  P2,  ...,  Pn  are  the  polynomial coefficients.  The (optional) initial condition  is  the  initial guess  at  the  value(s)  of  the controlling voltage(s).  If not specified, 0.0 is assumed.  The polynomial specifies  the  source current  as a function of the controlling voltage(s).  The second example above describes a current source with value 
+<pre>
+       I = 1E-3*V(17,3) + 1.5E-3*V(17,3)**2
+</pre>
+note that since the source nodes are the same as the  controlling nodes, this source actually models a nonlinear resistor.
+
+<h3><a name="C.2">C.2 Voltage-Controlled Voltage Sources</a></h3>
+
+<pre>
+General form:
+
+EXXXXXXX N+ N- &lt;POLY(ND)&gt; NC1+ NC1- ... P0 &lt;P1 ...&gt; &lt;IC=...&gt;
+
+Examples:
+
+E1 3 4 21 17 10.5 2.1 1.75
+EX 17 0 POLY(3) 13 0 15 0 17 0 0 1 1 1 IC=1.5,2.0,17.35
+
+</pre>
+N+ and N- are the positive and negative nodes, respectively. POLY(ND)  only  has  to  be  specified  if  the  source is multidimensional (one-dimensional is the default).  If  specified,  ND is the number of dimensions, which must be positive.  NC1+, NC1-, ... are the positive  and  negative  controlling  nodes,  respectively.   One pair of nodes must be specified for each dimension. P0, P1,  P2,  ...,  Pn  are  the  polynomial  coefficients.   The (optional) initial condition is the initial guess at the value(s) of the controlling voltage(s).  If not specified, 0.0 is assumed. The  polynomial specifies the source voltage as a function of the controlling voltage(s).  The second  example  above  describes  a voltage source with value
+<pre>
+V = V(13,0) + V(15,0) + V(17,0)
+</pre>
+(in other words, an ideal voltage summer).
+<h3><a name="C.3">C.3 Current-Controlled Current Sources</a></h3>
+<pre>
+General form:
+
+FXXXXXXX N+ N- &lt;POLY(ND)&gt; VN1 &lt;VN2 ...&gt; P0 &lt;P1 ...&gt; &lt;IC=...&gt;
+
+Examples:
+
+F1 12 10 VCC 1MA 1.3M
+FXFER 13 20 VSENS 0 1
+</pre>
+
+N+ and N- are the positive and negative nodes, respectively. Current  flow  is  from the positive node, through the source, to the negative node.  POLY(ND) only has  to  be  specified  if  the source is multi-dimensional (one-dimensional is the default).  If specified, ND is the number of dimensions, which  must  be  positive.   VN1,  VN2,  ...  are the names of voltage sources through which the controlling current flows;  one name must be  specified for  each  dimension.   The  direction  of  positive  controlling current flow is from the positive node, through  the  source,  to the  negative  node  of each voltage source.  P0, P1, P2, ..., Pn are the polynomial coefficients.  The (optional)  initial  condition  is  the  initial  guess  at the value(s) of the controlling current(s) (in Amps).  If not specified,  0.0  is  assumed.   The polynomial specifies the source current as a function of the controlling current(s).  The first example above describes a current source with value
+<pre>
+       I = 1E-3 + 1.3E-3*I(VCC)
+</pre>
+<h3><a name="C.4">C.4 Current-Controlled Voltage Sources</a></h3>
+
+<pre>
+General form:
+
+HXXXXXXX N+ N- &lt;POLY(ND)&gt; VN1 &lt;VN2 ...&gt; P0 &lt;P1 ...&gt; &lt;IC=...&gt;
+
+Examples:
+
+HXY 13 20 POLY(2) VIN1 VIN2 0 0 0 0 1 IC=0.5 1.3
+HR 4 17 VX 0 0 1
+
+</pre>
+N+ and N- are the positive and negative nodes, respectively. POLY(ND)  only  has  to  be  specified  if  the  source is multidimensional (one-dimensional is the default).  If  specified,  ND is  the  number of dimensions, which must be positive.  VN1, VN2, ... are the names of voltage sources through which  the  controlling  current  flows;  one name must be specified for each dimension.  The direction of positive controlling current flow is from the  positive  node,  through the source, to the negative node of each voltage source.  P0, P1, P2,  ...,  Pn  are  the  polynomial coefficients.   The  (optional)  initial condition is the initial guess at the value(s) of the controlling  current(s)  (in  Amps). If  not  specified, 0.0 is assumed.  The polynomial specifies the source voltage as a function of the controlling current(s).   The first example above describes a voltage source with value
+<pre>
+       V = I(VIN1)*I(VIN2)
+</pre>
+
+<DIV class=NOPRINT>
+&nbsp;
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+</DIV>
+
+
+
+
+
+</div>
+
+<div class='phy-forcewidth'>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+</div>
+</table> <!-- End of main layout table -->
+<hr id=xphy-bottom2>
+
+<div class=noprint>
+<table width='100%' border=0>
+<tr>
+<td valign=middle align=left>
+
+<a href='http://validator.w3.org/check?uri=referer'>Validate</a>
+ &nbsp;  
+<a href='http://validator.w3.org/checklink?uri=referer'>Link-check</a>
+
+
+<td valign=middle align=center>
+
+<a href='http://newton.ex.ac.uk/general/copyright.html'>&copy; Copyright &amp; disclaimer</a>
+
+<td valign=middle align='right'>
+
+<!-- AddThis Button BEGIN -->
+<a href="http://www.addthis.com/bookmark.php" target=sharethis><img class=addit src="/furniture/addthis.gif" width="125" height="16" border="0" alt="Share" title="Add this page to your favourite social networking sites"></a>
+<!-- AddThis Button END -->
+
+</table>
+
+</div>
+
+</div> <!-- wrapper -->
+
+</body>
+</html>
