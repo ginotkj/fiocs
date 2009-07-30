@@ -1,0 +1,1624 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    DO NOT EDIT THIS PAGE! See http://newton.ex.ac.uk/schooldocs/it/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<HEAD>
+<TITLE>SPICE 3 User&#039;s Manual - Appendix B</TITLE>
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<link REL='SHORTCUT ICON' HREF='/favicon.ico'> 
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/screen2.css'> 
+<link media='print' rel='stylesheet' TYPE='text/css' href='/css/print.css'>
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/nosidebar.css'>
+</head>
+<body>
+
+<!--  START OF NEW HEADER -->
+<div id="x_wrapper">
+
+<!--
+<div class='maybemobile'>View this page on our
+<a href='http://m-newton.ex.ac.uk/teaching/resources/CDHW/Electronics2/userguide/secB.html'>mobile-friendly site</a>
+</div>
+-->
+
+<table width='100%' id="x_header" cellpadding=0 cellspacing=0 border=0><tr>
+  <td valign=top id="x_logo">
+     <a href="http://www.ex.ac.uk/" title="University of Exeter"><img src="/furniture/logo.gif" alt="University of Exeter" class="logo" width="162" height="60"></a>
+
+  <td valign=top id="x_department" align=left>
+    <a href='/' class='verytop'>School of Physics</a>
+    
+      
+  <td id="x_topnav" align=right valign=top>
+      <div id="supernav">
+          <a href="http://newton.ex.ac.uk/contact.html">Contact Us</a>
+          | <a href="http://newton.ex.ac.uk/schooldocs/">Staff</a>
+          | <a href="http://newton.ex.ac.uk/teaching/">Students</a>
+          | <a href="http://www.ex.ac.uk/myexeter/">MyExeter</a>
+          | <a href="http://newton.ex.ac.uk/quick-links/">Site map</a>
+        </div>
+
+        <div id="search">
+	  <form method="get" action="/cgi-bin/htsearch" 
+name="htsearchform" id="searchbox">
+                        <input class="search" id="words" name ='words'
+type="text" size="23" maxlength="80" title="Search the site"
+onfocus='if(this.value==this.defaultValue)  this.value="";' 
+value='  Search Physics'>
+                       <input type=hidden name='config' value='htdig'>
+<input name="submit" class="button" value="Search"  type="submit">
+
+          </form>
+        </div>
+    </table>
+<!-- NB div "wrapper" remains open -->
+<!--  END OF NEW HEADER -->
+
+
+<table cellspacing=0 cellpadding=0 class='phy-toptable'>
+
+<tr>
+
+<!-- SIDEBARROWSPAN = 2 -->
+
+
+
+
+<td valign='top'>
+      <div class="mainnav">
+        <ul>
+	<li><a 
+	href="/" title="School" 
+	class="studying">Home page</a>
+
+<li><a	href="/teaching/" title="Teaching" 
+	class="alumni">Our Teaching</a>
+
+<li><a 	href="/research/" title="Research" 
+	class="research">Our Research</a>
+
+<li><a 	href="/admissions/" title="Admissions" 
+	class="working">How to apply</a>
+
+<li><a 	href="/features/" title="News" 
+	class="business">News</a>
+
+<li><a 	href="/research/positions/" title="Jobs" 
+	class="jobs">Jobs</a>
+
+      </ul>
+    </div>
+
+
+<tr>
+<td class='phy-content' id='top' valign=top>
+<div class='e-topcrumbs'>  <a href='/'>Home</a>  <b>&rsaquo;</b> <a href='./../../../../'>Our Teaching</a> <b>&rsaquo;</b> <a href='./../../../'>Resources</a> <b>&rsaquo;</b> <a href='./../../'>CDHW</a> <b>&rsaquo;</b> <a href='./../'>Electronics2</a> <b>&rsaquo;</b> <a href='./'>Userguide</a> <b>&rsaquo;</b> <span class='crumbs_here'>secB.html</span></div>
+
+
+<div class='phy-realcontent'>
+
+
+
+
+
+
+
+<h1>SPICE 3 User&#039;s Manual - Appendix&nbsp;B</h1>
+
+
+
+
+
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+
+
+
+<h2><a name="B">APPENDIX B:  MODEL AND DEVICE PARAMETERS</a></h2>
+<p>The following tables summarize the parameters available on  each  of
+the devices and models in  (note that for some systems with  limited
+memory,  output  parameters  are  not available).   There are several
+tables for each type of device supported by .  Input parameters to
+instances and models are parameters that can occur on an instance or
+model definition line in the form "keyword=value"  where  "keyword"  is
+the  parameter  name  as given in the tables.  Default input parameters
+(such as the resistance  of  a  resistor  or  the capacitance  of  a
+capacitor) obviously do not need the keyword specified.</p>
+
+<p>Output parameters are those additional parameters which are
+available for many types of instances for the output of operating point
+and debugging information.  These parameters are  specified  as
+"@device[keyword]" and are available for the most recent point computed
+or, if specified in a "<a href="sec4.html#4.4.1">.save</a>" statement,
+for an entire simulation as a normal output vector.  Thus, to monitor
+the gate-to-source capacitance  of  a MOSFET, a command
+<pre><code>
+         save @m1[cgs]
+</code></pre>
+
+ given before a transient  simulation  causes  the  specified
+ capacitance  value to be saved at each timepoint, and a subsequent command such as
+
+<pre><code>
+         plot @m1[cgs]
+</code></pre>
+
+ produces the desired plot.  (Note that the <a
+ href="sec5.html#5.3.45">show</a> command does not use this format).</p>
+<p>Some variables are listed as both input and output, and
+ their  output  simply returns the previously input value, or
+ the default value after the simulation has been  run.   Some
+ parameter  are  input only because the output system can not
+ handle variables of the given type yet, or the need for them
+ as  output variables has not been apparent.  Many such input
+ variables are available as output variables in  a  different
+ format,  such  as  the initial condition vectors that can be
+ retrieved as individual initial condition values.   Finally,
+ internally  derived  values are output only and are provided
+ for debugging and operating point output purposes.</p>
+<p>Please note  that  these  tables  do  not  provide  the
+ detailed information available about the parameters provided
+ in the section on each device and model, but are provided as
+ a quick reference guide.</p>
+
+<h3><a name="B.1">B.1 URC:  Uniform R.C. line</a></h3>
+
+<p>See Userguide <a href="sec3.html#3.3.5">&sect; 3.3.5</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>URC - instance parameters (input-output)</th></tr>
+<tr><td align=center>l</td><td>Length of transmission line</td></tr>
+<tr><td align=center>n</td><td>Number of lumps</td></tr>
+<tr><th colspan=2>URC - instance parameters (output-only)</th></tr>
+<tr><td align=center>pos_node</td><td>Positive node of URC</td></tr>
+<tr><td align=center>neg_node</td><td>Negative node of URC</td></tr>
+<tr><td align=center>gnd</td><td>Ground node of URC</td></tr>
+<tr><th colspan=2>URC - model parameters (input-only)</th></tr>
+<tr><td align=center>urc</td><td>Uniform R.C. line model</td></tr>
+<tr><th colspan=2>URC - model parameters (input-output)</th></tr>
+<tr><td align=center>k</td><td>Propagation constant</td></tr>
+<tr><td align=center>fmax</td><td>Maximum frequency of interest</td></tr>
+<tr><td align=center>rperl</td><td>Resistance per unit length</td></tr>
+<tr><td align=center>cperl</td><td>Capacitance per unit length</td></tr>
+<tr><td align=center>isperl</td><td>Saturation current per length</td></tr>
+<tr><td align=center>rsperl</td><td>Diode resistance per length</td></tr>
+</table>
+
+<h3><a name="B.2">B.2 ASRC:  Arbitrary Source</a></h3>
+<p>See Userguide <a href="sec3.html#3.2.3">&sect; 3.2.3</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>ASRC - instance parameters (input-only)</th></tr>
+<tr><td align=center>i</td><td>Current source</td></tr>
+<tr><td align=center>v</td><td>Voltage source</td></tr>
+<tr><th colspan=2>ASRC - instance parameters (output-only)</th></tr>
+<tr><td align=center>i</td><td>Current through source</td></tr>
+<tr><td align=center>v</td><td>Voltage across source</td></tr>
+<tr><td align=center>pos_node</td><td>Positive Node</td></tr>
+<tr><td align=center>neg_node</td><td>Negative Node</td></tr>
+</table>
+
+<h3><a name="B.3">B.3 BJT:  Bipolar Junction Transistor</a></h3>
+<p>See Userguide <a href="sec3.html#3.4.4">&sect; 3.4.4</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>BJT - instance parameters (input-only)</th></tr>
+<tr><td align=center>ic</td><td>Initial condition vector</td></tr>
+
+<tr><th colspan=2>BJT - instance parameters (input-output)</th></tr>
+<tr><td align=center>off</td><td>Device initially off</td></tr>
+<tr><td align=center>icvbe</td><td>Initial B-E voltage</td></tr>
+<tr><td align=center>icvce</td><td>Initial C-E voltage</td></tr>
+<tr><td align=center>area</td><td>Area factor</td></tr>
+<tr><td align=center>temp</td><td>instance temperature</td></tr>
+
+<tr><th colspan=2>BJT - instance parameters (output-only)</th></tr>
+<tr><td align=center>colnode</td><td>Number of collector node</td></tr>
+<tr><td align=center>basenode</td><td>Number of base node</td></tr>
+<tr><td align=center>emitnode</td><td>Number of emitter node</td></tr>
+<tr><td align=center>substnode</td><td>Number of substrate node</td></tr>
+<tr><td align=center>colprimenode</td><td>Internal collector node</td></tr>
+<tr><td align=center>baseprimenode</td><td>Internal base node</td></tr>
+<tr><td align=center>emitprimenode</td><td>Internal emitter node</td></tr>
+<tr><td align=center>ic</td><td>Current at collector node</td></tr>
+<tr><td align=center>ib</td><td>Current at base node</td></tr>
+<tr><td align=center>ie</td><td>Emitter current</td></tr>
+<tr><td align=center>is</td><td>Substrate current</td></tr>
+<tr><td align=center>vbe</td><td>B-E voltage</td></tr>
+<tr><td align=center>vbc</td><td>B-C voltage</td></tr>
+<tr><td align=center>gm</td><td>Small signal transconductance</td></tr>
+<tr><td align=center>gpi</td><td>Small signal input conductance - pi</td></tr>
+<tr><td align=center>gmu</td><td>Small signal conductance - mu</td></tr>
+<tr><td align=center>gx</td><td>Conductance from base to internal base</td></tr>
+<tr><td align=center>go</td><td>Small signal output conductance</td></tr>
+<tr><td align=center>geqcb</td><td>d(Ibe)/d(Vbc)</td></tr>
+<tr><td align=center>gccs</td><td>Internal C-S cap. equiv. cond.</td></tr>
+<tr><td align=center>geqbx</td><td>Internal C-B-base cap. equiv. cond.</td></tr>
+<tr><td align=center>cpi</td><td>Internal base to emitter capactance</td></tr>
+<tr><td align=center>cmu</td><td>Internal base to collector capactiance</td></tr>
+<tr><td align=center>cbx</td><td>Base to collector capacitance</td></tr>
+<tr><td align=center>ccs</td><td>Collector to substrate capacitance</td></tr>
+<tr><td align=center>cqbe</td><td>Cap. due to charge storage in B-E jct.</td></tr>
+<tr><td align=center>cqbc</td><td>Cap. due to charge storage in B-C jct.</td></tr>
+<tr><td align=center>cqcs</td><td>Cap. due to charge storage in C-S jct.</td></tr>
+<tr><td align=center>cqbx</td><td>Cap. due to charge storage in B-X jct.</td></tr>
+<tr><td align=center>cexbc</td><td>Total current in B-X junction</td></tr>
+<tr><td align=center>qbe</td><td>Charge storage B-E junction</td></tr>
+<tr><td align=center>qbc</td><td>Charge storage B-C junction</td></tr>
+<tr><td align=center>qcs</td><td>Charge storage C-S junction</td></tr>
+<tr><td align=center>qbx</td><td>Charge storage B-X junction</td></tr>
+<tr><td align=center>p</td><td>Power dissipation</td></tr>
+
+<tr><th colspan=2>BJT - model parameters (input-output)</th></tr>
+<tr><td align=center>npn</td><td>NPN type device</td></tr>
+<tr><td align=center>pnp</td><td>PNP type device</td></tr>
+<tr><td align=center>is</td><td>Saturation Current</td></tr>
+<tr><td align=center>bf</td><td>Ideal forward beta</td></tr>
+<tr><td align=center>nf</td><td>Forward emission coefficient</td></tr>
+<tr><td align=center>vaf</td><td>Forward Early voltage</td></tr>
+<tr><td align=center>va</td><td>(null)</td></tr>
+<tr><td align=center>ikf</td><td>Forward beta roll-off corner current</td></tr>
+<tr><td align=center>ik</td><td>(null)</td></tr>
+<tr><td align=center>ise</td><td>B-E leakage saturation current</td></tr>
+<tr><td align=center>ne</td><td>B-E leakage emission coefficient</td></tr>
+<tr><td align=center>br</td><td>Ideal reverse beta</td></tr>
+<tr><td align=center>nr</td><td>Reverse emission coefficient</td></tr>
+<tr><td align=center>var</td><td>Reverse Early voltage</td></tr>
+<tr><td align=center>vb</td><td>(null)</td></tr>
+<tr><td align=center>ikr</td><td>reverse beta roll-off corner current</td></tr>
+<tr><td align=center>isc</td><td>B-C leakage saturation current</td></tr>
+<tr><td align=center>nc</td><td>B-C leakage emission coefficient</td></tr>
+<tr><td align=center>rb</td><td>Zero bias base resistance</td></tr>
+<tr><td align=center>irb</td><td>Current for base resistance=(rb+rbm)/2</td></tr>
+<tr><td align=center>rbm</td><td>Minimum base resistance</td></tr>
+<tr><td align=center>re</td><td>Emitter resistance</td></tr>
+<tr><td align=center>rc</td><td>Collector resistance</td></tr>
+<tr><td align=center>cje</td><td>Zero bias B-E depletion capacitance</td></tr>
+<tr><td align=center>vje</td><td>B-E built in potential</td></tr>
+<tr><td align=center>pe</td><td>(null)</td></tr>
+<tr><td align=center>mje</td><td>B-E junction grading coefficient</td></tr>
+<tr><td align=center>me</td><td>(null)</td></tr>
+<tr><td align=center>tf</td><td>Ideal forward transit time</td></tr>
+<tr><td align=center>xtf</td><td>Coefficient for bias dependence of TF</td></tr>
+<tr><td align=center>vtf</td><td>Voltage giving VBC dependence of TF</td></tr>
+<tr><td align=center>itf</td><td>High current dependence of TF</td></tr>
+<tr><td align=center>ptf</td><td>Excess phase</td></tr>
+<tr><td align=center>cjc</td><td>Zero bias B-C depletion capacitance</td></tr>
+<tr><td align=center>vjc</td><td>B-C built in potential</td></tr>
+<tr><td align=center>pc</td><td>(null)</td></tr>
+<tr><td align=center>mjc</td><td>B-C junction grading coefficient</td></tr>
+<tr><td align=center>mc</td><td>(null)</td></tr>
+<tr><td align=center>xcjc</td><td>Fraction of B-C cap to internal base</td></tr>
+<tr><td align=center>tr</td><td>Ideal reverse transit time</td></tr>
+<tr><td align=center>cjs</td><td>Zero bias C-S capacitance</td></tr>
+<tr><td align=center>ccs</td><td>Zero bias C-S capacitance</td></tr>
+<tr><td align=center>vjs</td><td>Substrate junction built in potential</td></tr>
+<tr><td align=center>ps</td><td>(null)</td></tr>
+<tr><td align=center>mjs</td><td>Substrate junction grading coefficient</td></tr>
+<tr><td align=center>ms</td><td>(null)</td></tr>
+<tr><td align=center>xtb</td><td>Forward and reverse beta temp. exp.</td></tr>
+<tr><td align=center>eg</td><td>Energy gap for IS temp. dependency</td></tr>
+<tr><td align=center>xti</td><td>Temp. exponent for IS</td></tr>
+<tr><td align=center>fc</td><td>Forward bias junction fit parameter</td></tr>
+<tr><td align=center>tnom</td><td>Parameter measurement temperature</td></tr>
+<tr><td align=center>kf</td><td>Flicker Noise Coefficient</td></tr>
+<tr><td align=center>af</td><td>Flicker Noise Exponent</td></tr>
+
+<tr><th colspan=2>BJT - model parameters (output-only)</th></tr>
+<tr><td align=center>type</td><td>NPN or PNP</td></tr>
+<tr><td align=center>invearlyvoltf</td><td>Inverse early voltage:forward</td></tr>
+<tr><td align=center>invearlyvoltr</td><td>Inverse early voltage:reverse</td></tr>
+<tr><td align=center>invrollofff</td><td>Inverse roll off - forward</td></tr>
+<tr><td align=center>invrolloffr</td><td>Inverse roll off - reverse</td></tr>
+<tr><td align=center>collectorconduct</td><td>Collector conductance</td></tr>
+<tr><td align=center>emitterconduct</td><td>Emitter conductance</td></tr>
+<tr><td align=center>transtimevbcfact</td><td>Transit time VBC factor</td></tr>
+<tr><td align=center>excessphasefactor</td><td>Excess phase fact.</td></tr>
+</table>
+
+<h3><a name="B.4">B.4 BSIM1:  Berkeley Short Channel IGFET Model</a></h3>
+<p>See Userguide <a href="sec3.html#3.4.8">&sect; 3.4.8</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>BSIM1 - instance parameters (input-only)</th></tr>
+<tr><td align=center>ic</td><td>Vector of DS,GS,BS initial voltages</td></tr>
+
+<tr><th colspan=2>BSIM1 - instance parameters (input-output)</th></tr>
+<tr><td align=center>l</td><td>Length</td></tr>
+<tr><td align=center>w</td><td>Width</td></tr>
+<tr><td align=center>ad</td><td>Drain area</td></tr>
+<tr><td align=center>as</td><td>Source area</td></tr>
+<tr><td align=center>pd</td><td>Drain perimeter</td></tr>
+<tr><td align=center>ps</td><td>Source perimeter</td></tr>
+<tr><td align=center>nrd</td><td>Number of squares in drain</td></tr>
+<tr><td align=center>nrs</td><td>Number of squares in source</td></tr>
+<tr><td align=center>off</td><td>Device is initially off</td></tr>
+<tr><td align=center>vds</td><td>Initial D-S voltage</td></tr>
+<tr><td align=center>vgs</td><td>Initial G-S voltage</td></tr>
+<tr><td align=center>vbs</td><td>Initial B-S voltage</td></tr>
+
+<tr><th colspan=2>BSIM1 - model parameters (input-only)</th></tr>
+<tr><td align=center>nmos</td><td>Flag to indicate NMOS</td></tr>
+<tr><td align=center>pmos</td><td>Flag to indicate PMOS</td></tr>
+
+<tr><th colspan=2>BSIM1 - model parameters (input-output)</th></tr>
+<tr><td align=center>vfb</td><td>Flat band voltage</td></tr>
+<tr><td align=center>lvfb</td><td>Length dependence of vfb
+<tr><td align=center>wvfb</td><td>Width dependence of vfb</td></tr>
+<tr><td align=center>phi</td><td>Strong inversion surface potential</td></tr>
+<tr><td align=center>lphi</td><td>Length dependence of phi</td></tr>
+<tr><td align=center>wphi</td><td>Width dependence of phi</td></tr>
+<tr><td align=center>k1</td><td>Bulk effect coefficient 1</td></tr>
+<tr><td align=center>lk1</td><td>Length dependence of k1</td></tr>
+<tr><td align=center>wk1</td><td>Width dependence of k1</td></tr>
+<tr><td align=center>k2</td><td>Bulk effect coefficient 2</td></tr>
+<tr><td align=center>lk2</td><td>Length dependence of k2</td></tr>
+<tr><td align=center>wk2</td><td>Width dependence of k2</td></tr>
+<tr><td align=center>eta</td><td>VDS dependence of threshold voltage</td></tr>
+<tr><td align=center>leta</td><td>Length dependence of eta</td></tr>
+<tr><td align=center>weta</td><td>Width dependence of eta</td></tr>
+<tr><td align=center>x2e</td><td>VBS dependence of eta</td></tr>
+<tr><td align=center>lx2e</td><td>Length dependence of x2e</td></tr>
+<tr><td align=center>wx2e</td><td>Width dependence of x2e</td></tr>
+<tr><td align=center>x3e</td><td>VDS dependence of eta</td></tr>
+<tr><td align=center>lx3e</td><td>Length dependence of x3e</td></tr>
+<tr><td align=center>wx3e</td><td>Width dependence of x3e</td></tr>
+<tr><td align=center>dl</td><td>Channel length reduction in um</td></tr>
+<tr><td align=center>dw</td><td>Channel width reduction in um</td></tr>
+<tr><td align=center>muz</td><td>Zero field mobility at VDS=0 VGS=VTH</td></tr>
+<tr><td align=center>x2mz</td><td>VBS dependence of muz</td></tr>
+<tr><td align=center>lx2mz</td><td>Length dependence of x2mz</td></tr>
+<tr><td align=center>wx2mz</td><td>Width dependence of x2mz</td></tr>
+<tr><td align=center>mus</td><td>Mobility at VDS=VDD VGS=VTH, channel length modulation</td></tr>
+<tr><td align=center>lmus</td><td>Length dependence of mus</td></tr>
+<tr><td align=center>wmus</td><td>Width dependence of mus</td></tr>
+<tr><td align=center>x2ms</td><td>VBS dependence of mus</td></tr>
+<tr><td align=center>lx2ms</td><td>Length dependence of x2ms</td></tr>
+<tr><td align=center>wx2ms</td><td>Width dependence of x2ms</td></tr>
+<tr><td align=center>x3ms</td><td>VDS dependence of mus</td></tr>
+<tr><td align=center>lx3ms</td><td>Length dependence of x3ms</td></tr>
+<tr><td align=center>wx3ms</td><td>Width dependence of x3ms</td></tr>
+<tr><td align=center>u0</td><td>VGS dependence of mobility</td></tr>
+<tr><td align=center>lu0</td><td>Length dependence of u0</td></tr>
+<tr><td align=center>wu0</td><td>Width dependence of u0</td></tr>
+<tr><td align=center>x2u0</td><td>VBS dependence of u0</td></tr>
+<tr><td align=center>lx2u0</td><td>Length dependence of x2u0</td></tr>
+<tr><td align=center>wx2u0</td><td>Width dependence of x2u0</td></tr>
+<tr><td align=center>u1</td><td>VDS depence of mobility, velocity saturation</td></tr>
+<tr><td align=center>lu1</td><td>Length dependence of u1</td></tr>
+<tr><td align=center>wu1</td><td>Width dependence of u1</td></tr>
+<tr><td align=center>x2u1</td><td>VBS depence of u1</td></tr>
+<tr><td align=center>lx2u1</td><td>Length depence of x2u1</td></tr>
+<tr><td align=center>wx2u1</td><td>Width depence of x2u1</td></tr>
+<tr><td align=center>x3u1</td><td>VDS depence of u1</td></tr>
+<tr><td align=center>lx3u1</td><td>Length dependence of x3u1</td></tr>
+<tr><td align=center>wx3u1</td><td>Width depence of x3u1</td></tr>
+<tr><td align=center>n0</td><td>Subthreshold slope</td></tr>
+<tr><td align=center>ln0</td><td>Length dependence of n0</td></tr>
+<tr><td align=center>wn0</td><td>Width dependence of n0</td></tr>
+<tr><td align=center>nb</td><td>VBS dependence of subthreshold slope</td></tr>
+<tr><td align=center>lnb</td><td>Length dependence of nb</td></tr>
+<tr><td align=center>wnb</td><td>Width dependence of nb</td></tr>
+<tr><td align=center>nd</td><td>VDS dependence of subthreshold slope</td></tr>
+<tr><td align=center>lnd</td><td>Length dependence of nd</td></tr>
+<tr><td align=center>wnd</td><td>Width dependence of nd</td></tr>
+<tr><td align=center>tox</td><td>Gate oxide thickness in um</td></tr>
+<tr><td align=center>temp</td><td>Temperature in degree Celcius</td></tr>
+<tr><td align=center>vdd</td><td>Supply voltage to specify mus</td></tr>
+<tr><td align=center>cgso</td><td>Gate source overlap capacitance per unit channel width(m)</td></tr>
+<tr><td align=center>cgdo</td><td>Gate drain overlap capacitance per unit channel width(m)</td></tr>
+<tr><td align=center>cgbo</td><td>Gate bulk overlap capacitance per unit channel length(m)</td></tr>
+<tr><td align=center>xpart</td><td>Flag for channel charge partitioning</td></tr>
+<tr><td align=center>rsh</td><td>Source drain diffusion sheet resistance in ohm per square</td></tr>
+<tr><td align=center>js</td><td>Source drain junction saturation current per unit area</td></tr>
+<tr><td align=center>pb</td><td>Source drain junction built in potential</td></tr>
+<tr><td align=center>mj</td><td>Source drain bottom junction capacitance grading coefficient</td></tr>
+<tr><td align=center>pbsw</td><td>Source drain side junction capacitance built in potential</td></tr>
+<tr><td align=center>mjsw</td><td>Source drain side junction capacitance grading coefficient</td></tr>
+<tr><td align=center>cj</td><td>Source drain bottom junction capacitance per unit area</td></tr>
+<tr><td align=center>cjsw</td><td>Source drain side junction capacitance per unit area</td></tr>
+<tr><td align=center>wdf</td><td>Default width of source drain diffusion in um</td></tr>
+<tr><td align=center>dell</td><td>Length reduction of source drain diffusion</td></tr>
+</table>
+
+
+<h3><a name="B.5">B.5 BSIM2:  Berkeley Short Channel IGFET Model</a></h3>
+<p>See Userguide <a href="sec3.html#3.4.8">&sect; 3.4.8</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>BSIM2 - instance parameters (input-only)</th></tr>
+<tr><td align=center>ic</td><td>Vector of DS,GS,BS initial voltages</td></tr>
+
+<tr><th colspan=2>BSIM2 - instance parameters (input-output)</th></tr>
+<tr><td align=center>l</td><td>Length</td></tr>
+<tr><td align=center>w</td><td>Width</td></tr>
+<tr><td align=center>ad</td><td>Drain area</td></tr>
+<tr><td align=center>as</td><td>Source area</td></tr>
+<tr><td align=center>pd</td><td>Drain perimeter</td></tr>
+<tr><td align=center>ps</td><td>Source perimeter</td></tr>
+<tr><td align=center>nrd</td><td>Number of squares in drain</td></tr>
+<tr><td align=center>nrs</td><td>Number of squares in source</td></tr>
+<tr><td align=center>off</td><td>Device is initially off</td></tr>
+<tr><td align=center>vds</td><td>Initial D-S voltage</td></tr>
+<tr><td align=center>vgs</td><td>Initial G-S voltage</td></tr>
+<tr><td align=center>vbs</td><td>Initial B-S voltage</td></tr>
+
+<tr><th colspan=2>BSIM2 - model parameters (input-only)</th></tr>
+<tr><td align=center>nmos</td><td>Flag to indicate NMOS</td></tr>
+<tr><td align=center>pmos</td><td>Flag to indicate PMOS</td></tr>
+
+<tr><th colspan=2>BSIM2 - model parameters (input-output)</th></tr>
+<tr><td align=center>vfb</td><td>Flat band voltage</td></tr>
+<tr><td align=center>lvfb</td><td>Length dependence of vfb</td></tr>
+<tr><td align=center>wvfb</td><td>Width dependence of vfb</td></tr>
+<tr><td align=center>phi</td><td>Strong inversion surface potential</td></tr>
+<tr><td align=center>lphi</td><td>Length dependence of phi</td></tr>
+<tr><td align=center>wphi</td><td>Width dependence of phi</td></tr>
+<tr><td align=center>k1</td><td>Bulk effect coefficient 1</td></tr>
+<tr><td align=center>lk1</td><td>Length dependence of k1</td></tr>
+<tr><td align=center>wk1</td><td>Width dependence of k1</td></tr>
+<tr><td align=center>k2</td><td>Bulk effect coefficient 2</td></tr>
+<tr><td align=center>lk2</td><td>Length dependence of k2</td></tr>
+<tr><td align=center>wk2</td><td>Width dependence of k2</td></tr>
+<tr><td align=center>|eta0</td><td>VDS dependence of threshold voltage at VDD=0</td></tr>
+<tr><td align=center>leta0</td><td>Length dependence of eta0</td></tr>
+<tr><td align=center>weta0</td><td>Width dependence of eta0</td></tr>
+<tr><td align=center>etab</td><td>VBS dependence of eta</td></tr>
+<tr><td align=center>letab</td><td>Length dependence of etab</td></tr>
+<tr><td align=center>wetab</td><td>Width dependence of etab</td></tr>
+<tr><td align=center>dl</td><td>Channel length reduction in um</td></tr>
+<tr><td align=center>dw</td><td>Channel width reduction in um</td></tr>
+<tr><td align=center>mu0</td><td>Low-field mobility, at VDS=0 VGS=VTH</td></tr>
+<tr><td align=center>mu0b</td><td>VBS dependence of low-field mobility</td></tr>
+<tr><td align=center>lmu0b</td><td>Length dependence of mu0b</td></tr>
+<tr><td align=center>wmu0b</td><td>Width dependence of mu0b</td></tr>
+<tr><td align=center>mus0</td><td>Mobility at VDS=VDD VGS=VTH</td></tr>
+<tr><td align=center>lmus0</td><td>Length dependence of mus0</td></tr>
+<tr><td align=center>wmus0</td><td>Width dependence of mus</td></tr>
+<tr><td align=center>musb</td><td>VBS dependence of mus</td></tr>
+<tr><td align=center>lmusb</td><td>Length dependence of musb</td></tr>
+<tr><td align=center>wmusb</td><td>Width dependence of musb</td></tr>
+<tr><td align=center>mu20</td><td>VDS dependence of mu in tanh term</td></tr>
+<tr><td align=center>lmu20</td><td>Length dependence of mu20</td></tr>
+<tr><td align=center>wmu20</td><td>Width dependence of mu20</td></tr>
+<tr><td align=center>mu2b</td><td>VBS dependence of mu2</td></tr>
+<tr><td align=center>lmu2b</td><td>Length dependence of mu2b</td></tr>
+<tr><td align=center>wmu2b</td><td>Width dependence of mu2b</td></tr>
+<tr><td align=center>mu2g</td><td>VGS dependence of mu2</td></tr>
+<tr><td align=center>lmu2g</td><td>Length dependence of mu2g</td></tr>
+<tr><td align=center>wmu2g</td><td>Width dependence of mu2g</td></tr>
+<tr><td align=center>mu30</td><td>VDS dependence of mu in linear term</td></tr>
+<tr><td align=center>lmu30</td><td>Length dependence of mu30</td></tr>
+<tr><td align=center>wmu30</td><td>Width dependence of mu30</td></tr>
+<tr><td align=center>mu3b</td><td>VBS dependence of mu3</td></tr>
+<tr><td align=center>lmu3b</td><td>Length dependence of mu3b</td></tr>
+<tr><td align=center>wmu3b</td><td>Width dependence of mu3b</td></tr>
+<tr><td align=center>mu3g</td><td>VGS dependence of mu3</td></tr>
+<tr><td align=center>lmu3g</td><td>Length dependence of mu3g</td></tr>
+<tr><td align=center>wmu3g</td><td>Width dependence of mu3g</td></tr>
+<tr><td align=center>mu40</td><td>VDS dependence of mu in linear term</td></tr>
+<tr><td align=center>lmu40</td><td>Length dependence of mu40</td></tr>
+<tr><td align=center>wmu40</td><td>Width dependence of mu40</td></tr>
+<tr><td align=center>mu4b</td><td>VBS dependence of mu4</td></tr>
+<tr><td align=center>lmu4b</td><td>Length dependence of mu4b</td></tr>
+<tr><td align=center>wmu4b</td><td>Width dependence of mu4b</td></tr>
+<tr><td align=center>mu4g</td><td>VGS dependence of mu4</td></tr>
+<tr><td align=center>lmu4g</td><td>Length dependence of mu4g</td></tr>
+<tr><td align=center>wmu4g</td><td>Width dependence of mu4g</td></tr>
+<tr><td align=center>ua0</td><td>Linear VGS dependence of mobility</td></tr>
+<tr><td align=center>lua0</td><td>Length dependence of ua0</td></tr>
+<tr><td align=center>wua0</td><td>Width dependence of ua0</td></tr>
+<tr><td align=center>uab</td><td>VBS dependence of ua</td></tr>
+<tr><td align=center>luab</td><td>Length dependence of uab</td></tr>
+<tr><td align=center>wuab</td><td>Width dependence of uab</td></tr>
+<tr><td align=center>ub0</td><td>Quadratic VGS dependence of mobility</td></tr>
+<tr><td align=center>lub0</td><td>Length dependence of ub0</td></tr>
+<tr><td align=center>wub0</td><td>Width dependence of ub0</td></tr>
+<tr><td align=center>ubb</td><td>VBS dependence of ub</td></tr>
+<tr><td align=center>lubb</td><td>Length dependence of ubb</td></tr>
+<tr><td align=center>wubb</td><td>Width dependence of ubb</td></tr>
+<tr><td align=center>u10</td><td>VDS depence of mobility</td></tr>
+<tr><td align=center>lu10</td><td>Length dependence of u10</td></tr>
+<tr><td align=center>wu10</td><td>Width dependence of u10</td></tr>
+<tr><td align=center>u1b</td><td>VBS depence of u1</td></tr>
+<tr><td align=center>lu1b</td><td>Length depence of u1b</td></tr>
+<tr><td align=center>wu1b</td><td>Width depence of u1b</td></tr>
+<tr><td align=center>u1d</td><td>VDS depence of u1</td></tr>
+<tr><td align=center>lu1d</td><td>Length depence of u1d</td></tr>
+<tr><td align=center>wu1d</td><td>Width depence of u1d</td></tr>
+<tr><td align=center>n0</td><td>Subthreshold slope at VDS=0 VBS=0</td></tr>
+<tr><td align=center>ln0</td><td>Length dependence of n0</td></tr>
+<tr><td align=center>wn0</td><td>Width dependence of n0</td></tr>
+<tr><td align=center>nb</td><td>VBS dependence of n</td></tr>
+<tr><td align=center>lnb</td><td>Length dependence of nb</td></tr>
+<tr><td align=center>wnb</td><td>Width dependence of nb</td></tr>
+<tr><td align=center>nd</td><td>VDS dependence of n</td></tr>
+<tr><td align=center>lnd</td><td>Length dependence of nd</td></tr>
+<tr><td align=center>wnd</td><td>Width dependence of nd</td></tr>
+<tr><td align=center>vof0</td><td>Threshold voltage offset AT VDS=0 VBS=0</td></tr>
+<tr><td align=center>lvof0</td><td>Length dependence of vof0</td></tr>
+<tr><td align=center>wvof0</td><td>Width dependence of vof0</td></tr>
+<tr><td align=center>vofb</td><td>VBS dependence of vof</td></tr>
+<tr><td align=center>lvofb</td><td>Length dependence of vofb</td></tr>
+<tr><td align=center>wvofb</td><td>Width dependence of vofb</td></tr>
+<tr><td align=center>vofd</td><td>VDS dependence of vof</td></tr>
+<tr><td align=center>lvofd</td><td>Length dependence of vofd</td></tr>
+<tr><td align=center>wvofd</td><td>Width dependence of vofd</td></tr>
+<tr><td align=center>ai0</td><td>Pre-factor of hot-electron effect.</td></tr>
+<tr><td align=center>lai0</td><td>Length dependence of ai0</td></tr>
+<tr><td align=center>wai0</td><td>Width dependence of ai0</td></tr>
+<tr><td align=center>aib</td><td>VBS dependence of ai</td></tr>
+<tr><td align=center>laib</td><td>Length dependence of aib</td></tr>
+<tr><td align=center>waib</td><td>Width dependence of aib</td></tr>
+<tr><td align=center>bi0</td><td>Exponential factor of hot-electron effect.</td></tr>
+<tr><td align=center>lbi0</td><td>Length dependence of bi0</td></tr>
+<tr><td align=center>wbi0</td><td>Width dependence of bi0</td></tr>
+<tr><td align=center>bib</td><td>VBS dependence of bi</td></tr>
+<tr><td align=center>lbib</td><td>Length dependence of bib</td></tr>
+<tr><td align=center>wbib</td><td>Width dependence of bib</td></tr>
+<tr><td align=center>vghigh</td><td>Upper bound of the cubic spline function.</td></tr>
+<tr><td align=center>lvghigh</td><td>Length dependence of vghigh</td></tr>
+<tr><td align=center>wvghigh</td><td>Width dependence of vghigh</td></tr>
+<tr><td align=center>vglow</td><td>Lower bound of the cubic spline function.</td></tr>
+<tr><td align=center>lvglow</td><td>Length dependence of vglow</td></tr>
+<tr><td align=center>wvglow</td><td>Width dependence of vglow</td></tr>
+<tr><td align=center>tox</td><td>Gate oxide thickness in um</td></tr>
+<tr><td align=center>temp</td><td>Temperature in degree Celcius</td></tr>
+<tr><td align=center>vdd</td><td>Maximum Vds</td></tr>
+<tr><td align=center>vgg</td><td>Maximum Vgs</td></tr>
+<tr><td align=center>vbb</td><td>Maximum Vbs</td></tr>
+<tr><td align=center>cgso</td><td>Gate source overlap capacitance per unit channel width(m)</td></tr>
+<tr><td align=center>cgdo</td><td>Gate drain overlap capacitance per unit channel width(m)</td></tr>
+<tr><td align=center>cgbo</td><td>Gate bulk overlap capacitance per unit channel length(m)</td></tr>
+<tr><td align=center>xpart</td><td>Flag for channel charge partitioning</td></tr>
+<tr><td align=center>rsh</td><td>Source drain diffusion sheet resistance in ohm per square</td></tr>
+<tr><td align=center>js</td><td>Source drain junction saturation current per unit area</td></tr>
+<tr><td align=center>pb</td><td>Source drain junction built in potential</td></tr>
+<tr><td align=center>mj</td><td>Source drain bottom junction capacitance grading coefficient</td></tr>
+<tr><td align=center>pbsw</td><td>Source drain side junction capacitance built in potential</td></tr>
+<tr><td align=center>mjsw</td><td>Source drain side junction capacitance grading coefficient</td></tr>
+<tr><td align=center>cj</td><td>Source drain bottom junction capacitance per unit area</td></tr>
+<tr><td align=center>cjsw</td><td>Source drain side junction capacitance per unit area</td></tr>
+<tr><td align=center>wdf</td><td>Default width of source drain diffusion in um</td></tr>
+<tr><td align=center>dell</td><td>Length reduction of source drain diffusion</td></tr>
+</table>
+
+<h3><a name="B.6">B.6 Capacitor:  Fixed capacitor</a></h3>
+<p>See Userguide <a href="sec3.html#3.1.4">&sect; 3.1.4</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>Capacitor - instance parameters (input-output)</th></tr>
+<tr><td align=center>capacitance</td><td>Device capacitance</td></tr>
+<tr><td align=center>ic</td><td>Initial capacitor voltage</td></tr>
+<tr><td align=center>w</td><td>Device width</td></tr>
+<tr><td align=center>l</td><td>Device length</td></tr>
+<tr><th colspan=2>Capacitor - instance parameters (output-only)</th></tr>
+<tr><td align=center>i</td><td>Device current</td></tr>
+<tr><td align=center>p</td><td>Instantaneous device power</td></tr>
+<tr><th colspan=2>Capacitor - model parameters (input-only)</th></tr>
+<tr><td align=center>c</td><td>Capacitor model</td></tr>
+<tr><th colspan=2>Capacitor - model parameters (input-output)</th></tr>
+<tr><td align=center>cj</td><td>Bottom Capacitance per area</td></tr>
+<tr><td align=center>cjsw</td><td>Sidewall capacitance per meter</td></tr>
+<tr><td align=center>defw</td><td>Default width</td></tr>
+<tr><td align=center>narrow</td><td>width correction factor</td></tr>
+</table>
+
+<h3><a name="B.7">B.7 CCCS:  Current controlled current source</a></h3>
+<p>See Userguide <a href="sec3.html#3.2.2.3">&sect; 3.2.2.3</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>CCCS - instance parameters (input-output)</th></tr>
+<tr><td align=center>gain</td><td>Gain of source</td></tr>
+<tr><td align=center>control</td><td>Name of controlling source</td></tr>
+<tr><th colspan=2>CCCS - instance parameters (output-only)</th></tr>
+<tr><td align=center>neg_node</td><td>Negative node of source</td></tr>
+<tr><td align=center>pos_node</td><td>Positive node of source</td></tr>
+<tr><td align=center>i</td><td>CCCS output current</td></tr>
+<tr><td align=center>v</td><td>CCCS voltage at output</td></tr>
+<tr><td align=center>p</td><td>CCCS power</td></tr>
+</table>
+
+<h3><a name="B.8">B.8 CCVS:  Linear current controlled current source</a></h3>
+<p>See Userguide <a href="sec3.html#3.2.2.4">&sect; 3.2.2.4</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>CCVS - instance parameters (input-output)</th></tr>
+<tr><td align=center>gain</td><td>Transresistance (gain)</td></tr>
+<tr><td align=center>control</td><td>Controlling voltage source</td></tr>
+<tr><th colspan=2>CCVS - instance parameters (output-only)</th></tr>
+<tr><td align=center>pos_node</td><td>Positive node of source</td></tr>
+<tr><td align=center>neg_node</td><td>Negative node of source</td></tr>
+<tr><td align=center>i</td><td>CCVS output current</td></tr>
+<tr><td align=center>v</td><td>CCVS output voltage</td></tr>
+<tr><td align=center>p</td><td>CCVS power</td></tr>
+</table>
+
+<h3><a name="B.9">B.9 CSwitch:  Current controlled ideal switch</a></h3>
+<p>See Userguide <a href="sec3.html#3.1.10">&sect; 3.1.10</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>CSwitch - instance parameters (input-only)</th></tr>
+<tr><td align=center>on</td><td>Initially closed</td></tr>
+<tr><td align=center>off</td><td>Initially open</td></tr>
+
+<tr><th colspan=2>CSwitch - instance parameters (input-output)</th></tr>
+<tr><td align=center>control</td><td>Name of controlling source</td></tr>
+
+<tr><th colspan=2>CSwitch - instance parameters (output-only)</th></tr>
+<tr><td align=center>pos_node</td><td>Positive node of switch</td></tr>
+<tr><td align=center>neg_node</td><td>Negative node of switch</td></tr>
+<tr><td align=center>i</td><td>Switch current</td></tr>
+<tr><td align=center>p</td><td>Instantaneous power</td></tr>
+
+<tr><th colspan=2>CSwitch - model parameters (input-output)</th></tr>
+<tr><td align=center>csw</td><td>Current controlled switch model</td></tr>
+<tr><td align=center>it</td><td>Threshold current</td></tr>
+<tr><td align=center>ih</td><td>Hysterisis current</td></tr>
+<tr><td align=center>ron</td><td>Closed resistance</td></tr>
+<tr><td align=center>roff</td><td>Open resistance</td></tr>
+
+<tr><th colspan=2>CSwitch - model parameters (output-only)</th></tr>
+<tr><td align=center>gon</td><td>Closed conductance</td></tr>
+<tr><td align=center>goff</td><td>Open conductance</td></tr>
+</table>
+
+<h3><a name="B.10">B.10 Diode:  Junction Diode model</a></h3>
+<p>See Userguide <a href="sec3.html#3.4.2">&sect; 3.4.2</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>Diode - instance parameters (input-output)</th></tr>
+<tr><td align=center>off</td><td>Initially off</td></tr>
+<tr><td align=center>temp</td><td>Instance temperature</td></tr>
+<tr><td align=center>ic</td><td>Initial device voltage</td></tr>
+<tr><td align=center>area</td><td>Area factor</td></tr>
+
+<tr><th colspan=2>Diode - instance parameters (output-only)</th></tr>
+<tr><td align=center>vd</td><td>Diode voltage</td></tr>
+<tr><td align=center>id</td><td>Diode current</td></tr>
+<tr><td align=center>c</td><td>Diode current</td></tr>
+<tr><td align=center>gd</td><td>Diode conductance</td></tr>
+<tr><td align=center>cd</td><td>Diode capacitance</td></tr>
+<tr><td align=center>charge</td><td>Diode capacitor charge</td></tr>
+<tr><td align=center>capcur</td><td>Diode capacitor current</td></tr>
+<tr><td align=center>p</td><td>Diode power</td></tr>
+
+<tr><th colspan=2>Diode - model parameters (input-only)</th></tr>
+<tr><td align=center>d</td><td>Diode model</td></tr>
+
+<tr><th colspan=2>Diode - model parameters (input-output)</th></tr>
+<tr><td align=center>is</td><td>Saturation current</td></tr>
+<tr><td align=center>tnom</td><td>Parameter measurement temperature</td></tr>
+<tr><td align=center>rs</td><td>Ohmic resistance</td></tr>
+<tr><td align=center>n</td><td>Emission Coefficient</td></tr>
+<tr><td align=center>tt</td><td>Transit Time</td></tr>
+<tr><td align=center>cjo</td><td>Junction capacitance</td></tr>
+<tr><td align=center>cj0</td><td>(null)</td></tr>
+<tr><td align=center>vj</td><td>Junction potential</td></tr>
+<tr><td align=center>m</td><td>Grading coefficient</td></tr>
+<tr><td align=center>eg</td><td>Activation energy</td></tr>
+<tr><td align=center>xti</td><td>Saturation current temperature exp.</td></tr>
+<tr><td align=center>kf</td><td>flicker noise coefficient</td></tr>
+<tr><td align=center>af</td><td>flicker noise exponent</td></tr>
+<tr><td align=center>fc</td><td>Forward bias junction fit parameter</td></tr>
+<tr><td align=center>bv</td><td>Reverse breakdown voltage</td></tr>
+<tr><td align=center>ibv</td><td>Current at reverse breakdown voltage</td></tr>
+
+<tr><th colspan=2>Diode - model parameters (output-only)</th></tr>
+<tr><td align=center>cond</td><td>Ohmic conductance</td></tr>
+</table>
+
+
+<h3><a name="B.11">B.11 Inductor:  Inductors</a></h3>
+<p>See Userguide <a href="sec3.html#3.1.7">&sect; 3.1.7</a></p>
+
+<table align=center width="75%" border=1>
+
+<tr><th colspan=2>Inductor - instance parameters (input-output)</th></tr>
+<tr><td align=center>inductance</td><td>Inductance of inductor</td></tr>
+<tr><td align=center>ic</td><td>Initial current through inductor</td></tr>
+
+<tr><th colspan=2>Inductor - instance parameters (output-only)</th></tr>
+<tr><td align=center>flux</td><td>Flux through inductor</td></tr>
+<tr><td align=center>v</td><td>Terminal voltage of inductor</td></tr>
+<tr><td align=center>volt</td><td>&nbsp;</td></tr>
+<tr><td align=center>i</td><td>Current through the inductor</td></tr>
+<tr><td align=center>current</td><td>&nbsp;</td></tr>
+<tr><td align=center>p</td><td>instantaneous power dissipated by the inductor</td></tr>
+</table>
+
+
+
+<h3><a name="B.12">B.12 mutual:  Mutual inductors</a></h3>
+<p>See Userguide <a href="sec3.html#3.1.8">&sect; 3.1.8</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>mutual - instance parameters (input-output)</th></tr>
+<tr><td align=center>k</td><td>Mutual inductance</td></tr>
+<tr><td align=center>coefficient</td><td>(null)</td></tr>
+<tr><td align=center>inductor1</td><td>First coupled inductor</td></tr>
+<tr><td align=center>inductor2</td><td>Second coupled inductor</td></tr>
+</table>
+
+
+
+<h3><a name="B.13">B.13 Isource:  Independent current source</a></h3>
+<p>See Userguide <a href="sec3.html#3.2.1">&sect; 3.2.1</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>Isource - instance parameters (input-only)</th></tr>
+<tr><td align=center>pulse</td><td>Pulse description</td></tr>
+<tr><td align=center>sine</td><td>Sinusoidal source description</td></tr>
+<tr><td align=center>sin</td><td>Sinusoidal source description</td></tr>
+<tr><td align=center>exp</td><td>Exponential source description</td></tr>
+<tr><td align=center>pwl</td><td>Piecewise linear description</td></tr>
+<tr><td align=center>sffm</td><td>single freq. FM description</td></tr>
+<tr><td align=center>ac</td><td>AC magnitude,phase vector</td></tr>
+<tr><td align=center>c</td><td>Current through current source</td></tr>
+<tr><td align=center>distof1</td><td>f1 input for distortion</td></tr>
+<tr><td align=center>distof2</td><td>f2 input for distortion</td></tr>
+
+<tr><th colspan=2>Isource - instance parameters (input-output)</th></tr>
+<tr><td align=center>dc</td><td>DC value of source</td></tr>
+<tr><td align=center>acmag</td><td>AC magnitude</td></tr>
+<tr><td align=center>acphase</td><td>AC phase</td></tr>
+
+<tr><th colspan=2>Isource - instance parameters (output-only)</th></tr>
+<tr><td align=center>neg_node</td><td>Negative node of source</td></tr>
+<tr><td align=center>pos_node</td><td>Positive node of source</td></tr>
+<tr><td align=center>acreal</td><td>AC real part</td></tr>
+<tr><td align=center>acimag</td><td>AC imaginary part</td></tr>
+<tr><td align=center>function</td><td>Function of the source</td></tr>
+<tr><td align=center>order</td><td>Order of the source function</td></tr>
+<tr><td align=center>coeffs</td><td>Coefficients of the source</td></tr>
+<tr><td align=center>v</td><td>Voltage across the supply</td></tr>
+<tr><td align=center>p</td><td>Power supplied by the source</td></tr>
+</table>
+
+
+
+<h3><a name="B.14">B.14 JFET: Junction Field effect transistor</a></h3>
+<p>See Userguide <a href="sec3.html#3.4.1">&sect; 3.4.1</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>JFET - instance parameters (input-output)</th></tr>
+<tr><td align=center>off</td><td>Device initially off</td></tr>
+<tr><td align=center>ic</td><td>Initial VDS,VGS vector</td></tr>
+<tr><td align=center>area</td><td>Area factor</td></tr>
+<tr><td align=center>ic-vds</td><td>Initial D-S voltage</td></tr>
+<tr><td align=center>ic-vgs</td><td>Initial G-S volrage</td></tr>
+<tr><td align=center>temp</td><td>Instance temperature</td></tr>
+
+<tr><th colspan=2>JFET - instance parameters (output-only)</th></tr>
+<tr><td align=center>drain-node</td><td>Number of drain node</td></tr>
+<tr><td align=center>gate-node</td><td>Number of gate node</td></tr>
+<tr><td align=center>source-node</td><td>Number of source node</td></tr>
+<tr><td align=center>drain-prime-node</td><td>Internal drain node</td></tr>
+<tr><td align=center>source-prime-nodeInternal</td><td>source node</td></tr>
+<tr><td align=center>vgs</td><td>Voltage G-S</td></tr>
+<tr><td align=center>vgd</td><td>Voltage G-D</td></tr>
+<tr><td align=center>ig</td><td>Current at gate node</td></tr>
+<tr><td align=center>id</td><td>Current at drain node</td></tr>
+<tr><td align=center>is</td><td>Source current</td></tr>
+<tr><td align=center>igd</td><td>Current G-D</td></tr>
+<tr><td align=center>gm</td><td>Transconductance</td></tr>
+<tr><td align=center>gds</td><td>Conductance D-S</td></tr>
+<tr><td align=center>ggs</td><td>Conductance G-S</td></tr>
+<tr><td align=center>ggd</td><td>Conductance G-D</td></tr>
+<tr><td align=center>qgs</td><td>Charge storage G-S junction</td></tr>
+<tr><td align=center>qgd</td><td>Charge storage G-D junction</td></tr>
+<tr><td align=center>cqgs</td><td>Capacitance due to charge storage G-S junction</td></tr>
+<tr><td align=center>cqgd</td><td>Capacitance due to charge storage G-D junction</td></tr>
+<tr><td align=center>p</td><td>Power dissipated by the JFET</td></tr>
+<tr><th colspan=2>JFET - model parameters (output-only)</th></tr>
+<tr><td align=center>njf</td><td>N type JFET model</td></tr>
+<tr><td align=center>pjf</td><td>P type JFET model</td></tr>
+<tr><td align=center>vt0</td><td>Threshold voltage</td></tr>
+<tr><td align=center>vto</td><td>(null)</td></tr>
+<tr><td align=center>beta</td><td>Transconductance parameter</td></tr>
+<tr><td align=center>lambda</td><td>Channel length modulation param.</td></tr>
+<tr><td align=center>rd</td><td>Drain ohmic resistance</td></tr>
+<tr><td align=center>rs</td><td>Source ohmic resistance</td></tr>
+<tr><td align=center>cgs</td><td>G-S junction capactance</td></tr>
+<tr><td align=center>cgd</td><td>G-D junction cap</td></tr>
+<tr><td align=center>pb</td><td>Gate junction potential</td></tr>
+<tr><td align=center>is</td><td>Gate junction saturation current</td></tr>
+<tr><td align=center>fc</td><td>Forward bias junction fit parm.</td></tr>
+<tr><td align=center>b</td><td>Doping tail parameter</td></tr>
+<tr><td align=center>tnom</td><td>parameter measurement temperature</td></tr>
+<tr><td align=center>kf</td><td>Flicker Noise Coefficient</td></tr>
+<tr><td align=center>af</td><td>Flicker Noise Exponent</td></tr>
+
+<tr><th colspan=2>JFET - model parameters (output-only)</th></tr>
+<tr><td align=center>type</td><td>N-type or P-type JFET model</td></tr>
+<tr><td align=center>gd</td><td>Drain conductance</td></tr>
+<tr><td align=center>gs</td><td>Source conductance</td></tr>
+</table>
+
+<h3><a name="B.15">B15 LTRA:  Lossy transmission line</a></h3>
+<p>See Userguide <a href="sec3.html#3.3.3">&sect; 3.3.3</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>LTRA - instance parameters (input-only)</th></tr>
+<tr><td align=center>ic</td><td>Initial condition vector:v1,i1,v2,i2</td></tr>
+
+<tr><th colspan=2>LTRA - instance parameters (input-output)</th></tr>
+<tr><td align=center>v1</td><td>Initial voltage at end 1</td></tr>
+<tr><td align=center>v2</td><td>Initial voltage at end 2</td></tr>
+<tr><td align=center>i1</td><td>Initial current at end 1</td></tr>
+<tr><td align=center>i2</td><td>Initial current at end 2</td></tr>
+
+<tr><th colspan=2>LTRA - instance parameters (output-only)</th></tr>
+<tr><td align=center>pos_node1</td><td>Positive node of end 1 of t-line</td></tr>
+<tr><td align=center>neg_node1</td><td>Negative node of end 1 of t.line</td></tr>
+<tr><td align=center>pos_node2</td><td>Positive node of end 2 of t-line</td></tr>
+<tr><td align=center>neg_node2</td><td>Negative node of end 2 of t-line</td></tr>
+
+<tr><th colspan=2>LTRA - model parameters (input-output)</th></tr>
+<tr><td align=center>ltra</td><td>LTRA model</td></tr>
+<tr><td align=center>r</td><td>Resistance per metre</td></tr>
+<tr><td align=center>l</td><td>Inductance per metre</td></tr>
+<tr><td align=center>g</td><td>(null)</td></tr>
+<tr><td align=center>c</td><td>Capacitance per metre</td></tr>
+<tr><td align=center>len</td><td>length of line</td></tr>
+<tr><td align=center>nocontrol</td><td>No timestep control</td></tr>
+<tr><td align=center>steplimit</td><td>always limit timestep to 0.8*(delay of line)</td></tr>
+<tr><td align=center>nosteplimit</td><td>don't always limit timestep to 0.8*(delay of line)</td></tr>
+<tr><td align=center>lininterp</td><td>use linear interpolation</td></tr>
+<tr><td align=center>quadinterp</td><td>use quadratic interpolation</td></tr>
+<tr><td align=center>mixedinterp</td><td>use linear interpolation if quadratic results look unacceptable</td></tr>
+<tr><td align=center>truncnr</td><td>use N-R iterations for step calculation in LTRAtrunc</td></tr>
+<tr><td align=center>truncdontcut</td><td>don't limit timestep to keep impulse response calculation errors low</td></tr>
+<tr><td align=center>compactrel</td><td>special reltol for straight line checking</td></tr>
+<tr><td align=center>compactabs</td><td>special abstol for straight line checking</td></tr>
+
+<tr><th colspan=2>LTRA - model parameters (output-only)</th></tr>
+<tr><td align=center>rel</td><td>Rel. rate of change of deriv. for bkpt</td></tr>
+<tr><td align=center>abs</td><td>Abs. rate of change of deriv. for bkpt</td></tr>
+</table>
+
+
+
+<h3><a name="B.16">B.16 MES:  GaAs MESFET model</a></h3>
+<p>See Userguide <a href="sec3.html#3.4.10">&sect; 3.4.10</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>MES - instance parameters (input-output)</th></tr>
+<tr><td align=center>area</td><td>Area factor</td></tr>
+<tr><td align=center>icvds</td><td>Initial D-S voltage</td></tr>
+<tr><td align=center>icvgs</td><td>Initial G-S voltage</td></tr>
+
+<tr><th colspan=2>MES - instance parameters (output-only)</th></tr>
+<tr><td align=center>off</td><td>Device initially off</td></tr>
+<tr><td align=center>dnode</td><td>Number of drain node</td></tr>
+<tr><td align=center>gnode</td><td>Number of gate node</td></tr>
+<tr><td align=center>snode</td><td>Number of source node</td></tr>
+<tr><td align=center>dprimenode</td><td>Number of internal drain node</td></tr>
+<tr><td align=center>sprimenode</td><td>Number of internal source node</td></tr>
+<tr><td align=center>vgs</td><td>Gate-Source voltage</td></tr>
+<tr><td align=center>vgd</td><td>Gate-Drain voltage</td></tr>
+<tr><td align=center>cg</td><td>Gate capacitance</td></tr>
+<tr><td align=center>cd</td><td>Drain capacitance</td></tr>
+<tr><td align=center>cgd</td><td>Gate-Drain capacitance</td></tr>
+<tr><td align=center>gm</td><td>Transconductance</td></tr>
+<tr><td align=center>gds</td><td>Drain-Source conductance</td></tr>
+<tr><td align=center>ggs</td><td>Gate-Source conductance</td></tr>
+<tr><td align=center>ggd</td><td>Gate-Drain conductance</td></tr>
+<tr><td align=center>cqgs</td><td>Capacitance due to gate-source charge storage</td></tr>
+<tr><td align=center>cqgd</td><td>Capacitance due to gate-drain charge storage</td></tr>
+<tr><td align=center>qgs</td><td>Gate-Source charge storage</td></tr>
+<tr><td align=center>qgd</td><td>Gate-Drain charge storage</td></tr>
+<tr><td align=center>is</td><td>Source current</td></tr>
+<tr><td align=center>p</td><td>Power dissipated by the mesfet</td></tr>
+
+<tr><th colspan=2>MES - model parameters (input-only)</th></tr>
+<tr><td align=center>nmf</td><td>N type MESfet model</td></tr>
+<tr><td align=center>pmf</td><td>P type MESfet model</td></tr>
+
+<tr><th colspan=2>MES - model parameters (input-output)</th></tr>
+<tr><td align=center>vt0</td><td>Pinch-off voltage</td></tr>
+<tr><td align=center>vto</td><td>(null)</td></tr>
+<tr><td align=center>alpha</td><td>Saturation voltage parameter</td></tr>
+<tr><td align=center>beta</td><td>Transconductance parameter</td></tr>
+<tr><td align=center>lambda</td><td>Channel length modulation parm.</td></tr>
+<tr><td align=center>b</td><td>Doping tail extending parameter</td></tr>
+<tr><td align=center>rd</td><td>Drain ohmic resistance</td></tr>
+<tr><td align=center>rs</td><td>Source ohmic resistance</td></tr>
+<tr><td align=center>cgs</td><td>G-S junction capacitance</td></tr>
+<tr><td align=center>cgd</td><td>G-D junction capacitance</td></tr>
+<tr><td align=center>pb</td><td>Gate junction potential</td></tr>
+<tr><td align=center>is</td><td>Junction saturation current</td></tr>
+<tr><td align=center>fc</td><td>Forward bias junction fit parm.</td></tr>
+<tr><td align=center>kf</td><td>Flicker noise coefficient</td></tr>
+<tr><td align=center>af</td><td>Flicker noise exponent</td></tr>
+
+<tr><th colspan=2>MES - model parameters (output-only)</th></tr>
+<tr><td align=center>type</td><td>N-type or P-type MESfet model</td></tr>
+<tr><td align=center>gd</td><td>Drain conductance</td></tr>
+<tr><td align=center>gs</td><td>Source conductance</td></tr>
+<tr><td align=center>depl_cap</td><td>Depletion capacitance</td></tr>
+<tr><td align=center>vcrit</td><td>Critical voltage</td></tr>
+</table>
+
+<h3><a name="B.17">B.17 Mos1:  Level 1 MOSfet model with Meyer capacitance model</a></h3>
+<p>See Userguide <a href="sec3.html#3.4.8">&sect; 3.4.8</a></p>
+
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>Mos1 - instance parameters (input-only)</th></tr>
+<tr><td align=center>off</td><td>Device initially off</td></tr>
+<tr><td align=center>ic</td><td>Vector of D-S, G-S, B-S voltages</td></tr>
+
+<tr><th colspan=2>Mos1 - instance parameters (input-output)</th></tr>
+<tr><td align=center>l</td><td>Length</td></tr>
+<tr><td align=center>w</td><td>Width</td></tr>
+<tr><td align=center>ad</td><td>Drain area</td></tr>
+<tr><td align=center>as</td><td>Source area</td></tr>
+<tr><td align=center>pd</td><td>Drain perimeter</td></tr>
+<tr><td align=center>ps</td><td>Source perimeter</td></tr>
+<tr><td align=center>nrd</td><td>Drain squares</td></tr>
+<tr><td align=center>nrs</td><td>Source squares</td></tr>
+<tr><td align=center>icvds</td><td>Initial D-S voltage</td></tr>
+<tr><td align=center>icvgs</td><td>Initial G-S voltage</td></tr>
+<tr><td align=center>icvbs</td><td>Initial B-S voltage</td></tr>
+<tr><td align=center>temp</td><td>Instance temperature</td></tr>
+
+<tr><th colspan=2>Mos1 - instance parameters (output-only)</th></tr>
+<tr><td align=center>id</td><td>Drain current</td></tr>
+<tr><td align=center>is</td><td>Source current</td></tr>
+<tr><td align=center>ig</td><td>Gate current</td></tr>
+<tr><td align=center>ib</td><td>Bulk current</td></tr>
+<tr><td align=center>ibd</td><td>B-D junction current</td></tr>
+<tr><td align=center>ibs</td><td>B-S junction current</td></tr>
+<tr><td align=center>vgs</td><td>Gate-Source voltage</td></tr>
+<tr><td align=center>vds</td><td>Drain-Source voltage</td></tr>
+<tr><td align=center>vbs</td><td>Bulk-Source voltage</td></tr>
+<tr><td align=center>vbd</td><td>Bulk-Drain voltage</td></tr>
+<tr><td align=center>dnode</td><td>Number of the drain node</td></tr>
+<tr><td align=center>gnode</td><td>Number of the gate node</td></tr>
+<tr><td align=center>snode</td><td>Number of the source node</td></tr>
+<tr><td align=center>bnode</td><td>Number of the node</td></tr>
+<tr><td align=center>dnodeprime</td><td>Number of int. drain node</td></tr>
+<tr><td align=center>snodeprime</td><td>Number of int. source node</td></tr>
+<tr><td align=center>von</td><td>&nbsp;</td></tr>
+<tr><td align=center>vdsat</td><td>Saturation drain voltage</td></tr>
+<tr><td align=center>sourcevcrit</td><td>Critical source voltage</td></tr>
+<tr><td align=center>drainvcrit</td><td>Critical drain voltage</td></tr>
+<tr><td align=center>rs</td><td>Source resistance</td></tr>
+<tr><td align=center>sourceconductance</td><td>Conductance of source</td></tr>
+<tr><td align=center>rd</td><td>Drain conductance</td></tr>
+<tr><td align=center>drainconductance</td><td>Conductance of drain</td></tr>
+<tr><td align=center>gm</td><td>Transconductance</td></tr>
+<tr><td align=center>cbs</td><td>Bulk-Source capacitance</td></tr>
+<tr><td align=center>gmb</td><td>Bulk-Source transconductance</td></tr>
+<tr><td align=center>gmbs</td><td>&nbsp;</td></tr>
+<tr><td align=center>gbd</td><td>Bulk-Drain conductance</td></tr>
+<tr><td align=center>gbs</td><td>Bulk-Source conductance</td></tr>
+<tr><td align=center>cbd</td><td>Bulk-Drain capacitance</td></tr>
+<tr><td align=center>cbs</td><td>Bulk-Source capacitance</td></tr>
+<tr><td align=center>cgs</td><td>Gate-Source capacitance</td></tr>
+<tr><td align=center>cgd</td><td>Gate-Drain capacitance</td></tr>
+<tr><td align=center>cgb</td><td>Gate-Bulk capacitance</td></tr>
+<tr><td align=center>cqgs</td><td>Capacitance due to gate-source charge storage</td></tr>
+<tr><td align=center>cqgd</td><td>Capacitance due to gate-drain charge storage</td></tr>
+<tr><td align=center>cqgb</td><td>Capacitance due to gate-bulk charge storage</td></tr>
+<tr><td align=center>cqbd</td><td>Capacitance due to bulk-drain charge storage</td></tr>
+<tr><td align=center>cqbs</td><td>Capacitance due to bulk-source charge storage</td></tr>
+<tr><td align=center>cbd0</td><td>Zero-Bias B-D junction capacitance</td></tr>
+<tr><td align=center>cbdsw0</td><td>&nbsp;</td></tr>
+<tr><td align=center>cbs0</td><td>Zero-Bias B-S junction capacitance</td></tr>
+<tr><td align=center>cbssw0</td><td>&nbsp;</td></tr>
+<tr><td align=center>qgs</td><td>Gate-Source charge storage</td></tr>
+<tr><td align=center>qgd</td><td>Gate-Drain charge storage</td></tr>
+<tr><td align=center>qgb</td><td>Gate-Bulk charge storage</td></tr>
+<tr><td align=center>qbd</td><td>Bulk-Drain charge storage</td></tr>
+<tr><td align=center>qbs</td><td>Bulk-Source charge storage</td></tr>
+<tr><td align=center>p</td><td>Instaneous power</td></tr>
+
+<tr><th colspan=2>Mos1 - model parameters (input-only)</th></tr>
+<tr><td align=center>nmos</td><td>N type MOSfet model</td></tr>
+<tr><td align=center>pmos</td><td>P type MOSfet model</td></tr>
+
+<tr><th colspan=2>Mos1 - model parameters (input-output)</th></tr>
+<tr><td align=center>vto</td><td>Threshold voltage</td></tr>
+<tr><td align=center>vt0</td><td>(null)</td></tr>
+<tr><td align=center>kp</td><td>Transconductance parameter</td></tr>
+<tr><td align=center>gamma</td><td>Bulk threshold parameter</td></tr>
+<tr><td align=center>phi</td><td>Surface potential</td></tr>
+<tr><td align=center>lambda</td><td>Channel length modulation</td></tr>
+<tr><td align=center>rd</td><td>Drain ohmic resistance</td></tr>
+<tr><td align=center>rs</td><td>Source ohmic resistance</td></tr>
+<tr><td align=center>cbd</td><td>B-D junction capacitance</td></tr>
+<tr><td align=center>cbs</td><td>B-S junction capacitance</td></tr>
+<tr><td align=center>is</td><td>Bulk junction sat. current</td></tr>
+<tr><td align=center>pb</td><td>Bulk junction potential</td></tr>
+<tr><td align=center>cgso</td><td>Gate-source overlap cap.</td></tr>
+<tr><td align=center>cgdo</td><td>Gate-drain overlap cap.</td></tr>
+<tr><td align=center>cgbo</td><td>Gate-bulk overlap cap.</td></tr>
+<tr><td align=center>rsh</td><td>Sheet resistance</td></tr>
+<tr><td align=center>cj</td><td>Bottom junction cap per area</td></tr>
+<tr><td align=center>mj</td><td>Bottom grading coefficient</td></tr>
+<tr><td align=center>cjsw</td><td>Side junction cap per area</td></tr>
+<tr><td align=center>mjsw</td><td>Side grading coefficient</td></tr>
+<tr><td align=center>js</td><td>Bulk jct. sat. current density</td></tr>
+<tr><td align=center>tox</td><td>Oxide thickness</td></tr>
+<tr><td align=center>ld</td><td>Lateral diffusion</td></tr>
+<tr><td align=center>u0</td><td>Surface mobility</td></tr>
+<tr><td align=center>uo</td><td>(null)</td></tr>
+<tr><td align=center>fc</td><td>Forward bias jct. fit parm.</td></tr>
+<tr><td align=center>nsub</td><td>Substrate doping</td></tr>
+<tr><td align=center>tpg</td><td>Gate type</td></tr>
+<tr><td align=center>nss</td><td>Surface state density</td></tr>
+<tr><td align=center>tnom</td><td>Parameter measurement temperature</td></tr>
+<tr><td align=center>kf</td><td>Flicker noise coefficient</td></tr>
+<tr><td align=center>af</td><td>Flicker noise exponent</td></tr>
+
+<tr><th colspan=2>Mos1 - model parameters (output-only)</th></tr>
+<tr><td align=center>type</td><td>N-channel or P-channel MOS</td></tr>
+</table>
+
+
+<h3><a name="B.18">B.18 Mos2:  Level 2 MOSfet model with Meyer capacitance model</a></h3>
+<p>See Userguide <a href="sec3.html#3.4.8">&sect; 3.4.8</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>Mos2 - instance parameters (input-only)</th></tr>
+<tr><td align=center>off</td><td>Device initially off</td></tr>
+<tr><td align=center>ic</td><td>Vector of D-S, G-S, B-S voltages</td></tr>
+
+<tr><th colspan=2>Mos2 - instance parameters (input-output)</th></tr>
+<tr><td align=center>l</td><td>Length</td></tr>
+<tr><td align=center>w</td><td>Width</td></tr>
+<tr><td align=center>ad</td><td>Drain area</td></tr>
+<tr><td align=center>as</td><td>Source area</td></tr>
+<tr><td align=center>pd</td><td>Drain perimeter</td></tr>
+<tr><td align=center>ps</td><td>Source perimeter</td></tr>
+<tr><td align=center>nrd</td><td>Drain squares</td></tr>
+<tr><td align=center>nrs</td><td>Source squares</td></tr>
+<tr><td align=center>icvds</td><td>Initial D-S voltage</td></tr>
+<tr><td align=center>icvgs</td><td>Initial G-S voltage</td></tr>
+<tr><td align=center>icvbs</td><td>Initial B-S voltage</td></tr>
+<tr><td align=center>temp</td><td>Instance operating temperature</td></tr>
+
+<tr><th colspan=2>Mos2 - instance parameters (output-only)</th></tr>
+<tr><td align=center>id</td><td>Drain current</td></tr>
+<tr><td align=center>cd</td><td>&nbsp;</td></tr>
+<tr><td align=center>ibd</td><td>B-D junction current</td></tr>
+<tr><td align=center>ibs</td><td>B-S junction current</td></tr>
+<tr><td align=center>drainvcrit</td><td>Critical drain voltage</td></tr>
+<tr><td align=center>is</td><td>Source current</td></tr>
+<tr><td align=center>ig</td><td>Gate current</td></tr>
+<tr><td align=center>ib</td><td>Bulk current</td></tr>
+<tr><td align=center>vgs</td><td>Gate-Source voltage</td></tr>
+<tr><td align=center>vds</td><td>Drain-Source voltage</td></tr>
+<tr><td align=center>vbs</td><td>Bulk-Source voltage</td></tr>
+<tr><td align=center>vbd</td><td>Bulk-Drain voltage</td></tr>
+<tr><td align=center>dnode</td><td>Number of drain node</td></tr>
+<tr><td align=center>gnode</td><td>Number of gate node</td></tr>
+<tr><td align=center>snode</td><td>Number of source node</td></tr>
+<tr><td align=center>bnode</td><td>Number of bulk node</td></tr>
+<tr><td align=center>dnodeprime</td><td>Number of internal drain node</td></tr>
+<tr><td align=center>snodeprime</td><td>Number of internal source node</td></tr>
+<tr><td align=center>von</td><td>&nbsp;</td></tr>
+<tr><td align=center>vdsat</td><td>Saturation drain voltage</td></tr>
+<tr><td align=center>sourcevcrit</td><td>Critical source voltage</td></tr>
+<tr><td align=center>drainvcrit</td><td>Critical drain voltage</td></tr>
+<tr><td align=center>rs</td><td>Source resistance</td></tr>
+<tr><td align=center>sourceconductanceSource</td><td>conductance</td></tr>
+<tr><td align=center>rd</td><td>Drain resistance</td></tr>
+<tr><td align=center>drainconductance</td><td>Drain conductance</td></tr>
+<tr><td align=center>gm</td><td>Transconductance</td></tr>
+<tr><td align=center>gds</td><td>Drain-Source conductance</td></tr>
+<tr><td align=center>gmb</td><td>Bulk-Source transconductance</td></tr>
+<tr><td align=center>gmbs</td><td>&nbsp;</td></tr>
+<tr><td align=center>gbd</td><td>Bulk-Drain conductance</td></tr>
+<tr><td align=center>gbs</td><td>Bulk-Source conductance</td></tr>
+<tr><td align=center>cbd</td><td>Bulk-Drain capacitance</td></tr>
+<tr><td align=center>cbs</td><td>Bulk-Source capacitance</td></tr>
+<tr><td align=center>cgs</td><td>Gate-Source capacitance</td></tr>
+<tr><td align=center>cgd</td><td>Gate-Drain capacitance</td></tr>
+<tr><td align=center>cgb</td><td>Gate-Bulk capacitance</td></tr>
+<tr><td align=center>cbd0</td><td>Zero-Bias B-D junction capacitance</td></tr>
+<tr><td align=center>cbdsw0</td><td>&nbsp;</td></tr>
+<tr><td align=center>cbs0</td><td>Zero-Bias B-S junction capacitance</td></tr>
+<tr><td align=center>cbssw0</td><td>&nbsp;</td></tr>
+<tr><td align=center>cqgs</td><td>Capacitance due to gate-source charge storage</td></tr>
+<tr><td align=center>cqgd</td><td>Capacitance due to gate-drain charge storage</td></tr>
+<tr><td align=center>cqgb</td><td>Capacitance due to gate-bulk charge storage</td></tr>
+<tr><td align=center>cqbd</td><td>Capacitance due to bulk-drain charge storage</td></tr>
+<tr><td align=center>cqbs</td><td>Capacitance due to bulk-source charge storage</td></tr>
+<tr><td align=center>qgs</td><td>Gate-Source charge storage</td></tr>
+<tr><td align=center>qgd</td><td>Gate-Drain charge storage</td></tr>
+<tr><td align=center>qgb</td><td>Gate-Bulk charge storage</td></tr>
+<tr><td align=center>qbd</td><td>Bulk-Drain charge storage</td></tr>
+<tr><td align=center>qbs</td><td>Bulk-Source charge storage</td></tr>
+<tr><td align=center>p</td><td>Instantaneous power</td></tr>
+<tr><th colspan=2>Mos2 - model parameters (input-only)</th></tr>
+<tr><td align=center>nmos</td><td>N type MOSfet model</td></tr>
+<tr><td align=center>pmos</td><td>P type MOSfet model</td></tr>
+<tr><th colspan=2>Mos2 - model parameters (input-output)</th></tr>
+<tr><td align=center>vto</td><td>Threshold voltage</td></tr>
+<tr><td align=center>vt0</td><td>(null)</td></tr>
+<tr><td align=center>kp</td><td>Transconductance parameter</td></tr>
+<tr><td align=center>gamma</td><td>Bulk threshold parameter</td></tr>
+<tr><td align=center>phi</td><td>Surface potential</td></tr>
+<tr><td align=center>lambda</td><td>Channel length modulation</td></tr>
+<tr><td align=center>rd</td><td>Drain ohmic resistance</td></tr>
+<tr><td align=center>rs</td><td>Source ohmic resistance</td></tr>
+<tr><td align=center>cbd</td><td>B-D junction capacitance</td></tr>
+<tr><td align=center>cbs</td><td>B-S junction capacitance</td></tr>
+<tr><td align=center>is</td><td>Bulk junction sat. current</td></tr>
+<tr><td align=center>pb</td><td>Bulk junction potential</td></tr>
+<tr><td align=center>cgso</td><td>Gate-source overlap cap.</td></tr>
+<tr><td align=center>cgdo</td><td>Gate-drain overlap cap.</td></tr>
+<tr><td align=center>cgbo</td><td>Gate-bulk overlap cap.</td></tr>
+<tr><td align=center>rsh</td><td>Sheet resistance</td></tr>
+<tr><td align=center>cj</td><td>Bottom junction cap per area</td></tr>
+<tr><td align=center>mj</td><td>Bottom grading coefficient</td></tr>
+<tr><td align=center>cjsw</td><td>Side junction cap per area</td></tr>
+<tr><td align=center>mjsw</td><td>Side grading coefficient</td></tr>
+<tr><td align=center>js</td><td>Bulk jct. sat. current density</td></tr>
+<tr><td align=center>tox</td><td>Oxide thickness</td></tr>
+<tr><td align=center>ld</td><td>Lateral diffusion</td></tr>
+<tr><td align=center>u0</td><td>Surface mobility</td></tr>
+<tr><td align=center>uo</td><td>(null)</td></tr>
+<tr><td align=center>fc</td><td>Forward bias jct. fit parm.</td></tr>
+<tr><td align=center>nsub</td><td>Substrate doping</td></tr>
+<tr><td align=center>tpg</td><td>Gate type</td></tr>
+<tr><td align=center>nss</td><td>Surface state density</td></tr>
+<tr><td align=center>delta</td><td>Width effect on threshold</td></tr>
+<tr><td align=center>uexp</td><td>Crit. field exp for mob. deg.</td></tr>
+<tr><td align=center>ucrit</td><td>Crit. field for mob. degradation</td></tr>
+<tr><td align=center>vmax</td><td>Maximum carrier drift velocity</td></tr>
+<tr><td align=center>xj</td><td>Junction depth</td></tr>
+<tr><td align=center>neff</td><td>Total channel charge coeff.</td></tr>
+<tr><td align=center>nfs</td><td>Fast surface state density</td></tr>
+<tr><td align=center>tnom</td><td>Parameter measurement temperature</td></tr>
+<tr><td align=center>kf</td><td>Flicker noise coefficient</td></tr>
+<tr><td align=center>af</td><td>Flicker noise exponent</td></tr>
+<tr><th colspan=2>Mos2 - model parameters (output-only)</th></tr>
+<tr><td align=center>type</td><td>N-channel or P-channel MOS</td></tr>
+</table>
+
+<h3><a name="B.19">B.19 Mos3:  Level 3 MOSfet model with Meyer capacitance model</a></h3>
+<p>See Userguide <a href="sec3.html#3.4.8">&sect; 3.4.8</a></p>
+
+<table align=center width="75%" border=1>
+
+<tr><th colspan=2>Mos3 - instance parameters (input-only)</th></tr>
+<tr><td align=center>off</td><td>Device initially off</td></tr>
+<tr><th colspan=2>Mos3 - instance parameters (input-output)</th></tr>
+<tr><td align=center>l</td><td>Length</td></tr>
+<tr><td align=center>w</td><td>Width</td></tr>
+<tr><td align=center>ad</td><td>Drain area</td></tr>
+<tr><td align=center>as</td><td>Source area</td></tr>
+<tr><td align=center>pd</td><td>Drain perimeter</td></tr>
+<tr><td align=center>ps</td><td>Source perimeter</td></tr>
+<tr><td align=center>nrd</td><td>Drain squares</td></tr>
+<tr><td align=center>nrs</td><td>Source squares</td></tr>
+<tr><td align=center>icvds</td><td>Initial D-S voltage</td></tr>
+<tr><td align=center>icvgs</td><td>Initial G-S voltage</td></tr>
+<tr><td align=center>icvbs</td><td>Initial B-S voltage</td></tr>
+<tr><td align=center>ic</td><td>Vector of D-S, G-S, B-S voltages</td></tr>
+<tr><td align=center>temp</td><td>Instance operating temperature</td></tr>
+<tr><th colspan=2>Mos3 - instance parameters (output-only)</th></tr>
+<tr><td align=center>id</td><td>Drain current</td></tr>
+<tr><td align=center>cd</td><td>Drain current</td></tr>
+<tr><td align=center>ibd</td><td>B-D junction current</td></tr>
+<tr><td align=center>ibs</td><td>B-S junction current</td></tr>
+<tr><td align=center>is</td><td>Source current</td></tr>
+<tr><td align=center>ig</td><td>Gate current</td></tr>
+<tr><td align=center>ib</td><td>Bulk current</td></tr>
+<tr><td align=center>vgs</td><td>Gate-Source voltage</td></tr>
+<tr><td align=center>vds</td><td>Drain-Source voltage</td></tr>
+<tr><td align=center>vbs</td><td>Bulk-Source voltage</td></tr>
+<tr><td align=center>vbd</td><td>Bulk-Drain voltage</td></tr>
+<tr><td align=center>dnode</td><td>Number of drain node</td></tr>
+<tr><td align=center>gnode</td><td>Number of gate node</td></tr>
+<tr><td align=center>snode</td><td>Number of source node</td></tr>
+<tr><td align=center>bnode</td><td>Number of bulk node</td></tr>
+<tr><td align=center>dnodeprime</td><td>Number of internal drain node</td></tr>
+<tr><td align=center>snodeprime</td><td>Number of internal source node</td></tr>
+<tr><td align=center>von</td><td>Turn-on voltage</td></tr>
+<tr><td align=center>vdsat</td><td>Saturation drain voltage</td></tr>
+<tr><td align=center>sourcevcrit</td><td>Critical source voltage</td></tr>
+<tr><td align=center>drainvcrit</td><td>Critical drain voltage</td></tr>
+<tr><td align=center>rs</td><td>Source resistance</td></tr>
+<tr><td align=center>sourceconductanceSource</td><td>conductance</td></tr>
+<tr><td align=center>rd</td><td>Drain resistance</td></tr>
+<tr><td align=center>drainconductance</td><td>Drain conductance</td></tr>
+<tr><td align=center>gm</td><td>Transconductance</td></tr>
+<tr><td align=center>gds</td><td>Drain-Source conductance</td></tr>
+<tr><td align=center>gmb</td><td>Bulk-Source transconductance</td></tr>
+<tr><td align=center>gmbs</td><td>Bulk-Source transconductance</td></tr>
+<tr><td align=center>gbd</td><td>Bulk-Drain conductance</td></tr>
+<tr><td align=center>gbs</td><td>Bulk-Source conductance</td></tr>
+<tr><td align=center>cbd</td><td>Bulk-Drain capacitance</td></tr>
+<tr><td align=center>cbs</td><td>Bulk-Source capacitance</td></tr>
+<tr><td align=center>cgs</td><td>Gate-Source capacitance</td></tr>
+<tr><td align=center>cgd</td><td>Gate-Drain capacitance</td></tr>
+<tr><td align=center>cgb</td><td>Gate-Bulk capacitance</td></tr>
+<tr><td align=center>cqgs</td><td>Capacitance due to gate-source charge storage</td></tr>
+<tr><td align=center>cqgd</td><td>Capacitance due to gate-drain charge storage</td></tr>
+<tr><td align=center>cqgb</td><td>Capacitance due to gate-bulk charge storage</td></tr>
+<tr><td align=center>cqbd</td><td>Capacitance due to bulk-drain charge storage</td></tr>
+<tr><td align=center>cqbs</td><td>Capacitance due to bulk-source charge storage</td></tr>
+<tr><td align=center>cbd0</td><td>Zero-Bias B-D junction capacitance</td></tr>
+<tr><td align=center>cbdsw0</td><td>Zero-Bias B-D sidewall capacitance</td></tr>
+<tr><td align=center>cbs0</td><td>Zero-Bias B-S junction capacitance</td></tr>
+<tr><td align=center>cbssw0</td><td>Zero-Bias B-S sidewall capacitance</td></tr>
+<tr><td align=center>qbs</td><td>Bulk-Source charge storage</td></tr>
+<tr><td align=center>qgs</td><td>Gate-Source charge storage</td></tr>
+<tr><td align=center>qgd</td><td>Gate-Drain charge storage</td></tr>
+<tr><td align=center>qgb</td><td>Gate-Bulk charge storage</td></tr>
+<tr><td align=center>qbd</td><td>Bulk-Drain charge storage</td></tr>
+<tr><td align=center>p</td><td>Instantaneous power</td></tr>
+<tr><th colspan=2>Mos3 - model parameters (input-only)</th></tr>
+<tr><td align=center>nmos</td><td>N type MOSfet model</td></tr>
+<tr><td align=center>pmos</td><td>P type MOSfet model</td></tr>
+<tr><th colspan=2>Mos3 - model parameters (input-output)</th></tr>
+<tr><td align=center>vto</td><td>Threshold voltage</td></tr>
+<tr><td align=center>vt0</td><td>(null)</td></tr>
+<tr><td align=center>kp</td><td>Transconductance parameter</td></tr>
+<tr><td align=center>gamma</td><td>Bulk threshold parameter</td></tr>
+<tr><td align=center>phi</td><td>Surface potential</td></tr>
+<tr><td align=center>rd</td><td>Drain ohmic resistance</td></tr>
+<tr><td align=center>rs</td><td>Source ohmic resistance</td></tr>
+<tr><td align=center>cbd</td><td>B-D junction capacitance</td></tr>
+<tr><td align=center>cbs</td><td>B-S junction capacitance</td></tr>
+<tr><td align=center>is</td><td>Bulk junction sat. current</td></tr>
+<tr><td align=center>pb</td><td>Bulk junction potential</td></tr>
+<tr><td align=center>cgso</td><td>Gate-source overlap cap.</td></tr>
+<tr><td align=center>cgdo</td><td>Gate-drain overlap cap.</td></tr>
+<tr><td align=center>cgbo</td><td>Gate-bulk overlap cap.</td></tr>
+<tr><td align=center>rsh</td><td>Sheet resistance</td></tr>
+<tr><td align=center>cj</td><td>Bottom junction cap per area</td></tr>
+<tr><td align=center>mj</td><td>Bottom grading coefficient</td></tr>
+<tr><td align=center>cjsw</td><td>Side junction cap per area</td></tr>
+<tr><td align=center>mjsw</td><td>Side grading coefficient</td></tr>
+<tr><td align=center>js</td><td>Bulk jct. sat. current density</td></tr>
+<tr><td align=center>tox</td><td>Oxide thickness</td></tr>
+<tr><td align=center>ld</td><td>Lateral diffusion</td></tr>
+<tr><td align=center>u0</td><td>Surface mobility</td></tr>
+<tr><td align=center>uo</td><td>(null)</td></tr>
+<tr><td align=center>fc</td><td>Forward bias jct. fit parm.</td></tr>
+<tr><td align=center>nsub</td><td>Substrate doping</td></tr>
+<tr><td align=center>tpg</td><td>Gate type</td></tr>
+<tr><td align=center>nss</td><td>Surface state density</td></tr>
+<tr><td align=center>vmax</td><td>Maximum carrier drift velocity</td></tr>
+<tr><td align=center>xj</td><td>Junction depth</td></tr>
+<tr><td align=center>nfs</td><td>Fast surface state density</td></tr>
+<tr><td align=center>xd</td><td>Depletion layer width</td></tr>
+<tr><td align=center>alpha</td><td>Alpha</td></tr>
+<tr><td align=center>eta</td><td>Vds dependence of threshold voltage</td></tr>
+<tr><td align=center>delta</td><td>Width effect on threshold</td></tr>
+<tr><td align=center>input_delta</td><td>(null)</td></tr>
+<tr><td align=center>theta</td><td>Vgs dependence on mobility</td></tr>
+<tr><td align=center>kappa</td><td>Kappa</td></tr>
+<tr><td align=center>tnom</td><td>Parameter measurement temperature</td></tr>
+<tr><td align=center>kf</td><td>Flicker noise coefficient</td></tr>
+<tr><td align=center>af</td><td>Flicker noise exponent</td></tr>
+<tr><th colspan=2>Mos3 - model parameters (output-only)</th></tr>
+<tr><td align=center>type</td><td>N-channel or P-channel MOS</td></tr>
+</table>
+
+<h3><a name="B.20">B.20 Mos6:  Level 6 MOSfet model with Meyer capacitance model</a></h3>
+<p>See Userguide <a href="sec3.html#3.4.8">&sect; 3.4.8</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>Mos6 - instance parameters (input-only)</th></tr>
+<tr><td align=center>off</td><td>Device initially off</td></tr>
+<tr><td align=center>ic</td><td>Vector of D-S, G-S, B-S voltages</td></tr>
+<tr><th colspan=2>Mos6 - instance parameters (input-output)</th></tr>
+<tr><td align=center>l</td><td>Length</td></tr>
+<tr><td align=center>w</td><td>Width</td></tr>
+<tr><td align=center>ad</td><td>Drain area</td></tr>
+<tr><td align=center>as</td><td>Source area</td></tr>
+<tr><td align=center>pd</td><td>Drain perimeter</td></tr>
+<tr><td align=center>ps</td><td>Source perimeter</td></tr>
+<tr><td align=center>nrd</td><td>Drain squares</td></tr>
+<tr><td align=center>nrs</td><td>Source squares</td></tr>
+<tr><td align=center>icvds</td><td>Initial D-S voltage</td></tr>
+<tr><td align=center>icvgs</td><td>Initial G-S voltage</td></tr>
+<tr><td align=center>icvbs</td><td>Initial B-S voltage</td></tr>
+<tr><td align=center>temp</td><td>Instance temperature</td></tr>
+<tr><th colspan=2>Mos6 - instance parameters (output-only)</th></tr>
+<tr><td align=center>id</td><td>Drain current</td></tr>
+<tr><td align=center>cd</td><td>Drain current</td></tr>
+<tr><td align=center>is</td><td>Source current</td></tr>
+<tr><td align=center>ig</td><td>Gate current</td></tr>
+<tr><td align=center>ib</td><td>Bulk current</td></tr>
+<tr><td align=center>ibs</td><td>B-S junction capacitance</td></tr>
+<tr><td align=center>ibd</td><td>B-D junction capacitance</td></tr>
+<tr><td align=center>vgs</td><td>Gate-Source voltage</td></tr>
+<tr><td align=center>vds</td><td>Drain-Source voltage</td></tr>
+<tr><td align=center>vbs</td><td>Bulk-Source voltage</td></tr>
+<tr><td align=center>vbd</td><td>Bulk-Drain voltage</td></tr>
+<tr><td align=center>dnode</td><td>Number of the drain node</td></tr>
+<tr><td align=center>gnode</td><td>Number of the gate node</td></tr>
+<tr><td align=center>snode</td><td>Number of the source node</td></tr>
+<tr><td align=center>bnode</td><td>Number of the node</td></tr>
+<tr><td align=center>dnodeprime</td><td>Number of int. drain node</td></tr>
+<tr><td align=center>snodeprime</td><td>Number of int. source node</td></tr>
+<tr><td align=center>rs</td><td>Source resistance</td></tr>
+<tr><td align=center>sourceconductanceSource</td><td>conductance</td></tr>
+<tr><td align=center>rd</td><td>Drain resistance</td></tr>
+<tr><td align=center>drainconductance</td><td>Drain conductance</td></tr>
+<tr><td align=center>von</td><td>Turn-on voltage</td></tr>
+<tr><td align=center>vdsat</td><td>Saturation drain voltage</td></tr>
+<tr><td align=center>sourcevcrit</td><td>Critical source voltage</td></tr>
+<tr><td align=center>drainvcrit</td><td>Critical drain voltage</td></tr>
+<tr><td align=center>gmbs</td><td>Bulk-Source transconductance</td></tr>
+<tr><td align=center>gm</td><td>Transconductance</td></tr>
+<tr><td align=center>gds</td><td>Drain-Source conductance</td></tr>
+<tr><td align=center>gbd</td><td>Bulk-Drain conductance</td></tr>
+<tr><td align=center>gbs</td><td>Bulk-Source conductance</td></tr>
+<tr><td align=center>cgs</td><td>Gate-Source capacitance</td></tr>
+<tr><td align=center>cgd</td><td>Gate-Drain capacitance</td></tr>
+<tr><td align=center>cgb</td><td>Gate-Bulk capacitance</td></tr>
+<tr><td align=center>cbd</td><td>Bulk-Drain capacitance</td></tr>
+<tr><td align=center>cbs</td><td>Bulk-Source capacitance</td></tr>
+<tr><td align=center>cbd0</td><td>Zero-Bias B-D junction capacitance</td></tr>
+<tr><td align=center>cbdsw0</td><td>&nbsp;</td></tr>
+<tr><td align=center>cbs0</td><td>Zero-Bias B-S junction capacitance</td></tr>
+<tr><td align=center>cbssw0</td><td>&nbsp;</td></tr>
+<tr><td align=center>cqgs</td><td>Capacitance due to gate-source charge storage</td></tr>
+<tr><td align=center>cqgd</td><td>Capacitance due to gate-drain charge storage</td></tr>
+<tr><td align=center>cqgb</td><td>Capacitance due to gate-bulk charge storage</td></tr>
+<tr><td align=center>cqbd</td><td>Capacitance due to bulk-drain charge storage</td></tr>
+<tr><td align=center>cqbs</td><td>Capacitance due to bulk-source charge storage</td></tr>
+<tr><td align=center>qgs</td><td>Gate-Source charge storage</td></tr>
+<tr><td align=center>qgd</td><td>Gate-Drain charge storage</td></tr>
+<tr><td align=center>qgb</td><td>Gate-Bulk charge storage</td></tr>
+<tr><td align=center>qbd</td><td>Bulk-Drain charge storage</td></tr>
+<tr><td align=center>qbs</td><td>Bulk-Source charge storage</td></tr>
+<tr><td align=center>p</td><td>Instaneous power</td></tr>
+<tr><th colspan=2>Mos6 - model parameters (input-only)</th></tr>
+<tr><td align=center>nmos</td><td>N type MOSfet model</td></tr>
+<tr><td align=center>pmos</td><td>P type MOSfet model</td></tr>
+<tr><th colspan=2>Mos6 - model parameters (input-output)</th></tr>
+<tr><td align=center>vto</td><td>Threshold voltage</td></tr>
+<tr><td align=center>vt0</td><td>(null)</td></tr>
+<tr><td align=center>kv</td><td>Saturation voltage factor</td></tr>
+<tr><td align=center>nv</td><td>Saturation voltage coeff.</td></tr>
+<tr><td align=center>kc</td><td>Saturation current factor</td></tr>
+<tr><td align=center>nc</td><td>Saturation current coeff.</td></tr>
+<tr><td align=center>nvth</td><td>Threshold voltage coeff.</td></tr>
+<tr><td align=center>ps</td><td>Sat. current modification  par.</td></tr>
+<tr><td align=center>gamma</td><td>Bulk threshold parameter</td></tr>
+<tr><td align=center>gamma1</td><td>Bulk threshold parameter 1</td></tr>
+<tr><td align=center>sigma</td><td>Static feedback effect par.</td></tr>
+<tr><td align=center>phi</td><td>Surface potential</td></tr>
+<tr><td align=center>lambda</td><td>Channel length modulation param.</td></tr>
+<tr><td align=center>lambda0</td><td>Channel length modulation param. 0</td></tr>
+<tr><td align=center>lambda1</td><td>Channel length modulation param. 1</td></tr>
+<tr><td align=center>rd</td><td>Drain ohmic resistance</td></tr>
+<tr><td align=center>rs</td><td>Source ohmic resistance</td></tr>
+<tr><td align=center>cbd</td><td>B-D junction capacitance</td></tr>
+<tr><td align=center>cbs</td><td>B-S junction capacitance</td></tr>
+<tr><td align=center>is</td><td>Bulk junction sat. current</td></tr>
+<tr><td align=center>pb</td><td>Bulk junction potential</td></tr>
+<tr><td align=center>cgso</td><td>Gate-source overlap cap.</td></tr>
+<tr><td align=center>cgdo</td><td>Gate-drain overlap cap.</td></tr>
+<tr><td align=center>cgbo</td><td>Gate-bulk overlap cap.</td></tr>
+<tr><td align=center>rsh</td><td>Sheet resistance</td></tr>
+<tr><td align=center>cj</td><td>Bottom junction cap per area</td></tr>
+<tr><td align=center>mj</td><td>Bottom grading coefficient</td></tr>
+<tr><td align=center>cjsw</td><td>Side junction cap per area</td></tr>
+<tr><td align=center>mjsw</td><td>Side grading coefficient</td></tr>
+<tr><td align=center>js</td><td>Bulk jct. sat. current density</td></tr>
+<tr><td align=center>ld</td><td>Lateral diffusion</td></tr>
+<tr><td align=center>tox</td><td>Oxide thickness</td></tr>
+<tr><td align=center>u0</td><td>Surface mobility</td></tr>
+<tr><td align=center>uo</td><td>(null)</td></tr>
+<tr><td align=center>fc</td><td>Forward bias jct. fit parm.</td></tr>
+<tr><td align=center>tpg</td><td>Gate type</td></tr>
+<tr><td align=center>nsub</td><td>Substrate doping</td></tr>
+<tr><td align=center>nss</td><td>Surface state density</td></tr>
+<tr><td align=center>tnom</td><td>Parameter measurement temperature</td></tr>
+<tr><th colspan=2>Mos6 - model parameters (output-only)</th></tr>
+<tr><td align=center>type</td><td>N-channel or P-channel MOS</td></tr>
+</table>
+
+<h3><a name="B.21">B.21</a> <a name="Resistor">Resistor</a>:  Simple linear resistor</h3>
+<p>See Userguide <a href="sec3.html#3.1.1">&sect; 3.1.1</a></p>
+<table align=center width="75%" border=1>
+<tr><th colspan=2>Resistor - instance parameters (input-output)</th></tr>
+<tr><td align=center>resistance</td><td>Resistance</td></tr>
+<tr><td align=center>temp</td><td>Instance operating temperature</td></tr>
+<tr><td align=center>l</td><td>Length</td></tr>
+<tr><td align=center>w</td><td>Width</td></tr>
+<tr><th colspan=2>Resistor - instance parameters (output-only)</th></tr>
+<tr><td align=center>i</td><td>Current</td></tr>
+<tr><td align=center>p</td><td>Power</td></tr>
+<tr><th colspan=2>Resistor - model parameters (input-only)</th></tr>
+<tr><td align=center>r</td><td>Device is a resistor model</td></tr>
+<tr><th colspan=2>Resistor - model parameters (input-output)</th></tr>
+<tr><td align=center>rsh</td><td>Sheet resistance</td></tr>
+<tr><td align=center>narrow</td><td>Narrowing of resistor</td></tr>
+<tr><td align=center>tc1</td><td>First order temp. coefficient</td></tr>
+<tr><td align=center>tc2</td><td>Second order temp. coefficient</td></tr>
+<tr><td align=center>defw</td><td>Default device width</td></tr>
+<tr><td align=center>tnom</td><td>Parameter measurement temperature</td></tr>
+</table>
+
+<h3><a name="B.22">B.22</a> <a name="Switch">Switch</a>: Ideal voltage controlled switch</h3>
+<p>See Userguide <a href="sec3.html#3.1.10">&sect; 3.1.10</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>Switch - instance parameters (input-only)</th></tr>
+<tr><td align=center>on</td><td>Switch initially closed</td></tr>
+<tr><td align=center>off</td><td>Switch initially open</td></tr>
+<tr><th colspan=2>Switch - instance parameters (input-output)</th></tr>
+<tr><td align=center>pos_node</td><td>Positive node of switch</td></tr>
+<tr><td align=center>neg_node</td><td>Negative node of switch</td></tr>
+<tr><th colspan=2>Switch - instance parameters (output-only)</th></tr>
+<tr><td align=center>cont_p_node</td><td>Positive contr. node of switch</td></tr>
+<tr><td align=center>cont_n_node</td><td>Positive contr. node of switch</td></tr>
+<tr><td align=center>i</td><td>Switch current</td></tr>
+<tr><td align=center>p</td><td>Switch power</td></tr>
+<tr><th colspan=2>Switch - model parameters (input-output)</th></tr>
+<tr><td align=center>sw</td><td>Switch model</td></tr>
+<tr><td align=center>vt</td><td>Threshold voltage</td></tr>
+<tr><td align=center>vh</td><td>Hysteresis voltage</td></tr>
+<tr><td align=center>ron</td><td>Resistance when closed</td></tr>
+<tr><td align=center>roff</td><td>Resistance when open</td></tr>
+<tr><th colspan=2>Switch - model parameters (output-only)</th></tr>
+<tr><td align=center>gon</td><td>Conductance when closed</td></tr>
+<tr><td align=center>goff</td><td>Conductance when open</td></tr>
+</table>
+
+<h3><a name="B.23">B.23</a> <a name="Tranline">Tranline</a>:  Lossless transmission line</h3>
+<p>See Userguide <a href="sec3.html#3.3.1">&sect; 3.3.1</a></p>
+
+<table align=center width="75%" border=1>
+
+<tr><th colspan=2>Tranline - instance parameters (input-only)</th></tr>
+<tr><td align=center>ic</td><td>Initial condition vector:v1,i1,v2,i2</td></tr>
+<tr><th colspan=2>Tranline - instance parameters (input-output)</th></tr>
+<tr><td align=center>z0</td><td>Characteristic impedance</td></tr>
+<tr><td align=center>zo</td><td>(null)</td></tr>
+<tr><td align=center>f</td><td>Frequency</td></tr>
+<tr><td align=center>td</td><td>Transmission delay</td></tr>
+<tr><td align=center>nl</td><td>Normalized length at frequency given</td></tr>
+<tr><td align=center>v1</td><td>Initial voltage at end 1</td></tr>
+<tr><td align=center>v2</td><td>Initial voltage at end 2</td></tr>
+<tr><td align=center>i1</td><td>Initial current at end 1</td></tr>
+<tr><td align=center>i2</td><td>Initial current at end 2</td></tr>
+<tr><th colspan=2>Tranline - instance parameters (output-only)</th></tr>
+<tr><td align=center>rel</td><td>Rel. rate of change of deriv. for bkpt</td></tr>
+<tr><td align=center>abs</td><td>Abs. rate of change of deriv. for bkpt</td></tr>
+<tr><td align=center>pos_node1</td><td>Positive node of end 1 of t. line</td></tr>
+<tr><td align=center>neg_node1</td><td>Negative node of end 1 of t. line</td></tr>
+<tr><td align=center>pos_node2</td><td>Positive node of end 2 of t. line</td></tr>
+<tr><td align=center>neg_node2</td><td>Negative node of end 2 of t. line</td></tr>
+<tr><td align=center>delays</td><td>Delayed values of excitation</td></tr>
+</table>
+
+<h3><a name="B.24">B.24</a> <a name="VCCS">VCCS:</a>  Voltage controlled current source</h3>
+<p>See Userguide <a href="sec3.html#3.2.2.1">&sect; 3.2.2.1</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>VCCS - instance parameters (input-only)</th></tr>
+<tr><td align=center>ic</td><td>Initial condition of controlling source</td></tr>
+<tr><th colspan=2>VCCS - instance parameters (input-output)</th></tr>
+<tr><td align=center>gain</td><td>Transconductance of source (gain)</td></tr>
+<tr><th colspan=2>VCCS - instance parameters (output-only)</th></tr>
+<tr><td align=center>pos_node</td><td>Positive node of source</td></tr>
+<tr><td align=center>neg_node</td><td>Negative node of source</td></tr>
+<tr><td align=center>cont_p_node</td><td>Positive node of contr. source</td></tr>
+<tr><td align=center>cont_n_node</td><td>Negative node of contr. source</td></tr>
+<tr><td align=center>i</td><td>Output current</td></tr>
+<tr><td align=center>v</td><td>Voltage across output</td></tr>
+<tr><td align=center>p</td><td>Power</td></tr>
+</table>
+
+<h3><a name="B.25">B.25</a> <a name="VCVS">VCVS</a>:  Voltage controlled voltage source</h3>
+<p>See Userguide <a href="sec3.html#3.2.2.2">&sect; 3.2.2.2</a></p>
+
+<table align=center width="75%" border=1>
+<tr><th colspan=2>VCVS - instance parameters (input-only)</th></tr>
+<tr><td align=center>ic</td><td>Initial condition of controlling source</td></tr>
+<tr><th colspan=2>VCVS - instance parameters (input-output)</th></tr>
+<tr><td align=center>gain</td><td>Voltage gain</td></tr>
+<tr><th colspan=2>VCVS - instance parameters (output-only)</th></tr>
+<tr><td align=center>pos_node</td><td>Positive node of source</td></tr>
+<tr><td align=center>neg_node</td><td>Negative node of source</td></tr>
+<tr><td align=center>cont_p_node</td><td>Positive node of contr. source</td></tr>
+<tr><td align=center>cont_n_node</td><td>Negative node of contr. source</td></tr>
+<tr><td align=center>i</td><td>Output current</td></tr>
+<tr><td align=center>v</td><td>Output voltage</td></tr>
+<tr><td align=center>p</td><td>Power</td></tr>
+</table>
+
+<h3><a name="B.26">B.26</a> <a name="Vsource">Vsource</a>:  Independent voltage source</h3>
+<p>See Userguide <a href="sec3.html#3.2.1">&sect; 3.2.1</a></p>
+
+<table align=center width="75%" border=1>
+
+<tr><th colspan=2>Vsource - instance parameters (input-only)</th></tr>
+<tr><td align=center>pulse</td><td>Pulse description</td></tr>
+<tr><td align=center>sine</td><td>Sinusoidal source description</td></tr>
+<tr><td align=center>sin</td><td>Sinusoidal source description</td></tr>
+<tr><td align=center>exp</td><td>Exponential source description</td></tr>
+<tr><td align=center>pwl</td><td>Piecewise linear description</td></tr>
+<tr><td align=center>sffm</td><td>Single freq. FM descripton</td></tr>
+<tr><td align=center>ac</td><td>AC magnitude, phase vector</td></tr>
+<tr><td align=center>distof1</td><td>f1 input for distortion</td></tr>
+<tr><td align=center>distof2</td><td>f2 input for distortion</td></tr>
+<tr><th colspan=2>Vsource - instance parameters (input-output)</th></tr>
+<tr><td align=center>dc</td><td>D.C. source value</td></tr>
+<tr><td align=center>acmag</td><td>A.C. Magnitude</td></tr>
+<tr><td align=center>acphase</td><td>A.C. Phase</td></tr>
+<tr><th colspan=2>Vsource - instance parameters (output-only)</th></tr>
+<tr><td align=center>pos_node</td><td>Positive node of source</td></tr>
+<tr><td align=center>neg_node</td><td>Negative node of source</td></tr>
+<tr><td align=center>function</td><td>Function of the source</td></tr>
+<tr><td align=center>order</td><td>Order of the source function</td></tr>
+<tr><td align=center>coeffs</td><td>Coefficients for the function</td></tr>
+<tr><td align=center>acreal</td><td>AC real part</td></tr>
+<tr><td align=center>acimag</td><td>AC imaginary part</td></tr>
+<tr><td align=center>i</td><td>Voltage source current</td></tr>
+<tr><td align=center>p</td><td>Instantaneous power</td></tr>
+</table>
+
+<DIV class=NOPRINT>
+&nbsp;
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+</DIV>
+
+
+
+
+
+</div>
+
+<div class='phy-forcewidth'>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+</div>
+</table> <!-- End of main layout table -->
+<hr id=xphy-bottom2>
+
+<div class=noprint>
+<table width='100%' border=0>
+<tr>
+<td valign=middle align=left>
+
+<a href='http://validator.w3.org/check?uri=referer'>Validate</a>
+ &nbsp;  
+<a href='http://validator.w3.org/checklink?uri=referer'>Link-check</a>
+
+
+<td valign=middle align=center>
+
+<a href='http://newton.ex.ac.uk/general/copyright.html'>&copy; Copyright &amp; disclaimer</a>
+
+<td valign=middle align='right'>
+
+<!-- AddThis Button BEGIN -->
+<a href="http://www.addthis.com/bookmark.php" target=sharethis><img class=addit src="/furniture/addthis.gif" width="125" height="16" border="0" alt="Share" title="Add this page to your favourite social networking sites"></a>
+<!-- AddThis Button END -->
+
+</table>
+
+</div>
+
+</div> <!-- wrapper -->
+
+</body>
+</html>

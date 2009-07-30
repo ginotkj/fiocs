@@ -1,0 +1,458 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    DO NOT EDIT THIS PAGE! See http://newton.ex.ac.uk/schooldocs/it/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<HEAD>
+<TITLE>SPICE 3 User&#039;s Manual - Appendix D</TITLE>
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<link REL='SHORTCUT ICON' HREF='/favicon.ico'> 
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/screen2.css'> 
+<link media='print' rel='stylesheet' TYPE='text/css' href='/css/print.css'>
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/nosidebar.css'>
+</head>
+<body>
+
+<!--  START OF NEW HEADER -->
+<div id="x_wrapper">
+
+<!--
+<div class='maybemobile'>View this page on our
+<a href='http://m-newton.ex.ac.uk/teaching/resources/CDHW/Electronics2/userguide/secD.html'>mobile-friendly site</a>
+</div>
+-->
+
+<table width='100%' id="x_header" cellpadding=0 cellspacing=0 border=0><tr>
+  <td valign=top id="x_logo">
+     <a href="http://www.ex.ac.uk/" title="University of Exeter"><img src="/furniture/logo.gif" alt="University of Exeter" class="logo" width="162" height="60"></a>
+
+  <td valign=top id="x_department" align=left>
+    <a href='/' class='verytop'>School of Physics</a>
+    
+      
+  <td id="x_topnav" align=right valign=top>
+      <div id="supernav">
+          <a href="http://newton.ex.ac.uk/contact.html">Contact Us</a>
+          | <a href="http://newton.ex.ac.uk/schooldocs/">Staff</a>
+          | <a href="http://newton.ex.ac.uk/teaching/">Students</a>
+          | <a href="http://www.ex.ac.uk/myexeter/">MyExeter</a>
+          | <a href="http://newton.ex.ac.uk/quick-links/">Site map</a>
+        </div>
+
+        <div id="search">
+	  <form method="get" action="/cgi-bin/htsearch" 
+name="htsearchform" id="searchbox">
+                        <input class="search" id="words" name ='words'
+type="text" size="23" maxlength="80" title="Search the site"
+onfocus='if(this.value==this.defaultValue)  this.value="";' 
+value='  Search Physics'>
+                       <input type=hidden name='config' value='htdig'>
+<input name="submit" class="button" value="Search"  type="submit">
+
+          </form>
+        </div>
+    </table>
+<!-- NB div "wrapper" remains open -->
+<!--  END OF NEW HEADER -->
+
+
+<table cellspacing=0 cellpadding=0 class='phy-toptable'>
+
+<tr>
+
+<!-- SIDEBARROWSPAN = 2 -->
+
+
+
+
+<td valign='top'>
+      <div class="mainnav">
+        <ul>
+	<li><a 
+	href="/" title="School" 
+	class="studying">Home page</a>
+
+<li><a	href="/teaching/" title="Teaching" 
+	class="alumni">Our Teaching</a>
+
+<li><a 	href="/research/" title="Research" 
+	class="research">Our Research</a>
+
+<li><a 	href="/admissions/" title="Admissions" 
+	class="working">How to apply</a>
+
+<li><a 	href="/features/" title="News" 
+	class="business">News</a>
+
+<li><a 	href="/research/positions/" title="Jobs" 
+	class="jobs">Jobs</a>
+
+      </ul>
+    </div>
+
+
+<tr>
+<td class='phy-content' id='top' valign=top>
+<div class='e-topcrumbs'>  <a href='/'>Home</a>  <b>&rsaquo;</b> <a href='./../../../../'>Our Teaching</a> <b>&rsaquo;</b> <a href='./../../../'>Resources</a> <b>&rsaquo;</b> <a href='./../../'>CDHW</a> <b>&rsaquo;</b> <a href='./../'>Electronics2</a> <b>&rsaquo;</b> <a href='./'>Userguide</a> <b>&rsaquo;</b> <span class='crumbs_here'>secD.html</span></div>
+
+
+<div class='phy-realcontent'>
+
+
+
+
+
+
+
+<h1>SPICE 3 User&#039;s Manual - Appendix&nbsp;D</h1>
+
+
+
+
+
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+
+<h2><a name="D">APPENDIX D:  SPICE3 BUGS AND PATCHES</a></h2>
+<p>This appendix is based, with his kind permission, on Ned Forrester's
+collection of bugs and patches to Spice 3f4. Please
+ <a a href="mailto:c.d.h.williams@exeter.ac.uk">email me</a> further
+ contributions and corrections for inclusion.</p>
+
+<h3>Demonstration files</h3>
+<strong>Credit: Berkeley and Paolo Nenzi</strong>
+<p>There is a useful collection of spice <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/ngspice/ngspice/ng-spice/tests/">source files</a> which demonstrate known
+bugs in Spice3f5. They are based on the contents of ftp://ic.eecs.berkeley.edu/pub/Spice3/qxdir.tar.z 
+ 
+
+<h3>The evolution of Spice from 3f4 to 3f5</h3>
+<strong>Credit: Beorn Johnson</strong>
+
+<p>The last official version of Spice is 3f5
+but for a while it was distributed under the name of 3f4. The last
+few patches (one of which is actually rather important for initial
+conditions to work right) were not done in the same way previous sets of
+patches were done.  In particular, the version file (which is in
+an obscure location) wasn't updated.  This causes lots of confusion,
+since you can't tell if you have an updated version of 3f4 or not --
+so when you apply the patches, BE CAREFUL.</p>
+
+<p>The patches from 3f4 to 3f5 are available
+and from Berkeley, but they move around a bit so there is
+a copy here [<a href="patches1.txt">patches1.txt</a>]. Each patch should be
+applied separately. To update the
+'version' to 3f5, change the file 'util/skeleton/make_def.bd'; edit the line with
+"VERSION = 3f4".</p>
+
+<h3>Arbitrary Source state bug</h3>
+<strong> Credit: Beorn Johnson, Eckhard Brass</strong>
+<p>2 bugs in the arbitrary source code are illustrated by</p>
+<pre><code>
+   ASRC bug test code
+   vt 10 0 1
+   b1 1 0 v = v(10)
+   r1 1 0 1
+   b2 2 0 v = 1
+   r2 2 0 1
+   b3 3 0 i = 1
+   r3 3 0 1
+   .control
+   op
+   print all
+   show all
+   .endc
+   .end
+</code></pre>
+<p>Eckhard Brass noted:
+<ol>
+<li>The parser works only correctly if you use at least one circuit node.
+v=2*3 does not work. A quick and dirty fix is to add v(0)=0, e.g. v=2*3+v(0) works!
+<li>The 'show' command does not work correctly with ASRC devices, a patch
+[<a href="patches2.txt">patches2.txt</a>] which fixes this is available. However,
+the values that are then reported by show aren't reliable. 
+</ol>
+<p>Beorn Johnson provided some fixes for the asrc code [<a href="patches3.txt">patches3.txt</a>].
+However, even after these are applied, the branch currents reported by show are unreliable
+-- this has to do with the fact that the current (amps) output of a current source isn't
+a state variable.</p>
+
+
+<h3><a name="plotbug">Interpretation Plot Commands</a></h3>
+<strong>Credit: CDHW</strong>
+<p>Bug: <kbd>plot foo vs -bar</kbd> is interpreted as <kbd>plot foo (vs-bar)</kbd> which is incorrect  unless someone has unwisely defined a vector named <code>vs</code>.
+<p>Fix: Workround: <kbd>plot foo vs (-bar)</kbd>
+
+<h3><a name="plotbug">Where command causes crashes</a></h3>
+<strong>Credit: CDHW</strong>
+<p>Bug: <kbd>where</kbd> causes crashes if there is no unconverged node to report.
+<p>Fix: Provide appropriate tests in where.c [<a href="patches10.txt">patches10.txt</a>].
+
+<h3>Recognition of scale factors in arbitrary source</h3>
+<strong>Credit: Ned Forrester, Beorn Johnson, CDHW</strong>
+<p>Bug: Scale factors (e.g. m, k, meg, etc.) for constants in arbitrary sources (b devices) are not recognized. 
+<p>Fix: Changes to inpgtok.c and inpptree.c, as supplied by Berkeley as patch for 3e2. [<a href="patches5.txt">patches5.txt</a>] 
+<p>B.J. vaguely recalled that there was some
+problem/conflict with this patch, possibly occuring when you
+try to expand a subcircuit containing a nonlinear source that has
+scale factors in it.</p>
+<p>CDHW: The root cause of several problems is the fact that the parser doesn't correctly
+interpret 'v(44bb)' which is the value of node 44bb, and '44bb*v(3)' which is either a syntax error or 44 times the value of
+node 3 depending on your philosophy. The patch5.txt version doesn't
+deal with v(foo,bar) correctly either. A more radical overhaul is needed to sort things out properly.
+
+<h3>Current Controlled Switch in subckt, parsing error</h3>
+<strong>Credit: Ned Forrester</strong>
+<p>Bug: Current controlled switch inside subcircuit does not expand the
+controlling source correctly: vsrc expands to name:vsrc, not to v:name:src.
+<p>Fix: Change src/lib/fte/subckt.c to indicate that w device has only 2 
+ not 3 nodes and 1 not zero controlling sources. [<a href="patches4.txt">patches4.txt</a>]
+
+<h3>Noise analysis bug</h3>
+<strong>Credit: Richard McRoberts</strong>
+<p>Bug: The ac noise analysis in Spice3f4 has a serious bug.  In
+interactive mode, it fails to reproduce frequency dependence known
+to exist. In batch (Spice2) mode, it works only if a corresponding
+ac analysis has been run first.
+<p>Fix: Providing a call to CKTload() in noisean.c as
+shown by the source code patch [<a href="patches6.txt">patches6.txt</a>].
+
+<h3>Save segmentation faults</h3>
+<strong>Credit: Richard McRoberts</strong>
+<p>To fix various "save"-related segmentation faults, make this 
+one-line patch to outitf.c: line 356, change <code>unique = devname;</code> to <code>unique = copy(devname);</code>
+
+<h3>Single point AC analysis crash</h3>
+<strong>Credit: Richard McRoberts</strong>
+<p>A bug that most users probably wouldn't encounter occurs in an ac
+analysis using a linear sweep with only one point.  (A rather
+pathological case.)  The original code in acan.c uses a frequency
+increment of "HUGE" (infinity) which causes a crash when stepping
+to the second point.  Fixed by making the increment zero, which is
+tested for in the sweep, causing it to terminate correctly after
+the first point.
+
+<h3>AC analysis of LTRA device wrong for LC only model</h3>
+<strong>Credit: CDHW</strong>
+<p>An AC analysis of the LTRA transmission returns incorrect results
+unless LEN=1.0 . E.g. the two stub models below should be the same
+<pre><code>
+ltra model behavior 
+v1 1 0 dc 0 ac 1 
+r1 1 2 50 
+*.model stub ltra c=0.6663p l=1.6672n len=1.5 
+.model stub ltra c=0.995p l=2.501n len=1 
+o3 2 0 4 0 stub 
+.control 
+ac lin 1000 1G 10G 
+plot vdb(2) 
+.endc 
+.end 
+</code></pre>
+<p>Fix: Correct calculation of lambda_r in LTRAacld.c [<a href="patches11.txt">patches11.txt</a>]
+</p>
+
+
+
+<h3>BSIM1 model xpart parameter random</h3>
+<strong>Credit: Al Davis</strong>
+<p>Bug: the BSIM1 model, the parameter "xpart" behaves randomly. 
+<p>Fix: In the file "b1mpar.c" line 290, change "iValue" to "rValue". 
+
+<h3>BSIM3v3.1 model note</h3>
+<strong>Credit: Peter Hunt</strong>
+<p>The bsim3 code available from Berkeley
+was written for spice 3e2. In the node setup code the BSIM3instance
+is cast as a GENinstance so the first part of both structures have to
+line up. This means the fourth member needs to be the "states". 
+Apparently, the GENinstance changed between 3e2 and 3f4. [<a href="patches7.txt">patches7.txt</a>]
+
+<h3>BSIM3v3.2 model TNOM parameter</h3>
+<strong>Credit: Mike Smith</strong>
+<p>BSIM3v3.2 gives wrong results unless TNOM parameter is omitted. [<a href="patches8.txt">patches8.txt</a>]
+
+
+<h3>Diode model breakdown behaviour</h3>
+<strong>Credit: Various</strong>
+<p>When a breakdown region is specified for a diode by setting the IBV and BV parameters
+any value of emission coefficient othe than 1.0 (the default) leads to a characteristic
+that doesn't pass through I=-ibv when V=-bv.</p>
+
+<h3>MOSFET initialisation</h3>
+<strong>Credit: Thomas Leitner (ECS 97 paper)</strong>
+<p>Most standard MOSFET models have a bbug in the initialisation code for the
+drain bulk junction. The initial current at t=0 during a transient run has a spike
+that gets smaller as the initial timestep is increased.</p>
+
+
+<h3>Tran analysis default TSTEP</h3>
+<strong>Credit: CDHW</strong>
+<p>Bug: Spice 3 by default seems to set TMAX to TSTOP/50.0, instead of the smaller of
+either TSTEP or (TSTOP-TSTART)/50.0 as stated in the manual.
+<p>Fix: Specify TMAX explicitly.  [<a href="patches9.txt">patches9.txt</a>]
+
+<h3>MOS6 model note</h3>
+<strong>Credit: Stephen Gilardi</strong>
+<p>This is some code from the Spice 3f5 source file mos6load.c:</p>
+
+<pre><code>
+                vdshere = vds * here->MOS6mode;
+
+von=(here->MOS6tVbi*model->MOS6type)+model->MOS6gamma*sarg
+                    - model->MOS6gamma1 * vbsvbd;
+                    - model->MOS6sigma  * vdshere;
+</code></pre>
+
+<p>The value of expression is not used.  It looks like there's an unintended
+extra semicolon after <code>vbsvbd</code>.</p>
+
+<h3>Macquarie University Patches</h3>
+<strong>Credit: Anthony Parker</strong>
+<p>The <a href="http://www.elec.mq.edu.au/cnerf/spice/">Macquarie University Patches</a>
+include:</p>
+
+<ul>
+  <li>level 0 patch: Applies the Berkeley 3f4 patches.
+  <li>level 1 patch: Minor fixes for compiling on hpux, and fix to mos6 model.
+  <li>level 1a patch: Rehash of the Macintosh port.
+  <li>level 2 patch: Installs the <I>spec</I> command for detailed spectral analysis.
+  <li>PSmodel patch: Patches for adding the PS JFET/MESFET model as a level=2 JFET.
+</ul>
+
+<h3>MOS3 Bulk-Source Capacitance</h3>
+<strong>Credit: Thomas Leitner (ECS 97 paper)</strong>
+<p>The bulk-source junction capacacitance has some nasty discontinuities due
+to an error in the thermal dependence calculation, illustrated by the following comparison
+with the MOS1 model.
+<pre><code>
+Bulk-Source junction capacitance bug in MOS3 model
+vd1 d1 0 sin 5 8 160k
+vg1 g1 0 sin 0 3 100k
+vs_level1 s1 0 sin 0 1 90k
+vd3 d3 0 sin 5 8 160k
+vg3 g3 0 sin 0 3 100k
+vs_level3 s3 0 sin 0 1 90k
+m1 d1 g1 s1 0 mmod1 temp=150
+m3 d3 g3 s3 0 mmod3 temp=150
+.model mmod1 nmos level=1 cbs=10n
++rs=10 rd=10 is=0 vto=20
+.model mmod3 nmos level=3 cbs=10n
++rs=10 rd=10 is=0 vto=20
+.tran .1u 15u
+.plot tran i(vs_level3) i(vs_level1)
+.end
+</code></pre>
+
+
+<h3>Front-end command processor</h3>
+<strong>Credit: CDHW</strong>
+<p>Bug: There are several problems with the code for this. e.g repeat loops only
+        work once and breaks and continues are problematic.
+<p>Fix: Still work in progress, but I have a version of front.c that is much
+       better than the original. It will be posted here after a bit more checking.
+       The command processor is of limited use until the memory leaks that plague
+       3f5 are fixed.
+       
+<h3>Truncation error calculation</h3>
+<strong>Credit: Steve Hamm</strong>
+<p>
+The trtol value is a fudge factor, originally introduced by Nagel as a
+estimate of how much the local truncation error is overestimated by
+the divided difference formulas.  But, after looking at this in detail
+some years ago, it is just a bug. The formula for estimating
+derivatives by divided differences includes, for the third divided
+difference, 3!.  Nagel dropped the 3! somewhere along the way; the
+factor of 7 is a fairly close replacement -- but only for second order
+integration, which uses the third divided difference.</p>
+
+<p>Note that the spice code has a number of other problems:
+<ul>
+<li>the business of trying to use abstol to ensure that truncation
+   error is no tighter than the nonlinear solution is buggy, and
+   basically means that absol controls the timestep.
+
+<li>the gear code uses fixed-timestep truncation error coefficients
+
+<li>there are arithmetically better ways to estimate truncation error
+   than using divided difference formulas; Brayton's method is good.
+</ul>
+<p>Back to trtol: After the above bugs are fixed, a fudge factor is still 
+useful, but a value of 1.5 or 2.0 is more typical.</p>
+
+
+<h3>Interactive command: let</h3>
+<strong>Credit: CDHW</strong>
+<p>Bug: The let command doesn't handle references to subranges reliably.
+<p>Fix: Various a couple of tweaks to com_let() in postcoms.c
+
+<h3>Interactive command: set</h3>
+<strong>Credit: CDHW</strong>
+<p>In the original 3f4/5 release, simulator variables specified with the set
+command are ignored by interactive simulations. This behaviour is because
+interactive commands have their own 'special' set of options that only exist while the
+the command is being executed and are distinct from the 'current' options for the
+circuit. 'Set' only affects the 'current' options because the 'special' ones don't exist
+at the time it is invoked and are created using the application defaults.
+<p>The original code also defines a 'default' set of options for a circuit which seem to
+serve no useful purpose. The cleanest fix would be to make 'set foo' change both the current
+and default values and to create new tasks using the circuit defaults, not the application
+defaults.
+  
+<DIV class=NOPRINT>
+&nbsp;
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+</DIV>
+
+
+
+
+
+</div>
+
+<div class='phy-forcewidth'>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+</div>
+</table> <!-- End of main layout table -->
+<hr id=xphy-bottom2>
+
+<div class=noprint>
+<table width='100%' border=0>
+<tr>
+<td valign=middle align=left>
+
+<a href='http://validator.w3.org/check?uri=referer'>Validate</a>
+ &nbsp;  
+<a href='http://validator.w3.org/checklink?uri=referer'>Link-check</a>
+
+
+<td valign=middle align=center>
+
+<a href='http://newton.ex.ac.uk/general/copyright.html'>&copy; Copyright &amp; disclaimer</a>
+
+<td valign=middle align='right'>
+
+<!-- AddThis Button BEGIN -->
+<a href="http://www.addthis.com/bookmark.php" target=sharethis><img class=addit src="/furniture/addthis.gif" width="125" height="16" border="0" alt="Share" title="Add this page to your favourite social networking sites"></a>
+<!-- AddThis Button END -->
+
+</table>
+
+</div>
+
+</div> <!-- wrapper -->
+
+</body>
+</html>

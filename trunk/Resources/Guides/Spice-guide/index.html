@@ -1,0 +1,460 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    DO NOT EDIT THIS PAGE! See http://newton.ex.ac.uk/schooldocs/it/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<HEAD>
+<TITLE>SPICE 3 User&#0039;s Manual</TITLE>
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<link REL='SHORTCUT ICON' HREF='/favicon.ico'> 
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/screen2.css'> 
+<link media='print' rel='stylesheet' TYPE='text/css' href='/css/print.css'>
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/nosidebar.css'>
+</head>
+<body>
+
+<!--  START OF NEW HEADER -->
+<div id="x_wrapper">
+
+<!--
+<div class='maybemobile'>View this page on our
+<a href='http://m-newton.ex.ac.uk/teaching/resources/CDHW/Electronics2/userguide/'>mobile-friendly site</a>
+</div>
+-->
+
+<table width='100%' id="x_header" cellpadding=0 cellspacing=0 border=0><tr>
+  <td valign=top id="x_logo">
+     <a href="http://www.ex.ac.uk/" title="University of Exeter"><img src="/furniture/logo.gif" alt="University of Exeter" class="logo" width="162" height="60"></a>
+
+  <td valign=top id="x_department" align=left>
+    <a href='/' class='verytop'>School of Physics</a>
+    
+      
+  <td id="x_topnav" align=right valign=top>
+      <div id="supernav">
+          <a href="http://newton.ex.ac.uk/contact.html">Contact Us</a>
+          | <a href="http://newton.ex.ac.uk/schooldocs/">Staff</a>
+          | <a href="http://newton.ex.ac.uk/teaching/">Students</a>
+          | <a href="http://www.ex.ac.uk/myexeter/">MyExeter</a>
+          | <a href="http://newton.ex.ac.uk/quick-links/">Site map</a>
+        </div>
+
+        <div id="search">
+	  <form method="get" action="/cgi-bin/htsearch" 
+name="htsearchform" id="searchbox">
+                        <input class="search" id="words" name ='words'
+type="text" size="23" maxlength="80" title="Search the site"
+onfocus='if(this.value==this.defaultValue)  this.value="";' 
+value='  Search Physics'>
+                       <input type=hidden name='config' value='htdig'>
+<input name="submit" class="button" value="Search"  type="submit">
+
+          </form>
+        </div>
+    </table>
+<!-- NB div "wrapper" remains open -->
+<!--  END OF NEW HEADER -->
+
+
+<table cellspacing=0 cellpadding=0 class='phy-toptable'>
+
+<tr>
+
+<!-- SIDEBARROWSPAN = 2 -->
+
+
+
+
+<td valign='top'>
+      <div class="mainnav">
+        <ul>
+	<li><a 
+	href="/" title="School" 
+	class="studying">Home page</a>
+
+<li><a	href="/teaching/" title="Teaching" 
+	class="alumni">Our Teaching</a>
+
+<li><a 	href="/research/" title="Research" 
+	class="research">Our Research</a>
+
+<li><a 	href="/admissions/" title="Admissions" 
+	class="working">How to apply</a>
+
+<li><a 	href="/features/" title="News" 
+	class="business">News</a>
+
+<li><a 	href="/research/positions/" title="Jobs" 
+	class="jobs">Jobs</a>
+
+      </ul>
+    </div>
+
+
+<tr>
+<td class='phy-content' id='top' valign=top>
+<div class='e-topcrumbs'>  <a href='/'>Home</a>  <b>&rsaquo;</b> <a href='../../../../'>Our Teaching</a> <b>&rsaquo;</b> <a href='../../../'>Resources</a> <b>&rsaquo;</b> <a href='../../'>CDHW</a> <b>&rsaquo;</b> <a href='../'>Electronics2</a> <b>&rsaquo;</b> <span class='crumbs_here'>Userguide</span></div>
+
+
+<div class='phy-realcontent'>
+
+
+
+
+
+
+
+<h1>SPICE 3 User&#0039;s Manual</h1>
+
+
+
+
+
+
+<a name="toc"></a>
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+<div align=center>
+<form method="post" action="/cgi-bin/htsearch">
+<strong>Search for: </strong><input type="text" size="30" name="words" value="">
+<input type=hidden name=method value=and>
+<input type=hidden name=sort value=builtin-long>
+<input type=hidden name=format value=score>
+<input type=hidden name=config value=htdig>
+<input type=hidden name=exclude value="">
+<input type=hidden name="restrict"  value='/teaching/CDHW/Electronics2/userguide/sec'>
+</form>
+</div>
+<hr>
+<h3 align=center>Table of Contents</h3>
+<UL>
+<li><a href="sec1.html#1">1. INTRODUCTION</a>
+<UL>
+<li><a href="sec1.html#1.1">1.1. TYPES OF ANALYSIS</a> 
+<UL>
+<li><a href="sec1.html#1.1.1">1.1.1. DC Analysis</a> 
+<li><a href="sec1.html#1.1.2">1.1.2. AC Small-Signal Analysis</a> 
+<li><a href="sec1.html#1.1.3">1.1.3. Transient Analysis</a> 
+<li><a href="sec1.html#1.1.4">1.1.4. Pole-Zero Analysis</a> 
+<li><a href="sec1.html#1.1.5">1.1.5. Small-Signal Distortion Analysis</a> 
+<li><a href="sec1.html#1.1.6">1.1.6. Sensitivity Analysis</a> 
+<li><a href="sec1.html#1.1.7">1.1.7. Noise Analysis</a> 
+</UL>
+<li><a href="sec1.html#1.2">1.2. ANALYSIS AT DIFFERENT TEMPERATURES</a> 
+<li><a href="sec1.html#1.3">1.3. CONVERGENCE</a> 
+</UL>
+<li><a href="sec2.html#2">2. CIRCUIT DESCRIPTION</a> 
+<UL>
+<li><a href="sec2.html#2.1">2.1. GENERAL STRUCTURE AND CONVENTIONS</a> 
+<li><a href="sec2.html#2.2">2.2. TITLE LINE, COMMENT LINES AND .END LINE</a> 
+<UL>
+<li><a href="sec2.html#2.2.1">2.2.1. Title Line</a> 
+<li><a href="sec2.html#2.2.2">2.2.2. .END Line</a> 
+<li><a href="sec2.html#2.2.3">2.2.3. Comments</a> 
+</UL>
+<li><a href="sec2.html#2.3">2.3. DEVICE MODELS</a> 
+<li><a href="sec2.html#2.4">2.4. SUBCIRCUITS</a> 
+<UL>
+<li><a href="sec2.html#2.4.1">2.4.1. .SUBCKT Line</a> 
+<li><a href="sec2.html#2.4.2">2.4.2. .ENDS Line</a> 
+<li><a href="sec2.html#2.4.3">2.4.3. Subcircuit Calls</a> 
+</UL>
+<li><a href="sec2.html#2.5">2.5. COMBINING FILES: .INCLUDE LINES</a> 
+</UL>
+<li><a href="sec3.html#3">3. CIRCUIT ELEMENTS AND MODELS</a> 
+<UL>
+<li><a href="sec3.html#3.1">3.1. ELEMENTARY DEVICES</a> 
+<UL>
+<li><a href="sec3.html#3.1.1">3.1.1. Resistors</a> 
+<li><a href="sec3.html#3.1.2">3.1.2. Semiconductor Resistors</a> 
+<li><a href="sec3.html#3.1.3">3.1.3. Semiconductor Resistor Model (R)</a> 
+<li><a href="sec3.html#3.1.4">3.1.4. Capacitors</a> 
+<li><a href="sec3.html#3.1.5">3.1.5. Semiconductor Capacitors</a> 
+<li><a href="sec3.html#3.1.6">3.1.6. Semiconductor Capacitor Model (C)</a> 
+<li><a href="sec3.html#3.1.7">3.1.7. Inductors</a> 
+<li><a href="sec3.html#3.1.8">3.1.8. Coupled (Mutual) Inductors</a> 
+<li><a href="sec3.html#3.1.9">3.1.9. Switches</a> 
+<li><a href="sec3.html#3.1.10">3.1.10. Switch Model (SW/CSW)</a> 
+</UL>
+<li><a href="sec3.html#3.2">3.2. VOLTAGE AND CURRENT SOURCES</a> 
+<UL>
+<li><a href="sec3.html#3.2.1">3.2.1. Independent Sources</a> 
+<UL>
+<li><a href="sec3.html#3.2.1.1">3.2.1.1. Pulse</a> 
+<li><a href="sec3.html#3.2.1.2">3.2.1.2. Sinusoidal</a> 
+<li><a href="sec3.html#3.2.1.3">3.2.1.3. Exponential</a> 
+<li><a href="sec3.html#3.2.1.4">3.2.1.4. Piece-Wise Linear</a> 
+<li><a href="sec3.html#3.2.1.5">3.2.1.5. Single-Frequency FM</a> 
+</UL>
+<li><a href="sec3.html#3.2.2">3.2.2.  Linear Dependent Sources</a> 
+<UL>
+<li><a href="sec3.html#3.2.2.1">3.2.2.1. Linear Voltage-Controlled Current Sources</a> 
+<li><a href="sec3.html#3.2.2.2">3.2.2.2. Linear Voltage-Controlled Voltage Sources</a> 
+<li><a href="sec3.html#3.2.2.3">3.2.2.3. Linear Current-Controlled Current Sources</a> 
+<li><a href="sec3.html#3.2.2.4">3.2.2.4. Linear Current-Controlled Voltage Sources</a> 
+</UL>
+<li><a href="sec3.html#3.2.3">3.2.3. Non-linear Dependent Sources</a> 
+</UL>
+<li><a href="sec3.html#3.3">3.3. TRANSMISSION LINES</a> 
+<UL>
+<li><a href="sec3.html#3.3.1">3.3.1. Lossless Transmission Lines</a> 
+<li><a href="sec3.html#3.3.2">3.3.2. Lossy Transmission Lines</a> 
+<li><a href="sec3.html#3.3.3">3.3.3. Lossy Transmission Line Model (LTRA)</a> 
+<li><a href="sec3.html#3.3.4">3.3.4. Uniform Distributed RC Lines (Lossy)</a> 
+<li><a href="sec3.html#3.3.5">3.3.5. Uniform Distributed RC Model (URC)</a> 
+</UL>
+<li><a href="sec3.html#3.4">3.4. TRANSISTORS AND DIODES</a> 
+<UL>
+<li><a href="sec3.html#3.4.1">3.4.1. Junction Diodes</a> 
+<li><a href="sec3.html#3.4.2">3.4.2. Diode Model (D)</a> 
+<li><a href="sec3.html#3.4.3">3.4.3. Bipolar Junction Transistors (BJTs)</a> 
+<li><a href="sec3.html#3.4.4">3.4.4. BJT Models (NPN/PNP)</a> 
+<li><a href="sec3.html#3.4.5">3.4.5. Junction Field-Effect Transistors (JFETs)</a> 
+<li><a href="sec3.html#3.4.6">3.4.6. JFET Models (NJF/PJF)</a> 
+<li><a href="sec3.html#3.4.7">3.4.7. MOSFETs</a> 
+<li><a href="sec3.html#3.4.8">3.4.8. MOSFET Models (NMOS/PMOS)</a> 
+<li><a href="sec3.html#3.4.9">3.4.9. MESFETs</a> 
+<li><a href="sec3.html#3.4.10">3.4.10. MESFET Models (NMF/PMF)</a> 
+</UL>
+</UL>
+<li><a href="sec4.html#4">4. ANALYSES AND OUTPUT CONTROL</a> 
+<UL>
+<li><a href="sec4.html#4.1">4.1. SIMULATOR VARIABLES (.OPTIONS)</a> 
+<li><a href="sec4.html#4.2">4.2. INITIAL CONDITIONS</a> 
+<UL>
+<li><a href="sec4.html#4.2.1">4.2.1. .NODESET:  Specify Initial Node Voltage Guesses</a> 
+<li><a href="sec4.html#4.2.2">4.2.2. .IC:  Set Initial Conditions</a> 
+</UL>
+<li><a href="sec4.html#4.3">4.3. ANALYSES</a> 
+<UL>
+<li><a href="sec4.html#4.3.1">4.3.1. .AC:  Small-Signal AC Analysis</a> 
+<li><a href="sec4.html#4.3.2">4.3.2. .DC:  DC Transfer Function</a> 
+<li><a href="sec4.html#4.3.3">4.3.3. .DISTO:  Distortion Analysis</a> 
+<li><a href="sec4.html#4.3.4">4.3.4. .NOISE:  Noise Analysis</a> 
+<li><a href="sec4.html#4.3.5">4.3.5. .OP:  Operating Point Analysis</a> 
+<li><a href="sec4.html#4.3.6">4.3.6. .PZ:  Pole-Zero Analysis</a> 
+<li><a href="sec4.html#4.3.7">4.3.7. .SENS:  DC or Small-Signal AC Sensitivity Analysis</a> 
+<li><a href="sec4.html#4.3.8">4.3.8. .TF:  Transfer Function Analysis</a> 
+<li><a href="sec4.html#4.3.9">4.3.9. .TRAN:  Transient Analysis</a> 
+</UL>
+<li><a href="sec4.html#4.4">4.4. BATCH OUTPUT</a> 
+<UL>
+<li><a href="sec4.html#4.4.1">4.4.1. .SAVE Lines</a> 
+<li><a href="sec4.html#4.4.2">4.4.2. .PRINT Lines</a> 
+<li><a href="sec4.html#4.4.3">4.4.3. .PLOT Lines</a> 
+<li><a href="sec4.html#4.4.4">4.4.4. .FOUR:  Fourier Analysis of Transient Analysis  Out-</a> 
+</UL>
+</UL>
+<li><a href="sec5.html#5">5. INTERACTIVE INTERPRETER</a> 
+<UL>
+<li><a href="sec5.html#5.1">5.1. EXPRESSIONS, FUNCTIONS, AND CONSTANTS</a> 
+<li><a href="sec5.html#5.2">5.2. COMMAND INTERPRETATION</a> 
+<li><a href="sec5.html#5.3">5.3. COMMANDS</a> 
+<UL>
+<li><a href="sec5.html#5.3.1">5.3.1. Ac*: Perform an AC, small-signal frequency  response</a> 
+<li><a href="sec5.html#5.3.2">5.3.2. Alias:  Create an alias for a command</a> 
+<li><a href="sec5.html#5.3.3">5.3.3. Alter*:  Change a device or model parameter</a> 
+<li><a href="sec5.html#5.3.am">5.3.am Altermod*:  Change a model parameter</a> 
+<li><a href="sec5.html#5.3.4">5.3.4. Asciiplot:  Plot values  using  old-style  character</a> 
+<li><a href="sec5.html#5.3.5">5.3.5. Aspice: Asynchronous spice run</a> 
+<li><a href="sec5.html#5.3.6">5.3.6. Bug:  Mail a bug report</a> 
+<li><a href="sec5.html#5.3.7">5.3.7.  Cd: Change directory</a> 
+<li><a href="sec5.html#5.3.co">5.3.co Compose: Compose a vector</a>
+<li><a href="sec5.html#5.3.cs">5.3.cs Cross: Create a vector</a>
+<li><a href="sec5.html#5.3.8">5.3.8. Destroy: Delete a data set</a> 
+<li><a href="sec5.html#5.3.9">5.3.9. Dc*: Perform a DC-sweep analysis</a> 
+<li><a href="sec5.html#5.3.10">5.3.10. Define:  Define a function</a> 
+<li><a href="sec5.html#5.3.dt">5.3.dt Deftype:  Define type of plot or vector</a>
+<li><a href="sec5.html#5.3.11">5.3.11. Delete*: Remove a trace or breakpoint</a> 
+<li><a href="sec5.html#5.3.12">5.3.12. Diff:  Compare vectors</a> 
+<li><a href="sec5.html#5.3.13">5.3.13. Display:  List known vectors and types</a> 
+<li><a href="sec5.html#5.3.14">5.3.14. Echo:  Print text</a> 
+<li><a href="sec5.html#5.3.15">5.3.15. Edit*: Edit the current circuit</a> 
+<li><a href="sec5.html#5.3.16">5.3.16. Fourier: Perform a fourier transform</a> 
+<li><a href="sec5.html#5.3.17">5.3.17. Hardcopy:  Save a plot to a file for printing</a> 
+<li><a href="sec5.html#5.3.18">5.3.18. Help:  Print summaries of Spice3 commands</a> 
+<li><a href="sec5.html#5.3.19">5.3.19. History:  Review previous commands</a> 
+<li><a href="sec5.html#5.3.20">5.3.20. Iplot*: Incremental plot</a> 
+<li><a href="sec5.html#5.3.21">5.3.21. Jobs:  List active asynchronous spice runs</a> 
+<li><a href="sec5.html#5.3.22">5.3.22. Let:  Assign a value to a vector</a> 
+<li><a href="sec5.html#5.3.23">5.3.23. Linearize*:  Interpolate to a linear scale</a> 
+<li><a href="sec5.html#5.3.24">5.3.24. Listing*: Print a listing of the current circuit</a> 
+<li><a href="sec5.html#5.3.25">5.3.25. Load:  Load rawfile data</a> 
+<li><a href="sec5.html#5.3.ns">5.3.ns. Noise*: Perform a noise analysis</a> 
+<li><a href="sec5.html#5.3.26">5.3.26. Op*: Perform an operating point analysis</a> 
+<li><a href="sec5.html#5.3.27">5.3.27. Plot: Plot values on the display</a> 
+<li><a href="sec5.html#5.3.28">5.3.28. Print:  Print values</a> 
+<li><a href="sec5.html#5.3.29">5.3.29. Quit:  Leave Spice3 or Nutmeg</a> 
+<li><a href="sec5.html#5.3.30">5.3.30. Rehash: Reset internal hash tables</a> 
+<li><a href="sec5.html#5.3.31">5.3.31. Reset*: Reset an analysis</a> 
+<li><a href="sec5.html#5.3.32">5.3.32. Reshape: Alter the dimensionality or dimensions  of</a> 
+<li><a href="sec5.html#5.3.33">5.3.33. Resume*: Continue a simulation after a stop</a> 
+<li><a href="sec5.html#5.3.34">5.3.34. Rspice:  Remote spice submission</a> 
+<li><a href="sec5.html#5.3.35">5.3.35. Run*: Run analysis from the input file</a> 
+<li><a href="sec5.html#5.3.36">5.3.36. Rusage: Resource usage</a> 
+<li><a href="sec5.html#5.3.37">5.3.37. Save*:  Save a set of outputs</a> 
+<li><a href="sec5.html#5.3.38">5.3.38. Sens*:  Run a sensitivity analysis</a> 
+<li><a href="sec5.html#5.3.39">5.3.39. Set:  Set the value of a variable</a> 
+<li><a href="sec5.html#5.3.40">5.3.40. Setcirc*: Change the current circuit</a> 
+<li><a href="sec5.html#5.3.41">5.3.41. Setplot: Switch the current set of vectors</a> 
+<li><a href="sec5.html#5.3.ss">5.3.ss. Setscale: Set the scale vector for current plot</a> 
+<li><a href="sec5.html#5.3.42">5.3.42. Settype:  Set the type of a vector</a> 
+<li><a href="sec5.html#5.3.43">5.3.43. Shell:  Call the command interpreter</a> 
+<li><a href="sec5.html#5.3.44">5.3.44. Shift:  Alter a list variable</a> 
+<li><a href="sec5.html#5.3.45">5.3.45. Show*: List device state</a> 
+<li><a href="sec5.html#5.3.46">5.3.46. Showmod*: List model parameter values</a> 
+<li><a href="sec5.html#5.3.47">5.3.47. Source:  Read a Spice3 input file</a> 
+<li><a href="sec5.html#5.3.sp">5.3.sp. Spec:  Create a frequency domain plot</a> 
+<li><a href="sec5.html#5.3.48">5.3.48. Status*: Display breakpoint information</a> 
+<li><a href="sec5.html#5.3.49">5.3.49. Step*:  Run a fixed number of timepoints</a> 
+<li><a href="sec5.html#5.3.50">5.3.50. Stop*:  Set a breakpoint</a> 
+<li><a href="sec5.html#5.3.51">5.3.51. Tf*: Run a Transfer Function analysis</a> 
+<li><a href="sec5.html#5.3.52">5.3.52. Trace*: Trace nodes</a> 
+<li><a href="sec5.html#5.3.53">5.3.53. Tran*: Perform a transient analysis</a> 
+<li><a href="sec5.html#5.3.54">5.3.54. Transpose: Swap the elements in a multi-dimensional</a> 
+<li><a href="sec5.html#5.3.55">5.3.55. Unalias:  Retract an alias</a> 
+<li><a href="sec5.html#5.3.56">5.3.56. Undefine:  Retract a definition</a> 
+<li><a href="sec5.html#5.3.57">5.3.57.  Unset:  Clear a variable</a> 
+<li><a href="sec5.html#5.3.58">5.3.58.  Version:  Print the version of Spice</a> 
+<li><a href="sec5.html#5.3.59">5.3.59.  Where:  Identify troublesome node or device</a> 
+<li><a href="sec5.html#5.3.60">5.3.60.  Write: Write data to a file</a> 
+<li><a href="sec5.html#5.3.61">5.3.61.  Xgraph: use the xgraph(1) program for plotting.</a> 
+</UL>
+<li><a href="sec5.html#5.4">5.4.  CONTROL STRUCTURES</a> 
+<UL>
+<li><a href="sec5.html#5.4.1">5.4.1.  While - End</a> 
+<li><a href="sec5.html#5.4.2">5.4.2.  Repeat - End</a> 
+<li><a href="sec5.html#5.4.3">5.4.3.  Dowhile - End</a> 
+<li><a href="sec5.html#5.4.4">5.4.4.  Foreach - End</a> 
+<li><a href="sec5.html#5.4.5">5.4.5.  If - Then - Else</a> 
+<li><a href="sec5.html#5.4.6">5.4.6.  Label</a> 
+<li><a href="sec5.html#5.4.7">5.4.7.  Goto</a> 
+<li><a href="sec5.html#5.4.8">5.4.8.  Continue</a> 
+<li><a href="sec5.html#5.4.9">5.4.9.  Break</a> 
+</UL>
+<li><a href="sec5.html#5.5">5.5.  VARIABLES</a> 
+<li><a href="sec5.html#5.6">5.6.  MISCELLANEOUS</a> 
+<li><a href="sec5.html#5.7">5.7.  BUGS</a> 
+</UL>
+<li><a href="sec6.html#6">6.  BIBLIOGRAPHY</a> 
+<li><a href="secA.html#A" name="app">APPENDIX A:  EXAMPLE CIRCUITS</a> 
+<UL>
+<li><a href="secA.html#A.1">A.1.  Circuit 1:  Differential Pair</a> 
+<li><a href="secA.html#A.2">A.2.  Circuit 2:  MOSFET Characterization</a> 
+<li><a href="secA.html#A.3">A.3.  Circuit 3:  RTL Inverter</a> 
+<li><a href="secA.html#A.4">A.4.  Circuit 4:  Four-Bit Binary Adder</a> 
+<li><a href="secA.html#A.5">A.5.  Circuit 5:  Transmission-Line Inverter</a> 
+</UL>
+<li><a href="secB.html#B">APPENDIX B:  MODEL AND DEVICE PARAMETERS</a> 
+<UL>
+<li><a href="secB.html#B.1">B.1.  URC:  Uniform R.C. line</a> 
+<li><a href="secB.html#B.2">B.2.  ASRC:  Arbitrary Source</a> 
+<li><a href="secB.html#B.3">B.3.  BJT:  Bipolar Junction Transistor</a> 
+<li><a href="secB.html#B.4">B.4.  BSIM1:  Berkeley Short Channel IGFET Model</a> 
+<li><a href="secB.html#B.5">B.5.  BSIM2:  Berkeley Short Channel IGFET Model</a> 
+<li><a href="secB.html#B.6">B.6.  Capacitor:  Fixed capacitor</a> 
+<li><a href="secB.html#B.7">B.7.  CCCS:  Current controlled current source</a> 
+<li><a href="secB.html#B.8">B.8.  CCVS:  Linear current controlled current source</a> 
+<li><a href="secB.html#B.9">B.9.  CSwitch:  Current controlled ideal switch</a> 
+<li><a href="secB.html#B.10">B.10.  Diode:  Junction Diode model</a> 
+<li><a href="secB.html#B.11">B.11.  Inductor:  Inductors</a> 
+<li><a href="secB.html#B.12">B.12.  mutual:  Mutual inductors</a> 
+<li><a href="secB.html#B.13">B.13.  Isource:  Independent current source</a> 
+<li><a href="secB.html#B.14">B.14.  JFET:  Junction Field effect transistor</a> 
+<li><a href="secB.html#B.15">B.15.  LTRA:  Lossy transmission line</a> 
+<li><a href="secB.html#B.16">B.16.  MES:  GaAs MESFET model</a> 
+<li><a href="secB.html#B.17">B.17.  Mos1:  Level 1 MOSfet model  with  Meyer  capacitance</a> 
+<li><a href="secB.html#B.18">B.18.  Mos2:  Level 2 MOSfet model  with  Meyer  capacitance</a> 
+<li><a href="secB.html#B.19">B.19.  Mos3:  Level 3 MOSfet model  with  Meyer  capacitance</a> 
+<li><a href="secB.html#B.20">B.20.  Mos6:  Level 6 MOSfet model  with  Meyer  capacitance</a> 
+<li><a href="secB.html#B.21">B.21.  Resistor:  Simple linear resistor</a> 
+<li><a href="secB.html#B.22">B.22.  Switch:  Ideal voltage controlled switch</a> 
+<li><a href="secB.html#B.23">B.23.  Tranline:  Lossless transmission line</a> 
+<li><a href="secB.html#B.24">B.24.  VCCS:  Voltage controlled current source</a> 
+<li><a href="secB.html#B.25">B.25.  VCVS:  Voltage controlled voltage source</a> 
+<li><a href="secB.html#B.26">B.26.  Vsource:  Independent voltage source</a> 
+</UL>
+
+<li><a href="secC.html#C">APPENDIX C:  SPICE2 NONLINEAR DEPENDENT SOURCES</a> 
+<UL>
+<li><a href="secC.html#C.1">C.1 Voltage-Controlled Current Sources</a>
+<li><a href="secC.html#C.2">C.2 Voltage-Controlled Voltage Sources</a>
+<li><a href="secC.html#C.3">C.3 Current-Controlled Current Sources</a>
+<li><a href="secC.html#C.4">C.4 Current-Controlled Voltage Sources</a>
+</UL>
+<li><a href="secD.html#D">APPENDIX D:  SPICE3 BUGS AND PATCHES</a> 
+<li><a href="secE.html#E">APPENDIX E:  SPICE3 HISTORY SUBSTITUTION</a>
+</UL>
+<hr>
+<p>This User's Manual has been edited for the WWW by <a href="/staff/CDHW/">Charles Williams</a> to support module
+<a href="/handbook/modules/PHY2003.html">PHY2003</a> and was originally
+based, with permission, on text from <a href="http://lc.cray.com/spice3/manual.html">Kevin Thomas's
+html version</a> of the SPICE3 Version 3f User's Manual. The copyright statement for that manual is reproduced here:
+</p>
+<p align=center><Q>Copyright 1990,1992,1993 Regents of the University of California. All rights reserved.<br>
+This manual may be reproduced in whole or in part without permission<br>
+ for any purpose other than resale for profit, if this copyright notice<br>
+  is included; personal, educational, or internal business use is<br>
+specifically permitted as long as the copyright notice is preserved.
+</Q></p>
+<p>Note: corrections, additions, and HTML mark-up added in order to create this edition are
+Copyright &copy; (1998 onwards) Charles Williams, and all rights are reserved.
+<hr>
+<DIV class=NOPRINT>
+<p align=right><i>See also: <a href="../ElectronicsResources.html#Spice">Background material on the WWW</a>,<br>
+                            <a href="/">School of Physics Home</a>.<br>
+</i>
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+</DIV>
+
+
+
+
+
+</div>
+
+<div class='phy-forcewidth'>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+</div>
+</table> <!-- End of main layout table -->
+<hr id=xphy-bottom2>
+
+<div class=noprint>
+<table width='100%' border=0>
+<tr>
+<td valign=middle align=left>
+
+<a href='http://validator.w3.org/check?uri=referer'>Validate</a>
+ &nbsp;  
+<a href='http://validator.w3.org/checklink?uri=referer'>Link-check</a>
+
+
+<td valign=middle align=center>
+
+<a href='http://newton.ex.ac.uk/general/copyright.html'>&copy; Copyright &amp; disclaimer</a>
+
+<td valign=middle align='right'>
+
+<!-- AddThis Button BEGIN -->
+<a href="http://www.addthis.com/bookmark.php" target=sharethis><img class=addit src="/furniture/addthis.gif" width="125" height="16" border="0" alt="Share" title="Add this page to your favourite social networking sites"></a>
+<!-- AddThis Button END -->
+
+</table>
+
+</div>
+
+</div> <!-- wrapper -->
+
+</body>
+</html>

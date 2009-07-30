@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    DO NOT EDIT THIS PAGE! See http://newton.ex.ac.uk/schooldocs/it/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<HEAD>
+<TITLE>SPICE 3 User&#039;s Manual - Appendix D</TITLE>
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<link REL='SHORTCUT ICON' HREF='/favicon.ico'> 
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/screen2.css'> 
+<link media='print' rel='stylesheet' TYPE='text/css' href='/css/print.css'>
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/nosidebar.css'>
+</head>
+<body>
+
+<!--  START OF NEW HEADER -->
+<div id="x_wrapper">
+
+<!--
+<div class='maybemobile'>View this page on our
+<a href='http://m-newton.ex.ac.uk/teaching/resources/CDHW/Electronics2/userguide/secE.html'>mobile-friendly site</a>
+</div>
+-->
+
+<table width='100%' id="x_header" cellpadding=0 cellspacing=0 border=0><tr>
+  <td valign=top id="x_logo">
+     <a href="http://www.ex.ac.uk/" title="University of Exeter"><img src="/furniture/logo.gif" alt="University of Exeter" class="logo" width="162" height="60"></a>
+
+  <td valign=top id="x_department" align=left>
+    <a href='/' class='verytop'>School of Physics</a>
+    
+      
+  <td id="x_topnav" align=right valign=top>
+      <div id="supernav">
+          <a href="http://newton.ex.ac.uk/contact.html">Contact Us</a>
+          | <a href="http://newton.ex.ac.uk/schooldocs/">Staff</a>
+          | <a href="http://newton.ex.ac.uk/teaching/">Students</a>
+          | <a href="http://www.ex.ac.uk/myexeter/">MyExeter</a>
+          | <a href="http://newton.ex.ac.uk/quick-links/">Site map</a>
+        </div>
+
+        <div id="search">
+	  <form method="get" action="/cgi-bin/htsearch" 
+name="htsearchform" id="searchbox">
+                        <input class="search" id="words" name ='words'
+type="text" size="23" maxlength="80" title="Search the site"
+onfocus='if(this.value==this.defaultValue)  this.value="";' 
+value='  Search Physics'>
+                       <input type=hidden name='config' value='htdig'>
+<input name="submit" class="button" value="Search"  type="submit">
+
+          </form>
+        </div>
+    </table>
+<!-- NB div "wrapper" remains open -->
+<!--  END OF NEW HEADER -->
+
+
+<table cellspacing=0 cellpadding=0 class='phy-toptable'>
+
+<tr>
+
+<!-- SIDEBARROWSPAN = 2 -->
+
+
+
+
+<td valign='top'>
+      <div class="mainnav">
+        <ul>
+	<li><a 
+	href="/" title="School" 
+	class="studying">Home page</a>
+
+<li><a	href="/teaching/" title="Teaching" 
+	class="alumni">Our Teaching</a>
+
+<li><a 	href="/research/" title="Research" 
+	class="research">Our Research</a>
+
+<li><a 	href="/admissions/" title="Admissions" 
+	class="working">How to apply</a>
+
+<li><a 	href="/features/" title="News" 
+	class="business">News</a>
+
+<li><a 	href="/research/positions/" title="Jobs" 
+	class="jobs">Jobs</a>
+
+      </ul>
+    </div>
+
+
+<tr>
+<td class='phy-content' id='top' valign=top>
+<div class='e-topcrumbs'>  <a href='/'>Home</a>  <b>&rsaquo;</b> <a href='./../../../../'>Our Teaching</a> <b>&rsaquo;</b> <a href='./../../../'>Resources</a> <b>&rsaquo;</b> <a href='./../../'>CDHW</a> <b>&rsaquo;</b> <a href='./../'>Electronics2</a> <b>&rsaquo;</b> <a href='./'>Userguide</a> <b>&rsaquo;</b> <span class='crumbs_here'>secE.html</span></div>
+
+
+<div class='phy-realcontent'>
+
+
+
+
+
+
+
+<h1>SPICE 3 User&#039;s Manual - Appendix&nbsp;E</h1>
+
+
+
+
+
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+<h2><a name="E">APPENDIX E: SPICE3 HISTORY SUBSTITUTION</h2>
+
+<p>History substitution allows you to use words from previous
+command  lines in the command line you are typing. This simplifies
+spelling corrections and the repetition  of  complicated commands
+or arguments.  Command lines are saved in the history list, 
+the size of which is controlled by the <a href="sec5.html#history">history variable</a>.
+The most recent command is retained in any case. A history substitution
+begins  with  a  ! and may occur anywhere on the command  line;
+history  substitutions  do  not nest.
+
+<p>Input lines containing history substitutions are  echoed  on
+the terminal after being expanded, but before any other substitutions
+take place or the command gets executed. The history list of previous commands
+can be printed using the interactive interpreter's
+<a href="sec5.html#5.3.19">history</a> command.
+
+<h3>Event Designators</h3>
+<p>An event designator is a reference to a command  line  entry
+in the history list.</p>
+
+<dl compact>
+     <dt>!<dd>Start a history substitution, except when followed  by a space character, tab, newline, = or (.
+
+     <dt>!!<dd>Refer to the previous command. By itself, this substitution repeats the previous command.
+
+     <dt>!<u>n</u><dd>Refer to command line <u>n</u>.
+
+     <dt>!-<u>n</u><dd>Refer to the current command line minus <u>n</u>.
+
+     <dt>!<u>str</u><dd>Refer to the most recent command starting with <u>str</u>.
+
+     <dt>!?<u>str</u>? <dd>Refer to the most recent command containing <u>str</u>.
+
+     <dt>!?<u>str</u>?<u>additional</u><dd>Refer to the most recent command
+         containing <u>str</u>  and append <u>additional</u> to
+         that referenced command.
+
+     <dt>! {<u>command</u>}<u>additional</u><dd>
+           Refer to the most recent command beginning with <u>command</u>
+           and append <u>additional</u> to that referenced command.
+
+     <dt>^<u>previous_word</u>^<u>replacement^</u><dd>
+           Repeat the previous command line replacing the  string
+           <u>previous_word</u> with the string 
+           <u>replacement</u>. This is equivalent to the history substitution:
+           !:s/<u>previous_word</u>/<u>replacement/</u>.
+</dl>
+<p>To re-execute a specific  previous  command  AND  make such a  substitution, say, re-executing command #6, !:6s/<u>previous_word</u>/<u>replacement/</u>.
+
+<h3>Word Designators</h3>
+
+<p>A `:' (colon) separates the  event  specification  from  the word  designator.  It  can be omitted if the word designator begins with a ^, $, *, - or %. If the word is to be selected from  the  previous  command,  the second ! character can be omitted from the event specification.   For  instance,  !!:1 and  !:1  both  refer to the first word of the previous command, while !!$ and !$ both refer to the last  word  in  the previous command. Word designators include:</p>
+     
+<dl compact>
+     <dt>#<dd>The entire command line typed so far.
+     <dt>0<dd>The first input word (command).
+     <dt><u>n</u><dd>The <u>n</u>th argument.
+     <dt>^<dd>The first argument, that is, 1.
+     <dt>$<dd>The last argument.
+     <dt>%<dd>The word matched by (the most recent) <u>?s</u> search.
+     <dt><u>x</u>-<u>y</u><dd>A range of words; -<u>y</u> abbreviates 0-<u>y</u>.
+     <dt>*<dd>All the arguments, or a null value if  there  is  just one word in the event.
+     <dt><u>x</u>*<dd>Abbreviates <u>x</u>-$.
+     <dt><u>x</u>-<dd>Like <u>x</u>* but omitting word $.
+</dl>
+
+<h3>Modifiers</h3>
+<p>After the optional word designator, you can add one  of  the following modifiers, preceded by a :.</p>
+
+<dl compact>
+     <dt>h<dd>Remove a  trailing  pathname  component,  leaving  the head.
+     <dt>r<dd>Remove a trailing suffix of the form  `.<u>xxx</u>',  leaving the basename.
+     <dt>e<dd>Remove all but the suffix, leaving the Extension.
+     <dt>s/<u>l</u>/<u>r</u>/<dd>Substitute <u>r</u> for <u>l</u>.
+     <dt>t<dd>Remove all leading pathname components, leaving the tail.
+     <dt>&amp;<dd>Repeat the previous substitution.
+     <dt>g<dd>Apply the change to the first occurrence of a match in each word, by prefixing the above (for example, g&amp;).
+     <dt>p<dd>Print the new command but do not execute it.
+     <dt>q<dd>Quote the substituted words, escaping further  substitutions.
+     <dt>x<dd>Like q, but break into words at each space  character, tab or newline.
+</dl>
+
+<p>Unless preceded by a g, the modification is applied only  to the  first  string  that  matches  <u>l</u>; an error results if no string matches.</p>
+<p>The left-hand side of substitutions are not regular  expressions, but  character strings. Any character can be used as the delimiter in place of /. A backslash quotes  the  delimiter  character. The character &amp;, in the right hand side, is replaced by the text from the left-hand-side. The &amp;  can  be quoted  with  a backslash. A null <u>l</u> uses the previous string either from a <u>l</u> or from a contextual scan string <u>s</u> from !?<u>s</u>. You   can   omit   the  rightmost  delimiter  if  a  newline immediately follows <u>r</u>; the rightmost ? in a context scan can similarly be omitted.
+<p>Without an event specification, a history  reference  refers either  to  the  previous  command, or to a previous history reference on the command line (if any).
+
+  <h3>Quick Substitution</h3>
+<dl compact>
+  <dt>^<u>l</u>^<u>r</u>^<dd>This is equivalent to the history substitution: !:s/<u>l</u>/<u>r</u>/.
+</dl>
+
+
+ <DIV class=NOPRINT>
+&nbsp;
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+</DIV>
+
+
+
+
+
+</div>
+
+<div class='phy-forcewidth'>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+</div>
+</table> <!-- End of main layout table -->
+<hr id=xphy-bottom2>
+
+<div class=noprint>
+<table width='100%' border=0>
+<tr>
+<td valign=middle align=left>
+
+<a href='http://validator.w3.org/check?uri=referer'>Validate</a>
+ &nbsp;  
+<a href='http://validator.w3.org/checklink?uri=referer'>Link-check</a>
+
+
+<td valign=middle align=center>
+
+<a href='http://newton.ex.ac.uk/general/copyright.html'>&copy; Copyright &amp; disclaimer</a>
+
+<td valign=middle align='right'>
+
+<!-- AddThis Button BEGIN -->
+<a href="http://www.addthis.com/bookmark.php" target=sharethis><img class=addit src="/furniture/addthis.gif" width="125" height="16" border="0" alt="Share" title="Add this page to your favourite social networking sites"></a>
+<!-- AddThis Button END -->
+
+</table>
+
+</div>
+
+</div> <!-- wrapper -->
+
+</body>
+</html>

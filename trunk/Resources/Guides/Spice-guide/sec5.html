@@ -1,0 +1,1980 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    DO NOT EDIT THIS PAGE! See http://newton.ex.ac.uk/schooldocs/it/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<HEAD>
+<TITLE>SPICE 3 User&#039;s Manual - Section 5</TITLE>
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<link REL='SHORTCUT ICON' HREF='/favicon.ico'> 
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/screen2.css'> 
+<link media='print' rel='stylesheet' TYPE='text/css' href='/css/print.css'>
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/nosidebar.css'>
+</head>
+<body>
+
+<!--  START OF NEW HEADER -->
+<div id="x_wrapper">
+
+<!--
+<div class='maybemobile'>View this page on our
+<a href='http://m-newton.ex.ac.uk/teaching/resources/CDHW/Electronics2/userguide/sec5.html'>mobile-friendly site</a>
+</div>
+-->
+
+<table width='100%' id="x_header" cellpadding=0 cellspacing=0 border=0><tr>
+  <td valign=top id="x_logo">
+     <a href="http://www.ex.ac.uk/" title="University of Exeter"><img src="/furniture/logo.gif" alt="University of Exeter" class="logo" width="162" height="60"></a>
+
+  <td valign=top id="x_department" align=left>
+    <a href='/' class='verytop'>School of Physics</a>
+    
+      
+  <td id="x_topnav" align=right valign=top>
+      <div id="supernav">
+          <a href="http://newton.ex.ac.uk/contact.html">Contact Us</a>
+          | <a href="http://newton.ex.ac.uk/schooldocs/">Staff</a>
+          | <a href="http://newton.ex.ac.uk/teaching/">Students</a>
+          | <a href="http://www.ex.ac.uk/myexeter/">MyExeter</a>
+          | <a href="http://newton.ex.ac.uk/quick-links/">Site map</a>
+        </div>
+
+        <div id="search">
+	  <form method="get" action="/cgi-bin/htsearch" 
+name="htsearchform" id="searchbox">
+                        <input class="search" id="words" name ='words'
+type="text" size="23" maxlength="80" title="Search the site"
+onfocus='if(this.value==this.defaultValue)  this.value="";' 
+value='  Search Physics'>
+                       <input type=hidden name='config' value='htdig'>
+<input name="submit" class="button" value="Search"  type="submit">
+
+          </form>
+        </div>
+    </table>
+<!-- NB div "wrapper" remains open -->
+<!--  END OF NEW HEADER -->
+
+
+<table cellspacing=0 cellpadding=0 class='phy-toptable'>
+
+<tr>
+
+<!-- SIDEBARROWSPAN = 2 -->
+
+
+
+
+<td valign='top'>
+      <div class="mainnav">
+        <ul>
+	<li><a 
+	href="/" title="School" 
+	class="studying">Home page</a>
+
+<li><a	href="/teaching/" title="Teaching" 
+	class="alumni">Our Teaching</a>
+
+<li><a 	href="/research/" title="Research" 
+	class="research">Our Research</a>
+
+<li><a 	href="/admissions/" title="Admissions" 
+	class="working">How to apply</a>
+
+<li><a 	href="/features/" title="News" 
+	class="business">News</a>
+
+<li><a 	href="/research/positions/" title="Jobs" 
+	class="jobs">Jobs</a>
+
+      </ul>
+    </div>
+
+
+<tr>
+<td class='phy-content' id='top' valign=top>
+<div class='e-topcrumbs'>  <a href='/'>Home</a>  <b>&rsaquo;</b> <a href='./../../../../'>Our Teaching</a> <b>&rsaquo;</b> <a href='./../../../'>Resources</a> <b>&rsaquo;</b> <a href='./../../'>CDHW</a> <b>&rsaquo;</b> <a href='./../'>Electronics2</a> <b>&rsaquo;</b> <a href='./'>Userguide</a> <b>&rsaquo;</b> <span class='crumbs_here'>sec5.html</span></div>
+
+
+<div class='phy-realcontent'>
+
+
+
+
+
+
+
+<h1>SPICE 3 User&#039;s Manual - Section&nbsp;5</h1>
+
+
+
+
+
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+
+<h2><a name="5"></a>5 INTERACTIVE INTERPRETER</h2>
+
+<p>Spice3 consists of a simulator and a front-end for data analysis and
+plotting.  The front-end may be run as a separate "stand-alone" program
+under the name Nutmeg.</p>
+
+<p>Nutmeg will read in the "raw" data output file created by <kbd>Spice -r</kbd> or
+with the <a href="sec5.html#5.3.60">write</a> command in an interactive Spice3 session. Nutmeg or
+interactive Spice3 can plot data from a simulation on a graphics
+terminal or a workstation display. <a name="asterisk">Most of the commands available in the
+interactive Spice3 front end are available in nutmeg; where this is not
+the case, Spice-only commands have been marked with an asterisk ("*").</a>
+Note that the raw output file is different from the data that Spice2
+writes to the standard output, which may also be produced by Spice3 with
+the "-b" command line option.</p>
+
+<p>Spice and Nutmeg use the X Window System for plotting if they find
+the environment variable DISPLAY. Otherwise, a graphics-terminal
+independent interface (MFB) is used.  If you are using X on a
+workstation, the DISPLAY variable should already be set; if you want to
+display graphics on a system different from the one you are running
+Spice3 or Nutmeg on, DISPLAY should be of the form "<u>machine</u>:0.0".
+See the appropriate documentation on the X Window System for more
+details.</p>
+
+<p><strong>Command Synopsis</strong></p>
+
+<pre><code>
+     Spice [ -n ] [ -t <u>term</u> ] [ -r <u>rawfile</u> ] [ -b ] [ -i ] [ <u>inpfile</u> ... ]
+
+     nutmeg [ - ] [ -n ] [ -t <u>term</u> ] [ <u>datafile</u> ... ]
+</code></pre>
+
+<strong>Options are:</strong>
+
+<dl compact>
+
+<dt>-
+
+<dd>Don't try to load the default data file ("rawSpice.raw") if no other files are given. Nutmeg only.<br>&nbsp;
+
+<dt> -n (or -N)
+
+<dd>Don't try to source the file ".Spiceinit" upon startup. Normally
+    Spice and Nutmeg try to find the file in the current directory, and if
+    it is not found then in the user's home directory.<br>&nbsp;
+
+<dt>-t <u>term</u> (or -T <u>term</u>)
+
+<dd>The program is being run on a terminal with <u>mfb</u> name term.<br>&nbsp;
+
+<dt> -b (or -B)
+
+<dd>Run in batch mode. Spice3 reads the default input source (<i>e.g.</i> keyboard) or reads the given input file and performs the analyses specified; output is either Spice2-like line-printer plots ("ascii plots") or a Spice rawfile. See the following section for details. Note that if the input source is not a terminal (<i>e.g.</i> using the IO redirection notation of "&lt;") Spice3 defaults to batch mode (-i overrides). This option is valid for Spice3 only.<br>&nbsp;
+
+<dt> -s (or -S)
+
+<dd>Run in server mode. This is like batch mode, except that a temporary rawfile is used and then written to the standard output, preceded by a line with a single "@", after the simulation is done. This mode is used by the Spice daemon. This option is valid for Spice3 only.<br>&nbsp;
+
+<dt> -i (or -I)
+
+<dd>Run in interactive mode. This is useful if the standard input is not a terminal but interactive mode is desired. Command completion is not available unless the standard input is a terminal, however. This option is valid for Spice3 only.<br>&nbsp;
+
+<dt> -r <u>rawfile</u> (or -P <u>rawfile</u>)
+
+<dd>Use <u>rawfile</u> as the default file into which the results of the simulation are saved. This option is valid for Spice3 only.<br>&nbsp; </dl>
+
+<p>Further arguments to Spice are taken to be Spice3 input files, which are read and saved (if running in batch mode then they are run immediately). Spice3 accepts most Spice2 input file, and output ascii plots, fourier analyses, and node printouts as specified in <a href="sec4.html#4.4.3">.PLOT</a>, <a href="sec4.html#4.4.4">.FOUR</a>, and <a href="sec4.html#4.4.2">.PRINT</a> cards.  If an out parameter is given on a .WIDTH card, the effect is the same as <kbd>set width = ....</kbd> Since Spice3 ascii plots do not use multiple ranges, however, if vectors together on a <a href="sec4.html#4.4.3">.PLOT</a> card have different ranges they are not provide as much information as they would in Spice2. The output of Spice3 is also much less verbose than Spice2, in that the only data printed is that requested by the above cards.
+
+<p>For Nutmeg, further arguments are taken to be data files in binary or ascii format (see <a href="http://fag.grm.hia.no/dat2311/man/man1/sconvert.html">sconvert(1)</a>) which are loaded into Nutmeg. If the file is in binary format, it may be only partially completed (useful for examining Spice2 output before the simulation is finished).  One file may contain any number of data sets from different analyses.
+
+<h3><a name="5.1">5.1 EXPRESSIONS, FUNCTIONS, AND CONSTANTS</a></h3>
+
+<p>Spice and Nutmeg data is in the form of vectors: time, voltage, etc.
+Each vector has a type, and vectors can be operated on and combined
+in algebraic ways consistent with their types. Vectors are normally
+created when a data file is read in (see the <a href="#5.3.25">load</a>
+command below), and when the initial datafile is loaded. They can also
+be created with the <a href="#5.3.22">let</a> command.
+
+<p>An expression is an algebraic formula involving vectors and  scalars
+(a scalar is a vector of length 1) and the following operations:
+
+<p align=center>
+                   +&nbsp;-&nbsp;*&nbsp;/&nbsp;^&nbsp;%
+</p>
+
+<p> % is the modulo operator, and the comma  operator  has  two
+ meanings:  if  it is present in the argument list of a user-definable function, it serves  to  separate  the  arguments.
+ Otherwise, the term <u>x</u><kbd>,</kbd><u>y</u> is synonymous with <u>x</u><kbd>+j(</kbd><u>y</u><kbd>)</kbd>.</p>
+<p>Also available are the logical operations  &amp;  (and),  |
+ (or),  !  (not), and the relational operations &lt;, &gt;, &gt;=, &lt;=,
+ =, and &lt;&gt; (not equal).  If used in an  algebraic  expression
+ they  work like they would in C, producing values of 0 or 1.
+ The relational operators have the following synonyms:
+</p>
+<table summary="layout" cellpadding=3 align=center border=1>
+<tr><td>gt&nbsp;&gt;<td>lt&nbsp;&lt;<td>ge&nbsp;&gt;=
+<tr><td>le&nbsp;&lt;=<td>ne&nbsp;&lt;&gt;<td>eq&nbsp;=
+<tr><td>and&nbsp;&amp;<td>or&nbsp;|<td>not&nbsp;!
+</table>
+
+<p>These are useful when &lt; and &gt;  might  be  confused  with  IO redirection (which is almost always).</p>
+<p>The following functions are available:</p>
+
+<table summary="layout" align=center width="85%">
+
+<tr><td valign=top>mag(<u>vector</u>)<td> The magnitude of <u>vector</u>. [Note: magnitude() is a synonym for this.]
+<tr><td valign=top>ph(<u>vector</u>)<td> The phase of vector.  [Note: phase() is a synonym for this.]
+<tr><td valign=top>j(<u>vector</u>)<td> <u>i</u> (sqrt(-1)) times <u>vector</u>.
+<tr><td valign=top>real(<u>vector</u>)<td> The real component of <u>vector</u>.
+<tr><td valign=top>imag(<u>vector</u>)<td> The imaginary part of <u>vector</u>.
+<tr><td valign=top>db(<u>vector</u>)<td> 20 log10(mag(<u>vector</u>)).
+<tr><td valign=top>log(<u>vector</u>)<td> The logarithm (base 10) of <u>vector</u>.
+<tr><td valign=top>ln(<u>vector</u>)<td> The natural logarithm (base <i>e</i>) of <u>vector</u>.
+<tr><td valign=top>exp(<u>vector</u>)<td> <i>e</i> to the <u>vector</u> power.
+<tr><td valign=top>abs(<u>vector</u>)<td> The absolute value of <u>vector</u>.
+<tr><td valign=top>sqrt(<u>vector</u>)<td> The square root of <u>vector</u>.
+<tr><td valign=top>sin(<u>vector</u>)<td> The sine of <u>vector</u>.
+<tr><td valign=top>cos(<u>vector</u>)<td> The cosine of <u>vector</u>.
+<tr><td valign=top>tan(<u>vector</u>)<td> The tangent of <u>vector</u>.
+
+<tr><td valign=top>atan(<u>vector</u>)<td> The inverse tangent of <u>vector</u>.
+<tr><td valign=top>norm(<u>vector</u>)<td> The <u>vector</u> normalized to 1 (<i>i.e.</i> the largest magnitude of any component is 1).
+<tr><td valign=top>pos(<u>vector</u>)<td> 1 if the real part of <u>vector</u> is positive, 0 otherwise. [Note: present, but undocumented in Berkeley release.]
+<tr><td valign=top>rnd(<u>vector</u>)<td> A vector with each component a random integer between 0 and the absolute value of the <u>vector</u>'s corresponding component.
+<tr><td valign=top>mean(<u>vector</u>)<td> The result is a scalar (a length 1 vector) that is the mean of the elements of <u>vector</u>.
+<tr><td valign=top>unitvec(<u>number</u>)<td>The result is a vector of length <u>number</u>, with elements 1. If <u>number</u> is a vector then just the first element is taken,
+                                      and if it isn't an integer then the floor of the magnitude is used. [Note: present, but undocumented in Berkeley release.]
+<tr><td valign=top>vector(<u>number</u>)<td> The result is a vector of length <u>number</u>, with elements 0, 1, ... <u>number</u> - 1. If <u>number</u> is a vector then just the first element is taken, and if it isn't an integer then the floor of the magnitude is used.
+<tr><td valign=top>length(<u>vector</u>)<td> The length of vector.
+<tr><td valign=top>interpolate(<u>plot</u>.<u>vector</u>)<td>The result of interpolating the named <u>vector</u> onto the scale of the current plot. This function uses the variable polydegree to determine the degree of interpolation.
+<tr><td valign=top>deriv(<u>vector</u>)<td> Calculates the derivative of the given <u>vector</u>. This uses numeric differentiation by interpolating a polynomial and may not produce satisfactory results (particularly with iterated differentiation). The implementation only calculates the derivative with respect to the real component of that vector's scale.
+
+</table>
+<p>A vector may be either the name  of  a  vector  already defined or a
+floating-point number (a scalar).  A number may be written in  any 
+format  acceptable  to  Spice,  such  as <kbd>14.6Meg</kbd>  or 
+<kbd>-1.231e-4</kbd>.  Note that you can either use scientific notation
+or one of the abbreviations like <kbd>MEG</kbd>  or  <kbd>G</kbd>, but 
+not  both.   As  with Spice, a number may have trailing alphabetic
+characters after it.</p>
+
+<p>The notation <u>expr</u>[<u>num</u>] denotes the <u>num</u>'th 
+element  of <u>expr</u>.   For  multi-dimensional vectors, a vector of
+one less dimension is returned.  Also for multi-dimensional  vectors,
+the  notation  <u>expr</u>[<u>m</u>][<u>n</u>] will return the
+<u>n</u>'th element of the <u>m</u>'th subvector.  To get a subrange of
+a vector, use the  form <u>expr</u>[<u>lower</u>,<u>upper</u>].</p>
+
+<p>[Note: The parser is not very sophisticated so it may sometimes be necessary
+to delimit element names with spaces, e.g. 'foo[ bar ]'. CDHW.]
+ 
+<p>The notation <u>vector</u>[[<u>lower</u>,<u>upper</u>]] denotes the values in <u>vector</u>
+corresponding to the range from <u>lower</u> to <u>upper</u> in the scale, so that <kbd>v(1)[[10, 20]]</kbd> gives all the
+values of <kbd>v(1)</kbd> for which the TIME value is between 10 and 20.  If there is
+one argument it picks out the values which have that scale value. Multi-dimensionality is ignored here; the result is
+a 1-dimensional vector.</p>
+
+<p>To reference vectors in a plot that is not the current plot (see the <a href="#5.3.41">setplot</a> command, below), the notation <kbd>plotname.vecname</kbd> can be used.
+
+<p>Either a plotname or a vector name may be replaced by the  wildcard
+ <kbd>all</kbd>.   If  the  plotname  is  <kbd>all</kbd>, matching vectors from all
+ plots are specified, and if the vector name is <kbd>all</kbd>, all vectors 
+ in  the specified plots are referenced.  Note that you
+ may not use binary operations on expressions involving wildcards  - it is not obvious what <kbd>all + all</kbd> should denote, for
+ instance.  Thus some  (contrived)  examples  of  expressions
+ are:</p>
+
+<pre><kbd>
+     cos(TIME) + db(v(3))
+     sin(cos(log([1 2 3 4 5 6 7 8 9 10])))
+     TIME * rnd(v(9)) - 15 * cos(vin#branch) ^ [7.9e5 8]
+     not ((ac3.FREQ[32] &amp; tran1.TIME[10]) gt 3)
+</kbd></pre>
+
+<p>[Note: The Berkeley 3f4/5 release code does not correctly parse vectors like [
+1 2 3 ], so the above examples only work in patched distributions. The <a
+href="sec5.html#5.3.co">compose</a> command can be used as a workround in
+unpatched versions. Conflicts within the standard Spice syntax makes specifying vectors with []
+ambiguous so some developers have used other methods. For example
+the <a href="http://newton.ex.ac.uk/teaching/CDHW/Electronics2/SimSheet-01.html">MacSpice</a>
+defines a semicolon operator to facilitate construction of vectors and n-dimensional
+matrices. e.g. the commands:
+<pre>
+    <kbd>let foo = ((11;12);(21;22))</kbd> creates a 2x2 matrix
+    <kbd>let bar = (foo;(31;32))</kbd>     creates a 3x2 matrix
+    <kbd>let baz = (1;(3,4);5)</kbd>       creates a complex vector with 3 elements
+</pre>
+<p>The ()'s protect the semicolon and prevent it being treated as a command separator. CDHW.] 
+</p>
+
+<p>Vector names in Spice may have a name such as
+@<u>name</u>[<u>param</u>], where <u>name</u> is either the name of a
+device instance or model. This denotes the value of the <u>param</u>
+parameter of the device or model. See <a href="secB.html#B">Appendix
+B</a> for details of what parameters are available. The value is a
+vector of length 1. This function is also available with the <a
+href="#5.3.45">show</a> command, and is available with variables for
+convenience for command scripts.</p>
+
+<p>There are a number of pre-defined constants in Nutmeg. They are:</p>
+
+<table summary="layout" align=center>
+<tr><td>pi</td><td>&pi; (3.14159...)
+ <tr><td>e</td><td>The base of natural logarithms (2.71828...)
+ <tr><td>c</td><td>The speed of light (299,792,500 m/s)
+ <tr><td>i</td><td>The square root of -1
+  <tr><td>kelvin</td><td>Absolute 0 in Centigrade (-273.15&deg;C)
+ <tr><td>echarge</td><td>The charge on an electron (1.6021918e-19 C)
+ <tr><td>boltz</td><td>Boltzman's constant (1.3806226e-23 J/K)
+ <tr><td>planck</td><td>Planck's constant (h = 6.626200e-34 J/Hz)
+</table>
+
+<p>These are all in MKS units. If you have another variable with a name that conflicts with one of these then it takes precedence.</p>
+
+<h3><a name="5.2">5.2 COMMAND INTERPRETATION</a></h3>
+
+<p>If a word is typed  as  a  command,  and  there  is  no
+ built-in  command  with  that  name,  the directories in the
+ <a href="#sourcepath">sourcepath</a> list are searched in order for the file.   If  it
+ is  found,  it  is  read in as a command file (as if it were
+ sourced).  Before it is read, however,  the  variables  <code>argc</code>
+ and  <code>argv</code>  are  set  to  the  number  of words following the
+ filename on the command line, and  a  list  of  those  words
+ respectively.   After  the file is finished, these variables
+ are unset.  Note that if a command file  calls  another,  it
+ must  save  its <code>argv</code> and <code>argc</code> since they are altered.  Also,
+ command files may not be re-entrant since there are no local
+ variables.   (Of course, the procedures may explicitly manipulate a stack...) This way one can write scripts  analogous
+ to shell scripts for Nutmeg and Spice3.</p>
+ 
+<p>Note that for the script to work with Spice3,  it  must
+ begin  with  a  blank  line  (or  whatever else, since it is
+ thrown away) and then a line with .CONTROL on it.   This  is
+ an  unfortunate  result of the <a href="#5.3.47">source</a> command being used for
+ both circuit input and command file  execution.   Note  also
+ that  this allows the user to merely type the name of a circuit file as a command and it  is  automatically  run.   The
+ commands  are executed immediately, without running any analyses that may be specified in the circuit (to  execute  the
+ analyses before the script executes, include a <a href="sec5.html#5.3.35">run</a> command
+ in the script).
+ 
+<p>There  are  various  command   scripts   installed   in
+ <code>/usr/local/lib/Spice/scripts</code>  (or  whatever  the  path is on
+ your machine), and  the  default  <a href="#sourcepath">sourcepath</a>  includes  this
+ directory,  so you can use these command files (almost) like
+ built-in commands.
+
+
+<h3><a name="5.3">5.3 COMMANDS</a></h3>
+
+<h4><a name="5.3.1">5.3.1</a> Ac<a href="#asterisk">*</a>: Perform an AC, small-signal frequency response analysis</h4>
+<strong>General form:</strong>
+<pre>
+     ac [ dec | oct | lin ] <u>N</u> <u>Fstart</u> <u>Fstop</u>
+</pre>
+
+<p>Do an <a href="sec1.html#1.1.2">ac analysis</a>.  See the  previous  sections of
+this manual for <a href="sec4.html#4.3.1">more details</a>.
+
+<h4><a name="5.3.2">5.3.2 Alias:  Create an alias for a command</a></h4>
+<strong>General form:</strong>
+<pre>
+     alias [<u>word</u>] [<u>text</u> ... ]
+</pre>
+
+<p>Causes <code>word</code> to be aliased to text.  <a href="secE.html#E">History substitutions</a> may be used, as in C-shell aliases.
+
+<h4><a name="5.3.3">5.3.3</a> Alter<a href="#asterisk">*</a>:  Change a device or model parameter</h4>
+
+<strong>General form [3f4]:</strong>
+<pre>
+     alter <u>dev</u> = <u>expression</u>
+     alter <u>dev</u> <u>param</u> = <u>expression</u>
+     alter @<u>dev</u>[<u>param</u>] = <u>expression</u>
+</pre>
+
+<strong>General form [pre 3f4]:</strong>
+<pre>
+     alter <u>device</u> <u>value</u>
+     alter <u>device</u> <u>parameter</u> <u>value</u> [ <u>parameter</u> <u>value</u> ]
+</pre>
+
+<p>Alter changes the value for a device or a specified
+ parameter  of a device or model.  The first form is used
+ by simple devices which have one principal value (resistors,
+ capacitors,  <i>etc.</i>) the other forms are for
+ more complex devices (bjt's,  <i>etc.</i>).   Model  parameters
+ can be changed with the second form if the name contains a "#".
+ </p>
+
+<p>For specifying vectors as values, start the  vector
+ with  "[", followed by the values in the vector, and end
+ with "]".  Be sure to place a space between each of  the
+ values and before and after the "[" and "]".</p>
+
+
+<h4><a name="5.3.am">5.3.am</a> Altermod<a href="#asterisk">*</a>: Change a model parameter</h4>
+<strong>General form:</strong>
+<pre>
+     altermod <u>mod</u> = <u>expression</u>
+     altermod <u>mod</u> <u>param</u> = <u>expression</u>
+     altermod @<u>mod</u>[<u>param</u>] = <u>expression</u>
+</pre>
+
+<p>Altermod is a version of the <a href="#5.3.3">alter</a> command which
+   operates on models and is used in the same manner. [Note: Code for this command was
+   present but inactive in the original Berkeley release of Spice 3f4. CDHW.]
+</p>
+
+<h4><a name="5.3.4">5.3.4 Asciiplot:  Plot values using old-style character plots</a></h4>
+<strong>General form:</strong>
+<pre>
+     asciiplot <u>plotargs</u>
+</pre>
+
+<p>Produce a line printer plot of  the  vectors.   The
+ plot  is  sent to the standard output, so you can put it
+ into a file with <kbd>asciiplot args ... &gt; file</kbd>. 
+ The set options <a href="#width">width</a>, <a href="#height">height</a>,
+ and <a href="#nobreak">nobreak</a> determine the width and
+ height of the plot, and whether there are  page  breaks,
+ respectively.   Note  that you will have problems if you
+ try to asciiplot something with an  X-scale  that  isn't
+ monotonic  (<i>i.e,</i> something like <kbd>sin(TIME)</kbd>),
+ because asciiplot uses a simple-minded linear interpolation.
+
+
+<h4><a name="5.3.5">5.3.5 ASpice: Asynchronous Spice run</a></h4>
+<strong>General form:</strong>
+<pre>
+     aSpice <u>input-file</u> [<u>output-file</u>]
+</pre>
+
+<p>Start a Spice-3 run, and when it is  finished  load
+ the resulting data.  The raw data is kept in a temporary
+ file.  If <u>output-file</u> is specified then  the  diagnostic
+ output  is  directed  into  that  file,  otherwise it is
+ thrown away.
+
+
+<h4><a name="5.3.6">5.3.6 Bug:  Mail a bug report</a></h4>
+<strong>General form:</strong>
+<pre>
+     bug
+</pre>
+
+<p>Send a bug report.  Please include a short  summary
+ of  the  problem,  the  version  number  and name of the
+ operating system that you are running,  the  version  of
+ Spice that you are running, and the relevant Spice input
+ file.   (If  you  have  defined BUGADDR,  the  mail  is
+ delivered to there.)
+
+<h4><a name="5.3.7">5.3.7 Cd: Change directory</a></h4>
+<strong>General form:</strong>
+<pre>
+     cd [ <u>directory</u> ]
+</pre>
+
+<p>Change the current working directory to <u>directory</u>,
+ or to the user's home directory if none is given.
+
+<h4><a name="5.3.co">5.3.co Compose: Compose a vector</a></h4>
+<strong>General form:</strong>
+<pre>
+     compose name values <u>value1</u> [ <u>value2</u> ... ]
+     compose name <u>parm</u> = <u>val</u> [ <u>parm</u> = <u>val</u> ... ]
+</pre>
+
+<p>[Note: This command was not fully implemented in the Berkeley
+release, however it is a way to create a vector from a list of
+values, which is lucky because the Berkeley frontend parser rejects
+expressions like <kbd>[ 11 22 33 ]</kbd>.]</p>
+
+<p>The first form takes the values and creates a new vector, the values
+may be arbitrary expressions.</p>
+
+<p>The second form has the following possible parameters:</p>
+
+<table summary="layout" align=center width="85%">
+ <tr><td>start</td><td>The value at which the vector should start.</td></tr>
+ <tr><td>stop</td><td>The value at which the vector should end.</td></tr>
+ <tr><td>step</td><td>The difference between sucessive elements.</td></tr>
+ <tr><td>lin</td><td>The number of points, linearly spaced.</td></tr>
+ <tr><td>log</td><td>The number of points, logarithmically spaced.</td></tr>
+ <tr><td>dec</td><td>The number of points per decade, logarithmically spaced.</td></tr>
+ <tr><td>center</td><td>Where to center the range of points.</td></tr>
+ <tr><td>span</td><td>The size of the range of points.</td></tr>
+ <tr><td>unif</td><td>The number of random points (uniform [0.1) distribution).</td></tr>
+ <tr><td>gauss</td><td>The number of random points (Gaussian distribution).</td></tr>
+ <tr><td>mean</td><td>The mean of the Gaussian distribution.</td></tr>
+ <tr><td>sd</td><td>The standard deviation of the Gaussian distribution.</td></tr>
+
+</table>
+
+<h4><a name="5.3.cs">5.3.cs Cross: Create a vector</a></h4>
+<strong>General form:</strong>
+<pre>
+     cross <u>vecname</u> <u>n</u> [ <u>vector1</u> <u>vector2</u> ... ]
+</pre>
+
+<p>Create a new vector <u>vecname</u> from the <u>n</u>th elements of the listed vectors.
+Note: If any input vector is complex then the output vector will be complex, and <u>vector</u>[<u>n</u>] 
+is the first element of <u>vector</u>. If <u>n</u> is a vector only the real part of its first element is used.</p>
+
+<h4><a name="5.3.8">5.3.8 Destroy: Delete a data set</a></h4>
+<strong>General form:</strong>
+<pre>
+     destroy [ <u>plotnames</u> | all ]
+</pre>
+
+Release the memory holding the data for the specified runs.
+
+<h4><a name="5.3.9">5.3.9</a> Dc<a href="#asterisk">*</a>: Perform a DC-sweep analysis</h4>
+<strong>General form:</strong>
+<pre>
+     dc <u>Source</u>-<u>Name</u> <u>Vstart</u> <u>Vstop</u> <u>Vincr</u> [ <u>Source2</u> <u>Vstart2</u> <u>Vstop2</u> <u>Vincr2</u> ]
+</pre>
+
+Do a <a href="sec1.html#1.1.1">dc transfer curve</a> analysis.  See the  previous sections of this manual for <a href="sec4.html#4.3.2">more details</a>.
+
+<h4><a name="5.3.10">5.3.10 Define:  Define a function</a></h4>
+<strong>General form:</strong>
+<pre>
+     define <u>function</u>(<u>arg1</u> [ , <u>arg2</u>  ... ]) <u>expression</u>
+</pre>
+
+
+<p>Define the user-definable function with  the  name
+ <u>function</u> and arguments <u>arg1</u>, <u>arg2</u>, ... to be <u>expression</u>,
+ which may involve the arguments.  When the  function  is
+ later  used,  the  arguments it is given are substituted
+ for the formal arguments when it is parsed.  If  <u>expression</u>
+ is  not  present,  any  definition for <u>function</u> is
+ printed, and if there are no arguments  to  <u>define</u>  then
+ all currently active definitions are printed.  Note that
+ you may have different functions defined with  the  same
+ name but different arities [<i>i.e.</i> number of arguments.].
+ 
+<p>Some useful definitions are:
+
+<pre><kbd>
+     define max(x,y) (x &gt; y) * x + (x &lt;= y) * y
+     define min(x,y) (x &lt; y) * x + (x &gt;= y) * y
+</kbd></pre>
+
+<h4><a name="5.3.dt">5.3.dt Deftype:  Define type of plot or vector</a></h4>
+<strong>General form:</strong>
+<pre>
+     deftype v <u>vectype</u> [ <u>units</u> ]
+     deftype p <u>plottype</u> [ <u>pattern</u> ... ]
+</pre>
+
+<p>Define addtional vector and plot types. The first form refers to
+vectors, for example:
+
+<pre>
+     <code>Spice3 &gt;</code> <kbd>deftype v money USD</kbd>
+     <code>Spice3 &gt;</code> <kbd><a href="#5.3.22">let</a> cost = 0.15 * vector(10)</kbd>
+     <code>Spice3 &gt;</code> <kbd><a href="#5.3.42">settype</a> money cost</kbd>
+     <code>Spice3 &gt;</code> <kbd><a href="#5.3.272">plot</a> cost vs vector(10)</kbd>
+</pre>
+
+<p>This second form of this command seems to have been intended for use in the Command: field of rawfiles.
+It defines additional plot-types. The short name given to a plot with any
+of the patterns present in its Name: field will be plottypeN, where N is a
+distinctive number.
+</p>
+
+<h4><a name="5.3.11">5.3.11</a> Delete<a href="#asterisk">*</a>: Remove a trace or breakpoint</h4>
+<strong>General form:</strong>
+<pre>
+     delete [ <u>debug</u>-<u>number</u> ... ]
+</pre>
+
+<p>Delete the specified breakpoints, traces and saves.   The
+ debug numbers are those shown by the <a href="sec5.html#5.3.48">status command</a> (unless you do <kbd>status &gt;  file</kbd>,  in  which  case  the  debug
+ numbers are not printed).
+
+<h4><a name="5.3.12">5.3.12 Diff:  Compare vectors</a></h4>
+<strong>General form:</strong>
+<pre>
+     diff <u>plot1</u> <u>plot2</u> [ <u>vec</u> ...]
+</pre>
+
+<p>Compare all the vectors in the specified plots,  or
+ only the named vectors if any are given.  There are different vectors in the two plots, or any  values  in  the
+ vectors differ significantly the difference is reported.
+ The variable <a href="#diff_abstol">diff_abstol</a>,  <a href="#diff_reltol">diff_reltol</a>,  and  <a href="#diff_vntol">diff_vntol</a>
+ are used to determine what is meant by a significant difference.
+
+<h4><a name="5.3.13">5.3.13 Display:  List known vectors and types</a></h4>
+<strong>General form:</strong>
+<pre>
+     display [ <u>varname</u> ...]
+</pre>
+
+<p>Prints a summary of currently defined  vectors,  or
+ of  the names specified.  The vectors are sorted by name
+ unless the variable  <a href="#nosort">nosort</a> is  set.   The  information
+ given is the name of the vector, the length, the type of
+ the vector, and whether it is real or complex data.  Additionally,
+ one vector is labeled [scale].  When a command such as
+ <a href="sec5.html#5.3.27">plot</a> is given without a <kbd>vs</kbd>  argument,  this
+ scale  is  used  for the X-axis.  It is always the first
+ vector in a rawfile, or the first vector  defined  in  a
+ new  plot.   If  you undefine the scale (<i>i.e.,</i> <kbd>let TIME =
+ []</kbd>), one of the remaining vectors becomes the new  scale
+ (which is undetermined). See also <a href="sec5.html#5.3.ss">setscale</a>.
+ 
+<h4><a name="5.3.14">5.3.14 Echo:  Print text</a></h4>
+<strong>General form:</strong>
+<pre>
+     echo [ -n ] [ <u>text</u> ... ]
+</pre>
+
+<p>Echos the given text to the screen. If the first argument is -n the
+terminating newline is suppressed.</p>
+
+
+<h4><a name="5.3.15">5.3.15</a> Edit<a href="#asterisk">*</a>: Edit the current circuit</h4>
+<strong>General form:</strong>
+<pre>
+     edit [ <u>file</u> ]
+</pre>
+
+<p>Print the current Spice3 input file  into  a  file,
+ call  up  the  editor on that file and allow the user to
+ modify it, and then read it back in, replacing the  original file.  If a <u>filename</u> is given, then edit that file
+ and load it, making the circuit the current one.
+
+<h4><a name="5.3.16">5.3.16 Fourier: Perform a Fourier transform</a></h4>
+<strong>General form:</strong>
+<pre>
+     fourier <u>fundamental</u> [ <u>value</u> ...]
+</pre>
+
+ <p>Does a  Fourier  analysis  of  each  of  the  given
+ values,  using the first 10 multiples of the <u>fundamental</u>
+ frequency (or the first <a href="#nfreqs">nfreqs</a>, if that variable is  set
+ -  see  below).   The  output  is like that of the <a href="sec4.html#4.4.4">.FOUR</a>
+ Spice3 line.  The values may be  any  valid  expression.
+ The values are interpolated onto a fixed-space grid with
+ the number of points given by the <a href="#fourgridsize">fourgridsize</a> variable,
+ or 200 if it is not set.  The interpolation is of degree
+ <a href="#polydegree">polydegree</a> if that variable is set, or 1.  If polydegree
+ is  0, then no interpolation is done.  This is likely to
+ give erroneous results if the time scale is not monotonic, though.
+
+<h4><a name="5.3.17">5.3.17 Hardcopy:  Save a plot to a file for printing</a></h4>
+<strong>General form:</strong>
+<pre>
+     hardcopy <u>file</u> <u>plotargs</u>
+</pre>
+
+<p>Just like <a href="#5.3.27">plot</a>, except creates a file  called  <u>file</u>
+ containing  the  plot in the format specified by the variable <a href="sec5.html#hcopydevtype">hcopydevtype</a>.
+The default file format is an image in <a href="http://www.doc.ic.ac.uk/~mac/manuals/sunos-manual-pages/sunos4/usr/man/man5/plot.5.html">plot(5)</a>
+ format, and can be printed by either the [unix] plot(1) program or lpr with the -g flag. See also the <a href="sec5.html#hcopydev">hcopy</a> variables.
+
+<h4><a name="5.3.18">5.3.18 Help:  Print summaries of Spice3 commands</a></h4>
+<strong>General form:</strong>
+<pre>
+     help [all] [<u>command</u> ...]
+</pre>
+
+<p>Prints help.  If the argument <u>all</u> is given, a short
+ description  of  everything  you  could possibly type is
+ printed.  If commands are given, descriptions  of  those
+ commands are printed.  Otherwise help for only a few major commands is printed.
+
+<h4><a name="5.3.19">5.3.19 History:  Review previous commands</a></h4>
+<strong>General form:</strong>
+<pre>
+     history [ -r ] [<u>number</u>]
+</pre>
+
+<p>Print out the history, or the last <u>number</u> commands
+typed  at the keyboard.  <strong>Note</strong>: in Spice3 version 3a7 and
+ earlier, all commands (including ones read from files)
+ were saved. The -r option reverses the printing order. 
+ [See also the page on <a href="secE.html#E">history substitutions</a> in commands.]
+
+<h4><a name="5.3.20">5.3.20</a> Iplot<a href="#asterisk">*</a>: Incremental plot</h4>
+<strong>General form:</strong>
+<pre>
+     iplot [ <u>node</u> ...]
+</pre>
+
+<p>Incrementally plot the values of  the  nodes  while
+ Spice3  runs.   The  <kbd>iplot</kbd>  command can be used with the
+<a href="sec5.html#5.3.59">where</a> command to find trouble spots in a transient simulation;
+it is essentially a graphical version of <a href="sec5.html#5.3.52">trace</a>.
+Several iplots may be active simulataneously. Iplotting is not applicable for all analyses. 
+The <a href="sec5.html#5.3.48">status</a> command displays a list of current iplots,
+and these can be removed with the <a href="sec5.html#5.3.11">delete</a> command. 
+
+<h4><a name="5.3.21">5.3.21 Jobs:  List active asynchronous Spice runs</a></h4>
+<strong>General form:</strong>
+<pre>
+     jobs
+</pre>
+
+<p>Report on the asynchronous Spice-3  jobs  currently
+ running.   Nutmeg checks to see if the jobs are finished
+ every time you execute a command.  If it  is  done  then
+ the data is loaded and becomes available.
+
+<h4><a name="5.3.22">5.3.22 Let:  Assign a value to a vector</a></h4>
+<strong>General form:</strong>
+<pre>
+     let <u>name</u> = <u>expr</u>
+</pre>
+
+<p>Assigns the  value specified by <u>expr</u>, an expression as <a href="#5.1">described above</a>,
+to the vector called <u>name</u> which is created in the current plot if it is not found.  If <u>expr</u> is [] 
+(a zero-length vector) then  the  vector becomes undefined [Note: This doesn't work with
+the Berkeley 3f4/5 release code, try <a href="sec5.html#5.3.ul">unlet</a> instead.].  Individual 
+elements of a vector may be modified by appending a subscript to name 
+(<i>e.g.</i> <u>name[0]</u>). If there are no arguments, <kbd>let</kbd> is the 
+same as <a href="sec5.html#5.3.13">display</a>. </p>
+
+<p>[Note: Do not use the form
+<pre>
+    <code>Spice3 &gt;</code> <kbd>myvec = 0.15 * yourvec</kbd>
+</pre>
+to abbreviate
+<pre>
+ 	<code>Spice3 &gt;</code> <kbd>let myvec = 0.15 * yourvec</kbd>
+</pre>
+because Spice will perform an unwanted and time-consuming search for commands and/or
+files matching 'myvec' before using the <kbd>let</kbd> command as the default behaviour.]</p>
+
+<p>The command <a href="5.3.22">let</a> creates a vector in the current plot, use <a href="#5.3.41">setplot</a> to create
+a new plot.</p>
+
+<p>See also <a href="sec5.html#5.3.ul">unlet</a>,
+<a href="sec5.html#5.3.co">compose</a>, and <a href="#5.3.41">setplot</a>.</p>
+
+<h4><a name="5.3.23">5.3.23</a> Linearize<a href="#asterisk">*</a>:  Interpolate to a linear scale</h4>
+<strong>General form:</strong>
+<pre>
+     linearize [ <u>vec</u> ... ]
+</pre>
+
+<p>Create a new plot with all of the  vectors in  the current  plot, or only those mentioned if arguments are given.  The new vectors are interpolated onto  a  linear time scale, which is determined by the values of tstep, tstart, and tstop  in  the  currently  active transient analysis.   The currently loaded input file must include a transient analysis (a <a href="sec5.html#5.3.53">tran</a> command may be run interactively  before  the last <a href="sec5.html#5.3.31">reset</a>,  alternately), and the current plot must be from this transient analysis.  This command  is  needed  because  Spice3  doesn't output the results from a transient analysis  in  the  same  manner that Spice2 did.
+
+<h4><a name="5.3.24">5.3.24</a> Listing<a href="#asterisk">*</a>: Print a listing of the current circuit</h4>
+<strong>General form:</strong>
+<pre>
+     listing [ logical | physical | deck ] [ expand ]
+</pre>
+
+<p>If the logical argument is given,  the  listing  is with all continuation lines collapsed into one line, and if the physical argument is given the lines are  printed out as they were found in the file.  The default is logical.  A deck listing is just like the physical listing, except  without  the line numbers it recreates the input file verbatim (except that it does not  preserve  case). If  the  word  expand is present, the circuit is printed with all subcircuits expanded.
+
+<h4><a name="5.3.25">5.3.25 Load:  Load rawfile data</a></h4>
+<strong>General form:</strong>
+<pre>
+     load [ <u>filename</u> ... ]
+</pre>
+
+<p>Loads either binary or ascii format rawfile data from the files
+named. The default filename is rawSpice.raw, or the argument to the -r
+flag if there was one when Spice was invoked.
+
+<h4><a name="5.3.ns">5.3.ns</a> Noise<a href="#asterisk">*</a>: Perform a noise analysis</h4>
+<strong>General form:</strong>
+<pre>
+     noise v(<u>output</u> [,<u>ref</u>]) <u>src</u> [ dec | lin | oct ] <u>Pts</u> <u>Fstart</u> <u>Fstop</u> [<u>PPS</u>];
+</pre>
+
+<p>Do an <a href="sec1.html#1.1.7">noise analysis</a>.  See the  previous  sections of this manual for <a href="sec4.html#4.3.4">more details</a>.</p>
+
+<h4><a name="5.3.26">5.3.26</a> Op<a href="#asterisk">*</a>: Perform an operating point analysis</h4>
+<strong>General form:</strong>
+<pre>
+     op
+</pre>
+
+<p>Do an operating point analysis. See the previous sections of this manual for <a href="sec4.html#4.3.5">more details</a>.
+
+<h4><a name="5.3.27">5.3.27 Plot: Plot values on the display</a></h4>
+<strong>General form:</strong>
+<pre>
+     plot <u>exprs</u> [ylimit <u>ylo</u> <u>yhi</u>] [xlimit <u>xlo</u> <u>xhi</u>] [xindices <u>xilo</u> <u>xihi</u>]
+          [xcompress <u>comp</u>] [xdelta <u>xdel</u>] [ydelta <u>ydel</u>] [xlog] [ylog] [loglog]
+          [vs <u>xname</u>] [xlabel <u>word</u>] [ylabel <u>word</u>] [title <u>word</u>] [samep]
+          [<u>keyword</u> ... ]
+</pre>
+
+<p>Plot the given <u>exprs</u> on the screen (if you are on a graphics
+terminal). The <code>xlimit</code> and <code>ylimit</code> arguments determine the
+high and low x- and y-limits of the axes, respectively. The
+<code>xindices</code> arguments determine what range of points are to be
+plotted - everything between the <u>xilo</u>th point and the <u>xihi</u>th point is
+plotted. The <code>xcompress</code> argument specifies that only one out of
+every <u>comp</u> points should be plotted. If an <code>xdelta</code> or a <code>ydelta</code> parameter
+is present, it specifies the spacing between grid lines on the X- and
+Y-axis. These parameter names may be abbreviated to <u>xl</u>,
+<u>yl</u>, <u>xind</u>, <u>xcomp</u>, <u>xdel</u>, and <u>ydel</u>
+respectively.
+<p>The <code>xname</code> argument is an expression to use as the scale on the
+x-axis. If xlog or ylog are present then the X or Y scale, respectively, is
+logarithmic (loglog is the same as specifying both). The xlabel and ylabel
+arguments cause the specified labels to be used for the X and Y axes,
+respectively.
+
+<p>If <code>samep</code> is given, the values of the other parameters (other than
+xname) from the previous plot, hardcopy, or <a href="#5.3.4">asciiplot</a>
+command is used unless re-defined on the command line.
+
+<p>The <code>title</code> argument is used in the place of the plot name at the
+bottom of the graph.
+
+<p>The following keywords are available in Spice3f:</p>
+
+<table summary="layout" align=center width="85%">
+<tr><td>linear</td><td>override a default log-scale plot (as in the output for an <a href="sec4.html#4.3.1">AC analysis</a></td></tr>
+<tr><td>linplot</td><td>synonym for linear</td></tr>
+<tr><td>lingrid</td><td>override a default log-scale plot without tranforming the data</td></tr>
+<tr><td>smith</td><td>Smith plot - data is transformed by the function (x-1)/(x+1) </td></tr>
+<tr><td>smithgrid</td><td>polar plot with a Smith grid but without transforming the data.</td></tr>
+<tr><td>pointplot</td><td>plot the points without joining them.</td></tr>
+<tr><td>combplot</td><td>plot vectors by drawing a vertical line from each point to the X-axis, as opposed to joining the points. </td></tr>
+</table>
+<p>[Note: The Berkeley release version of this command seems to ignore the <a
+href="sec5.html#5.5">variables</a> that one would expect to influence this
+command. CDHW.]</p>
+
+<h4><a name="5.3.28">5.3.28 Print:  Print values</a></h4>
+<strong>General form:</strong>
+<pre>
+     print [col] [line] <u>expr</u> [ <u>expr2</u> ... ]
+</pre>
+
+<p>Prints the vector described by the expression <u>expr</u>. If the
+<u>col</u> argument is present, print the vectors named side by side. If
+line is given, the vectors are printed horizontally. <u>col</u> is the
+default, unless all the vectors named have a length of one, in which
+case <u>line</u> is the default. The options <a href="#width">width</a>,
+<a href="#height">height</a>, and <a href="#nobreak">nobreak</a> are
+effective for this command (see <a href="#5.3.4">asciiplot</a>). If the
+expression is all, all of the vectors available are printed. Thus <kbd>print
+col all &gt;</kbd> file prints everything in the file in Spice2 format. The
+scale vector (time, frequency) is always in the first column unless the
+variable <a href="sec5.html#noprintscale">noprintscale</a> is true.
+
+
+<h4><a name="5.3.pz">5.3.pz PZ: Pole-Zero Analysis</a></h4>
+<strong>General form:</strong>
+<pre>
+     pz <u>node1</u> <u>node2</u> <u>node3</u> <u>node4</u> { cur | vol } { pol | zer | pz }
+</pre>
+
+Performs a <a href="sec4.html#4.3.6">pole-zero analysis</a> of the current circuit, as described earlier.
+
+<h4><a name="5.3.29">5.3.29 Quit:  Leave Spice3 or Nutmeg</a></h4>
+<strong>General form:</strong>
+<pre>
+     quit
+</pre>
+
+<p>Quit nutmeg or Spice.</p>
+
+<h4><a name="5.3.30">5.3.30 Rehash: Reset internal hash tables</a></h4>
+<strong>General form:</strong>
+<pre>
+     rehash
+</pre>
+
+
+<p>Recalculate the internal hash tables used when looking up
+UNIX commands, and make all UNIX commands in the user's PATH available
+for command completion.  This is useless unless you have set <a href="sec5.html#unixcom">unixcom</a> first (see below).
+
+<h4><a name="5.3.31">5.3.31</a> Reset<a href="#asterisk">*</a>: Reset an analysis</h4>
+<strong>General form:</strong>
+<pre>
+     reset
+</pre>
+
+<p>Throw out any intermediate data in the circuit
+(e.g, after a breakpoint or after one or more analyses have been done already),
+and re-parse the input file. The circuit can then be re-run from its initial
+state, overriding the affect of any <a href="sec5.html#5.3.39">set</a> or 
+<a href="sec5.html#5.3.3">alter</a> commands.  In Spice-3e and earlier versions 
+this was done automatically by the <a href="sec5.html#5.3.35">run command</a>.</p>
+
+<h4><a name="5.3.32">5.3.32 Reshape: Alter the dimensionality or dimensions of a vector</a></h4>
+<strong>General form:</strong>
+<pre>
+     reshape <u>vector</u> <u>vector</u> ...
+     or
+     reshape <u>vector</u> <u>vector</u> ...  [ <u>dimension</u>, <u>dimension</u>, ...  ]
+     or
+     reshape <u>vector</u> <u>vector</u> ... [ <u>dimension</u> ][ <u>dimension</u> ] ...
+</pre>
+
+<p>This command changes the dimensions of a vector or a set of vectors.
+The final dimension may be left off and it will be filled in automatically. 
+If no dimensions are specified, then the dimensions of the first vector are 
+copied to the other vectors. An error message of the form 'dimensions of <u>x</u> 
+were inconsistent' can be ignored.
+
+<h4><a name="5.3.33">5.3.33</a> Resume<a href="#asterisk">*</a>: Continue a simulation after a stop</h4>
+<strong>General form:</strong>
+<pre>
+     resume
+</pre>
+
+<p>Resume a simulation after a  <a href="sec5.html#5.3.50">stop</a>  or  interruption (control-C).</p>
+
+<h4><a name="5.3.34">5.3.34</a> RSpice: Remote Spice submission</h4>
+<strong>General form:</strong>
+<pre>
+     rSpice <u>input</u> <u>file</u>
+</pre>
+
+<p>Runs a Spice-3 remotely taking the input file as  a Spice-3  input  file, or the current circuit if no argument is given.  Nutmeg or Spice3 waits for  the  job  to complete,  and  passes output from the remote job to the user's standard output.  When the job  is  finished  the data is loaded in as with aSpice.  If the variable <u>rhost</u> is set, nutmeg connects to this host instead of the  default  remote  Spice3 server machine.  This command uses the "rsh" command and  thereby  requires  authentication via  a  ".rhosts" file or other equivalent method.  Note that "rsh" refers to the "remote shell"  program,  which may  be  "remsh" on your system; to override the default name of "rsh", set the variable  <u>remote</u>_<u>shell</u>.   If  the variable  <u>rprogram</u>  is set, then rSpice uses this as the pathname to the program to run on the remote system.
+<p>Note: rSpice will  not  acknowledge  elements  that have  been  changed  via  the <a href="sec5.html#5.3.3">alter</a> or altermod commands.
+[Note: Altermod is absent from many implemetations, use alter instead.]
+
+<h4><a name="5.3.35">5.3.35</a> Run<a href="#asterisk">*</a>: Run analysis from the input file</h4>
+<strong>General form:</strong>
+<pre>
+     run [ <u>rawfile</u> ]
+</pre>
+
+<p>Run the analyses specified in the input file for the current circuit. If there are any
+of the control lines specified in <a href="sec4.html#4.3">Section 4.3</a> present they are executed. The output is put
+in <u>rawfile</u> if it is given, in addition to being available
+interactively. In Spice-3e and earlier versions, the input file would be
+re-read and any affects of the <a href="sec5.html#5.3.39">set</a> or 
+<a href="sec5.html#5.3.3">alter</a> commands would be reversed.
+This is no longer the effect. 
+
+<p>[Note. Interactive commands specified using the <a href="sec5.html#5.3.47">.command/.endc</a> mechanism are not executed by this command.]</p>
+
+<h4><a name="5.3.36">5.3.36 Rusage: Resource usage</a></h4>
+<strong>General form:</strong>
+<pre>
+     rusage [ <u>resource</u> ...]
+</pre>
+
+<p>Print resource usage statistics. If any resources are given, 
+just print the usage of that resource. Most resources require that a 
+circuit be loaded.  Currently valid resources are:<br>&nbsp;
+
+<table summary="layout" align=center>
+<tr><td>all</td><td>Everything below.</td></tr>
+<tr><td>elapsed</td><td>The amount of time elapsed since the last rusage elaped call.</td></tr>
+<tr><td>faults</td><td>Number of page faults and context switches (BSD only).</td></tr>
+<tr><td>space</td><td>Data space used.</td></tr>
+<tr><td>time</td><td>CPU time used so far.</td></tr>
+<tr><td>temp</td><td>Operating temperature.</td></tr>
+<tr><td>tnom</td><td>Temperature at which device parameters were measured.</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>equations</td><td>Circuit Equations</td></tr>
+<tr><td>time</td><td>Total Analysis Time</td></tr>
+<tr><td>totiter</td><td>Total iterations</td></tr>
+<tr><td>accept</td><td>Accepted timepoints</td></tr>
+<tr><td>rejected</td><td>Rejected timepoints</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>loadtime</td><td>Time spent loading the circuit matrix and RHS.</td></tr>
+<tr><td>reordertime</td><td>Matrix reordering time</td></tr>
+<tr><td>lutime</td><td>L-U decomposition time</td></tr>
+<tr><td>solvetime</td><td>Matrix solve time</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>trantime</td><td>Transient analysis time</td></tr>
+<tr><td>tranpoints</td><td>Transient timepoints</td></tr>
+<tr><td>traniter</td><td>Transient iterations</td></tr>
+<tr><td>trancuriters</td><td>Transient iterations for the last time point (listed incorrectly as "Transient iterations per point")</td></tr>
+<tr><td>tranlutime</td><td>Transient L-U decomposition time</td></tr>
+<tr><td>transolvetime</td><td>Transient matrix solve time</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>everything</td><td>All of the above.
+</table>
+
+<h4><a name="5.3.37">5.3.37</a> Save<a href="#asterisk">*</a>:  Save a set of outputs</h4>
+<strong>General form:</strong>
+<pre>
+      save [ all | <u>output</u> ...]
+</pre>
+
+<p>Save a set of outputs, discarding the rest. If  a
+ node has been mentioned in a save command, it appears in
+ the working plot after a run has completed,  or  in  the
+ rawfile  if  Spice  is  run in batch mode.  If a node is
+ <a href="sec5.html#5.3.52">trace</a>d or <a href="sec5.html#5.3.27">plot</a>ted (see below) it is also saved. For
+ backward  compatibility,  if  there are no <kbd>save</kbd> commands
+ given, all outputs are saved.
+
+<p>When the keyword "all" appears in the save command,
+ all default  values  (node  voltages and voltage source
+ currents) are saved in  addition  to  any  other  values
+ listed. See also the <a href="#5.3.48">status</a> and <a href="#5.3.11">delete</a> commands.
+
+<h4><a name="5.3.38">5.3.38</a> Sens<a href="#asterisk">*</a>:  Run a sensitivity analysis</h4>
+<strong>General form:</strong>
+<pre>
+     sens <u>output</u>
+     sens <u>output</u> ac [ dec | oct | lin ] <u>N</u> <u>Fstart</u> <u>Fstop</u>
+</pre>
+<p>Perform a <a href="sec4.html#4.3.7">sensitivity analysis</a>. The variable <u>output</u> is
+ either  a  node  voltage (<i>e.g.</i> "v(1)" or "v(A,out)") or a
+ current through a voltage source (<i>e.g.</i> "i(vtest)").   The
+ first  form calculates DC sensitivities, the second form
+ calculates AC sensitivities.  The output values are in dimensions  of  change  in output per unit change of input
+ (as opposed to percent change in output or  per  percent
+ change of input).
+
+<h4><a name="5.3.39">5.3.39 Set:  Set the value of a variable</a></h4>
+<strong>General form:</strong>
+<pre>
+     set [ <u>word</u> ]
+     set [ <u>word</u> = <u>value</u> ] ...
+</pre>
+
+<p>Set the value  of  <u>word</u>  to  be  <u>value</u>,  if  it  is present.  
+You can set any word to be any value, numeric or string.  If no value is given
+then the value  is  the boolean 'true'.</p>
+
+<p>The value of <u>word</u> may be inserted  into  a  command  by writing 
+$<u>word</u>.   If  a  variable is set to a list of values that are enclosed in
+parentheses (which  must  be  separated from their values by white space), the
+value of the variable is the list.</p>
+
+<p>The variables affecting Nutmeg are listed in the following <a href="#5.5">section (5.5)</a>. 
+The 'set' command can also be used to change <a href="sec4.html#4.1">simulator parameters</a>
+for the current circuit (see <a href="#5.3.40">setcirc</a> below). Set values will be used
+(until the circuit is <a href="#5.3.31">reset</a>) when the current circuit is
+<a href="#5.3.35">run</a> and take precedence over a <a href="sec4.html#4.1">.options</a> statement. 
+</p>
+See also the discussion in <a href="secD.html">section D</a>.
+
+<h4><a name="5.3.40">5.3.40</a> Setcirc<a href="#asterisk">*</a>: Change the current circuit</h4>
+<strong>General form:</strong>
+<pre>
+     setcirc [ <u>cktname</u> ]
+</pre>
+
+<p>Selects <u>cktname</u> as the 'current' circuit. When a circuit is loaded
+with the <a href="sec5.html#5.3.47">source</a> command it is added to a list of available
+circuits and becomes the current circuit. The <kbd>setcirc</kbd> without an argument
+prints a menu of available circuits.
+
+<h4><a name="5.3.41">5.3.41 Setplot:  Switch the current set of vectors</a></h4>
+<strong>General form:</strong>
+<pre>
+     setplot [ <u>plotname</u> ]
+</pre>
+
+<p>Set the current plot to the  plot  with  the  given
+ name,  or  if  no  name is given, prompt the user with a
+ menu. (Note that the plots are named as they are loaded,
+ with  names like tran1 or op2.  These names are shown by
+ the setplot and <a href="#5.3.13">display</a> commands and are used  by 
+ <a href="#5.3.12">diff</a>,
+above.)  If the <u>plotname</u> 'new' is selected, the current
+ plot becomes one with no vectors defined and name 'unknown'.
+
+<p>Note that here the word "plot" refers to a group of
+ vectors that are the result of one Spice analysis run.  When more
+ than one file is loaded in, or more  than  one  plot  is
+ present in one file, Nutmeg keeps them separate and only
+ shows you the vectors in the current plot.
+</p>
+
+<h4><a name="5.3.ss">5.3.ss Setscale:  Set the scale vector for current plot</a></h4>
+<strong>General form:</strong>
+<pre>
+     setscale [ <u>vector</u> ]
+</pre>
+
+<p>Defines the scale vector for the current plot. If no argument is given, the current scale vector is printed.
+
+<h4><a name="5.3.42">5.3.42 Settype:  Set the type of a vector</a></h4>
+<strong>General form:</strong>
+<pre>
+     settype <u>type</u> <u>vector</u> [ <u>vector</u> ... ]
+</pre>
+
+
+<p>Change the type of the named vectors to type.  Type names can
+be found in the <a href="http://fag.grm.hia.no/dat2311/man/man1/sconvert.html">manual page for sconvert</a>.
+
+<h4><a name="5.3.43">5.3.43 Shell:  Call the command interpreter</a></h4>
+<strong>General form:</strong>
+<pre>
+     shell [ <u>command</u> ]
+</pre>
+
+
+<p>Call the operating  system's  command  interpreter; execute  the 
+specified  command or call for interactive use.
+
+<h4><a name="5.3.44">5.3.44 Shift:  Alter a list variable</a></h4>
+<strong>General form:</strong>
+<pre>
+     shift [ <u>varname</u> ] [ <u>number</u> ]
+</pre>
+
+<p>If <u>varname</u> is the name of a list  variable,  it  is
+ shifted  to the left by <u>number</u> elements (i.e, the <u>number</u>
+ leftmost elements are removed).  The default <u>varname</u>  is
+ <code>argv</code>, and the default <u>number</u> is 1.
+
+<h4><a name="5.3.45">5.3.45</a> Show<a href="#asterisk">*</a>: List device state</h4>
+<strong>General form:</strong>
+<pre>
+     show <u>devices</u> [ : <u>parameters</u> ] , ...
+</pre>
+
+<strong>Old form:</strong>
+<pre>
+     show -v @<u>device</u> [ [ <u>name</u> ] ]
+</pre>
+
+<p>The show command prints out tables summarizing  the operating 
+condition  of selected devices (much like the Spice2 operation point
+summary).  If <u>device</u> is  missing, a default set of devices are
+listed, if <u>device</u> is a single letter, devices of that type are
+listed;  if  <u>device</u> is  a subcircuit name (beginning and ending
+in ":") only devices in that subcircuit are shown (end the name in  a
+double-":"  to get devices within sub-subcircuits recursively).  The
+second and third  forms  may  be  combined ("letter:subcircuit:")   or  
+"letter:subcircuit::")  to select a specific type of device from a 
+subcircuit.   A device's  full  name  may be specified to list only that
+device.  Finally, devices may be selected  by  model  by using  the 
+form "#modelname" or ":subcircuit#modelname" or
+"letter:subcircuit#modelname".
+
+<p>If no <u>parameters</u> are specified, the  values  for  a standard 
+set  of parameters are listed.  If the list of <u>parameters</u>
+contains a "+", the default set of parameters is listed along with any
+other specified parameters.
+
+<p>For both <u>devices</u> and <u>parameters</u>, the word "all" has the
+  obvious  meaning.   Note:  there  must  be  spaces separating the ":"
+that divides the <u>device</u> list from the <u>parameter</u> list.
+
+<p>The "old form" (with "-v") prints  the  data  in  an older, more
+verbose pre-Spice3f format.
+
+<h4><a name="5.3.46">5.3.46</a> Showmod<a href="#asterisk">*</a>: List model parameter values</h4>
+<strong>General form:</strong>
+<pre>
+     showmod <u>models</u> [ : <u>parameters</u> ] , ...
+</pre>
+
+<p>The showmod command operates like the <a href="#5.3.45">show</a> command
+ (above)  but prints out model parameter values.  The applicable forms for <u>models</u> are a single letter specifying
+ the  device  type letter, "letter:subckt:", "modelname",
+ ":subckt:modelname", or "letter:subcircuit:modelname".
+
+<h4><a name="5.3.47">5.3.47 Source:  Read a Spice3 input file</a></h4>
+<strong>General form:</strong>
+<pre>
+     source <u>file</u>
+</pre>
+
+<p>For Spice3: Read the Spice3 input file file.   Nutmeg and Spice3
+commands may be included in the file, and must be enclosed between the
+lines <u>.control</u>  and  <u>.endc</u>. These  commands  are executed
+immediately after the circuit is loaded, so a control line of <u>ac</u> 
+...  works  the same  as  the corresponding <a href="sec4.html#4.3.1">.AC</a> card.  The first
+line in any input file is considered a title line and not parsed but 
+kept  as the name of the circuit.  The exception to this rule is the
+file <u>.Spiceinit</u>.  Thus, a  Spice3  command script must begin with
+a blank line and then a control line. Also, any line starting with the characters *# 
+is considered a control line. This makes it possible to embed commands in Spice3 
+input  files  that are ignored by earlier versions of Spice2.
+
+<p>For Nutmeg: Reads commands from the file <u>filename</u>.
+ Lines beginning with the character * are considered comments and ignored.
+
+<h4><a name="5.3.sp">5.3.sp</a> Spec: Create a frequency domain plot</h4>
+<strong>General form:</strong>
+<pre>
+     spec <u>start_freq</u> <u>stop_freq</u> <u>step_freq</u> <u>vector</u> [<u>vector</u> ...]
+</pre>
+<p>
+Calculates a new complex vector containing the Fourier transform of the input
+vector (typically the <a href="sec5.html#5.3.23">linearize</a>d result of a transient analysis). The default behaviour
+is to use a Hanning window, but this can be changed by setting the variables <var>specwindow</var> and <var>specwindoworder</var>
+appropriately. Typical usage:</p>
+<pre>
+    spice3 > <a href="sec5.html#5.3.23">linearize</a>
+    spice3 > <a href="sec5.html#5.3.39">set</a> specwindow = "blackman"
+    spice3 > spec 10 1000000 1000 v(out)
+    spice3 > <a href="sec5.html#5.3.27">plot</a> mag(v(out))
+</pre>
+<p>Possible values for <var>specwindow</var> are: <kbd>none</kbd>, <kbd>hanning</kbd>,
+<kbd>cosine</kbd>, <kbd>rectangular</kbd>, <kbd>hamming</kbd>, <kbd>triangle</kbd>,
+<kbd>bartlet</kbd>, <kbd>blackman</kbd>, <kbd>gaussian</kbd>.
+In the case of a gaussian window <var>specwindoworder</var> is a number specifying its order.
+
+<p>[Note: This command was not part of the original Berkeley Spice release. The <a href="http://www.elec.mq.edu.au/cnerf/spice/patches/spec/">source
+code</a> was released by its author, and is often incorporated.
+A <a href="http://www.elec.mq.edu.au/cnerf/spice/patches/spec/scriptspec">command script version</a> is
+(Hanning window only) available for use in other cases.
+</p>
+
+<h4><a name="5.3.48">5.3.48</a> Status<a href="#asterisk">*</a>: Display breakpoint information</h4>
+<strong>General form:</strong>
+<pre>
+     status
+     status > <u>file</u>
+</pre>
+
+<p>Display all of the <a href="sec5.html#5.3.37">save</a>, <a href="sec5.html#5.3.52">trace</a>, <a
+href="sec5.html#5.3.20">iplot</a> and <a href="sec5.html#5.3.50">breakpoint</a> events currently in effect.
+If the output is redirected to a file, it is assumed that the intention is to re-import it later
+using the <a href="#5.3.47">source</a> command so the event numbers are omitted.See also the
+<a href="sec5.html#5.3.11">delete</a> command.</p>
+
+<h4><a name="5.3.49">5.3.49</a> Step<a href="#asterisk">*</a>:  Run a fixed number of timepoints</h4>
+<strong>General form:</strong>
+<pre>
+     step [ <u>number</u> ]
+</pre>
+
+<p>Iterate <u>number</u> times, or once, and then stop.</p>
+
+<h4><a name="5.3.50">5.3.50</a> Stop<a href="#asterisk">*</a>:  Set a breakpoint</h4>
+<strong>General form:</strong>
+<pre>
+     stop [ after <u>n</u> ] [ when <u>value</u> <u>cond</u> <u>value</u> ] ...
+</pre>
+
+<p>Set a breakpoint.  The argument 'after <u>n</u>' means  stop
+ after iteration number <u>n</u>, and the argument 'when <u>value</u>
+ <u>cond</u> <u>value</u>' means stop when the first  <u>value</u>  is  in  the
+ given relation with the second <u>value</u>, the possible relations being
+<p>
+
+<table summary="layout" cellpadding=3 align=center border=1>
+<tr><td>gt&nbsp;&gt;<td>lt&nbsp;&lt;<td>ge&nbsp;&gt;=
+<tr><td>le&nbsp;&lt;=<td>ne&nbsp;&lt;&gt;<td>eq&nbsp;=
+</table>
+
+<p>IO redirection is disabled for the stop command,  since  the
+ relational  operations  conflict with it (<kbd>stop</kbd> doesn't produce
+ any output anyway).  The <u>value</u>s above may be node  names  in
+ the  running circuit, or real values.  If more than one condition is
+  given, <i>e.g.</i> <kbd>stop after 4 when v(1) &gt; 4 when  v(2)
+ &lt; 2</kbd>, the conjunction of the conditions is implied.</p>
+ 
+<p>See also <a href="sec5.html#5.3.48">status</a>.</p>
+
+<h4><a name="5.3.sc">5.3.sc</a> Strcmp: Compare strings</h4>
+<strong>General form:</strong>
+<pre>
+     strcmp <u>result</u> <u>str1</u> <u>str2</u>
+</pre>
+
+<p>The strcmp command compares two string variables <u>str1</u> and <u>str2</u> for equality
+and sets <u>result</u> as follows:</p>
+<table align=center border=1>
+<tr><td>0</td><td>if they are equal</td>
+<tr><td>Negative integer</td><td>if <u>str1</u> &lt; <u>str2</u></td>
+<tr><td>Positive integer</td><td>if <u>str1</u> &gt; <u>str2</u></td>
+</table>
+
+<p>Some implementations consider "ABC" to be equal to "abc".
+
+<h4><a name="5.3.51">5.3.51</a> Tf<a href="#asterisk">*</a>: Run a Transfer Function analysis</h4>
+
+<strong>General form:</strong>
+<pre>
+     tf <u>outvar</u> <u>ipsource</u>
+</pre>
+
+
+<strong>Examples:</strong>
+<pre><kbd>
+     tf v(node1,node2) vsource
+     tf i(vload) isource
+</kbd></pre>
+
+
+<p>The tf command performs a  <a href="sec4.html#4.3.8">transfer function analysis</a>, 
+ returning   the   transfer  function (output/input), output resistance, and input resistance
+ for the given output and input sources. The analysis assumes a small-signal
+ DC (slowly varying) input.
+
+<h4><a name="5.3.52">5.3.52</a> Trace<a href="#asterisk">*</a>: Trace nodes</h4>
+<strong>General form:</strong>
+<pre>
+     trace [ <u>node</u> ... ]
+</pre>
+
+<p>For every step of an analysis, the value of the node is printed.
+Several traces may be active at once. Tracing is not applicable for all analyses.
+To remove a trace, use the <a href="sec5.html#5.3.11">delete</a> command.
+
+<h4><a name="5.3.53">5.3.53</a> Tran<a href="#asterisk">*</a>: Perform a transient analysis</h4>
+<strong>General form:</strong>
+<pre>
+     tran <u>Tstep</u> <u>Tstop</u> [ <u>Tstart</u> [ <u>Tmax</u> ] ] [ uic ]
+</pre>
+
+<p>Perform a <a href="sec4.html#4.3.9">transient  analysis</a>.   See 
+the previous sections of this manual for more details.
+
+<h4><a name="5.3.54">5.3.54 Transpose: Swap the elements in a multi-dimensional data set</a></h4>
+<strong>General form:</strong>
+<pre>
+     transpose <u>vector</u> [ <u>vector</u> ... ]
+</pre>
+
+This command transposes a multidimensional  vector. No analysis in
+Spice3 produces multidimensional vectors, although the <a
+href="sec4.html#4.3.2">DC transfer curve</a> may be run with two varying
+sources.  You must use the <kbd><a
+href="sec5.html#5.3.32">reshape</a></kbd> command to reform the
+one-dimensional vectors  into  two  dimensional vectors.   In  addition,
+ the default scale is incorrect for  plotting.   You  must  plot  
+versus   the   vector corresponding  to  the  second source, but you
+must also refer only to the first segment of  this  second  source
+vector.   For  example  (circuit  to produce the transfer characteristic
+of a MOS transistor):
+
+<pre>
+     <code>Spice3 &gt;</code> <kbd><a href="sec4.html#4.3.2">dc</a> vgg 0 5 1 vdd 0 5 1</kbd>
+     <code>Spice3 &gt;</code> <kbd><a href="sec5.html#5.3.27">plot</a> i(vdd)</kbd>
+     <code>Spice3 &gt;</code> <kbd><a href="sec5.html#5.3.32">reshape</a> all [6,6]</kbd>
+     <code>Spice3 &gt;</code> <kbd>transpose i(vdd) v(drain)</kbd>
+     <code>Spice3 &gt;</code> <kbd>plot i(vdd) vs v(drain)[0]</kbd>
+</pre>
+
+<h4><a name="5.3.55">5.3.55 Unalias:  Retract an alias</a></h4>
+<strong>General form:</strong>
+<pre>
+     unalias [ <u>word</u> ... ]
+</pre>
+
+<p>Removes any aliases present for the <u>word</u>s.</p>
+
+<h4><a name="5.3.56">5.3.56 Undefine:  Retract a definition</a></h4>
+<strong>General form:</strong>
+<pre>
+     undefine <u>function</u>
+</pre>
+
+
+<p>Definitions for the  named  user-defined  functions
+ are deleted.
+
+
+<h4><a name="5.3.ul">5.3.ul Unlet:  Delete a vector</a></h4>
+<strong>General form:</strong>
+<pre>
+     unlet <u>vector</u> [ <u>vector</u> ... ]
+</pre>
+
+<p>Delete the  specified vector(s). See also <a href="sec5.html#5.3.22">let</a>.</p>
+
+<h4><a name="5.3.57">5.3.57 Unset:  Clear a variable</a></h4>
+<strong>General form:</strong>
+<pre>
+     unset <u>word</u> [ <u>word</u> ... ]
+</pre>
+
+Clear  the  value  of  the  specified variable(s) (<u>word</u>).
+
+<h4><a name="5.3.58">5.3.58 Version:  Print the version of Spice</a></h4>
+<strong>General form:</strong>
+<pre>
+     version [ <u>verid</u> ]
+</pre>
+
+<p>Print out the version of nutmeg  that  is  running.
+ If  there are arguments, it checks to make sure that the
+ arguments match the current version of Spice.  (This  is
+ mainly used as a Command: line in rawfiles.)
+
+<h4><a name="5.3.59">5.3.59 Where:  Identify troublesome node or device</a></h4>
+<strong>General form:</strong>
+<pre>
+     where
+</pre>
+
+<p>When performing  a  <a href="sec4.html#4.3.9">transient</a>  or  <a
+href="sec4.html#4.3.5">operating  point analysis</a>,  the  name of the
+last node or device to cause non-convergence is saved.  The
+<kbd>where</kbd> command prints  out this information so that you can
+examine the circuit and either correct the problem or make a  bug 
+report.   You may  do  this either in the middle of a run or after the
+simulator has given up on the analysis.   For  transient simulation, the
+<a href="sec5.html#5.3.20">iplot</a> command can be used to monitor the
+progress of the analysis.  When the analysis slows  down severly   or  
+hangs,   interrupt  the  simulator  (with control-C) and issue the
+<kbd>where</kbd> command.  Note that  only one  node  or  device  is
+printed; there may be problems with more than one node.</p>
+
+<h4><a name="5.3.60">5.3.60 Write: Write data to a file</a></h4>
+<strong>General form:</strong>
+<pre>
+     write [ <u>file</u> ] [ <u>expr</u> ... ]
+</pre>
+
+<p>Writes out the expressions to <u>file</u>.
+<p>First, vectors are grouped together  by  plots,  and
+ written  out  as  such (i.e, if the expression list contained three vectors from one plot and two from another,
+ then  two  plots are written, one with three vectors and
+ one with two).  Additionally, if the scale for a  vector
+ isn't present, it is automatically written out as well.
+<p>The default  format  is  ascii,  but  this  can  be
+ changed  with  a <kbd>set filetype =</kbd>  command.  The default
+ filename is rawSpice.raw, or the argument to the -r flag
+ on  the  command line, if there was one, and the default
+ expression list is 'all'.
+
+<h4><a name="5.3.61">5.3.61 Xgraph: use the xgraph(1) program for plotting.</a></h4>
+<strong>General form:</strong>
+<pre>
+     xgraph <u>file</u> [ <u>expr</u> ... ] [ <u>options</u> ]
+</pre>
+
+The Spice3/nutmeg xgraph command  plots  data  like
+ the  <a href="#5.3.27">plot</a> command but via xgraph, a popular X11 plotting
+ program.
+<p>
+If <u>file</u> is either "temp" or "tmp" a temporary  file
+ is  used  to  hold  the  data  while being plotted.  For
+ available plot options, see the <a href="#5.3.27">plot</a> command.   All  options
+ except for polar and Smith plots are supported.
+
+
+<h3><a name="5.4">5.4 CONTROL STRUCTURES</a></h3>
+<p>[Note: In the original Berkeley release of Spice 3f4/5 the implementation of
+   the following control structures contained several bugs. Many of the above
+   commands leak memory so rapidly that they are all but useless in loops containing 
+   a significant number of repetitions. Subsequent workers (including <a href="/teaching/CDHW/Electronics2/SimSheet-01.html">MacSpice</a>,
+   and <a href="http://www.fe.uni-lj.si/spice/welcome.html">Spice Opus</a>) have made serious attempts
+   to correct these problems.]
+
+<h4><a name="5.4.1">5.4.1 While - End</a></h4>
+<strong>General form:</strong>
+<pre>
+     while <u>condition</u>
+             statement
+             ...
+     end
+</pre>
+
+<p>While <u>condition</u>, an arbitrary algebraic expression,
+ is true, execute the statements.
+
+
+
+<h4><a name="5.4.2">5.4.2 Repeat - End</a></h4>
+<strong>General form:</strong>
+<pre>
+     repeat [ <u>number</u> ]
+             statement
+             ...
+     end
+</pre>
+
+<p>Execute the statements <u>number</u> times, or forever  if
+ no argument is given.
+
+<h4><a name="5.4.3">5.4.3 Dowhile - End</a></h4>
+<strong>General form:</strong>
+<pre>
+     dowhile <u>condition</u>
+             statement
+             ...
+     end
+</pre>
+
+<p>The same as <a href="sec5.html#5.4.1">while</a>, except  that  the  <u>condition</u>  is tested after the statements are executed.
+
+<h4><a name="5.4.4">5.4.4 Foreach - End</a></h4>
+<strong>General form:</strong>
+<pre>
+     foreach <u>var</u> <u>value</u> ...
+             statement
+             ...
+     end
+</pre>
+
+<p>The statements are executed once for  each  of  the
+ <u>value</u>s,  each  time  with  the  variable  <u>var</u> set to the
+ current one.  (<u>var</u> can be accessed by the $<u>var</u>  notation
+ - see below).
+
+<h4><a name="5.4.5">5.4.5 If - Then - Else</a></h4>
+<strong>General form:</strong>
+<pre>
+     if <u>condition</u>
+             statement
+             ...
+     else
+             statement
+             ...
+     end
+</pre>
+
+
+<p>If the <u>condition</u> is non-zero then the first set  of
+ statements  are executed, otherwise the second set.  The
+ else and the second set of statements may be omitted.
+
+<h4><a name="5.4.6">5.4.6 Label</a></h4>
+<strong>General form:</strong>
+<pre>
+     label <u>word</u>
+</pre>
+
+If a statement of the form  <code>goto  <u>word</u></code>  is  encountered,  control  is transferred to this point, otherwise
+ this is a no-op.
+
+<h4><a name="5.4.7">5.4.7 Goto</a></h4>
+<strong>General form:</strong>
+<pre>
+     goto <u>word</u>
+</pre>
+
+If a statement of the form <code>label <u>word</u></code> is present in
+ the  block or an enclosing block, control is transferred
+ there.  Note that if the label is at the top  level,  it
+ <strong>must</strong>  be  before the <code>goto</code> statement (<i>i.e.</i> a forward goto)
+ may occur only within a block).
+
+<h4><a name="5.4.8">5.4.8 Continue</a></h4>
+
+<pre>
+     continue
+</pre>
+
+
+<p>If there is a <code>while</code>, <code>dowhile</code>, or <code>foreach</code>
+ block  enclosing  this  statement, control passes to the test, or
+ in the case of <code>foreach</code>, the next value is taken.  Otherwise an error results.
+
+<h4><a name="5.4.9">5.4.9 Break</a></h4>
+<strong>General form:</strong>
+<pre>
+     break
+</pre>
+
+<p>If there is a <code>while</code>, <code>dowhile</code>, or <code>foreach</code>
+enclosing this statement, control passes out of the block.
+ Otherwise an error results.
+
+<p>Of course, control structures may be nested.   When
+ a  block  is  entered and the input is the terminal, the
+ prompt becomes a number  of  &gt;'s  corresponding  to  the
+ number of blocks the user has entered.  The current control structures
+  may be examined with the debugging  command <kbd>cdump</kbd>.
+
+<h3><a name="5.5">5.5 VARIABLES</a></h3>
+
+<p>The operation of both Nutmeg and Spice3 may be affected
+ by setting variables with the "<a href="#5.3.39">set</a>" command.  In addition to
+ the variables mentioned below, the set  command  in  Spice3
+ also  affect  the behaviour of the simulator <i>via</i> the options
+ previously described under the section on "<a href="sec4.html#4.1">.OPTIONS</a>".
+
+<p>The variables meaningful to nutmeg which may be altered
+ by the set command are:<br>&nbsp;
+ 
+<table summary="layout" align=center width="85%">
+
+<tr valign=top><td><a name="appendwrite">appendwrite</a></td><td>Append output to the rawfile,
+if one already exists, e.g. when a <a href="#5.3.60">write</a> command  is  issued.</td></tr>
+
+<tr valign=top><td><a name="colorN">color<u>N</u></a></td><td>These variables
+determine the colors used, if X is being run on a color display.
+<u>N</u> may be between 0 and 15. Color 0 is the background, color 1 is
+the grid and text color, and colors 2 through 15 are used in order for
+vectors plotted. The value of the color variables should be names of
+colors, which may be found in the file /usr/lib/rgb.txt.</td></tr>
+
+<tr valign=top><td><a name="combplot">combplot</a></td><td>Plot vectors by drawing 
+a  vertical  line  from each  point to the X-axis, as opposed to joining
+the points.  Note that this option  is  subsumed in the <u>plottype</u>
+option, below.</td></tr>
+
+<tr valign=top><td><a name="cpdebug">cpdebug</a></td><td>Print <u>cshpar</u>
+debugging information (must be complied  with the -DCPDEBUG flag). 
+Unsupported in the current release.</td></tr>
+
+<tr valign=top><td><a name="debug">debug</a></td><td>If set then a lot of debugging
+information is printed (must be compiled with the -DFTEDEBUG flag). 
+Unsupported in the current release.</td></tr>
+
+<tr valign=top><td><a name="device">device</a></td><td>The name (/dev/tty??) of the
+graphics device. If  this  variable  isn't set then the user's terminal
+is used.  To do plotting on  another monitor  you  probably  have  to
+set both the device and term variables.  (If device is set to  the  name
+ of  a  file,  nutmeg dumps the graphics control codes into this file
+-this is useful for saving plots.)</td></tr>
+
+<tr valign=top><td><a name="diff_abstol">diff_abstol</a></td><td>The absolute
+tolerance used by the diff command.</td></tr>
+
+<tr valign=top><td><a name="echo">echo</a></td><td>Print out each command before it
+is executed.</td></tr>
+
+<tr valign=top><td><a name="filetype">filetype</a></td><td>This can  be  either 
+<u>ascii</u>  or  <u>binary</u>,  and determines the format used to write rawfile data.  The
+default is <u>ascii</u>.</td></tr>
+
+<tr valign=top><td><a name="fourgridsize">fourgridsize</a></td><td>How many points
+to use for interpolating into when doing Fourier analysis.</td></tr>
+
+<tr valign=top><td><a name="gridsize">gridsize</a></td><td>If this variable is set to 
+an  integer, this  number  is  used  as the number of equally spaced
+points to use for the  Yaxis when plotting.  Otherwise  the current
+scale is  used  (which  may  not have  equally  spaced  points). If this
+variable is set to  an  integer, this  number  is  used  as the number
+of equally spaced points to use for the 
+Yaxis when plotting. Otherwise  the current
+scale is  used  (which  may  not have  equally  spaced 
+points). If the current scale isn't strictly  monotonic,
+then this option has no effect.</td></tr>
+
+<tr valign=top><td><a name="hcopydev">hcopydev</a></td><td>If this is set, when the
+ <a href="sec5.html#5.3.17">hardcopy</a>  command  is  run  the resulting file is automatically printed
+on the printer named hcopydev with the command <u>lpr</u>
+-<u>P</u>hcopydev -<u>g</u> file.</td></tr>
+
+<tr valign=top><td><a name="hcopyfont">hcopyfont</a></td><td>This variable
+specifies  the  font  name for <a href="sec5.html#5.3.17">hardcopy</a> output plots.  The value is
+device dependent.</td></tr>
+
+<tr valign=top><td><a name="hcopyfontsize">hcopyfontsize</a></td><td>This is a
+scaling factor  for  the  font used in <a href="sec5.html#5.3.17">hardcopy</a> plots.</td></tr>
+
+<tr valign=top><td><a name="hcopydevtype">hcopydevtype</a></td><td>This variable specifies the type
+of  the printer  output  to  use in the <a href="sec5.html#5.3.17">hardcopy</a> command.  If
+hcopydevtype  is  not  set, <a href="http://www.doc.ic.ac.uk/~mac/manuals/sunos-manual-pages/sunos4/usr/man/man5/plot.5.html">plot(5)</a>  format is assumed.  The standard
+distribution  currently  recognizes postscript as an alternative output
+format. When  used  in  conjunction  with hcopydev, hcopydevtype should
+specify a format supported by the printer.</td></tr>
+
+<tr valign=top><td><a name="height">height</a></td><td>The length of the page for <a href="#5.3.4">asciiplot</a> and <a href="#5.3.28">print col</a>.</td></tr>
+
+<tr valign=top><td><a name="history">history</a></td><td>The number of events to save in the history list.</td></tr>
+
+<tr valign=top><td><a name="lprplot5">lprplot5</a></td><td>This is a <a href="http://www.doc.ic.ac.uk/csg/manuals/all-manual-pages/hpux/usr/man/man3/fprintf.3s.html">printf(3s)</a> style format
+string used  to  specify the command to use for sending <a href="http://www.doc.ic.ac.uk/~mac/manuals/sunos-manual-pages/sunos4/usr/man/man5/plot.5.html">plot(5)</a>-style
+plots to a printer or  plotter. The  first parameter supplied is
+the printer  name,  the  second parameter  supplied  is a file name
+containing the plot.  Both  parameters  are
+strings. This is a <a href="http://www.doc.ic.ac.uk/csg/manuals/all-manual-pages/hpux/usr/man/man3/fprintf.3s.html">printf(3s)</a> style format string used
+ to  specify the command to use for sending plot(5)-style plots to a
+printer or  plotter. It is trivial to cause Spice3 to abort  by  supplying  a  unreasonable format
+string.</td></tr>
+
+<tr valign=top><td><a name="lprps">lprps</a></td><td>This is a printf(3s) style format string
+used  to  specify the command to use for sending PostScript plots to a
+printer or plotter. The  first parameter supplied is the printer
+name, the second  parameter  supplied  is a file name containing the
+plot.  Both parameters are  strings. It  is  trivial to cause Spice3 to
+abort by  supplying  an unreasonable format string.</td></tr>
+
+<tr valign=top><td><a name="nfreqs">nfreqs</a></td><td>The number of frequencies to compute  in the <u>fourier</u> command. (Defaults to 10.)</td></tr>
+
+<tr valign=top><td><a name="nobreak">nobreak</a></td><td>Don't have <a href="#5.3.4">asciiplot</a> and <a href="#5.3.28">print col</a> break between pages.</td></tr>
+
+<tr valign=top><td><a name="noasciiplotvalue">noasciiplotvalue</a></td><td>Don't print the first vector plotted  to the left when doing an <a href="#5.3.4">asciiplot</a>.</td></tr>
+
+<tr valign=top><td><a name="noclobber">noclobber</a></td><td>Don't overwrite existing files when  doing IO redirection.</td></tr>
+
+<tr valign=top><td><a name="noglob">noglob</a></td><td>Don't expand the global characters  `*', `?', `[', and `]'.  This is the default.</td></tr>
+
+<tr valign=top><td><a name="nogrid">nogrid</a></td><td>Don't plot a grid when  graphing  curves (but do label the axes).</td></tr>
+
+<tr valign=top><td><a name="nomoremode">nomoremode</a></td><td>If nomoremode is  not  set,  whenever  a large amount of data is being printed to the screen (e.g, the print or  <a href="#5.3.4">asciiplot</a> commands),  the  output is stopped every screenful and continues when a  carriage return  is  typed.  If nomoremode is set then data scrolls off the screen without check.</td></tr>
+
+<tr valign=top><td><a name="nonomatch">nonomatch</a></td><td>If noglob is unset and a global  expression  cannot  be matched, use the global characters  literally  instead  of  complaining.</td></tr>
+
+<tr valign=top><td><a name="nopadding">nopadding</a></td><td>Don't pad vectors with zeros to equalize lengths when writing rawfile output.</td></tr>
+
+<tr valign=top><td><a name="nosort">nosort</a></td><td>Don't have display sort the variable names.</td></tr>
+
+<tr valign=top><td><a name="noprintscale">noprintscale</a></td><td>Don't  print  the  scale  in  the  leftmost column when a <a href="#5.3.28">print col</a> command is given.</td></tr>
+
+<tr valign=top><td><a name="numdgt">numdgt</a></td><td>The number of digits to print when printing tables  of  data (fourier, <a href="#5.3.28">print col</a>).  The default precision is 6 digits.  On the VAX, approximately  16 decimal digits are available  using  double  precision,  so  numdgt should  not be more than 16.  If the number is negative, one fewer digit is printed  to ensure constant widths in tables.</td></tr>
+
+<tr valign=top><td><a name="plottype">plottype</a></td><td>This should be  one  of 
+normal,  comb,  or point:<u>chars</u>. normal, the  default,
+causes points to be plotted as parts of  connected
+lines. comb causes a comb
+plot to be done (see the description of the combplot  variable above). 
+point causes each point to be plotted separately - the chars are  a 
+list of characters that are used for each vector plotted.  If they are
+omitted  then  a  default set is used.</td></tr>
+
+<tr valign=top><td><a name="polydegree">polydegree</a></td><td>The degree of the polynomial that the 
+plot command should fit to the data.  If <u>polydegree</u> is N, then
+nutmeg fits a degree N  polynomial  to every set of N points and draw 10
+intermediate points in between each endpoint. If  the 
+points  aren't monotonic, then it tries rotating the curve and reducing
+the degree until a fit is achieved.</td></tr>
+
+<tr valign=top><td><a name="polysteps">polysteps</a></td><td>The number of points
+to interpolate between every  pair  of points available when doing curve
+fitting.  The default is 10.</td></tr>
+
+<tr valign=top><td><a name="program">program</a></td><td>The name of the current
+program (<u>argv</u>[<u>0</u>]).</td></tr>
+
+<tr valign=top><td><a name="prompt">prompt</a></td><td>The prompt, with the
+character `!' replaced by the current event number.</td></tr>
+
+<tr valign=top><td><a name="rawfile">rawfile</a></td><td>The default name for
+rawfiles created.</td></tr>
+
+<tr valign=top><td><a name="diff_reltol">diff_reltol</a></td><td>The relative
+tolerance used by the diff command.</td></tr>
+
+<tr valign=top><td><a name="remote_shell">remote_shell</a></td><td>Overrides the
+name used  for  generating  rSpice runs (default is "rsh").</td></tr>
+
+<tr valign=top><td><a name="rhost">rhost</a></td><td>The machine to use for remote
+Spice-3 runs,  instead of the default one (see the description of the
+rSpice command, below).</td></tr>
+
+<tr valign=top><td><a name="rprogram">rprogram</a></td><td>The name of the remote
+program  to  use  in  the rSpice command.</td></tr>
+
+<tr valign=top><td><a name="slowplot">slowplot</a></td><td>Stop between each graph
+plotted and wait for the user to type return before
+continuing.</td></tr>
+
+<tr valign=top><td><a name="sourcepath">sourcepath</a></td><td>A list of  the  directories  to 
+search  when  a source  command  is  given. The default is the current directory and the standard
+Spice library (/<u>usr</u>/<u>local</u>/<u>lib</u>/<u>Spice</u>,  or 
+whatever  LIBPATH is #defined to in the Spice3 source.</td></tr>
+
+<tr valign=top><td><a name="Spicepath">Spicepath</a></td><td>The program to use for the aSpice
+command. The default is /cad/bin/Spice.</td></tr>
+
+<tr valign=top><td><a name="term">term</a></td><td>The <u>mfb</u> name of the current terminal.</td></tr>
+
+<tr valign=top><td><a name="units">units</a></td><td>If this is degrees, then all the trig  functions will use degrees instead of radians.</td></tr>
+
+<tr valign=top><td><a name="unixcom">unixcom</a></td><td>If a command isn't defined, try to execute it as a UNIX command.  Setting this option has the effect of giving a <a href="sec5.html#5.3.30">rehash</a> command, above.  This is useful  for  people  who want to use nutmeg as a login shell.</td></tr>
+
+<tr valign=top><td><a name="verbose">verbose</a></td><td>Be verbose.  This is midway between echo and debug / cpdebug.</td></tr>
+
+<tr valign=top><td><a name="diff_vntol">diff_vntol</a></td><td>The absolute voltage tolerance used by the  diff command.</td></tr>
+
+<tr valign=top><td><a name="width">width</a></td><td>The width of the page for <a href="#5.3.4">asciiplot</a>  and <a href="#5.3.28">print col</a>.</td></tr>
+
+<tr valign=top><td><a name="x11lineararcs">x11lineararcs</a></td><td>Some X11 implementations have  poor  arc drawing.  If you set this option, Spice3 will plot using an approximation to  the curve using straight lines.</td></tr>
+
+<tr valign=top><td><a name="xbrushheight">xbrushheight</a></td><td>The height of the brush to use if  X  is being run.</td></tr>
+
+<tr valign=top><td><a name="xbrushwidth">xbrushwidth</a></td><td>The width of the brush to use  if  X  is being run.</td></tr>
+
+<tr valign=top><td><a name="xfont">xfont</a></td><td>The name of the X font to use when plotting data and entering labels.  The plot may  not  look  good  if this is a variable-width font.</td></tr>
+</table>
+
+<p>There are several set variables that  Spice3  uses  but Nutmeg does not. They are:<br>&nbsp;
+
+<table summary="layout" align=center width="85%" >
+<tr valign=top><td><a name="editor">editor</a></td><td>The editor to use for the <a href="sec5.html#5.13.15">edit</a> command.</td></tr>
+<tr valign=top><td><a name="modelcard">modelcard</a></td><td>The name of the model card (normally <a href="sec2.html#2.3">.MODEL</a>).</td></tr>
+<tr valign=top><td><a name="noaskquit">noaskquit</a></td><td>Do not check to make sure that there are no circuits suspended and no plots unsaved. Normally Spice-3 warns the user when he tries to quit if this is the case.</td></tr>
+<tr valign=top><td><a name="nobjthack">nobjthack</a></td><td>Assume that BJTs have 4 nodes.</td></tr>
+<tr valign=top><td><a name="noparse">noparse</a></td><td>Don't attempt to parse input files when they are read in (useful for debugging). Of course, they cannot be run if they are not parsed.</td></tr>
+<tr valign=top><td><a name="nosubckt">nosubckt</a></td><td>Don't expand subcircuits</td></tr>
+<tr valign=top><td><a name="renumber">renumber</a></td><td>Renumber input lines when an input file has <a href="sec2.html#2.5">.INCLUDE</a>'s.</td></tr>
+<tr valign=top><td><a name="subend">subend</a></td><td>The card to end subcircuits (normally <a href="sec2.html#2.4.2">.ENDS</a>).</td></tr>
+<tr valign=top><td><a name="subinvoke">subinvoke</a></td><td>The prefix to invoke <a href="sec2.html#2.4.3">subcircuits</a> (normally X).</td></tr>
+<tr valign=top><td><a name="substart">substart</a></td><td>The card to begin subcircuits (normally <a href="sec2.html#2.4.1">.SUBCKT</a>).</td></tr>
+</table>
+
+<h3><a name="5.6">5.6 MISCELLANEOUS</a></h3>
+
+<p>If there are subcircuits  in  the  input  file,  Spice3 expands instances of them.  A subcircuit is delimited by the cards <a href="sec2.html#2.4.1">.SUBCKT</a> and <a href="sec2.html#2.4.2">.ENDS</a>, or whatever the value of the  variables  <a href="#substart">substart</a> and <a href="#subend">subend</a> is, respectively.  An instance of  a subcircuit is created by specifying a device with type 'x' - the device line is written
+
+<pre>
+     xname node1 node2 ... subcktname
+</pre>
+
+ where the nodes are the node names that replace  the  formal
+ parameters on the .SUBCKT line.  All nodes that are not formal parameters are prepended with  the  name  given  to  the
+ instance  and  a ':', as are the names of the devices in the
+ subcircuit.  If there are several nested  subcircuits,  node
+ and device names look like subckt1:subckt2:...:name.  If the
+ variable subinvoke is set, then it is  used  as  the  prefix
+ that specifies instances of subcircuits, instead of 'x'.
+
+<p>Nutmeg occasionally checks to  see  if  it  is  getting
+ close to running out of space, and warns the user if this is
+ the case. (This is more likely to be useful with  the  Spice
+ front end.)
+
+<p>C-shell type quoting with "" and '', and backquote substitution  may 
+be  used.   Within single quotes, no further substitution (like history
+substitution) is done, and within double  quotes, the words are kept
+together but further substitution is done.  Any text between backquotes
+is  replaced by  the  result  of  executing  the text as a command to
+the
+ shell.
+
+<p>Tenex-style ('set filec' in the 4.3  C-shell)  command,
+ filename,   and  keyword  completion  is  possible:  If  EOF
+ (control-D) is typed after the first character on the  line,
+ a  list of the commands or possible arguments is printed (If
+ it is alone on the line it  exits  nutmeg).   If  escape  is
+ typed,  then  nutmeg  trys  to  complete  what  the user has
+ already typed.  To get a list  of  all  commands,  the  user
+ should type &lt;space&gt; ^D.
+
+<p>The values of variables may  be  used  in  commands  by writing  $varname 
+where  the  value  of  the variable is to appear.  The special variables $$ and
+$&lt; refer to  the  process  ID  of  the  program and a line of input which is
+read from the terminal when the variable  is  evaluated,  respectively.   If  a
+variable has a name of the form $&amp;word, then word is considered a vector (see
+above), and  its  value  is taken  to  be the value of the variable.  If
+$<u>foo</u> is a valid variable,  and  is  of  type  list,  then   the  
+expression $<u>foo</u>[<u>low</u>-<u>high</u>]  represents  a range of elements. 
+Either the upper index or the lower may be left out, and the reverse of a list
+may be obtained with $<u>foo</u>[<u>len</u>-<u>1</u>].  Also, the notation
+$?<u>foo</u> evaluates to 1 if the variable <u>foo</u> is defined, 0  otherwise,
+and $#<u>foo</u> evaluates to the number of elements in <u>foo</u> if it is a
+list, 1 if it is a number or string, and 0 if  it is a boolean variable.
+
+<p>History substitutions, similar to C-shell history  substitutions, are
+also available - see the <a href="secE.html#E">C-shell manual page</a> for all of the details.
+
+<p>The characters ~, {, and } have  the  same  effects  as they do in the C-Shell, <i>i.e.</i>, home directory and alternative expansion.  It is possible to use the wildcard characters *, ?,  [, and ] also, but only if you unset noglob first.  This makes them rather useless for typing algebraic  expressions, so you should set noglob again after you are done with wild-card expansion.  Note that the  pattern  [^abc]  matchs  all characters <u>except</u> a, b, <u>and</u> c.
+
+<p>IO redirection is available - the symbols  &gt;,  &gt;&gt;,  &gt;&amp;, &gt;&gt;&amp;, and &lt; have the same effects as in the C-shell.
+
+<p>You may type multiple commands on one  line,  separated by semicolons.
+
+<p>If you want to use a different  mfbcap  file  than  the default  (usually  ~cad/lib/mfbcap),  you  have  to  set the environment variable Spice_MFBCAP before you start nutmeg or Spice.   The  -m  option  and  the mfbcap variable no longer work.
+
+<p>If X is being used, the cursor may be positioned at any point  on  the  screen  when the window is up and characters typed at the keyboard are added to the window at that point. The  window  may  then be sent to a printer using the xpr(1) program.
+
+<p>Nutmeg can be run under VAX/VMS,  as  well  as  several other operating systems.  Some features like command completion, expansion of *, ?, and [], backquote substitution, the shell command, and so forth do not work.
+
+<p>On some systems you  have  to  respond  to  the  -<u>more</u>- prompt during plot with a carriage return instead of any key as you can do on UNIX.
+
+
+<h3><a name="5.7">5.7 BUGS</a></h3>
+
+      The label entry facilities are primitive.  You must  be
+ careful to type slowly when entering labels -- nutmeg checks
+ for input once every second, and can get confused if characters arrive faster.
+<p>
+      If you redefine colors after  creating  a  plot  window
+ with X, and then cause the window to be redrawn, it does not
+ redraw in the correct colors.
+<p>
+      When defining aliases like
+<pre>
+     alias pdb plot db( '!:1' - '!:2' )
+</pre>
+
+ you must be careful to quote the argument list substitutions  in  this manner.  If you quote the whole argument
+ it might not work properly.
+<p>In a user-defined function,  the  arguments  cannot  be
+ part of a name that uses the <u>plot</u>.<u>vec</u> syntax.  For example:
+
+<pre><kbd>
+     define check(v(1)) cos(tran1.v(1))
+</kbd></pre>
+
+ does not work.
+<p>If you type plot all all, or otherwise use  a  wildcard
+ reference  for  one  plot  twice in a command, the effect is
+ unpredictable.
+
+<p>The <a href="#5.3.4">asciiplot</a> command doesn't deal with log scales  or the delta keywords.
+
+<p>Often the names of terminals recognized by MFB are different  from  those  in  /etc/termcap.  Thus you may have to
+ reset your terminal type with the command
+
+<pre><kbd>
+     set term = termname
+</kbd></pre>
+
+where termname is the name in the mfbcap file.
+
+<p>The hardcopy command is useless on VMS and  other  systems without the plot command, unless the user has a program
+ that understands plot(5) format.
+
+<p>Spice3 recognizes all  the  notations  used  in  Spice2
+ <a href="sec4.html#4.4.3">.PLOT</a>  cards,  and  translates  vp(1)  into ph(v(1)), and so
+ forth.  However, if there are spaces in these names it won't
+ work.  Hence v(1, 2) and (-.5, .5) aren't recognized.
+
+<p>BJTs can have either 3 or 4 nodes, which makes it  difficult  for the subcircuit expansion routines to decide what
+ to rename.  If the fourth parameter has been declared  as  a
+ model  name, then it is assumed that there are 3 nodes, otherwise it is considered a node.  To disable  this,  you  can
+ set  the  variable "<a href="#nobjthack">nobjthack</a>"  which forces BJTs to have 4
+ nodes (for the purposes of subcircuit expansion, at least).
+
+<p>The @<u>name</u>[<u>param</u>] notation might not  work  with  <code>trace</code>, <code>iplot</code>, etc.  yet.
+
+<p>The first line of a command file (except for the  .Spiceinit file) should be a comment, otherwise Spice may create an empty circuit.
+
+<p>Files specified on the command  line  are  read  before .Spiceinit is read.
+
+<DIV class=NOPRINT>
+&nbsp;
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+</DIV>
+
+
+
+
+
+</div>
+
+<div class='phy-forcewidth'>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+</div>
+</table> <!-- End of main layout table -->
+<hr id=xphy-bottom2>
+
+<div class=noprint>
+<table width='100%' border=0>
+<tr>
+<td valign=middle align=left>
+
+<a href='http://validator.w3.org/check?uri=referer'>Validate</a>
+ &nbsp;  
+<a href='http://validator.w3.org/checklink?uri=referer'>Link-check</a>
+
+
+<td valign=middle align=center>
+
+<a href='http://newton.ex.ac.uk/general/copyright.html'>&copy; Copyright &amp; disclaimer</a>
+
+<td valign=middle align='right'>
+
+<!-- AddThis Button BEGIN -->
+<a href="http://www.addthis.com/bookmark.php" target=sharethis><img class=addit src="/furniture/addthis.gif" width="125" height="16" border="0" alt="Share" title="Add this page to your favourite social networking sites"></a>
+<!-- AddThis Button END -->
+
+</table>
+
+</div>
+
+</div> <!-- wrapper -->
+
+</body>
+</html>
