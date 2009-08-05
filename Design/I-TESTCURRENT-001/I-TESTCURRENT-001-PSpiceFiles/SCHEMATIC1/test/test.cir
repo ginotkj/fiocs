@@ -11,7 +11,7 @@
 .lib "nomd.lib" 
 
 *Analysis directives: 
-.TRAN  0 100p 0.1p 0.001u 
+.TRAN  0 1n 0.1p 0.001u 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 

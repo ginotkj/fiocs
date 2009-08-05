@@ -115,7 +115,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -28 627 1995 0 819")
+        (Placement "44 0 1 -1 -1 -8 -28 580 1995 0 819")
         (Scroll "151 359")
         (Zoom "204")
         (Occurrence "/"))
