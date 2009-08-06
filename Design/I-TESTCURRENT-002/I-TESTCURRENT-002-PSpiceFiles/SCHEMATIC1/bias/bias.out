@@ -1,0 +1,83 @@
+
+**** 07/29/09 20:22:27 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-TESTCURRENT-002\i-testcurrent-002-pspicefiles\schematic1\bias.sim
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.2\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source I-TESTCURRENT-002
+I_I1         N14389 0 DC 0Adc AC 0Aac
++EXP 1m 0m 1.5p 3.5p 10p 5p
+R_R1         N14389 N14398  1k TC=0,0 
+R_R2         0 N14398  1k TC=0,0 
+
+**** RESUMING bias.cir ****
+.END
+
+**** 07/29/09 20:22:27 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-TESTCURRENT-002\i-testcurrent-002-pspicefiles\schematic1\bias.sim
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14389)    0.0000 (N14398)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 07/29/09 20:22:27 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-TESTCURRENT-002\i-testcurrent-002-pspicefiles\schematic1\bias.sim
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+
