@@ -105,7 +105,8 @@
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
-      (Path "PSpice Resources" "Simulation Profiles"))
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
