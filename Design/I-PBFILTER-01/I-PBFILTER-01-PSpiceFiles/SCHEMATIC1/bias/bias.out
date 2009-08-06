@@ -1,0 +1,337 @@
+
+**** 08/05/09 19:51:00 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\i-pbfilter-01-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-pbfilter-01-pspicefiles/i-pbfilter-01.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.2\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OP
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source I-PBFILTER-01
+V_V4         N18503 0 2.5
+C_C2         N18748 N15297  1P  TC=0,0 
+V_V2         N18921 0 4.5
+M_M6         N15202 N14642 N15404 0 NMOS  
++ L=1.5u  
++ W=10u         
+M_M1         N14636 N18921 N14698 0 NMOS  
++ L=1.5u  
++ W=10u         
+M_M7         N15297 N15202 N17112 N17112 PMOS  
++ L=1.5u  
++ W=20u         
+V_V5         N18581 0 1.3
+M_M2         N14642 N14636 N17112 N17112 PMOS  
++ L=1.5u  
++ W=20u         
+M_M8         N15404 N18581 0 0 NMOS  
++ L=1.5u  
++ W=4.5u         
+V_V1         N17112 0 5
+M_M9         N15297 N15297 N15404 0 NMOS  
++ L=1.5u  
++ W=10u         
+M_M3         N14698 N18832 0 0 NMOS  
++ L=1.5u  
++ W=4.5u         
+M_M10         N15202 N15202 N17112 N17112 PMOS  
++ L=1.5u  
++ W=20u         
+V_V3         N18832 0 1.3
+V_V6         N18748 0 2.5
+M_M4         N14642 N15297 N14698 0 NMOS  
++ L=1.5u  
++ W=10u         
+C_C1         N18503 N14642  100P  TC=0,0 
+M_M5         N14636 N14636 N17112 N17112 PMOS  
++ L=1.5u  
++ W=20u         
+
+**** RESUMING bias.cir ****
+.END
+
+Mosfet M_M6, model NMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M6, model NMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M6, model NMOS: Ps = 0 is less than W
+Mosfet M_M8, model NMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M8, model NMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M8, model NMOS: Ps = 0 is less than W
+Mosfet M_M7, model PMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M7, model PMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M7, model PMOS: Ps = 0 is less than W
+**** 08/05/09 19:51:00 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\i-pbfilter-01-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               NMOS            PMOS            
+               NMOS            PMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               7            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .552594        -.84764      
+          KP   66.406610E-06   66.406610E-06 
+       GAMMA    0               0            
+      LAMBDA    0               0            
+         RSH   52.7            76            
+          IS    1.000000E-15    1.000000E-15 
+          JS  100.000000E-06  100.000000E-06 
+          PB     .99             .8          
+        PBSW     .99             .988295     
+          CJ  273.755200E-06  308.598800E-06 
+        CJSW  135.927700E-12  158.319000E-12 
+          MJ     .548193         .439453     
+        MJSW     .1              .100317     
+        CGSO  175.000000E-12  210.000000E-12 
+        CGDO  175.000000E-12  210.000000E-12 
+        CGBO    1.000000E-09    1.000000E-09 
+         TOX   31.200000E-09   31.200000E-09 
+          XJ  300.000000E-09  300.000000E-09 
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .01             .01         
+      DIOMOD    2               2            
+          K1     .968402         .451361     
+          K2    -.087558       23.796990E-06 
+        LETA    0               0            
+        WETA    0               0            
+          U0  649.4789        236.8924       
+       XPART     .5              .5          
+        VTH0     .552594        -.84764      
+          K3    4.608661       13.32784      
+          W0  671.456300E-09  957.723600E-09 
+         NLX   12.171970E-09    1.000000E-06 
+        DVT0     .529357        2.490785     
+        DVT1     .443214         .665622     
+          UA    1.313648E-09    3.833306E-09 
+          UB    2.836687E-18    1.487688E-21 
+          UC   24.583630E-12 -108.562000E-12 
+        VSAT  117.058700E+03  200.000000E+03 
+        RDSW    3.000000E+03    3.000000E+03 
+        VOFF    -.073146        -.087718     
+     NFACTOR     .567383         .250834     
+        CDSC    7.627884E-06   29.248060E-06 
+        PCLM    1.848118      112.059500E-12 
+      PDIBL1    8.801319E-03  450.247800E-06 
+      PDIBL2    1.584140E-03    1.090076E-03 
+       DROUT     .068138      924.353800E-06 
+      PSCBE1    6.290635E+09    3.500883E+09 
+      PSCBE2    1.441641E-09  525.238300E-12 
+          A0     .652834         .420595     
+          A1    0               0            
+          A2    1                .364        
+       NPEAK   75.000000E+15   24.000000E+15 
+         LDD    0               0            
+        LITL  167.570900E-09  167.570900E-09 
+         UA1    4.310000E-09    4.310000E-09 
+         UB1   -7.610000E-18   -7.610000E-18 
+         UC1  -56.000000E-12  -56.000000E-12 
+        PVAG     .91451        15            
+        KETA   -8.095926E-03    5.754484E-03 
+        ETA0    -.61012          .26103      
+        ETAB    -.300202     -814.824400E-06 
+         K3B   -2.012806       -2.223833     
+        DVT2    -.5             -.037222     
+       CDSCB   46.912940E-06  109.148800E-06 
+        DSUB     .879973         .2873       
+      MOBMOD    1               1            
+       CDSCD    8.475154E-06  149.757200E-06 
+         AGS     .113668         .214098     
+       DVT1W    0               0            
+       DVT2W    0               0            
+        PRWG -507.319900E-06     .242512     
+        PRWB    -.061885        -.210846     
+     PDIBLCB    -.1            -1.000000E-03 
+         DWG  -24.963150E-09  -21.391700E-09 
+         DWB   16.695650E-09   38.575440E-09 
+          B0    1.489912E-06    6.620808E-06 
+          B1    5.000000E-06    5.000000E-06 
+        LINT  181.968500E-09   32.188130E-09 
+        WINT  775.572600E-09  756.506500E-09 
+         DLC  181.968500E-09   32.188130E-09 
+         DWC  775.572600E-09  756.506500E-09 
+          CF    0               0            
+        NOIA  100.000000E+18    9.900001E+18 
+        NOIB   50.000000E+03    2.400000E+03 
+        NOIC   -1.400000E-12    1.400000E-12 
+         VTM     .025864         .025864     
+     VERSION    3.1             3.1          
+       PBSWG     .99             .988295     
+       MJSWG     .1              .100317     
+       CJSWG   64.000000E-12   39.000000E-12 
+
+
+Mosfet M_M6, model NMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M6, model NMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M6, model NMOS: Ps = 0 is less than W
+Mosfet M_M8, model NMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M8, model NMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M8, model NMOS: Ps = 0 is less than W
+Mosfet M_M7, model PMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M7, model PMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M7, model PMOS: Ps = 0 is less than W
+**** 08/05/09 19:51:00 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\i-pbfilter-01-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14636)    3.7377 (N14642)    4.4948 (N14698)    2.9754 (N15202)    3.7401     
+
+(N15297)    4.4358 (N15404)    2.9727 (N17112)    5.0000 (N18503)    2.5000     
+
+(N18581)    1.3000 (N18748)    2.5000 (N18832)    1.3000 (N18921)    4.5000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4         0.000E+00
+    V_V2         0.000E+00
+    V_V5         0.000E+00
+    V_V1        -7.159E-05
+    V_V3         0.000E+00
+    V_V6         0.000E+00
+
+    TOTAL POWER DISSIPATION   3.58E-04  WATTS
+
+
+**** 08/05/09 19:51:00 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\i-pbfilter-01-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         M_M6        M_M1        M_M7        M_M2        M_M8      
+MODEL        NMOS        NMOS        PMOS        PMOS        NMOS      
+ID           2.06E-05    2.08E-05   -1.52E-05   -1.50E-05    3.58E-05 
+VGS          1.52E+00    1.52E+00   -1.26E+00   -1.26E+00    1.30E+00 
+VDS          7.67E-01    7.62E-01   -5.64E-01   -5.05E-01    2.97E+00 
+VBS         -2.97E+00   -2.98E+00    0.00E+00    0.00E+00    0.00E+00 
+VTH          1.23E+00    1.24E+00   -9.17E-01   -9.22E-01    5.79E-01 
+VDSAT        2.86E-01    2.88E-01   -3.31E-01   -3.29E-01    5.09E-01 
+Lin0/Sat1   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+if          -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+ir          -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+TAU         -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+GM           1.24E-04    1.24E-04    8.06E-05    7.97E-05    8.36E-05 
+GDS          3.07E-06    3.12E-06    7.39E-06    7.53E-06    1.26E-06 
+GMB          1.68E-05    1.68E-05    1.89E-05    1.87E-05    3.28E-05 
+CBD          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CBS          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CGSOV        1.75E-15    1.75E-15    4.20E-15    4.20E-15    7.88E-16 
+CGDOV        1.75E-15    1.75E-15    4.20E-15    4.20E-15    7.88E-16 
+CGBOV        1.50E-15    1.50E-15    1.50E-15    1.50E-15    1.50E-15 
+ Derivatives of gate (dQg/dVxy) and bulk (dQb/dVxy) charges
+DQGDVGB      1.21E-14    1.21E-14    3.17E-14    3.17E-14    5.15E-15 
+DQGDVDB     -1.46E-15   -1.46E-15   -2.11E-15   -2.16E-15   -5.16E-16 
+DQGDVSB     -8.02E-15   -8.02E-15   -2.60E-14   -2.60E-14   -2.91E-15 
+DQDDVGB     -5.03E-15   -5.03E-15   -1.37E-14   -1.38E-14   -1.75E-15 
+DQDDVDB      1.47E-15    1.47E-15    3.12E-15    3.15E-15    5.16E-16 
+DQDDVSB      4.04E-15    4.04E-15    1.30E-14    1.30E-14    1.78E-15 
+DQBDVGB     -2.09E-15   -2.09E-15   -4.19E-15   -4.17E-15   -1.65E-15 
+DQBDVDB     -4.34E-18   -4.43E-18   -2.34E-16   -2.51E-16   -3.40E-20 
+DQBDVSB     -1.54E-15   -1.54E-15   -3.87E-15   -3.88E-15   -1.17E-15 
+
+NAME         M_M9        M_M3        M_M10       M_M4        M_M5      
+MODEL        NMOS        NMOS        PMOS        NMOS        PMOS      
+ID           1.52E-05    3.58E-05   -2.06E-05    1.50E-05   -2.08E-05 
+VGS          1.46E+00    1.30E+00   -1.26E+00    1.46E+00   -1.26E+00 
+VDS          1.46E+00    2.98E+00   -1.26E+00    1.52E+00   -1.26E+00 
+VBS         -2.97E+00    0.00E+00    0.00E+00   -2.98E+00    0.00E+00 
+VTH          1.23E+00    5.79E-01   -8.59E-01    1.23E+00   -8.59E-01 
+VDSAT        2.41E-01    5.09E-01   -3.78E-01    2.38E-01   -3.80E-01 
+Lin0/Sat1   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+if          -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+ir          -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+TAU         -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+GM           1.12E-04    8.36E-05    9.38E-05    1.11E-04    9.43E-05 
+GDS          1.73E-06    1.26E-06    8.34E-06    1.69E-06    8.38E-06 
+GMB          1.50E-05    3.28E-05    2.18E-05    1.49E-05    2.20E-05 
+CBD          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CBS          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CGSOV        1.75E-15    7.88E-16    4.20E-15    1.75E-15    4.20E-15 
+CGDOV        1.75E-15    7.88E-16    4.20E-15    1.75E-15    4.20E-15 
+CGBOV        1.50E-15    1.50E-15    1.50E-15    1.50E-15    1.50E-15 
+ Derivatives of gate (dQg/dVxy) and bulk (dQb/dVxy) charges
+DQGDVGB      1.21E-14    5.15E-15    3.16E-14    1.21E-14    3.16E-14 
+DQGDVDB     -1.46E-15   -5.16E-16   -2.05E-15   -1.46E-15   -2.05E-15 
+DQGDVSB     -8.00E-15   -2.91E-15   -2.60E-14   -7.99E-15   -2.60E-14 
+DQDDVGB     -5.02E-15   -1.75E-15   -1.37E-14   -5.02E-15   -1.37E-14 
+DQDDVDB      1.47E-15    5.16E-16    3.07E-15    1.47E-15    3.07E-15 
+DQDDVSB      4.03E-15    1.78E-15    1.30E-14    4.03E-15    1.30E-14 
+DQBDVGB     -2.10E-15   -1.65E-15   -4.23E-15   -2.10E-15   -4.23E-15 
+DQBDVDB     -2.42E-18   -3.39E-20   -2.10E-16   -2.41E-18   -2.10E-16 
+DQBDVSB     -1.54E-15   -1.17E-15   -3.81E-15   -1.54E-15   -3.81E-15 
+
+          JOB CONCLUDED
+
+**** 08/05/09 19:51:00 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\i-pbfilter-01-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+
