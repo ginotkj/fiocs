@@ -54,7 +54,8 @@
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-pbfilter-01-pspicefiles\schematic1\bode.sim"
         (DisplayName "SCHEMATIC1-bode")
-        (Type "PSpice Profile"))))
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-pbfilter-01-pspicefiles\schematic1\bode.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (R
@@ -101,21 +102,21 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\i-pbfilter-01.dsn")
+         "D:\Documents\TESIS\TRUNK\Design\I-PBFILTER-01\i-pbfilter-01.dsn")
       (Path "Design Resources"
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\i-pbfilter-01.dsn"
+         "D:\Documents\TESIS\TRUNK\Design\I-PBFILTER-01\i-pbfilter-01.dsn"
          "SCHEMATIC1")
-      (Path "Design Resources"
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\i-pbfilter-01.dsn"
-         "Design Cache")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
-      (Path "PSpice Resources" "Simulation Profiles"))
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-PBFILTER-01\i-pbfilter-01.dsn"
+         "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 571 0 819"))
+        (Placement "44 2 3 -1 -1 -8 -28 0 571 0 819"))
       (Tab 0))))
