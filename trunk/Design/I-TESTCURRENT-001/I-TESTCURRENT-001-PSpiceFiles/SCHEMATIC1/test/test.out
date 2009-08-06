@@ -1,5 +1,5 @@
-
-**** 07/29/09 19:59:35 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+**** 08/06/09 18:00:57 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\i-testcurrent-001-pspicefiles\schematic1\test.sim
 
@@ -41,7 +41,7 @@ R_R1         N16014 ITEST  1k TC=0,0
 **** RESUMING test.cir ****
 .END
 
-**** 07/29/09 19:59:35 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+**** 08/06/09 18:00:57 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\i-testcurrent-001-pspicefiles\schematic1\test.sim
 
@@ -71,7 +71,7 @@ R_R1         N16014 ITEST  1k TC=0,0
 
           JOB CONCLUDED
 
-**** 07/29/09 19:59:35 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+**** 08/06/09 18:00:57 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\i-testcurrent-001-pspicefiles\schematic1\test.sim
 
@@ -83,5 +83,5 @@ R_R1         N16014 ITEST  1k TC=0,0
 
 
 
-  Total job time (using Solver 1)   =         .02
+  Total job time (using Solver 1)   =         .05
 
