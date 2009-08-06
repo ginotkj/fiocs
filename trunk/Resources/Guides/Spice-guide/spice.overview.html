@@ -1,0 +1,1144 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en]C-NECCK  (Win98; U) [Netscape]">
+   <title>SPICE - a brief overview</title>
+<!-- This document was created from RTF source by rtftohtml version
+2.7.5 -->
+</head>
+<body>
+
+<center><b><i>UNIVERSITY of PENNSYLVANIA</i></b>
+<p><b>DEPARTMENT OF ELECTRICAL and SYSTEMS ENGINEERING</b>
+<br>
+&nbsp;
+<br>&nbsp;
+<p><b>SPICE - A Brief Overview</b>
+<br>(URL: http://www.seas.upenn.edu/~jan/spice/spice.overview.html)</center>
+
+<p>This document gives a brief overview of SPICE. The description is far
+from complete, as SPICE is a powerful circuit simulator with many capabilities.
+However, this document will serve as a start for students in introductory
+classes. For more information, please refer to the SPICE user's manual
+or <a href="spice.guide.html#REFERENCES">books</a> listed at the end of
+the document.
+<br>
+<hr>
+<center>Do not print this document on the CETS printers.</center>
+
+<hr>
+<ul>
+
+  <h3><a NAME="table of contents"></a><strong>Table of Contents
+    </strong>
+  </h3>
+</ul>
+
+<p><strong>A. PSPICE with Capture - ORCAD):</strong></p>
+<ul>
+  <li>PSpice <a href="http://www.seas.upenn.edu/%7Eese216/handouts/PSpiceQuickGuide.pdf">Quick Reference Guide</a> </li>
+  <li>PSpice <a href="http://www.seas.upenn.edu/%7Ejan/spice/PSpicePrimer.pdf">Tutorial</a> </li>
+</ul>
+<p><strong>B. SPICE (without Schematic Capture) 	 </strong></p>
+<ol>
+  <li><a href="#INTRODUCTION">INTRODUCTION</a></li>
+  <li><a href="#HOW TO">HOW TO SPECIFY CIRCUIT TOPOLOGY AND ANALYSIS?</a><br>
+  &nbsp;
+    <ul>
+      2.1 Data Statements 
+        <ul>
+          <li> <a href="#Independent DC Sources">Independent DC Sources</a></li>
+            <li> <a href="#Dependent Sources">Dependent Sources</a></li>
+            <li> <a href="#Resistors">Resistors</a></li>
+            <li> <a href="#Capacitors">Capacitors and Inductors</a></li>
+            <li> <a href="#Mutual">Mutual Inductors</a></li>
+            <li> <a href="#Ideal">Ideal Transformers</a></li>
+            <li> <a href="#Sinusoidal">Sinusoidal Sources</a></li>
+            <li> <a href="#Piecewise">Piecewise Linear Source</a> (PWL)</li>
+            <li> <a href="#Pulse">Pulse</a></li>
+            <li> <a href="#Switches">Voltage and Current Controlled Switches</a></li>
+            <li> <a href="#Operational">Operational Amplifiers (incl. model for 741)</a></li>
+            <li> <a href="#Subcircuits">Subcircuits</a></li>
+            <li> <a href="#Semiconductor">Semiconductor Devices</a></li>
+            <ul>
+              <li> <a href="#Diode">Diode</a></li>
+                <li> <a href="#Bipolar">Bipolar Transistor</a></li>
+                <li> <a href="#MOSFETS">MOSFET</a></li>
+                <li> <a href="#JFETS">JFET</a></li>
+              <br>
+        &nbsp; 
+            </ul>
+        </ul>
+        <a href="#Control">2.2 Control Statements</a> 
+      <ul>
+        <li> <a href="#Operating">Operating Point (.OP)</a></li>
+            <li> <a href="#DC Statement">DC Statement (.DC)</a></li>
+            <li> <a href="#Transfer">Transfer Function (.TF)</a></li>
+            <li> <a href="#Sensitivity">Sensitivity (.SENS)</a></li>
+            <li> <a href="#Transient">Transient (.TRAN)</a></li>
+            <li> <a href="#Initial">Initial Condictions (.IC)</a></li>
+            <li> <a href="#AC Statement">AC Analysis (.AC)</a></li>
+            <li> <a href="#Others">Others</a></li>
+      </ul>
+        <p><a href="#Output">2.3 Output Statements</a></p>
+    </ul>
+  </li>
+  <li><a href="spice.guide.html#PSPICE">SPICE - Getting started</a></li>
+</ol>
+<ol>
+  <ul>
+    <a href="spice.guide.html#Creating an Input">3.1 Creating an Input File</a>
+  </ul>
+</ol>
+<blockquote>
+  <p>
+    <a href="spice.guide.html#hspice">4. HSPICE</a></p>
+</blockquote>
+<ol>
+  <br>
+  <ul>
+    <a href="spice.guide.html#running hspice">4.1 Running HSpice</a> <br>
+    <a href="spice.guide.html#features">4.2 Mathematical Expressions in HSpice</a> 
+    <br>
+    <a href="spice.guide.html#gsi">4.3 Graphical Interface (GSI)</a>
+  </ul>
+</ol>
+<blockquote>
+  <p>5. EXAMPLES </p>
+</blockquote>
+<ol>
+  <ul>
+    <a href="spice.exspice.html">5.1 Thevenin Equiv. Circuit (.TF analysis and 
+            .DC Sweep)</a> <br>
+            <a href="spice.exHspice.html">5.2 HSpice example (.TF analysis and .DC Sweep)</a> 
+    <br>
+            <a href="spice.mutualInductor.html">5.3 Mutual Inductor (Transformer;Transient 
+            analysis)</a> <br>
+            <a href="spice.transformer.html">5.3 Ideal Transformer</a> <br>
+            <a href="spice.filter.html">5.4 Filter Circuit (.AC Analysis)</a> <br>
+            <a href="spice.diodes.html">5.5 Rectifier Circuit (with diodes)</a> <br>
+            <a href="spice.transistor.html">5.6 Transistor Circuit (NPN)</a>
+  </ul>
+</ol>
+<blockquote>
+  <p>6. MODELS of Selected Devices and Components</p>
+</blockquote>
+<ol>
+  <ul>
+    <p><a href="spice.models.html#opamp741">6.1 Macromodel for the 741</a> <br>
+        <a href="spice.models.html#D4148">6.2 Diode 1N4148</a> <br>
+        <a href="spice.models.html#1n2222">6.3 NPN Transistors: 1N2222A and 2N696</a> 
+      <br>
+        <a href="spice.models.html#mosis1.2um">6.4 MOSIS models: 1.2 um CMOS</a> <br>
+        <a href="spice.models.html#JFETS">6.5 JFET model: 2N5459</a></p>
+    <p>&nbsp;</p>
+  </ul>
+</ol>
+<blockquote>
+  <p>7. <a href="spice.guide.html#mistakes">MOST COMMON MISTAKES</a>    </p>
+</blockquote>
+<ol>
+  <br>
+  8. 
+  <a href="spice.guide.html#does not run">WHEN SPICE DOES NOT RUN</a><br>
+  &nbsp; 
+  <p> 
+  9.   <a href="spice.guide.html#REFERENCES">REFERENCES</a>
+</ol>
+<hr Size=4>
+<h3>
+1.&nbsp;<a NAME="INTRODUCTION"></a>INTRODUCTION</h3>
+SPICE is a powerful general purpose analog circuit simulator that is used
+to verify circuit designs and to predict the circuit behavior. This is
+of particular importance for <u>integrated circuits</u>. It was for this
+reason that SPICE was originally developed at the Electronics Research
+Laboratory of the University of California, Berkeley (1975), as its name
+implies:
+<br>&nbsp;
+<br>&nbsp;
+<ul><b><u>S</u></b>imulation <b><u>P</u></b>rogram for <b><u>I</u></b>ntegrated
+<b><u>C</u></b>ircuits <b><u>E</u></b>mphasis.</ul>
+PSpice is a PC version of SPICE (MicroSim Corp.) and HSpice is a version
+(Avant!.) that runs on workstations and larger computers. <a href="spice.guide.html#PSPICE">PSpice</a>
+is available on the PCs in the SEAS PC computing Labs and <a href="spice.guide.html#hspice">HSPICE</a>
+is available on ENIAC or PENDER. A complete manual of the <a href="http://www.ece.orst.edu/~moon/hspice98/">Avant!
+Star- HSPICE</a> (pdf document) is available as well.
+<p>SPICE can do several <i>types of circuit analyses</i>. Here are the
+most important ones:
+<br>&nbsp;
+<br>&nbsp;
+<ul>
+<li>
+Non-linear DC analysis: calculates the DC transfer curve.</li>
+
+<li>
+Non-linear transient analysis: calculates the voltage and current as a
+function of time when a large signal is applied.</li>
+
+<li>
+Linear AC Analysis: calculates the output as a function of frequency. A
+bode plot is generated.</li>
+
+<li>
+Noise analysis</li>
+
+<li>
+Sensitivity analysis</li>
+
+<li>
+Distortion analysis</li>
+
+<li>
+Fourier analysis: calculates and plots the frequency spectrum.</li>
+
+<li>
+Monte Carlo Analysis</li>
+</ul>
+In addition, PSpice has analog and digital libraries of standard components
+(such as NAND, NOR, flip-flops, and other digital gates, op amps, etc).
+This makes it a useful tool for a wide range of analog and digital applications.
+<p>All analyses can be done at different temperatures. The default temperature
+is 300K.
+<p>The circuit can contain the <i>following components</i>:
+<br>&nbsp;
+<br>&nbsp;
+<ul>
+<li>
+Independent and dependent voltage and current sources</li>
+
+<li>
+Resistors</li>
+
+<li>
+Capacitors</li>
+
+<li>
+Inductors</li>
+
+<li>
+Mutual inductors</li>
+
+<li>
+Transmission lines</li>
+
+<li>
+Operational amplifiers</li>
+
+<li>
+Switches</li>
+
+<li>
+Diodes</li>
+
+<li>
+Bipolar transistors</li>
+
+<li>
+MOS transistors</li>
+
+<li>
+JFET</li>
+
+<li>
+MESFET</li>
+
+<li>
+Digital gates (PSpice, version 5.4 and up)</li>
+
+<br>&nbsp;
+<p></ul>
+
+<hr>
+<h3>
+2.&nbsp;<a NAME="HOW TO"></a>HOW TO SPECIFY THE CIRCUIT TOPOLOGY AND ANALYSIS?</h3>
+A SPICE input file, called source file, consists of three parts.
+<br>&nbsp;
+<br>&nbsp;
+<ol>
+<li>
+<i><u>Data statements</u></i>: description of the components and the interconnections.</li>
+
+<li>
+<i><u>Control statements</u></i>: tells SPICE what type of analysis to
+perform on the circuit.</li>
+
+<li>
+<i><u>Output statements</u></i>: specifies what outputs are to be printed
+or plotted.</li>
+</ol>
+Although these statements may appear in any order, it is recommended that
+they be given in the above sequence. Two other statements are required:
+the
+<i><u>title statement</u></i> and the <i><u>end statement</u></i>.
+The title statement is the first line and can contain any information,
+while the end statement is always .END. This statement must be a line be
+itself, followed by a carriage return! In addition, you can insert <i><u>comment
+statements</u></i>, which must begin with an asterisk (*) and are ignored
+by SPICE.
+<br>&nbsp;
+<br>&nbsp;
+<ul>
+<dl>
+<dt>
+<tt>TITLE STATEMENT</tt></dt>
+
+<dt>
+<tt>ELEMENT STATEMENTS</tt></dt>
+
+<dt>
+<tt>.</tt></dt>
+
+<dt>
+<tt>.</tt></dt>
+
+<dt>
+<tt>COMMAND (CONTROL) STATEMENTS</tt></dt>
+
+<dt>
+<tt>OUTPUT STATEMENTS</tt></dt>
+
+<dt>
+<tt>.END &lt;CR></tt></dt>
+
+<br>&nbsp;
+<p></dl>
+</ul>
+<i>Format: </i>The statements have a free format and consist of fields
+separated by a blank. If one wants to continue a statement to the next
+line, one uses a "+" sign (continuation sign) at the beginning of the next
+line. Numbers can be integers, or floating points. For example,
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>RES1 1 0 3500 or RES1 1 0 3.5E3</tt></ul>
+One can also use the following scale factors:
+<br>&nbsp;
+<br>&nbsp;
+<p>T(= 1E12 or 10<sup>+12</sup>); G(= E9); MEG(= E6); K(= E3); M(= E-3);
+U(= E-6); N(= E-9); P(= E-12), and F(= E-15)
+<br>&nbsp;
+<br>&nbsp;
+<p>Both upper and lower case letters are allowed in PSpice and Hspice (SPICE
+uses only uppercase characters). As an example, one can specify a capacitor
+of 225 picofarad in the following ways:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>225P, 225p, 225pF; 225pFarad; 225E-12; 0.225N, etc.</tt></ul>
+
+<h3>
+2.1 Data Statements to Specify the Circuit Components and Topology</h3>
+
+<h4>
+a.&nbsp;<a NAME="Independent DC Sources"></a>Independent DC Sources</h4>
+Voltage source: <tt>Vname N1 N2 Type Value</tt>
+<p>&nbsp;Current source: <tt>Iname N1 N2 Type Value</tt>
+<br>&nbsp;
+<br>&nbsp;
+<ul>
+<dl>
+<dt>
+N1 is the positive terminal node</dt>
+
+<dt>
+N2 is the negative terminal node</dt>
+
+<dt>
+Type can be DC, AC or TRAN, depending on the type of analysis (see <a href="#Control">Control
+Statements</a>)</dt>
+
+<dt>
+Value gives the value of the source</dt>
+
+<dt>
+The name of a voltage and current source must start with V and I, respectively.</dt>
+</dl>
+</ul>
+Examples:
+<ul><tt>Vin 2 0 DC 10</tt>
+<p><tt>Is 3 4 DC 1.5</tt></ul>
+The positive current direction through the <i>current or voltage source</i>
+is from the positive (N1) node to the negative (N2) node:
+<br>&nbsp;
+<br>&nbsp;
+<ul><img SRC="spice.overview1.gif" ><img SRC="spice.overview2.gif" ></ul>
+<i>Voltage and Current Conventions:</i>
+<ol>
+<li>
+Spice always assigns a positive reference mark to the 1st node and uses
+the passive sign convention to assign the current reference.</li>
+
+<li>
+Spice uses the node-voltage analysis. It solves for the unknown node voltages
+and also the unknown <i>currents through independent voltage sources</i>.
+This gives us a way to find currents flowing in elements: one has to ask
+for the current through a voltage source. Thus one can insert an independent
+voltage source of zero value in series with the element in which one wants
+to know the current, as shown in the example below:</li>
+
+<br>&nbsp;
+<p></ol>
+
+<ul><img SRC="spice.overview3.gif" >
+<br>&nbsp;
+<br>&nbsp;
+<p>The value of the current will be positive if it flows from the positive
+to the negative terminal through the source, as in the above example. Some
+versions of PSpice allow you to ask for a current through a resistor without
+using a voltage source (EX: I(R1) gives the current in the resistor R1).</ul>
+
+<h4>
+b.&nbsp;<a NAME="Dependent Sources"></a>Dependent Sources</h4>
+Voltage controlled voltage source:
+<ul><tt>Ename N1 N2 NC1 NC2 Value</tt></ul>
+Voltage controlled current source:
+<ul><tt>Gname N1 N2 NC1 NC2 Value</tt></ul>
+Current controlled voltage source:
+<ul><tt>Hname N1 N2 Vcontrol Value</tt></ul>
+Current controlled current source:
+<ul><tt>Fname N1 N2 Vcontrol Value</tt></ul>
+
+<ul>
+<dl>
+<dt>
+N1 and N2 are the positive and negative terminals of the dependent source,
+respectively.</dt>
+
+<dt>
+NC1 and NC2 are the positive and negative terminals of the controlling
+voltage source, respectively.</dt>
+
+<dt>
+Vcontrol is the zero value voltage source used to measure the controlling
+current (the positive current flows into the positive terminal of the controlling
+voltage source!).</dt>
+</dl>
+</ul>
+
+<ul>Examples:
+<ul><tt>F1 0 3 Vmeas 0.5</tt>
+<p><tt>Vmeas 4 0 DC 0</tt></ul>
+<img SRC="spice.overview4.gif" ></ul>
+
+<h4>
+c.&nbsp;<a NAME="Resistors"></a>Resistors</h4>
+
+<ul><tt>Rname N1 N2 Value</tt></ul>
+
+<h4>
+d.<a NAME="Capacitors"></a>Capacitors (C) and Inductors (L)</h4>
+
+<ul><tt>Cname N1 N2 Value &lt;IC></tt>
+<p><tt>Lname N1 N2 Value &lt;IC></tt></ul>
+
+<ul>
+<dl>
+<dt>
+N1 is the positive node.</dt>
+
+<dt>
+N2 is the negative node.</dt>
+
+<dt>
+IC is the initial condition (DC voltage or current).</dt>
+
+<dt>
+The symbol &lt; > means that the field is optional. If not specified, it
+is assumed to be zero. In case of an inductor, the current flows from N1
+to N2.</dt>
+</dl>
+</ul>
+<img SRC="spice.overview5.gif"  align=RIGHT>
+<ul>Example:
+<ul><tt>Cap5 3 4 35E-12 5</tt>
+<p><tt>L12 7 3 6.25E-3 1m</tt></ul>
+</ul>
+
+<h4>
+e.&nbsp;<a NAME="Mutual"></a>Mutual Inductors</h4>
+A mutual inductance in SPICE is defined by specifying the coupling coefficient
+<i>K </i>between the two inductors. The syntax is as follows:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>Kname Inductor1 Inductor2 value_of_K</tt>
+<br>&nbsp;
+<br>&nbsp;</ul>
+The value of <i>K</i> must be larger than 0 but smaller than 1. Spice does
+not support perfect coupling (k=1). The above statement must always be
+together with the statements for the two inductors. An example is given
+in the figure below. The coupling coefficient K can be calculated as K=M/sqrt(L1xL2)=0.81.
+<br>&nbsp;
+<br>&nbsp;
+<p>The SPICE statements to define the above coupled coils are as follows.
+<br>&nbsp;
+<br>&nbsp;
+<p><img SRC="spice.overview6.gif"  align=RIGHT>
+<ul>
+<dl>
+<dt>
+<tt>L1 3 5 10M</tt></dt>
+
+<dt>
+<tt>L2 4 7 3M</tt></dt>
+
+<dt>
+<tt>K L1 L2 0.81</tt></dt>
+</dl>
+</ul>
+The DOTS are always associated with the first node of the inductances (i.e.
+node no. 3 of L1 and no. 4 of L2). Also SPICE will assign the positive
+node voltage to the first node of the inductance (i.e. the DOT) and use
+the passive sign convention for the current direction as indicated in the
+figure above. For an example circuit see under the section <a href="spice.mutualInductor.html">Examples.</a>
+<br>&nbsp;
+<br>&nbsp;
+<h4>
+f.&nbsp;<a NAME="Ideal"></a>Ideal Transformer</h4>
+SPICE has no model for an ideal transformer. An ideal tranformer is simulated
+using mutual inductances such that the transformer ratio N1/N2 = sqrt(L1/L2).
+Make the coupling factor K close to one (ex. K=0.99999) and choose L such
+that wL >> the resistance seen be the inductor. The secondary circuit needs
+a DC connection to ground. This can be accomplished by adding a large resistor
+to ground or giving the primary and secondary circuits a common node. For
+an example circuit see under the section <a href="spice.transformer.html">Examples</a>
+<p><img SRC="spice.overview7.gif" ><img SRC="spice.overview8.gif" >
+<h4>
+g.&nbsp;<a NAME="Sinusoidal"></a>Sinusoidal sources</h4>
+
+<ul><tt>Vname N1 N2 SIN(VO VA FREQ TD THETA PHASE)</tt>
+<p>&nbsp;which is a damped sinusoidal voltage source:
+<p>&nbsp;Vname = VO + VA exp[-THETA.(t - TD)] sin[2pi.f (t - TD) + (Phase/360)]
+<dl>
+<dt>
+VO - offset voltage in volt.</dt>
+
+<dt>
+VA - amplitude in volt.</dt>
+
+<dt>
+f = FREQ - the frequency in herz.</dt>
+
+<dt>
+TD - delay in seconds</dt>
+
+<dt>
+THETA - damping factor per second</dt>
+
+<dt>
+Phase - phase in degrees</dt>
+
+<br>&nbsp;
+<p></dl>
+</ul>
+If TD, THETA and PHASE are not specified, it is assumed to be zero.
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>Example: VG 1 2 SIN(5 10 50 0.2 0.1)</tt>
+<p><tt>VG2 3 4 SIN(0 10 50)</tt></ul>
+The last example is an undamped, undelayed sinusoid with an amplitude of
+10V and frequency of 50 Hz.
+<br>&nbsp;
+<br>&nbsp;
+<p>To generate a cosine function, you can make use of the phase relationship
+between the sinusoid and cosine. Here is an example of an undelayed cosine
+with an amplitude of 5V and frequency of 50 Hz.
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>Vcos 1 2 SIN(0 5 50 0 0 45)</tt></ul>
+
+<h4>
+h.&nbsp;<a NAME="Piecewise"></a>Piecewise linear source (PWL)</h4>
+
+<ul><tt>Vname N1 N2 PWL(T1 V1 T2 V2 T3 V3 ...)</tt></ul>
+in which (Ti Vi) specifies the value Vi of the source at time Ti
+<p>&nbsp;Example:
+<ul><tt>Vgpwl 1 2 PWL(0 0 10U 5 100U 5 110U 0)</tt>
+<p><img SRC="spice.overview9.gif" ></ul>
+
+<h4>
+i.&nbsp;<a NAME="Pulse"></a>Pulse</h4>
+
+<ul><tt>Vname N1 N2 PULSE(V1 V2 TD Tr Tf PW Period)</tt></ul>
+V1 - initial voltage; V2 - peak voltage; TD - initial delay time; Tr -
+rise time; Tf - fall time; pwf - pulse-wise; and Period - period.
+<br>&nbsp;
+<br>&nbsp;
+<ul><img SRC="spice.overview10.gif" ></ul>
+Other sources such as polynominal controlled source, exponential source,
+FM-modulated source, etc. can be specified. For information on these components,
+check the SPICE manual.
+<br>&nbsp;
+<br>&nbsp;
+<h4>
+j.&nbsp;<a NAME="Switches"></a>Voltage- and Current-controlled Switches</h4>
+Voltage Controlled:
+<ul><tt>Sname N1 N2 C1 C2 Mname</tt></ul>
+Current Controlled:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>Wname N1 N2 Vname Mname</tt></ul>
+
+<ul>
+<dl>
+<dt>
+N1 and N2 are the terminals of the switch.</dt>
+
+<dt>
+C1 and C2 are the controlling terminals.</dt>
+
+<dt>
+Vname is the zero-value voltage source whose current controls the switch.</dt>
+
+<dt>
+Mname refers to the switch model that is defined in another statement (see
+Model Statement below).</dt>
+</dl>
+</ul>
+The .MODEL statement allows you to specify the parameters of a variety
+of devices used in SPICE, such as switches, diodes, transistors. In case
+of a switch, we have:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt><b>.</b>MODEL Mname Dname(Pvalues)</tt></ul>
+
+<ul>
+<dl>
+<dt>
+Mname refers to the Mname in the data statement of the switch.</dt>
+
+<dt>
+Dname is the device name: Vswitch or Iswitch.</dt>
+
+<dt>
+Pvalues are the values of the switch parameters, such as RON (on - resistance),
+ROFF (off-resistance), VON (the control voltage for ON; default = 1V),
+VOFF (control voltage for OFF; default = 0V), etc.</dt>
+</dl>
+</ul>
+Example:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>S15 3 5 8 9 SMOD</tt>
+<p><tt><b>.</b>MODEL SMOD VSWITCH(RON = 10, VON = 0, ROFF = 100MEG)</tt></ul>
+
+<h4>
+k.&nbsp;<a NAME="Operational"></a>Operational Amplifiers, and other elements</h4>
+An operational amplifier can be simulated in different ways. The first
+method is to model the amplifier by resistors, capacitors and dependent
+sources. As an example an ideal opamp is easily simulated using a voltage
+dependent voltage source. The second option uses actual transistors to
+model the opamp. The device library contains nonlinear models of the most
+common op amps. The student version of PSpice has macromodels for the linear
+amplifiers LM324 and uA741 which are included in the EVAL.LIB file. The
+professional version comes with library files of many commercial amplifiers
+and devices.
+<p>An example of the first approach (linear AC model) is given below for
+the uA741 opamp. We defined a <a href="#Subcircuits">subcircuit</a> for
+the opamp.
+<ul><i>SPICE code for the 741 opamp</i> (ref: Macromodeling with Spice,
+by J.A. Connelly/P. Choi)
+<br>&nbsp;
+<br>&nbsp;
+<dl>
+<dt>
+<tt>* Subcircuit for 741 opamp</tt></dt>
+
+<dt>
+<tt>.subckt opamp741 1 2 3</tt></dt>
+
+<dt>
+<tt>* +in (=1) -in (=2) out (=3)</tt></dt>
+
+<dt>
+<tt>rin 1 2 2meg</tt></dt>
+
+<dt>
+<tt>rout 6 3 75</tt></dt>
+
+<dt>
+<tt>e 4 0 1 2 100k</tt></dt>
+
+<dt>
+<tt>rbw 4 5 0.5meg</tt></dt>
+
+<dt>
+<tt>cbw 5 0 31.85nf</tt></dt>
+
+<dt>
+<tt>eout 6 0 5 0 1</tt></dt>
+
+<dt>
+<tt>.ends opamp741</tt></dt>
+</dl>
+</ul>
+
+<h4>
+l.&nbsp;<a NAME="Subcircuits"></a>Subcircuits</h4>
+A subcircuit allows you to define a collection of elements as a subcircuit
+(e.g. an operational amplifier) and to insert this description into the
+overall circui (as you would do for any other element).
+<p><b>Defining a subcircuit</b>
+<p>&nbsp;A subcircuit is defined bu a .SUBCKT control statement, followed
+by the circuit description as follows:
+<br>&nbsp;
+<br>&nbsp;
+<ul>
+<dl>
+<dt>
+<tt>.SUBCKT SUBNAME N1 N2 N3 ...</tt></dt>
+
+<dt>
+<tt>Element statements</tt></dt>
+
+<dt>
+<tt>.</tt></dt>
+
+<dt>
+<tt>.</tt></dt>
+
+<dt>
+<tt>.</tt></dt>
+
+<dt>
+<tt>.ENDS SUBNAME</tt></dt>
+</dl>
+</ul>
+in which SUBNAME is the subcircuit name and N1, N2, N3 are the <i>external
+nodes</i> of the subcircuit. The external nodes cannot be 0. The node numbers
+used inside the subcircuit are stricktly local, except for node 0 which
+is always global. For an example, see Operational Amplifier above.
+<p><b>Using a subcircuit</b>
+<p>&nbsp;The element statement for a subcircuit is similar to any other
+element. The format is as follows:
+<ul><tt>Xname N1 N2 N3 ... SUBNAME</tt></ul>
+in which Xname refers to the element (subcircuit) being used; N1, N2, N3
+are the nodes to which the external nodes of the subcircuit are being connected,
+and SUBNAME is the name of the subcircuit being used.
+<p>&nbsp;An example of an inverting opamp circuit using the subcircuit
+of the <a href="spice.models.html#opamp741">the uA741</a> (see operational
+amplifiers above) is given below. The subcircuit is called x1.
+<br>&nbsp;
+<br>&nbsp;
+<ul>
+<dl>
+<dt>
+<tt>vs 1 0 dc 5</tt></dt>
+
+<dt>
+<tt>r1 1 2 200</tt></dt>
+
+<dt>
+<tt>rf 2 3 1k</tt></dt>
+
+<dt>
+<tt>x1 0 2 3 opamp741</tt></dt>
+
+<dt>
+<tt>.dc vs 0 10 1</tt></dt>
+
+<dt>
+<tt>.plot dc v(3)</tt></dt>
+
+<dt>
+<tt>.end</tt></dt>
+</dl>
+</ul>
+
+<h4>
+m.&nbsp;<a NAME="Semiconductor"></a>Semiconductor Devices</h4>
+Most of the elements that have been described above require only a few
+parameters to specify its electrical characteristics. However, the models
+for semiconductor devices require many parameter values. A set of device
+model parameters is defined in a separate .MODEL statement and assigned
+a unique name. This method alliaviates the need to specify all of the model
+parameters on each device element card. Thus a semiconductor device is
+specified by two command lines: an <i>element</i> and <i>model</i> statement.
+<p>The syntax for the model statement is:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>.MODEL MODName Type (parameter values)</tt></ul>
+MODName is the name of the model for the device. The Type refers to the
+type of device and can be any of the following:
+<br>&nbsp;
+<br>&nbsp;
+<ul>
+<dl>
+<dt>
+D: Diode</dt>
+
+<dt>
+NPN: npn bipolar transistor</dt>
+
+<dt>
+PNP: pnp bipolar transistor</dt>
+
+<dt>
+NMOS: nmos transistor</dt>
+
+<dt>
+PMOS: pmos transistor</dt>
+
+<dt>
+NJF: N-channel JFET model</dt>
+
+<dt>
+PJF: P-channel JFET model</dt>
+</dl>
+</ul>
+The parameter values specify the device characteristics as explained below.
+<h4>
+m1.&nbsp;<a NAME="Diode"></a>Diode</h4>
+<i>Element</i> line: <tt>Dname N+ N- MODName</tt>
+<br>&nbsp;
+<br>&nbsp;
+<p><i>Model</i> statement:
+<ul><tt>.MODEL MODName D (IS= N= Rs= CJO= Tt= BV= IBV=)</tt></ul>
+The element name starts with D to indicate that the element is a diode,
+N+ and N- are the two node numbers and MODName is the name of the model
+of the diode which is specified in the model line. The values one can specify
+include: the saturation current, IS (default=1E-14A), the emission coefficient,
+N (=1), the series resistance, RS (=0 ohm), junction capacitance, CJO (=0F),
+transit time, TT (=0sec), reverse bias breakdown voltage, BV (=infinite)
+and the reverse bias breakdown current, IBV (=1xE-10A). If a parameter
+is not specified the default value (given in parenthesis) is assumed.
+<p>&nbsp;As an example, the model parameters for a 1N4148 commercial diode
+are as follows:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>.model D1N4148 D (IS=0.1PA, RS=16 CJO=2PF TT=12N BV=100 IBV=0.1PA)</tt></ul>
+
+<h4>
+m2.&nbsp;<a NAME="Bipolar"></a>Bipolar transistors</h4>
+<i>Element:</i> <tt>Qname C B E BJT_modelName</tt>
+<br>&nbsp;
+<br>&nbsp;
+<p><i>Model</i> statement:
+<ul><tt>.MODEL BJT_modName NPN (BF=val IS=val VAF=val)</tt></ul>
+in which BF is the common emitter current gain &szlig;, IS is the saturation
+current and VAF is the Early voltage. If no values are specified, the default
+values are assumed (&szlig;=100; IS=1E-16A, and VAF=[infinite]). Other
+parameters can be specified including the junction capacitances CJE (0pF)
+and CJC (0pF), the transit times TT (0sec) and TR (0sec), the base RB (0
+Ohm), emitter RE (0 Ohm) and collector resistances RC (0 Ohm). For a complete
+list of the parameters please refer to one of the references. As an example,
+the model parameters for the 2N2222A NPN transistor is given below:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>.model Q2N2222A NPN (IS=14.34F XTI=3 EG=1.11 VAF= 74.03 BF=255.9
+NE=1.307 ISE=14.34F IKF=.2847 XTB=1.5 BR=6.092 NC=2 ISC=0 IKR=0 RC=1 CJC=7.306P
+MJC=.3416 VJC=.75 FC=.5 CJE=22.01P MJE=.377 VJE=.75 TR=46.91N TF=411.1P
+ITF=.6 VTF=1.7 XTF=3 RB=10)</tt></ul>
+Notice that the continuation sign + should be added at the beginning of
+a new line. A circuit example with a npn transistor can be found under
+the section <a href="spice.transistor.html">Examples</a>
+<br>&nbsp;
+<br>&nbsp;
+<h4>
+m3.&nbsp;<a NAME="MOSFETS"></a>MOSFETS</h4>
+<b><i>Element</i>:</b> <tt>Mname ND NG NS &amp;ltNB> ModName L= W=</tt>
+<br>&nbsp;
+<br>&nbsp;
+<p>The MOS transistor name (Mname) has to start with a M; ND, NG, NS and
+NB are the node numbers of the Drain, Gate, Source and Bulk terminals,
+respectively. ModName is the name of the transistor model (see further).
+L and W is the length and width of the gate (in m).
+<p>&nbsp;The above paramters are usually sufficient when specifying discrete
+transistors. However, for integrated circuit simulations one need to specify
+several other parameter values related to the transistor geomtry. These
+are optional.
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>Mname ND NG NS NB ModName &amp;ltL=VAL> &amp;ltW=VAL> &amp;ltAD=VAL>
+&amp;ltAS=VAL> &amp;ltPD=VAL> &amp;ltPS=VAL> &amp;ltNRD=VAL> &amp;ltOFF>
+&amp;ltIC=VDS.VGS.VBS></tt></ul>
+in which
+<ul>AD and AS are the area of source and drain diffusion (in sq. m).
+<br>PD and PS are the value (in m) of the perimeter of the source and drain.
+<br>NRD is the number of squares of the drain diffusion for resistance
+calculations.
+<br>OFF sets the starting condition to OFF.
+<br>The initial condition specification using IC=VDS, VGS, VBS is intended
+for use with the UIC option on the .TRAN card, when a transient analysis
+is desired starting from other than the quiescent operating point. See
+the .IC card for a better and more convenient way to specify transient
+initial conditions.</ul>
+<b><i>Model</i> statement:</b>
+<ul><tt>.MODEL ModName NMOS (KP= VT0= lambda= gamma=)</tt></ul>
+in which KP=uCox and VTO is the threshold voltage. The default values are
+KP=20uA/V<sup>2</sup>; and the rest is equal to 0. There are several other
+transistor parameters that can be specified, in particular when doing simulations
+of integrated circuits. The general form of the .MODEL statement is as
+follows:
+<ul><tt>.MODEL ModName NMOS (&amp;ltLEVEL=val> &amp;ltkeyname=val> ...
+)</tt>
+<p><tt>&nbsp;.MODEL ModName PMOS (&amp;ltLEVEL=val> &amp;ltkeyname=val>
+... )</tt></ul>
+LEVEL refers to the MOSFET model that describes the terminal I-V characteristics
+of the transistors. LEVEL 1 is the simplest Mosfet model and is in general
+sufficient for describing discrete transistors as is done in the EE216
+and EE319 courses. However to simulate integrated circuit transistors,
+one need to use a more sophisticated models. LEVEL 2 includes extensive
+second-order models, while LEVEL 3 is a semi-empirical model that is better
+suited for short-channel transistors. Another model that is especially
+suited to model short-channel effects is called the BSIM model (LEVEL 13
+in HSpice).
+<p>&nbsp;For partial listing of the <a href="spice.MOSparamlist.html">MOSFET
+MODEL parameters click here</a>. Refer to the references for a complete
+list of parameters.
+<p>An example of the model parameters of the <a href="spice.models.html#mosis1.2um">1.2um
+CMOS MOSIS</a> transistors can be found in section on Models of Selected
+Devices and Components later on.
+<h4>
+m4.&nbsp;<a NAME="JFETS"></a>JFETS</h4>
+<b><i>Element</i>:</b> <tt>Jname ND NG NS ModName</tt>
+<p>ND, NG, and NS are the node numbers of the Drain, Gate, and Source terminals,
+respectively. ModName is the name of the transistor model
+<br>&nbsp;
+<br>&nbsp;
+<p><b><i>Model</i> statement:</b>
+<ul><tt>.MODEL ModName NJF (parameter= )</tt>
+<p><tt>&nbsp;.MODEL ModName PJF (parameter= )</tt></ul>
+for the N-JFET and P-JFET respectively. A partial list of the parameters
+that can be specified is: VT0 (threshold voltage, -2V default for N_JFET),
+BETA (transconductance coefficient, 1E-4 A/V2), LAMBDA (channel length
+modulation, 0 /V), IS (gate p-n saturation current, 1E-14A), CGD and CGS
+(drain and source zero-bias junction capacitances, 0pf), RD and RS (drain
+and source ohmic resistances, 0 Ohm).
+<p>For an example of the model parameters of <a href="spice.models.html#JFETS">the
+2N5459 N-JFET </a>see section on Models of Selected Devices and Components
+later on.
+<h3>
+2.2&nbsp;<a NAME="Control"></a>Commands or Control Statements to Specify
+the Type of Analysis</h3>
+
+<h4>
+a.&nbsp;<a NAME="Operating"></a>.OP Statement</h4>
+This statement instructs Spice to compute the DC operating points:
+<br>&nbsp;
+<br>&nbsp;
+<ul>
+<li>
+voltage at the nodes</li>
+
+<li>
+current in each voltage source</li>
+
+<li>
+operating point for each element</li>
+</ul>
+In PSpice it is usually not necessary to specify .OP as it gives you automatically
+the DC node voltages. However, HSpice does not give the DC voltages unless
+you have specified a certain analysis type, such as for instance .TRAN,
+or .AC analysis (Spice automatically does a DC analysis before doing a
+transient or AC analysis). Thus, if you are only interested in the DC voltages
+in HSpice, you should specify the .OP option, or the .DC option (see further).
+<h4>
+b.&nbsp;<a NAME="DC Statement"></a>.DC Statement</h4>
+This statement allows you to increment (sweep) an independent source over
+a certain range with a specified step. The format is as follows:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>.DC SRCname START STOP STEP</tt></ul>
+in which SRC name is the name of the source you want to vary; START and
+STOP are the starting and ending value, respectively; and STEP is the size
+of the increment.
+<br>&nbsp;
+<br>&nbsp;
+<ul>Example: <tt>.DC V1 0 20 2</tt></ul>
+When the Start and Stop values are identical (and the Step is non-zero),
+the .DC command produces only one value. This may be usefull in HSpice
+when you do not want all the DC voltages and currents to be printed (with
+the .OP option), but are interested in a limited number of DC voltages
+and currents. In the <a href="#Output">.PRINT statement</a> (see further)
+you would then also specify the node voltages you like to know (ex. <tt>.DC
+Vs 3 3 1 </tt>and <tt>.PRINT DC V(2), V(3), I(Vmeas) </tt>).
+<p>You can nest the DC sweep command which is often used to plot transistor
+characteristics, such as the Drain current ids versus the Drain-source
+voltage Vds for different gate voltages Vgs. This can be done as follows:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>.DC SRCname1 START STOP STEP SRCname2 START STOP STEP</tt>
+<p>Example:<tt> .DC Vds 0 5 0.5 Vgs 0 5 1</tt></ul>
+In the example above, the voltage Vds will be swept from 0 to 5V in steps
+of 1V for every value of Vgs.
+<h4>
+c.&nbsp;<a NAME="Transfer"></a>.TF Statement</h4>
+The .TF statement instructs PSpice to calculate the following <i>small
+signal</i> characteristics:
+<br>&nbsp;
+<br>&nbsp;
+<ol>
+<li>
+the ratio of output variable to input variable (gain or tranfer gain)</li>
+
+<li>
+the resistance with respect to the input source</li>
+
+<li>
+the resistance with respect to the output terminals</li>
+</ol>
+
+<ul><tt>.TF OUTVAR INSRC</tt></ul>
+in which OUTVAR is the name of the output variable and INSRC is the input
+source.
+<br>&nbsp;
+<br>&nbsp;
+<ul>Example: <tt>.TF V(3,0) VIN</tt></ul>
+The .TF statement can be used to find the <i>Thevenin small signal equivalent
+resistance</i>. (The Thevenin voltage is given by the node voltage at the
+open circuit terminal, as a result of the .OP statement). See also <a href="#Output">Output
+Statements</a> later on.
+<br>&nbsp;
+<br>&nbsp;
+<h4>
+d.&nbsp;<a NAME="Sensitivity"></a>.SENS Statement</h4>
+This instructs PSpice to calculate the DC small-signal sensitivities of
+each specified output variable with respect to <u>every</u> circuit parameter.
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>.SENS VARIABLE</tt>
+<p><tt>Example: .SENS V(3,0)</tt></ul>
+
+<h4>
+e.&nbsp;<a NAME="Transient"></a>.TRAN Statement</h4>
+This statement specifies the time interval over which the transient analysis
+takes place, and the time increments. The format is as follows:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>.TRAN TSTEP TSTOP &lt;TSTART &lt;TMAX>> &lt;UIC></tt>
+<br>&nbsp;
+<br>&nbsp;
+<dl>
+<dt>
+TSTEP is the printing increment.</dt>
+
+<dt>
+TSTOP is the final time</dt>
+
+<dt>
+TSTART is the starting time (if omitted, TSTART is assumed to be zero)</dt>
+
+<dt>
+TMAX is the maximum step size.</dt>
+
+<dt>
+UIC stands for Use Initial Condition and instructs PSpice not to do the
+quiescent operating point before beginning the transient analysis. If UIC
+is specified, PSpice will use the initial conditions specified in the element
+statements (see data statement) IC = value.</dt>
+</dl>
+</ul>
+See also <a href="#Output">Output Statements</a> later on.
+<h4>
+f.&nbsp;<a NAME="Initial"></a>.IC Statement</h4>
+This statement provides an alternative way to specify initial conditions
+of nodes (and thus over capacitors).
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>.IC Vnode1 = value Vnode2 = value etc.</tt></ul>
+
+<h4>
+g.&nbsp;<a NAME="AC Statement"></a>.AC Statement</h4>
+This statement is used to specify the frequency (AC) analysis. The format
+is as follows:
+<br>&nbsp;
+<br>&nbsp;
+<ul>
+<dl>
+<dt>
+<tt>.AC LIN NP FSTART FSTOP</tt></dt>
+
+<br>&nbsp;
+<p>
+<dt>
+<tt>.AC DEC ND FSTART FSTOP</tt></dt>
+
+<br>&nbsp;
+<p>
+<dt>
+<tt>.AC OCT NO FSTART FSTOP</tt></dt>
+
+<br>&nbsp;
+<p></dl>
+</ul>
+in which LIN stands for a linear frequency variation, DEC and OCT for a
+decade and octave variation respectively. NP stands for the number of points
+and ND and NO for the number of frequency points per decade and octave.
+FSTART and FSTOP are the start and stopping frequencies in Herz
+<br>&nbsp;
+<br>&nbsp;
+<ul>Example: <tt>.AC DEC 10 1000 1E6</tt></ul>
+See also <a href="#Output">Output Statements</a> later on. For an example
+circuit see under the section <a href="spice.filter.html">Examples.</a>
+<br>&nbsp;
+<br>&nbsp;
+<h4>
+h.&nbsp;<a NAME="Others"></a>For .NOISE, .DISTO, and .FOUR statements</h4>
+Please consult the manual.
+<br>&nbsp;
+<br>&nbsp;
+<h3>
+2.3&nbsp;<a NAME="Output"></a>Output Statements</h3>
+These statements will instruct PSpice what output to generate. If you do
+not specify an output statement, PSpice will always calculate the DC operating
+points. The two types of outputs are the prints and plots. A print is a
+table of data points and a plot is a graphical representation. The format
+is as follows:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>.PRINT TYPE OV1 OV2 OV3 ...</tt>
+<p><tt>.PLOT TYPE OV1 OV2 OV3 ...</tt></ul>
+in which TYPE specifies the type of analysis to be printed or plotted and
+can be:
+<br>&nbsp;
+<br>&nbsp;
+<ul>
+<li>
+DC</li>
+
+<li>
+TRAN</li>
+
+<li>
+AC</li>
+</ul>
+The output variables are OV1, OV2 and can be voltage or currents in voltage
+sources. Node voltages and device currents can be specified as magnitude
+(M), phase (P), real (R) or imaginary (I) parts by adding the suffix to
+V or I as follows:
+<br>&nbsp;
+<br>&nbsp;
+<ul>
+<li>
+M: Magnitude</li>
+
+<li>
+DB: Magnitude in dB (deciBells)</li>
+
+<li>
+P: Phase</li>
+
+<li>
+R: Real part</li>
+
+<li>
+I: Imaginary part</li>
+</ul>
+Examples:
+<br>&nbsp;
+<br>&nbsp;
+<ul><tt>.PLOT DC V(1,2) V(3) I(Vmeas)</tt>
+<p><tt>.PRINT TRAN V(3,1) I(Vmeas)</tt>
+<p><tt>.PLOT AC VM(3,0) VDB(4,2) VM(2,1) VP(3,1) IR(V2)</tt></ul>
+
+<hr>This page has been&nbsp;<img SRC="/Scripts/nph-count?width=5&link=~jan/spice/spice.overview.html&increase=1" ALT="" >
+accessed since Jan. 12, 1996.
+<br><a href="#table of contents">Back to Table of Contents
+<hr></a>Jan Van der Spiegel
+<address>
+jan_at_seas.upenn.edu
+</address>
+
+<br>
+Created Sept. 30, 1995; Updated January 16, 2006 
+</body>
+</html>
