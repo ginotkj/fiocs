@@ -1,0 +1,417 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (Windows NT 5.0; U) [Netscape]">
+   <meta name="Author" content="J Van der Spiegel">
+   <meta name="Description" content="Brief overview of PSPICE and HSPICE">
+   <meta name="KeyWords" content="PSPICE, HSPICE, circuit simulation, transistor circuits, opamps">
+   <title>spice guide</title>
+</head>
+<body>
+<!-- This document was created from RTF source by rtftohtml version
+2.7.5 -->
+<h3> 3. HOW TO GET STARTED WITH&nbsp;<a NAME="PSPICE"></a>SPICE? (for beginners)</h3>
+
+<center>(URL: http://www.seas.upenn.edu/~jan/spice/spice.guide.html)</center>
+
+<p>This document will explain how to <u>run </u>Spice or HSpice. It does not explain 
+  the Spice commands. This can be found earlier in this document under <a href="spice.overview.html#HOW TO">How 
+  to Specify the Circuit Topology?</a>, in your textbook, or the Spice User's 
+  Guide. 
+<p>In order to run Spice, you will have to go through the following steps:
+<ul>
+<li>
+Draw a schematic of the circuit (can be skipped)</li>
+
+<li>
+Create an input file</li>
+
+<li>
+Run the program</li>
+
+<li>
+Look at the output file and print the results</li>
+
+<br>&nbsp;
+<p>&nbsp;</ul>
+
+<h4> 3.1&nbsp;<a NAME="Creating an Input"></a>Creating an Input File for Spice 
+  - Example</h4>
+We will first explain how to use PSpice <i>without a Schematic Edito</i>r (see 
+<a href="http://www.seas.upenn.edu/%7Ejan/spice/PSpicePrimer.pdf">PSpice Primer</a> 
+for how to use the Schematic Editor). 
+<p><b>a. <i>Draw a schematic of the circuit,</i></b> number the nodes and
+label all elements. Note that the common node (ground) always has number
+"0".
+<ul><a NAME="A sample circuit"></a>A sample circuit is given below.
+<p><img SRC="Pspice.guide1.gif" height=118 width=211>
+<p>Figure 1</ul>
+We are interested in the voltages v12, v2 and the current i4 when the input
+voltage vin is equal to 10V. We also want to find the Thevenin equivalent
+voltage and resistance seen by the terminals ab.
+<p>In addition, we like to step the input voltage between 0 and 20 V in
+steps of 2V and print and plot v12, vo, v2 and i4 as a function of vin.
+<p>Note that we inserted a DC voltage source, VMEAS, of zero value, in
+order to be able to measure the current i4.
+<p><b>b.<i> Create the input file</i></b> (source file) for PSpice.
+<p>The source file needs the extension (usually ".cir") in its name. For a description 
+  of the data, control and output statement, refer to "How to Specify the Circuit 
+  Topology" earlier in this document, the Spice manual or the textbook. 
+<p>Create the input file with any editor, such as Emacs, Microsoft editor,
+Word perfect, NotePad under windows, etc. Save it on the c: drive or on
+your disk on the a: drive. In case you store it on the c: drive, put it
+in a subdirectory (ex. c:\users\filename.cir; the subdirectory is required
+for the PSpice version that runs on the network in the PC labs and sits
+on the h: drive). Save the file as a textfile (when using a word processor
+such as MS Word).
+<ul>Example: c:\users\example1.cir
+<dl>
+<dt>
+<tt>EXAMPLE PSpice</tt></dt>
+
+<dt>
+<tt>VIN 1 0 DC 10</tt></dt>
+
+<dt>
+<tt>F1 0 3 VMEAS 0.5</tt></dt>
+
+<dt>
+<tt>VMEAS 4 0 DC 0</tt></dt>
+
+<dt>
+<tt>R1 1 2 1K</tt></dt>
+
+<dt>
+<tt>R2 2 3 10K</tt></dt>
+
+<dt>
+<tt>R3 1 3 15K</tt></dt>
+
+<dt>
+<tt>R4 2 4 40K</tt></dt>
+
+<dt>
+<tt>R5 3 0 50K</tt></dt>
+
+<dt>
+<tt>.OP</tt></dt>
+
+<dt>
+<tt>.TF V(3,0) VIN</tt></dt>
+
+<dt>
+<tt>.DC VIN 0 20 2</tt></dt>
+
+<dt>
+<tt>.PRINT DC V(1,2) V(2,4) I(VMEAS)</tt></dt>
+
+<dt>
+<tt>.PLOT DC V(1,2) V(2,4)</tt></dt>
+
+<dt>
+<tt>.PLOT DC I(VMEAS)</tt></dt>
+
+<dt>
+<tt>.END</tt></dt>
+</dl>
+</ul>
+<b>Notes:</b>
+<ul>
+<dl>
+<dt>
+1. The first line is a title line and can be anything. It cannot be omitted.</dt>
+
+<dt>
+2. The last line must be the .END statement.</dt>
+
+<dt>
+3. You can insert comment lines. Anytime a line starts with an "*", PSpice
+ignores the whole line. Using an "*" is also handy to block out a command
+line.</dt>
+
+<dt>
+4. You can use upper or lower case letters.</dt>
+
+<dt>
+5. Don't forget to add a carriage return after the .END statement.</dt>
+</dl>
+</ul>
+<b>c. <i>Run Spice</i></b>
+<p>Once you are in PSpice, pull down the <b>File </b>menu at the top of
+the screen and select <i>"Open "</i>. The system prompts you for the name
+of the file. Type in the file name of the circuit you have created before.
+As an example: c:\users\example1.cir
+<p>A window will appear telling you that Spice program is running, or that the 
+  simulation has been completed successfully, or that errors were detected. Click 
+  on the "OK" button. 
+<p>&nbsp;
+<h4> 4&nbsp;<a NAME="editor"></a><a href="http://www.seas.upenn.edu/%7Ejan/spice/PSpicePrimer.pdf">PSPICE 
+  with Capture</a></h4>
+<p>
+<hr>
+<h3> <a NAME="hspice"></a>5. HSPICE</h3>
+
+<h4> <a NAME="running hspice"></a>5.1 Running HSPICE</h4>
+You can run HSPICE on Eniac (Sun Sparc), which is basically the same program
+as PSpice, except for the Schematic editor and Probe. The advantage of
+using HSpice on Eniac is that you can run it from your room through a modem
+connection or over ResNet. In addition, it comes with a user-friendly and
+powerful graphical interface (gsi) provided you have access to an x-terminal.
+<p>First, you have to create the input file that contains the data, control
+and output statements in the same way as is done for PSpice. The format
+and commands are identical. You can create this input file with any editor.
+Once you have the input file, you can run HSpice by typing the following
+command at the unix prompt,
+<ul><tt>hspice inputfilename</tt></ul>
+in which inputfile is the name of your input file. The output will be displayed
+on the screen. You can also store the output of HSPice in an output file,
+as follows,
+<ul><tt>hspice inputfile > outputfile</tt></ul>
+To view the output file, use your favorite editor. The file can be printed
+as any other document:
+<ul><tt>lpr -w80 outputfile</tt></ul>
+Notice that HSpice does not give the DC voltages unless you have specified
+a certain analysis type, such as for instance .TRAN, or .AC analysis (Spice
+automatically does a DC analysis before doing a transient or AC analysis).
+Thus, if you are only interested in the DC voltages in HSpice, you should
+specify the .OP option, or the <a href="spice.overview.html#DC Statement">.DC
+option.</a>
+<h4> <a NAME="features"></a>5.2 Special Features of HSPICE</h4>
+HSpice has many capabilities. If you intend to use HSpice for Integrated
+Circuits simulation you will need to make use of many of these. Please
+consult the MetaSoftware manual (available from the DSL, room 100M). Here
+are a couple of these features.
+<p><i>a .Mathematical expressions in Hspice</i>
+<p>HSPICE supports a few mathematical functions which can be used to condition
+any output variable. The following general format should be used for all
+expressions:
+<ul><tt>.print varname=PAR('sqrt(v3)')</tt></ul>
+This instructs HSPICE to print the square root of the voltage "v3" and
+assign it the variable name varname. The results can be found in the output
+file as well as gsi under the print'plot field. Apart from square root,
+other useful functions such as log(), sin() and tan() are supported. Consult
+the HSPICE manual for a complete listing.
+<p><i>b. Node Names.</i>
+<p>Instead of using node numbers, you can use node names in the input file.
+This makes the files much easier to read. The same names will appear in
+the output file and the graphical display.
+<h4> <a NAME="gsi"></a>5.3 Graphical Output: gsi</h4>
+In case you have access to an x-window terminal the output can also be
+viewed graphically using the <i>gsi</i> program. In order to use the graphical
+display, you have to include the statement "<tt>option post</tt>" in the
+input file. This will create a *.sw# (for .sweep analysis) or a *.tr# file
+(for transient analysis) which contains the simulation results in a format
+that can be interpreted by gsi.
+<p>To run gsi, type "<tt>gsi inputfilename</tt>". All node voltages will
+be saved for later display. In case you have a large circuit and don't
+need to look at all the nodes, you can reduce the size of the file by specifying
+which node voltages to save. This is done by the ".<tt>option post probe</tt>",
+followed by the "<tt>.print nodenames</tt>" command. This last command
+is identical to the one you use to specify what node voltages, or currents
+you want Spice to save.
+<p>Here is an example of the input file, with the .option post command
+for gsi.
+<ul>
+<dl>
+<dt>
+<tt>example hspice with gsi</tt></dt>
+
+<dt>
+<tt>vin input 0 dc 10</tt></dt>
+
+<dt>
+<tt>f1 0 output vmeas 0.5</tt></dt>
+
+<dt>
+<tt>vmeas 4 0 dc 0</tt></dt>
+
+<dt>
+<tt>r1 input 2 1k</tt></dt>
+
+<dt>
+<tt>r2 2 output 10k</tt></dt>
+
+<dt>
+<tt>r3 input 3 15k</tt></dt>
+
+<dt>
+<tt>r4 2 4 40k</tt></dt>
+
+<dt>
+<tt>r5 output 0 50k</tt></dt>
+
+<dt>
+<tt>.tf output vin</tt></dt>
+
+<dt>
+<tt>.dc vin 0 20 2</tt></dt>
+
+<dt>
+<tt>.option post</tt></dt>
+
+<dt>
+<tt>*.print dc v(1,2) v(2,4) i(vmeas)</tt></dt>
+
+<dt>
+<tt>*.plot dc v(1,2) v(2,4) i(vmeas)</tt></dt>
+
+<dt>
+<tt>.end</tt></dt>
+</dl>
+</ul>
+To see the graphical output, type <tt>gsi example1</tt> (if on an x-window
+terminal; if you are not familiar with x-windows consult CETS). The gsi
+output is shown in the next figure. After typing "<tt>gsi</tt>", two windows
+will open.
+<p><img SRC="gsiwindow1.gif" height=193 width=294>
+<br>&nbsp;
+<p>The top one allows you to select what variables to display. After making
+the selection of the "type" of variables (voltages, current, etc.) and
+the "curves" to be displayed, click on the "Draw" button. The curves will
+be shown on the second window (Graph window).
+<p><img SRC="gsiwindow2.gif" height=245 width=529>
+<br>&nbsp;
+<p>You can select the number of panels by going to the "Panels" menu and
+selecting the number of panels. There are several option and manipulations
+you can incorporate (see Features of gsi below).
+<p><b><i>Features of gsi</i></b>
+<p>In the Graph window you have a number of interesting options. The <i>measurement</i>
+menu allows you to use cursors. To<i> zoom in/out </i>click on the right
+mouse button and select one of the zoom commands. Then with the left button
+draw a short line to indicate what you would like to zoom.
+<p>To <i>clear</i> a panel, click on the right mouse button and select
+"Clear".
+<p><i>Printing</i> can be done by going to the "Print" menu. The print
+command will write the graphical output to a file (labeled as filename.gr#))
+which can then be printed later on (using the lpr command).
+<p><i>Mathematical expressions</i> can be plotted as well. In the top window,
+you will see a small box called <i>expression</i>. You can type mathematical
+expressions such as additions, multiplications, square, etc. of graphs.
+As an example lets calculate the power in a resistor (power = i(vmeas)*v(2)).
+To display the expression, select <i>expression</i> in the "Types" window
+and "power" in the "Curves" window. Next, click on the "Draw" button.
+<p>
+<hr>
+<h3> <a NAME="mistakes"></a>6. Most common mistakes</h3>
+
+<ol>
+<li>
+Typos in the source file: wrong node numbers, wrong units (ex. the value
+of a capacitor of 12 picofarad, incorrectly specified as 12, instead of
+12p.)</li>
+
+<li>
+Confuse M for mega instead of MEG: a 5 megaohm resistor should be specified
+as 5MEG and not 5M. (M or m stands for milli).</li>
+
+<li>
+Typing the <u>letter </u>O instead for the <u>number</u> 0 (zero as in
+10)</li>
+
+<li>
+Omitting the final carriage return after the .END statement.</li>
+</ol>
+
+<hr>
+<h3> <a NAME="does not run"></a>7. If Spice does not run.</h3>
+1. First check that /cad/bin is in your path. If not, you should alter
+the path to statement in your shell initialization file to include /cad/bin.).
+<p>2. To run hspice on eniac from an X-TERMINAL that runs on a computer
+different from eniac (lets say hobo in the EE domain):
+<ul>
+<li>
+logon to hobo.ee (to which the display is connected) and type:</li>
+
+<p><br><tt>xhost eniac.seas.upenn.edu</tt>
+<li>
+login to eniac and type:</li>
+
+<p><br><tt>rsh eniac.seas.upenn.edu</tt>; once on eniac type:
+<p><tt>setenv DISPLAY hobo.ee:0.0</tt></ul>
+
+<hr>
+<h3> 8.&nbsp;<a NAME="REFERENCES"></a>REFERENCES</h3>
+
+<ol>
+<li>
+SPICE, A Guide to Circuit Simulation and Analysis Using PSpice, 3rd Ed.,
+P. Tuinenga, Prentice Hall, Upper Saddle River, NJ, 1995. This book comes
+with a IBM-PC 3.5 disk with the PSpice Student Version.</li>
+
+<li>
+Schematic Capture with MicroSim PSpice, 3rd Ed., Marc. E. Herniter, Prentice
+Hall, Upper Saddle River, N.J, 1998. This book comes with a CD that contains
+an evaluation version of PSpice.</li>
+
+<li>
+MicroSim PSpice with Circuit Analysis, 2nd Ed., F. Monssen, Prentice Hall,
+Upper Saddle River, NJ, 1998.</li>
+
+<li>
+MicroSim PSpice for Windows, Vol. I and II, R. W. Goody, Prentice Hall,
+Upper Saddle River, NJ, 1998.</li>
+
+<li>
+Spice for Circuits and Electronics Using PSpice, 2nd ed., M. H. Rashid,
+Prentice Hall, Englewood Cliffs, NJ, 1995. This book comes with a tear-out
+card to order a disk with the PSpice Student Version (available for both
+PC and MAC). The cost for the disk is about $7.50-$15.50</li>
+
+<li>
+Computer-Aided Circuit Analysis Using PSpice, 2nd Ed., W. Banzhaf, Prentice-Hall,
+Englewood Cliffs, NJ, 1992</li>
+
+<li>
+Hands On PSpice,"J.G. Gottling, Houghton Mifflin Co., MA, 1995</li>
+
+<li>
+The Spice Book, A. Vladimirescu, John Wiley &amp; Sons, New York, NY, 1994</li>
+
+<li>
+Semiconductor Device Modeling with Spice, 2nd Ed., G. Massobrio and P.
+Antognetti, McGraw-Hill, NY, 1993</li>
+
+<li>
+Mosfet Modeling with Spice, D. Foty, Prentice Hall, Upper Saddle River,
+NJ, 1997.</li>
+
+<li>
+Macromodeling with Spice, J.A. Connelly/P. Choi, Prentice-Hall, Englewood
+Cliffs, NJ, 1992</li>
+
+<li>
+Inside SPICE, Overcoming the Obstacles of Circuit Simulation, R. M. Kielkowski,
+MacGraw-Hill, Inc., New York, 1994.</li>
+
+<li>
+SPICE, Practical Device Modeling, R. W. Kielkowski, McGraw-Hill, Inc.,
+New York, 1995.</li>
+
+<li>
+Introduction to PSpice, A Supplement to Electric Circuits, 4th ed., by
+J. W. Nilsson and Susan A. Reidel, Addison-Wesley Publ. Company, Reading,
+MA, 1993</li>
+
+<li>
+Spice, by G. Roberts and A. Sedra, Oxford University Press, 1997, 2nd Edition.</li>
+
+<li>
+HSPice Users' Manual, Meta-Software, Inc., Campbell, CA</li>
+
+<li>
+PSpice Users' Guide, MicroSim Corporation, Irvine, CA</li>
+
+<li>
+SPICE User's Guide</li>
+
+<br>&nbsp;
+<p>&nbsp;</ol>
+<a href="spice.overview.html#table of contents">Back to Table of Contents
+<hr></a>Jan Van der Spiegel
+<address>
+jan@ee.upenn.edu</address>
+
+<p><br>Created Sept. 30, 1995; Updated Dec. 3, 2001
+</body>
+</html>
