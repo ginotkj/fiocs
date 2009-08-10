@@ -1,0 +1,156 @@
+<!DOCTYPE public "-//w3c//dtd html 4.01 transitional//en"
+		"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+  <TITLE>ngspice colored ps</TITLE>
+</HEAD>
+<BODY>
+  <h1>ngspice: colored poststript demo page</h1>
+  This page depends on a patch for ngspice that is located at
+  <a href="http://sourceforge.net/tracker/index.php?func=detail&aid=646409&group_id=38962&atid=423917">sourceforge</a>.
+  <h2>The color table from color2 to color17</h2>
+      <table width="100%" cellspacing=0 cellpadding=0 align="center">
+	<tr><td>
+        <IMG SRC="html_1.png" WIDTH=558 HEIGHT=558 ALIGN="left" BORDER=0>
+	  </td></tr>
+      </table>
+  <h2>The colors looks better inside gv (convert worsens the colors)</h2>
+      <table width="100%" cellspacing=0 cellpadding=0 align="center">
+	<tr><td>
+        <IMG SRC="gv_screenshot.png" WIDTH=702 HEIGHT=676 ALIGN="left" BORDER=0>
+	  </td></tr>
+      </table>
+  <h2>.ac simulation using rgb colors (syntax is defined in XQueryColor)</h2>
+      <table width="100%" cellspacing=0 cellpadding=0 align="center">
+	<tr><td>
+        <IMG SRC="html_2.png" WIDTH=558 HEIGHT=558 ALIGN="left" BORDER=0>
+	  </td></tr>
+      </table>
+      <h2>.ac plot using smith grid, white background and black forground color</h2>
+      <table width="100%" cellspacing=0 cellpadding=0 align="center">
+	<tr><td>
+        <IMG SRC="html_3.png" WIDTH=400 HEIGHT=400 ALIGN="left" BORDER=0>
+	  </td></tr>
+      </table>
+      <h2>The same with polar plot</h2>
+      <table width="100%" cellspacing=0 cellpadding=0 align="center">
+	<tr><td>
+  <IMG SRC="html_4.png" WIDTH=400 HEIGHT=400 ALIGN="left" BORDER=0>
+	  </td></tr>
+      </table>
+      <h2>transient plot after reseting all colors</h2>
+      <table width="100%" cellspacing=0 cellpadding=0 align="center">
+	<tr><td>
+  <IMG SRC="html_5.png" WIDTH=900 HEIGHT=400 ALIGN="left" BORDER=0>
+	  </td></tr>
+      </table>
+      <h2> unset hcopypscolor: now we have black and white again</h2>
+      <table width="100%" cellspacing=0 cellpadding=0 align="center">
+	<tr><td>
+        <IMG SRC="html_6.png" WIDTH=800 HEIGHT=300 BORDER=0>
+	  </td></tr>
+      </table>
+  <h2>sources: netlist</h2>
+  <pre>
+* Spice netlister for gnetlist
+* Spice backend written by Bas Gieltjes
+R15 18 13 1k
+R14 17 18 1k
+R13 16 17 1k
+R12 15 16 1k
+R11 11 15 1k
+R18 14 0 1k
+R17 12 14 1k
+R16 13 12 1k
+R10 10 11 1k
+R9 9 10 1k
+R8 8 9 1k
+R7 7 8 1k
+R6 6 7 1k
+V1 2 0 dc 1 ac 2 pulse 0 5 100n 10n 10n 400n 800n
+C5 6 0 1n
+R5 5 6 1k
+C4 5 0 1n
+R4 4 5 1k
+C3 4 0 1n
+R3 3 4 1k
+C2 3 0 1n
+R2 1 3 1k
+C1 1 0 1n
+R1 2 1 1k
+.END
+  </pre>
+<h2>sources: control file</h2>
+<pre>
+RCRC-Filter
+.control
+** convert the gEDA schematic to the netlist
+*	shell gnetlist -q -g spice RCRC.sch -o RCRC.net
+
+	source RCRC.net
+	set hcopydevtype=postscript
+	set hcopypscolor=true
+
+	op
+	destroy all
+	ac dec 100 1k 1000k
+	tran 1ns 10000ns
+
+	hardcopy html_1.ps 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+*	shell gv html_1.ps &
+	shell convert html_1.ps html_1.png
+
+	set color2=rgb:F/0/0
+	set color3=rgb:F/3/3
+	set color4=rgb:F/6/6
+	set color5=rgb:F/9/9
+	set color6=rgb:0/F/0
+	set color7=rgb:3/F/3
+	set color8=rgb:6/F/6
+	set color9=rgb:9/F/9
+
+	hardcopy html_2.ps ac.v(3) ac.v(4) ac.v(5) ac.v(6) ac.v(7) ac.v(8) ac.v(9) ac.v(10)
+*	shell gv html_2.ps &
+	shell convert html_2.ps html_2.png
+
+	set color1=rgb:0/0/0
+	set color0=rgb:f/f/f
+	set hcopywidth=400
+	set hcopyheight=400
+	hardcopy html_3.ps ac.v(3) ac.v(4) ac.v(5) ac.v(6) smith
+*	shell gv html_3.ps &
+	shell convert html_3.ps html_3.png
+
+	hardcopy html_4.ps ac.v(3) ac.v(4) ac.v(5) ac.v(6) polar
+*	shell gv html_4.ps &
+	shell convert html_4.ps html_4.png
+
+	unset color0
+	unset color1
+	unset color2
+	unset color3
+	unset color4
+	unset color5
+	unset color6
+	unset color7
+	unset color8
+	unset color9
+	set hcopywidth=900
+	set hcopyheight=400
+	hardcopy html_5.ps tran.v(1) tran.v(3) tran.v(4) tran.v(5) tran.v(6)
+*	shell gv html_5.ps &
+	shell convert html_5.ps html_5.png
+
+*** switch back to black and white
+	unset hcopypscolor
+	set hcopywidth=800
+	set hcopyheight=300
+	hardcopy html_6.ps ac.v(3) ac.v(4) ac.v(5) ac.v(6)
+*	shell gv html_6.ps &
+	shell convert html_6.ps html_6.png
+	destroy all
+.endc
+</pre>
+
+</BODY>
+</HTML>
