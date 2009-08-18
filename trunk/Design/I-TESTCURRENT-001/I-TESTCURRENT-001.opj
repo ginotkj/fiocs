@@ -102,14 +102,21 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\i-testcurrent-001.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\i-testcurrent-001.dsn"
+         "SCHEMATIC1")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Simulation Profiles")
-      (Select "Design Resources"))
+      (Select "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\i-testcurrent-001.dsn"
+         "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -28 0 583 0 817"))
+        (Placement "44 0 1 -1 -1 -8 -28 0 583 0 817"))
       (Tab 0))))
