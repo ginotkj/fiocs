@@ -86,6 +86,11 @@ SPICE 3f5 Level 8, Star-HSPICE Level 49, UTMOST Level 8
 * DATE: Aug 17/09
 * LOT: T94H                  WAF: 2001
 * Temperature_parameters=Default
+
+
+*-------------------------------------------------------------------------------
+
+
 .MODEL CMOSN NMOS (                                LEVEL   = 49
 +VERSION = 3.1            TNOM    = 27             TOX     = 4.4E-9
 +XJ      = 1E-7           NCH     = 2.3549E17      VTH0    = 0.2993025
@@ -123,6 +128,12 @@ SPICE 3f5 Level 8, Star-HSPICE Level 49, UTMOST Level 8
 +PUB     = 2.190282E-23   PVSAT   = 1.045662E3     PETA0   = -1E-4
 +PKETA   = -0.0115999      )
 *
+
+
+*---------------------------------------------------------------------------------
+
+
+
 .MODEL CMOSP PMOS (                                LEVEL   = 49
 +VERSION = 3.1            TNOM    = 27             TOX     = 4.4E-9
 +XJ      = 1E-7           NCH     = 4.1589E17      VTH0    = -0.4016322
