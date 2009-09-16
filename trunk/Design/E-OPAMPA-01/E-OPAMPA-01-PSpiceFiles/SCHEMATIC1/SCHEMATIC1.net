@@ -1,0 +1,46 @@
+* source E-OPAMPA-01
+M_M7         N3 N2 0 0 NMOS  
++ L=1.6u  
++ W=400u         
+M_M8         TEST TEST 0 0 NMOS  
++ L=1.6u  
++ W=320u         
+M_M9         N16004 TEST 0 0 NMOS  
++ L=1.6u  
++ W=320u         
+V_V1         VIN+ 0  
++SIN 1.3 10m 1K 0 0 0
+V_V3         VCC 0 5
+M_M10         N2 N2 0 0 NMOS  
++ L=1.6u  
++ W=60u         
+M_M1         N5 N5 VCC VCC PMOS  
++ L=1.6u  
++ W=800u         
+M_M2         N6 N6 VCC VCC PMOS  
++ L=1.6u  
++ W=800u         
+M_M11         N2 N2 N1 VCC PMOS  
++ L=1.6u  
++ W=180u         
+M_M3         TEST N5 VCC VCC PMOS  
++ L=1.6u  
++ W=800u         
+M_M4         N16004 N6 VCC VCC PMOS  
++ L=1.6u  
++ W=800u         
+M_M12         N1 N1 VCC VCC PMOS  
++ L=1.6u  
++ W=180u         
+V_V2         0 VIN-  
++SIN -1.3 10m 1K 0 0 0
+I_I1         TEST 0 DC 0Adc AC 0Aac
++PULSE 0 1m 1m 3p 7p 0 0
+M_M5         N5 VIN+ N3 0 NMOS  
++ L=1.6u  
++ W=160u         
+M_M6         N6 VIN- N3 0 NMOS  
++ L=1.6u  
++ W=160u         
+I_I2         TEST 0 DC 0Adc AC 0Aac
++PULSE 0 .3m 1m 1p 130p 9p 0

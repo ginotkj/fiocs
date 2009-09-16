@@ -1,0 +1,280 @@
+
+**** 08/10/09 20:48:23 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-transient"  [ D:\Documents\TESIS\TRUNK\Design\E-OPAMPA-01\E-OPAMPA-01-PSpiceFiles\SCHEMATIC1\transient.sim ]
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../e-opampa-01-pspicefiles/e-opampa-01.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.2\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 0.0001 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source E-OPAMPA-01
+M_M7         N3 N2 0 0 NMOS  
++ L=1.6u  
++ W=400u         
+M_M8         TEST TEST 0 0 NMOS  
++ L=1.6u  
++ W=320u         
+M_M9         N16004 TEST 0 0 NMOS  
++ L=1.6u  
++ W=320u         
+V_V1         VIN+ 0  
++SIN 1.3 10m 1K 0 0 0
+V_V3         VCC 0 5
+M_M10         N2 N2 0 0 NMOS  
++ L=1.6u  
++ W=60u         
+M_M1         N5 N5 VCC VCC PMOS  
++ L=1.6u  
++ W=800u         
+M_M2         N6 N6 VCC VCC PMOS  
++ L=1.6u  
++ W=800u         
+M_M11         N2 N2 N1 VCC PMOS  
++ L=1.6u  
++ W=180u         
+M_M3         TEST N5 VCC VCC PMOS  
++ L=1.6u  
++ W=800u         
+M_M4         N16004 N6 VCC VCC PMOS  
++ L=1.6u  
++ W=800u         
+M_M12         N1 N1 VCC VCC PMOS  
++ L=1.6u  
++ W=180u         
+V_V2         0 VIN-  
++SIN -1.3 10m 1K 0 0 0
+I_I1         TEST 0 DC 0Adc AC 0Aac
++PULSE 0 1m 1m 3p 7p 0 0
+M_M5         N5 VIN+ N3 0 NMOS  
++ L=1.6u  
++ W=160u         
+M_M6         N6 VIN- N3 0 NMOS  
++ L=1.6u  
++ W=160u         
+I_I2         TEST 0 DC 0Adc AC 0Aac
++PULSE 0 .3m 1m 1p 130p 9p 0
+
+**** RESUMING transient.cir ****
+.END
+
+Mosfet M_M7, model NMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M7, model NMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M7, model NMOS: Ps = 0 is less than W
+Mosfet M_M8, model NMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M8, model NMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M8, model NMOS: Ps = 0 is less than W
+Mosfet M_M10, model NMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M10, model NMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M10, model NMOS: Ps = 0 is less than W
+Mosfet M_M5, model NMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M5, model NMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M5, model NMOS: Ps = 0 is less than W
+Mosfet M_M1, model PMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M1, model PMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M1, model PMOS: Ps = 0 is less than W
+Mosfet M_M11, model PMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M11, model PMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M11, model PMOS: Ps = 0 is less than W
+**** 08/10/09 20:48:23 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-transient"  [ D:\Documents\TESIS\TRUNK\Design\E-OPAMPA-01\E-OPAMPA-01-PSpiceFiles\SCHEMATIC1\transient.sim ]
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               NMOS            PMOS            
+               NMOS            PMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               7            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .552594        -.84764      
+          KP   66.406610E-06   66.406610E-06 
+       GAMMA    0               0            
+      LAMBDA    0               0            
+         RSH   52.7            76            
+          IS    1.000000E-15    1.000000E-15 
+          JS  100.000000E-06  100.000000E-06 
+          PB     .99             .8          
+        PBSW     .99             .988295     
+          CJ  273.755200E-06  308.598800E-06 
+        CJSW  135.927700E-12  158.319000E-12 
+          MJ     .548193         .439453     
+        MJSW     .1              .100317     
+        CGSO  175.000000E-12  210.000000E-12 
+        CGDO  175.000000E-12  210.000000E-12 
+        CGBO    1.000000E-09    1.000000E-09 
+         TOX   31.200000E-09   31.200000E-09 
+          XJ  300.000000E-09  300.000000E-09 
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .01             .01         
+      DIOMOD    2               2            
+          K1     .968402         .451361     
+          K2    -.087558       23.796990E-06 
+        LETA    0               0            
+        WETA    0               0            
+          U0  649.4789        236.8924       
+       XPART     .5              .5          
+        VTH0     .552594        -.84764      
+          K3    4.608661       13.32784      
+          W0  671.456300E-09  957.723600E-09 
+         NLX   12.171970E-09    1.000000E-06 
+        DVT0     .529357        2.490785     
+        DVT1     .443214         .665622     
+          UA    1.313648E-09    3.833306E-09 
+          UB    2.836687E-18    1.487688E-21 
+          UC   24.583630E-12 -108.562000E-12 
+        VSAT  117.058700E+03  200.000000E+03 
+        RDSW    3.000000E+03    3.000000E+03 
+        VOFF    -.073146        -.087718     
+     NFACTOR     .567383         .250834     
+        CDSC    7.627884E-06   29.248060E-06 
+        PCLM    1.848118      112.059500E-12 
+      PDIBL1    8.801319E-03  450.247800E-06 
+      PDIBL2    1.584140E-03    1.090076E-03 
+       DROUT     .068138      924.353800E-06 
+      PSCBE1    6.290635E+09    3.500883E+09 
+      PSCBE2    1.441641E-09  525.238300E-12 
+          A0     .652834         .420595     
+          A1    0               0            
+          A2    1                .364        
+       NPEAK   75.000000E+15   24.000000E+15 
+         LDD    0               0            
+        LITL  167.570900E-09  167.570900E-09 
+         UA1    4.310000E-09    4.310000E-09 
+         UB1   -7.610000E-18   -7.610000E-18 
+         UC1  -56.000000E-12  -56.000000E-12 
+        PVAG     .91451        15            
+        KETA   -8.095926E-03    5.754484E-03 
+        ETA0    -.61012          .26103      
+        ETAB    -.300202     -814.824400E-06 
+         K3B   -2.012806       -2.223833     
+        DVT2    -.5             -.037222     
+       CDSCB   46.912940E-06  109.148800E-06 
+        DSUB     .879973         .2873       
+      MOBMOD    1               1            
+       CDSCD    8.475154E-06  149.757200E-06 
+         AGS     .113668         .214098     
+       DVT1W    0               0            
+       DVT2W    0               0            
+        PRWG -507.319900E-06     .242512     
+        PRWB    -.061885        -.210846     
+     PDIBLCB    -.1            -1.000000E-03 
+         DWG  -24.963150E-09  -21.391700E-09 
+         DWB   16.695650E-09   38.575440E-09 
+          B0    1.489912E-06    6.620808E-06 
+          B1    5.000000E-06    5.000000E-06 
+        LINT  181.968500E-09   32.188130E-09 
+        WINT  775.572600E-09  756.506500E-09 
+         DLC  181.968500E-09   32.188130E-09 
+         DWC  775.572600E-09  756.506500E-09 
+          CF    0               0            
+        NOIA  100.000000E+18    9.900001E+18 
+        NOIB   50.000000E+03    2.400000E+03 
+        NOIC   -1.400000E-12    1.400000E-12 
+         VTM     .025864         .025864     
+     VERSION    3.1             3.1          
+       PBSWG     .99             .988295     
+       MJSWG     .1              .100317     
+       CJSWG   64.000000E-12   39.000000E-12 
+
+
+Mosfet M_M7, model NMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M7, model NMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M7, model NMOS: Ps = 0 is less than W
+Mosfet M_M8, model NMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M8, model NMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M8, model NMOS: Ps = 0 is less than W
+Mosfet M_M10, model NMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M10, model NMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M10, model NMOS: Ps = 0 is less than W
+Mosfet M_M5, model NMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M5, model NMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M5, model NMOS: Ps = 0 is less than W
+Mosfet M_M1, model PMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M1, model PMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M1, model PMOS: Ps = 0 is less than W
+Mosfet M_M11, model PMOS: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M11, model PMOS: Pd = 0 is less than W
+WARNING -- Mosfet M_M11, model PMOS: Ps = 0 is less than W
+**** 08/10/09 20:48:23 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-transient"  [ D:\Documents\TESIS\TRUNK\Design\E-OPAMPA-01\E-OPAMPA-01-PSpiceFiles\SCHEMATIC1\transient.sim ]
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   N1)    3.3133  (   N2)    1.3567  (   N3)     .2393  (   N5)    3.7462      
+
+(   N6)    3.7462  (  VCC)    5.0000  ( TEST)    1.0443  ( VIN+)    1.3000      
+
+( VIN-)    1.3000  (N16004)    1.0443 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V3        -4.440E-03
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   2.22E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 08/10/09 20:48:23 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-transient"  [ D:\Documents\TESIS\TRUNK\Design\E-OPAMPA-01\E-OPAMPA-01-PSpiceFiles\SCHEMATIC1\transient.sim ]
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .13
+
