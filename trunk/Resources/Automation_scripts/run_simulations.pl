@@ -120,6 +120,21 @@ for (my $j = 0 ; $j <= $#projects ; $j++ ) {
 #&read_schm; ##no implementada y pasarle el array de proyectos
 #&read_files; ##terminar la creacion de hashes antes
 
+#############################################################
+sub read_net {
+    my($local_net) = $_[0];
+    open FILE, "<", $local_net or die $!;
+    while (<FILE>){
+	print $_;
+    }
+    close FILE or die $!;
+}
+
+
+#&read_net("/home/facundo/Tesis/ejemplo_mio/comparador_3.cir");
+&read_net("/home/facundo/Tesis/ejemplo_mio/out_data");
+
+
 
 exit 1;
 
