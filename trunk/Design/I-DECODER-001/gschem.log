@@ -5,108 +5,13 @@ conditions; please see the COPYING file for more details.
 
 Read system-gafrc file [/etc/gEDA/system-gafrc]
 Did not find optional ~/.gEDA/gafrc file [/home/facundo/.gEDA/gafrc]
-Did not find optional local gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
+Read local gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
 Read system-gschemrc file [/etc/gEDA/system-gschemrc]
-Did not find optional ~/.gEDA/gschemrc file [/home/facundo/.gEDA/gschemrc]
+Library name [sym] already in use.  Using [sym<1>].
+Read ~/.gEDA/gschemrc file [/home/facundo/.gEDA/gschemrc]
 Did not find optional local gschemrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gschemrc]
 Read init scm file [/usr/share/gEDA/scheme/gschem.scm]
-Loading schematic [/home/facundo/tesis/fiocs/Design/I-DECODER-001/i-decoder-001]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Failed to open file '/home/facundo/tesis/fiocs/Design/I-DECODER-001/i-decoder-001': No such file or directory
-Saved [/home/facundo/tesis/fiocs/Design/I-DECODER-001/i-decoder-001]
-Saved as [/home/facundo/tesis/fiocs/Design/I-DECODER-001/i-decoder-001.sch]
-Executing guile script [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gschem.log]
-
-In unknown file:
-   ?: 0* [primitive-load "/home/facundo/tesis/fiocs/Design/I-DECODER-001/gschem.log"]
-
-Unknown file: Unbound variable: gEDA/gschem
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Read an old format sym/sch file!
-Please run g[sym|sch]update on:
-[Preview Buffer]
-Zoom too small!  Cannot zoom further.
-Saved as [/home/facundo/tesis/fiocs/Design/I-DECODER-001/inverter.sch]
-Saved as [/home/facundo/tesis/fiocs/Design/I-DECODER-001/2i_nand.sch]
-Saved as [/home/facundo/tesis/fiocs/Design/I-DECODER-001/4i_nand.sch]
-Saved [/home/facundo/tesis/fiocs/Design/I-DECODER-001/4i_nand.sch]
-Saved [/home/facundo/tesis/fiocs/Design/I-DECODER-001/4i_nand.sch]
-Saved as [/home/facundo/tesis/fiocs/Design/I-DECODER-001/5i_nand.sch]
-Saved as [/home/facundo/tesis/fiocs/Design/I-DECODER-001/4i_nand.sch]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Loading schematic [/home/facundo/tesis/fiocs/Design/I-DECODER-001/5i_nand.sch]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Saved as [/home/facundo/tesis/fiocs/Design/I-DECODER-001/7i_nand.sch]
-Saved [/home/facundo/tesis/fiocs/Design/I-DECODER-001/7i_nand.sch]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Loading schematic [/home/facundo/tesis/fiocs/Design/I-DECODER-001/5i_nand.sch]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Saved [/home/facundo/tesis/fiocs/Design/I-DECODER-001/5i_nand.sch]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Saved [/home/facundo/tesis/fiocs/Design/I-DECODER-001/4i_nand.sch]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Loading schematic [/home/facundo/tesis/fiocs/Design/I-DECODER-001/2i_nand.sch]
-Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc]
-Saved [/home/facundo/tesis/fiocs/Design/I-DECODER-001/2i_nand.sch]
+Loading schematic [/home/facundo/tesis/fiocs/Design/I-DECODER-001/i-decoder-001.sch]
+RC file [/home/facundo/tesis/fiocs/Design/I-DECODER-001/gafrc] already read in.
+More than one component found with name [inverter.sym]
+Saved [/home/facundo/tesis/fiocs/Design/I-DECODER-001/i-decoder-001.sch]
