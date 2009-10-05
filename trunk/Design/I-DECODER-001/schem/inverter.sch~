@@ -47,7 +47,7 @@ device=spice-subcircuit-LL
 T 44300 48100 5 10 1 1 0 0 1
 refdes=A1
 T 44300 47800 5 10 1 1 0 0 1
-model-name=cmos_inverter
+model-name=inverter
 }
 C 48200 46000 1 0 0 spice-subcircuit-IO-1.sym
 {
@@ -86,7 +86,7 @@ refdes=A2
 T 44200 46700 5 10 1 1 0 0 1
 model-name=CMOSN
 T 43400 46500 5 10 1 1 0 0 1
-file=model/nmos.model
+file=./model/nmos.model
 }
 C 43000 43300 1 0 0 spice-model-1.sym
 {
@@ -97,5 +97,5 @@ refdes=A3
 T 44300 43600 5 10 1 1 0 0 1
 model-name=CMOSP
 T 43500 43400 5 10 1 1 0 0 1
-file=model/pmos.model
+file=./model/pmos.model
 }

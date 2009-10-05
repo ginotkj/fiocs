@@ -51,3 +51,5 @@ T 39395 68195 8 10 0 1 0 0 1
 device=cmos_inverter
 T 595 995 8 10 1 1 0 0 1
 refdes=X?
+T -5 -5 8 10 1 1 0 0 1
+device=cmos_inverter
