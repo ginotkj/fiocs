@@ -1,7 +1,7 @@
 
-**** 10/08/09 20:54:33 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 10/08/09 21:27:58 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "FFD-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\ffd\bias.sim ] 
+ ** Profile: "FFD-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd-pspicefiles\ffd\bias.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -88,4 +88,4 @@ R_R2         0 N00250  1k
 **** RESUMING bias.cir ****
 .END
 
-WARNING -- Error in Open Alias File : D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\FFD\FFD.als
+WARNING -- Error in Open Alias File : D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-PSpiceFiles\FFD\FFD.als

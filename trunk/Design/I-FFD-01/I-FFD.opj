@@ -45,6 +45,10 @@
       (ActiveProfile ".\i-ffd-pspicefiles\ffd\bias.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (0
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
     (VPULSE
       (FullPartName "VPULSE.Normal")
       (LibraryName
@@ -70,9 +74,6 @@
       (FullPartName "VDC.Normal")
       (LibraryName
          "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
-    (0
-      (LibraryName "D:\ORCAD10.5_15.7\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (R
       (FullPartName "R.Normal")
@@ -100,24 +101,16 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn")
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd.dsn")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "FFD")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-FFD")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-NAND-2")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-NAND-3")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "Design Cache")
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd.dsn" "FFD")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
       (Path "PSpice Resources" "Simulation Profiles")
       (Path "Referenced Projects")
       (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "FFD" "FFD"))
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd.dsn" "FFD" "FFD"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

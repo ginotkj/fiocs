@@ -1,7 +1,7 @@
 
-**** 10/08/09 21:15:54 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 10/08/09 21:26:35 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "S-NAND-2-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\S-NAND-2\bias.sim ] 
+ ** Profile: "S-NAND-2-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\s-nand-2\bias.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -29,18 +29,104 @@
 
 **** INCLUDING S-NAND-2.net ****
 * source I-FFD
-R_R2         GND OUT  1M  
-M_M1         OUT GND N00209 N00209 MbreakN           
-R_R1         GND N00209  1M  
-M_M2         N00209 GND GND GND MbreakN           
-M_M3         OUT GND VDD VDD MbreakP           
-M_M4         OUT GND VDD VDD MbreakP           
-V_V1         VDD GND 5
+R_R2         0 OUT  1M  
+M_M1         OUT 0 N00209 N00209 MbreakN           
+R_R1         0 N00209  1M  
+M_M2         N00209 0 0 0 MbreakN           
+M_M3         OUT 0 VDD VDD MbreakP           
+M_M4         OUT 0 VDD VDD MbreakP           
+V_V1         VDD 0 5
 
 **** RESUMING bias.cir ****
 .END
+
+**** 10/08/09 21:26:35 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
-ERROR -- Node GND is floating
-ERROR -- Node OUT is floating
-ERROR -- Node N00209 is floating
-ERROR -- Node VDD is floating
+ ** Profile: "S-NAND-2-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\s-nand-2\bias.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MbreakN         MbreakP         
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    0               0            
+          KP   20.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    0               0            
+       XPART    0               0            
+
+
+**** 10/08/09 21:26:35 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "S-NAND-2-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\s-nand-2\bias.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT) 500.0E-09  (  VDD)    5.0000  (N00209) 693.3E-24 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.000E-04
+
+    TOTAL POWER DISSIPATION   2.50E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/08/09 21:26:35 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "S-NAND-2-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\s-nand-2\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+
