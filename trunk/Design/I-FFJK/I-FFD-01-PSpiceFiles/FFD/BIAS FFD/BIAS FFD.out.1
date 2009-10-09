@@ -1,0 +1,41 @@
+
+**** 10/02/09 19:26:43 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "FFD-BIAS FFD"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-01-PSpiceFiles\FFD\BIAS FFD.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "BIAS FFD.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\OrCAD 16\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\FFD.net" 
+
+
+
+**** INCLUDING FFD.net ****
+* source I-FFD-01
+.EXTERNAL INPUT C
+.EXTERNAL INPUT J
+.EXTERNAL INPUT K
+.EXTERNAL INPUT Q
+.EXTERNAL INPUT -Q
+
+**** RESUMING "BIAS FFD.cir" ****
+.END
+
+WARNING -- There are no devices in this circuit

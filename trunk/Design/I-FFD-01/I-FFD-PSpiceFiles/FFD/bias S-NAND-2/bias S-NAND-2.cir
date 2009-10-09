@@ -1,0 +1,18 @@
+** Profile: "FFD-bias S-NAND-2"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\FFD\bias S-NAND-2.sim ] 
+
+** Creating circuit file "bias S-NAND-2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-ffd-pspicefiles/i-ffd.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\FFD.net" 
+
+
+.END

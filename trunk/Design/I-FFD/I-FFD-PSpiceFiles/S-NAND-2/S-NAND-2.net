@@ -1,0 +1,8 @@
+* source I-FFD
+R_R2         GND OUT  1M  
+M_M1         OUT GND N00209 N00209 MbreakN           
+R_R1         GND N00209  1M  
+M_M2         N00209 GND GND GND MbreakN           
+M_M3         OUT GND VDD VDD MbreakP           
+M_M4         OUT GND VDD VDD MbreakP           
+V_V1         VDD GND 5
