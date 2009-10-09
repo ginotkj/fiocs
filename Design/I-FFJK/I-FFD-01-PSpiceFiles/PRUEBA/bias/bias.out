@@ -1,0 +1,122 @@
+
+**** 10/02/09 19:12:40 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "PRUEBA-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-01-PSpiceFiles\PRUEBA\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\OrCAD 16\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 30u 0 .1u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\PRUEBA.net" 
+
+
+
+**** INCLUDING PRUEBA.net ****
+* source I-FFD-01
+V_V1         N35803 0  
++PULSE 0v 5v 5u 5u 5u 5u 50u
+V_V2         N35820 0 5v
+U_DSTM1         STIM(1,1) $G_DPWR $G_DGND N35611 IO_STM IO_LEVEL=0 
++ 0 0
++ +1u 1
++REPEAT FOREVER
++ +.5uS 0
++  +.5uS 1
++ ENDREPEAT
+
+**** RESUMING bias.cir ****
+.END
+
+**** 10/02/09 19:12:40 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "PRUEBA-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-01-PSpiceFiles\PRUEBA\bias.sim ] 
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          
+        DRVL    0            
+        DRVH    0            
+       DtoA1 DtoA_STM        
+       DtoA2 DtoA_STM        
+       DtoA3 DtoA_STM        
+       DtoA4 DtoA_STM        
+       TPWRT  100.000000E+03 
+
+
+**** 10/02/09 19:12:40 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "PRUEBA-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-01-PSpiceFiles\PRUEBA\bias.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N35803)    0.0000 (N35820)    5.0000 
+
+
+
+ DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE
+
+
+(  N35611) : 0     
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/02/09 19:12:40 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "PRUEBA-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-01-PSpiceFiles\PRUEBA\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

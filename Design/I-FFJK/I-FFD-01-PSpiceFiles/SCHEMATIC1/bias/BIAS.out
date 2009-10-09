@@ -1,0 +1,130 @@
+
+**** 10/02/09 19:31:45 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-01-PSpiceFiles\SCHEMATIC1\BIAS.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "BIAS.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\OrCAD 16\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source I-FFD-01
+V_VDD         VDD 0 5
+M_M1         N41218 VDD N41234 0 MbreakN           
+M_M2         N41218 VDD VDD VDD MbreakP           
+M_M3         N41218 0 VDD VDD MbreakP           
+M_M4         N41234 0 0 0 MbreakN           
+
+**** RESUMING BIAS.cir ****
+.END
+
+**** 10/02/09 19:31:45 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-01-PSpiceFiles\SCHEMATIC1\BIAS.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MbreakN         MbreakP         
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    0               0            
+          KP   20.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 10/02/09 19:31:45 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-01-PSpiceFiles\SCHEMATIC1\BIAS.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VDD)    5.0000  (N41218)    5.0000 (N41234)    4.9990 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -1.503E-11
+
+    TOTAL POWER DISSIPATION   7.51E-11  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/02/09 19:31:45 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-BIAS"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-01-PSpiceFiles\SCHEMATIC1\BIAS.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

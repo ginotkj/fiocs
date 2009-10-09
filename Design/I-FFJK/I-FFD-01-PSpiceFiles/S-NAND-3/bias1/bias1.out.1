@@ -1,0 +1,55 @@
+
+**** 10/08/09 19:08:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "S-NAND-3-bias1"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd-01-pspicefiles\s-nand-3\bias1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\S-NAND-3.net" 
+
+
+
+**** INCLUDING S-NAND-3.net ****
+* source I-FFD-01
+.EXTERNAL INPUT IN1
+.EXTERNAL INPUT IN2
+.EXTERNAL INPUT IN3
+.EXTERNAL INPUT VDD
+.EXTERNAL INPUT OUT
+.EXTERNAL INPUT GND
+M_M1         OUT IN1 N45225 GND MbreakN           
+M_M2         N45225 IN2 N45964 GND MbreakN           
+M_M3         OUT IN1 VDD VDD MbreakP           
+M_M5         N45964 IN3 GND GND MbreakN           
+M_M4         OUT IN2 VDD VDD MbreakP           
+M_M6         OUT IN3 VDD VDD MbreakP           
+
+**** RESUMING bias1.cir ****
+.END
+
+ERROR -- Node OUT is floating
+ERROR -- Node IN1 is floating
+ERROR -- Node N45225 is floating
+ERROR -- Node GND is floating
+ERROR -- Node IN2 is floating
+ERROR -- Node N45964 is floating
+ERROR -- Node VDD is floating
+ERROR -- Node IN3 is floating

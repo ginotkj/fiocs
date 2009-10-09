@@ -1,0 +1,4 @@
+.ALIASES
+V_V1            V1(+=N14462 -=0 ) CN @I-FFD.SCHEMATIC1(sch_1):INS14426@SOURCE.VDC.Normal(chips)
+_    _(GND_0=0)
+.ENDALIASES

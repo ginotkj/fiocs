@@ -1,4 +1,4 @@
-(ExpressProject "I-COMPARADOR-01"
+(ExpressProject "I-FFD-01"
   (ProjectVersion "19981106")
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
@@ -22,7 +22,7 @@
            "C:\Program Files\OrCAD 16\tools\capture\library\pspice\special.olb")
         (Type "Schematic Library")))
     (NoModify)
-    (File "i-comparador-01.dsn"
+    (File "i-ffd-01.dsn"
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
@@ -32,45 +32,76 @@
     (ANNOTATE_Reset_References_to_1 "FALSE")
     (ANNOTATE_No_Page_Number_Change "TRUE")
     (ANNOTATE_Property_Combine "{Value}{Source Package}")
-    (PSPICE_Regenerate_Netlist_Flag "FALSE")
-    (RootChangedForceReNetlist "x"))
+    (RootChangedForceReNetlist "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
   (Folder "Outputs"
-    (File ".\i-comparador-01-pspicefiles\schematic1\schematic1.net"
+    (File ".\i-ffd-01-pspicefiles\prueba\prueba.net"
       (Type "Report"))
-    (File ".\i-comparador-01-pspicefiles\schematic2\schematic2.net"
+    (File ".\i-ffd-01-pspicefiles\ffd\ffd.net"
       (Type "Report"))
-    (File ".\i-comparador-01-pspicefiles\comp-nor\comp-nor.net"
+    (File ".\i-ffd-01-pspicefiles\compuertas\compuertas.net"
       (Type "Report"))
-    (File ".\i-comparador-01-pspicefiles\comp-01\comp-01.net"
+    (File ".\i-ffd-01-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (File ".\i-ffd-01-pspicefiles\s-nand-3\s-nand-3.net"
       (Type "Report")))
   (Folder "PSpice Resources"
-    (Folder "Model Libraries"
-      (Sort User)
-      (File ".\i-comparador-01-pspicefiles\i-comparador-01.lib"
-        (Type "PSpiceLibrary")
-        (DisplayName ".\i-comparador-01-pspicefiles\i-comparador-01.lib")))
+    (Folder "Model Libraries")
     (Folder "Stimulus Files")
     (Folder "Include Files")
     (Folder "Simulation Profiles"
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-comparador-01-pspicefiles\comp-nor\bias.sim"
-        (DisplayName "COMP-NOR-bias")
+         ".\i-ffd-01-pspicefiles\s-nand-3\bias.sim"
+        (DisplayName "S-NAND-3-bias")
         (Type "PSpice Profile"))
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-comparador-01-pspicefiles\comp-01\bias.sim"
-        (DisplayName "COMP-01-bias")
+         ".\i-ffd-01-pspicefiles\s-nand-3\bias1.sim"
+        (DisplayName "S-NAND-3-bias1")
         (Type "PSpice Profile"))
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-comparador-01-pspicefiles\comp-01\transient.sim"
-        (DisplayName "COMP-01-transient")
+         ".\i-ffd-01-pspicefiles\ffd\transitorio.sim"
+        (DisplayName "FFD-transitorio")
         (Type "PSpice Profile"))
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-comparador-01-pspicefiles\comp-nor\transient.sim"
-        (DisplayName "COMP-NOR-transient")
+         ".\i-ffd-01-pspicefiles\ffd\bias.sim"
+        (DisplayName "FFD-bias")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-comparador-01-pspicefiles\comp-01\transient.sim")))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-01-pspicefiles\s-nand-3\bias s-nand-3.sim"
+        (DisplayName "S-NAND-3-bias S-NAND-3")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-ffd-01-pspicefiles\ffd\bias.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (PORTRIGHT-R
+      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-L
+      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (DigClock
+      (FullPartName "DigClock.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
     (MbreakP
       (FullPartName "MbreakP.Normal")
       (LibraryName
@@ -80,15 +111,6 @@
       (FullPartName "MbreakN.Normal")
       (LibraryName
          "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
-      (DeviceIndex "0"))
-    (QbreakN
-      (FullPartName "QbreakN.Normal")
-      (LibraryName
-         "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
-      (DeviceIndex "0"))
-    (R
-      (FullPartName "R.Normal")
-      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
       (DeviceIndex "0"))
     (C
       (FullPartName "C.Normal")
@@ -101,32 +123,22 @@
     (VSTIM
       (FullPartName "VSTIM.Normal")
       (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
-      (DeviceIndex "0"))
-    (VDC
-      (FullPartName "VDC.Normal")
-      (LibraryName "..\..\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0")))
-  (LastUsedLibraryBrowseDirectory "LIBRARY\PSPICE")
+  (LastUsedLibraryBrowseDirectory
+     "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice")
   (MPSSessionName "FABRICIO")
   (GlobalState
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01.dsn")
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd-01.dsn")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01.dsn"
-         "COMP-01")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01.dsn"
-         "COMP-NOR")
-      (Path "Design Resources" "Library")
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd-01.dsn" "Design Cache")
       (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01.dsn"
-         "COMP-NOR" "PAGE1"))
+      (Select "Design Resources" "Library"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 360 0 972"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 692 0 994"))
       (Tab 0))))
