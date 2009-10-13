@@ -1,4 +1,4 @@
-** Profile: "S-NAND-2-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\s-nand-2\bias.sim ] 
+** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\SCHEMATIC1\bias.sim ] 
 
 ** Creating circuit file "bias.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -13,7 +13,7 @@
 *Analysis directives: 
 .TRAN  0 100m 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
-.INC "..\S-NAND-2.net" 
+.INC "..\SCHEMATIC1.net" 
 
 
 .END

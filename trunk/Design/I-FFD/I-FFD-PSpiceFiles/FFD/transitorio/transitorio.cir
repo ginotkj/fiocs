@@ -1,6 +1,6 @@
-** Profile: "S-NAND-2-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\s-nand-2\bias.sim ] 
+** Profile: "FFD-transitorio"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\ffd\transitorio.sim ] 
 
-** Creating circuit file "bias.cir" 
+** Creating circuit file "transitorio.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
 
 *Libraries: 
@@ -11,9 +11,9 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 100m 0 
+.TRAN  0 100m 0 .1m 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
-.INC "..\S-NAND-2.net" 
+.INC "..\FFD.net" 
 
 
 .END

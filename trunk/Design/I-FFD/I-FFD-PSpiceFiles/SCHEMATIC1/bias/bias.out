@@ -1,7 +1,7 @@
 
-**** 10/13/09 11:42:57 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 10/13/09 11:55:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "S-NAND-2-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\s-nand-2\bias.sim ] 
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\SCHEMATIC1\bias.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -25,40 +25,45 @@
 *Analysis directives: 
 .TRAN  0 100m 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
-.INC "..\S-NAND-2.net" 
+.INC "..\SCHEMATIC1.net" 
 
 
 
-**** INCLUDING S-NAND-2.net ****
+**** INCLUDING SCHEMATIC1.net ****
 * source I-FFD
-M_M1         N00123 N02208 N00209 N00209 CMOSN  
+V_V3         N09649 0 5
+M_NAND_M2         NAND_N05674 N09649 NAND_N05700 NAND_N05700 CMOSN  
 + L=.18u  
 + W=.6u         
-M_M2         N00209 N00147 0 0 CMOSN  
+M_NAND_M3         N09729 N09649 N09649 N09649 CMOSP  
++ L=.18u  
++ W=1.2u         
+M_NAND_M5         N09729 N09600 N09649 N09649 CMOSP  
++ L=.18u  
++ W=1.2u         
+M_NAND_M4         N09729 N09649 N09649 N09649 CMOSP  
++ L=.18u  
++ W=1.2u         
+M_NAND_M6         NAND_N05700 N09600 0 0 CMOSN  
 + L=.18u  
 + W=.6u         
-V_V2         N02208 0  
+M_NAND_M1         N09729 N09649 NAND_N05674 NAND_N05674 CMOSN  
++ L=.18u  
++ W=.6u         
+R_R1         N09729 0  100k  
+V_V2         N09600 0  
 +PULSE 0 5 9m 1m 1m 9m 20m
-R_R1         0 N02208  100M  
-M_M3         N00123 N02208 N00147 N00147 CMOSP  
-+ L=.18u  
-+ W=1.2u         
-M_M4         N00123 N00147 N00147 N00147 CMOSP  
-+ L=.18u  
-+ W=1.2u         
-R_R2         0 N00147  100M  
-V_V3         N00147 0 5
 
 **** RESUMING bias.cir ****
 .END
 
-WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
-WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
-**** 10/13/09 11:42:57 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+WARNING -- Mosfet M_NAND_M2, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_NAND_M2, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_NAND_M3, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_NAND_M3, model CMOSP: Ps = 0 is less than W
+**** 10/13/09 11:55:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "S-NAND-2-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\s-nand-2\bias.sim ] 
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\SCHEMATIC1\bias.sim ] 
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -171,13 +176,13 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
        CJSWG  330.000000E-12  422.000000E-12 
 
 
-WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
-WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
-**** 10/13/09 11:42:57 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+WARNING -- Mosfet M_NAND_M2, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_NAND_M2, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_NAND_M3, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_NAND_M3, model CMOSP: Ps = 0 is less than W
+**** 10/13/09 11:55:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "S-NAND-2-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\s-nand-2\bias.sim ] 
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\SCHEMATIC1\bias.sim ] 
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -190,7 +195,9 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00123)    5.0000 (N00147)    5.0000 (N00209) 329.4E-09 (N02208)    0.0000 
+(N09600)    0.0000 (N09649)    5.0000 (N09729)    4.9346 (NAND_N05674)    4.8727
+
+(NAND_N05700)    4.8527               
 
 
 
@@ -198,18 +205,18 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
+    V_V3        -4.935E-05
     V_V2         0.000E+00
-    V_V3        -5.000E+01
 
-    TOTAL POWER DISSIPATION   2.50E+02  WATTS
+    TOTAL POWER DISSIPATION   2.47E-04  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 10/13/09 11:42:57 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 10/13/09 11:55:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "S-NAND-2-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\s-nand-2\bias.sim ] 
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\SCHEMATIC1\bias.sim ] 
 
 
  ****     JOB STATISTICS SUMMARY
@@ -219,5 +226,5 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =         .05
+  Total job time (using Solver 1)   =         .09
 
