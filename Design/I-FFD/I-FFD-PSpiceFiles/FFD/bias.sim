@@ -4,7 +4,7 @@
 @General:
 ProfileName= "bias" 
 ProfileFile= "bias.sim" 
-Connectivity= "S-NAND-2.net" 
+Connectivity= "FFD.net" 
 NetlistFile= "bias.cir" 
 DataFile= "bias.dat" 
 OutFile= "bias.out" 
@@ -14,7 +14,7 @@ Notes=
 @End General
 @Analysis: 0 0
 +0 0 0 
-+0 "100m" 
++0 "1000ns" 
 +1 "" 
 +2 "0" 
 +3 "" 
@@ -43,7 +43,7 @@ Notes=
 +7 "" 
 @End Analysis
 @Analysis: 3 1
-+1 0 0
++0 0 0
 +0 "" 
 +1 "" 
 +2 "" 

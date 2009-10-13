@@ -34,15 +34,21 @@
     (ANNOTATE_Reset_References_to_1 "FALSE")
     (ANNOTATE_No_Page_Number_Change "TRUE")
     (ANNOTATE_Property_Combine "{Value}{Source Package}")
-    (PSPICE_Regenerate_Netlist_Flag "TRUE")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
     (RootChangedForceReNetlist "x"))
   (Folder "Outputs"
     (File ".\i-ffd-pspicefiles\s-nand-2\s-nand-2.net"
       (Type "Report"))
     (File ".\i-ffd-pspicefiles\ffd\ffd.net"
+      (Type "Report"))
+    (File ".\i-ffd-pspicefiles\schematic1\schematic1.net"
       (Type "Report")))
   (Folder "PSpice Resources"
-    (Folder "Model Libraries")
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\i-ffd-pspicefiles\i-ffd.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\i-ffd-pspicefiles\i-ffd.lib")))
     (Folder "Stimulus Files")
     (Folder "Include Files")
     (Folder "Simulation Profiles"
@@ -54,20 +60,31 @@
          ".\i-ffd-pspicefiles\ffd\bias.sim"
         (DisplayName "FFD-bias")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-ffd-pspicefiles\ffd\bias.sim")))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\ffd\transitorio.sim"
+        (DisplayName "FFD-transitorio")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\s-nand-2\bias-schematic.sim"
+        (DisplayName "S-NAND-2-bias-schematic")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\s-ffd\prueba.sim"
+        (DisplayName "S-FFD-prueba")
+        (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
-    (0
-      (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
     (R
       (FullPartName "R.Normal")
       (LibraryName
          "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
       (DeviceIndex "0"))
-    (VPULSE
-      (FullPartName "VPULSE.Normal")
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (0
       (LibraryName
          "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
@@ -82,6 +99,11 @@
     (PORTRIGHT-R
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
     (GND
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
@@ -95,10 +117,6 @@
       (LibraryName
          "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
       (DeviceIndex "0"))
-    (C
-      (FullPartName "C.Normal")
-      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
-      (DeviceIndex "0"))
     (L
       (FullPartName "L.Normal")
       (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
@@ -111,51 +129,10 @@
   (MPSSessionName "FABRICIO")
   (GlobalState
     (FileView
-      (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "FFD")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-FFD")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-NAND-2")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-NAND-3")
-      (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "FFD" "FFD"))
-    (HierarchyView
-      (Path "FFD")
-      (Path "FFD" "FFD (S-FFD)")
-      (Path "FFD" "FFD (S-FFD)" "NAND (S-NAND-2)")
-      (Path "FFD" "FFD (S-FFD)" "NAND (S-NAND-3)")
-      (Path "FFD" "FFD (S-FFD)" "NAND1 (S-NAND-2)")
-      (Path "FFD" "FFD (S-FFD)" "NAND2 (S-NAND-2)")
-      (Path "FFD" "FFD (S-FFD)" "NAND3 (S-NAND-2)")
-      (Path "FFD" "FFD (S-FFD)" "NAND4 (S-NAND-2)"))
+      (Path "Design Resources"))
+    (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 283 0 969"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 250 1895 250 948")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/"))
-      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD\I-FFD.DSN")
-      (Schematic "FFD")
-      (Page "FFD"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 275 1920 275 973")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/FFD"))
-      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD\I-FFD.DSN")
-      (Schematic "S-FFD")
-      (Page "S-FFD"))))
+        (Placement "44 2 3 -1 -1 -8 -30 0 283 0 969"))
+      (Tab 0))))
