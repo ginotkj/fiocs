@@ -365,7 +365,7 @@ refdes=A2
 T 51300 45000 5 10 1 1 0 0 1
 model-name=nmos4
 T 50500 44800 5 10 1 1 0 0 1
-file=../model/nmos.model
+file=../model/nmos4.model
 }
 C 50000 43700 1 0 0 spice-model-1.sym
 {
@@ -376,5 +376,5 @@ refdes=A3
 T 51300 44000 5 10 1 1 0 0 1
 model-name=pmos4
 T 50500 43800 5 10 1 1 0 0 1
-file=../model/pmos.model
+file=../model/pmos4.model
 }

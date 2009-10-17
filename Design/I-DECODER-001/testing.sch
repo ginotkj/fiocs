@@ -19,7 +19,7 @@ device=include
 T 54700 50300 5 10 1 1 0 0 1
 refdes=A1
 T 55100 50000 5 10 1 1 0 0 1
-file=simul.cmd
+file=testing.cmd
 }
 C 49700 50000 0 180 0 inverter.sym
 {
@@ -41,7 +41,7 @@ device=vpulse
 T 44800 48450 5 10 0 0 0 0 1
 footprint=none
 T 44800 47850 5 10 1 1 0 0 1
-value=pulse 6 6.9 1u 500n 500n 10u 20u dc 0
+value=pulse 0 5 1u 500n 500n 10u 20u dc 0
 }
 C 53900 46000 0 0 0 2i_nand.sym
 {
@@ -105,7 +105,7 @@ device=vpulse
 T 44800 46350 5 10 0 0 0 0 1
 footprint=none
 T 44800 45750 5 10 1 1 0 0 1
-value=pulse 4 4.9 1u 500n 500n 40u 80u dc 0
+value=pulse 0 5 1u 500n 500n 40u 80u dc 0
 }
 C 44100 43200 0 0 0 vpulse-1.sym
 {
@@ -116,7 +116,7 @@ device=vpulse
 T 44800 44250 5 10 0 0 0 0 1
 footprint=none
 T 44800 43650 5 10 1 1 0 0 1
-value=pulse 2 2.9 1u 500n 500n 160u 320u dc 0
+value=pulse 0 5 1u 500n 500n 160u 320u dc 0
 }
 C 40700 45400 0 0 0 vpulse-1.sym
 {
@@ -127,7 +127,7 @@ device=vpulse
 T 41400 46450 5 10 0 0 0 0 1
 footprint=none
 T 41400 45850 5 10 1 1 0 0 1
-value=pulse 5 5.9 1u 500n 500n 20u 40u dc 0
+value=pulse 0 5 1u 500n 500n 20u 40u dc 0
 }
 C 40700 43200 0 0 0 vpulse-1.sym
 {
@@ -138,7 +138,7 @@ device=vpulse
 T 41400 44250 5 10 0 0 0 0 1
 footprint=none
 T 41400 43650 5 10 1 1 0 0 1
-value=pulse 3 3.9 1u 500n 500n 80u 160u dc 0
+value=pulse 0 5 1u 500n 500n 80u 160u dc 0
 }
 C 44100 41000 0 0 0 vpulse-1.sym
 {
@@ -149,7 +149,7 @@ device=vpulse
 T 44800 42050 5 10 0 0 0 0 1
 footprint=none
 T 44800 41450 5 10 1 1 0 0 1
-value=pulse 0 0.9 1u 500n 500n 640u 1280u dc 0
+value=pulse 0 5 1u 500n 500n 640u 1280u dc 0
 }
 C 40700 41000 0 0 0 vpulse-1.sym
 {
@@ -160,7 +160,7 @@ device=vpulse
 T 41400 42050 5 10 0 0 0 0 1
 footprint=none
 T 41400 41450 5 10 1 1 0 0 1
-value=pulse 1 1.9 1u 500n 500n 320u 640u dc 0
+value=pulse 0 5 1u 500n 500n 320u 640u dc 0
 }
 C 40900 47100 0 0 0 gnd-1.sym
 C 44300 47100 0 0 0 gnd-1.sym
