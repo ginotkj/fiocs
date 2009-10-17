@@ -7,7 +7,7 @@ set hcopyheight=600
 op
 destroy all
 
-tran 100ns 1.3ms 0
+tran 1ns 1.3ms 0
 * tran 1ns 5us 0
 
 hardcopy vins.ps v(v2) v(v3) v(v4) v(v5) v(v6) v(v7) v(v8) ylimit 0 7 xlimit 0 1.3m xlabel time ylabel volts title INPUTS

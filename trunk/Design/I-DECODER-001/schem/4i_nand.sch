@@ -224,7 +224,7 @@ refdes=A3
 T 42300 46500 5 10 1 1 0 0 1
 model-name=pmos4
 T 41500 46300 5 10 1 1 0 0 1
-file=../model/pmos.model
+file=../model/pmos4.model
 }
 C 41000 47200 1 0 0 spice-model-1.sym
 {
@@ -235,7 +235,7 @@ refdes=A2
 T 42300 47500 5 10 1 1 0 0 1
 model-name=nmos4
 T 41500 47300 5 10 1 1 0 0 1
-file=../model/nmos.model
+file=../model/nmos4.model
 }
 C 41000 48400 1 0 0 spice-subcircuit-LL-1.sym
 {
