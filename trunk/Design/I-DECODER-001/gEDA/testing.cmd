@@ -10,7 +10,7 @@ set combplot
 * destroy all
 
 * tran 10ns 200us 0
-tran 10ns 1.3ms 0
+tran 0.01ns 13us 0
 * tran 1ns 5us 0
 
 * hardcopy vins.ps v(v2) v(v3) v(v4) v(v5) v(v6) v(v7) v(v8) ylimit 0 7 xlimit 0 1.3m xlabel time ylabel volts title INPUTS
