@@ -199,19 +199,19 @@ M10 1 12 7 7 pmos4  l=1u w=3u
 *^^^^^^^^  End of included SPICE model from model/5i_nand.sch.cir ^^^^^^^^
 *
 *==============  Begin SPICE netlist of main design ============
-V8 V8 0 pulse 0 5 1u 500n 500n 640u 1280u dc 0
-V7 V7 0 pulse 0 5 1u 500n 500n 320u 640u dc 0
+V8 V8 0 pulse 0 5 7n 1n 1n 6.4u 12.8u dc 0
+V7 V7 0 pulse 0 5 6n 1n 1n 3.2u 6.4u dc 0
 C2 0 OUT2 47pF  
 .INCLUDE testing.cmd
-V4 V4 0 pulse 0 5 1u 500n 500n 40u 80u dc 0
-V3 V3 0 pulse 0 5 1u 500n 500n 20u 40u dc 0
+V4 V4 0 pulse 0 5 3n 1n 1n 400n 800n dc 0
+V3 V3 0 pulse 0 5 2n 1n 1n 200n 400n dc 0
 X2 OUT2 Vcc 0 V2 V3 V4 V5 V6 5nand1
 V1 Vcc 0 DC 5V
-V6 V6 0 pulse 0 5 1u 500n 500n 160u 320u dc 0
+V6 V6 0 pulse 0 5 5n 1n 1n 1.6u 3.2u dc 0
 X5 OUT5 Vcc 0 V2 V3 V4 V5 V6 V7 V8 7nand1
 X4 OUT4 Vcc 0 V2 V3 2nand1
 X3 OUT3 Vcc 0 V2 V3 V4 V5 4nand1
-V2 V2 0 pulse 0 5 10n 10n 1u 10u 20u dc 0
+V2 V2 0 pulse 0 5 1n 1n 1n 100n 200n dc 0
 X1 OUT1 Vcc 0 V2 cmos_inverter
 R5 0 Vcc 1Meg  
 R4 0 Vcc 1Meg  
@@ -222,5 +222,5 @@ C4 0 OUT4 47pF
 C3 0 OUT3 47pF  
 R2 0 Vcc 1Meg  
 C1 0 OUT1 47pF  
-V5 V5 0 pulse 0 5 1u 500n 500n 80u 160u dc 0
+V5 V5 0 pulse 0 5 4n 1n 1n 800n 1.6u dc 0
 .end

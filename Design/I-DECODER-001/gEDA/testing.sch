@@ -41,7 +41,7 @@ device=vpulse
 T 44800 48450 5 10 0 0 0 0 1
 footprint=none
 T 44800 47850 5 10 1 1 0 0 1
-value=pulse 0 5 10n 10n 1u 10u 20u dc 0
+value=pulse 0 5 1n 1n 1n 100n 200n dc 0
 }
 C 53900 46000 0 0 0 2i_nand.sym
 {
@@ -105,7 +105,7 @@ device=vpulse
 T 44800 46350 5 10 0 0 0 0 1
 footprint=none
 T 44800 45750 5 10 1 1 0 0 1
-value=pulse 0 5 1u 500n 500n 40u 80u dc 0
+value=pulse 0 5 3n 1n 1n 400n 800n dc 0
 }
 C 44100 43200 0 0 0 vpulse-1.sym
 {
@@ -116,7 +116,7 @@ device=vpulse
 T 44800 44250 5 10 0 0 0 0 1
 footprint=none
 T 44800 43650 5 10 1 1 0 0 1
-value=pulse 0 5 1u 500n 500n 160u 320u dc 0
+value=pulse 0 5 5n 1n 1n 1.6u 3.2u dc 0
 }
 C 40700 45400 0 0 0 vpulse-1.sym
 {
@@ -127,7 +127,7 @@ device=vpulse
 T 41400 46450 5 10 0 0 0 0 1
 footprint=none
 T 41400 45850 5 10 1 1 0 0 1
-value=pulse 0 5 1u 500n 500n 20u 40u dc 0
+value=pulse 0 5 2n 1n 1n 200n 400n dc 0
 }
 C 40700 43200 0 0 0 vpulse-1.sym
 {
@@ -138,7 +138,7 @@ device=vpulse
 T 41400 44250 5 10 0 0 0 0 1
 footprint=none
 T 41400 43650 5 10 1 1 0 0 1
-value=pulse 0 5 1u 500n 500n 80u 160u dc 0
+value=pulse 0 5 4n 1n 1n 800n 1.6u dc 0
 }
 C 44100 41000 0 0 0 vpulse-1.sym
 {
@@ -149,7 +149,7 @@ device=vpulse
 T 44800 42050 5 10 0 0 0 0 1
 footprint=none
 T 44800 41450 5 10 1 1 0 0 1
-value=pulse 0 5 1u 500n 500n 640u 1280u dc 0
+value=pulse 0 5 7n 1n 1n 6.4u 12.8u dc 0
 }
 C 40700 41000 0 0 0 vpulse-1.sym
 {
@@ -160,7 +160,7 @@ device=vpulse
 T 41400 42050 5 10 0 0 0 0 1
 footprint=none
 T 41400 41450 5 10 1 1 0 0 1
-value=pulse 0 5 1u 500n 500n 320u 640u dc 0
+value=pulse 0 5 6n 1n 1n 3.2u 6.4u dc 0
 }
 C 40900 47100 0 0 0 gnd-1.sym
 C 44300 47100 0 0 0 gnd-1.sym
