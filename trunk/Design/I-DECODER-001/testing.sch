@@ -41,7 +41,7 @@ device=vpulse
 T 44800 48450 5 10 0 0 0 0 1
 footprint=none
 T 44800 47850 5 10 1 1 0 0 1
-value=pulse 0 5 1u 500n 500n 10u 20u dc 0
+value=pulse 0 5 10n 10n 1u 10u 20u dc 0
 }
 C 53900 46000 0 0 0 2i_nand.sym
 {
