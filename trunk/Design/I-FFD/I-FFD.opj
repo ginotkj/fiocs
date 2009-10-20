@@ -131,7 +131,8 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Select "Design Resources"))
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
