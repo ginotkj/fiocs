@@ -1,12 +1,15 @@
 .control
 set hcopydevtype=postscript
 set hcopypscolor=true
-set hcopywidth=1000
-set hcopyheight=200
+set hcopywidth=1200
+set hcopyheight=500
+set filetype=binary
+set combplot
 
-op
-destroy all
+* op
+* destroy all
 
+* tran 10ns 200us 0
 tran 10ns 1.3ms 0
 * tran 1ns 5us 0
 
@@ -24,7 +27,13 @@ tran 10ns 1.3ms 0
 * hardcopy vo3.ps v(out3)
 * hardcopy vo4.ps v(out4)
 * hardcopy vo5.ps v(out5)
-hardcopy 2nand.ps v(v2) v(v3) v(out4) ylimit 0 7 xlimit 0 1.3m xlabel time ylabel volts title INPUTS
+* hardcopy inverter.ps v(v2) v(out1) ylimit 0 5 xlimit 0 200u xlabel time ylabel volts title INPUTS
+* hardcopy 2nand.ps v(v2) v(v3) v(out4) ylimit 0 5 xlimit 0 200u xlabel time ylabel volts title INPUTS
+* hardcopy 4nand.ps v(v2) v(v3) v(v4) v(v5) v(out3) ylimit 0 5 xlimit 0 350u xlabel time ylabel volts title INPUTS
+* hardcopy 5nand.ps v(v2) v(v3) v(v4) v(v5) v(v6) v(out2) ylimit 0 5 xlimit 0 650u xlabel time ylabel volts title INPUTS
+* hardcopy 7nand.ps v(v2) v(v3) v(v4) v(v5) v(v6) v(v7) v(v8) v(out5) ylimit 0 5 xlimit 0 1.3m xlabel time ylabel volts title INPUTS
 
-plot tran v(vout4) ylimit 0 7 xlimit 0 1.3m xlabel time ylabel volts title INPUTS
+write testing.bin
+* print all
+* plot tran v(out4) ylimit 0 7 xlimit 0 1.3m xlabel time ylabel volts title INPUTS
 .endc

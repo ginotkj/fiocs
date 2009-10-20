@@ -24,19 +24,19 @@
 *^^^^^^^^  End of included SPICE model from ../model/nmos4.model ^^^^^^^^
 *
 *==============  Begin SPICE netlist of main design ============
-M13 8 16 7 7 pmos4  l=1u w=10u
-M12 13 16 2 2 nmos4  l=3u w=1u
-M11 8 15 1 2 nmos4  l=3u w=1u
-M14 8 15 7 7 pmos4  l=1u w=10u
-M9 12 14 13 2 nmos4  l=3u w=1u
-M8 11 10 12 2 nmos4  l=3u w=1u
-M7 5 9 11 2 nmos4  l=3u w=1u
-M6 8 10 7 7 pmos4  l=1u w=10u
-M5 8 9 7 7 pmos4  l=1u w=10u
-M4 8 6 7 7 pmos4  l=1u w=10u
-M3 8 4 7 7 pmos4  l=1u w=10u
-M2 3 6 5 2 nmos4  l=3u w=1u
-M1 1 4 3 2 nmos4  l=3u w=1u
-M10 8 14 7 7 pmos4  l=1u w=10u
+M13 8 16 7 7 pmos4  l=1u w=3u
+M12 13 16 2 2 nmos4  l=1u w=1u
+M11 8 15 1 2 nmos4  l=1u w=1u
+M14 8 15 7 7 pmos4  l=1u w=3u
+M9 12 14 13 2 nmos4  l=1u w=1u
+M8 11 10 12 2 nmos4  l=1u w=1u
+M7 5 9 11 2 nmos4  l=1u w=1u
+M6 8 10 7 7 pmos4  l=1u w=3u
+M5 8 9 7 7 pmos4  l=1u w=3u
+M4 8 6 7 7 pmos4  l=1u w=3u
+M3 8 4 7 7 pmos4  l=1u w=3u
+M2 3 6 5 2 nmos4  l=1u w=1u
+M1 1 4 3 2 nmos4  l=1u w=1u
+M10 8 14 7 7 pmos4  l=1u w=3u
 .ends 7nand1
 *******************************

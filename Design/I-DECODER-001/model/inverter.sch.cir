@@ -24,7 +24,7 @@
 *^^^^^^^^  End of included SPICE model from ../model/pmos4.model ^^^^^^^^
 *
 *==============  Begin SPICE netlist of main design ============
-M2 1 2 4 4 nmos4  l=3u w=1u
-M1 1 2 3 3 pmos4  l=1u w=10u
+M2 1 2 4 4 nmos4  l=1u w=1u
+M1 1 2 3 3 pmos4  l=1u w=3u
 .ends cmos_inverter
 *******************************
