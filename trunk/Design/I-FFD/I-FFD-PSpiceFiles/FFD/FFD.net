@@ -24,10 +24,10 @@ M_FFD_NAND-3_M3         FFD_Y FFD_X N00095 N00095 CMOSP
 M_FFD_NAND-3_M5         FFD_Y FFD_N00861 N00095 N00095 CMOSP  
 + L=.5u  
 + W=5u         
-R_FFD_NAND-3_R2         N07146 0  10Meg  
 M_FFD_NAND-3_M4         FFD_Y N07146 N00095 N00095 CMOSP  
 + L=.5u  
 + W=5u         
+R_FFD_NAND-3_R2         N07146 0  10Meg  
 M_FFD_NAND-3_M6         FFD_NAND-3_N05700 FFD_N00861 0 0 CMOSN  
 + L=.5u  
 + W=.8u         
@@ -98,6 +98,6 @@ V_V1         N00095 0 5
 R_R1         N00668 N00095  100k  
 R_R2         N00649 N00095  100k  
 V_V3         N07146 0  
-+PULSE 0 5 5m 1m 1m 5m 20m
++PULSE 0 5 5n 1n 1n 5n 20n
 V_V2         N04926 0  
-+PULSE 5 0 0 1m 1m 20m 40m
++PULSE 5 0 0 1n 1n 20n 40n

@@ -71,7 +71,8 @@
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-ffd-pspicefiles\s-ffd\prueba.sim"
         (DisplayName "S-FFD-prueba")
-        (Type "PSpice Profile"))))
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-ffd-pspicefiles\ffd\transitorio.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (R
@@ -129,7 +130,8 @@
   (MPSSessionName "FABRICIO")
   (GlobalState
     (FileView
-      (Path "Design Resources"))
+      (Path "Design Resources")
+      (Select "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

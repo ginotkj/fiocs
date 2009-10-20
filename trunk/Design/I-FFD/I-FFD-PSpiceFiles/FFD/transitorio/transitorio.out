@@ -1,5 +1,5 @@
-
-**** 10/13/09 20:12:57 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+**** 10/20/09 18:35:33 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
  ** Profile: "FFD-transitorio"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\ffd\transitorio.sim ] 
 
@@ -23,7 +23,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 100m 0 .1m 
+.TRAN  0 100n 0 .1n 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\FFD.net" 
 
@@ -56,10 +56,10 @@ M_FFD_NAND-3_M3         FFD_Y FFD_X N00095 N00095 CMOSP
 M_FFD_NAND-3_M5         FFD_Y FFD_N00861 N00095 N00095 CMOSP  
 + L=.5u  
 + W=5u         
-R_FFD_NAND-3_R2         N07146 0  10Meg  
 M_FFD_NAND-3_M4         FFD_Y N07146 N00095 N00095 CMOSP  
 + L=.5u  
 + W=5u         
+R_FFD_NAND-3_R2         N07146 0  10Meg  
 M_FFD_NAND-3_M6         FFD_NAND-3_N05700 FFD_N00861 0 0 CMOSN  
 + L=.5u  
 + W=.8u         
@@ -130,9 +130,9 @@ V_V1         N00095 0 5
 R_R1         N00668 N00095  100k  
 R_R2         N00649 N00095  100k  
 V_V3         N07146 0  
-+PULSE 0 5 5m 1m 1m 5m 20m
++PULSE 0 5 5n 1n 1n 5n 20n
 V_V2         N04926 0  
-+PULSE 5 0 0 1m 1m 20m 40m
++PULSE 5 0 0 1n 1n 20n 40n
 
 **** RESUMING transitorio.cir ****
 .END
@@ -141,7 +141,7 @@ WARNING -- Mosfet M_FFD_NAND_M1, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_FFD_NAND_M1, model CMOSN: Ps = 0 is less than W
 WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
-**** 10/13/09 20:12:57 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 10/20/09 18:35:33 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
  ** Profile: "FFD-transitorio"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\ffd\transitorio.sim ] 
 
@@ -260,7 +260,7 @@ WARNING -- Mosfet M_FFD_NAND_M1, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_FFD_NAND_M1, model CMOSN: Ps = 0 is less than W
 WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
-**** 10/13/09 20:12:57 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 10/20/09 18:35:33 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
  ** Profile: "FFD-transitorio"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\ffd\transitorio.sim ] 
 
@@ -303,7 +303,7 @@ WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
 
           JOB CONCLUDED
 
-**** 10/13/09 20:12:57 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 10/20/09 18:35:33 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
  ** Profile: "FFD-transitorio"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\ffd\transitorio.sim ] 
 
@@ -315,5 +315,5 @@ WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =        1.22
+  Total job time (using Solver 1)   =        1.55
 
