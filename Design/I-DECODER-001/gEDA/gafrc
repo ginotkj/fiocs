@@ -1,6 +1,6 @@
 (component-library "./sym")  ; shows the symbols in the library
-;; (component-library-search "./sym")
-;; (source-library "./model")
+;; (component-library-search "./schem")
+(source-library "./schem") ; shows schematics for symbols
 
 ;; (load (build-path geda-rc-path "gschem-lightbg")) ; light background
 ;; (load (build-path geda-rc-path "gschem-darkbg")) ; dark background
