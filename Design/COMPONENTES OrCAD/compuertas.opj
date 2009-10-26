@@ -25,16 +25,7 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\COMPUERTAS OrCAD\compuertas.olb")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\COMPUERTAS OrCAD\compuertas.olb"
-         "S-NAND-5")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\COMPUERTAS OrCAD\compuertas.olb"
-         "S-NAND-7")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\COMPUERTAS OrCAD\compuertas.olb"
-         "S-NAND-5" "S-NAND-5"))
+         "D:\Documents\TESIS\TRUNK\Design\COMPONENTES OrCAD\compuertas.olb"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
