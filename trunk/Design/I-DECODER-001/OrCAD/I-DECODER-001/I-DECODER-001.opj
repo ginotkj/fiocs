@@ -46,7 +46,9 @@
     (File ".\i-decoder-001-pspicefiles\decoder-8\decoder-8.net"
       (Type "Report"))
     (File ".\i-decoder-001-pspicefiles\s-decoder-8 test\s-decoder-8 test.net"
-      (Type "Report")))
+      (Type "Report"))
+    (File "d:\documents\tesis\trunk\design\componentes orcad\compuertas.olb"
+      (Type "Schematic Library")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
       (Sort User)
@@ -71,8 +73,7 @@
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-decoder-001-pspicefiles\decoder-8\transient.sim"
         (DisplayName "DECODER-8-transient")
-        (Type "PSpice Profile"))
-      (ActiveProfile ".\i-decoder-001-pspicefiles\decoder-8\bias.sim")))
+        (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (VDC
@@ -129,7 +130,19 @@
       (Path "Design Resources")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\i-decoder-001.dsn")
-      (Path "Outputs"))
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\i-decoder-001.dsn"
+         "S-DECODER-8")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\i-decoder-001.dsn"
+         "S-NAND-2")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\i-decoder-001.dsn"
+         "S-NAND-4")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\i-decoder-001.dsn"
+         "S-NAND-4" "S-NAND-4"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
