@@ -121,8 +121,14 @@
       (Path "Design Resources")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01.dsn"
+         "S-COMP-NEG")
       (Path "Design Resources" "Library")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01.dsn"
+         "S-COMP-NEG" "S-COMP-NEG"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
