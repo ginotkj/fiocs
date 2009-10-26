@@ -1,5 +1,5 @@
 
-**** 10/22/09 20:44:14 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 10/26/09 19:24:40 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-002\i-decoder-002-pspicefiles\schemat
 
@@ -22,7 +22,6 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 1000ns 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 
@@ -37,66 +36,66 @@ M_DECODER_U7_M2         DECODER_U7_N38454 0 DECODER_U7_N38740 0 CMOSN
 M_DECODER_U7_M6         DECODER_U7_N38740 0 DECODER_U7_N38778 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U7_M8         DECODER_N00989 N00145 N00145 N00145 CMOSP  
+M_DECODER_U7_M8         DECODER_N00989 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-M_DECODER_U7_M14         DECODER_U7_N43125 N00145 0 0 CMOSN  
+M_DECODER_U7_M14         DECODER_U7_N43125 0 0 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U7_M11         DECODER_N00989 0 N00145 N00145 CMOSP  
+M_DECODER_U7_M11         DECODER_N00989 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-R_DECODER_U7_R7         N00145 0  10Meg  
-M_DECODER_U7_M3         DECODER_N00989 0 N00145 N00145 CMOSP  
+R_DECODER_U7_R7         0 0  10Meg  
+M_DECODER_U7_M3         DECODER_N00989 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 R_DECODER_U7_R1         0 0  10Meg  
-M_DECODER_U7_M4         DECODER_N00989 0 N00145 N00145 CMOSP  
+M_DECODER_U7_M4         DECODER_N00989 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 R_DECODER_U7_R2         0 0  10Meg  
-R_DECODER_U7_R5         N00145 0  10Meg  
+R_DECODER_U7_R5         0 0  10Meg  
 R_DECODER_U7_R3         0 0  10Meg  
-M_DECODER_U7_M13         DECODER_U7_N43586 N00145 DECODER_U7_N43125 0 CMOSN  
+M_DECODER_U7_M13         DECODER_U7_N43586 0 DECODER_U7_N43125 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U7_M9         DECODER_N00989 N00145 N00145 N00145 CMOSP  
+M_DECODER_U7_M9         DECODER_N00989 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-R_DECODER_U7_R6         N00145 0  10Meg  
-M_DECODER_U7_M12         DECODER_N00989 0 N00145 N00145 CMOSP  
+R_DECODER_U7_R6         0 0  10Meg  
+M_DECODER_U7_M12         DECODER_N00989 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 M_DECODER_U7_M7         DECODER_U7_N38778 0 DECODER_U7_N39060 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U7_M5         DECODER_N00989 N00145 N00145 N00145 CMOSP  
+M_DECODER_U7_M5         DECODER_N00989 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 M_DECODER_U7_M1         DECODER_N00989 0 DECODER_U7_N38454 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U7_M10         DECODER_U7_N39060 N00145 DECODER_U7_N43586 0 CMOSN  
+M_DECODER_U7_M10         DECODER_U7_N39060 0 DECODER_U7_N43586 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U1_M4         DECODER_N00369 N00145 N00145 N00145 CMOSP  
+M_DECODER_U1_M4         DECODER_N00369 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-M_DECODER_U1_M5         DECODER_N00369 0 N00145 N00145 CMOSP  
+M_DECODER_U1_M5         DECODER_N00369 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 R_DECODER_U1_R1         0 0  10Meg  
 M_DECODER_U1_M6         DECODER_N00369 0 DECODER_U1_N23681 0 CMOSN  
 + L=.5u  
 + W=.8u         
-R_DECODER_U1_R2         N00145 0  10Meg  
-M_DECODER_U1_M2         DECODER_U1_N23681 N00145 0 0 CMOSN  
+R_DECODER_U1_R2         N00509 0  10Meg  
+M_DECODER_U1_M2         DECODER_U1_N23681 N00509 0 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U2_M4         N00692 DECODER_N00369 N00145 N00145 CMOSP  
+M_DECODER_U2_M4         N00692 DECODER_N00369 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-M_DECODER_U2_M5         N00692 DECODER_N00379 N00145 N00145 CMOSP  
+M_DECODER_U2_M5         N00692 DECODER_N00379 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 R_DECODER_U2_R1         DECODER_N00379 0  10Meg  
@@ -111,7 +110,7 @@ R_DECODER_U8_R3         DECODER_N00899 0  10Meg
 M_DECODER_U8_M1         N00731 DECODER_N00778 DECODER_U8_N28403 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U8_M5         N00731 DECODER_N00899 N00145 N00145 CMOSP  
+M_DECODER_U8_M5         N00731 DECODER_N00899 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 R_DECODER_U8_R4         DECODER_N00989 0  10Meg  
@@ -119,7 +118,7 @@ M_DECODER_U8_M2         DECODER_U8_N28403 DECODER_N00817 DECODER_U8_N28818 0
 +  CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U8_M3         N00731 DECODER_N00778 N00145 N00145 CMOSP  
+M_DECODER_U8_M3         N00731 DECODER_N00778 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 M_DECODER_U8_M6         DECODER_U8_N28818 DECODER_N00899 DECODER_U8_N29978 0
@@ -129,27 +128,27 @@ M_DECODER_U8_M6         DECODER_U8_N28818 DECODER_N00899 DECODER_U8_N29978 0
 M_DECODER_U8_M7         DECODER_U8_N29978 DECODER_N00989 0 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U8_M4         N00731 DECODER_N00817 N00145 N00145 CMOSP  
+M_DECODER_U8_M4         N00731 DECODER_N00817 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-M_DECODER_U8_M8         N00731 DECODER_N00989 N00145 N00145 CMOSP  
+M_DECODER_U8_M8         N00731 DECODER_N00989 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 R_DECODER_U8_R1         DECODER_N00778 0  10Meg  
 R_DECODER_U8_R2         DECODER_N00817 0  10Meg  
-M_DECODER_U3_M10         DECODER_U3_N37381 N00145 0 0 CMOSN  
+M_DECODER_U3_M10         DECODER_U3_N37381 0 0 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U3_M4         DECODER_N00379 0 N00145 N00145 CMOSP  
+M_DECODER_U3_M4         DECODER_N00379 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 R_DECODER_U3_R1         0 0  10Meg  
 R_DECODER_U3_R2         0 0  10Meg  
 R_DECODER_U3_R3         0 0  10Meg  
-M_DECODER_U3_M7         DECODER_U3_N33879 N00145 DECODER_U3_N37381 0 CMOSN  
+M_DECODER_U3_M7         DECODER_U3_N33879 0 DECODER_U3_N37381 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U3_M5         DECODER_N00379 0 N00145 N00145 CMOSP  
+M_DECODER_U3_M5         DECODER_N00379 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 M_DECODER_U3_M1         DECODER_N00379 0 DECODER_U3_N33539 0 CMOSN  
@@ -161,113 +160,113 @@ M_DECODER_U3_M2         DECODER_U3_N33539 0 DECODER_U3_N33841 0 CMOSN
 M_DECODER_U3_M6         DECODER_U3_N33841 0 DECODER_U3_N33879 0 CMOSN  
 + L=.5u  
 + W=.8u         
-R_DECODER_U3_R4         N00145 0  10Meg  
-R_DECODER_U3_R5         N00145 0  10Meg  
-M_DECODER_U3_M3         DECODER_N00379 0 N00145 N00145 CMOSP  
+R_DECODER_U3_R4         0 0  10Meg  
+R_DECODER_U3_R5         0 0  10Meg  
+M_DECODER_U3_M3         DECODER_N00379 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-M_DECODER_U3_M8         DECODER_N00379 N00145 N00145 N00145 CMOSP  
+M_DECODER_U3_M8         DECODER_N00379 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-M_DECODER_U3_M9         DECODER_N00379 N00145 N00145 N00145 CMOSP  
+M_DECODER_U3_M9         DECODER_N00379 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-R_DECODER_U4_R4         N00145 0  10Meg  
-M_DECODER_U4_M2         DECODER_U4_N38454 N00145 DECODER_U4_N38740 0 CMOSN  
+R_DECODER_U4_R4         N00509 0  10Meg  
+M_DECODER_U4_M2         DECODER_U4_N38454 N00509 DECODER_U4_N38740 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U4_M6         DECODER_U4_N38740 N00145 DECODER_U4_N38778 0 CMOSN  
+M_DECODER_U4_M6         DECODER_U4_N38740 N00509 DECODER_U4_N38778 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U4_M8         DECODER_N00778 0 N00145 N00145 CMOSP  
+M_DECODER_U4_M8         DECODER_N00778 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-M_DECODER_U4_M14         DECODER_U4_N43125 0 0 0 CMOSN  
+M_DECODER_U4_M14         DECODER_U4_N43125 N00509 0 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U4_M11         DECODER_N00778 0 N00145 N00145 CMOSP  
+M_DECODER_U4_M11         DECODER_N00778 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-R_DECODER_U4_R7         0 0  10Meg  
-M_DECODER_U4_M3         DECODER_N00778 N00145 N00145 N00145 CMOSP  
+R_DECODER_U4_R7         N00509 0  10Meg  
+M_DECODER_U4_M3         DECODER_N00778 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 R_DECODER_U4_R1         0 0  10Meg  
-M_DECODER_U4_M4         DECODER_N00778 N00145 N00145 N00145 CMOSP  
+M_DECODER_U4_M4         DECODER_N00778 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-R_DECODER_U4_R2         N00145 0  10Meg  
-R_DECODER_U4_R5         0 0  10Meg  
-R_DECODER_U4_R3         N00145 0  10Meg  
-M_DECODER_U4_M13         DECODER_U4_N43586 0 DECODER_U4_N43125 0 CMOSN  
+R_DECODER_U4_R2         N00509 0  10Meg  
+R_DECODER_U4_R5         N00509 0  10Meg  
+R_DECODER_U4_R3         N00509 0  10Meg  
+M_DECODER_U4_M13         DECODER_U4_N43586 N00509 DECODER_U4_N43125 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U4_M9         DECODER_N00778 0 N00145 N00145 CMOSP  
+M_DECODER_U4_M9         DECODER_N00778 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-R_DECODER_U4_R6         0 0  10Meg  
-M_DECODER_U4_M12         DECODER_N00778 N00145 N00145 N00145 CMOSP  
+R_DECODER_U4_R6         N00509 0  10Meg  
+M_DECODER_U4_M12         DECODER_N00778 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-M_DECODER_U4_M7         DECODER_U4_N38778 N00145 DECODER_U4_N39060 0 CMOSN  
+M_DECODER_U4_M7         DECODER_U4_N38778 N00509 DECODER_U4_N39060 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U4_M5         DECODER_N00778 0 N00145 N00145 CMOSP  
+M_DECODER_U4_M5         DECODER_N00778 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 M_DECODER_U4_M1         DECODER_N00778 0 DECODER_U4_N38454 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U4_M10         DECODER_U4_N39060 0 DECODER_U4_N43586 0 CMOSN  
+M_DECODER_U4_M10         DECODER_U4_N39060 N00509 DECODER_U4_N43586 0 CMOSN  
 + L=.5u  
 + W=.8u         
-R_DECODER_U5_R4         N00145 0  10Meg  
+R_DECODER_U5_R4         N00509 0  10Meg  
 M_DECODER_U5_M2         DECODER_U5_N38454 0 DECODER_U5_N38740 0 CMOSN  
 + L=.5u  
 + W=.8u         
 M_DECODER_U5_M6         DECODER_U5_N38740 0 DECODER_U5_N38778 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U5_M8         DECODER_N00817 0 N00145 N00145 CMOSP  
+M_DECODER_U5_M8         DECODER_N00817 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-M_DECODER_U5_M14         DECODER_U5_N43125 0 0 0 CMOSN  
+M_DECODER_U5_M14         DECODER_U5_N43125 N00509 0 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U5_M11         DECODER_N00817 0 N00145 N00145 CMOSP  
+M_DECODER_U5_M11         DECODER_N00817 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-R_DECODER_U5_R7         0 0  10Meg  
-M_DECODER_U5_M3         DECODER_N00817 0 N00145 N00145 CMOSP  
+R_DECODER_U5_R7         N00509 0  10Meg  
+M_DECODER_U5_M3         DECODER_N00817 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 R_DECODER_U5_R1         0 0  10Meg  
-M_DECODER_U5_M4         DECODER_N00817 0 N00145 N00145 CMOSP  
+M_DECODER_U5_M4         DECODER_N00817 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 R_DECODER_U5_R2         0 0  10Meg  
-R_DECODER_U5_R5         0 0  10Meg  
+R_DECODER_U5_R5         N00509 0  10Meg  
 R_DECODER_U5_R3         0 0  10Meg  
-M_DECODER_U5_M13         DECODER_U5_N43586 0 DECODER_U5_N43125 0 CMOSN  
+M_DECODER_U5_M13         DECODER_U5_N43586 N00509 DECODER_U5_N43125 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U5_M9         DECODER_N00817 0 N00145 N00145 CMOSP  
+M_DECODER_U5_M9         DECODER_N00817 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-R_DECODER_U5_R6         0 0  10Meg  
-M_DECODER_U5_M12         DECODER_N00817 N00145 N00145 N00145 CMOSP  
+R_DECODER_U5_R6         N00509 0  10Meg  
+M_DECODER_U5_M12         DECODER_N00817 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-M_DECODER_U5_M7         DECODER_U5_N38778 N00145 DECODER_U5_N39060 0 CMOSN  
+M_DECODER_U5_M7         DECODER_U5_N38778 N00509 DECODER_U5_N39060 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U5_M5         DECODER_N00817 0 N00145 N00145 CMOSP  
+M_DECODER_U5_M5         DECODER_N00817 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 M_DECODER_U5_M1         DECODER_N00817 0 DECODER_U5_N38454 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U5_M10         DECODER_U5_N39060 0 DECODER_U5_N43586 0 CMOSN  
+M_DECODER_U5_M10         DECODER_U5_N39060 N00509 DECODER_U5_N43586 0 CMOSN  
 + L=.5u  
 + W=.8u         
 R_DECODER_U6_R4         0 0  10Meg  
@@ -277,51 +276,51 @@ M_DECODER_U6_M2         DECODER_U6_N38454 0 DECODER_U6_N38740 0 CMOSN
 M_DECODER_U6_M6         DECODER_U6_N38740 0 DECODER_U6_N38778 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U6_M8         DECODER_N00899 0 N00145 N00145 CMOSP  
+M_DECODER_U6_M8         DECODER_N00899 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-M_DECODER_U6_M14         DECODER_U6_N43125 0 0 0 CMOSN  
+M_DECODER_U6_M14         DECODER_U6_N43125 N00509 0 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U6_M11         DECODER_N00899 0 N00145 N00145 CMOSP  
+M_DECODER_U6_M11         DECODER_N00899 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-R_DECODER_U6_R7         0 0  10Meg  
-M_DECODER_U6_M3         DECODER_N00899 0 N00145 N00145 CMOSP  
+R_DECODER_U6_R7         N00509 0  10Meg  
+M_DECODER_U6_M3         DECODER_N00899 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 R_DECODER_U6_R1         0 0  10Meg  
-M_DECODER_U6_M4         DECODER_N00899 0 N00145 N00145 CMOSP  
+M_DECODER_U6_M4         DECODER_N00899 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 R_DECODER_U6_R2         0 0  10Meg  
-R_DECODER_U6_R5         N00145 0  10Meg  
+R_DECODER_U6_R5         0 0  10Meg  
 R_DECODER_U6_R3         0 0  10Meg  
-M_DECODER_U6_M13         DECODER_U6_N43586 0 DECODER_U6_N43125 0 CMOSN  
+M_DECODER_U6_M13         DECODER_U6_N43586 N00509 DECODER_U6_N43125 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U6_M9         DECODER_N00899 N00145 N00145 N00145 CMOSP  
+M_DECODER_U6_M9         DECODER_N00899 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
-R_DECODER_U6_R6         0 0  10Meg  
-M_DECODER_U6_M12         DECODER_N00899 0 N00145 N00145 CMOSP  
+R_DECODER_U6_R6         N00509 0  10Meg  
+M_DECODER_U6_M12         DECODER_N00899 0 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 M_DECODER_U6_M7         DECODER_U6_N38778 0 DECODER_U6_N39060 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U6_M5         DECODER_N00899 0 N00145 N00145 CMOSP  
+M_DECODER_U6_M5         DECODER_N00899 N00509 N00509 N00509 CMOSP  
 + L=.5u  
 + W=5u         
 M_DECODER_U6_M1         DECODER_N00899 0 DECODER_U6_N38454 0 CMOSN  
 + L=.5u  
 + W=.8u         
-M_DECODER_U6_M10         DECODER_U6_N39060 N00145 DECODER_U6_N43586 0 CMOSN  
+M_DECODER_U6_M10         DECODER_U6_N39060 0 DECODER_U6_N43586 0 CMOSN  
 + L=.5u  
 + W=.8u         
-V_V1         N00145 0 5
-R_R1         N00692 N00145  100k  
-R_R2         N00731 N00145  100k  
+V_V1         N00509 0 5
+R_R1         N00692 N00509  100k  
+R_R2         N00731 N00509  100k  
 
 **** RESUMING bias.cir ****
 .END
@@ -330,7 +329,7 @@ WARNING -- Mosfet M_DECODER_U7_M2, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_DECODER_U7_M2, model CMOSN: Ps = 0 is less than W
 WARNING -- Mosfet M_DECODER_U7_M8, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_DECODER_U7_M8, model CMOSP: Ps = 0 is less than W
-**** 10/22/09 20:44:14 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 10/26/09 19:24:40 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-002\i-decoder-002-pspicefiles\schemat
 
@@ -448,326 +447,79 @@ WARNING -- Mosfet M_DECODER_U7_M8, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_DECODER_U7_M2, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_DECODER_U7_M2, model CMOSN: Ps = 0 is less than W
 WARNING -- Mosfet M_DECODER_U7_M8, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_DECODER_U7_M8, model CMOSP: Ps = 0 is less than W
-ERROR -- Convergence problem in transient bias point calculation
+WARNING -- Mosfet M_DECODER_U7_M8, model CMOSP: Ps = 0 is less than W
+**** 10/26/09 19:24:40 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-002\i-decoder-002-pspicefiles\schemat
 
 
-  Last node voltages tried were:
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
 
 
-(N00145) 50.00E-06 (N00692) 50.00E-06 (N00731)   12.0200                        
-
-(DECODER_N00369) 681.4E-09            (DECODER_N00379) 1.671E-06                
-
-(DECODER_N00778) 2.309E-06            (DECODER_N00817) 2.310E-06                
-
-(DECODER_N00899)  -24.2880            (DECODER_N00989) 2.309E-06                
-
-(DECODER_U1_N23681) 339.1E-09         (DECODER_U2_N23681) 24.89E-06             
-
-(DECODER_U3_N33539) 1.321E-06         (DECODER_U3_N33841) 981.9E-09             
-
-(DECODER_U3_N33879) 650.1E-09         (DECODER_U3_N37381) 323.8E-09             
-
-(DECODER_U4_N38454) 1.947E-06         (DECODER_U4_N38740) 1.600E-06             
-
-(DECODER_U4_N38778) 1.265E-06         (DECODER_U4_N39060) 940.8E-09             
-
-(DECODER_U4_N43125) 310.3E-09         (DECODER_U4_N43586) 623.1E-09             
-
-(DECODER_U5_N38454) 1.948E-06         (DECODER_U5_N38740) 1.600E-06             
-
-(DECODER_U5_N38778) 1.265E-06         (DECODER_U5_N39060) 940.8E-09             
-
-(DECODER_U5_N43125) 310.3E-09         (DECODER_U5_N43586) 623.1E-09             
-
-(DECODER_U6_N38454)  -25.7940         (DECODER_U6_N38740)    -.7472             
-
-(DECODER_U6_N38778)   -1.3653         (DECODER_U6_N39060)  -72.4530             
-
-(DECODER_U6_N43125)  -57.6390         (DECODER_U6_N43586)   -1.2058             
-
-(DECODER_U7_N38454) 1.947E-06         (DECODER_U7_N38740) 1.599E-06             
-
-(DECODER_U7_N38778) 1.264E-06         (DECODER_U7_N39060) 939.4E-09             
-
-(DECODER_U7_N43125) 309.9E-09         (DECODER_U7_N43586) 622.2E-09             
-
-(DECODER_U8_N28403)   14.0950         (DECODER_U8_N28818)  571.2700             
-
-(DECODER_U8_N29978)    -.2168         
+******************************************************************************
 
 
-  These voltages failed to converge:
-
-    V(DECODER_N00899)         =    -1.217V  \    -24.29V
-    V(N00731)                 =   232.18mV  \     12.02V
-    V(DECODER_U8_N28403)      =   -10.00mV  \     14.10V
-    V(DECODER_U8_N28818)      =   -161.14V  \    571.27V
-    V(DECODER_U8_N29978)      =  -183.20mV  \  -216.78mV
-    V(DECODER_U6_N38454)      =  -373.28mV  \    -25.79V
-    V(DECODER_U6_N38740)      =    -3.743V  \  -747.23mV
-    V(DECODER_U6_N38778)      =    -1.203V  \    -1.365V
-    V(DECODER_U6_N43125)      =  -821.17mV  \    -57.64V
-    V(DECODER_U6_N43586)      =    -1.067V  \    -1.206V
-    V(DECODER_U6_N39060)      =    -1.316V  \    -72.45V
-
-  These supply currents failed to converge:
-
-    I(V_V1)                   =  -130.15pA  \  -899.45nA
-
-  These devices failed to converge:
-    M_DECODER_U8_M1 M_DECODER_U8_M5 M_DECODER_U8_M2 M_DECODER_U8_M3 
-    M_DECODER_U8_M6 M_DECODER_U8_M7 M_DECODER_U8_M4 M_DECODER_U8_M8 
-    M_DECODER_U6_M2 M_DECODER_U6_M6 M_DECODER_U6_M8 M_DECODER_U6_M14 
-    M_DECODER_U6_M11 M_DECODER_U6_M3 M_DECODER_U6_M4 M_DECODER_U6_M13 
-    M_DECODER_U6_M9 M_DECODER_U6_M12 M_DECODER_U6_M7 M_DECODER_U6_M5 
-    M_DECODER_U6_M1 M_DECODER_U6_M10 
-
-ERROR -- Discontinuing simulation due to convergence problem
-**** Interrupt ****
-**** Param: RELTOL = 0.001
-**** Param: ABSTOL = 1e-012
-**** Param: VNTOL = 1e-006
-**** Param: GMIN = 1e-012
-**** Param: TSTOP = 1e-006
-**** Param: TMAX = 0
-**** Param: ITL1 = 150
-**** Param: ITL2 = 20
-**** Param: ITL4 = 10
-
- **** Published Runtime Parameters *****************************
-                                                               
-                                       ABSTOL =      1.0000E-12
-                                         GMIN =      1.0000E-12
-                                         ITL1 =      1.5000E+02
-                                         ITL2 =      2.0000E+01
-                                         ITL4 =      1.0000E+01
-                          R_DECODER_U1_R1.tc1 =      0.0000E+00
-                          R_DECODER_U1_R1.tc2 =      0.0000E+00
-                        R_DECODER_U1_R1.value =      1.0000E+07
-                          R_DECODER_U1_R2.tc1 =      0.0000E+00
-                          R_DECODER_U1_R2.tc2 =      0.0000E+00
-                        R_DECODER_U1_R2.value =      1.0000E+07
-                          R_DECODER_U2_R1.tc1 =      0.0000E+00
-                          R_DECODER_U2_R1.tc2 =      0.0000E+00
-                        R_DECODER_U2_R1.value =      1.0000E+07
-                          R_DECODER_U2_R2.tc1 =      0.0000E+00
-                          R_DECODER_U2_R2.tc2 =      0.0000E+00
-                        R_DECODER_U2_R2.value =      1.0000E+07
-                          R_DECODER_U3_R1.tc1 =      0.0000E+00
-                          R_DECODER_U3_R1.tc2 =      0.0000E+00
-                        R_DECODER_U3_R1.value =      1.0000E+07
-                          R_DECODER_U3_R2.tc1 =      0.0000E+00
-                          R_DECODER_U3_R2.tc2 =      0.0000E+00
-                        R_DECODER_U3_R2.value =      1.0000E+07
-                          R_DECODER_U3_R3.tc1 =      0.0000E+00
-                          R_DECODER_U3_R3.tc2 =      0.0000E+00
-                        R_DECODER_U3_R3.value =      1.0000E+07
-                          R_DECODER_U3_R4.tc1 =      0.0000E+00
-                          R_DECODER_U3_R4.tc2 =      0.0000E+00
-                        R_DECODER_U3_R4.value =      1.0000E+07
-                          R_DECODER_U3_R5.tc1 =      0.0000E+00
-                          R_DECODER_U3_R5.tc2 =      0.0000E+00
-                        R_DECODER_U3_R5.value =      1.0000E+07
-                          R_DECODER_U4_R1.tc1 =      0.0000E+00
-                          R_DECODER_U4_R1.tc2 =      0.0000E+00
-                        R_DECODER_U4_R1.value =      1.0000E+07
-                          R_DECODER_U4_R2.tc1 =      0.0000E+00
-                          R_DECODER_U4_R2.tc2 =      0.0000E+00
-                        R_DECODER_U4_R2.value =      1.0000E+07
-                          R_DECODER_U4_R3.tc1 =      0.0000E+00
-                          R_DECODER_U4_R3.tc2 =      0.0000E+00
-                        R_DECODER_U4_R3.value =      1.0000E+07
-                          R_DECODER_U4_R4.tc1 =      0.0000E+00
-                          R_DECODER_U4_R4.tc2 =      0.0000E+00
-                        R_DECODER_U4_R4.value =      1.0000E+07
-                          R_DECODER_U4_R5.tc1 =      0.0000E+00
-                          R_DECODER_U4_R5.tc2 =      0.0000E+00
-                        R_DECODER_U4_R5.value =      1.0000E+07
-                          R_DECODER_U4_R6.tc1 =      0.0000E+00
-                          R_DECODER_U4_R6.tc2 =      0.0000E+00
-                        R_DECODER_U4_R6.value =      1.0000E+07
-                          R_DECODER_U4_R7.tc1 =      0.0000E+00
-                          R_DECODER_U4_R7.tc2 =      0.0000E+00
-                        R_DECODER_U4_R7.value =      1.0000E+07
-                          R_DECODER_U5_R1.tc1 =      0.0000E+00
-                          R_DECODER_U5_R1.tc2 =      0.0000E+00
-                        R_DECODER_U5_R1.value =      1.0000E+07
-                          R_DECODER_U5_R2.tc1 =      0.0000E+00
-                          R_DECODER_U5_R2.tc2 =      0.0000E+00
-                        R_DECODER_U5_R2.value =      1.0000E+07
-                          R_DECODER_U5_R3.tc1 =      0.0000E+00
-                          R_DECODER_U5_R3.tc2 =      0.0000E+00
-                        R_DECODER_U5_R3.value =      1.0000E+07
-                          R_DECODER_U5_R4.tc1 =      0.0000E+00
-                          R_DECODER_U5_R4.tc2 =      0.0000E+00
-                        R_DECODER_U5_R4.value =      1.0000E+07
-                          R_DECODER_U5_R5.tc1 =      0.0000E+00
-                          R_DECODER_U5_R5.tc2 =      0.0000E+00
-                        R_DECODER_U5_R5.value =      1.0000E+07
-                          R_DECODER_U5_R6.tc1 =      0.0000E+00
-                          R_DECODER_U5_R6.tc2 =      0.0000E+00
-                        R_DECODER_U5_R6.value =      1.0000E+07
-                          R_DECODER_U5_R7.tc1 =      0.0000E+00
-                          R_DECODER_U5_R7.tc2 =      0.0000E+00
-                        R_DECODER_U5_R7.value =      1.0000E+07
-                          R_DECODER_U6_R1.tc1 =      0.0000E+00
-                          R_DECODER_U6_R1.tc2 =      0.0000E+00
-                        R_DECODER_U6_R1.value =      1.0000E+07
-                          R_DECODER_U6_R2.tc1 =      0.0000E+00
-                          R_DECODER_U6_R2.tc2 =      0.0000E+00
-                        R_DECODER_U6_R2.value =      1.0000E+07
-                          R_DECODER_U6_R3.tc1 =      0.0000E+00
-                          R_DECODER_U6_R3.tc2 =      0.0000E+00
-                        R_DECODER_U6_R3.value =      1.0000E+07
-                          R_DECODER_U6_R4.tc1 =      0.0000E+00
-                          R_DECODER_U6_R4.tc2 =      0.0000E+00
-                        R_DECODER_U6_R4.value =      1.0000E+07
-                          R_DECODER_U6_R5.tc1 =      0.0000E+00
-                          R_DECODER_U6_R5.tc2 =      0.0000E+00
-                        R_DECODER_U6_R5.value =      1.0000E+07
-                          R_DECODER_U6_R6.tc1 =      0.0000E+00
-                          R_DECODER_U6_R6.tc2 =      0.0000E+00
-                        R_DECODER_U6_R6.value =      1.0000E+07
-                          R_DECODER_U6_R7.tc1 =      0.0000E+00
-                          R_DECODER_U6_R7.tc2 =      0.0000E+00
-                        R_DECODER_U6_R7.value =      1.0000E+07
-                          R_DECODER_U7_R1.tc1 =      0.0000E+00
-                          R_DECODER_U7_R1.tc2 =      0.0000E+00
-                        R_DECODER_U7_R1.value =      1.0000E+07
-                          R_DECODER_U7_R2.tc1 =      0.0000E+00
-                          R_DECODER_U7_R2.tc2 =      0.0000E+00
-                        R_DECODER_U7_R2.value =      1.0000E+07
-                          R_DECODER_U7_R3.tc1 =      0.0000E+00
-                          R_DECODER_U7_R3.tc2 =      0.0000E+00
-                        R_DECODER_U7_R3.value =      1.0000E+07
-                          R_DECODER_U7_R4.tc1 =      0.0000E+00
-                          R_DECODER_U7_R4.tc2 =      0.0000E+00
-                        R_DECODER_U7_R4.value =      1.0000E+07
-                          R_DECODER_U7_R5.tc1 =      0.0000E+00
-                          R_DECODER_U7_R5.tc2 =      0.0000E+00
-                        R_DECODER_U7_R5.value =      1.0000E+07
-                          R_DECODER_U7_R6.tc1 =      0.0000E+00
-                          R_DECODER_U7_R6.tc2 =      0.0000E+00
-                        R_DECODER_U7_R6.value =      1.0000E+07
-                          R_DECODER_U7_R7.tc1 =      0.0000E+00
-                          R_DECODER_U7_R7.tc2 =      0.0000E+00
-                        R_DECODER_U7_R7.value =      1.0000E+07
-                          R_DECODER_U8_R1.tc1 =      0.0000E+00
-                          R_DECODER_U8_R1.tc2 =      0.0000E+00
-                        R_DECODER_U8_R1.value =      1.0000E+07
-                          R_DECODER_U8_R2.tc1 =      0.0000E+00
-                          R_DECODER_U8_R2.tc2 =      0.0000E+00
-                        R_DECODER_U8_R2.value =      1.0000E+07
-                          R_DECODER_U8_R3.tc1 =      0.0000E+00
-                          R_DECODER_U8_R3.tc2 =      0.0000E+00
-                        R_DECODER_U8_R3.value =      1.0000E+07
-                          R_DECODER_U8_R4.tc1 =      0.0000E+00
-                          R_DECODER_U8_R4.tc2 =      0.0000E+00
-                        R_DECODER_U8_R4.value =      1.0000E+07
-                                     R_R1.tc1 =      0.0000E+00
-                                     R_R1.tc2 =      0.0000E+00
-                                   R_R1.value =      1.0000E+05
-                                     R_R2.tc1 =      0.0000E+00
-                                     R_R2.tc2 =      0.0000E+00
-                                   R_R2.value =      1.0000E+05
-                                       RELTOL =      1.0000E-03
-                                       RUNFOR =      0.0000E+00
-                                         TMAX =      0.0000E+00
-                                        TSTOP =      1.0000E-06
-                                      V_V1.ac =      0.0000E+00
-                                 V_V1.acphase =      0.0000E+00
-                                      V_V1.dc =      5.0000E+00
-                                        VNTOL =      1.0000E-06
-                                               
-               
-
-ERROR -- Convergence problem in transient bias point calculation
-
-
-  Last node voltages tried were:
 
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00145) 50.00E-06 (N00692) 50.00E-06 (N00731)   12.0200                        
+(N00509)    5.0000 (N00692)     .2461 (N00731)     .4654                        
 
-(DECODER_N00369) 681.4E-09            (DECODER_N00379) 1.671E-06                
+(DECODER_N00369)    4.9996            (DECODER_N00379)    4.9999                
 
-(DECODER_N00778) 2.309E-06            (DECODER_N00817) 2.310E-06                
+(DECODER_N00778)    4.9996            (DECODER_N00817)    4.9999                
 
-(DECODER_N00899)  -24.2880            (DECODER_N00989) 2.309E-06                
+(DECODER_N00899)    4.9999            (DECODER_N00989)    4.9999                
 
-(DECODER_U1_N23681) 339.1E-09         (DECODER_U2_N23681) 24.89E-06             
+(DECODER_U1_N23681) 212.0E-09         (DECODER_U2_N23681)     .1236             
 
-(DECODER_U3_N33539) 1.321E-06         (DECODER_U3_N33841) 981.9E-09             
+(DECODER_U3_N33539)     .0948         (DECODER_U3_N33841)     .0340             
 
-(DECODER_U3_N33879) 650.1E-09         (DECODER_U3_N37381) 323.8E-09             
+(DECODER_U3_N33879)     .0175         (DECODER_U3_N37381)     .0074             
 
-(DECODER_U4_N38454) 1.947E-06         (DECODER_U4_N38740) 1.600E-06             
+(DECODER_U4_N38454) 1.272E-06         (DECODER_U4_N38740) 1.060E-06             
 
-(DECODER_U4_N38778) 1.265E-06         (DECODER_U4_N39060) 940.8E-09             
+(DECODER_U4_N38778) 848.0E-09         (DECODER_U4_N39060) 636.0E-09             
 
-(DECODER_U4_N43125) 310.3E-09         (DECODER_U4_N43586) 623.1E-09             
+(DECODER_U4_N43125) 212.0E-09         (DECODER_U4_N43586) 424.0E-09             
 
-(DECODER_U5_N38454) 1.948E-06         (DECODER_U5_N38740) 1.600E-06             
+(DECODER_U5_N38454)     .0788         (DECODER_U5_N38740)     .0168             
 
-(DECODER_U5_N38778) 1.265E-06         (DECODER_U5_N39060) 940.8E-09             
+(DECODER_U5_N38778) 47.40E-09         (DECODER_U5_N39060) 35.55E-09             
 
-(DECODER_U5_N43125) 310.3E-09         (DECODER_U5_N43586) 623.1E-09             
+(DECODER_U5_N43125) 11.85E-09         (DECODER_U5_N43586) 23.70E-09             
 
-(DECODER_U6_N38454)  -25.7940         (DECODER_U6_N38740)    -.7472             
+(DECODER_U6_N38454)     .0948         (DECODER_U6_N38740)     .0340             
 
-(DECODER_U6_N38778)   -1.3653         (DECODER_U6_N39060)  -72.4530             
+(DECODER_U6_N38778)     .0175         (DECODER_U6_N39060)     .0074             
 
-(DECODER_U6_N43125)  -57.6390         (DECODER_U6_N43586)   -1.2058             
+(DECODER_U6_N43125) 6.018E-09         (DECODER_U6_N43586) 12.04E-09             
 
-(DECODER_U7_N38454) 1.947E-06         (DECODER_U7_N38740) 1.599E-06             
+(DECODER_U7_N38454)     .1031         (DECODER_U7_N38740)     .0432             
 
-(DECODER_U7_N38778) 1.264E-06         (DECODER_U7_N39060) 939.4E-09             
+(DECODER_U7_N38778)     .0271         (DECODER_U7_N39060)     .0173             
 
-(DECODER_U7_N43125) 309.9E-09         (DECODER_U7_N43586) 622.2E-09             
+(DECODER_U7_N43125)     .0046         (DECODER_U7_N43586)     .0102             
 
-(DECODER_U8_N28403)   14.0950         (DECODER_U8_N28818)  571.2700             
+(DECODER_U8_N28403)     .3505         (DECODER_U8_N28818)     .2346             
 
-(DECODER_U8_N29978)    -.2168         
+(DECODER_U8_N29978)     .1178         
 
 
-  These voltages failed to converge:
 
-    V(DECODER_N00899)         =    -1.217V  \    -24.29V
-    V(N00731)                 =   232.18mV  \     12.02V
-    V(DECODER_U8_N28403)      =   -10.00mV  \     14.10V
-    V(DECODER_U8_N28818)      =   -161.14V  \    571.27V
-    V(DECODER_U8_N29978)      =  -183.20mV  \  -216.78mV
-    V(DECODER_U6_N38454)      =  -373.28mV  \    -25.79V
-    V(DECODER_U6_N38740)      =    -3.743V  \  -747.23mV
-    V(DECODER_U6_N38778)      =    -1.203V  \    -1.365V
-    V(DECODER_U6_N43125)      =  -821.17mV  \    -57.64V
-    V(DECODER_U6_N43586)      =    -1.067V  \    -1.206V
-    V(DECODER_U6_N39060)      =    -1.316V  \    -72.45V
 
-  These supply currents failed to converge:
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
 
-    I(V_V1)                   =  -130.15pA  \  -899.45nA
+    V_V1        -1.024E-04
 
-  These devices failed to converge:
-    M_DECODER_U8_M1 M_DECODER_U8_M5 M_DECODER_U8_M2 M_DECODER_U8_M3 
-    M_DECODER_U8_M6 M_DECODER_U8_M7 M_DECODER_U8_M4 M_DECODER_U8_M8 
-    M_DECODER_U6_M2 M_DECODER_U6_M6 M_DECODER_U6_M8 M_DECODER_U6_M14 
-    M_DECODER_U6_M11 M_DECODER_U6_M3 M_DECODER_U6_M4 M_DECODER_U6_M13 
-    M_DECODER_U6_M9 M_DECODER_U6_M12 M_DECODER_U6_M7 M_DECODER_U6_M5 
-    M_DECODER_U6_M1 M_DECODER_U6_M10 
+    TOTAL POWER DISSIPATION   5.12E-04  WATTS
 
-ERROR -- Discontinuing simulation due to convergence problem
-**** Interrupt ****
 
-          JOB ABORTED
+
+          JOB CONCLUDED
 
-**** 10/22/09 20:44:14 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 10/26/09 19:24:40 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-002\i-decoder-002-pspicefiles\schemat
 
@@ -779,5 +531,5 @@ ERROR -- Discontinuing simulation due to convergence problem
 
 
 
-  Total job time (using Solver 1)   =       14.54
+  Total job time (using Solver 1)   =         .09
 
