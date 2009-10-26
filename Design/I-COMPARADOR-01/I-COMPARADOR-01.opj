@@ -42,7 +42,9 @@
     (File ".\i-comparador-01-pspicefiles\comp-nor\comp-nor.net"
       (Type "Report"))
     (File ".\i-comparador-01-pspicefiles\comp-01\comp-01.net"
-      (Type "Report")))
+      (Type "Report"))
+    (File "..\componentes orcad\compuertas.olb"
+      (Type "Schematic Library")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
       (Sort User)
@@ -53,24 +55,30 @@
     (Folder "Include Files")
     (Folder "Simulation Profiles"
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-comparador-01-pspicefiles\comp-nor\bias.sim"
-        (DisplayName "COMP-NOR-bias")
+         ".\i-comparador-01-pspicefiles\s-comp-neg\bias.sim"
+        (DisplayName "S-COMP-NEG-bias")
         (Type "PSpice Profile"))
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-comparador-01-pspicefiles\comp-01\bias.sim"
-        (DisplayName "COMP-01-bias")
+         ".\i-comparador-01-pspicefiles\s-comp\bias.sim"
+        (DisplayName "S-COMP-bias")
         (Type "PSpice Profile"))
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-comparador-01-pspicefiles\comp-01\transient.sim"
-        (DisplayName "COMP-01-transient")
+         ".\i-comparador-01-pspicefiles\s-comp\transient.sim"
+        (DisplayName "S-COMP-transient")
         (Type "PSpice Profile"))
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-comparador-01-pspicefiles\comp-nor\transient.sim"
-        (DisplayName "COMP-NOR-transient")
+         ".\i-comparador-01-pspicefiles\s-comp-neg\transient.sim"
+        (DisplayName "S-COMP-NEG-transient")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-comparador-01-pspicefiles\comp-01\transient.sim")))
+      (ActiveProfile ".\i-comparador-01-pspicefiles\s-comp\transient.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (PORTRIGHT-L
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (MbreakP
       (FullPartName "MbreakP.Normal")
       (LibraryName
@@ -115,18 +123,18 @@
          "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01.dsn")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01.dsn"
-         "COMP-01")
+         "S-COMP-NEG")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01.dsn"
-         "COMP-NOR")
+         "S-COMP")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Select "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01.dsn"
-         "COMP-NOR" "PAGE1"))
+         "S-COMP"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 360 0 972"))
+        (Placement "44 2 3 -1 -1 -8 -30 0 360 0 820"))
       (Tab 0))))

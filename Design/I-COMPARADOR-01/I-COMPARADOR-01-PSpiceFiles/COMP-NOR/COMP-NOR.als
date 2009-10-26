@@ -12,6 +12,6 @@ M_M5            M5(d=N22730 g=N22974 s=0 b=0 ) CN @I-COMPARADOR-01.COMP-NOR(sch_
 M_M9            M9(d=N22708 g=N22708 s=N22786 b=N22786 ) CN
 +@I-COMPARADOR-01.COMP-NOR(sch_1):INS24062@BREAKOUT.MbreakP.Normal(chips)
 M_M6            M6(d=VOUT g=N22704 s=N22786 b=N22786 ) CN @I-COMPARADOR-01.COMP-NOR(sch_1):INS22630@BREAKOUT.MbreakP.Normal(chips)
-_    _(Vout=VOUT)
 _    _(GND_0=0)
+_    _(Vout=VOUT)
 .ENDALIASES
