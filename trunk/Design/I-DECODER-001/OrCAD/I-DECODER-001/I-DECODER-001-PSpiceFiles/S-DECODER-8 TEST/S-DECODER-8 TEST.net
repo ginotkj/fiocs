@@ -1,0 +1,294 @@
+* source I-DECODER-001
+M_5-NAND_M10         5-NAND_N36965 MSB 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_5-NAND_M4         N29392 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_5-NAND_R1         MSB 0  10Meg  
+R_5-NAND_R2         MSB 0  10Meg  
+R_5-NAND_R3         MSB 0  10Meg  
+M_5-NAND_M7         5-NAND_N33879 MSB 5-NAND_N36965 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_5-NAND_M5         N29392 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_5-NAND_M1         N29392 MSB 5-NAND_N33539 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_5-NAND_M2         5-NAND_N33539 MSB 5-NAND_N33841 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_5-NAND_M6         5-NAND_N33841 MSB 5-NAND_N33879 0 CMOSN  
++ L=.5u  
++ W=.8u         
+R_5-NAND_R4         MSB 0  10Meg  
+R_5-NAND_R5         MSB 0  10Meg  
+M_5-NAND_M3         N29392 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_5-NAND_M8         N29392 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_5-NAND_M9         N29392 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_R3         LSB N36115  100k  
+V_V3         MSB 0 5
+R_R1         MSB N36115  100k  
+R_R2         2SB N36115  100k  
+V_V1         N29916 0 5
+R_7-NAND_R4         0 0  10Meg  
+M_7-NAND_M2         7-NAND_N38454 0 7-NAND_N38740 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND_M6         7-NAND_N38740 0 7-NAND_N38778 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND_M8         N29404 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND_M14         7-NAND_N43125 0 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND_M11         N29404 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND_R7         0 0  10Meg  
+M_7-NAND_M3         N29404 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND_R1         MSB 0  10Meg  
+M_7-NAND_M4         N29404 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND_R2         0 0  10Meg  
+R_7-NAND_R5         0 0  10Meg  
+R_7-NAND_R3         0 0  10Meg  
+M_7-NAND_M13         7-NAND_N43046 0 7-NAND_N43125 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND_M9         N29404 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND_R6         0 0  10Meg  
+M_7-NAND_M12         N29404 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND_M7         7-NAND_N38778 0 7-NAND_N39060 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND_M5         N29404 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND_M1         N29404 MSB 7-NAND_N38454 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND_M10         7-NAND_N39060 0 7-NAND_N43046 0 CMOSN  
++ L=.5u  
++ W=.8u         
+R_4-NAND_R3         N29428 0  10Meg  
+M_4-NAND_M1         LSB N29404 4-NAND_N28403 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_4-NAND_M5         LSB N29428 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_4-NAND_R4         N29440 0  10Meg  
+M_4-NAND_M2         4-NAND_N28403 N29416 4-NAND_N28818 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_4-NAND_M3         LSB N29404 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_4-NAND_M6         4-NAND_N28818 N29428 4-NAND_N29978 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_4-NAND_M7         4-NAND_N29978 N29440 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_4-NAND_M4         LSB N29416 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_4-NAND_M8         LSB N29440 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_4-NAND_R1         N29404 0  10Meg  
+R_4-NAND_R2         N29416 0  10Meg  
+M_2-NAND_M4         N29380 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_2-NAND_M5         N29380 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_2-NAND_R2         0 0  10Meg  
+R_2-NAND_R1         0 MSB  10Meg  
+M_2-NAND_M6         N29380 MSB 2-NAND_N23681 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_2-NAND_M2         2-NAND_N23681 0 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_2-NAND1_M4         2SB N29380 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_2-NAND1_M5         2SB N29392 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_2-NAND1_R2         0 N29380  10Meg  
+R_2-NAND1_R1         0 N29392  10Meg  
+M_2-NAND1_M6         2SB N29392 2-NAND1_N23681 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_2-NAND1_M2         2-NAND1_N23681 N29380 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+R_7-NAND1_R4         0 0  10Meg  
+M_7-NAND1_M2         7-NAND1_N38454 MSB 7-NAND1_N38740 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND1_M6         7-NAND1_N38740 MSB 7-NAND1_N38778 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND1_M8         N29416 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND1_M14         7-NAND1_N43125 0 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND1_M11         N29416 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND1_R7         0 0  10Meg  
+M_7-NAND1_M3         N29416 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND1_R1         MSB 0  10Meg  
+M_7-NAND1_M4         N29416 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND1_R2         MSB 0  10Meg  
+R_7-NAND1_R5         0 0  10Meg  
+R_7-NAND1_R3         MSB 0  10Meg  
+M_7-NAND1_M13         7-NAND1_N43046 0 7-NAND1_N43125 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND1_M9         N29416 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND1_R6         0 0  10Meg  
+M_7-NAND1_M12         N29416 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND1_M7         7-NAND1_N38778 0 7-NAND1_N39060 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND1_M5         N29416 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND1_M1         N29416 MSB 7-NAND1_N38454 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND1_M10         7-NAND1_N39060 0 7-NAND1_N43046 0 CMOSN  
++ L=.5u  
++ W=.8u         
+R_7-NAND2_R4         MSB 0  10Meg  
+M_7-NAND2_M2         7-NAND2_N38454 MSB 7-NAND2_N38740 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND2_M6         7-NAND2_N38740 MSB 7-NAND2_N38778 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND2_M8         N29428 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND2_M14         7-NAND2_N43125 0 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND2_M11         N29428 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND2_R7         0 0  10Meg  
+M_7-NAND2_M3         N29428 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND2_R1         MSB 0  10Meg  
+M_7-NAND2_M4         N29428 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND2_R2         MSB 0  10Meg  
+R_7-NAND2_R5         MSB 0  10Meg  
+R_7-NAND2_R3         MSB 0  10Meg  
+M_7-NAND2_M13         7-NAND2_N43046 0 7-NAND2_N43125 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND2_M9         N29428 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND2_R6         0 0  10Meg  
+M_7-NAND2_M12         N29428 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND2_M7         7-NAND2_N38778 MSB 7-NAND2_N39060 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND2_M5         N29428 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND2_M1         N29428 MSB 7-NAND2_N38454 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND2_M10         7-NAND2_N39060 MSB 7-NAND2_N43046 0 CMOSN  
++ L=.5u  
++ W=.8u         
+R_7-NAND3_R4         MSB 0  10Meg  
+M_7-NAND3_M2         7-NAND3_N38454 MSB 7-NAND3_N38740 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND3_M6         7-NAND3_N38740 MSB 7-NAND3_N38778 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND3_M8         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND3_M14         7-NAND3_N43125 MSB 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND3_M11         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND3_R7         MSB 0  10Meg  
+M_7-NAND3_M3         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND3_R1         MSB 0  10Meg  
+M_7-NAND3_M4         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND3_R2         MSB 0  10Meg  
+R_7-NAND3_R5         MSB 0  10Meg  
+R_7-NAND3_R3         MSB 0  10Meg  
+M_7-NAND3_M13         7-NAND3_N43046 MSB 7-NAND3_N43125 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND3_M9         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND3_R6         MSB 0  10Meg  
+M_7-NAND3_M12         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND3_M7         7-NAND3_N38778 MSB 7-NAND3_N39060 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND3_M5         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND3_M1         N29440 MSB 7-NAND3_N38454 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND3_M10         7-NAND3_N39060 MSB 7-NAND3_N43046 0 CMOSN  
++ L=.5u  
++ W=.8u         
+V_V2         N36115 0 5

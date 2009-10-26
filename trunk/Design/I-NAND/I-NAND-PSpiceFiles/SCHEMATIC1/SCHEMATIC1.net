@@ -1,0 +1,10 @@
+* source I-NAND
+.EXTERNAL INPUT IN1
+.EXTERNAL INPUT IN2
+.EXTERNAL INPUT VDD
+.EXTERNAL INPUT OUT
+.EXTERNAL INPUT GND
+M_M1         OUT IN1 N14393 GND MbreakN           
+M_M2         N14393 IN2 GND GND MbreakN           
+M_M3         OUT IN1 VDD VDD MbreakP           
+M_M4         OUT IN2 VDD VDD MbreakP           

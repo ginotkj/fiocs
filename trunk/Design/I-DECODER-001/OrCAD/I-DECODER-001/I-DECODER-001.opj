@@ -1,4 +1,4 @@
-(ExpressProject "I-FFD"
+(ExpressProject "I-DECODER-001"
   (ProjectVersion "19981106")
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
@@ -24,7 +24,7 @@
            "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\special.olb")
         (Type "Schematic Library")))
     (NoModify)
-    (File "i-ffd.dsn"
+    (File ".\i-decoder-001.dsn"
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
@@ -34,54 +34,54 @@
     (ANNOTATE_Reset_References_to_1 "FALSE")
     (ANNOTATE_No_Page_Number_Change "TRUE")
     (ANNOTATE_Property_Combine "{Value}{Source Package}")
-    (PSPICE_Regenerate_Netlist_Flag "FALSE")
-    (RootChangedForceReNetlist "x"))
+    (RootChangedForceReNetlist "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
   (Folder "Outputs"
-    (File ".\i-ffd-pspicefiles\s-nand-2\s-nand-2.net"
+    (File ".\i-decoder-001-pspicefiles\test\test.net"
       (Type "Report"))
-    (File ".\i-ffd-pspicefiles\ffd\ffd.net"
+    (File ".\i-decoder-001-pspicefiles\s-nand-5\s-nand-5.net"
       (Type "Report"))
-    (File ".\i-ffd-pspicefiles\schematic1\schematic1.net"
+    (File "d:\documents\tesis\trunk\design\compuertas orcad\compuertas.olb"
+      (Type "Schematic Library"))
+    (File ".\i-decoder-001-pspicefiles\decoder-8\decoder-8.net"
+      (Type "Report"))
+    (File ".\i-decoder-001-pspicefiles\s-decoder-8 test\s-decoder-8 test.net"
       (Type "Report")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
       (Sort User)
-      (File ".\i-ffd-pspicefiles\i-ffd.lib"
+      (File ".\i-decoder-001-pspicefiles\i-decoder-001.lib"
         (Type "PSpiceLibrary")
-        (DisplayName ".\i-ffd-pspicefiles\i-ffd.lib")))
+        (DisplayName ".\i-decoder-001-pspicefiles\i-decoder-001.lib")))
     (Folder "Stimulus Files")
     (Folder "Include Files")
     (Folder "Simulation Profiles"
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-ffd-pspicefiles\s-nand-2\bias.sim"
+         ".\i-decoder-001-pspicefiles\s-nand-2\bias.sim"
         (DisplayName "S-NAND-2-bias")
         (Type "PSpice Profile"))
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-ffd-pspicefiles\ffd\bias.sim"
-        (DisplayName "FFD-bias")
+         ".\i-decoder-001-pspicefiles\s-nand-5\bias.sim"
+        (DisplayName "S-NAND-5-bias")
         (Type "PSpice Profile"))
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-ffd-pspicefiles\ffd\transitorio.sim"
-        (DisplayName "FFD-transitorio")
+         ".\i-decoder-001-pspicefiles\decoder-8\bias.sim"
+        (DisplayName "DECODER-8-bias")
         (Type "PSpice Profile"))
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-ffd-pspicefiles\s-nand-2\bias-schematic.sim"
-        (DisplayName "S-NAND-2-bias-schematic")
+         ".\i-decoder-001-pspicefiles\decoder-8\transient.sim"
+        (DisplayName "DECODER-8-transient")
         (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-ffd-pspicefiles\s-ffd\prueba.sim"
-        (DisplayName "S-FFD-prueba")
-        (Type "PSpice Profile"))
-      (ActiveProfile ".\i-ffd-pspicefiles\ffd\transitorio.sim")))
+      (ActiveProfile ".\i-decoder-001-pspicefiles\decoder-8\bias.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
     (R
       (FullPartName "R.Normal")
-      (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
-      (DeviceIndex "0"))
-    (C
-      (FullPartName "C.Normal")
       (LibraryName
          "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
       (DeviceIndex "0"))
@@ -89,34 +89,30 @@
       (LibraryName
          "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
-    (VDC
-      (FullPartName "VDC.Normal")
-      (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
     (PORTRIGHT-L
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (S-NAND-2
+      (FullPartName "S-NAND-2.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\COMPUERTAS ORCAD\COMPUERTAS.OLB")
       (DeviceIndex "0"))
     (PORTRIGHT-R
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
-    (VPULSE
-      (FullPartName "VPULSE.Normal")
+    (MbreakN
+      (FullPartName "MbreakN.Normal")
       (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
-    (GND
-      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
       (DeviceIndex "0"))
     (MbreakP
       (FullPartName "MbreakP.Normal")
       (LibraryName
          "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
       (DeviceIndex "0"))
-    (MbreakN
-      (FullPartName "MbreakN.Normal")
-      (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
       (DeviceIndex "0"))
     (L
       (FullPartName "L.Normal")
@@ -132,14 +128,11 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-FFD")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-FFD" "S-FFD"))
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\i-decoder-001.dsn")
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 212 495 3 972"))
+        (Placement "44 2 3 160 1000 -8 -30 2 357 -9 803"))
       (Tab 0))))

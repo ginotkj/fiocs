@@ -1,0 +1,50 @@
+
+**** 10/05/09 10:12:52 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\i-nand-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\OrCAD 16\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source I-NAND
+.EXTERNAL INPUT IN1
+.EXTERNAL INPUT IN2
+.EXTERNAL INPUT VDD
+.EXTERNAL INPUT OUT
+.EXTERNAL INPUT GND
+M_M1         OUT IN1 N14393 GND MbreakN           
+M_M2         N14393 IN2 GND GND MbreakN           
+M_M3         OUT IN1 VDD VDD MbreakP           
+M_M4         OUT IN2 VDD VDD MbreakP           
+
+**** RESUMING bias.cir ****
+.END
+
+ERROR -- Node OUT is floating
+ERROR -- Node IN1 is floating
+ERROR -- Node N14393 is floating
+ERROR -- Node GND is floating
+ERROR -- Node IN2 is floating
+ERROR -- Node VDD is floating
