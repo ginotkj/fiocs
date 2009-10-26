@@ -24,14 +24,21 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\compuertas.olb")
-      (Path "Design Resources" ".\compuertas.olb" "S-NAND-2")
-      (Path "Design Resources" ".\compuertas.olb" "Library Cache")
-      (Select "Design Resources" ".\compuertas.olb" "S-NAND-2" "S-NAND-2"))
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\COMPUERTAS OrCAD\compuertas.olb")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\COMPUERTAS OrCAD\compuertas.olb"
+         "S-NAND-5")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\COMPUERTAS OrCAD\compuertas.olb"
+         "S-NAND-7")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\COMPUERTAS OrCAD\compuertas.olb"
+         "S-NAND-5" "S-NAND-5"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 711 0 850"))
+        (Placement "44 2 3 -1 -1 -8 -30 0 711 0 820"))
       (Tab 0)))
   (MPSSessionName "FABRICIO"))
