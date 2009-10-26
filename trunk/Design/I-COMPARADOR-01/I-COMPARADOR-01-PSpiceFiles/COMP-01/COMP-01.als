@@ -12,7 +12,7 @@ M_M1            M1(d=N27085 g=N26823 s=N27149 b=0 ) CN @I-COMPARADOR-01.COMP-01(
 M_M2            M2(d=VX g=N26771 s=N27149 b=0 ) CN @I-COMPARADOR-01.COMP-01(sch_1):INS26913@BREAKOUT.MbreakN.Normal(chips)
 C_C2            C2(1=0 2=VOUT ) CN @I-COMPARADOR-01.COMP-01(sch_1):INS26703@ANALOG.C.Normal(chips)
 M_M3            M3(d=N27085 g=N27085 s=N26671 b=N26671 ) CN @I-COMPARADOR-01.COMP-01(sch_1):INS26947@BREAKOUT.MbreakP.Normal(chips)
-_    _(VOUT=VOUT)
 _    _(GND_0=0)
 _    _(VX=VX)
+_    _(VOUT=VOUT)
 .ENDALIASES
