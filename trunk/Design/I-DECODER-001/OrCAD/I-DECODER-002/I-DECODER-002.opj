@@ -112,33 +112,11 @@
   (MPSSessionName "FABRICIO")
   (GlobalState
     (FileView
-      (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-002\i-decoder-002.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-002\i-decoder-002.dsn"
-         "SCHEMATIC1")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-002\i-decoder-002.dsn"
-         "DECODER-8")
       (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-002\i-decoder-002.dsn"
-         "SCHEMATIC1" "PAGE1"))
+      (Select "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 323 0 1023"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 504 1858 -4 1019")
-        (Scroll "0 0")
-        (Zoom "130")
-        (Occurrence "/"))
-      (Path
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-DECODER-001\ORCAD\I-DECODER-002\I-DECODER-002.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PAGE1"))))
+        (Placement "44 2 3 -1 -1 -8 -30 0 323 0 820"))
+      (Tab 0))))
