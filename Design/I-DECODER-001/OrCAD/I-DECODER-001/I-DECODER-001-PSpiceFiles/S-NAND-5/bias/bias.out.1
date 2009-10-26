@@ -1,0 +1,80 @@
+
+**** 10/21/09 18:45:51 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "S-NAND-5-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\I-DECODER-001-PSpiceFiles\S-NAND-5\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-decoder-001-pspicefiles/i-decoder-001.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\S-NAND-5.net" 
+
+
+
+**** INCLUDING S-NAND-5.net ****
+* source I-DECODER-001
+.EXTERNAL INPUT GND
+M_M10         N36965 N33383 GND GND CMOSN  
++ L=.5u  
++ W=.8u         
+M_M4         N33489 N33383 N33383 N33383 CMOSP  
++ L=.5u  
++ W=5u         
+R_R1         N33383 GND  10Meg  
+R_R2         N33383 GND  10Meg  
+R_R3         N33383 GND  10Meg  
+M_M7         N33879 N33383 N36965 N36965 CMOSN  
++ L=.5u  
++ W=.8u         
+V_V1         N33383 GND 5
+M_M5         N33489 N33383 N33383 N33383 CMOSP  
++ L=.5u  
++ W=5u         
+M_M1         N33489 N33383 N33539 N33539 CMOSN  
++ L=.5u  
++ W=.8u         
+M_M2         N33539 N33383 N33557 N33557 CMOSN  
++ L=.5u  
++ W=.8u         
+M_M6         N33557 N33383 N33879 N33879 CMOSN  
++ L=.5u  
++ W=.8u         
+R_R4         N33383 GND  10Meg  
+R_R5         N33383 GND  10Meg  
+M_M3         N33489 N33383 N33383 N33383 CMOSP  
++ L=.5u  
++ W=5u         
+M_M8         N33489 N33383 N33383 N33383 CMOSP  
++ L=.5u  
++ W=5u         
+M_M9         N33489 N33383 N33383 N33383 CMOSP  
++ L=.5u  
++ W=5u         
+
+**** RESUMING bias.cir ****
+.END
+
+ERROR -- Node N36965 is floating
+ERROR -- Node N33383 is floating
+ERROR -- Node GND is floating
+ERROR -- Node N33489 is floating
+ERROR -- Node N33879 is floating
+ERROR -- Node N33539 is floating
+ERROR -- Node N33557 is floating

@@ -1,0 +1,2535 @@
+***** START ******
+Mon Oct 05 11:07:20 2009
+CMD:- Rename Schematic
+ New Schematic Name: S-NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD:- Rename Page
+ New Page Name: S-NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+Add Page to Schematic: NAND : 
+NAND
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+DRAWN INSTANCE. Name: NAND. Source Library Name: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+ Name: PORTRIGHT-R Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-R SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+ Name: PORTRIGHT-R Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-R SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+ Name: PORTRIGHT-R Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-RRotate
+Rotate
+Rotate
+ SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+ Name: PORTRIGHT-L Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-L SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+ Name: PORTRIGHT-L Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-L SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-L
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-L
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_OnClose
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_OnClose
+ Make RooT 
+ Schematic Name: NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+DRAWN INSTANCE. Name: NAND_A1. Source Library Name: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+SchematicFrame_OnClose
+SchematicFrame_Create
+SchematicFrame_OnClose
+SchematicFrame_Create
+SchematicFrame_OnClose
+SchematicFrame_Create
+SchematicFrame_OnClose
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ Name: 0 Object Type: ID_POWER/ID_GROUND Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+Object Type: PLACED_INSTANCE. Name: INS62. Source Part Name: VDC.Normal. Library Name: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.70, 2.60 Pos End: 2.70, 2.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.70, 2.60 Pos End: 2.70, 2.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal Yes.  .IsBus No.  Pos Begin: 4.30, 3.70 Pos End: 4.30, 3.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal Yes.  .IsBus No.  Pos Begin: 4.30, 3.70 Pos End: 2.70, 3.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal Yes.  .IsBus No.  Pos Begin: 4.30, 3.70 Pos End: 2.70, 3.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.60, 2.70 Pos End: 3.30, 2.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.60, 2.70 Pos End: 3.30, 2.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.70, 2.40 Pos End: 2.70, 1.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.70, 1.80 Pos End: 4.20, 1.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.70, 1.80 Pos End: 4.20, 1.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+Object Type: PLACED_INSTANCE. Name: INS192. Source Part Name: R.Normal. Library Name: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.30, 2.90 Pos End: 5.30, 2.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.30, 2.90 Pos End: 5.30, 2.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.30, 3.30 Pos End: 5.30, 3.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.30, 3.30 Pos End: 5.30, 3.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+Object Type: 39. Display Property Name: DC. Value: 0Vdc
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+Object Type: 39. Display Property Name: BiasValue Voltage. Value: 249.4mV
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+Object Type: 39. Display Property Name: BiasValue Voltage. Value: 249.4mV
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.30, 2.70 Pos End: 3.30, 2.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.30, 2.70 Pos End: 3.30, 2.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.70, 2.20 Pos End: 3.40, 2.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.40, 2.20 Pos End: 3.40, 2.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.40, 2.20 Pos End: 3.40, 2.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.40, 2.40 Pos End: 3.40, 2.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.40, 2.40 Pos End: 3.40, 2.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|NAND|NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+Object Type: 39. Display Property Name: Name. Value: IN1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+Object Type: 39. Display Property Name: Name. Value: IN2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+Object Type: 39. Display Property Name: Name. Value: VDD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_OnClose
+SchematicFrame_OnClose
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN|S-NAND|S-NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PMFrame_Create
+SchematicFrame_Create
+SchematicFrame_OnClose
+SchematicFrame_Create
+SchematicFrame_OnClose
+CMD:- Rename Schematic
+ New Schematic Name: S-NAND-3
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+Add Page to Schematic: S-NAND-3 : 
+S-NAND-3
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+SchematicFrame_Create
+SchematicFrame_OnClose
+SchematicFrame_Create
+SchematicFrame_OnClose
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 13. INS45133
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 23. IN2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MIRROR
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 13. INS45193
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 13. INS45193
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 13. INS45103
+Object Type: 13. INS45133
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 23. GND
+Object Type: 23. OUT
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 23. GND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 4.00 Pos End: 4.60, 4.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 23. GND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 23. GND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.70, 4.60 Pos End: 4.70, 4.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.70, 4.60 Pos End: 4.70, 4.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 4.50 Pos End: 4.60, 4.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 4.50 Pos End: 4.60, 4.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 23. GND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.70, 4.10 Pos End: 4.80, 4.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.70, 4.10 Pos End: 4.80, 4.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.70, 3.60 Pos End: 4.90, 3.60
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.70, 3.60 Pos End: 4.90, 3.60
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 39. Display Property Name: Name. Value: IN2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.40, 4.30 Pos End: 4.30, 4.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 3.80 Pos End: 4.00, 2.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 3.80 Pos End: 4.00, 2.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 20. 
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MIRROR
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 13. INS46695
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 13. INS46695
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 2.80 Pos End: 5.10, 2.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 2.80 Pos End: 5.10, 2.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.10, 2.30 Pos End: 5.10, 2.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.10, 2.20 Pos End: 5.10, 2.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.10, 2.20 Pos End: 5.10, 2.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.00, 2.20 Pos End: 5.00, 2.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.80, 4.30 Pos End: 3.80, 5.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.80, 5.00 Pos End: 5.70, 5.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.70, 5.00 Pos End: 5.70, 2.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.70, 5.00 Pos End: 5.70, 2.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+Object Type: 23. VDD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NAND-3|S-NAND-3
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+Adding Schematic to Design: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN : 
+NAND-3
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+Add Page to Schematic: NAND-3 : 
+NAND-3
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_OnClose
+ Make RooT 
+ Schematic Name: NAND-3
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+PMFrame_Close
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DMDoc_CloseDocument
+PMFrame_Create
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+SchematicFrame_OnClose
+SchematicFrame_Create
+SchematicFrame_OnClose
+Page_EditProperties S-NAND
+SchematicFrame_Create
+SchematicFrame_OnClose
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+DMDoc_CloseDocument
+PMFrame_Close
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DMDoc_CloseDocument
+SchematicFrame_OnClose
+SchematicFrame_Create
+SchematicFrame_OnClose
+SchematicFrame_Create
+SchematicFrame_OnClose
+SchematicFrame_Create
+SchematicFrame_OnClose
+SchematicFrame_Create
+SchematicFrame_OnClose
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+SchematicFrame_OnClose
+PMFrame_Create
+SchematicFrame_Create
+SchematicFrame_Create
+SchematicFrame_OnClose
+SchematicFrame_OnClose
+ Make RooT 
+ Schematic Name: S-NAND-3
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+SchematicFrame_Create
+SchematicFrame_OnClose
+SchematicFrame_Create
+SchematicFrame_Create
+SchematicFrame_OnClose
+SchematicFrame_OnClose
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\I-NAND.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DMDoc_CloseDocument
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_OnClose
+SchematicFrame_Create
+CMD_ADD
+Adding Schematic to Design: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN : 
+FFD
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+Add Page to Schematic: FFD : 
+FFD
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_OnClose
+ Make RooT 
+ Schematic Name: FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+DRAWN INSTANCE. Name: NAND-3. Source Library Name: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND-3
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND-3
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND-3
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+DRAWN INSTANCE. Name: NAND. Source Library Name: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+Adding Schematic to Design: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN : 
+AND-2
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+Add Page to Schematic: AND-2 : 
+AND-2
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD:- Rename Schematic
+ New Schematic Name: S-AND-2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD:- Rename Page
+ New Page Name: S-AND-2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+SchematicFrame_Create
+SchematicFrame_OnClose
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 23. VDD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 20. 
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 23. GND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.10, 4.20 Pos End: 4.90, 4.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.10, 4.20 Pos End: 4.90, 4.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.00, 4.00 Pos End: 5.00, 4.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.00, 3.50 Pos End: 5.10, 3.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.00, 3.50 Pos End: 5.10, 3.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_OnClose
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+DRAWN INSTANCE. Name: AND. Source Library Name: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 65. TitleBlock0
+Object Type: 12. NAND
+Object Type: 12. NAND0
+Object Type: 12. AND
+Object Type: 12. AND0
+Object Type: 12. AND1
+Object Type: 12. AND2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 65. TitleBlock0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 65. TitleBlock0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+Adding Schematic to Design: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN : 
+S-NOR-2
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+Add Page to Schematic: S-NOR-2 : 
+S-NOR-2
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: PLACED_INSTANCE. Name: INS158. Source Part Name: MbreakN.Normal. Library Name: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: PLACED_INSTANCE. Name: INS178. Source Part Name: MbreakN.Normal. Library Name: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: PLACED_INSTANCE. Name: INS211. Source Part Name: MbreakP.Normal. Library Name: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: PLACED_INSTANCE. Name: INS231. Source Part Name: MbreakP.Normal. Library Name: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 13. INS211
+Object Type: 13. INS231
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MIRROR
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 13. INS178
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MIRROR
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 13. INS231
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+CMD_MIRROR
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 13. INS211
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 13. INS158
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 13. INS178
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.40, 3.20 Pos End: 3.40, 3.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.40, 3.10 Pos End: 4.10, 3.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.40, 3.10 Pos End: 4.10, 3.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.50, 3.70 Pos End: 4.00, 3.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.40, 3.60 Pos End: 3.40, 3.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.40, 3.90 Pos End: 4.10, 3.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.40, 3.90 Pos End: 4.10, 3.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.80, 2.70 Pos End: 3.80, 3.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 13. INS178
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.80, 1.90 Pos End: 3.80, 2.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ Name: PORTRIGHT-R Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-R SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ Name: PORTRIGHT-R Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-R SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ Name: PORTRIGHT-R Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-R SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ROTATE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ROTATE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ROTATE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ROTATE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ROTATE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ROTATE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 39. Display Property Name: Name. Value: VDD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. VDD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.80, 1.50 Pos End: 3.80, 1.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.80, 1.50 Pos End: 3.80, 1.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.90, 1.40 Pos End: 3.90, 1.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.90, 2.20 Pos End: 4.00, 2.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 2.20 Pos End: 4.00, 1.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 2.20 Pos End: 4.00, 1.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. VDD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 13. INS231
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 13. INS158
+Object Type: 13. INS178
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 39. Display Property Name: Name. Value: IN2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 39. Display Property Name: Name. Value: IN1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.50, 1.70 Pos End: 2.60, 1.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.60, 1.70 Pos End: 3.50, 1.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 23. IN2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.50, 2.20 Pos End: 3.50, 2.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.90, 1.70 Pos End: 2.90, 0.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.90, 0.80 Pos End: 4.50, 0.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.90, 0.80 Pos End: 4.50, 0.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.90, 2.20 Pos End: 2.90, 3.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.90, 2.20 Pos End: 2.90, 3.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ Name: PORTRIGHT-L Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-L SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ Name: PORTRIGHT-L Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-LRotate
+Rotate
+Rotate
+ SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.80, 3.30 Pos End: 3.80, 3.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-L
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 39. Display Property Name: Name. Value: GND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-L
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-NOR-2|S-NOR-2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+DRAWN INSTANCE. Name: NOR. Source Library Name: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. AND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. AND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. AND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. AND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NOR
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NOR
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NOR
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.50, 1.40 Pos End: 3.30, 1.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.30, 1.40 Pos End: 3.30, 2.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.30, 1.40 Pos End: 3.30, 2.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.50, 4.90 Pos End: 3.30, 4.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.30, 4.90 Pos End: 3.30, 3.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.30, 4.90 Pos End: 3.30, 3.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. AND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. AND4
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.60, 2.70 Pos End: 2.70, 2.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.70, 2.70 Pos End: 3.50, 2.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.60, 4.10 Pos End: 2.70, 4.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.70, 4.10 Pos End: 3.50, 4.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 23. OUT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 23. OUT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.90, 2.70 Pos End: 4.90, 3.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.90, 2.90 Pos End: 5.50, 2.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 13. INS49312
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.80, 2.60 Pos End: 5.80, 3.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.80, 2.90 Pos End: 5.50, 2.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 6.10, 2.80 Pos End: 6.10, 3.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 23. OUT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 23. GND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 23. GND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 23. OUT
+Object Type: 20. 
+Object Type: 13. INS49312
+Object Type: 13. INS49410
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 23. OUT
+Object Type: 13. INS49312
+Object Type: 13. INS49410
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.90, 2.70 Pos End: 4.90, 3.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.30, 2.90 Pos End: 4.90, 2.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.60, 2.40 Pos End: 5.60, 2.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.60, 2.40 Pos End: 5.60, 2.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.70, 2.30 Pos End: 5.70, 2.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.70, 2.30 Pos End: 5.70, 2.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.60, 3.40 Pos End: 5.60, 3.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.60, 3.50 Pos End: 5.60, 4.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+Object Type: 23. GND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.60, 3.50 Pos End: 5.60, 4.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-AND-2|S-AND-2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_OnClose
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+SchematicFrame_OnClose
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NOR
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NOR1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.40, 4.20 Pos End: 4.50, 4.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.50, 4.20 Pos End: 4.60, 4.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 4.20 Pos End: 4.60, 4.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 4.20 Pos End: 4.60, 4.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.50, 5.00 Pos End: 4.60, 5.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 5.00 Pos End: 4.60, 4.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 5.00 Pos End: 4.60, 4.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NOR1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NOR
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NOR
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.40, 1.80 Pos End: 4.60, 1.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 1.80 Pos End: 4.60, 2.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 1.80 Pos End: 4.60, 2.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.40, 2.60 Pos End: 4.60, 2.60
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 2.60 Pos End: 4.60, 2.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.60, 2.60 Pos End: 4.60, 2.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. NAND
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.10, 3.90 Pos End: 2.00, 3.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.00, 3.90 Pos End: 2.00, 3.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.00, 3.50 Pos End: 5.90, 3.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.00, 3.50 Pos End: 5.90, 3.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.70, 2.20 Pos End: 5.90, 2.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.10, 2.90 Pos End: 2.00, 2.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.00, 2.90 Pos End: 2.00, 3.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.00, 3.30 Pos End: 5.80, 3.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.80, 3.30 Pos End: 5.80, 4.60
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.80, 3.30 Pos End: 5.80, 4.60
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.30, 2.50 Pos End: 3.30, 3.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.30, 4.30 Pos End: 3.30, 3.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.50, 1.70 Pos End: 1.80, 1.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.80, 1.70 Pos End: 1.80, 5.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.80, 1.70 Pos End: 1.80, 5.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.10, 4.10 Pos End: 1.80, 4.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.10, 2.70 Pos End: 1.80, 2.70
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ Name: PORTRIGHT-L Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-L SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ Name: PORTRIGHT-L Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-L SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ Name: PORTRIGHT-L Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-L SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-L
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 39. Display Property Name: Name. Value: UT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.60, 3.10 Pos End: 2.60, 3.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 2.90 Pos End: 4.00, 2.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 2.10 Pos End: 4.00, 2.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.30, 2.50 Pos End: 5.30, 2.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.30, 4.90 Pos End: 5.30, 4.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 5.30 Pos End: 4.00, 5.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 4.50 Pos End: 4.00, 4.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.60, 4.50 Pos End: 2.60, 4.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-L
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-L
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ Name: PORTRIGHT-R Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-R SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ Name: PORTRIGHT-R Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-R SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ Name: PORTRIGHT-R Object Type: ID_PORT Library: C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB GraphicObjectName: PORTRIGHT-RRotate
+Rotate
+ SetProperty TypeInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 39. Display Property Name: Name. Value: PORTRIGHT-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 39. Display Property Name: Name. Value: J
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 39. Display Property Name: Name. Value: C
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 39. Display Property Name: Name. Value: J
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 39. Display Property Name: Name. Value: K
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 23. C
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.60, 2.50 Pos End: 2.10, 2.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.60, 4.30 Pos End: 2.10, 4.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.70, 3.70 Pos End: 2.70, 3.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.70, 2.30 Pos End: 2.70, 2.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.90, 1.50 Pos End: 3.90, 1.60
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.20, 1.90 Pos End: 5.20, 2.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.20, 4.30 Pos End: 5.20, 4.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 3.90 Pos End: 3.90, 3.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 3.90 Pos End: 3.90, 3.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.90, 4.70 Pos End: 3.90, 4.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD:- Rename Schematic
+ New Schematic Name: S-FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD:- Rename Page
+ New Page Name: S-FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+Adding Schematic to Design: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN : 
+FFD
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+Add Page to Schematic: FFD : 
+FFD
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_OnClose
+SchematicFrame_OnClose
+ Make RooT 
+ Schematic Name: FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+DRAWN INSTANCE. Name: FFD. Source Library Name: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_Create
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-FFD|S-FFD
+Object Type: 39. Display Property Name: Name. Value: OUT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-FFD|S-FFD
+Object Type: 39. Display Property Name: Name. Value: OUT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-FFD|S-FFD
+Object Type: 39. Display Property Name: Name. Value: OUT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-FFD|S-FFD
+Object Type: 39. Display Property Name: Name. Value: OUT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-FFD|S-FFD
+Object Type: 39. Display Property Name: Name. Value: OUT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-FFD|S-FFD
+Object Type: 39. Display Property Name: Name. Value: OUT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-FFD|S-FFD
+Object Type: 39. Display Property Name: Name. Value: OUT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-FFD|S-FFD
+Object Type: 39. Display Property Name: Name. Value: OUT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|S-FFD|S-FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_OnClose
+SchematicFrame_Create
+SchematicFrame_OnClose
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+DRAWN INSTANCE. Name: FFD. Source Library Name: 
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 12. FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+Object Type: 16. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD-01\I-FFD-01.DSN|FFD|FFD
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
