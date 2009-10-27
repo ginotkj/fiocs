@@ -42,7 +42,9 @@
     (File ".\i-ffd-pspicefiles\ffd\ffd.net"
       (Type "Report"))
     (File ".\i-ffd-pspicefiles\schematic1\schematic1.net"
-      (Type "Report")))
+      (Type "Report"))
+    (File "..\componentes orcad\compuertas.olb"
+      (Type "Schematic Library")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
       (Sort User)
@@ -135,11 +137,12 @@
          "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-FFD")
+      (Path "Outputs")
       (Select "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-FFD" "S-FFD"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 212 495 3 972"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 283 -16 804"))
       (Tab 0))))
