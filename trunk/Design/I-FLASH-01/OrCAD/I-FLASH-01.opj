@@ -121,7 +121,13 @@
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn"
          "FLASH")
-      (Path "Outputs"))
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn"
+         "S-FLASH")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn"
+         "FLASH" "FLASH"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -131,47 +137,10 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 0 1000 -8 -30 175 1824 175 877")
+        (Placement "44 2 3 -1 -1 -8 -30 100 1749 100 802")
         (Scroll "0 0")
         (Zoom "135")
         (Occurrence "/"))
       (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-01.DSN")
       (Schematic "FLASH")
-      (Page "FLASH"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 200 1849 200 872")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/FLASH"))
-      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-01.DSN")
-      (Schematic "S-FLASH")
-      (Page "S-FLASH"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 225 1874 225 897")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/FLASH/U2"))
-      (Path
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-DECODER-001\ORCAD\I-DECODER-001\I-DECODER-001.DSN")
-      (Schematic "S-DECODER-8")
-      (Page "S-DECODER-8"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 250 1899 250 922")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/FLASH/C1"))
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 275 1924 275 947")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/FLASH/C2"))
-      (Path
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-COMPARADOR-01\I-COMPARADOR-01.DSN")
-      (Schematic "S-COMP")
-      (Page "S-COMP"))))
+      (Page "FLASH"))))
