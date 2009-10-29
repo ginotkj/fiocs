@@ -136,7 +136,13 @@
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn")
       (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "FFD")
+      (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-FFD")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-NAND-2")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-NAND-3")
       (Path "Outputs")
       (Select "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-FFD" "S-FFD"))
@@ -144,5 +150,5 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 283 -16 804"))
+        (Placement "44 2 3 -1 -1 -8 -30 0 283 -16 804"))
       (Tab 0))))
