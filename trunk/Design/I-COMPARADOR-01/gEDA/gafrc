@@ -1,0 +1,35 @@
+(component-library "./sym")  ; shows the symbols in the library
+;; (component-library-search "./schem")
+(source-library "./schem") ; shows schematics for symbols
+
+;; (load (build-path geda-rc-path "gschem-lightbg")) ; light background
+;; (load (build-path geda-rc-path "gschem-darkbg")) ; dark background
+
+;; (log-window "startup") ; start with the log windows
+;; (log-window "later") ; avoid start with the log windows
+
+;; (define default-titleblock "title-A3.sym") ; define a default layout for the page
+
+;; (load (string-append geda-data-path "/scheme/auto-uref.scm")) ; load the autonumbering script
+;; (add-hook! add-component-hook auto-uref)       ; autonumber when adding a component
+;; (add-hook! copy-component-hook auto-uref)      ; autonumber when copying a component
+
+;; gschem -p -oMY_SCH.ps -sGEDA_SCHEME_DIR/print.scm MY_SCH.sch
+;; #!/bin/bash
+;; 
+;; # gschem options
+;; # -oPS_FILENAME output to Postscript file PS_FILENAME
+;; # -sSCRIPT_FILENAME run script SCRIPT_FILENAME
+;; # -p autoplace windows
+;; 
+;; for name in $*
+;; do
+;;     base="${name%.*}"
+;;     gschem -p -o$base.ps -sGEDA_SCHEME_DIR/print.scm $base.sch
+;;     lpr -P$PRINTER $base.ps
+;; done
+;; (paper-size 11.69 8.27) ; A4
+;; 
+;; (output-color "enabled")      ; for color postscript output or disable to monochrome
+;; (image-color "enabled")       ; for color PNG output (enabled by default) or disable to monochrome
+;; (load (build-path geda-rc-path "print-colormap-lightbg")) ; to print with light color instead of darkbg
