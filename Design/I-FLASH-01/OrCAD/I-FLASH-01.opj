@@ -59,6 +59,11 @@
       (ActiveProfile ".\i-flash-01-pspicefiles\flash\transient.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
     (VDC
       (FullPartName "VDC.Normal")
       (LibraryName
@@ -116,18 +121,7 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn"
-         "FLASH")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn"
-         "S-FLASH")
-      (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn"
-         "FLASH" "FLASH"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -137,10 +131,46 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 100 1749 100 802")
-        (Scroll "0 0")
-        (Zoom "135")
+        (Placement "44 0 1 -1 -1 -8 -30 100 1749 100 802")
+        (Scroll "0 324")
+        (Zoom "270")
         (Occurrence "/"))
       (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-01.DSN")
       (Schematic "FLASH")
-      (Page "FLASH"))))
+      (Page "FLASH"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 75 1695 75 777")
+        (Scroll "0 0")
+        (Zoom "135")
+        (Occurrence "/V-REF"))
+      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-01.DSN")
+      (Schematic "R-LEADER")
+      (Page "R-LEADER"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 100 1720 100 802")
+        (Scroll "0 0")
+        (Zoom "135")
+        (Occurrence "/FLASH"))
+      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-01.DSN")
+      (Schematic "S-FLASH")
+      (Page "S-FLASH"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 125 1745 125 827")
+        (Scroll "0 0")
+        (Zoom "135")
+        (Occurrence "/FLASH/C1"))
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 150 1770 150 852")
+        (Scroll "0 0")
+        (Zoom "135")
+        (Occurrence "/FLASH/C2"))
+      (Path
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-COMPARADOR-01\I-COMPARADOR-01.DSN")
+      (Schematic "S-COMP")
+      (Page "S-COMP"))))
