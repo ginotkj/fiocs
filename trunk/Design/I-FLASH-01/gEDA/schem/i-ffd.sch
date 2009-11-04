@@ -30,8 +30,6 @@ refdes=X2
 T 46895 44000 5 10 0 1 0 0 1
 device=3nand-model
 T 46000 43600 5 10 0 0 0 0 1
-file=model/3i_nand.sch.cir
-T 46000 43600 5 10 0 0 0 0 1
 model-name=3nand1
 }
 C 40900 48200 1 0 0 vdc-1.sym
@@ -100,15 +98,6 @@ N 54100 46000 54100 46300 4
 N 47400 45500 47400 45700 4
 N 40900 43700 40900 43800 4
 N 40900 40800 40900 41000 4
-C 42100 49900 1 0 0 spice-include-1.sym
-{
-T 42200 50200 5 10 0 1 0 0 1
-device=include
-T 42200 50300 5 10 1 1 0 0 1
-refdes=A1
-T 42600 50000 5 10 1 1 0 0 1
-file=simul.cmd
-}
 C 47800 48700 1 0 0 2i_nand.sym
 {
 T 47975 48795 5 10 1 1 0 0 1
@@ -117,8 +106,6 @@ T 48875 48790 5 10 0 1 0 0 1
 device=2NAND1-model
 T 47800 48700 5 10 0 0 0 0 1
 model-name=2nand1
-T 47800 48700 5 10 0 0 0 0 1
-file=model/2i_nand.sch.cir
 }
 C 45800 46600 1 0 0 2i_nand.sym
 {
@@ -128,8 +115,6 @@ T 46875 46690 5 10 0 1 0 0 1
 device=2NAND1-model
 T 45800 46600 5 10 0 0 0 0 1
 model-name=2nand1
-T 45800 46600 5 10 0 0 0 0 1
-file=model/2i_nand.sch.cir
 }
 C 46400 41400 1 0 0 2i_nand.sym
 {
@@ -271,4 +256,35 @@ T 41300 42050 5 10 0 0 0 0 1
 footprint=none
 T 41300 41450 5 10 1 1 0 0 1
 value=sin 0 4 2.5k
+}
+C 42400 50100 1 0 0 spice-subcircuit-LL-1.sym
+{
+T 42500 50400 5 10 0 1 0 0 1
+device=spice-subcircuit-LL
+T 42500 50500 5 10 1 1 0 0 1
+refdes=A1
+T 42500 50200 5 10 1 1 0 0 1
+model-name=i-ffd
+}
+C 42400 49200 1 0 0 spice-model-1.sym
+{
+T 42500 49900 5 10 0 1 0 0 1
+device=model
+T 42500 49800 5 10 1 1 0 0 1
+refdes=A2
+T 43700 49500 5 10 1 1 0 0 1
+model-name=2nand1
+T 42900 49300 5 10 1 1 0 0 1
+file=../model/2i_nand.sch.cir
+}
+C 42400 48300 1 0 0 spice-model-1.sym
+{
+T 42500 49000 5 10 0 1 0 0 1
+device=model
+T 42500 48900 5 10 1 1 0 0 1
+refdes=A3
+T 43700 48600 5 10 1 1 0 0 1
+model-name=3nand1
+T 42900 48400 5 10 1 1 0 0 1
+file=../model/3i_nand.sch.cir
 }
