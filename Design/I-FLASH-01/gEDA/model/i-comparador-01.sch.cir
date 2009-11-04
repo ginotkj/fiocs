@@ -1,0 +1,72 @@
+*******************************
+* Begin .SUBCKT model         *
+* spice-sdb ver 4.28.2007     *
+*******************************
+.SUBCKT comp01 11 2 7 8 10 
+*vvvvvvvv  Included SPICE model from model/nmos4.model vvvvvvvv
+.model nmos4 NMOS(LEVEL=3 PHI=0.600000 TOX=2.1200E-08 XJ=0.200000U   
++  TPG=1 VTO=0.7860 DELTA=6.9670E-01 LD=1.6470E-07 KP=9.6379E-05
++  UO=591.7 THETA=8.1220E-02 RSH=8.5450E+01 GAMMA=0.5863
++  NSUB=2.7470E+16 NFS=1.98E+12 VMAX=1.7330E+05 ETA=4.3680E-02
++  KAPPA=1.3960E-01 CGDO=4.0241E-10 CGSO=4.0241E-10
++  CGBO=3.6144E-10 CJ=3.8541E-04 MJ=1.1854 CJSW=1.3940E-10
++  MJSW=0.125195 PB=0.800000)
+*^^^^^^^^  End of included SPICE model from model/nmos4.model ^^^^^^^^
+*
+*vvvvvvvv  Included SPICE model from model/pmos4.model vvvvvvvv
+.model pmos4 PMOS(LEVEL=3 PHI=0.600000 TOX=2.1200E-08 XJ=0.200000U 
++  TPG=-1 VTO=-0.9056 DELTA=1.5200E+00 LD=2.2000E-08 KP=2.9352E-05
++  UO=180.2 THETA=1.2480E-01 RSH=1.0470E+02 GAMMA=0.4863
++  NSUB=1.8900E+16 NFS=3.46E+12 VMAX=3.7320E+05 ETA=1.6410E-01
++  KAPPA=9.6940E+00 CGDO=5.3752E-11 CGSO=5.3752E-11
++  CGBO=3.3650E-10 CJ=4.8447E-04 MJ=0.5027 CJSW=1.6457E-10
++  MJSW=0.217168 PB=0.850000)
+*^^^^^^^^  End of included SPICE model from model/pmos4.model ^^^^^^^^
+*
+*vvvvvvvv  Included SPICE model from model/inverter.sch.cir vvvvvvvv
+*******************************
+* Begin .SUBCKT model         *
+* spice-sdb ver 4.28.2007     *
+*******************************
+.SUBCKT cmos_inverter 1 3 4 2 
+*vvvvvvvv  Included SPICE model from ../model/nmos4.model vvvvvvvv
+.model nmos4 NMOS(LEVEL=3 PHI=0.600000 TOX=2.1200E-08 XJ=0.200000U   
++  TPG=1 VTO=0.7860 DELTA=6.9670E-01 LD=1.6470E-07 KP=9.6379E-05
++  UO=591.7 THETA=8.1220E-02 RSH=8.5450E+01 GAMMA=0.5863
++  NSUB=2.7470E+16 NFS=1.98E+12 VMAX=1.7330E+05 ETA=4.3680E-02
++  KAPPA=1.3960E-01 CGDO=4.0241E-10 CGSO=4.0241E-10
++  CGBO=3.6144E-10 CJ=3.8541E-04 MJ=1.1854 CJSW=1.3940E-10
++  MJSW=0.125195 PB=0.800000)
+*^^^^^^^^  End of included SPICE model from ../model/nmos4.model ^^^^^^^^
+*
+*vvvvvvvv  Included SPICE model from ../model/pmos4.model vvvvvvvv
+.model pmos4 PMOS(LEVEL=3 PHI=0.600000 TOX=2.1200E-08 XJ=0.200000U 
++  TPG=-1 VTO=-0.9056 DELTA=1.5200E+00 LD=2.2000E-08 KP=2.9352E-05
++  UO=180.2 THETA=1.2480E-01 RSH=1.0470E+02 GAMMA=0.4863
++  NSUB=1.8900E+16 NFS=3.46E+12 VMAX=3.7320E+05 ETA=1.6410E-01
++  KAPPA=9.6940E+00 CGDO=5.3752E-11 CGSO=5.3752E-11
++  CGBO=3.3650E-10 CJ=4.8447E-04 MJ=0.5027 CJSW=1.6457E-10
++  MJSW=0.217168 PB=0.850000)
+*^^^^^^^^  End of included SPICE model from ../model/pmos4.model ^^^^^^^^
+*
+*==============  Begin SPICE netlist of main design ============
+M2 1 2 4 4 nmos4  l=0.8u w=3u
+M1 1 2 3 3 pmos4  l=0.8u w=10u
+.ends cmos_inverter
+*******************************
+*^^^^^^^^  End of included SPICE model from model/inverter.sch.cir ^^^^^^^^
+*
+*==============  Begin SPICE netlist of main design ============
+X1 11 2 0 5 cmos_inverter
+M9 6 10 0 0 nmos4  l=3u w=1u
+M8 9 1 5 0 nmos4  l=3u w=1u
+M7 4 3 9 0 nmos4  l=3u w=1u
+M6 6 8 1 0 nmos4  l=3u w=1u
+M5 3 7 6 0 nmos4  l=3u w=1u
+M4 2 4 5 2 pmos4  l=10u w=1u
+M3 4 4 2 2 pmos4  l=10u w=1u
+M2 3 3 2 2 pmos4  l=10u w=1u
+M1 2 1 1 2 pmos4  l=10u w=1u
+M10 9 10 0 0 nmos4  l=3u w=1u
+.ends comp01
+*******************************
