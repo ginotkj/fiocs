@@ -131,7 +131,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 100 1749 100 802")
+        (Placement "44 2 3 -1 -1 -8 -30 100 1749 100 802")
         (Scroll "0 324")
         (Zoom "270")
         (Occurrence "/"))
@@ -141,17 +141,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1695 75 777")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/V-REF"))
-      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-01.DSN")
-      (Schematic "R-LEADER")
-      (Page "R-LEADER"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 100 1720 100 802")
+        (Placement "44 0 1 -1 -1 -8 -30 125 1745 125 827")
         (Scroll "0 0")
         (Zoom "135")
         (Occurrence "/FLASH"))
@@ -161,16 +151,53 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 125 1745 125 827")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/FLASH/C1"))
-      (Frame
         (Placement "44 0 1 -1 -1 -8 -30 150 1770 150 852")
         (Scroll "0 0")
         (Zoom "135")
-        (Occurrence "/FLASH/C2"))
+        (Occurrence "/FLASH/C4"))
       (Path
          "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-COMPARADOR-01\I-COMPARADOR-01.DSN")
       (Schematic "S-COMP")
-      (Page "S-COMP"))))
+      (Page "S-COMP"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 175 1795 175 877")
+        (Scroll "0 0")
+        (Zoom "135")
+        (Occurrence "/FLASH/F3"))
+      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD\I-FFD.DSN")
+      (Schematic "S-FFD")
+      (Page "S-FFD"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 200 1820 200 902")
+        (Scroll "0 0")
+        (Zoom "135")
+        (Occurrence "/FLASH/F3/NAND3"))
+      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD\I-FFD.DSN")
+      (Schematic "S-NAND-2")
+      (Page "S-NAND-2"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 225 1845 225 927")
+        (Scroll "0 0")
+        (Zoom "135")
+        (Occurrence "/FLASH/U2"))
+      (Path
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-DECODER-001\ORCAD\I-DECODER-001\I-DECODER-001.DSN")
+      (Schematic "S-DECODER-8")
+      (Page "S-DECODER-8"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 250 1870 250 952")
+        (Scroll "0 0")
+        (Zoom "135")
+        (Occurrence "/FLASH/U2/7-NAND"))
+      (Path
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-DECODER-001\ORCAD\I-DECODER-001\I-DECODER-001.DSN")
+      (Schematic "S-NAND-7")
+      (Page "S-NAND-7"))))
