@@ -11,7 +11,7 @@ model-name=pmos4
 T 43200 48600 5 8 1 0 180 0 1
 w=10u
 T 43200 48800 5 8 1 0 180 0 1
-l=1u
+l=0.8u
 }
 C 42800 46300 1 0 0 asic-nmos-1.sym
 {
@@ -22,9 +22,9 @@ refdes=M3
 T 43600 46900 5 8 1 1 0 0 1
 model-name=nmos4
 T 43600 46600 5 8 1 0 0 0 1
-w=1u
+w=3u
 T 43600 46400 5 8 1 0 0 0 1
-l=3u
+l=0.8u
 }
 C 44400 47900 1 0 0 asic-pmos-1.sym
 {
@@ -37,7 +37,7 @@ model-name=pmos4
 T 45200 48200 5 8 1 0 0 0 1
 w=10u
 T 45200 48000 5 8 1 0 0 0 1
-l=1u
+l=0.8u
 }
 C 45600 47300 1 180 0 asic-nmos-1.sym
 {
@@ -48,9 +48,9 @@ refdes=M4
 T 44800 46700 5 8 1 1 180 0 1
 model-name=nmos4
 T 44800 47000 5 8 1 0 180 0 1
-w=1u
+w=3u
 T 44800 47200 5 8 1 0 180 0 1
-l=3u
+l=0.8u
 }
 N 43400 47900 43400 47300 4
 N 45000 47900 45000 47300 4
@@ -78,9 +78,9 @@ refdes=M5
 T 44400 45200 5 8 1 1 0 0 1
 model-name=nmos4
 T 44400 44900 5 8 1 0 0 0 1
-w=1u
+w=3u
 T 44400 44700 5 8 1 0 0 0 1
-l=3u
+l=0.8u
 }
 N 44200 44400 44200 44600 4
 N 44800 44500 44200 44500 4
@@ -93,9 +93,9 @@ refdes=M7
 T 47600 45200 5 8 1 1 0 0 1
 model-name=nmos4
 T 47600 44900 5 8 1 0 0 0 1
-w=1u
+w=3u
 T 47600 44700 5 8 1 0 0 0 1
-l=3u
+l=0.8u
 }
 C 46800 47100 1 0 0 asic-pmos-1.sym
 {
@@ -108,7 +108,7 @@ model-name=pmos4
 T 47600 47400 5 8 1 0 0 0 1
 w=10u
 T 47600 47200 5 8 1 0 0 0 1
-l=1u
+l=0.8u
 }
 N 47400 45600 47400 47100 4
 N 47400 48100 47400 49200 4
@@ -136,13 +136,13 @@ refdes=P3
 C 54000 45700 1 0 0 spice-model-1.sym
 {
 T 54100 46400 5 10 0 1 0 0 1
-device=model
+device=spice-subcircuit-LL
 T 54100 46300 5 10 1 1 0 0 1
 refdes=A1
 T 55300 46000 5 10 1 1 0 0 1
-model-name=pmos4
+model-name=comparador
 T 54500 45800 5 10 1 1 0 0 1
-file=../model/pmos4.model
+file=../model/nmos4.model
 }
 C 45400 46500 1 0 0 spice-subcircuit-IO-1.sym
 {
@@ -170,11 +170,11 @@ N 45000 48900 45000 49200 4
 C 54000 47100 1 0 0 spice-model-1.sym
 {
 T 54100 47800 5 10 0 1 0 0 1
-device=model
+device=spice-subcircuit-LL
 T 54100 47700 5 10 1 1 0 0 1
 refdes=A1
 T 55300 47400 5 10 1 1 0 0 1
-model-name=nmos4
+model-name=comparador
 T 54500 47200 5 10 1 1 0 0 1
 file=../model/nmos4.model
 }
@@ -186,4 +186,6 @@ T 54100 48900 5 10 1 1 0 0 1
 refdes=A1
 T 54100 48600 5 10 1 1 0 0 1
 model-name=comparador
+T 54000 48500 5 10 1 1 0 0 1
+file=../model/nmos4.model
 }
