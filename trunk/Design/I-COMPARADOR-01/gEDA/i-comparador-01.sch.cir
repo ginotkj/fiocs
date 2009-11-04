@@ -63,7 +63,7 @@ R1 out_f 8 100k
 V3 7 0 DC 1.5V
 V2 biasglob 0 DC 2.5V
 V1 Vcc 0 DC 5V
-V4 in_2 0 DC 1.5V
+V4 in_1 0 DC 1.5V
 M9 5 biasglob 0 0 nmos4  l=3u w=1u
 M8 bias2 out_1b out_2b 0 nmos4  l=3u w=1u
 M7 out_2a out_1a bias2 0 nmos4  l=3u w=1u
@@ -85,5 +85,5 @@ Vout Vcc 8 DC 0V
 V1b 1 out_1b DC 0V
 V1a 2 out_1a DC 0V
 X1.1 out_f Vcc 0 out_2b cmos_inverter
-V5 in_1 0 sin 0 2 10k
+V5 in_2 0 sin 0 2 10k
 .end
