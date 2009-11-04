@@ -1,0 +1,22 @@
+#!/usr/bin/gwave -s
+!#
+; gwave script
+(require-n-wavepanels 1)
+(set! default-measure1-function 5)
+(let ((df (if script-target-datafile
+           script-target-datafile
+           (find-or-load-wavefile "/home/facundo/tesis/fiocs/Design/I-COMPARADOR-01/gEDA/i-comparador-01.sch.bin"))))
+ (wavepanel-add-var-setup df (nth-wavepanel 0) "in_1" 0)
+ (wavepanel-add-var-setup df (nth-wavepanel 0) "in_2" 1)
+ (wavepanel-add-var-setup df (nth-wavepanel 0) "out_f" 2)
+)
+(x-zoom! 0.0 2.2e-4)
+(wtable-set-xlogscale! #f)
+(set! default-wavepanel-type 0)
+(set-wtable-vcursor! 0 0.0)
+(gtk-tooltips-enable gwave-tooltips)
+(let ((wp (nth-wavepanel 0)))
+ (set-wavepanel-ylogscale! wp #f)
+ (set-wavepanel-type! wp 0)
+ (wavepanel-y-zoom! wp -3.0 6.0)
+)
