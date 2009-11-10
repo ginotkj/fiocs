@@ -43,7 +43,7 @@ device=VOLTAGE_SOURCE
 T 41600 49250 5 10 0 0 0 0 1
 footprint=none
 T 41600 48650 5 10 1 1 0 0 1
-value=DC 5V
+value=DC 3.3V
 }
 C 40600 43800 1 0 0 vpulse-1.sym
 {
@@ -54,7 +54,7 @@ device=vpulse
 T 41300 44850 5 10 0 0 0 0 1
 footprint=none
 T 40300 43050 5 10 1 1 0 0 1
-value=pulse 0 5 0u 1u 1u 7u 14u DC 0V
+value=pulse 0 3.3 0u .1u .1u 5u 10u DC 0V
 }
 C 41000 49600 1 0 0 vcc-2.sym
 C 53900 48000 1 0 0 vcc-2.sym
@@ -270,5 +270,5 @@ device=vsin
 T 41300 42050 5 10 0 0 0 0 1
 footprint=none
 T 41300 41450 5 10 1 1 0 0 1
-value=sin 0 4 2.5k
+value=sin 0 2 10k
 }
