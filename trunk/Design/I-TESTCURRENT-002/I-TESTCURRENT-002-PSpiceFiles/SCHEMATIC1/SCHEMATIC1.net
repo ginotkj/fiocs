@@ -1,5 +1,5 @@
 * source I-TESTCURRENT-002
 I_I1         N14389 0 DC 0Adc AC 0Aac
-+EXP 0m 1m 1.5p .5p 3.5p 5p
++EXP 0m 1m 1.5p .5p 4p 1p
 R_R1         N14389 N14398  1k TC=0,0 
 R_R2         0 N14398  1k TC=0,0 
