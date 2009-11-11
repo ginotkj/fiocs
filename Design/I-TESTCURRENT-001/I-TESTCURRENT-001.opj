@@ -118,5 +118,16 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -28 0 583 0 817"))
-      (Tab 0))))
+        (Placement "44 0 1 -1 -1 -8 -28 -18 565 107 924"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 582 1939 -29 927")
+        (Scroll "0 0")
+        (Zoom "124")
+        (Occurrence "/"))
+      (Path
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-TESTCURRENT-001\I-TESTCURRENT-001.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))
