@@ -48,7 +48,9 @@
     (File ".\i-decoder-001-pspicefiles\s-decoder-8 test\s-decoder-8 test.net"
       (Type "Report"))
     (File "d:\documents\tesis\trunk\design\componentes orcad\compuertas.olb"
-      (Type "Schematic Library")))
+      (Type "Schematic Library"))
+    (File ".\i-decoder-001-pspicefiles\test decoder\test decoder.net"
+      (Type "Report")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
       (Sort User)
@@ -73,9 +75,26 @@
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-decoder-001-pspicefiles\decoder-8\transient.sim"
         (DisplayName "DECODER-8-transient")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-decoder-001-pspicefiles\test decoder\transient.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-decoder-001-pspicefiles\test decoder\transient.sim"
+        (DisplayName "TEST DECODER-transient")
         (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (PORTRIGHT-L
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
     (VDC
       (FullPartName "VDC.Normal")
       (LibraryName
@@ -85,13 +104,6 @@
       (FullPartName "R.Normal")
       (LibraryName
          "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
-      (DeviceIndex "0"))
-    (0
-      (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
-    (PORTRIGHT-L
-      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (S-NAND-2
       (FullPartName "S-NAND-2.Normal")
@@ -128,18 +140,8 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\i-decoder-001.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\i-decoder-001.dsn"
-         "S-DECODER-8")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\i-decoder-001.dsn"
-         "DECODER-8")
       (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\i-decoder-001.dsn"
-         "S-DECODER-8" "S-DECODER-8"))
+      (Select "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

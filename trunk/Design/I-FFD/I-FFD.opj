@@ -44,7 +44,15 @@
     (File ".\i-ffd-pspicefiles\schematic1\schematic1.net"
       (Type "Report"))
     (File "..\componentes orcad\compuertas.olb"
-      (Type "Schematic Library")))
+      (Type "Schematic Library"))
+    (File ".\i-ffd-pspicefiles\test\test.net"
+      (Type "Report"))
+    (File ".\i-ffd-pspicefiles\test nand-2\test nand-2.net"
+      (Type "Report"))
+    (File ".\i-ffd-pspicefiles\test nand-3\test nand-3.net"
+      (Type "Report"))
+    (File ".\i-ffd-pspicefiles\test ffd\test ffd.net"
+      (Type "Report")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
       (Sort User)
@@ -74,14 +82,25 @@
          ".\i-ffd-pspicefiles\s-ffd\prueba.sim"
         (DisplayName "S-FFD-prueba")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-ffd-pspicefiles\ffd\transitorio.sim")))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\ffd\transient.sim"
+        (DisplayName "FFD-transient")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\test nand-2\transient.sim"
+        (DisplayName "TEST NAND-2-transient")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\test nand-3\transient.sim"
+        (DisplayName "TEST NAND-3-transient")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-ffd-pspicefiles\test ffd\transient.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\test ffd\transient.sim"
+        (DisplayName "TEST FFD-transient")
+        (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
-    (R
-      (FullPartName "R.Normal")
-      (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
-      (DeviceIndex "0"))
     (C
       (FullPartName "C.Normal")
       (LibraryName
@@ -91,21 +110,26 @@
       (LibraryName
          "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
     (VDC
       (FullPartName "VDC.Normal")
       (LibraryName
          "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
       (DeviceIndex "0"))
     (PORTRIGHT-L
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (PORTRIGHT-R
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
-    (VPULSE
-      (FullPartName "VPULSE.Normal")
-      (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
     (GND
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
@@ -136,19 +160,18 @@
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "FFD")
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "TEST FFD")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-FFD")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-NAND-2")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-NAND-3")
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "TEST NAND-3")
       (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles")
       (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "S-FFD" "S-FFD"))
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd.dsn" "TEST FFD" "TEST FFD"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 283 -16 804"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 283 -16 804"))
       (Tab 0))))

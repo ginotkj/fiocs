@@ -112,12 +112,9 @@
          "D:\Documents\TESIS\TRUNK\Design\I-NAND\i-nand.dsn")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-NAND\i-nand.dsn" "NAND")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-NAND\i-nand.dsn" "S-NAND")
       (Select "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-NAND\i-nand.dsn" "NAND" "NAND"))
-    (HierarchyView
-      (Path "NAND"))
+    (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
