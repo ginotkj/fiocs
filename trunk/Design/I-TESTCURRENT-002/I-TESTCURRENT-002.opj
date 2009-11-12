@@ -85,7 +85,15 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Outputs"))
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-002\i-testcurrent-002.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-002\i-testcurrent-002.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-002\i-testcurrent-002.dsn"
+         "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

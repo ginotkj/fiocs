@@ -122,15 +122,7 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn"
-         "FLASH")
-      (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn"
-         "FLASH" "FLASH"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -140,52 +132,10 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 1699 50 752")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/"))
-      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-01.DSN")
-      (Schematic "FLASH")
-      (Page "FLASH"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1695 75 777")
+        (Placement "44 2 3 -1 -1 -8 -30 75 1375 75 777")
         (Scroll "0 0")
         (Zoom "135")
         (Occurrence "/FLASH"))
       (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-01.DSN")
       (Schematic "S-FLASH")
-      (Page "S-FLASH"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 225 1845 225 927")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/FLASH/FFD1"))
-      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD\I-FFD.DSN")
-      (Schematic "S-FFD")
-      (Page "S-FFD"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 275 1895 275 977")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/FLASH/C1"))
-      (Path
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-COMPARADOR-01\I-COMPARADOR-01.DSN")
-      (Schematic "S-COMP")
-      (Page "S-COMP"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 300 1920 300 1002")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/FLASH/U2"))
-      (Path
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-DECODER-001\ORCAD\I-DECODER-001\I-DECODER-001.DSN")
-      (Schematic "S-DECODER-8")
-      (Page "S-DECODER-8"))))
+      (Page "S-FLASH"))))
