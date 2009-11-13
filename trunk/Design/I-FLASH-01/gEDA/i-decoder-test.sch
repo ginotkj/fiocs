@@ -33,7 +33,7 @@ device=include
 T 40300 50600 5 10 1 1 0 0 1
 refdes=A1
 T 40800 50300 5 10 1 1 0 0 1
-file=simul.cmd
+file=simul-comp.cmd
 }
 C 52200 44000 1 0 0 vcc-2.sym
 C 52300 49700 1 0 0 vcc-2.sym
@@ -71,11 +71,9 @@ device=deco-model
 T 51700 46000 5 10 0 0 0 0 1
 slot=1
 T 51700 46000 5 10 0 0 0 0 1
-model=deco01
-T 51700 46000 5 10 0 0 0 0 1
-device=deco-model
-T 51700 46000 5 10 0 0 0 0 1
 file=model/i-decoder-001.sch.cir
+T 51700 46000 5 10 0 0 0 0 1
+model-name=deco01
 }
 C 55200 48700 1 90 0 resistor-1.sym
 {
