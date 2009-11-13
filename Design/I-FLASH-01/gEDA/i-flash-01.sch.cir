@@ -170,45 +170,45 @@ X1 4 3 0 1 2 2nand1
 *^^^^^^^^  End of included SPICE model from model/i-ffd.sch.cir ^^^^^^^^
 *
 *==============  Begin SPICE netlist of main design ============
-R3 11 9 10k  
-X12.1 q3 Vcc 17 12 nq3 i-ffd
+R3 10 8 10k  
+X12.1 q3 Vcc 16 11 nq3 i-ffd
 R14 nq5 Vcc 100k  
 R19 q2 Vcc 100k  
 R18 nq3 Vcc 100k  
 R16 nq4 Vcc 100k  
-X7.1 16 Vcc 15 2 4 comp01
+X7.1 15 Vcc 14 entra 3 comp01
 .INCLUDE simul.cmd
-X3.1 8 Vcc 7 2 4 comp01
+X3.1 7 Vcc 6 entra 3 comp01
 R17 q3 Vcc 100k  
-V3 17 0 pulse 0 3.3 0 .1u .1u 5u 10u DC 0
-V2 4 0 DC 1.5V
-X8.1 q7 Vcc 17 3 nq7 i-ffd
+V3 16 0 pulse 0 3.3 0 .1u .1u 5u 10u DC 0
+V2 3 0 DC 1.5V
+X8.1 q7 Vcc 16 2 nq7 i-ffd
 R13 q5 Vcc 100k  
 R12 nq6 Vcc 100k  
-X13.1 q2 Vcc 17 14 nq2 i-ffd
-R4 9 7 10k  
-X4.1 10 Vcc 9 2 4 comp01
+X13.1 q2 Vcc 16 13 nq2 i-ffd
+R4 8 6 10k  
+X4.1 9 Vcc 8 entra 3 comp01
 R9 q7 Vcc 100k  
 R11 q6 Vcc 100k  
-V5 2 0 sin 2 2 10k
-R6 5 1 10k  
-R8 0 15 5k  
-R7 1 18 5k  
-V4 Vcc 0 DC 1V
-R5 7 5 10k  
+V5 entra 0 sin 2 1 10k
+R6 4 1 10k  
+R8 0 14 5k  
+R7 1 17 5k  
+V4 Vcc 0 DC 3.3V
+R5 6 4 10k  
 R10 nq7 Vcc 100k  
-V1 18 0 DC 2V
-R2 13 11 10k  
-R1 15 13 10k  
-X14.1 q1 Vcc 17 16 nq1 i-ffd
-X10.1 q5 Vcc 17 8 nq5 i-ffd
-X9.1 q6 Vcc 17 6 nq6 i-ffd
-X5.1 12 Vcc 11 2 4 comp01
-X1.1 3 Vcc 1 2 4 comp01
-X11.1 q4 Vcc 17 10 nq4 i-ffd
+V1 17 0 DC 2V
+R2 12 10 10k  
+R1 14 12 10k  
+X14.1 q1 Vcc 16 15 nq1 i-ffd
+X10.1 q5 Vcc 16 7 nq5 i-ffd
+X9.1 q6 Vcc 16 5 nq6 i-ffd
+X5.1 11 Vcc 10 entra 3 comp01
+X1.1 2 Vcc 1 entra 3 comp01
+X11.1 q4 Vcc 16 9 nq4 i-ffd
 R22 nq1 Vcc 100k  
-X6.1 14 Vcc 13 2 4 comp01
-X2.1 6 Vcc 5 2 4 comp01
+X6.1 13 Vcc 12 entra 3 comp01
+X2.1 5 Vcc 4 entra 3 comp01
 R21 q1 Vcc 100k  
 R20 nq2 Vcc 100k  
 R15 q4 Vcc 100k  
