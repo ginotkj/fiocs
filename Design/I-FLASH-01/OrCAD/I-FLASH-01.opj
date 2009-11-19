@@ -132,17 +132,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1375 75 777")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/FLASH"))
-      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-01.DSN")
-      (Schematic "S-FLASH")
-      (Page "S-FLASH"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 75 1027 75 525")
+        (Placement "44 2 3 -1 -1 -8 -30 100 1081 100 550")
         (Scroll "0 0")
         (Zoom "100")
         (Occurrence "/"))
