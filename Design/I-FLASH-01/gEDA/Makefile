@@ -51,7 +51,7 @@ drc:	$(SCH)
 	$(CC) $(DRCFLAGS) $(DRC) $(SCH)
 
 clean:
-	-$(RM) $(NAME) $(CIR) $(DRC) $(LOG) *~
+	-$(RM) $(NAME) $(CIR) $(DRC) $(LOG) $(BIN) *~
 
 comp: clean
 	$(COMP) 
