@@ -1,5 +1,5 @@
 
-Circuit: * gnetlist -g spice-sdb -o i-flash-01.sch.cir i-flash-01.sch
+Circuit: * gnetlist -gspice-sdb -o i-flash-01.sch.cir i-flash-01.sch
 
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
 
@@ -212,5 +212,5 @@ v2#branch                                    0
 v3#branch                                    0
 
 
-No. of Data Rows : 28689
+No. of Data Rows : 72
 
