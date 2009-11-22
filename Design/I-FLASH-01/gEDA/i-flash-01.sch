@@ -477,7 +477,7 @@ device=vsin
 T 41100 45050 5 10 0 0 0 0 1
 footprint=none
 T 41100 44450 5 10 1 1 0 0 1
-value=sin .7 2.5 1k
+value=sin .7 2.5 1k DC 0
 }
 C 40600 43400 1 0 0 gnd-1.sym
 N 42900 41200 43300 41200 4
