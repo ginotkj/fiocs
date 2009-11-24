@@ -9,12 +9,12 @@
 ##############################
 # Complete this to make it ! #
 ##############################
-NAME 	=	i-flash-01.sch.raw
-CIR	=	i-flash-01.sch.cir
-DRC	=	i-flash-01.sch.drc
-SCH	=	i-flash-01.sch
+NAME 	=	flash.sch.raw
+CIR	=	flash.sch.cir
+DRC	=	flash.sch.drc
+SCH	=	flash.sch
 LOG	=	*.log
-BIN	=	i-flash-01.sch.bin
+BIN	=	flash.sch.bin
 ################
 # Optional add #
 ################
@@ -43,10 +43,13 @@ RAWFLAGS = $(BATCH) $(OUTOPT)
 
 all:	$(NAME)
 $(NAME): cir
+	@echo "y parece q muy bien"
 	$(GG) $(RAWFLAGS) $(NAME) $(CIR)
 
 cir:	$(SCH)
+	@echo "funca esta mierda"
 	$(CC) $(CIRFLAGS) $(CIR) $(SCH)
+
 drc:	$(SCH)
 	$(CC) $(DRCFLAGS) $(DRC) $(SCH)
 
