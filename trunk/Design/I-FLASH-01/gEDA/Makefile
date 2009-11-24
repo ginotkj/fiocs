@@ -15,6 +15,7 @@ DRC	=	i-flash-01.sch.drc
 SCH	=	i-flash-01.sch
 LOG	=	*.log
 BIN	=	i-flash-01.sch.bin
+DIRS	=	model sym schem
 ################
 # Optional add #
 ################
@@ -42,15 +43,21 @@ RAWFLAGS = $(BATCH) $(OUTOPT)
 ##############################
 
 all:	$(NAME)
-$(NAME): cir
-	$(GG) $(RAWFLAGS) $(NAME) $(CIR)
+$(NAME): cir drc
+	$(GG) $(RAWFLAGS) $@ $(CIR)
 
 cir:	$(SCH)
 	$(CC) $(CIRFLAGS) $(CIR) $(SCH)
 drc:	$(SCH)
+	@echo "var una [$<] sera [$@] "
 	$(CC) $(DRCFLAGS) $(DRC) $(SCH)
 
+deps:
+	for dir in $(DIRS); do make -C $$dirs all; done
+
 clean:
+	@echo "Cleaning..."
+	@echo "var una [$<] sera [$@] "
 	-$(RM) $(NAME) $(CIR) $(DRC) $(LOG) $(BIN) *~
 
 comp: clean
