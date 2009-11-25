@@ -38,7 +38,9 @@
     (PSPICE_Regenerate_Netlist_Flag "FALSE"))
   (Folder "Outputs"
     (File ".\i-decoder-4bits-pspicefiles\test\test.net"
-      (Type "Report")))
+      (Type "Report"))
+    (File "d:\documents\tesis\trunk\design\componentes orcad\compuertas.olb"
+      (Type "Schematic Library")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries")
     (Folder "Stimulus Files")
@@ -55,8 +57,7 @@
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-decoder-4bits-pspicefiles\test\bias.sim"
         (DisplayName "TEST-bias")
-        (Type "PSpice Profile"))
-      (ActiveProfile ".\i-decoder-4bits-pspicefiles\test\transient.sim")))
+        (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (R
@@ -100,61 +101,17 @@
          "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits.dsn")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits.dsn"
-         "INVERSOR")
+         "S-DECODER-16")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits.dsn"
-         "S-NAND-2")
+         "DECODER-16")
       (Path "Outputs")
       (Select "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits.dsn"
-         "S-NAND-2" "S-NAND-2"))
+         "S-DECODER-16"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 160 644 -8 -30 -4 297 0 639"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 0 648 -8 -30 25 1006 25 475")
-        (Scroll "0 0")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-DECODER-001\ORCAD\I-DECODER-4BITS\I-DECODER-4BITS.DSN")
-      (Schematic "TEST")
-      (Page "TEST"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 50 1002 50 500")
-        (Scroll "0 0")
-        (Zoom "100")
-        (Occurrence "/SEÑALES"))
-      (Path
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-DECODER-001\ORCAD\I-DECODER-4BITS\I-DECODER-4BITS.DSN")
-      (Schematic "SEÑALES")
-      (Page "SEÑALES"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 100 1052 100 550")
-        (Scroll "0 67")
-        (Zoom "100")
-        (Occurrence "/DECODER"))
-      (Path
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-DECODER-001\ORCAD\I-DECODER-4BITS\I-DECODER-4BITS.DSN")
-      (Schematic "S-DECODER-16")
-      (Page "S-DECODER-16"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 125 1077 125 575")
-        (Scroll "0 0")
-        (Zoom "100")
-        (Occurrence "/DECODER/NAND-4"))
-      (Path
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-DECODER-001\ORCAD\I-DECODER-4BITS\I-DECODER-4BITS.DSN")
-      (Schematic "S-NAND-4")
-      (Page "S-NAND-4"))))
+        (Placement "44 2 3 160 644 -8 -30 272 573 -5 661"))
+      (Tab 0))))
