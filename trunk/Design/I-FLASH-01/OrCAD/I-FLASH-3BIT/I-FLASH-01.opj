@@ -123,14 +123,20 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn")
+         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-3BIT\i-flash-01.dsn")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn"
+         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-3BIT\i-flash-01.dsn"
          "FLASH")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-3BIT\i-flash-01.dsn"
+         "R-LEADER")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-3BIT\i-flash-01.dsn"
+         "S-FLASH")
       (Path "Outputs")
       (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\i-flash-01.dsn"
-         "FLASH" "FLASH"))
+         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-3BIT\i-flash-01.dsn"
+         "R-LEADER" "R-LEADER"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
