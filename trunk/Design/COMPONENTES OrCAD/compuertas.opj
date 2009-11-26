@@ -25,10 +25,7 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\COMPONENTES OrCAD\compuertas.olb")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\COMPONENTES OrCAD\compuertas.olb"
-         "FFD"))
+         "D:\Documents\TESIS\TRUNK\Design\COMPONENTES OrCAD\compuertas.olb"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
