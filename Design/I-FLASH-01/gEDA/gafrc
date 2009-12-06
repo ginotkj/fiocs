@@ -3,5 +3,4 @@
 (component-library "./ssym")
 (component-library-search "./ssym")
 (source-library "./model")
-
-
+(source-library "./sschem")
