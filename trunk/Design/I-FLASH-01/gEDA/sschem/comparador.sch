@@ -126,66 +126,40 @@ N 47400 44400 47400 44600 4
 N 47500 45100 48000 45100 4
 N 48000 45100 48000 44500 4
 N 48000 44500 47400 44500 4
-C 43000 47100 1 180 0 spice-subcircuit-IO-1.sym
-{
-T 42100 46700 5 10 0 1 180 0 1
-device=spice-IO
-T 42150 46850 5 10 1 1 180 0 1
-refdes=P3
-}
-C 54000 45700 1 0 0 spice-model-1.sym
-{
-T 54100 46400 5 10 0 1 0 0 1
-device=spice-subcircuit-LL
-T 54100 46300 5 10 1 1 0 0 1
-refdes=A1
-T 55300 46000 5 10 1 1 0 0 1
-model-name=comparador
-T 54500 45800 5 10 1 1 0 0 1
-file=../model/nmos4.model
-}
-C 45400 46500 1 0 0 spice-subcircuit-IO-1.sym
-{
-T 46300 46900 5 10 0 1 0 0 1
-device=spice-IO
-T 46250 46750 5 10 1 1 0 0 1
-refdes=P4
-}
-C 47200 46500 1 0 0 spice-subcircuit-IO-1.sym
-{
-T 48100 46900 5 10 0 1 0 0 1
-device=spice-IO
-T 48050 46750 5 10 1 1 0 0 1
-refdes=P1
-}
-C 45300 49100 1 90 0 spice-subcircuit-IO-1.sym
-{
-T 44900 50000 5 10 0 1 90 0 1
-device=spice-IO
-T 45050 49950 5 10 1 1 90 0 1
-refdes=P2
-}
 N 45000 49300 45000 49200 4
 N 45000 48900 45000 49200 4
-C 54000 47100 1 0 0 spice-model-1.sym
+C 42200 46700 1 0 0 in-1.sym
 {
-T 54100 47800 5 10 0 1 0 0 1
-device=spice-subcircuit-LL
-T 54100 47700 5 10 1 1 0 0 1
-refdes=A1
-T 55300 47400 5 10 1 1 0 0 1
-model-name=comparador
-T 54500 47200 5 10 1 1 0 0 1
-file=../model/nmos4.model
+T 42200 47000 5 10 0 0 0 0 1
+device=INPUT
+T 42200 47000 5 10 1 1 0 0 1
+refdes=V+
 }
-C 54000 48500 1 0 0 spice-subcircuit-LL-1.sym
+C 44900 49900 1 270 0 in-1.sym
 {
-T 54100 48800 5 10 0 1 0 0 1
-device=spice-subcircuit-LL
-T 54100 48900 5 10 1 1 0 0 1
-refdes=A1
-T 54100 48600 5 10 1 1 0 0 1
-model-name=comparador
-T 54000 48500 5 10 1 1 0 0 1
-file=../model/nmos4.model
+T 45200 49900 5 10 0 0 270 0 1
+device=INPUT
+T 45200 49900 5 10 1 1 270 0 1
+refdes=Vdd
+}
+C 46200 46900 1 180 0 in-1.sym
+{
+T 46200 46600 5 10 0 0 180 0 1
+device=INPUT
+T 46200 46600 5 10 1 1 180 0 1
+refdes=V-
+}
+C 47400 46500 1 0 0 out-1.sym
+{
+T 47400 46800 5 10 0 0 0 0 1
+device=OUTPUT
+T 47400 46800 5 10 1 1 0 0 1
+refdes=Vout
+}
+C 43000 45000 1 0 0 in-1.sym
+{
+T 43000 45300 5 10 0 0 0 0 1
+device=INPUT
+T 43000 45300 5 10 1 1 0 0 1
+refdes=Vbias
 }
