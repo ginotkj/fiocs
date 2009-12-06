@@ -13,5 +13,4 @@ destroy all
 tran 20ns 10us 0
 
 write flash.bin
-plot v(V1)
 .endc

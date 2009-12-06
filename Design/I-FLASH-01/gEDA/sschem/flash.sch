@@ -6,6 +6,8 @@ T 42175 50095 5 10 0 1 0 0 1
 device=none
 T 41975 50095 5 10 1 1 0 0 1
 refdes=S7
+T 41000 49100 5 10 0 0 0 0 1
+source=comp.7.sch
 }
 C 41000 47700 1 0 0 comparador.sym
 {
@@ -13,6 +15,8 @@ T 42175 48695 5 10 0 1 0 0 1
 device=none
 T 41975 48695 5 10 1 1 0 0 1
 refdes=S6
+T 41000 47700 5 10 0 0 0 0 1
+source=comp.6.sch
 }
 C 41000 46300 1 0 0 comparador.sym
 {
@@ -20,6 +24,8 @@ T 42175 47295 5 10 0 1 0 0 1
 device=none
 T 41975 47295 5 10 1 1 0 0 1
 refdes=S5
+T 41000 46300 5 10 0 0 0 0 1
+source=comp.5.sch
 }
 C 41000 44900 1 0 0 comparador.sym
 {
@@ -27,6 +33,8 @@ T 42175 45895 5 10 0 1 0 0 1
 device=none
 T 41975 45895 5 10 1 1 0 0 1
 refdes=S4
+T 41000 44900 5 10 0 0 0 0 1
+source=comp.4.sch
 }
 C 41000 43500 1 0 0 comparador.sym
 {
@@ -34,6 +42,8 @@ T 42175 44495 5 10 0 1 0 0 1
 device=none
 T 41975 44495 5 10 1 1 0 0 1
 refdes=S3
+T 41000 43500 5 10 0 0 0 0 1
+source=comp.3.sch
 }
 C 41000 42100 1 0 0 comparador.sym
 {
@@ -41,6 +51,8 @@ T 42175 43095 5 10 0 1 0 0 1
 device=none
 T 41975 43095 5 10 1 1 0 0 1
 refdes=S2
+T 41000 42100 5 10 0 0 0 0 1
+source=comp.2.sch
 }
 C 41000 40700 1 0 0 comparador.sym
 {
@@ -49,7 +61,7 @@ device=none
 T 41975 41695 5 10 1 1 0 0 1
 refdes=S1
 T 41000 40700 5 10 0 0 0 0 1
-source=comparador.sch
+source=comp.1.sch
 }
 C 40700 40500 1 90 0 resistor-1.sym
 {
@@ -255,13 +267,13 @@ T 51700 40900 9 14 1 0 0 0 1
 T 54000 40100 9 10 1 0 0 0 1
 Facundo J Ferrer
 T 54000 40400 9 10 1 0 0 0 1
-1
+2
 T 50000 40400 9 10 1 0 0 0 1
 flash.sch
 T 50400 40100 9 10 1 0 0 0 1
 1
 T 52000 40100 9 10 1 0 0 0 1
-1
+8
 N 42300 49700 43700 49700 4
 C 43700 47000 1 270 0 resistorpack8-2.sym
 {
@@ -275,34 +287,34 @@ value=10k
 N 43600 48300 43600 46600 4
 N 43600 46600 43700 46600 4
 N 43700 46900 43700 49700 4
-C 47400 48600 1 0 0 spice-model-1.sym
+C 52100 49800 1 0 0 spice-model-1.sym
 {
-T 47500 49300 5 10 0 1 0 0 1
+T 52200 50500 5 10 0 1 0 0 1
 device=model
-T 47500 49200 5 10 1 1 0 0 1
+T 52200 50400 5 10 1 1 0 0 1
 refdes=A1
-T 48700 48900 5 10 1 1 0 0 1
+T 53400 50100 5 10 1 1 0 0 1
 model-name=nmos4
-T 47900 48700 5 10 1 1 0 0 1
+T 52600 49900 5 10 1 1 0 0 1
 file=nmos4.model
 }
-C 47400 47000 1 0 0 spice-model-1.sym
+C 52100 48200 1 0 0 spice-model-1.sym
 {
-T 47500 47700 5 10 0 1 0 0 1
+T 52200 48900 5 10 0 1 0 0 1
 device=model
-T 47500 47600 5 10 1 1 0 0 1
+T 52200 48800 5 10 1 1 0 0 1
 refdes=A2
-T 48700 47300 5 10 1 1 0 0 1
+T 53400 48500 5 10 1 1 0 0 1
 model-name=pmos4
-T 47900 47100 5 10 1 1 0 0 1
+T 52600 48300 5 10 1 1 0 0 1
 file=pmos4.model
 }
-C 50200 48900 1 0 0 spice-include-1.sym
+C 54900 50100 1 0 0 spice-include-1.sym
 {
-T 50300 49200 5 10 0 1 0 0 1
+T 55000 50400 5 10 0 1 0 0 1
 device=include
-T 50300 49300 5 10 1 1 0 0 1
+T 55000 50500 5 10 1 1 0 0 1
 refdes=A3
-T 50700 49000 5 10 1 1 0 0 1
+T 55400 50200 5 10 1 1 0 0 1
 file=flash.cmd
 }
