@@ -7,11 +7,11 @@ T 50500 40100 9 10 1 0 0 0 1
 T 52000 40100 9 10 1 0 0 0 1
 1
 T 55100 40400 9 10 1 0 0 0 1
-1
+2
 T 54500 40100 9 10 1 0 0 0 1
 Facundo J Ferrer
 T 50800 40400 9 10 1 0 0 0 1
-i-ffd.sch
+ffd.5.sch
 N 48600 44400 49800 44400 4
 N 49800 44400 49800 43200 4
 N 49800 43200 53300 43200 4
@@ -71,56 +71,56 @@ N 50400 42900 50400 48100 4
 C 47900 48700 1 0 0 2i_nand.sym
 {
 T 49175 49995 5 10 1 1 0 0 1
-refdes=S1
+refdes=SN1
 T 48175 50390 5 10 0 1 0 0 1
 device=none
 T 47900 48700 5 10 0 0 0 0 1
-source=2i_nand.1.sch
+source=2i_nand.5.1.sch
 }
 C 45900 46600 1 0 0 2i_nand.sym
 {
 T 47175 47895 5 10 1 1 0 0 1
-refdes=S2
+refdes=SN2
 T 46175 48290 5 10 0 1 0 0 1
 device=none
 T 45900 46600 5 10 0 0 0 0 1
-source=2i_nand.2.sch
+source=2i_nand.5.2.sch
 }
 C 46500 41400 1 0 0 2i_nand.sym
 {
 T 47775 42695 5 10 1 1 0 0 1
-refdes=S3
+refdes=SN3
 T 46775 43090 5 10 0 1 0 0 1
 device=none
 T 46500 41400 5 10 0 0 0 0 1
-source=2i_nand.3.sch
+source=2i_nand.5.3.sch
 }
 C 53200 46200 1 0 0 2i_nand.sym
 {
 T 54475 47495 5 10 1 1 0 0 1
-refdes=S4
+refdes=SN4
 T 53475 47890 5 10 0 1 0 0 1
 device=none
 T 53200 46200 5 10 0 0 0 0 1
-source=2i_nand.4.sch
+source=2i_nand.5.4.sch
 }
 C 53200 42800 1 0 0 2i_nand.sym
 {
 T 54475 44095 5 10 1 1 0 0 1
-refdes=S5
+refdes=SN5
 T 53475 44490 5 10 0 1 0 0 1
 device=none
 T 53200 42800 5 10 0 0 0 0 1
-source=2i_nand.5.sch
+source=2i_nand.5.5.sch
 }
 C 46000 43600 1 0 0 3i_nand.sym
 {
 T 46595 45400 5 10 1 1 0 0 1
-refdes=S6
+refdes=SN6
 T 46895 44000 5 10 0 1 0 0 1
 device=none
 T 46000 43600 5 10 0 0 0 0 1
-source=3i_nand.1.sch
+source=3i_nand.5.1.sch
 }
 C 42700 44200 1 0 0 in-1.sym
 {
