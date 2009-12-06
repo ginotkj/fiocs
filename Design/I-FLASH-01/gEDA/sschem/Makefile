@@ -58,6 +58,7 @@ $(CIR):	$(SCH)
 	@echo "========================================"
 	@echo
 	$(CC) $(CIRFLAGS) $(CIR) $(SCH)
+	sed -e 's/S[123456789]\{1\}\/GND/0/g' $(CIR) | sed -e 's,/,_,' > $(CIR)
 	@echo
 
 drc:	$(DRC)
