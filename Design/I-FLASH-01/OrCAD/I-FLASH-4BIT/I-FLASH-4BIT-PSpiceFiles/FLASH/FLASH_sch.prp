@@ -3798,7 +3798,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"2.3")
+                    ("value"	"2.2")
                     ("pspice_param"	"DC")
                 )
             )
@@ -3843,7 +3843,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	".3")
+                    ("value"	".33")
                     ("pspice_param"	"DC")
                 )
             )
@@ -3973,7 +3973,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	".3")
+                    ("value"	".2")
                     ("pspice_param"	"DC")
                 )
             )
@@ -4171,7 +4171,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"5")
+                    ("value"	"3.3")
                     ("pspice_param"	"DC")
                 )
             )

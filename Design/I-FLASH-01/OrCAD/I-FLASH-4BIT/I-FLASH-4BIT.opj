@@ -56,7 +56,7 @@
          ".\i-flash-4bit-pspicefiles\flash\transient.sim"
         (DisplayName "FLASH-transient")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-flash-4bit-pspicefiles\flash\bias.sim")))
+      (ActiveProfile ".\i-flash-4bit-pspicefiles\flash\transient.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (VDC
@@ -90,10 +90,60 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-4BIT\i-flash-4bit.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-4BIT\i-flash-4bit.dsn"
+         "FLASH")
+      (Path "Design Resources" "Library")
       (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 17 293 -6 658"))
-      (Tab 0))))
+        (Placement "44 0 1 -1 -1 -8 -30 17 815 -6 950"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 100 1749 100 802")
+        (Scroll "0 59")
+        (Zoom "174")
+        (Occurrence "/"))
+      (Path
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-4BIT\I-FLASH-4BIT.DSN")
+      (Schematic "FLASH")
+      (Page "FLASH"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 200 1820 200 902")
+        (Scroll "0 0")
+        (Zoom "270")
+        (Occurrence "/FLASH"))
+      (Path
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-4BIT\I-FLASH-4BIT.DSN")
+      (Schematic "S-FLASH")
+      (Page "S-FLASH"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 1620 0 702")
+        (Scroll "0 0")
+        (Zoom "135")
+        (Occurrence "/FLASH/U10"))
+      (Path
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-DECODER-001\ORCAD\I-DECODER-4BITS\I-DECODER-4BITS.DSN")
+      (Schematic "S-DECODER-16")
+      (Page "S-DECODER-16"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 75 1695 75 777")
+        (Scroll "0 0")
+        (Zoom "135")
+        (Occurrence "/FLASH/C7"))
+      (Path
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-COMPARADOR-01\ORCAD\I-COMPARADOR-01.DSN")
+      (Schematic "S-COMP")
+      (Page "S-COMP"))))

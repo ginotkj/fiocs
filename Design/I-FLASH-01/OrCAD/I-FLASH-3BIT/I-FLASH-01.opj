@@ -129,17 +129,47 @@
          "FLASH")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-3BIT\i-flash-01.dsn"
-         "R-LEADER")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-3BIT\i-flash-01.dsn"
-         "S-FLASH")
+         "Design Cache")
+      (Path "Design Resources" "Library")
       (Path "Outputs")
       (Select "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-3BIT\i-flash-01.dsn"
-         "R-LEADER" "R-LEADER"))
+         "FLASH" "FLASH"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 0 648 -8 -30 0 230 0 671"))
-      (Tab 0))))
+        (Placement "44 0 1 0 648 -8 -30 0 610 0 967"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 225 1948 225 887")
+        (Scroll "0 0")
+        (Zoom "130")
+        (Occurrence "/"))
+      (Path
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-3BIT\I-FLASH-01.DSN")
+      (Schematic "FLASH")
+      (Page "FLASH"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 275 1969 275 937")
+        (Scroll "0 0")
+        (Zoom "130")
+        (Occurrence "/FLASH/U2"))
+      (Path
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-DECODER-001\ORCAD\I-DECODER-3BITS\I-DECODER-001.DSN")
+      (Schematic "S-DECODER-8")
+      (Page "S-DECODER-8"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 300 1994 300 962")
+        (Scroll "0 0")
+        (Zoom "130")
+        (Occurrence "/FLASH/FFD1"))
+      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD\ORCAD\I-FFD.DSN")
+      (Schematic "S-FFD")
+      (Page "S-FFD"))))

@@ -145,6 +145,9 @@
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-3BITS\i-decoder-001.dsn"
          "TEST DECODER")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-3BITS\i-decoder-001.dsn"
+         "S-DECODER-8")
       (Path "Outputs")
       (Select "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-3BITS\i-decoder-001.dsn"
