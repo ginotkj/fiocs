@@ -396,7 +396,20 @@ C 49000 46400 1 90 0 resistor-1.sym
 T 48600 46700 5 10 0 0 90 0 1
 device=RESISTOR
 T 48700 46600 5 10 1 1 90 0 1
-refdes=R3
+refdes=R9
 }
 N 48900 46400 48900 46300 4
 C 48400 45700 1 0 0 gnd-1.sym
+C 43900 39800 1 0 0 vpulse-1.sym
+{
+T 44600 40450 5 10 1 1 0 0 1
+refdes=V6
+T 44600 40650 5 10 0 0 0 0 1
+device=vpulse
+T 44600 40850 5 10 0 0 0 0 1
+footprint=none
+T 44600 40250 5 10 1 1 0 0 1
+value=pulse 0 5 10n 10n 100n 1u 2u
+}
+C 44100 39400 1 0 0 gnd-1.sym
+N 44200 39800 44200 39700 4
