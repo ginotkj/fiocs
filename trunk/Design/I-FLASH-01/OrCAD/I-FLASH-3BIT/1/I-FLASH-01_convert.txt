@@ -1,0 +1,11 @@
+The conversion of the project was successful.
+
+The new directory structure is as follows:
+
+D:/Documents/TESIS/TRUNK/Design/I-FLASH-01/OrCAD/I-FLASH-3BIT/1
+    I-FLASH-01.opj
+    i-flash-01.dsn
+D:/Documents/TESIS/TRUNK/Design/I-FLASH-01/OrCAD/I-FLASH-3BIT/1/I-FLASH-01-PSpiceFiles
+D:/Documents/TESIS/TRUNK/Design/I-FLASH-01/OrCAD/I-FLASH-3BIT/1/I-FLASH-01-PSpiceFiles/FLASH
+D:/Documents/TESIS/TRUNK/Design/I-FLASH-01/OrCAD/I-FLASH-3BIT/1/I-FLASH-01-PSpiceFiles/R-LEADER
+D:/Documents/TESIS/TRUNK/Design/I-FLASH-01/OrCAD/I-FLASH-3BIT/1/I-FLASH-01-PSpiceFiles/S-FLASH
