@@ -120,7 +120,7 @@ refdes=SN6
 T 46895 44000 5 10 0 1 0 0 1
 device=none
 T 46000 43600 5 10 0 0 0 0 1
-source=3i_nand.4.1.sch
+source=ffd_3i_nand.4.1.sch
 }
 C 42700 44200 1 0 0 in-1.sym
 {
