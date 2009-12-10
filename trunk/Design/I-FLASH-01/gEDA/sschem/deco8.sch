@@ -176,7 +176,7 @@ N 54300 50800 55600 50800 4
 C 45300 46800 1 0 0 7i_nand.sym
 {
 T 46775 49295 5 10 1 1 0 0 1
-refdes=S1
+refdes=SN1
 T 46375 46890 5 10 0 1 0 0 1
 device=none
 T 45300 46800 5 10 0 0 0 0 1
@@ -185,7 +185,7 @@ source=comp_7i_nand.1.sch
 C 46600 43200 1 0 0 7i_nand.sym
 {
 T 48075 45695 5 10 1 1 0 0 1
-refdes=S2
+refdes=SN2
 T 47675 43290 5 10 0 1 0 0 1
 device=none
 T 46600 43200 5 10 0 0 0 0 1
@@ -194,7 +194,7 @@ source=comp_7i_nand.2.sch
 C 46600 40100 1 0 0 7i_nand.sym
 {
 T 48075 42595 5 10 1 1 0 0 1
-refdes=S3
+refdes=SN3
 T 47675 40190 5 10 0 1 0 0 1
 device=none
 T 46600 40100 5 10 0 0 0 0 1
@@ -203,7 +203,7 @@ source=comp_7i_nand.3.sch
 C 51200 43400 1 0 0 7i_nand.sym
 {
 T 52675 45895 5 10 1 1 0 0 1
-refdes=S4
+refdes=SN4
 T 52275 43490 5 10 0 1 0 0 1
 device=none
 T 51200 43400 5 10 0 0 0 0 1
@@ -212,7 +212,7 @@ source=comp_7i_nand.4.sch
 C 52100 46700 1 0 0 2i_nand.sym
 {
 T 53375 47995 5 10 1 1 0 0 1
-refdes=S5
+refdes=SN5
 T 52375 48390 5 10 0 1 0 0 1
 device=none
 T 52100 46700 5 10 0 0 0 0 1
@@ -221,7 +221,7 @@ source=comp_2i_nand.1.sch
 C 53800 48300 1 0 0 2i_nand.sym
 {
 T 55075 49595 5 10 1 1 0 0 1
-refdes=S6
+refdes=SN6
 T 54075 49990 5 10 0 1 0 0 1
 device=none
 T 53800 48300 5 10 0 0 0 0 1
@@ -230,7 +230,7 @@ source=comp_2i_nand.2.sch
 C 49200 48500 1 0 0 5i_nand.sym
 {
 T 50475 50395 5 10 1 1 0 0 1
-refdes=S7
+refdes=SN7
 T 50175 48590 5 10 0 1 0 0 1
 device=none
 T 49200 48500 5 10 0 0 0 0 1
@@ -239,7 +239,7 @@ source=comp_5i_nand.1.sch
 C 54400 42400 1 0 0 4i_nand.sym
 {
 T 55675 43995 5 10 1 1 0 0 1
-refdes=S8
+refdes=SN8
 T 55375 42390 5 10 0 1 0 0 1
 device=none
 T 54400 42400 5 10 0 0 0 0 1
