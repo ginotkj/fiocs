@@ -7,7 +7,7 @@ device=none
 T 41975 50095 5 10 1 1 0 0 1
 refdes=SC7
 T 41000 49100 5 10 0 0 0 0 1
-source=comp.7.sch
+source=SUBcomp.7.sch
 }
 C 41000 47700 1 0 0 comparador.sym
 {
@@ -16,7 +16,7 @@ device=none
 T 41975 48695 5 10 1 1 0 0 1
 refdes=SC6
 T 41000 47700 5 10 0 0 0 0 1
-source=comp.6.sch
+source=SUBcomp.6.sch
 }
 C 41000 46300 1 0 0 comparador.sym
 {
@@ -25,7 +25,7 @@ device=none
 T 41975 47295 5 10 1 1 0 0 1
 refdes=SC5
 T 41000 46300 5 10 0 0 0 0 1
-source=comp.5.sch
+source=SUBcomp.5.sch
 }
 C 41000 44900 1 0 0 comparador.sym
 {
@@ -34,7 +34,7 @@ device=none
 T 41975 45895 5 10 1 1 0 0 1
 refdes=SC4
 T 41000 44900 5 10 0 0 0 0 1
-source=comp.4.sch
+source=SUBcomp.4.sch
 }
 C 41000 43500 1 0 0 comparador.sym
 {
@@ -43,7 +43,7 @@ device=none
 T 41975 44495 5 10 1 1 0 0 1
 refdes=SC3
 T 41000 43500 5 10 0 0 0 0 1
-source=comp.3.sch
+source=SUBcomp.3.sch
 }
 C 41000 42100 1 0 0 comparador.sym
 {
@@ -52,7 +52,7 @@ device=none
 T 41975 43095 5 10 1 1 0 0 1
 refdes=SC2
 T 41000 42100 5 10 0 0 0 0 1
-source=comp.2.sch
+source=SUBcomp.2.sch
 }
 C 41000 40700 1 0 0 comparador.sym
 {
@@ -61,7 +61,7 @@ device=none
 T 41975 41695 5 10 1 1 0 0 1
 refdes=SC1
 T 41000 40700 5 10 0 0 0 0 1
-source=comp.1.sch
+source=SUBcomp.1.sch
 }
 C 40700 40500 1 90 0 resistor-1.sym
 {
