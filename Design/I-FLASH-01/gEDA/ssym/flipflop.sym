@@ -5,7 +5,7 @@ P 200 100 400 100 1 0 0
 T 600 200 5 10 0 0 0 0 1
 pintype=in
 T 555 95 5 10 1 1 0 0 1
-pinlabel=C
+pinlabel=clck
 T 305 145 5 10 1 1 0 6 1
 pinnumber=3
 T 600 100 5 10 0 0 0 0 1
@@ -16,7 +16,7 @@ P 200 400 400 400 1 0 0
 T 0 800 5 10 0 0 0 0 1
 pintype=in
 T 455 395 5 10 1 1 0 0 1
-pinlabel=D
+pinlabel=d
 T 305 445 5 10 1 1 0 6 1
 pinnumber=4
 T 0 600 5 10 0 0 0 0 1
@@ -27,7 +27,7 @@ P 1800 100 1600 100 1 0 0
 T 2100 100 5 10 0 0 0 0 1
 pintype=out
 T 1545 95 5 10 1 1 0 6 1
-pinlabel=~Q
+pinlabel=q~
 T 1695 145 5 10 1 1 0 0 1
 pinnumber=5
 T 2100 -100 5 10 0 0 0 0 1
@@ -38,7 +38,7 @@ P 1800 400 1600 400 1 0 0
 T 2100 600 5 10 0 0 0 0 1
 pintype=out
 T 1545 395 5 10 1 1 0 6 1
-pinlabel=Q
+pinlabel=q
 T 1695 445 5 10 1 1 0 0 1
 pinnumber=1
 T 2100 400 5 10 0 0 0 0 1
