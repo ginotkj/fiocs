@@ -13,4 +13,5 @@ Read init scm file [/usr/share/gEDA/scheme/gschem.scm]
 Loading schematic [/home/facundo/tesis/fiocs/Design/I-FLASH-01/gEDA/ssym/deco8.sym]
 Did not find specified gafrc file [/home/facundo/tesis/fiocs/Design/I-FLASH-01/gEDA/ssym/gafrc]
 Hidden text is now visible
+Hidden text is now invisible
 Saved [/home/facundo/tesis/fiocs/Design/I-FLASH-01/gEDA/ssym/deco8.sym]
