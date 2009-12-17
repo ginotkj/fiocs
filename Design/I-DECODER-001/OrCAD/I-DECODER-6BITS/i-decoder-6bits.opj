@@ -1,4 +1,4 @@
-(ExpressProject "I-FLASH-4BIT"
+(ExpressProject "i-decoder-6bits"
   (ProjectVersion "19981106")
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
@@ -24,7 +24,7 @@
            "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\special.olb")
         (Type "Schematic Library")))
     (NoModify)
-    (File "i-flash-4bit.dsn"
+    (File "i-decoder-6bits.dsn"
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
@@ -37,7 +37,9 @@
     (RootChangedForceReNetlist "x")
     (PSPICE_Regenerate_Netlist_Flag "FALSE"))
   (Folder "Outputs"
-    (File ".\i-flash-4bit-pspicefiles\flash\flash.net"
+    (File "d:\documents\tesis\trunk\design\componentes orcad\compuertas.olb"
+      (Type "Schematic Library"))
+    (File ".\i-decoder-6bits-pspicefiles\test\test.net"
       (Type "Report")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries")
@@ -45,20 +47,32 @@
     (Folder "Include Files")
     (Folder "Simulation Profiles"
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-flash-4bit-pspicefiles\s-flash\bias.sim"
-        (DisplayName "S-FLASH-bias")
+         ".\i-decoder-6bits-pspicefiles\s-decoder-64\bias.sim"
+        (DisplayName "S-DECODER-64-bias")
         (Type "PSpice Profile"))
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-flash-4bit-pspicefiles\flash\bias.sim"
-        (DisplayName "FLASH-bias")
+         ".\i-decoder-6bits-pspicefiles\s-decoder-64\transient.sim"
+        (DisplayName "S-DECODER-64-transient")
         (Type "PSpice Profile"))
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-flash-4bit-pspicefiles\flash\transient.sim"
-        (DisplayName "FLASH-transient")
+         ".\i-decoder-6bits-pspicefiles\test\bias.sim"
+        (DisplayName "TEST-bias")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-flash-4bit-pspicefiles\flash\transient.sim")))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-decoder-6bits-pspicefiles\test\transient.sim"
+        (DisplayName "TEST-transient")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-decoder-6bits-pspicefiles\test\transient.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-L
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (VDC
       (FullPartName "VDC.Normal")
       (LibraryName
@@ -68,10 +82,13 @@
       (LibraryName
          "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
-    (R
-      (FullPartName "R.Normal")
+    (S-DECODER-64
+      (FullPartName "S-DECODER-64.Normal")
       (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\COMPONENTES ORCAD\COMPUERTAS.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (C
       (FullPartName "C.Normal")
@@ -91,18 +108,18 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-4BIT\i-flash-4bit.dsn")
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-4BIT\i-flash-4bit.dsn"
-         "FLASH")
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
+         "TEST")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-4BIT\i-flash-4bit.dsn"
-         "FLASH" "FLASH"))
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
+         "TEST" "TEST"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 370 784 -1 819"))
+        (Placement "44 2 3 0 1000 -8 -30 314 802 0 625"))
       (Tab 0))))
