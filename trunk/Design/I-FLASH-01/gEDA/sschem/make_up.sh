@@ -48,7 +48,7 @@ then
 	echo -e ${reset}${white}
 	echo -e "Command: ${yellow}cat $circuit.drc | sed -e 's/\(S..\/S..\/GND\)/0/g' | sed -e 's/\(S..\/GND\)/0/g' | sed -e 's/\//_/g' > clean_$circuit.cir"
 	echo -en "${white}Result: "
-	if $(cat $circuit.cir | sed -e 's/\(S..\/S..\/GND\)/0/g' | sed -e 's/\(S..\/GND\)/0/g' | sed -e 's/\//_/g' > clean_$circuit.cir)
+	if $(cat $circuit.cir | sed -e 's/\(S..\/S..\/GND\)/0/g' | sed -e 's/\(S..\/GND\)/0/g' | sed -e 's/\//_/g' > $circuit.cir)
 	then
 	    echo -e "${green}${bold}OK${reset}"
 	    echo
