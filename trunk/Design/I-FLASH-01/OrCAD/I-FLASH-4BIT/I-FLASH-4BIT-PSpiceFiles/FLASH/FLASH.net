@@ -2196,11 +2196,11 @@ M_FLASH_FFD10_NAND4_M4         FLASH_-Q10 FLASH_FFD10_Y N01357 N01357 CMOSP
 + W=.2u         
 R_FLASH_FFD10_NAND4_R1         FLASH_Q10 0  10Meg  
 R_FLASH_FFD10_NAND4_R2         FLASH_FFD10_Y 0  10Meg  
-V_Vo         N14439 0 2.2
+V_Vo         N14439 0 1.2
 R_R1         MSB N01357  100k  
 R_R2         3SB N01357  100k  
 V_Clock         N03388 0  
-+PULSE 0 3 .4u 0.05u 0.05u .4u 1u
++PULSE 0 3 .2u 0.05u 0.05u .2u .5u
 V_Vbias         N03836 0 .33
 R_R3         2SB N01357  100k  
 R_LEADER_R15         C1 C2  10k  

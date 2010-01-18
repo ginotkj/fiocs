@@ -1,5 +1,5 @@
 
-**** 12/04/09 18:54:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 12/23/09 23:12:53 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
  ** Profile: "FLASH-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-4BIT\i-flash-4bit-pspicefiles\flash\transi
 
@@ -2227,11 +2227,11 @@ M_FLASH_FFD10_NAND4_M4         FLASH_-Q10 FLASH_FFD10_Y N01357 N01357 CMOSP
 + W=.2u         
 R_FLASH_FFD10_NAND4_R1         FLASH_Q10 0  10Meg  
 R_FLASH_FFD10_NAND4_R2         FLASH_FFD10_Y 0  10Meg  
-V_Vo         N14439 0 2.2
+V_Vo         N14439 0 1.2
 R_R1         MSB N01357  100k  
 R_R2         3SB N01357  100k  
 V_Clock         N03388 0  
-+PULSE 0 3 .4u 0.05u 0.05u .4u 1u
++PULSE 0 3 .2u 0.05u 0.05u .2u .5u
 V_Vbias         N03836 0 .33
 R_R3         2SB N01357  100k  
 R_LEADER_R15         C1 C2  10k  
@@ -2269,7 +2269,7 @@ WARNING -- Mosfet M_FLASH_C7_M4, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_FLASH_C7_M4, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_FLASH_C7_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_FLASH_C7_M6, model CMOSP: Ps = 0 is less than W
-**** 12/04/09 18:54:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 12/23/09 23:12:53 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
  ** Profile: "FLASH-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-4BIT\i-flash-4bit-pspicefiles\flash\transi
 
@@ -2395,7 +2395,7 @@ WARNING -- Mosfet M_FLASH_C7_M4, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_FLASH_C7_M4, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_FLASH_C7_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_FLASH_C7_M6, model CMOSP: Ps = 0 is less than W
-**** 12/04/09 18:54:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 12/23/09 23:12:53 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
  ** Profile: "FLASH-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-4BIT\i-flash-4bit-pspicefiles\flash\transi
 
@@ -2410,19 +2410,19 @@ WARNING -- Mosfet M_FLASH_C7_M6, model CMOSP: Ps = 0 is less than W
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(   C1)     .2667  (   C2)     .4000  (   C3)     .5333  (   C4)     .6667      
+(   C1)     .2333  (   C2)     .3000  (   C3)     .3667  (   C4)     .4333      
 
-(   C5)     .8000  (   C6)     .9333  (   C7)    1.0667  (   C8)    1.2000      
+(   C5)     .5000  (   C6)     .5667  (   C7)     .6333  (   C8)     .7000      
 
-(   C9)    1.3333  (  2SB)    3.3000  (  3SB)    3.3000  (  C10)    1.4667      
+(   C9)     .7667  (  2SB)     .3455  (  3SB)    3.3000  (  C10)     .8333      
 
-(  C11)    1.6000  (  C12)    1.7333  (  C13)    1.8667  (  C14)    2.0000      
+(  C11)     .9000  (  C12)     .9667  (  C13)    1.0333  (  C14)    1.1000      
 
-(  C15)    2.1333  (  LSB)    3.3000  (  MSB)    3.2953  (N01357)    3.3000     
+(  C15)    1.1667  (  LSB)    3.3000  (  MSB)    3.2953  (N01357)    3.3000     
 
-(N03388)    0.0000 (N03836)     .3300 (N14031)    0.0000 (N14439)    2.2000     
+(N03388)    0.0000 (N03836)     .3300 (N14031)    0.0000 (N14439)    1.2000     
 
-(FLASH_Q1)    3.2950                  (FLASH_Q2)    3.2950                      
+(FLASH_Q1)    3.2950                  (FLASH_Q2) 1.084E-06                      
 
 (FLASH_Q3)    3.2950                  (FLASH_Q4)    3.2950                      
 
@@ -2430,7 +2430,7 @@ WARNING -- Mosfet M_FLASH_C7_M6, model CMOSP: Ps = 0 is less than W
 
 (FLASH_Q7)    3.2950                  (FLASH_Q8)    3.2953                      
 
-(FLASH_Q9)    3.2950                  (FLASH_-Q2) 1.046E-06                     
+(FLASH_Q9)    3.2950                  (FLASH_-Q2)    3.2950                     
 
 (FLASH_-Q4) 1.046E-06                 (FLASH_-Q6) 1.046E-06                     
 
@@ -2498,59 +2498,59 @@ WARNING -- Mosfet M_FLASH_C7_M6, model CMOSP: Ps = 0 is less than W
 
 (FLASH_N094900) 1.041E-06             (LEADER_N04254)     .2000                 
 
-(FLASH_C1_N26867)     .0012           (FLASH_C1_N27085)    3.1869               
+(FLASH_C1_N26867)     .0024           (FLASH_C1_N27085)    3.1869               
 
-(FLASH_C1_N27149) 297.8E-06           (FLASH_C2_N26867) 355.8E-06               
+(FLASH_C1_N27149) 297.6E-06           (FLASH_C2_N26867) 722.2E-06               
 
 (FLASH_C2_N27085)    3.1869           (FLASH_C2_N27149) 297.8E-06               
 
-(FLASH_C3_N26867) 309.9E-06           (FLASH_C3_N27085)    3.1869               
+(FLASH_C3_N26867) 402.7E-06           (FLASH_C3_N27085)    3.1869               
 
-(FLASH_C3_N27149) 297.8E-06           (FLASH_C4_N26867) 303.6E-06               
+(FLASH_C3_N27149) 297.8E-06           (FLASH_C4_N26867) 332.7E-06               
 
 (FLASH_C4_N27085)    3.1869           (FLASH_C4_N27149) 297.8E-06               
 
-(FLASH_C5_N26867) 301.7E-06           (FLASH_C5_N27085)    3.1869               
+(FLASH_C5_N26867) 313.8E-06           (FLASH_C5_N27085)    3.1869               
 
-(FLASH_C5_N27149) 297.8E-06           (FLASH_C6_N26867) 300.7E-06               
+(FLASH_C5_N27149) 297.8E-06           (FLASH_C6_N26867) 307.3E-06               
 
 (FLASH_C6_N27085)    3.1869           (FLASH_C6_N27149) 297.8E-06               
 
-(FLASH_C7_N26867) 300.2E-06           (FLASH_C7_N27085)    3.1869               
+(FLASH_C7_N26867) 304.5E-06           (FLASH_C7_N27085)    3.1869               
 
-(FLASH_C7_N27149) 297.8E-06           (FLASH_C8_N26867) 299.9E-06               
+(FLASH_C7_N27149) 297.8E-06           (FLASH_C8_N26867) 302.9E-06               
 
 (FLASH_C8_N27085)    3.1869           (FLASH_C8_N27149) 297.8E-06               
 
-(FLASH_C9_N26867) 299.6E-06           (FLASH_C9_N27085)    3.1869               
+(FLASH_C9_N26867) 302.0E-06           (FLASH_C9_N27085)    3.1869               
 
-(FLASH_C9_N27149) 297.8E-06           (FLASH_C10_N26867) 299.5E-06              
+(FLASH_C9_N27149) 297.8E-06           (FLASH_C10_N26867) 301.4E-06              
 
 (FLASH_C10_N27085)    3.1869          (FLASH_C10_N27149) 297.8E-06              
 
-(FLASH_C11_N26867) 299.4E-06          (FLASH_C11_N27085)    3.1869              
+(FLASH_C11_N26867) 300.9E-06          (FLASH_C11_N27085)    3.1869              
 
-(FLASH_C11_N27149) 297.8E-06          (FLASH_C12_N26867) 299.3E-06              
+(FLASH_C11_N27149) 297.8E-06          (FLASH_C12_N26867) 300.6E-06              
 
 (FLASH_C12_N27085)    3.1869          (FLASH_C12_N27149) 297.8E-06              
 
-(FLASH_C13_N26867) 299.2E-06          (FLASH_C13_N27085)    3.1869              
+(FLASH_C13_N26867) 300.3E-06          (FLASH_C13_N27085)    3.1869              
 
-(FLASH_C13_N27149) 297.8E-06          (FLASH_C14_N26867) 299.2E-06              
+(FLASH_C13_N27149) 297.8E-06          (FLASH_C14_N26867) 300.1E-06              
 
 (FLASH_C14_N27085)    3.1869          (FLASH_C14_N27149) 297.8E-06              
 
-(FLASH_C15_N26867) 299.2E-06          (FLASH_C15_N27085)    3.1869              
+(FLASH_C15_N26867) 299.9E-06          (FLASH_C15_N27085)    3.1869              
 
 (FLASH_C15_N27149) 297.8E-06          (FLASH_U10_N00265)    3.2975              
 
 (FLASH_U10_N00277)    3.2975          (FLASH_U10_N00293)    3.2975              
 
-(FLASH_U10_N00317)    3.2975          (FLASH_U10_N00349)    3.2975              
+(FLASH_U10_N00317)    3.2975          (FLASH_U10_N00349) 1.085E-06              
 
 (FLASH_U10_N00389)    3.2975          (FLASH_U10_N00437)    3.2975              
 
-(FLASH_U10_N00653) 271.2E-09          (FLASH_U10_N05351) 271.2E-09              
+(FLASH_U10_N00653) 271.2E-09          (FLASH_U10_N05351)    3.2975              
 
 (FLASH_U10_N05416)    3.2975          (FLASH_U10_N05550)    3.2975              
 
@@ -2602,7 +2602,7 @@ WARNING -- Mosfet M_FLASH_C7_M6, model CMOSP: Ps = 0 is less than W
 
 (FLASH_U10_NAND3_N27813) 2.233E-06    (FLASH_U10_NAND4_N27813) 2.233E-06        
 
-(FLASH_U10_NAND5_N27813) 2.233E-06    (FLASH_U10_NAND6_N27813) 2.233E-06        
+(FLASH_U10_NAND5_N27813) 2.233E-06    (FLASH_U10_NAND6_N27813) 542.3E-09        
 
 (FLASH_U10_NAND7_N27813) 2.233E-06    (FLASH_U10_NAND8_N27813) 2.233E-06        
 
@@ -2618,9 +2618,9 @@ WARNING -- Mosfet M_FLASH_C7_M6, model CMOSP: Ps = 0 is less than W
 
 (FLASH_FFD1_NAND4_N00209) 520.8E-09   (FLASH_FFD2_NAND1_N00209) 505.6E-09       
 
-(FLASH_FFD2_NAND2_N00209)    3.2304   (FLASH_FFD2_NAND3_N00209)    3.2282       
+(FLASH_FFD2_NAND2_N00209)    3.2304   (FLASH_FFD2_NAND3_N00209) 542.0E-09       
 
-(FLASH_FFD2_NAND4_N00209) 523.5E-09   (FLASH_FFD3_NAND1_N00209) 505.6E-09       
+(FLASH_FFD2_NAND4_N00209) 2.243E-06   (FLASH_FFD3_NAND1_N00209) 505.6E-09       
 
 (FLASH_FFD3_NAND2_N00209)    3.2304   (FLASH_FFD3_NAND3_N00209)    3.2282       
 
@@ -2648,17 +2648,17 @@ WARNING -- Mosfet M_FLASH_C7_M6, model CMOSP: Ps = 0 is less than W
 
 (FLASH_FFD9_NAND2_N00209)    3.2304   (FLASH_FFD9_NAND3_N00209)    3.2282       
 
-(FLASH_FFD9_NAND4_N00209) 520.8E-09   (FLASH_U10_NAND-4_N35641) 6.713E-06       
+(FLASH_FFD9_NAND4_N00209) 520.8E-09   (FLASH_U10_NAND-4_N35641)     .2622       
 
-(FLASH_U10_NAND-4_N35937) 4.475E-06   (FLASH_U10_NAND-4_N35977) 2.238E-06       
+(FLASH_U10_NAND-4_N35937)     .1769   (FLASH_U10_NAND-4_N35977)     .0895       
 
-(FLASH_U10_NAND-8_N53250) 8.948E-06   (FLASH_U10_NAND-8_N53536) 6.711E-06       
+(FLASH_U10_NAND-8_N53250) 1.453E-06   (FLASH_U10_NAND-8_N53536) 1.090E-06       
 
-(FLASH_U10_NAND-8_N53542) 4.474E-06   (FLASH_U10_NAND-8_N53888) 15.66E-06       
+(FLASH_U10_NAND-8_N53542) 726.7E-09   (FLASH_U10_NAND-8_N53888)     .0537       
 
-(FLASH_U10_NAND-8_N54114) 13.42E-06   (FLASH_U10_NAND-8_N54154) 11.19E-06       
+(FLASH_U10_NAND-8_N54114) 2.180E-06   (FLASH_U10_NAND-8_N54154) 1.817E-06       
 
-(FLASH_U10_NAND-8_N56639) 2.237E-06   (FLASH_U10_NAND10_N27813) 2.233E-06       
+(FLASH_U10_NAND-8_N56639) 363.3E-09   (FLASH_U10_NAND10_N27813) 2.233E-06       
 
 (FLASH_U10_NAND11_N27813) 2.238E-06   (FLASH_FFD10_NAND1_N00209) 505.6E-09      
 
@@ -2723,19 +2723,19 @@ WARNING -- Mosfet M_FLASH_C7_M6, model CMOSP: Ps = 0 is less than W
     NAME         CURRENT
 
     V_Va         0.000E+00
-    V_Vo        -1.333E-05
+    V_Vo        -6.667E-06
     V_Clock      0.000E+00
     V_Vbias      0.000E+00
-    V_LEADER_Vq   1.333E-05
-    V_VDD       -5.390E-05
+    V_LEADER_Vq   6.667E-06
+    V_VDD       -8.344E-05
 
-    TOTAL POWER DISSIPATION   2.05E-04  WATTS
+    TOTAL POWER DISSIPATION   2.82E-04  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 12/04/09 18:54:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 12/23/09 23:12:53 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
  ** Profile: "FLASH-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-4BIT\i-flash-4bit-pspicefiles\flash\transi
 
@@ -2747,5 +2747,5 @@ WARNING -- Mosfet M_FLASH_C7_M6, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =       40.62
+  Total job time (using Solver 1)   =       62.99
 
