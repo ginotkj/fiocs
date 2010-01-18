@@ -2883,195 +2883,6 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("FLASH-64.FFD1.C3"
-            ("device_name"	"C")
-            ("pspice_path"	"C_FLASH-64_FFD1_C3")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10p")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("VOLTAGE"	"50.0")
-                ("CURRENT"	"1.0")
-                ("SLOPE"	"0.005")
-                ("KNEE"	"125.0")
-                ("MAX_TEMP"	"125.0")
-            )
-        )
-        ("FLASH-64.FFD1.NAND.R1"
-            ("device_name"	"R")
-            ("pspice_path"	"R_FLASH-64_FFD1_NAND_R1")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10Meg")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("FLASH-64.FFD1.NAND.R2"
-            ("device_name"	"R")
-            ("pspice_path"	"R_FLASH-64_FFD1_NAND_R2")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10Meg")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("FLASH-64.FFD1.NAND1.R1"
-            ("device_name"	"R")
-            ("pspice_path"	"R_FLASH-64_FFD1_NAND1_R1")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10Meg")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("FLASH-64.FFD1.NAND1.R2"
-            ("device_name"	"R")
-            ("pspice_path"	"R_FLASH-64_FFD1_NAND1_R2")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10Meg")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("FLASH-64.FFD1.NAND3.R1"
-            ("device_name"	"R")
-            ("pspice_path"	"R_FLASH-64_FFD1_NAND3_R1")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10Meg")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("FLASH-64.FFD1.NAND3.R2"
-            ("device_name"	"R")
-            ("pspice_path"	"R_FLASH-64_FFD1_NAND3_R2")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10Meg")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("FLASH-64.FFD1.NAND2.R1"
-            ("device_name"	"R")
-            ("pspice_path"	"R_FLASH-64_FFD1_NAND2_R1")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10Meg")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("FLASH-64.FFD1.NAND2.R2"
-            ("device_name"	"R")
-            ("pspice_path"	"R_FLASH-64_FFD1_NAND2_R2")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10Meg")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("FLASH-64.FFD1.NAND4.R1"
-            ("device_name"	"R")
-            ("pspice_path"	"R_FLASH-64_FFD1_NAND4_R1")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10Meg")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("FLASH-64.FFD1.NAND4.R2"
-            ("device_name"	"R")
-            ("pspice_path"	"R_FLASH-64_FFD1_NAND4_R2")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10Meg")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
         ("FLASH-64.FFD16.C3"
             ("device_name"	"C")
             ("pspice_path"	"C_FLASH-64_FFD16_C3")
@@ -3247,6 +3058,195 @@
         ("FLASH-64.FFD16.NAND4.R2"
             ("device_name"	"R")
             ("pspice_path"	"R_FLASH-64_FFD16_NAND4_R2")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10Meg")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("FLASH-64.FFD1.C3"
+            ("device_name"	"C")
+            ("pspice_path"	"C_FLASH-64_FFD1_C3")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10p")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("VOLTAGE"	"50.0")
+                ("CURRENT"	"1.0")
+                ("SLOPE"	"0.005")
+                ("KNEE"	"125.0")
+                ("MAX_TEMP"	"125.0")
+            )
+        )
+        ("FLASH-64.FFD1.NAND.R1"
+            ("device_name"	"R")
+            ("pspice_path"	"R_FLASH-64_FFD1_NAND_R1")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10Meg")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("FLASH-64.FFD1.NAND.R2"
+            ("device_name"	"R")
+            ("pspice_path"	"R_FLASH-64_FFD1_NAND_R2")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10Meg")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("FLASH-64.FFD1.NAND1.R1"
+            ("device_name"	"R")
+            ("pspice_path"	"R_FLASH-64_FFD1_NAND1_R1")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10Meg")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("FLASH-64.FFD1.NAND1.R2"
+            ("device_name"	"R")
+            ("pspice_path"	"R_FLASH-64_FFD1_NAND1_R2")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10Meg")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("FLASH-64.FFD1.NAND3.R1"
+            ("device_name"	"R")
+            ("pspice_path"	"R_FLASH-64_FFD1_NAND3_R1")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10Meg")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("FLASH-64.FFD1.NAND3.R2"
+            ("device_name"	"R")
+            ("pspice_path"	"R_FLASH-64_FFD1_NAND3_R2")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10Meg")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("FLASH-64.FFD1.NAND2.R1"
+            ("device_name"	"R")
+            ("pspice_path"	"R_FLASH-64_FFD1_NAND2_R1")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10Meg")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("FLASH-64.FFD1.NAND2.R2"
+            ("device_name"	"R")
+            ("pspice_path"	"R_FLASH-64_FFD1_NAND2_R2")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10Meg")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("FLASH-64.FFD1.NAND4.R1"
+            ("device_name"	"R")
+            ("pspice_path"	"R_FLASH-64_FFD1_NAND4_R1")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10Meg")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("FLASH-64.FFD1.NAND4.R2"
+            ("device_name"	"R")
+            ("pspice_path"	"R_FLASH-64_FFD1_NAND4_R2")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -15986,7 +15986,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"200m")
+                    ("value"	"2")
                     ("pspice_param"	"DC")
                 )
             )
@@ -16014,7 +16014,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"4.2")
+                    ("value"	"2.2")
                     ("pspice_param"	"DC")
                 )
             )
