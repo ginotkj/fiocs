@@ -3798,7 +3798,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"2.2")
+                    ("value"	"1.2")
                     ("pspice_param"	"DC")
                 )
             )
