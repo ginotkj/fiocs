@@ -6,13 +6,22 @@
 ## Login   <facundo@faku-laptop>
 ## 
 ## Started on  Tue Dec 15 20:47:38 2009 Facundo
-## Last update Sun Jan 24 18:42:24 2010 Facundo
+## Last update Sun Jan 24 19:37:18 2010 Facundo
 ##
 
 # Globals vars
 circuit=$1
 total_mem=$(free -m | grep Mem | awk '{print $2}')
 critical_free_mem=10
+sim_output="flash.raw"
+sim_data="flash.bin" #los nombres de esquematicos, cirfiles, sim output deben ser todos iguales cambiando la extension solamente
+#ejemplo
+# flash mainname
+# flash.sch schem
+# flash.cir cirfile
+# flash.cmd spice command file
+# flash.raw spice output file
+# flash.bin spice data file
 
 # Colors
 red="\033[31m"
@@ -67,9 +76,24 @@ function check_mem {
     fi   
 }
 
-function simul {
+function check_tmp {
 
+#cheuqear tamaño del temp entre simulaciones
 }
+
+function simul {
+    ngspice -b $1 -o $simul_raw &>/dev/null
+    if [ $? -ne 0 ]
+	then
+	((global_error_sim++))
+    fi
+}
+
+function check_sim {
+    ((global_success_sim++))
+    ((global_fail_sim++))
+}
+
 ####################################
 
 if [ -z $circuit ]
@@ -102,9 +126,15 @@ tempdir=$(mktemp -d)
 check_out $?
 echo -e "${white}${bold}Temporary dir: ${reset}${yellow}$tempdir${reset}"
 
-tempcir="$tempdir/tempcirfile.cir"
+tempcir="$tempdir/tempcirfile" #sin el .cir para poder hacer un for con los inyectados
 echo -ne "${white}${bold}Creating temporary file ${reset}${yellow}$tempcir...${reset}"
-touch $tempcir
+cp $circuit $tempcir
+check_out $?
+echo
+
+tempdata="$tempdir/tempdata" #sin el .cir para poder hacer un for con los inyectados
+echo -ne "${white}${bold}Creating temporary file ${reset}${yellow}$tempdata...${reset}"
+touch $tempdata
 check_out $?
 echo
 
@@ -136,10 +166,10 @@ echo "#                  Groups found                   #"
 echo "###################################################"
 echo -e ${reset}
 
-cat $circuit | grep ^M | awk -F' ' '{print $1}' > $tempcir
-group1=$(cat $tempcir | awk -F'_' '{print $1}' | sort | uniq | wc -l)
-group2=$(cat $tempcir | awk -F'_' '{print $2}' | sort | uniq | wc -l)
-group3=$(cat $tempcir | awk -F'_' '{print $3}' | sort | uniq | wc -l)
+cat $circuit | grep ^M | awk -F' ' '{print $1}' > $tempdata
+group1=$(cat $tempdata | awk -F'_' '{print $1}' | sort | uniq | wc -l)
+group2=$(cat $tempdata | awk -F'_' '{print $2}' | sort | uniq | wc -l)
+group3=$(cat $tempdata | awk -F'_' '{print $3}' | sort | uniq | wc -l)
 echo -e "${white}$group1 block components identified at FIRST level schem${reset}"
 echo -e "${white}$group2 block components identified at SECOND level schem${reset}"
 echo -e "${white}$group3 block components identified at THIRD level schem${reset}"
@@ -186,11 +216,18 @@ check_mem
 
 echo -e "Simulating..."
 
-for cir in cirs
-do
-simul $cir
-check_mem
+cirs=$(ls $tempdir/*.cir)
+global_error_sim=0 #simulation not done
+global_success_sim=0 #simulation success and agree against normal
+global_fail_sim=0 #simulation success and fail against normal
 
+
+for cir in $cirs
+do
+    simul $cir
+    echo "Errors: $global_error_sim"
+    check_mem
 done
+
 
 clean_temp
