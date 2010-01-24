@@ -9,8 +9,11 @@ set combplot
 * op
 * destroy all
 
-tran 20ns 500us 0
-* tran 20ns 180us 0
+tran 20ns 50ns 0
+* tran 20ns 500us 0
 
 write flash.bin
 .endc
+
+.print tran v(1)
+* esto es necesario para que el exit code sea 0 en caso exitoso
