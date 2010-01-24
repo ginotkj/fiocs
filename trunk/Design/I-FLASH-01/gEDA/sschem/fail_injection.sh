@@ -6,13 +6,13 @@
 ## Login   <facundo@faku-laptop>
 ## 
 ## Started on  Tue Dec 15 20:47:38 2009 Facundo
-## Last update Wed Jan 20 09:20:04 2010 Facundo
+## Last update Sun Jan 24 18:42:24 2010 Facundo
 ##
 
+# Globals vars
 circuit=$1
-tempdir=$(mktemp -d)
-tempcir="$tempdir/tempcirfile.cir"
-trancount=0
+total_mem=$(free -m | grep Mem | awk '{print $2}')
+critical_free_mem=10
 
 # Colors
 red="\033[31m"
@@ -24,6 +24,9 @@ magenta="\033[35m"
 lightblue="\033[36m"
 white="\033[37m"
 reset="\033[0m"
+savecur="\033[s"
+restorecur="\033[u"
+eraseeol="\033[K"
 
 #####################################
 
@@ -37,25 +40,81 @@ function check_out {
     return 0
 }
 
+function clean_temp {
+    echo -n "Cleaning temp files ($tempdir)..."
+    rm -fr $tempdir
+    check_out $?   
+}
+
+function get_free_mem {
+    local aux=0
+    let aux=$(free -m | grep Mem | awk '{print $4}')
+    echo $aux
+    return 0
+}
+
+function check_mem {
+    free_mem=$(get_free_mem)
+    free_mem_percentage=$(echo "scale=2 ; $free_mem / $total_mem * 100" | bc)
+    free_mem_percentage=${free_mem_percentage/.*}
+    echo -e "${yellow} $free_mem_percentage %${reset}"
+    
+    if [ $free_mem_percentage -le $critical_free_mem ]
+    then
+	echo "Critical free memory. Aborting..."
+	clean_temp
+	exit 3
+    fi   
+}
+
+function simul {
+
+}
 ####################################
 
 if [ -z $circuit ]
 then
     echo "Please give a circuit file!"
     exit 2
+else
+    simulation_file=$(cat $circuit | grep cmd | awk '{print $2}')
+    if [ "$simulation_file" == "" ]
+    then
+	echo -e "${white}${bold}Not simulation command file found!${reset}"
+	echo -e "${white}${bold}Please check $circuit file${reset}"
+	exit 4
+    fi
 fi
 
 clear
-
-echo "Created temporary dir $tempdir...OK"
-echo -n "Creating temporary file $tempcir..."
-check_out $?
 
 echo -ne ${blue}
 echo "###################################################"
 echo "#               Circuit Information               #"
 echo "###################################################"
 echo -e ${reset}
+
+
+
+
+echo -ne "${bold}${white}Creating temporary dir...${reset}"
+tempdir=$(mktemp -d)
+check_out $?
+echo -e "${white}${bold}Temporary dir: ${reset}${yellow}$tempdir${reset}"
+
+tempcir="$tempdir/tempcirfile.cir"
+echo -ne "${white}${bold}Creating temporary file ${reset}${yellow}$tempcir...${reset}"
+touch $tempcir
+check_out $?
+echo
+
+echo -e "${white}${bold}Circuit file:${reset}${yellow} $circuit${reset}"
+echo -e "${white}${bold}Simulation file: ${reset}${yellow}$simulation_file${reset}"
+echo
+
+trancount=0
+n_trancount=0
+p_trancount=0
 
 n_trancount=$(cat $circuit | grep ^M | grep nmos | wc -l)
 echo -e "${white}${bold}NMOS transistors: ${yellow}$n_trancount${reset}"
@@ -81,9 +140,9 @@ cat $circuit | grep ^M | awk -F' ' '{print $1}' > $tempcir
 group1=$(cat $tempcir | awk -F'_' '{print $1}' | sort | uniq | wc -l)
 group2=$(cat $tempcir | awk -F'_' '{print $2}' | sort | uniq | wc -l)
 group3=$(cat $tempcir | awk -F'_' '{print $3}' | sort | uniq | wc -l)
-echo "$group1 block components identified at FIRST level schem"
-echo "$group2 block components identified at SECOND level schem"
-echo "$group3 block components identified at THIRD level schem"
+echo -e "${white}$group1 block components identified at FIRST level schem${reset}"
+echo -e "${white}$group2 block components identified at SECOND level schem${reset}"
+echo -e "${white}$group3 block components identified at THIRD level schem${reset}"
 
 echo 
 echo -ne ${blue}
@@ -103,17 +162,35 @@ do
 done
 check_out $aux
 
-echo -n "Do you want to simulate the files?"
+echo -ne "${white}Do you want to simulate the files (y/n/Y/N)? "
+echo -ne ${savecur}
 read answer
 while [ "$answer" != "y" -a "$answer" != "Y" -a "$answer" != "n" -a "$answer" != "N" ]
 do
+    echo -ne "${restorecur}${eraseeol}${restorecur}"
     read answer
-    if [ "$answer" == "y" -o "$answer" == "Y" ]
-	then
-	echo "Not working yet..."
-    fi
 done
 
-echo -n "Cleaning temp files ($tempdir) ..."
-rm -fr $tempdir
+if [ "$answer" == "n" -o "$answer" == "N" ]
+then
+    clean_temp
+    exit 4
+fi
+
+echo -ne "${white}Copying simulation commands file...${reset}"
+cp $simulation_file $tempdir
 check_out $?
+
+echo -ne "${white}Checking free memory...${reset}"
+check_mem
+
+echo -e "Simulating..."
+
+for cir in cirs
+do
+simul $cir
+check_mem
+
+done
+
+clean_temp
