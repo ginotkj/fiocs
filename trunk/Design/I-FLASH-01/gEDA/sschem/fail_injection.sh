@@ -6,7 +6,7 @@
 ## Login   <facundo@faku-laptop>
 ## 
 ## Started on  Tue Dec 15 20:47:38 2009 Facundo
-## Last update Sun Jan 24 19:37:18 2010 Facundo
+## Last update Mon Jan 25 20:36:31 2010 Facundo
 ##
 
 # Globals vars
@@ -58,7 +58,7 @@ function clean_temp {
 function get_free_mem {
     local aux=0
     let aux=$(free -m | grep Mem | awk '{print $4}')
-    echo $aux
+    echo -n $aux
     return 0
 }
 
@@ -77,8 +77,9 @@ function check_mem {
 }
 
 function check_tmp {
-
+echo "gfads"
 #cheuqear tamaño del temp entre simulaciones
+#queda chequear esto pero prioridad 2 por ahora
 }
 
 function simul {
@@ -87,6 +88,7 @@ function simul {
 	then
 	((global_error_sim++))
     fi
+    ((global_success_sim++))
 }
 
 function check_sim {
@@ -214,18 +216,24 @@ check_out $?
 echo -ne "${white}Checking free memory...${reset}"
 check_mem
 
-echo -e "Simulating..."
-
 cirs=$(ls $tempdir/*.cir)
 global_error_sim=0 #simulation not done
 global_success_sim=0 #simulation success and agree against normal
 global_fail_sim=0 #simulation success and fail against normal
+global_count=0 #total simulations run
 
+echo -ne "Simulating..."
+echo -ne ${savecur}
 
 for cir in $cirs
 do
     simul $cir
-    echo "Errors: $global_error_sim"
+    ((global_count++))
+    echo -ne ${restorecur}${eraseeol}${restorecur}
+    echo -ne "$global_count of $injection_points_count | "
+    echo -ne "Successfull: $global_success_sim | "
+    echo -ne "Fail: 0 (not working) | "
+    echo -ne "Errors: $global_error_sim | Free mem: "
     check_mem
 done
 
