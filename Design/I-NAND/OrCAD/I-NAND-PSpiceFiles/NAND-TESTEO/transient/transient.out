@@ -1,0 +1,155 @@
+
+**** 01/25/10 20:30:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "NAND-TESTEO-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-TESTEO\transient.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2u 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\NAND-TESTEO.net" 
+
+
+
+**** INCLUDING NAND-TESTEO.net ****
+* source I-NAND
+.EXTERNAL INPUT IN1
+.EXTERNAL INPUT IN2
+.EXTERNAL INPUT IN3
+.EXTERNAL INPUT IN4
+.EXTERNAL INPUT IN5
+.EXTERNAL INPUT IN6
+.EXTERNAL INPUT IN7
+.EXTERNAL INPUT IN8
+.EXTERNAL INPUT VDD
+.EXTERNAL INPUT OUT
+.EXTERNAL INPUT GND
+M_M15         N66545 IN8 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+R_R12         IN7 0  10Meg  
+M_M8         OUT N38148 N38134 N38134 CMOSP  
++ L=.18u  
++ W=.2u         
+V_VDD         N39971 0 3.3
+M_M16         OUT IN4 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+V_V4         N38148 0  
++SIN 1.5 1.5 500k 0 0 0
+R_R10         IN5 0  10Meg  
+M_M5         OUT IN1 N39971 N39971 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M27         OUT IN8 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_M19         OUT IN1 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_R7         IN3 0  10Meg  
+M_M17         OUT IN6 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_M6         OUT IN1 N39991 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M20         OUT IN5 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_R9         IN8 0  10Meg  
+M_M23         OUT IN1 N67513 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_M11         N38478 IN4 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M9         OUT N37986 N38134 N38134 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M28         N66403 IN3 N66443 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_M2         N39991 IN2 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M13         N66443 IN4 N66955 GND CMOSN  
++ L=.18u  
++ W=.18u         
+V_V5         N37986 0  
++SIN 1.5 1.5 500k 0 0 0
+V_VDD1         N38134 0 3.3
+M_M1         OUT IN1 N38142 0 CMOSN  
++ L=.18u  
++ W=.18u         
+V_V1         IN1 0  
++SIN 1.5 1.5 1Meg 0 0 0
+M_M24         N67513 IN2 N66403 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_M21         N67225 IN6 N67231 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_M18         N66955 IN5 N67225 GND CMOSN  
++ L=.18u  
++ W=.18u         
+V_V3         IN1 0  
++SIN 1.5 1.5 1Meg 0 0 0
+M_M4         OUT IN2 N39971 N39971 CMOSP  
++ L=.18u  
++ W=.2u         
+R_R8         IN4 0  10Meg  
+M_M10         N38438 N37986 N38478 0 CMOSN  
++ L=.18u  
++ W=.18u         
+R_R13         IN1 0  10Meg  
+M_M3         N38142 N38148 N38438 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M25         OUT IN2 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_M22         N67231 IN7 N66545 GND CMOSN  
++ L=.18u  
++ W=.18u         
+V_V6         IN4 0  
++SIN 1.5 1.5 500k 0 0 0
+R_R14         IN2 0  10Meg  
+V_V2         IN2 0  
++SIN 1.5 1.5 500k 0 0 0
+M_M12         OUT IN4 N38134 N38134 CMOSP  
++ L=.18u  
++ W=.2u         
+R_R11         IN6 0  10Meg  
+M_M7         OUT IN1 N38134 N38134 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M14         OUT IN7 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_M26         OUT IN3 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+
+**** RESUMING transient.cir ****
+.END
+
+ERROR -- Voltage source and/or inductor loop involving V_V3
+You may break the loop by adding a series resistance

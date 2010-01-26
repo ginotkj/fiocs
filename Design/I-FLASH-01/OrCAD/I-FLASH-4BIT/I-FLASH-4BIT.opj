@@ -90,30 +90,44 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-4BIT\i-flash-4bit.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-4BIT\i-flash-4bit.dsn"
-         "FLASH")
       (Path "Design Resources" "Library")
-      (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-4BIT\i-flash-4bit.dsn"
-         "FLASH" "FLASH"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 370 784 -1 819"))
+        (Placement "44 0 1 -1 -1 -8 -30 370 784 -1 811"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 1711 50 752")
+        (Placement "44 2 3 -1 -1 -8 -30 50 1342 50 752")
         (Scroll "0 0")
-        (Zoom "135")
+        (Zoom "88")
         (Occurrence "/"))
       (Path
          "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-4BIT\I-FLASH-4BIT.DSN")
       (Schematic "FLASH")
-      (Page "FLASH"))))
+      (Page "FLASH"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 75 1039 75 525")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/FLASH"))
+      (Path
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-4BIT\I-FLASH-4BIT.DSN")
+      (Schematic "S-FLASH")
+      (Page "S-FLASH"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 100 1064 100 550")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/FLASH/C11"))
+      (Path
+         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-COMPARADOR-01\ORCAD\I-COMPARADOR-01.DSN")
+      (Schematic "S-COMP")
+      (Page "S-COMP"))))

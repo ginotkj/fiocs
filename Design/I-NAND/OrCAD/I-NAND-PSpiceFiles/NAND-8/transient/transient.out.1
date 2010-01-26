@@ -1,0 +1,120 @@
+
+**** 01/26/10 11:25:10 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2u 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\NAND-8.net" 
+
+
+
+**** INCLUDING NAND-8.net ****
+* source I-NAND
+.EXTERNAL INPUT GND
+V_V6         IN6 GND  
++SIN 1.5 1.5 500k 0 0 0
+V_V7         IN7 GND  
++SIN 1.5 1.5 500k 0 0 0
+V_V5         IN5 GND  
++SIN 1.5 1.5 500k 0 0 0
+V_V1         IN1 GND  
++SIN 1.5 1.5 1Meg 0 0 0
+M_M16         OUT IN4 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M5         OUT IN8 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M11         OUT IN1 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+V_V2         IN2 GND  
++SIN 1.5 1.5 500k 0 0 0
+M_M9         OUT IN6 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M12         OUT IN5 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M1         OUT IN1 N67495 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_M6         N66385 IN3 N66425 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_M7         N66425 IN4 N66937 GND CMOSN  
++ L=.18u  
++ W=.18u         
+V_VDD         N66465 GND 3.3
+V_V3         IN3 GND  
++SIN 1.5 1.5 500k 0 0 0
+M_M2         N67495 IN2 N66385 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_M13         N67207 IN6 N67213 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_M10         N66937 IN5 N67207 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_M3         OUT IN2 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M14         N67213 IN7 N66527 GND CMOSN  
++ L=.18u  
++ W=.18u         
+V_V4         IN4 GND  
++SIN 1.5 1.5 500k 0 0 0
+V_V8         IN8 GND  
++SIN 1.5 1.5 500k 0 0 0
+M_M8         OUT IN7 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M4         OUT IN3 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M15         N66527 IN8 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+
+**** RESUMING transient.cir ****
+.END
+
+ERROR -- Node IN6 is floating
+ERROR -- Node GND is floating
+ERROR -- Node IN7 is floating
+ERROR -- Node IN5 is floating
+ERROR -- Node IN1 is floating
+ERROR -- Node OUT is floating
+ERROR -- Node IN4 is floating
+ERROR -- Node N66465 is floating
+ERROR -- Node IN8 is floating
+ERROR -- Node IN2 is floating
+ERROR -- Node N67495 is floating
+ERROR -- Node N66385 is floating
+ERROR -- Node IN3 is floating
+ERROR -- Node N66425 is floating
+ERROR -- Node N66937 is floating
+ERROR -- Node N67207 is floating
+ERROR -- Node N67213 is floating
+ERROR -- Node N66527 is floating

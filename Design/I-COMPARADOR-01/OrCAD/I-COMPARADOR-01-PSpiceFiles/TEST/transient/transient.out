@@ -1,7 +1,7 @@
+
+**** 01/19/10 20:48:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
-**** 11/18/09 18:07:54 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
-
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01-pspicefiles\test\transient.sim ] 
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
 
 
  ****     CIRCUIT DESCRIPTION
@@ -31,34 +31,34 @@
 
 **** INCLUDING TEST.net ****
 * source I-COMPARADOR-01
-M_M2         N39249 IN+ N39525 0 CMOSN  
-+ L=.2u  
-+ W=.4u         
-V_VREF         IN+ N398131 0Vdc
+M_M2         VDIFERENCIAL IN+ VEQUILIBRIO 0 CMOSN  
++ L=1u  
++ W=2u         
+V_VREF         IN+ N398131 0
 M_M3         N39461 N39461 N39211 N39211 CMOSP  
-+ L=.2u  
-+ W=.6u         
-M_M4         N39249 N39461 N39211 N39211 CMOSP  
-+ L=.2u  
-+ W=.6u         
-M_M5         N39525 VBIAS 0 0 CMOSN  
-+ L=.2u  
-+ W=.6u         
-V_VQ+         N398131 0 .2
++ L=3u  
++ W=6u         
+M_M4         VDIFERENCIAL N39461 N39211 N39211 CMOSP  
++ L=3u  
++ W=6u         
+M_M5         VEQUILIBRIO VBIAS 0 0 CMOSN  
++ L=1u  
++ W=3u         
+V_VQ+         N398131 0 1
 V_VIN         IN- N43113  
 +SIN 0 20m 100k 0 0 0
-M_M6         OUT N39249 N39211 N39211 CMOSP  
-+ L=.2u  
-+ W=.8u         
-V_VBIAS         VBIAS 0 .3
+M_M6         OUT VDIFERENCIAL N39211 N39211 CMOSP  
++ L=2u  
++ W=8u         
+V_VBIAS         VBIAS 0 .5
 M_M7         OUT VBIAS 0 0 CMOSN  
-+ L=.2u  
-+ W=.4u         
-V_VQ-         N43113 0 .2
-M_M1         N39461 IN- N39525 0 CMOSN  
-+ L=.2u  
-+ W=.4u         
-V_VDD         N39211 0 3.3
++ L=1u  
++ W=2u         
+V_VQ-         N43113 0 1
+M_M1         N39461 IN- VEQUILIBRIO 0 CMOSN  
++ L=1u  
++ W=2u         
+V_VDD         N39211 0 5
 
 **** RESUMING transient.cir ****
 .END
@@ -71,9 +71,9 @@ WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
-**** 11/18/09 18:07:54 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 01/19/10 20:48:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01-pspicefiles\test\transient.sim ] 
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -194,9 +194,9 @@ WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
-**** 11/18/09 18:07:54 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 01/19/10 20:48:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01-pspicefiles\test\transient.sim ] 
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -209,11 +209,11 @@ WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(  IN+)     .2000  (  IN-)     .2000  (  OUT)     .1035  (VBIAS)     .3000      
+(  IN+)    1.0000  (  IN-)    1.0000  (  OUT)    3.1630  (VBIAS)     .5000      
 
-(N39211)    3.3000 (N39249)    3.0507 (N39461)    3.0507 (N39525)     .0204     
+(N39211)    5.0000 (N39461)    4.3327 (N43113)    1.0000 (N398131)    1.0000    
 
-(N43113)     .2000 (N398131)     .2000                   
+(VEQUILIBRIO)     .4827               (VDIFERENCIAL)    4.3327              
 
 
 
@@ -226,17 +226,17 @@ WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
     V_VIN        0.000E+00
     V_VBIAS      0.000E+00
     V_VQ-        0.000E+00
-    V_VDD       -4.441E-08
+    V_VDD       -1.784E-05
 
-    TOTAL POWER DISSIPATION   1.47E-07  WATTS
+    TOTAL POWER DISSIPATION   8.92E-05  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 11/18/09 18:07:54 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 01/19/10 20:48:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\i-comparador-01-pspicefiles\test\transient.sim ] 
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
 
 
  ****     JOB STATISTICS SUMMARY
@@ -246,5 +246,5 @@ WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =        1.06
+  Total job time (using Solver 1)   =         .97
 
