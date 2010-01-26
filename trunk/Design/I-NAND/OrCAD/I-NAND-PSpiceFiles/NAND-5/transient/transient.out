@@ -1,0 +1,253 @@
+
+**** 01/26/10 12:44:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-5\transient.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2u 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\NAND-5.net" 
+
+
+
+**** INCLUDING NAND-5.net ****
+* source I-NAND
+M_M4         VOUT IN2 N55468 N55468 CMOSP  
++ L=.18u  
++ W=.2u         
+V_V5         IN5 0  
++SIN 1.5 1.5 500k 0 0 0
+M_M9         VOUT IN5 N55468 N55468 CMOSP  
++ L=.18u  
++ W=.2u         
+V_V3         IN3 0  
++SIN 1.5 1.5 500k 0 0 0
+M_M7         N55752 IN4 N56014 0 CMOSN  
++ L=.18u  
++ W=.18u         
+V_VDD         N55468 0 3.3
+M_M10         N56014 IN5 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+V_V4         IN4 0  
++SIN 1.5 1.5 500k 0 0 0
+M_M5         VOUT IN3 N55468 N55468 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M8         VOUT IN4 N55468 N55468 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M1         VOUT IN1 N55476 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M6         N55712 IN3 N55752 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M2         N55476 IN2 N55712 0 CMOSN  
++ L=.18u  
++ W=.18u         
+V_V1         IN1 0  
++SIN 1.5 1.5 1Meg 0 0 0
+M_M3         VOUT IN1 N55468 N55468 CMOSP  
++ L=.18u  
++ W=.2u         
+V_V2         IN2 0  
++SIN 1.5 1.5 500k 0 0 0
+
+**** RESUMING transient.cir ****
+.END
+
+WARNING -- Mosfet M_M4, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M4, model CMOSP: Ps = 0 is less than W
+WARNING -- Mosfet M_M7, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M7, model CMOSN: Ps = 0 is less than W
+**** 01/26/10 12:44:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-5\transient.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               CMOSP           CMOSN           
+               PMOS            NMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               7            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    -.413091         .294194     
+          KP  460.419200E-06  460.419200E-06 
+       GAMMA    0               0            
+      LAMBDA    0               0            
+         RSH    5.9             6.2          
+          IS    1.000000E-15    1.000000E-15 
+          JS  100.000000E-06  100.000000E-06 
+          PB     .821464         .99         
+        PBSW     .8008           .8          
+          CJ    1.165977E-03  815.244000E-06 
+        CJSW  122.005600E-12  165.796200E-12 
+          MJ     .425655         .610228     
+        MJSW     .1001           .163262     
+        CGSO  500.000000E-12  500.000000E-12 
+        CGDO  500.000000E-12  500.000000E-12 
+        CGBO    1.000000E-12    1.000000E-12 
+         TOX    4.500000E-09    4.500000E-09 
+          XJ  100.000000E-09  100.000000E-09 
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .01             .01         
+      DIOMOD    2               2            
+          K1     .59909          .541355     
+          K2 -669.794000E-09    -.032332     
+        LETA    0               0            
+        WETA    0               0            
+          U0  118.3014        269.8792       
+       XPART     .5              .5          
+        VTH0    -.413091         .294194     
+          K3     .080859        1.000406E-03 
+          W0    1.000000E-06  100.000000E-09 
+         NLX   25.530790E-09  206.491900E-09 
+        DVT0     .819884         .565214     
+        DVT1     .744212         .260305     
+          UA    1.535614E-09   -1.619209E-09 
+          UB    1.000000E-21    2.953688E-18 
+          UC -100.000000E-12   57.637850E-12 
+        VSAT  173.454300E+03  106.504000E+03 
+        RDSW  677.8533        150            
+        VOFF    -.142681        -.09299      
+     NFACTOR     .94145         2.044734     
+        PCLM     .334199        1.968647     
+      PDIBL1     .132793        1            
+      PDIBL2    9.825629E-03    -.072042     
+       DROUT     .81589         1            
+      PSCBE1    3.057881E+09    2.350722E+09 
+      PSCBE2    5.892816E-09  508.313600E-12 
+          A0     .926787        1.425322     
+          A1     .01033          .023731     
+          A2     .752154         .550469     
+       NPEAK  415.890000E+15  235.490000E+15 
+         LDD    0               0            
+        LITL   36.742350E-09   36.742350E-09 
+         UC1  -56.000000E-12  -56.000000E-12 
+        PVAG     .122566                     
+        KETA     .022875        -.016685     
+        ETA0    1.263659E-03    6.051176E-03 
+        ETAB   -2.195822E-03 -858.512600E-06 
+         K3B   19.71403         5.01511      
+        DVT2    -.3             -.067374     
+        DSUB    4.891602E-03    3.642935E-03 
+         AGS     .166834         .37123      
+       DVT1W    0               0            
+       DVT2W    0               0            
+        PRWG    -.054897         .34061      
+        PRWB    -.5             -.183689     
+     PDIBLCB   -1.000000E-03    -.1          
+         DWG  -25.031010E-09    5.313945E-09 
+         DWB  -12.379610E-09   13.440770E-09 
+          B0    1.874426E-06  -23.699750E-09 
+          B1    5.000000E-06                 
+        LINT   27.788770E-09   20.673220E-09 
+        WINT                   12.447730E-09 
+         DLC   27.788770E-09   20.673220E-09 
+         DWC    0              12.447730E-09 
+          CF    0               0            
+        NOIA    9.900001E+18  100.000000E+18 
+        NOIB    2.400000E+03   50.000000E+03 
+        NOIC    1.400000E-12   -1.400000E-12 
+       LKETA    -.010867      399.601500E-06 
+       WKETA     .03239         3.401938E-03 
+       PVSAT   50             790.3922       
+       PKETA   -6.167985E-03    -.014873     
+       PVTH0    1.001339E-03   -4.814415E-03 
+         PUA  362.786900E-12  -31.414400E-12 
+         PU0    7.380991       -4.028575     
+       PRDSW   -5              -2.504635     
+       PETA0  100.000000E-06  -67.588480E-06 
+         PK2   30.964830E-06    3.159047E-03 
+         VTM     .025864         .025864     
+       PBSWG     .8008           .8          
+       MJSWG     .1001           .163262     
+       CJSWG  422.000000E-12  330.000000E-12 
+
+
+WARNING -- Mosfet M_M4, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M4, model CMOSP: Ps = 0 is less than W
+WARNING -- Mosfet M_M7, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M7, model CMOSN: Ps = 0 is less than W
+**** 01/26/10 12:44:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-5\transient.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN1)    1.5000  (  IN2)    1.5000  (  IN3)    1.5000  (  IN4)    1.5000      
+
+(  IN5)    1.5000  ( VOUT)    3.2349  (N55468)    3.3000 (N55476)     .6520     
+
+(N55712)     .4003 (N55752)     .2363 (N56014)     .1081 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V5         0.000E+00
+    V_V3         0.000E+00
+    V_VDD       -2.754E-05
+    V_V4         0.000E+00
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   9.09E-05  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/26/10 12:44:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-5\transient.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .13
+

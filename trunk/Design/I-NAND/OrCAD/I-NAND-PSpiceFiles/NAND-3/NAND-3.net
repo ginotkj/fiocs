@@ -1,0 +1,26 @@
+* source I-NAND
+M_M2         N27355 IN2 N27381 N27381 CMOSN  
++ L=.18u  
++ W=.18u         
+V_V2         IN2 0  
++SIN 1.5 1.5 500k 0 0 0
+M_M3         VOUT IN1 N27335 N27335 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M6         N27381 IN3 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+V_VDD         N27335 0 3.3
+M_M4         VOUT IN2 N27335 N27335 CMOSP  
++ L=.18u  
++ W=.2u         
+V_V3         IN3 0  
++SIN 1.5 1.5 500k 0 0 0
+M_M1         VOUT IN1 N27355 N27355 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M5         VOUT IN3 N27335 N27335 CMOSP  
++ L=.18u  
++ W=.2u         
+V_V1         IN1 0  
++SIN 1.5 1.5 1Meg 0 0 0

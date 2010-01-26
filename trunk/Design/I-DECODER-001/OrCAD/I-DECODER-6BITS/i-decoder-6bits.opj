@@ -111,12 +111,12 @@
          "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
-         "TEST")
+         "S-NAND-8")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Select "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
-         "TEST" "TEST"))
+         "S-NAND-8" "S-NAND-8"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

@@ -138,12 +138,12 @@
          "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
-         "S-COMP")
+         "TEST")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Select "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
-         "S-COMP" "S-COMP"))
+         "TEST" "TEST"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
