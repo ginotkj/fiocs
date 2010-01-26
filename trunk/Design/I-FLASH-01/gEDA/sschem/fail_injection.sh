@@ -6,7 +6,7 @@
 ## Login   <facundo@faku-laptop>
 ## 
 ## Started on  Tue Dec 15 20:47:38 2009 Facundo
-## Last update Mon Jan 25 20:36:31 2010 Facundo
+## Last update Tue Jan 26 19:21:46 2010 Facundo
 ##
 
 # Globals vars
@@ -110,6 +110,7 @@ else
 	echo -e "${white}${bold}Please check $circuit file${reset}"
 	exit 4
     fi
+#ver de chequear el nombre de sim_data automaticamente desde el flash.cmd
 fi
 
 clear
@@ -222,6 +223,10 @@ global_success_sim=0 #simulation success and agree against normal
 global_fail_sim=0 #simulation success and fail against normal
 global_count=0 #total simulations run
 
+# ngspice no soporta paths en los archivos de datos
+CWD=$(pwd)
+cd $tempdir
+
 echo -ne "Simulating..."
 echo -ne ${savecur}
 
@@ -237,5 +242,6 @@ do
     check_mem
 done
 
+cd $CWD
 
-clean_temp
+#clean_temp
