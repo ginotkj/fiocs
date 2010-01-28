@@ -1,7 +1,6 @@
 * source I-FFD
 V_V3         C 0  
 +PULSE 0 3 4u .1u .1u 5u 10u
-C_FFD_C3         0 FFD_Y  10p  
 M_FFD_NAND_M1         FFD_N00589 FFD_N00861 FFD_NAND_N00209 FFD_NAND_N00209
 +  CMOSN  
 + L=.18u  

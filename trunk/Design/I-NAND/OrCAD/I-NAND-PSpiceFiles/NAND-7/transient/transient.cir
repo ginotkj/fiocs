@@ -1,4 +1,4 @@
-** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
+** Profile: "NAND-7-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-7\transient.sim ] 
 
 ** Creating circuit file "transient.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -6,14 +6,13 @@
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
-.LIB "../../../i-ffd-pspicefiles/i-ffd.lib" 
 * From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 60u 0 
+.TRAN  0 2u 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
-.INC "..\TEST FFD.net" 
+.INC "..\NAND-7.net" 
 
 
 .END

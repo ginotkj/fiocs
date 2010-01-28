@@ -1,4 +1,4 @@
-** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
+** Profile: "TEST FFD con C en LOOP-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd con c en loop\transient.sim ] 
 
 ** Creating circuit file "transient.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -11,9 +11,9 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 60u 0 
+.TRAN  0 4u 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
-.INC "..\TEST FFD.net" 
+.INC "..\TEST FFD con C en LOOP.net" 
 
 
 .END

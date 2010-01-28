@@ -1,0 +1,149 @@
+
+**** 01/27/10 18:59:31 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "TEST FFD sin C-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\I-FFD-PSpiceFiles\TEST FFD sin C\transient.sim
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-ffd-pspicefiles/i-ffd.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 4u 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\TEST FFD sin C.net" 
+
+
+
+**** INCLUDING "TEST FFD sin C.net" ****
+* source I-FFD
+.EXTERNAL INPUT VDD
+.EXTERNAL INPUT GND
+V_VDD         VDD GND 3.3
+V_DATO         N55039 GND  
++PULSE 3 0 .5u .1u .1u .8u 4u
+M_NAND-3_M2         NAND-3_N05674 N54807 NAND-3_N05700 NAND-3_N05700 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND-3_M3         Y X VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND-3_M5         Y N54767 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND-3_M4         Y N54807 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND-3_M6         NAND-3_N05700 N54767 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND-3_M1         Y X NAND-3_N05674 NAND-3_N05674 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND2_M1         X N54739 NAND2_N00209 NAND2_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND2_M2         NAND2_N00209 N54807 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND2_M3         X N54739 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND2_M4         X N54807 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_NAND2_R1         N54739 GND  10Meg  
+R_NAND2_R2         N54807 GND  10Meg  
+V_CLOCK         N54807 GND  
++PULSE 3 0 .9u .1u .1u .9u 2u
+M_NAND_M1         N54739 N54767 NAND_N00209 NAND_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND_M2         NAND_N00209 X GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND_M3         N54739 N54767 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND_M4         N54739 X VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_NAND_R1         N54767 GND  10Meg  
+R_NAND_R2         X GND  10Meg  
+M_NAND1_M1         N54767 Y NAND1_N00209 NAND1_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND1_M2         NAND1_N00209 N55039 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND1_M3         N54767 Y VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND1_M4         N54767 N55039 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_NAND1_R1         Y GND  10Meg  
+R_NAND1_R2         N55039 GND  10Meg  
+M_NAND3_M1         Q X NAND3_N00209 NAND3_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND3_M2         NAND3_N00209 -Q GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND3_M3         Q X VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND3_M4         Q -Q VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_NAND3_R1         X GND  10Meg  
+R_NAND3_R2         -Q GND  10Meg  
+M_NAND4_M1         -Q Q NAND4_N00209 NAND4_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND4_M2         NAND4_N00209 Y GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND4_M3         -Q Q VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND4_M4         -Q Y VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_NAND4_R1         Q GND  10Meg  
+R_NAND4_R2         Y GND  10Meg  
+
+**** RESUMING transient.cir ****
+.END
+
+ERROR -- Node VDD is floating
+ERROR -- Node GND is floating
+ERROR -- Node N55039 is floating
+ERROR -- Node NAND-3_N05674 is floating
+ERROR -- Node N54807 is floating
+ERROR -- Node NAND-3_N05700 is floating
+ERROR -- Node Y is floating
+ERROR -- Node X is floating
+ERROR -- Node N54767 is floating
+ERROR -- Node N54739 is floating
+ERROR -- Node NAND2_N00209 is floating
+ERROR -- Node NAND_N00209 is floating
+ERROR -- Node NAND1_N00209 is floating
+ERROR -- Node Q is floating
+ERROR -- Node NAND3_N00209 is floating
+ERROR -- Node -Q is floating
+ERROR -- Node NAND4_N00209 is floating
