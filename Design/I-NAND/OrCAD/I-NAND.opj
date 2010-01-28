@@ -57,6 +57,8 @@
     (File ".\i-nand-pspicefiles\nand-3\nand-3.net"
       (Type "Report"))
     (File ".\i-nand-pspicefiles\nand-5\nand-5.net"
+      (Type "Report"))
+    (File ".\i-nand-pspicefiles\nand-7\nand-7.net"
       (Type "Report")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries")
@@ -79,10 +81,14 @@
          ".\i-nand-pspicefiles\nand-3\transient.sim"
         (DisplayName "NAND-3-transient")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-nand-pspicefiles\nand-5\transient.sim")
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-nand-pspicefiles\nand-5\transient.sim"
         (DisplayName "NAND-5-transient")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-nand-pspicefiles\nand-7\transient.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-nand-pspicefiles\nand-7\transient.sim"
+        (DisplayName "NAND-7-transient")
         (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
@@ -140,33 +146,19 @@
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-5")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-3")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-4")
-      (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-7")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-8")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Simulation Profiles")
       (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-5"
-         "NAND-5"))
+         "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-7"
+         "NAND-7"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 0 374 0 1023"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 374 2031 1 1023")
-        (Scroll "0 0")
-        (Zoom "129")
-        (Occurrence "/"))
-      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\ORCAD\I-NAND.DSN")
-      (Schematic "NAND-5")
-      (Page "NAND-5"))))
+      (Tab 0))))

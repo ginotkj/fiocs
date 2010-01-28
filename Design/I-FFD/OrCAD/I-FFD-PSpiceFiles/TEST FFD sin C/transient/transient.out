@@ -1,7 +1,7 @@
+
+**** 01/27/10 19:52:33 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
-**** 01/26/10 21:33:29 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
-
- ** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
+ ** Profile: "TEST FFD sin C-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\I-FFD-PSpiceFiles\TEST FFD sin C\transient.sim
 
 
  ****     CIRCUIT DESCRIPTION
@@ -23,129 +23,119 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 60u 0 
+.TRAN  0 4u 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
-.INC "..\TEST FFD.net" 
+.INC "..\TEST FFD sin C.net" 
 
 
 
-**** INCLUDING "TEST FFD.net" ****
+**** INCLUDING "TEST FFD sin C.net" ****
 * source I-FFD
-V_V3         C 0  
-+PULSE 0 3 4u .1u .1u 5u 10u
-M_FFD_NAND_M1         FFD_N00589 FFD_N00861 FFD_NAND_N00209 FFD_NAND_N00209
-+  CMOSN  
+V_VDD         VDD 0 3.3
+C_C1         0 Y  10p  
+V_DATO         DATO 0  
++PULSE 0 3 .5u .1u .1u .8u 4u
+M_NAND-3_M2         NAND-3_N05674 CLOCK NAND-3_N05700 NAND-3_N05700 CMOSN  
 + L=.18u  
 + W=.18u         
-M_FFD_NAND_M2         FFD_NAND_N00209 FFD_X 0 0 CMOSN  
+M_NAND-3_M3         Y X VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND-3_M5         Y N54767 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND-3_M4         Y CLOCK VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND-3_M6         NAND-3_N05700 N54767 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_FFD_NAND_M3         FFD_N00589 FFD_N00861 N09541 N09541 CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_FFD_NAND_M4         FFD_N00589 FFD_X N09541 N09541 CMOSP  
-+ L=.18u  
-+ W=.2u         
-R_FFD_NAND_R1         FFD_N00861 0  10Meg  
-R_FFD_NAND_R2         FFD_X 0  10Meg  
-M_FFD_NAND-3_M2         FFD_NAND-3_N05674 C FFD_NAND-3_N05700 FFD_NAND-3_N05700
-+  CMOSN  
+M_NAND-3_M1         Y X NAND-3_N05674 NAND-3_N05674 CMOSN  
 + L=.18u  
 + W=.18u         
-M_FFD_NAND-3_M3         FFD_Y FFD_X N09541 N09541 CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_FFD_NAND-3_M5         FFD_Y FFD_N00861 N09541 N09541 CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_FFD_NAND-3_M4         FFD_Y C N09541 N09541 CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_FFD_NAND-3_M6         FFD_NAND-3_N05700 FFD_N00861 0 0 CMOSN  
+M_NAND2_M1         X N54739 NAND2_N00209 NAND2_N00209 CMOSN  
 + L=.18u  
 + W=.18u         
-M_FFD_NAND-3_M1         FFD_Y FFD_X FFD_NAND-3_N05674 FFD_NAND-3_N05674 CMOSN  
+M_NAND2_M2         NAND2_N00209 CLOCK 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_FFD_NAND1_M1         FFD_N00861 FFD_Y FFD_NAND1_N00209 FFD_NAND1_N00209 CMOSN
-+   
-+ L=.18u  
-+ W=.18u         
-M_FFD_NAND1_M2         FFD_NAND1_N00209 D 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_FFD_NAND1_M3         FFD_N00861 FFD_Y N09541 N09541 CMOSP  
+M_NAND2_M3         X N54739 VDD VDD CMOSP  
 + L=.18u  
 + W=.2u         
-M_FFD_NAND1_M4         FFD_N00861 D N09541 N09541 CMOSP  
+M_NAND2_M4         X CLOCK VDD VDD CMOSP  
 + L=.18u  
 + W=.2u         
-R_FFD_NAND1_R1         FFD_Y 0  10Meg  
-R_FFD_NAND1_R2         D 0  10Meg  
-M_FFD_NAND3_M1         Q FFD_X FFD_NAND3_N00209 FFD_NAND3_N00209 CMOSN  
+R_NAND2_R1         N54739 0  10Meg  
+R_NAND2_R2         CLOCK 0  10Meg  
+V_CLOCK         CLOCK 0  
++PULSE 0 3 .9u .1u .1u .9u 2u
+M_NAND_M1         N54739 N54767 NAND_N00209 NAND_N00209 CMOSN  
 + L=.18u  
 + W=.18u         
-M_FFD_NAND3_M2         FFD_NAND3_N00209 -Q 0 0 CMOSN  
+M_NAND_M2         NAND_N00209 X 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_FFD_NAND3_M3         Q FFD_X N09541 N09541 CMOSP  
+M_NAND_M3         N54739 N54767 VDD VDD CMOSP  
 + L=.18u  
 + W=.2u         
-M_FFD_NAND3_M4         Q -Q N09541 N09541 CMOSP  
+M_NAND_M4         N54739 X VDD VDD CMOSP  
 + L=.18u  
 + W=.2u         
-R_FFD_NAND3_R1         FFD_X 0  10Meg  
-R_FFD_NAND3_R2         -Q 0  10Meg  
-M_FFD_NAND2_M1         FFD_X FFD_N00589 FFD_NAND2_N00209 FFD_NAND2_N00209 CMOSN
-+   
+R_NAND_R1         N54767 0  10Meg  
+R_NAND_R2         X 0  10Meg  
+M_NAND1_M1         N54767 Y NAND1_N00209 NAND1_N00209 CMOSN  
 + L=.18u  
 + W=.18u         
-M_FFD_NAND2_M2         FFD_NAND2_N00209 C 0 0 CMOSN  
+M_NAND1_M2         NAND1_N00209 DATO 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_FFD_NAND2_M3         FFD_X FFD_N00589 N09541 N09541 CMOSP  
+M_NAND1_M3         N54767 Y VDD VDD CMOSP  
 + L=.18u  
 + W=.2u         
-M_FFD_NAND2_M4         FFD_X C N09541 N09541 CMOSP  
+M_NAND1_M4         N54767 DATO VDD VDD CMOSP  
 + L=.18u  
 + W=.2u         
-R_FFD_NAND2_R1         FFD_N00589 0  10Meg  
-R_FFD_NAND2_R2         C 0  10Meg  
-M_FFD_NAND4_M1         -Q Q FFD_NAND4_N00209 FFD_NAND4_N00209 CMOSN  
+R_NAND1_R1         Y 0  10Meg  
+R_NAND1_R2         DATO 0  10Meg  
+M_NAND3_M1         Q X NAND3_N00209 NAND3_N00209 CMOSN  
 + L=.18u  
 + W=.18u         
-M_FFD_NAND4_M2         FFD_NAND4_N00209 FFD_Y 0 0 CMOSN  
+M_NAND3_M2         NAND3_N00209 -Q 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_FFD_NAND4_M3         -Q Q N09541 N09541 CMOSP  
+M_NAND3_M3         Q X VDD VDD CMOSP  
 + L=.18u  
 + W=.2u         
-M_FFD_NAND4_M4         -Q FFD_Y N09541 N09541 CMOSP  
+M_NAND3_M4         Q -Q VDD VDD CMOSP  
 + L=.18u  
 + W=.2u         
-R_FFD_NAND4_R1         Q 0  10Meg  
-R_FFD_NAND4_R2         FFD_Y 0  10Meg  
-V_V1         N09541 0 3.3
-V_V2         D 0  
-+PULSE 3 0 0 1u 1u 3u 15u
-R_R1         -Q N09541  100k  
-R_R2         Q N09541  100k  
+R_NAND3_R1         X 0  10Meg  
+R_NAND3_R2         -Q 0  10Meg  
+M_NAND4_M1         -Q Q NAND4_N00209 NAND4_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND4_M2         NAND4_N00209 Y 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND4_M3         -Q Q VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND4_M4         -Q Y VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_NAND4_R1         Q 0  10Meg  
+R_NAND4_R2         Y 0  10Meg  
 
 **** RESUMING transient.cir ****
 .END
 
-WARNING -- Library file D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd-pspicefiles\i-ffd.lib has changed since index file i-ffd.ind was created.
-WARNING -- The timestamp changed from Fri Oct 09 15:49:59 2009 to Thu Nov 26 20:13:53 2009.
-Making new index file i-ffd.ind for library file i-ffd.lib
-Index has 2 entries from 1 file(s).
+WARNING -- Mosfet M_NAND-3_M2, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_NAND-3_M2, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_NAND-3_M3, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_NAND-3_M3, model CMOSP: Ps = 0 is less than W
+**** 01/27/10 19:52:33 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
-WARNING -- Mosfet M_FFD_NAND_M1, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_FFD_NAND_M1, model CMOSN: Ps = 0 is less than W
-WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
-**** 01/26/10 21:33:29 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
-
- ** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
+ ** Profile: "TEST FFD sin C-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\I-FFD-PSpiceFiles\TEST FFD sin C\transient.sim
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -258,13 +248,13 @@ WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
        CJSWG  330.000000E-12  422.000000E-12 
 
 
-WARNING -- Mosfet M_FFD_NAND_M1, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_FFD_NAND_M1, model CMOSN: Ps = 0 is less than W
-WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
-**** 01/26/10 21:33:29 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+WARNING -- Mosfet M_NAND-3_M2, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_NAND-3_M2, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_NAND-3_M3, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_NAND-3_M3, model CMOSP: Ps = 0 is less than W
+**** 01/27/10 19:52:33 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
+ ** Profile: "TEST FFD sin C-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\I-FFD-PSpiceFiles\TEST FFD sin C\transient.sim
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -277,17 +267,17 @@ WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(    C)    0.0000  (    D)    3.0000  (    Q)     .1844  (   -Q)    3.2974      
+(    Q) 458.3E-09  (    X)    3.2974  (    Y)    3.2949  (   -Q)    3.2974      
 
-(FFD_X)    3.2949  (FFD_Y)    3.2974  (N09541)    3.3000 (FFD_N00589)    3.2974 
+(  VDD)    3.3000  ( DATO)    0.0000  (CLOCK)    0.0000  (N54739) 458.3E-09     
 
-(FFD_N00861) 556.2E-06                (FFD_NAND_N00209) 515.0E-09               
+(N54767)    3.2974 (NAND_N00209) 229.2E-09                                      
 
-(FFD_NAND1_N00209) 265.3E-06          (FFD_NAND2_N00209)    3.2387              
+(NAND1_N00209)    3.2369              (NAND2_N00209)     .0605                  
 
-(FFD_NAND3_N00209)     .0936          (FFD_NAND4_N00209) 73.90E-06              
+(NAND3_N00209) 229.2E-09              (NAND4_N00209) 507.2E-09                  
 
-(FFD_NAND-3_N05674)    3.2763         (FFD_NAND-3_N05700)     .0597         
+(NAND-3_N05674)    3.2387             (NAND-3_N05700) 499.1E-09             
 
 
 
@@ -295,19 +285,19 @@ WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V3         0.000E+00
-    V_V1        -3.326E-05
-    V_V2        -3.000E-07
+    V_VDD       -1.979E-06
+    V_DATO       0.000E+00
+    V_CLOCK      0.000E+00
 
-    TOTAL POWER DISSIPATION   1.11E-04  WATTS
+    TOTAL POWER DISSIPATION   6.53E-06  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 01/26/10 21:33:29 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 01/27/10 19:52:33 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
+ ** Profile: "TEST FFD sin C-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\I-FFD-PSpiceFiles\TEST FFD sin C\transient.sim
 
 
  ****     JOB STATISTICS SUMMARY
@@ -317,5 +307,5 @@ WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =        1.79
+  Total job time (using Solver 1)   =         .67
 

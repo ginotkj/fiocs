@@ -1,0 +1,96 @@
+* source I-FFD
+V_DATO         DATO 0  
++PULSE 0 3 .5u .1u .1u .8u 4u
+V_CLOCK         CLOCK 0  
++PULSE 0 3 .9u .1u .1u .9u 2u
+C_C1         Q 0  10p  
+M_NAND-3_M2         NAND-3_N05674 CLOCK NAND-3_N05700 NAND-3_N05700 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND-3_M3         Y X VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND-3_M5         Y N70433 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND-3_M4         Y CLOCK VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND-3_M6         NAND-3_N05700 N70433 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND-3_M1         Y X NAND-3_N05674 NAND-3_N05674 CMOSN  
++ L=.18u  
++ W=.18u         
+V_VDD         VDD 0 3.3
+C_C2         -Q 0  10p  
+M_NAND_M1         N70403 N70433 NAND_N00209 NAND_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND_M2         NAND_N00209 X 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND_M3         N70403 N70433 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND_M4         N70403 X VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_NAND_R1         N70433 0  10Meg  
+R_NAND_R2         X 0  10Meg  
+M_NAND1_M1         N70433 Y NAND1_N00209 NAND1_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND1_M2         NAND1_N00209 DATO 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND1_M3         N70433 Y VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND1_M4         N70433 DATO VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_NAND1_R1         Y 0  10Meg  
+R_NAND1_R2         DATO 0  10Meg  
+M_NAND3_M1         Q X NAND3_N00209 NAND3_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND3_M2         NAND3_N00209 -Q 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND3_M3         Q X VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND3_M4         Q -Q VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_NAND3_R1         X 0  10Meg  
+R_NAND3_R2         -Q 0  10Meg  
+M_NAND2_M1         X N70403 NAND2_N00209 NAND2_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND2_M2         NAND2_N00209 CLOCK 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND2_M3         X N70403 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND2_M4         X CLOCK VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_NAND2_R1         N70403 0  10Meg  
+R_NAND2_R2         CLOCK 0  10Meg  
+M_NAND4_M1         -Q Q NAND4_N00209 NAND4_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND4_M2         NAND4_N00209 Y 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_NAND4_M3         -Q Q VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_NAND4_M4         -Q Y VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+R_NAND4_R1         Q 0  10Meg  
+R_NAND4_R2         Y 0  10Meg  
