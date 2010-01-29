@@ -1,0 +1,12 @@
+#!/bin/perl
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+open FILE, ">filename.txt" or die $!;

@@ -3,7 +3,11 @@ set hcopydevtype=postscript
 set hcopypscolor=true
 set hcopywidth=1200
 set hcopyheight=500
-set filetype=binary
+
+* filetype allowed options: ascii, binary
+*set filetype=binary
+set filetype=ascii
+
 set combplot
 
 * op

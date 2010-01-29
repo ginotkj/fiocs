@@ -6,7 +6,7 @@
 ## Login   <facundo@faku-laptop>
 ## 
 ## Started on  Tue Dec 15 20:47:38 2009 Facundo
-## Last update Tue Jan 26 19:21:46 2010 Facundo
+## Last update Thu Jan 28 20:44:11 2010 Facundo
 ##
 
 # Globals vars
@@ -52,7 +52,8 @@ function check_out {
 function clean_temp {
     echo -n "Cleaning temp files ($tempdir)..."
     rm -fr $tempdir
-    check_out $?   
+    check_out $?
+    exit 2
 }
 
 function get_free_mem {
@@ -83,7 +84,7 @@ echo "gfads"
 }
 
 function simul {
-    ngspice -b $1 -o $simul_raw &>/dev/null
+    ngspice -b $1 -o $simul_output &>/dev/null
     if [ $? -ne 0 ]
 	then
 	((global_error_sim++))
@@ -97,6 +98,11 @@ function check_sim {
 }
 
 ####################################
+
+#trap clean_temp SIGINT SIGTERM
+trap "echo ; echo Program terminated by Ctrl+C ; exit" SIGINT SIGTERM #DEBUG
+
+#####################################
 
 if [ -z $circuit ]
 then
@@ -244,4 +250,4 @@ done
 
 cd $CWD
 
-#clean_temp
+clean_temp
