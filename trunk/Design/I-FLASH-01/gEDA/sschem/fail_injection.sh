@@ -6,7 +6,7 @@
 ## Login   <facundo@faku-laptop>
 ## 
 ## Started on  Tue Dec 15 20:47:38 2009 Facundo
-## Last update Thu Jan 28 20:44:11 2010 Facundo
+## Last update Sat Jan 30 20:57:53 2010 Facundo
 ##
 
 # Globals vars
@@ -89,12 +89,23 @@ function simul {
 	then
 	((global_error_sim++))
     fi
-    ((global_success_sim++))
 }
 
 function check_sim {
-    ((global_success_sim++))
-    ((global_fail_sim++))
+    aux_file=$(basename $1)
+    sim_out=$(perl $CWD/sim_analysis.pl $tempdir $aux_file)
+
+    if [ $sim_out -eq 0 ]
+    then
+	((global_success_sim++))
+    elif [ $sim_out -eq 1 ]
+    then
+	((global_fail_sim++))
+    else
+	echo "Unrecognized sim_analysis.pl output."
+	echo "Exiting..."
+	exit 24
+    fi
 }
 
 ####################################
@@ -239,11 +250,12 @@ echo -ne ${savecur}
 for cir in $cirs
 do
     simul $cir
+    check_sim $cir
     ((global_count++))
     echo -ne ${restorecur}${eraseeol}${restorecur}
     echo -ne "$global_count of $injection_points_count | "
     echo -ne "Successfull: $global_success_sim | "
-    echo -ne "Fail: 0 (not working) | "
+    echo -ne "Fail: $global_fail_sim | "
     echo -ne "Errors: $global_error_sim | Free mem: "
     check_mem
 done
