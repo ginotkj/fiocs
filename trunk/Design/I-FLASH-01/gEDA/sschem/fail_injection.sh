@@ -6,7 +6,7 @@
 ## Login   <facundo@faku-laptop>
 ## 
 ## Started on  Tue Dec 15 20:47:38 2009 Facundo
-## Last update Sat Jan 30 20:57:53 2010 Facundo
+## Last update Sun Jan 31 20:09:47 2010 Facundo
 ##
 
 # Globals vars
@@ -37,7 +37,7 @@ savecur="\033[s"
 restorecur="\033[u"
 eraseeol="\033[K"
 
-#####################################
+########################################################################
 
 function check_out {
     if [ $1 -eq 0 ]
@@ -95,6 +95,9 @@ function check_sim {
     aux_file=$(basename $1)
     sim_out=$(perl $CWD/sim_analysis.pl $tempdir $aux_file)
 
+    echo "simout= $sim_out"  #DEBUG
+    exit 3 ##DEBUG
+    
     if [ $sim_out -eq 0 ]
     then
 	((global_success_sim++))
@@ -102,13 +105,14 @@ function check_sim {
     then
 	((global_fail_sim++))
     else
-	echo "Unrecognized sim_analysis.pl output."
-	echo "Exiting..."
+	echo -e "${red}${bold}Failed${reset}"
+	echo -e "${yellow}Unrecognized sim_analysis.pl output."
+	echo -e "Exiting...${reset}"
 	exit 24
     fi
 }
 
-####################################
+############################################################################
 
 #trap clean_temp SIGINT SIGTERM
 trap "echo ; echo Program terminated by Ctrl+C ; exit" SIGINT SIGTERM #DEBUG
@@ -150,7 +154,7 @@ tempcir="$tempdir/tempcirfile" #sin el .cir para poder hacer un for con los inye
 echo -ne "${white}${bold}Creating temporary file ${reset}${yellow}$tempcir...${reset}"
 cp $circuit $tempcir
 check_out $?
-echo
+
 
 tempdata="$tempdir/tempdata" #sin el .cir para poder hacer un for con los inyectados
 echo -ne "${white}${bold}Creating temporary file ${reset}${yellow}$tempdata...${reset}"

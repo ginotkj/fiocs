@@ -1,13 +1,13 @@
 #!/bin/perl
-#
-#
-#
-#
-#
-#
-#
-#
-#
+##
+## sim_analysis.pl
+## 
+## Made by Facundo
+## Login   <facundo@faku-laptop>
+## 
+## Started on  Tue Dec 15 20:47:38 2009 Facundo
+## ast update Sun Jan 31 19:22:41 2010 Facundo
+##
 
 use strict;
 use warnings;
@@ -43,9 +43,9 @@ my $bit_2 = $bits[0];
 
 #print "num_vars: $num_vars\n";
 #print "num_points: $num_points\n";
-#print "bit_0: $bit_0\n";
-#print "bit_1: $bit_1\n";
-#print "bit_2: $bit_2\n";
+print "bit_0: $bit_0\n";
+print "bit_1: $bit_1\n";
+print "bit_2: $bit_2\n";
 
 
 my $values_found = 0; #es para cortar el archivo desde Values para arriba
@@ -77,38 +77,59 @@ for (my $i = 0 ; $i < $num_points ; $i++) {
 
 my $global_success_sim = 0;
 my $global_failed_sim = 0;
+my @failed_points = (); #Guarda los puntos fallidos de la simulacion
+
+#######################
+my $bit0_treshold = 2.9;
+my $bit1_treshold = 0;
+my $bit2_treshold = 0;
+#######################
 
 for (my $i = 0 ; $i < $#sort_data ; $i++) {
-
     $global_success_sim = 0;
-    $global_failed_sim = 0;
-
-    if ($sort_data[$i][$bit_0] > 2) { #MSB
+#    $global_failed_sim = 0;
+    if ($sort_data[$i][$bit_0] > $bit0_treshold) { #MSB
 	$global_success_sim++;
-    } elsif ($sort_data[$i][$bit_1] > 0) { #SSB
+    }
+    if ($sort_data[$i][$bit_1] > $bit1_treshold) { #SSB
 	$global_success_sim++;
-    } elsif ($sort_data[$i][$bit_2] > 0) { #LSB
+    }
+    if ($sort_data[$i][$bit_2] > $bit2_treshold) { #LSB
 	$global_success_sim++;
-    } else {
+    }
+    if ($global_success_sim ne 3) { 
+	push(@failed_points, $i);
 	$global_failed_sim++;
     }
 }
 
-if ($global_success_sim gt 0){  ## calcular todos los success que tiene que dar para estar correcto!
-    print "0";
-} elsif ($global_failed_sim gt 1){
+print "SALIDA DE SIM ANALISIS\n";
+print "sort data= $#sort_data\n";
+print "global_success_sim= $global_success_sim\n";
+print "global_failed= $global_failed_sim\n";
+my $hola = $#sort_data * 3;
+print "sort-data *3 = $hola\n";
+print "chupala\n";
+
+foreach (@failed_points) {
+    print "$_\n";
+}
+
+print "nadaaa\n";
+
+if ($global_failed_sim gt 0) {
     print "1";
+} elsif ($#failed_points eq -1) {
+    print "0";
 } else {
     print "7";
 }
 
+#for (my $f = 0 ; $f < $#sort_data ; $f++) {
+#    print "$f: $sort_data[$f][185]";
+#}
+
 exit (1);
-
-
-
-
-
-
 
 
 
