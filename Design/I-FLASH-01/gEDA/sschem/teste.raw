@@ -4,11 +4,6 @@ Circuit: * gnetlist -gspice-sdb -o teste.net flash.sch
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
 
 
-No. of Data Rows : 1
-
-Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
-
-
 Initial Transient Solution
 --------------------------
 
@@ -140,6 +135,4 @@ v4#branch                                    0
 v5#branch                         -1.35525e-20
 v6#branch                                    0
 
-
-No. of Data Rows : 610
-
+Host not found in setup_time
