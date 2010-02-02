@@ -84,7 +84,8 @@ echo "gfads"
 }
 
 function simul {
-    ngspice -b $1 -o $simul_output &>/dev/null
+    ngspicesec -b $1 -o $simul_output &>/dev/null #DEBUG
+#    ngspice -b $1 -o $simul_output &>/dev/null
     if [ $? -ne 0 ]
 	then
 	((global_error_sim++))
@@ -95,9 +96,9 @@ function check_sim {
     aux_file=$(basename $1)
     sim_out=$(perl $CWD/sim_analysis.pl $tempdir $aux_file)
 
-    echo "simout= $sim_out"  #DEBUG
-    exit 3 ##DEBUG
-    
+#    echo "simout= $sim_out"  #DEBUG
+#    exit 3 ##DEBUG
+  
     if [ $sim_out -eq 0 ]
     then
 	((global_success_sim++))

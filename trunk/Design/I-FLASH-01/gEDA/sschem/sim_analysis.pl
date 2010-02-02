@@ -52,23 +52,26 @@ my @num_points = grep(/No. Points:/, @lines);
 @num_points = split(" ",$num_points[1]);
 my $num_points = $num_points[0];
 
-my @bits = grep(/lsb/, @lines);
+my @bits = grep(/v\(15\)/, @lines); #DEBUG
+#my @bits = grep(/lsb/, @lines);
 @bits = split(" ",$bits[0]);
 my $bit_0 = $bits[0];
 
-@bits = grep(/ssb/, @lines);
+@bits = grep(/v\(16\)/, @lines); #DEBUG
+#@bits = grep(/ssb/, @lines);
 @bits = split(" ",$bits[0]);
 my $bit_1 = $bits[0];
 
-@bits = grep(/msb/, @lines);
+@bits = grep(/v\(18\)/, @lines); #DEBUG
+#@bits = grep(/msb/, @lines);
 @bits = split(" ",$bits[0]);
 my $bit_2 = $bits[0];
 
-print "num_vars: $num_vars\n"; #DEBUG
-print "num_points: $num_points\n"; #DEBUG
-print "bit_0: $bit_0\n"; #DEBUG
-print "bit_1: $bit_1\n"; #DEBUG
-print "bit_2: $bit_2\n"; #DEBUG
+#print "num_vars: $num_vars\n"; #DEBUG
+#print "num_points: $num_points\n"; #DEBUG
+#print "bit_0: $bit_0\n"; #DEBUG
+#print "bit_1: $bit_1\n"; #DEBUG
+#ggprint "bit_2: $bit_2\n"; #DEBUG
 
 
 my $values_found = 0; #es para cortar el archivo desde Values para arriba
@@ -121,9 +124,9 @@ my @failed_points = (); #Guarda los puntos fallidos de la simulacion
 my @success_points = (); #Guarda los puntos exitosos de la simulacion
 
 #######################
-my $bit0_treshold = 0.003;
-my $bit1_treshold = 0.0011;
-my $bit2_treshold = 3.2;
+my $bit0_treshold = 0;
+my $bit1_treshold = 0;
+my $bit2_treshold = 0;
 #######################
 
 my $decimal = Convert::SciEng->new('si');
@@ -136,17 +139,25 @@ for (my $i = 0 ; $i < 10 ; $i++) {  #DEBUG
 
     
 
-    print "BIT 0 -- $sort_data[$i][$bit_0]"; #DEBUG
-    print "BIT 1 -- $sort_data[$i][$bit_1]"; #DEBUG
-    print "BIT 2 -- $sort_data[$i][$bit_2]"; #DEBUG
+#    print "BIT 0 -- $sort_data[$i][$bit_0]"; #DEBUG
+#    print "BIT 1 -- $sort_data[$i][$bit_1]"; #DEBUG
+#    print "BIT 2 -- $sort_data[$i][$bit_2]"; #DEBUG
 
     $sort_data[$i][$bit_0] = $decimal->fix($sort_data[$i][$bit_0]);
     $sort_data[$i][$bit_1] = $decimal->fix($sort_data[$i][$bit_1]);
     $sort_data[$i][$bit_2] = $decimal->fix($sort_data[$i][$bit_2]);
 
-    print "BIT 0 -- $sort_data[$i][$bit_0]\n"; #DEBUG
-    print "BIT 1 -- $sort_data[$i][$bit_1]\n"; #DEBUG
-    print "BIT 2 -- $sort_data[$i][$bit_2]\n"; #DEBUG
+#    print "BIT 0 D-- $sort_data[$i][$bit_0]\n"; #DEBUG
+#    print "BIT 1 D-- $sort_data[$i][$bit_1]\n"; #DEBUG
+#    print "BIT 2 D-- $sort_data[$i][$bit_2]\n"; #DEBUG
+
+    $sort_data[$i][$bit_0] = $decimal->unfix($sort_data[$i][$bit_0]);
+    $sort_data[$i][$bit_1] = $decimal->unfix($sort_data[$i][$bit_1]);
+    $sort_data[$i][$bit_2] = $decimal->unfix($sort_data[$i][$bit_2]);
+
+#    print "BIT 0 SC-- $sort_data[$i][$bit_0]\n"; #DEBUG
+#    print "BIT 1 SC-- $sort_data[$i][$bit_1]\n"; #DEBUG
+#    print "BIT 2 SC-- $sort_data[$i][$bit_2]\n"; #DEBUG
 
     if ($sort_data[$i][$bit_0] > $bit0_treshold) { #MSB
 	$local_success_sim++;
@@ -173,10 +184,10 @@ for (my $i = 0 ; $i < 10 ; $i++) {  #DEBUG
 
 #print "SALIDA DE SIM ANALISIS\n"; #DEBUG
 #print "sort data= $#sort_data\n"; #DEBUG
-print "global_success= $global_success_sim\n"; #DEBUG
-print "global_failed= $global_failed_sim\n";
+#print "global_success= $global_success_sim\n"; #DEBUG
+#print "global_failed= $global_failed_sim\n"; #DEBUG
 
-exit(4); #DEBUG
+#exit(4); #DEBUG
 
 for (my $f = 0 ; $f < $#sort_data ; $f++) {
     map(chomp,$sort_data[$f][$bit_0]);
@@ -188,14 +199,14 @@ for (my $f = 0 ; $f <= $#sort_data ; $f++) {
 #    print "$failed_points[$f] | "; #DEBUG
 
     $sort_data[$f][$bit_0] = $sort_data[$f][$bit_0] + 0;
-    print "$sort_data[$f][$bit_0] | "; #DEBUG
-    print "$bit0_treshold | "; #DEBUG
+#    print "$sort_data[$f][$bit_0] | "; #DEBUG
+#    print "$bit0_treshold | "; #DEBUG
     $sort_data[$f][$bit_1] = $sort_data[$f][$bit_1] + 0;
-    print "$sort_data[$f][$bit_1] | "; #DEBUG
-    print "$bit1_treshold | "; #DEBUG
+#    print "$sort_data[$f][$bit_1] | "; #DEBUG
+#    print "$bit1_treshold | "; #DEBUG
     $sort_data[$f][$bit_2] = $sort_data[$f][$bit_2] + 0;
-    print "$sort_data[$f][$bit_2] | "; #DEBUG
-    print "$bit2_treshold\n"; #DEBUG
+#    print "$sort_data[$f][$bit_2] | "; #DEBUG
+#    print "$bit2_treshold\n"; #DEBUG
 }
 
 #print "nadaaa\n"; #DEBUG
