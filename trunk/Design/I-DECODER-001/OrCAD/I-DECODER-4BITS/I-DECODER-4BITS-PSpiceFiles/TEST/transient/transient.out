@@ -1,7 +1,7 @@
 
-**** 11/21/09 17:55:03 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 01/28/10 21:29:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\I-DECODER-4BITS-PSpiceFiles\TEST
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits-pspicefiles\test
 
 
  ****     CIRCUIT DESCRIPTION
@@ -22,7 +22,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 100u 0 
+.TRAN  0 15u 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\TEST.net" 
 
@@ -320,49 +320,49 @@ M_DECODER_NAND-8_M13         DECODER_NAND-8_N53536 DECODER_N00317
 + W=.18u         
 R_R2         3SB N13369  10Meg  
 V_SEALES_-V2         N12562 0  
-+PULSE 0 3 10u 1u 1u 68u 80u
++PULSE 0 3 1.9u .1u 0 13u 15u
 V_SEALES_V13         Q13 0  
-+PULSE 3 0 65u 1u 1u 13u 80u
++PULSE 3 0 12.9u .1u 0 2u 15u
 V_SEALES_V3         Q3 0  
-+PULSE 3 0 15u 1u 1u 63u 80u
++PULSE 3 0 2.9u .1u 0 12u 15u
 V_SEALES_V14         Q14 0  
-+PULSE 3 0 70u 1u 1u 8u 80u
++PULSE 3 0 13.9u .1u 0 1u 15u
 V_SEALES_V15         Q15 0  
-+PULSE 3 0 75u 1u 1u 3u 80u
++PULSE 3 0 14.9u .1u 0u 0u 15u
 V_SEALES_V1         Q1 0  
-+PULSE 3 0 5u 1u 1u 73u 80u
++PULSE 3 0 0.9u .1u 0 14u 15u
 V_SEALES_V9         Q9 0  
-+PULSE 3 0 45u 1u 1u 33u 80u
++PULSE 3 0 8.9u .1u 0 6u 15u
 V_SEALES_V8         Q8 0  
-+PULSE 3 0 40u 1u 1u 38u 80u
++PULSE 3 0 7.9u .1u 0 7u 15u
 V_SEALES_V4         Q4 0  
-+PULSE 3 0 20u 1u. 1u 58u 80u
++PULSE 3 0 3.9u .1u 0 11u 15u
 V_SEALES_-V8         N12714 0  
-+PULSE 0 3 40u 1u 1u 38u 80u
++PULSE 0 3 7.9u .1u 0 7u 15u
 V_SEALES_-V14         N13020 0  
-+PULSE 0 3 70u 1u 1u 8u 80u
++PULSE 0 3 13.9u .1u 0 1u 15u
 V_SEALES_V6         Q6 0  
-+PULSE 3 0 30u 1u 1u 48u 80u
++PULSE 3 0 5.9u .1u 0 9u 15u
 V_SEALES_V10         Q10 0  
-+PULSE 3 0 50u 1u 1u 28u 80u
++PULSE 3 0 9.9u .1u 0 5u 15u
 V_SEALES_-V10         N12798 0  
-+PULSE 0 3 50u 1u 1u 28u 80u
++PULSE 0 3 9.9u .1u 0 5u 15u
 V_SEALES_V11         Q11 0  
-+PULSE 3 0 55u 1u 1u 23u 80u
++PULSE 3 0 10.9u .1u 0 4u 15u
 V_SEALES_-V4         N12600 0  
-+PULSE 0 3 20u 1u 1u 58u 80u
++PULSE 0 3 3.9u .1u 0 11u 15u
 V_SEALES_-V6         N12648 0  
-+PULSE 0 3 30u 1u 1u 48u 80u
++PULSE 0 3 5.9u .1u 0 9u 15u
 V_SEALES_V12         Q12 0  
-+PULSE 3 0 60u 1u 1u 18u 80u
++PULSE 3 0 11.9u .1u 0 3u 15u
 V_SEALES_V2         Q2 0  
-+PULSE 3 0 10u 1u 1u 68u 80u
++PULSE 3 0 1.9u .1u 0 13u 15u
 V_SEALES_-V12         N12900 0  
-+PULSE 0 3 60u 1u 1u 18u 80u
++PULSE 0 3 11.9u .1u 0 3u 15u
 V_SEALES_V5         Q5 0  
-+PULSE 3 0 25u 1u 1u 53u 80u
++PULSE 3 0 4.9u .1u 0 10u 15u
 V_SEALES_V7         Q7 0  
-+PULSE 3 0 35u 1u 1u 43u 80u
++PULSE 3 0 6.9u .1u 0 8u 15u
 R_R3         2SB N13369  10Meg  
 
 **** RESUMING transient.cir ****
@@ -372,9 +372,9 @@ WARNING -- Mosfet M_DECODER_NAND_M2, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_DECODER_NAND_M2, model CMOSN: Ps = 0 is less than W
 WARNING -- Mosfet M_DECODER_NAND_M4, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_DECODER_NAND_M4, model CMOSP: Ps = 0 is less than W
-**** 11/21/09 17:55:03 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 01/28/10 21:29:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\I-DECODER-4BITS-PSpiceFiles\TEST
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits-pspicefiles\test
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -489,10 +489,11 @@ WARNING -- Mosfet M_DECODER_NAND_M4, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_DECODER_NAND_M2, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_DECODER_NAND_M2, model CMOSN: Ps = 0 is less than W
 WARNING -- Mosfet M_DECODER_NAND_M4, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_DECODER_NAND_M4, model CMOSP: Ps = 0 is less than W
-**** 11/21/09 17:55:03 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+WARNING -- Mosfet M_DECODER_NAND_M4, model CMOSP: Ps = 0 is less than W
+WARNING -- Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_SEALES_V15
+**** 01/28/10 21:29:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\I-DECODER-4BITS-PSpiceFiles\TEST
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits-pspicefiles\test
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -593,9 +594,9 @@ WARNING -- Mosfet M_DECODER_NAND_M4, model CMOSP: Ps = 0 is less than W
 
           JOB CONCLUDED
 
-**** 11/21/09 17:55:03 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 01/28/10 21:29:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\I-DECODER-4BITS-PSpiceFiles\TEST
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits-pspicefiles\test
 
 
  ****     JOB STATISTICS SUMMARY
@@ -605,5 +606,5 @@ WARNING -- Mosfet M_DECODER_NAND_M4, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =        2.51
+  Total job time (using Solver 1)   =        2.67
 

@@ -57,7 +57,8 @@
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-decoder-4bits-pspicefiles\test\bias.sim"
         (DisplayName "TEST-bias")
-        (Type "PSpice Profile"))))
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-decoder-4bits-pspicefiles\test\transient.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (R
@@ -99,11 +100,17 @@
       (Path "Design Resources")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits.dsn"
+         "SEÑALES")
+      (Path "Design Resources" "Library")
       (Path "Outputs")
-      (Select "Design Resources"))
+      (Select "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits.dsn"
+         "SEÑALES" "SEÑALES"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 160 644 -8 -30 446 774 62 1046"))
+        (Placement "44 2 3 160 644 -8 -30 446 774 62 1046"))
       (Tab 0))))

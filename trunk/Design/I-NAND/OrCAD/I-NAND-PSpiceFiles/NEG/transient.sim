@@ -4,7 +4,7 @@
 @General:
 ProfileName= "transient" 
 ProfileFile= "transient.sim" 
-Connectivity= "TEST.net" 
+Connectivity= "NEG.net" 
 NetlistFile= "transient.cir" 
 DataFile= "transient.dat" 
 OutFile= "transient.out" 
@@ -14,7 +14,7 @@ Notes=
 @End General
 @Analysis: 0 1
 +0 0 0 
-+0 "15u" 
++0 "2u" 
 +1 "" 
 +2 "0" 
 +3 "" 
