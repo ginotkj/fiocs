@@ -119,15 +119,7 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
-         "TEST")
-      (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
-         "TEST" "TEST"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

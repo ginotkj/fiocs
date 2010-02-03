@@ -178,22 +178,10 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd.dsn")
-      (Select "PSpice Resources"))
+      (Select "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
         (Placement "44 0 1 0 996 -8 -30 0 453 0 1023"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 444 1953 1 1023")
-        (Scroll "0 49")
-        (Zoom "139")
-        (Occurrence "/"))
-      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD\ORCAD\I-FFD.DSN")
-      (Schematic "TEST FFD con C en LOOP")
-      (Page "TEST FFD con  C en LOOP"))))
+      (Tab 0))))

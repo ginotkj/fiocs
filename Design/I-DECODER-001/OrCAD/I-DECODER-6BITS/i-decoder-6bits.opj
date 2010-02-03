@@ -109,11 +109,17 @@
       (Path "Design Resources")
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
+         "S-DECODER-64")
       (Path "Design Resources" "Library")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
+         "S-DECODER-64" "S4-DECODER-64"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 0 1000 -8 -30 314 802 0 625"))
+        (Placement "44 0 1 0 1000 -8 -30 314 802 0 625"))
       (Tab 0))))

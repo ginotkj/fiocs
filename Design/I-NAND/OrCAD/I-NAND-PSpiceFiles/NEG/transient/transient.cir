@@ -1,4 +1,4 @@
-** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits-pspicefiles\test\transient.sim ] 
+** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NEG\transient.sim ] 
 
 ** Creating circuit file "transient.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -10,9 +10,9 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 15u 0 
+.TRAN  0 2u 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
-.INC "..\TEST.net" 
+.INC "..\NEG.net" 
 
 
 .END

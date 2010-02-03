@@ -140,12 +140,12 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-3BITS\i-decoder-001.dsn")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-3BITS\i-decoder-001.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 0 648 -8 -30 735 1090 40 711"))
+        (Placement "44 0 1 0 648 -8 -30 456 811 85 756"))
       (Tab 0))))
