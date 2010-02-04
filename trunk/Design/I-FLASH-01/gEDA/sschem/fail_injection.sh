@@ -6,7 +6,7 @@
 ## Login   <facundo@faku-laptop>
 ## 
 ## Started on  Tue Dec 15 20:47:38 2009 Facundo
-## Last update Sun Jan 31 20:09:47 2010 Facundo
+## Last update Wed Feb  3 21:34:03 2010 Facundo
 ##
 
 # Globals vars
@@ -22,6 +22,7 @@ sim_data="flash.bin" #los nombres de esquematicos, cirfiles, sim output deben se
 # flash.cmd spice command file
 # flash.raw spice output file
 # flash.bin spice data file
+start_point=190
 
 # Colors
 red="\033[31m"
@@ -84,8 +85,8 @@ echo "gfads"
 }
 
 function simul {
-    ngspicesec -b $1 -o $simul_output &>/dev/null #DEBUG
-#    ngspice -b $1 -o $simul_output &>/dev/null
+#    ngspicesec -b $1 -o $simul_output &>/dev/null #DEBUG
+    ngspice -b $1 -o $simul_output &>/dev/null
     if [ $? -ne 0 ]
 	then
 	((global_error_sim++))
@@ -94,9 +95,9 @@ function simul {
 
 function check_sim {
     aux_file=$(basename $1)
-    sim_out=$(perl $CWD/sim_analysis.pl $tempdir $aux_file)
+    sim_out=$(perl $CWD/sim_analysis.pl $tempdir $aux_file $start_point)
 
-#    echo "simout= $sim_out"  #DEBUG
+    echo "simout= $sim_out"  #DEBUG
 #    exit 3 ##DEBUG
   
     if [ $sim_out -eq 0 ]
@@ -267,4 +268,4 @@ done
 
 cd $CWD
 
-clean_temp
+#clean_temp

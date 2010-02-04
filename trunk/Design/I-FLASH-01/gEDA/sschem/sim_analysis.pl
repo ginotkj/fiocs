@@ -1,4 +1,4 @@
-#!/bin/perl
+#!/bin/perl #DEBUG
 ##
 ## sim_analysis.pl
 ## 
@@ -14,6 +14,7 @@ use warnings;
 use Convert::SciEng;
 
 my $file="$ARGV[0]/flash.bin";
+my $start_point="$ARGV[2]";
 
 open FILE, "<", $file or die $!;
 my @lines = <FILE>;
@@ -52,18 +53,18 @@ my @num_points = grep(/No. Points:/, @lines);
 @num_points = split(" ",$num_points[1]);
 my $num_points = $num_points[0];
 
-my @bits = grep(/v\(15\)/, @lines); #DEBUG
-#my @bits = grep(/lsb/, @lines);
+#my @bits = grep(/v\(15\)/, @lines); #DEBUG
+my @bits = grep(/lsb/, @lines);
 @bits = split(" ",$bits[0]);
 my $bit_0 = $bits[0];
 
-@bits = grep(/v\(16\)/, @lines); #DEBUG
-#@bits = grep(/ssb/, @lines);
+#@bits = grep(/v\(16\)/, @lines); #DEBUG
+@bits = grep(/ssb/, @lines);
 @bits = split(" ",$bits[0]);
 my $bit_1 = $bits[0];
 
-@bits = grep(/v\(18\)/, @lines); #DEBUG
-#@bits = grep(/msb/, @lines);
+#@bits = grep(/v\(18\)/, @lines); #DEBUG
+@bits = grep(/msb/, @lines);
 @bits = split(" ",$bits[0]);
 my $bit_2 = $bits[0];
 
@@ -124,15 +125,15 @@ my @failed_points = (); #Guarda los puntos fallidos de la simulacion
 my @success_points = (); #Guarda los puntos exitosos de la simulacion
 
 #######################
-my $bit0_treshold = 0;
-my $bit1_treshold = 0;
-my $bit2_treshold = 0;
+my $bit0_treshold = 0.003;
+my $bit1_treshold = 3.2;
+my $bit2_treshold = 3.2;
 #######################
 
 my $decimal = Convert::SciEng->new('si');
 
 
-for (my $i = 0 ; $i < 10 ; $i++) {  #DEBUG
+for (my $i = $start_point ; $i < 10 ; $i++) {  #DEBUG
 #for (my $i = 0 ; $i < $#sort_data ; $i++) {
     my $local_success_sim = 0;
 #    $global_failed_sim = 0; #DEBUG
