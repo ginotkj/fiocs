@@ -6,7 +6,7 @@
 ## Login   <facundo@faku-laptop>
 ## 
 ## Started on  Tue Dec 15 20:47:38 2009 Facundo
-## Last update Thu Jan 28 19:39:28 2010 Facundo
+## Last update Wed Feb  3 21:02:45 2010 Facundo
 ##
 
 # Colors
@@ -56,7 +56,7 @@ then
 	echo -e ${reset}${white}
 	echo -e "Command: ${yellow}cat $circuit.drc | sed -e 's/\(S..\/S..\/GND\)/0/g' | sed -e 's/\(S..\/GND\)/0/g' | sed -e 's/\//_/g' > clean_$circuit.cir"
 	echo -en "${white}Result: "
-	if $(cat $circuit.cir | sed -e 's/\(S..\/S..\/GND\)/0/g' | sed -e 's/\(S..\/GND\)/0/g' | sed -e 's/\//_/g' > $circuit.cir)
+	if $(cat $circuit.cir | sed -e 's/\(S..\/S..\/GND\)/0/g' | sed -e 's/\(S..\/GND\)/0/g' | sed -e 's/\//_/g' > clean_$circuit.cir)
 	then
 	    echo -e "${green}${bold}OK${reset}"
 	    echo
