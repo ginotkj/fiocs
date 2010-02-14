@@ -1,3 +1,8 @@
 (component-library "../sym")
 (component-library-search "../sym")
 (source-library ".")
+
+(define gedasources "/home/facundo/tesis/fiocs/Design/I-FLASH-01/gEDA/6BITS/schem/sources")
+(source-library (build-path gedasources "deco"))
+(source-library (build-path gedasources "gates"))
+(source-library (build-path gedasources "registers"))
