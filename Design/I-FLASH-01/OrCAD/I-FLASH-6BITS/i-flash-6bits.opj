@@ -124,16 +124,5 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 0 648 -8 -30 0 368 0 820"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 225 1886 225 927")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/"))
-      (Path
-         "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
-      (Schematic "TEST")
-      (Page "TEST"))))
+        (Placement "44 2 3 0 648 -8 -30 0 368 0 820"))
+      (Tab 0))))

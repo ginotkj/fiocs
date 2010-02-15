@@ -1,7 +1,7 @@
 
-**** 01/26/10 12:44:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 21:39:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-5\transient.sim ] 
+ ** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-5\transient.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -22,7 +22,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 2u 0 
+.DC LIN V_VIN 0 3.3 0.01 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\NAND-5.net" 
 
@@ -30,47 +30,38 @@
 
 **** INCLUDING NAND-5.net ****
 * source I-NAND
-M_M4         VOUT IN2 N55468 N55468 CMOSP  
+M_M4         VOUT IN1 N55468 N55468 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V5         IN5 0  
-+SIN 1.5 1.5 500k 0 0 0
-M_M9         VOUT IN5 N55468 N55468 CMOSP  
+M_M9         VOUT IN1 N55468 N55468 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V3         IN3 0  
-+SIN 1.5 1.5 500k 0 0 0
-M_M7         N55752 IN4 N56014 0 CMOSN  
+M_M7         N55752 IN1 N56014 0 CMOSN  
 + L=.18u  
 + W=.18u         
 V_VDD         N55468 0 3.3
-M_M10         N56014 IN5 0 0 CMOSN  
+M_M10         N56014 IN1 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-V_V4         IN4 0  
-+SIN 1.5 1.5 500k 0 0 0
-M_M5         VOUT IN3 N55468 N55468 CMOSP  
+M_M5         VOUT IN1 N55468 N55468 CMOSP  
 + L=.18u  
 + W=.2u         
-M_M8         VOUT IN4 N55468 N55468 CMOSP  
+M_M8         VOUT IN1 N55468 N55468 CMOSP  
 + L=.18u  
 + W=.2u         
 M_M1         VOUT IN1 N55476 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M6         N55712 IN3 N55752 0 CMOSN  
+M_M6         N55712 IN1 N55752 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M2         N55476 IN2 N55712 0 CMOSN  
+M_M2         N55476 IN1 N55712 0 CMOSN  
 + L=.18u  
 + W=.18u         
-V_V1         IN1 0  
-+SIN 1.5 1.5 1Meg 0 0 0
+V_VIN         IN1 0 3.3
 M_M3         VOUT IN1 N55468 N55468 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V2         IN2 0  
-+SIN 1.5 1.5 500k 0 0 0
 
 **** RESUMING transient.cir ****
 .END
@@ -79,9 +70,9 @@ WARNING -- Mosfet M_M4, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M4, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_M7, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M7, model CMOSN: Ps = 0 is less than W
-**** 01/26/10 12:44:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 21:39:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-5\transient.sim ] 
+ ** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-5\transient.sim ] 
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -196,50 +187,17 @@ WARNING -- Mosfet M_M7, model CMOSN: Ps = 0 is less than W
 WARNING -- Mosfet M_M4, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M4, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_M7, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_M7, model CMOSN: Ps = 0 is less than W
-**** 01/26/10 12:44:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
-
- ** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-5\transient.sim ] 
-
-
- ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(  IN1)    1.5000  (  IN2)    1.5000  (  IN3)    1.5000  (  IN4)    1.5000      
-
-(  IN5)    1.5000  ( VOUT)    3.2349  (N55468)    3.3000 (N55476)     .6520     
-
-(N55712)     .4003 (N55752)     .2363 (N56014)     .1081 
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V5         0.000E+00
-    V_V3         0.000E+00
-    V_VDD       -2.754E-05
-    V_V4         0.000E+00
-    V_V1         0.000E+00
-    V_V2         0.000E+00
-
-    TOTAL POWER DISSIPATION   9.09E-05  WATTS
-
-
+WARNING -- Mosfet M_M7, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_M4, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M4, model CMOSP: Ps = 0 is less than W
+WARNING -- Mosfet M_M7, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M7, model CMOSN: Ps = 0 is less than W
 
           JOB CONCLUDED
 
-**** 01/26/10 12:44:55 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 21:39:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-5\transient.sim ] 
+ ** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-5\transient.sim ] 
 
 
  ****     JOB STATISTICS SUMMARY
@@ -249,5 +207,5 @@ WARNING -- Mosfet M_M7, model CMOSN: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =         .13
+  Total job time (using Solver 1)   =         .22
 

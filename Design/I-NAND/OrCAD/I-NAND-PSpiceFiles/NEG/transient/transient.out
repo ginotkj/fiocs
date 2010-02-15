@@ -1,7 +1,7 @@
 
-**** 01/30/10 18:13:35 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 19:21:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NEG\transient.sim ] 
+ ** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -22,7 +22,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 2u 0 
+.TRAN  0 5u 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\NEG.net" 
 
@@ -47,9 +47,9 @@ WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
-**** 01/30/10 18:13:35 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 19:21:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NEG\transient.sim ] 
+ ** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -165,9 +165,9 @@ WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
-**** 01/30/10 18:13:35 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 19:21:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NEG\transient.sim ] 
+ ** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -197,9 +197,9 @@ WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
 
           JOB CONCLUDED
 
-**** 01/30/10 18:13:35 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 19:21:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NEG\transient.sim ] 
+ ** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
 
 
  ****     JOB STATISTICS SUMMARY
