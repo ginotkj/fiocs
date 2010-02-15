@@ -1,7 +1,7 @@
+
+**** 02/13/10 21:34:19 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
-**** 01/26/10 17:05:29 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
-
- ** Profile: "NAND-7-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-7\transient.sim ] 
+ ** Profile: "NAND-7-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-7\transient.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -22,7 +22,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 2u 0 
+.DC LIN V_VIN 0 3.3 0.01 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\NAND-7.net" 
 
@@ -33,60 +33,47 @@
 M_M1         VOUT IN1 N53888 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M14         N53542 IN7 0 0 CMOSN  
+M_M14         N53542 IN1 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M6         N54114 IN3 N54154 0 CMOSN  
+M_M6         N54114 IN1 N54154 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M8         VOUT IN6 N53056 N53056 CMOSP  
+M_M8         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V5         IN5 0  
-+SIN 1.5 1.5 500k 0 0 0
-M_M2         N53888 IN2 N54114 0 CMOSN  
+M_M2         N53888 IN1 N54114 0 CMOSN  
 + L=.18u  
 + W=.18u         
-V_V3         IN3 0  
-+SIN 1.5 1.5 500k 0 0 0
-V_V6         IN6 0  
-+SIN 1.5 1.5 500k 0 0 0
-M_M3         VOUT IN2 N53056 N53056 CMOSP  
+M_M3         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V4         IN4 0  
-+SIN 1.5 1.5 500k 0 0 0
-M_M4         VOUT IN3 N53056 N53056 CMOSP  
+M_M4         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V7         IN7 0  
-+SIN 1.5 1.5 500k 0 0 0
 M_M11         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
-M_M7         N54154 IN4 N53250 0 CMOSN  
+M_M7         N54154 IN1 N53250 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M9         VOUT IN5 N53056 N53056 CMOSP  
+M_M9         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
+V_VIN         IN1 0 3.3
 V_VDD         N53056 0 3.3
-M_M12         VOUT IN4 N53056 N53056 CMOSP  
+M_M12         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V1         IN1 0  
-+SIN 1.5 1.5 1Meg 0 0 0
-M_M5         VOUT IN7 N53056 N53056 CMOSP  
+M_M5         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
-M_M10         N53250 IN5 N53536 0 CMOSN  
+M_M10         N53250 IN1 N53536 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M13         N53536 IN6 N53542 0 CMOSN  
+M_M13         N53536 IN1 N53542 0 CMOSN  
 + L=.18u  
 + W=.18u         
-V_V2         IN2 0  
-+SIN 1.5 1.5 1Meg 0 0 0
 
 **** RESUMING transient.cir ****
 .END
@@ -95,9 +82,9 @@ WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
 WARNING -- Mosfet M_M8, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M8, model CMOSP: Ps = 0 is less than W
-**** 01/26/10 17:05:29 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 21:34:19 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NAND-7-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-7\transient.sim ] 
+ ** Profile: "NAND-7-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-7\transient.sim ] 
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -212,54 +199,149 @@ WARNING -- Mosfet M_M8, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
 WARNING -- Mosfet M_M8, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_M8, model CMOSP: Ps = 0 is less than W
-**** 01/26/10 17:05:29 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
-
- ** Profile: "NAND-7-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-7\transient.sim ] 
-
-
- ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
-
-
-******************************************************************************
+WARNING -- Mosfet M_M8, model CMOSP: Ps = 0 is less than W
+WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_M8, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M8, model CMOSP: Ps = 0 is less than W
+ERROR -- Convergence problem in DC sweep
 
 
+  Last node voltages tried were:
 
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(  IN1)    1.5000  (  IN2)    1.5000  (  IN3)    1.5000  (  IN4)    1.5000      
+(  IN1)    0.0000  ( VOUT)     .6023  (N53056) 33.00E-06 (N53250)   -1.7698     
 
-(  IN5)    1.5000  (  IN6)    1.5000  (  IN7)    1.5000  ( VOUT)    3.2675      
+(N53536)    -.6836 (N53542)  -11.2710 (N53888)     .0175 (N54114)   -3.9262     
 
-(N53056)    3.3000 (N53250)     .2493 (N53536)     .1555 (N53542)     .0735     
-
-(N53888)     .7294 (N54114)     .5054 (N54154)     .3612 
+(N54154)   -2.8476 
 
 
+  These voltages failed to converge:
+
+    V(VOUT)                   =   567.92mV  \   602.30mV
+    V(N53888)                 =    -2.844V  \    17.47mV
+    V(N53542)                 =     35.53V  \    -11.27V
+    V(N54114)                 =     39.50V  \    -3.926V
+    V(N54154)                 =     2.901V  \    -2.848V
+    V(N53250)                 =    -1.308V  \    -1.770V
+    V(N53536)                 =   -12.11mV  \  -683.64mV
+
+  These supply currents failed to converge:
+
+    I(V_VDD)                  =  -274.33uA  \   -19.62mA
+
+  These devices failed to converge:
+    M_M1      M_M14     M_M6      M_M8      M_M2      M_M3      M_M4      
+    M_M11     M_M7      M_M9      M_M12     M_M5      M_M10     M_M13     
+
+ERROR -- Discontinuing simulation due to convergence problem
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 1e-009
+**** Param: TMAX = 0
+**** Param: ITL1 = 300
+**** Param: ITL2 = 20
+**** Param: ITL4 = 10
+
+ **** Published Runtime Parameters *****************************
+                                                               
+                                       ABSTOL =      1.0000E-12
+                                         GMIN =      1.0000E-12
+                                         ITL1 =      3.0000E+02
+                                         ITL2 =      2.0000E+01
+                                         ITL4 =      1.0000E+01
+                                       RELTOL =      1.0000E-03
+                                       RUNFOR =      0.0000E+00
+                                         TMAX =      0.0000E+00
+                                        TSTOP =      1.0000E-09
+                                     V_VDD.ac =      0.0000E+00
+                                V_VDD.acphase =      0.0000E+00
+                                     V_VDD.dc =      3.3000E+00
+                                     V_VIN.ac =      0.0000E+00
+                                V_VIN.acphase =      0.0000E+00
+                                     V_VIN.dc =      0.0000E+00
+                                        VNTOL =      1.0000E-06
+                                               
+               
+
+ERROR -- Convergence problem in DC sweep
 
 
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
+  Last node voltages tried were:
 
-    V_V5         0.000E+00
-    V_V3         0.000E+00
-    V_V6         0.000E+00
-    V_V4         0.000E+00
-    V_V7         0.000E+00
-    V_VDD       -1.949E-05
-    V_V1         0.000E+00
-    V_V2         0.000E+00
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
-    TOTAL POWER DISSIPATION   6.43E-05  WATTS
 
+(  IN1) 100.0E-09  ( VOUT)    6.0504  (N53056) 33.00E-06 (N53250)    -.0439     
+
+(N53536)     .7813 (N53542)    -.1551 (N53888)   75.9930 (N54114)  -14.9460     
+
+(N54154)     .3496 
+
+
+  These voltages failed to converge:
+
+    V(VOUT)                   =   507.16mV  \     6.050V
+    V(N53888)                 =   -648.44V  \     75.99V
+    V(N53542)                 =  -304.00mV  \  -155.13mV
+    V(N54114)                 =  -481.79mV  \    -14.95V
+    V(N54154)                 =   -333.87V  \   349.64mV
+    V(N53250)                 =    -3.212V  \   -43.93mV
+    V(N53536)                 =    -15.35V  \   781.33mV
+
+  These supply currents failed to converge:
+
+    I(V_VDD)                  =  -527.16fA  \   951.84pA
+
+  These devices failed to converge:
+    M_M1      M_M14     M_M6      M_M8      M_M2      M_M3      M_M4      
+    M_M11     M_M7      M_M9      M_M12     M_M5      M_M10     M_M13     
+
+ERROR -- Discontinuing simulation due to convergence problem
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 1e-009
+**** Param: TMAX = 0
+**** Param: ITL1 = 600
+**** Param: ITL2 = 20
+**** Param: ITL4 = 10
+
+ **** Published Runtime Parameters *****************************
+                                                               
+                                       ABSTOL =      1.0000E-12
+                                         GMIN =      1.0000E-12
+                                         ITL1 =      6.0000E+02
+                                         ITL2 =      2.0000E+01
+                                         ITL4 =      1.0000E+01
+                                       RELTOL =      1.0000E-03
+                                       RUNFOR =      0.0000E+00
+                                         TMAX =      0.0000E+00
+                                        TSTOP =      1.0000E-09
+                                     V_VDD.ac =      0.0000E+00
+                                V_VDD.acphase =      0.0000E+00
+                                     V_VDD.dc =      3.3000E+00
+                                     V_VIN.ac =      0.0000E+00
+                                V_VIN.acphase =      0.0000E+00
+                                     V_VIN.dc =      1.0000E-02
+                                        VNTOL =      1.0000E-06
+                                               
+               
 
 
           JOB CONCLUDED
 
-**** 01/26/10 17:05:29 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 21:34:19 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NAND-7-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-7\transient.sim ] 
+ ** Profile: "NAND-7-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-7\transient.sim ] 
 
 
  ****     JOB STATISTICS SUMMARY
@@ -269,5 +351,5 @@ WARNING -- Mosfet M_M8, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =         .83
+  Total job time (using Solver 1)   =        9.78
 

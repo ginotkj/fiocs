@@ -1,7 +1,7 @@
+
+**** 02/13/10 20:49:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
-**** 01/26/10 12:20:56 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
-
- ** Profile: "NAND-3-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-3\transient.sim ] 
+ ** Profile: "NAND-3-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-3\transient.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -22,7 +22,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 2u 0 
+.TRAN  0 150p 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\NAND-3.net" 
 
@@ -30,31 +30,27 @@
 
 **** INCLUDING NAND-3.net ****
 * source I-NAND
-M_M2         N27355 IN2 N27381 N27381 CMOSN  
+M_M2         N27355 IN1 N27381 N27381 CMOSN  
 + L=.18u  
 + W=.18u         
-V_V2         IN2 0  
-+SIN 1.5 1.5 500k 0 0 0
 M_M3         VOUT IN1 N27335 N27335 CMOSP  
 + L=.18u  
 + W=.2u         
-M_M6         N27381 IN3 0 0 CMOSN  
+M_M6         N27381 IN1 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
 V_VDD         N27335 0 3.3
-M_M4         VOUT IN2 N27335 N27335 CMOSP  
+M_M4         VOUT IN1 N27335 N27335 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V3         IN3 0  
-+SIN 1.5 1.5 500k 0 0 0
+V_VIN         IN1 0  
++PULSE 0 3.3 10p 0 0 100p 150p
 M_M1         VOUT IN1 N27355 N27355 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M5         VOUT IN3 N27335 N27335 CMOSP  
+M_M5         VOUT IN1 N27335 N27335 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V1         IN1 0  
-+SIN 1.5 1.5 1Meg 0 0 0
 
 **** RESUMING transient.cir ****
 .END
@@ -63,9 +59,9 @@ WARNING -- Mosfet M_M2, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M2, model CMOSN: Ps = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
-**** 01/26/10 12:20:56 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 20:49:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NAND-3-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-3\transient.sim ] 
+ ** Profile: "NAND-3-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-3\transient.sim ] 
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -181,9 +177,9 @@ WARNING -- Mosfet M_M2, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M2, model CMOSN: Ps = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
-**** 01/26/10 12:20:56 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 20:49:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NAND-3-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-3\transient.sim ] 
+ ** Profile: "NAND-3-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-3\transient.sim ] 
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -196,9 +192,9 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(  IN1)    1.5000  (  IN2)    1.5000  (  IN3)    1.5000  ( VOUT)    3.1071      
+(  IN1)    0.0000  ( VOUT)    3.3000  (N27335)    3.3000 (N27355)     .0875     
 
-(N27335)    3.3000 (N27355)     .5029 (N27381)     .2014 
+(N27381)     .0205 
 
 
 
@@ -206,20 +202,18 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V2         0.000E+00
-    V_VDD       -4.628E-05
-    V_V3         0.000E+00
-    V_V1         0.000E+00
+    V_VDD       -7.748E-11
+    V_VIN        0.000E+00
 
-    TOTAL POWER DISSIPATION   1.53E-04  WATTS
+    TOTAL POWER DISSIPATION   2.56E-10  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 01/26/10 12:20:56 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 20:49:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NAND-3-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-3\transient.sim ] 
+ ** Profile: "NAND-3-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-3\transient.sim ] 
 
 
  ****     JOB STATISTICS SUMMARY
@@ -229,5 +223,5 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =         .27
+  Total job time (using Solver 1)   =         .19
 

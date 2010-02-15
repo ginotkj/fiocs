@@ -1,4 +1,4 @@
-** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-5\transient.sim ] 
+** Profile: "NAND-5-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-5\transient.sim ] 
 
 ** Creating circuit file "transient.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -10,7 +10,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 2u 0 
+.DC LIN V_VIN 0 3.3 0.01 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\NAND-5.net" 
 

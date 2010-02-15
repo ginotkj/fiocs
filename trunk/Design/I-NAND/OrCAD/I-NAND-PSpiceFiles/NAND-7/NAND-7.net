@@ -2,57 +2,44 @@
 M_M1         VOUT IN1 N53888 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M14         N53542 IN7 0 0 CMOSN  
+M_M14         N53542 IN1 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M6         N54114 IN3 N54154 0 CMOSN  
+M_M6         N54114 IN1 N54154 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M8         VOUT IN6 N53056 N53056 CMOSP  
+M_M8         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V5         IN5 0  
-+SIN 1.5 1.5 500k 0 0 0
-M_M2         N53888 IN2 N54114 0 CMOSN  
+M_M2         N53888 IN1 N54114 0 CMOSN  
 + L=.18u  
 + W=.18u         
-V_V3         IN3 0  
-+SIN 1.5 1.5 500k 0 0 0
-V_V6         IN6 0  
-+SIN 1.5 1.5 500k 0 0 0
-M_M3         VOUT IN2 N53056 N53056 CMOSP  
+M_M3         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V4         IN4 0  
-+SIN 1.5 1.5 500k 0 0 0
-M_M4         VOUT IN3 N53056 N53056 CMOSP  
+M_M4         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V7         IN7 0  
-+SIN 1.5 1.5 500k 0 0 0
 M_M11         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
-M_M7         N54154 IN4 N53250 0 CMOSN  
+M_M7         N54154 IN1 N53250 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M9         VOUT IN5 N53056 N53056 CMOSP  
+M_M9         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
+V_VIN         IN1 0 3.3
 V_VDD         N53056 0 3.3
-M_M12         VOUT IN4 N53056 N53056 CMOSP  
+M_M12         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
-V_V1         IN1 0  
-+SIN 1.5 1.5 1Meg 0 0 0
-M_M5         VOUT IN7 N53056 N53056 CMOSP  
+M_M5         VOUT IN1 N53056 N53056 CMOSP  
 + L=.18u  
 + W=.2u         
-M_M10         N53250 IN5 N53536 0 CMOSN  
+M_M10         N53250 IN1 N53536 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M13         N53536 IN6 N53542 0 CMOSN  
+M_M13         N53536 IN1 N53542 0 CMOSN  
 + L=.18u  
 + W=.18u         
-V_V2         IN2 0  
-+SIN 1.5 1.5 1Meg 0 0 0
