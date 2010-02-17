@@ -871,9 +871,11 @@ refdes=nq62
 C 23900 46100 1 0 0 2i_nand.sym
 {
 T 25175 47395 5 10 1 1 0 0 1
-refdes=S1
+refdes=SN2_1
 T 24175 47490 5 10 0 1 0 0 1
 device=none
+T 23900 46100 5 10 0 1 0 0 1
+source=deco64_2i_nand.1.sch
 }
 C 60100 30800 0 0 0 title-E.sym
 N 61300 63000 62800 63000 4
@@ -1054,291 +1056,371 @@ N 9700 33000 23100 33000 4
 C 23900 56600 1 0 0 2i_nand.sym
 {
 T 25175 57895 5 10 1 1 0 0 1
-refdes=S2
+refdes=SN2_2
 T 24175 57990 5 10 0 1 0 0 1
 device=none
+T 23900 56600 5 10 0 1 0 0 1
+source=deco64_2i_nand.2.sch
 }
 C 23900 47400 1 0 0 2i_nand.sym
 {
 T 25175 48695 5 10 1 1 0 0 1
-refdes=S3
+refdes=SN2_3
 T 24175 48790 5 10 0 1 0 0 1
 device=none
+T 23900 47400 5 10 0 1 0 0 1
+source=deco64_2i_nand.3.sch
 }
 C 23900 60500 1 0 0 2i_nand.sym
 {
 T 25175 61795 5 10 1 1 0 0 1
-refdes=S4
+refdes=SN2_4
 T 24175 61890 5 10 0 1 0 0 1
 device=none
+T 23900 60500 5 10 0 1 0 0 1
+source=deco64_2i_nand.4.sch
 }
 C 23900 61800 1 0 0 2i_nand.sym
 {
 T 25175 63095 5 10 1 1 0 0 1
-refdes=S5
+refdes=SN2_5
 T 24175 63190 5 10 0 1 0 0 1
 device=none
+T 23900 61800 5 10 0 1 0 0 1
+source=deco64_2i_nand.5.sch
 }
 C 23900 57900 1 0 0 2i_nand.sym
 {
 T 25175 59195 5 10 1 1 0 0 1
-refdes=S6
+refdes=SN2_6
 T 24175 59290 5 10 0 1 0 0 1
 device=none
+T 23900 57900 5 10 0 1 0 0 1
+source=deco64_2i_nand.6.sch
 }
 C 23900 51400 1 0 0 2i_nand.sym
 {
 T 25175 52695 5 10 1 1 0 0 1
-refdes=S7
+refdes=SN2_7
 T 24175 52790 5 10 0 1 0 0 1
 device=none
+T 23900 51400 5 10 0 1 0 0 1
+source=deco64_2i_nand.7.sch
 }
 C 23900 52700 1 0 0 2i_nand.sym
 {
 T 25175 53995 5 10 1 1 0 0 1
-refdes=S8
+refdes=SN2_8
 T 24175 54090 5 10 0 1 0 0 1
 device=none
+T 23900 52700 5 10 0 1 0 0 1
+source=deco64_2i_nand.8.sch
 }
 C 23900 50000 1 0 0 2i_nand.sym
 {
 T 25175 51295 5 10 1 1 0 0 1
-refdes=S9
+refdes=SN2_9
 T 24175 51390 5 10 0 1 0 0 1
 device=none
+T 23900 50000 5 10 0 1 0 0 1
+source=deco64_2i_nand.9.sch
 }
 C 23900 63100 1 0 0 2i_nand.sym
 {
 T 25175 64395 5 10 1 1 0 0 1
-refdes=S10
+refdes=SN2_10
 T 24175 64490 5 10 0 1 0 0 1
 device=none
 T 23900 63100 5 10 0 0 0 0 1
-source=nand.sch
+source=deco64_2i_nand.10.sch
 }
 C 23900 48700 1 0 0 2i_nand.sym
 {
 T 25175 49995 5 10 1 1 0 0 1
-refdes=S11
+refdes=SN2_11
 T 24175 50090 5 10 0 1 0 0 1
 device=none
+T 23900 48700 5 10 0 1 0 0 1
+source=deco64_2i_nand.11.sch
 }
 C 23900 59200 1 0 0 2i_nand.sym
 {
 T 25175 60495 5 10 1 1 0 0 1
-refdes=S12
+refdes=SN2_12
 T 24175 60590 5 10 0 1 0 0 1
 device=none
+T 23900 59200 5 10 0 1 0 0 1
+source=deco64_2i_nand.12.sch
 }
 C 23900 44800 1 0 0 2i_nand.sym
 {
 T 25175 46095 5 10 1 1 0 0 1
-refdes=S13
+refdes=SN2_13
 T 24175 46190 5 10 0 1 0 0 1
 device=none
+T 23900 44800 5 10 0 1 0 0 1
+source=deco64_2i_nand.13.sch
 }
 C 23900 43500 1 0 0 2i_nand.sym
 {
 T 25175 44795 5 10 1 1 0 0 1
-refdes=S14
+refdes=SN2_14
 T 24175 44890 5 10 0 1 0 0 1
 device=none
+T 23900 43500 5 10 0 1 0 0 1
+source=deco64_2i_nand.14.sch
 }
 C 23900 39600 1 0 0 2i_nand.sym
 {
 T 25175 40895 5 10 1 1 0 0 1
-refdes=S15
+refdes=SN2_15
 T 24175 40990 5 10 0 1 0 0 1
 device=none
+T 23900 39600 5 10 0 1 0 0 1
+source=deco64_2i_nand.15.sch
 }
 C 23900 38300 1 0 0 2i_nand.sym
 {
 T 25175 39595 5 10 1 1 0 0 1
-refdes=S16
+refdes=SN2_16
 T 24175 39690 5 10 0 1 0 0 1
 device=none
+T 23900 38300 5 10 0 1 0 0 1
+source=deco64_2i_nand.16.sch
 }
 C 23900 55300 1 0 0 2i_nand.sym
 {
 T 25175 56595 5 10 1 1 0 0 1
-refdes=S17
+refdes=SN2_17
 T 24175 56690 5 10 0 1 0 0 1
 device=none
+T 23900 55300 5 10 0 1 0 0 1
+source=deco64_2i_nand.17.sch
 }
 C 23900 37000 1 0 0 2i_nand.sym
 {
 T 25175 38295 5 10 1 1 0 0 1
-refdes=S18
+refdes=SN2_18
 T 24175 38390 5 10 0 1 0 0 1
 device=none
+T 23900 37000 5 10 0 1 0 0 1
+source=deco64_2i_nand.18.sch
 }
 C 23900 42200 1 0 0 2i_nand.sym
 {
 T 25175 43495 5 10 1 1 0 0 1
-refdes=S19
+refdes=SN2_19
 T 24175 43590 5 10 0 1 0 0 1
 device=none
+T 23900 42200 5 10 0 1 0 0 1
+source=deco64_2i_nand.19.sch
 }
 C 23900 54000 1 0 0 2i_nand.sym
 {
 T 25175 55295 5 10 1 1 0 0 1
-refdes=S20
+refdes=SN2_20
 T 24175 55390 5 10 0 1 0 0 1
 device=none
+T 23900 54000 5 10 0 1 0 0 1
+source=deco64_2i_nand.20.sch
 }
 C 23900 40900 1 0 0 2i_nand.sym
 {
 T 25175 42195 5 10 1 1 0 0 1
-refdes=S21
+refdes=SN2_21
 T 24175 42290 5 10 0 1 0 0 1
 device=none
+T 23900 40900 5 10 0 1 0 0 1
+source=deco64_2i_nand.21.sch
 }
 C 76100 63200 1 0 0 2i_nand.sym
 {
 T 77375 64495 5 10 1 1 0 0 1
-refdes=S22
+refdes=SN2_22
 T 76375 64590 5 10 0 1 0 0 1
 device=none
+T 76100 63200 5 10 0 1 0 0 1
+source=deco64_2i_nand.22.sch
 }
 C 76100 61900 1 0 0 2i_nand.sym
 {
 T 77375 63195 5 10 1 1 0 0 1
-refdes=S23
+refdes=SN2_23
 T 76375 63290 5 10 0 1 0 0 1
 device=none
+T 76100 61900 5 10 0 1 0 0 1
+source=deco64_2i_nand.23.sch
 }
 C 76100 35900 1 0 0 2i_nand.sym
 {
 T 77375 37195 5 10 1 1 0 0 1
-refdes=S24
+refdes=SN2_24
 T 76375 37290 5 10 0 1 0 0 1
 device=none
+T 76100 35900 5 10 0 1 0 0 1
+source=deco64_2i_nand.24.sch
 }
 C 76100 48900 1 0 0 2i_nand.sym
 {
 T 77375 50195 5 10 1 1 0 0 1
-refdes=S25
+refdes=SN2_25
 T 76375 50290 5 10 0 1 0 0 1
 device=none
+T 76100 48900 5 10 0 1 0 0 1
+source=deco64_2i_nand.25.sch
 }
 C 76100 60600 1 0 0 2i_nand.sym
 {
 T 77375 61895 5 10 1 1 0 0 1
-refdes=S26
+refdes=SN2_26
 T 76375 61990 5 10 0 1 0 0 1
 device=none
+T 76100 60600 5 10 0 1 0 0 1
+source=deco64_2i_nand.26.sch
 }
 C 76100 58000 1 0 0 2i_nand.sym
 {
 T 77375 59295 5 10 1 1 0 0 1
-refdes=S27
+refdes=SN2_27
 T 76375 59390 5 10 0 1 0 0 1
 device=none
+T 76100 58000 5 10 0 1 0 0 1
+source=deco64_2i_nand.27.sch
 }
 C 76100 54100 1 0 0 2i_nand.sym
 {
 T 77375 55395 5 10 1 1 0 0 1
-refdes=S28
+refdes=SN2_28
 T 76375 55490 5 10 0 1 0 0 1
 device=none
+T 76100 54100 5 10 0 1 0 0 1
+source=deco64_2i_nand.28.sch
 }
 C 23900 35700 1 0 0 2i_nand.sym
 {
 T 25175 36995 5 10 1 1 0 0 1
-refdes=S29
+refdes=SN2_29
 T 24175 37090 5 10 0 1 0 0 1
 device=none
+T 23900 35700 5 10 0 1 0 0 1
+source=deco64_2i_nand.29.sch
 }
 C 76100 51500 1 0 0 2i_nand.sym
 {
 T 77375 52795 5 10 1 1 0 0 1
-refdes=S30
+refdes=SN2_30
 T 76375 52890 5 10 0 1 0 0 1
 device=none
+T 76100 51500 5 10 0 1 0 0 1
+source=deco64_2i_nand.30.sch
 }
 C 76100 59300 1 0 0 2i_nand.sym
 {
 T 77375 60595 5 10 1 1 0 0 1
-refdes=S31
+refdes=SN2_31
 T 76375 60690 5 10 0 1 0 0 1
 device=none
+T 76100 59300 5 10 0 1 0 0 1
+source=deco64_2i_nand.31.sch
 }
 C 76100 47600 1 0 0 2i_nand.sym
 {
 T 77375 48895 5 10 1 1 0 0 1
-refdes=S32
+refdes=SN2_32
 T 76375 48990 5 10 0 1 0 0 1
 device=none
+T 76100 47600 5 10 0 1 0 0 1
+source=deco64_2i_nand.32.sch
 }
 C 76100 39800 1 0 0 2i_nand.sym
 {
 T 77375 41095 5 10 1 1 0 0 1
-refdes=S33
+refdes=SN2_33
 T 76375 41190 5 10 0 1 0 0 1
 device=none
+T 76100 39800 5 10 0 1 0 0 1
+source=deco64_2i_nand.33.sch
 }
 C 23900 34400 1 0 0 2i_nand.sym
 {
 T 25175 35695 5 10 1 1 0 0 1
-refdes=S34
+refdes=SN2_34
 T 24175 35790 5 10 0 1 0 0 1
 device=none
+T 23900 34400 5 10 0 1 0 0 1
+source=deco64_2i_nand.34.sch
 }
 C 76100 41100 1 0 0 2i_nand.sym
 {
 T 77375 42395 5 10 1 1 0 0 1
-refdes=S35
+refdes=SN2_35
 T 76375 42490 5 10 0 1 0 0 1
 device=none
+T 76100 41100 5 10 0 1 0 0 1
+source=deco64_2i_nand.35.sch
 }
 C 76100 45000 1 0 0 2i_nand.sym
 {
 T 77375 46295 5 10 1 1 0 0 1
-refdes=S36
+refdes=SN2_36
 T 76375 46390 5 10 0 1 0 0 1
 device=none
+T 76100 45000 5 10 0 1 0 0 1
+source=deco64_2i_nand.36.sch
 }
 C 76100 38500 1 0 0 2i_nand.sym
 {
 T 77375 39795 5 10 1 1 0 0 1
-refdes=S37
+refdes=SN2_37
 T 76375 39890 5 10 0 1 0 0 1
 device=none
+T 76100 38500 5 10 0 1 0 0 1
+source=deco64_2i_nand.37.sch
 }
 C 23900 33100 1 0 0 2i_nand.sym
 {
 T 25175 34395 5 10 1 1 0 0 1
-refdes=S38
+refdes=SN2_38
 T 24175 34490 5 10 0 1 0 0 1
 device=none
+T 23900 33100 5 10 0 1 0 0 1
+source=deco64_2i_nand.38.sch
 }
 C 76100 34600 1 0 0 2i_nand.sym
 {
 T 77375 35895 5 10 1 1 0 0 1
-refdes=S39
+refdes=SN2_39
 T 76375 35990 5 10 0 1 0 0 1
 device=none
+T 76100 34600 5 10 0 1 0 0 1
+source=deco64_2i_nand.39.sch
 }
 C 23900 30500 1 0 0 2i_nand.sym
 {
 T 25175 31795 5 10 1 1 0 0 1
-refdes=S40
+refdes=SN2_40
 T 24175 31890 5 10 0 1 0 0 1
 device=none
+T 23900 30500 5 10 0 1 0 0 1
+source=deco64_2i_nand.40.sch
 }
 C 76100 56700 1 0 0 2i_nand.sym
 {
 T 77375 57995 5 10 1 1 0 0 1
-refdes=S41
+refdes=SN2_41
 T 76375 58090 5 10 0 1 0 0 1
 device=none
+T 76100 56700 5 10 0 1 0 0 1
+source=deco64_2i_nand.41.sch
 }
 C 23900 31800 1 0 0 2i_nand.sym
 {
 T 25175 33095 5 10 1 1 0 0 1
-refdes=S42
+refdes=SN2_42
 T 24175 33190 5 10 0 1 0 0 1
 device=none
+T 23900 31800 5 10 0 1 0 0 1
+source=deco64_2i_nand.42.sch
 }
 N 76200 64200 63000 64200 4
 N 76200 63600 69200 63600 4
@@ -1427,65 +1509,83 @@ N 76200 57100 63200 57100 4
 C 76100 32000 1 0 0 2i_nand.sym
 {
 T 77375 33295 5 10 1 1 0 0 1
-refdes=S50
+refdes=SN2_50
 T 76375 33390 5 10 0 1 0 0 1
 device=none
+T 76100 32000 5 10 0 1 0 0 1
+source=deco64_2i_nand.50.sch
 }
 C 76100 55400 1 0 0 2i_nand.sym
 {
 T 77375 56695 5 10 1 1 0 0 1
-refdes=S42
+refdes=SN2_59
 T 76375 56790 5 10 0 1 0 0 1
 device=none
+T 76100 55400 5 10 0 1 0 0 1
+source=deco64_2i_nand.59.sch
 }
 C 76100 52800 1 0 0 2i_nand.sym
 {
 T 77375 54095 5 10 1 1 0 0 1
-refdes=S43
+refdes=SN2_43
 T 76375 54190 5 10 0 1 0 0 1
 device=none
+T 76100 52800 5 10 0 1 0 0 1
+source=deco64_2i_nand.43.sch
 }
 C 76100 37200 1 0 0 2i_nand.sym
 {
 T 77375 38495 5 10 1 1 0 0 1
-refdes=S44
+refdes=SN2_44
 T 76375 38590 5 10 0 1 0 0 1
 device=none
+T 76100 37200 5 10 0 1 0 0 1
+source=deco64_2i_nand.44.sch
 }
 C 76100 50200 1 0 0 2i_nand.sym
 {
 T 77375 51495 5 10 1 1 0 0 1
-refdes=S45
+refdes=SN2_45
 T 76375 51590 5 10 0 1 0 0 1
 device=none
+T 76100 50200 5 10 0 1 0 0 1
+source=deco64_2i_nand.45.sch
 }
 C 76100 46300 1 0 0 2i_nand.sym
 {
 T 77375 47595 5 10 1 1 0 0 1
-refdes=S46
+refdes=SN2_46
 T 76375 47690 5 10 0 1 0 0 1
 device=none
+T 76100 46300 5 10 0 1 0 0 1
+source=deco64_2i_nand.46.sch
 }
 C 76100 43700 1 0 0 2i_nand.sym
 {
 T 77375 44995 5 10 1 1 0 0 1
-refdes=S47
+refdes=SN2_47
 T 76375 45090 5 10 0 1 0 0 1
 device=none
+T 76100 43700 5 10 0 1 0 0 1
+source=deco64_2i_nand.47.sch
 }
 C 76100 42400 1 0 0 2i_nand.sym
 {
 T 77375 43695 5 10 1 1 0 0 1
-refdes=S48
+refdes=SN2_48
 T 76375 43790 5 10 0 1 0 0 1
 device=none
+T 76100 42400 5 10 0 1 0 0 1
+source=deco64_2i_nand.48.sch
 }
 C 76100 33300 1 0 0 2i_nand.sym
 {
 T 77375 34595 5 10 1 1 0 0 1
-refdes=S49
+refdes=SN2_49
 T 76375 34690 5 10 0 1 0 0 1
 device=none
+T 76100 33300 5 10 0 1 0 0 1
+source=deco64_2i_nand.49.sch
 }
 N 76200 56400 63800 56400 4
 N 76200 55800 64000 55800 4
@@ -1504,44 +1604,56 @@ N 76200 37600 68800 37600 4
 C 76100 30700 1 0 0 2i_nand.sym
 {
 T 77375 31995 5 10 1 1 0 0 1
-refdes=S51
+refdes=SN2_51
 T 76375 32090 5 10 0 1 0 0 1
 device=none
+T 76100 30700 5 10 0 1 0 0 1
+source=deco64_2i_nand.51.sch
 }
 C 76100 29400 1 0 0 2i_nand.sym
 {
 T 77375 30695 5 10 1 1 0 0 1
-refdes=S52
+refdes=SN2_52
 T 76375 30790 5 10 0 1 0 0 1
 device=none
+T 76100 29400 5 10 0 1 0 0 1
+source=deco64_2i_nand.52.sch
 }
 C 76100 28100 1 0 0 2i_nand.sym
 {
 T 77375 29395 5 10 1 1 0 0 1
-refdes=S53
+refdes=SN2_53
 T 76375 29490 5 10 0 1 0 0 1
 device=none
+T 76100 28100 5 10 0 1 0 0 1
+source=deco64_2i_nand.53.sch
 }
 C 76100 26800 1 0 0 2i_nand.sym
 {
 T 77375 28095 5 10 1 1 0 0 1
-refdes=S54
+refdes=SN2_54
 T 76375 28190 5 10 0 1 0 0 1
 device=none
+T 76100 26800 5 10 0 1 0 0 1
+source=deco64_2i_nand.54.sch
 }
 C 76100 25500 1 0 0 2i_nand.sym
 {
 T 77375 26795 5 10 1 1 0 0 1
-refdes=S55
+refdes=SN2_55
 T 76375 26890 5 10 0 1 0 0 1
 device=none
+T 76100 25500 5 10 0 1 0 0 1
+source=deco64_2i_nand.55.sch
 }
 C 76100 24200 1 0 0 2i_nand.sym
 {
 T 77375 25495 5 10 1 1 0 0 1
-refdes=S56
+refdes=SN2_56
 T 76375 25590 5 10 0 1 0 0 1
 device=none
+T 76100 24200 5 10 0 1 0 0 1
+source=deco64_2i_nand.56.sch
 }
 N 76200 34300 69400 34300 4
 N 76200 33700 69600 33700 4
@@ -1578,16 +1690,20 @@ N 76200 24600 74400 24600 4
 C 84700 64700 1 0 0 2i_nand.sym
 {
 T 85975 65995 5 10 1 1 0 0 1
-refdes=S57
+refdes=SN2_57
 T 84975 66090 5 10 0 1 0 0 1
 device=none
+T 84700 64700 5 10 0 1 0 0 1
+source=deco64_2i_nand.57.sch
 }
 C 90300 72100 1 0 0 2i_nand.sym
 {
 T 91575 73395 5 10 1 1 0 0 1
-refdes=S58
+refdes=SN2_58
 T 90575 73490 5 10 0 1 0 0 1
 device=none
+T 90300 72100 5 10 0 1 0 0 1
+source=deco64_2i_nand.58.sch
 }
 N 77800 64000 78000 64000 4
 N 78000 64000 78000 65100 4
@@ -1596,9 +1712,11 @@ N 84800 65700 17300 65700 4
 C 84700 66100 1 0 0 4i_nand.sym
 {
 T 85975 67695 5 10 1 1 0 0 1
-refdes=S59
+refdes=SN4_1
 T 85675 66090 5 10 0 1 0 0 1
 device=none
+T 84700 66100 5 10 0 1 0 0 1
+source=deco64_4i_nand.1.sch
 }
 N 77800 62700 78200 62700 4
 N 78200 62700 78200 66700 4
@@ -1637,16 +1755,20 @@ N 62800 64900 92400 64900 4
 C 84600 67700 1 0 0 8i_nand.sym
 {
 T 86075 70495 5 10 1 1 0 0 1
-refdes=S60
+refdes=SN8_1
 T 85675 67790 5 10 0 1 0 0 1
 device=none
+T 84600 67700 5 10 0 1 0 0 1
+source=deco64_8i_nand.1.sch
 }
 C 84600 70500 1 0 0 8i_nand.sym
 {
 T 86075 73295 5 10 1 1 0 0 1
-refdes=S61
+refdes=SN8_2
 T 85675 70590 5 10 0 1 0 0 1
 device=none
+T 84600 70500 5 10 0 1 0 0 1
+source=deco64_8i_nand.2.sch
 }
 N 80200 40600 80200 74600 4
 N 77800 61400 78600 61400 4
@@ -1707,9 +1829,11 @@ N 25600 37800 27800 37800 4
 C 84600 73300 1 0 0 8i_nand.sym
 {
 T 86075 76095 5 10 1 1 0 0 1
-refdes=S62
+refdes=SN8_3
 T 85675 73390 5 10 0 1 0 0 1
 device=none
+T 84600 73300 5 10 0 1 0 0 1
+source=deco64_8i_nand.3.sch
 }
 N 77800 60100 79400 60100 4
 N 79400 60100 79400 75800 4
@@ -1768,6 +1892,8 @@ T 88495 68495 5 10 1 1 0 0 1
 refdes=SI1
 T 89195 68595 5 10 0 1 0 0 1
 device=none
+T 88100 68500 5 10 0 1 0 0 1
+source=deco64_inv.1.sch
 }
 C 89400 68500 1 0 0 inverter.sym
 {
@@ -1777,6 +1903,8 @@ T 89795 68495 5 10 1 1 0 0 1
 refdes=SI2
 T 90495 68595 5 10 0 1 0 0 1
 device=none
+T 89400 68500 5 10 0 1 0 0 1
+source=deco64_inv.2.sch
 }
 C 87900 71300 1 0 0 inverter.sym
 {
@@ -1786,6 +1914,8 @@ T 88295 71295 5 10 1 1 0 0 1
 refdes=SI3
 T 88995 71395 5 10 0 1 0 0 1
 device=none
+T 87900 71300 5 10 0 1 0 0 1
+source=deco64_inv.3.sch
 }
 C 87900 74100 1 0 0 inverter.sym
 {
@@ -1795,34 +1925,44 @@ T 88295 74095 5 10 1 1 0 0 1
 refdes=SI4
 T 88995 74195 5 10 0 1 0 0 1
 device=none
+T 87900 74100 5 10 0 1 0 0 1
+source=deco64_inv.4.sch
 }
 C 84600 76100 1 0 0 8i_nand.sym
 {
 T 86075 78895 5 10 1 1 0 0 1
-refdes=S63
+refdes=SN8_4
 T 85675 76190 5 10 0 1 0 0 1
 device=none
+T 84600 76100 5 10 0 1 0 0 1
+source=deco64_8i_nand.4.sch
 }
 C 84600 78900 1 0 0 8i_nand.sym
 {
 T 86075 81695 5 10 1 1 0 0 1
-refdes=S64
+refdes=SN8_5
 T 85675 78990 5 10 0 1 0 0 1
 device=none
+T 84600 78900 5 10 0 1 0 0 1
+source=deco64_8i_nand.5.sch
 }
 C 84600 81700 1 0 0 8i_nand.sym
 {
 T 86075 84495 5 10 1 1 0 0 1
-refdes=S65
+refdes=SN8_6
 T 85675 81790 5 10 0 1 0 0 1
 device=none
+T 84600 81700 5 10 0 1 0 0 1
+source=deco64_8i_nand.6.sch
 }
 C 84600 84500 1 0 0 8i_nand.sym
 {
 T 86075 87295 5 10 1 1 0 0 1
-refdes=S66
+refdes=SN8_7
 T 85675 84590 5 10 0 1 0 0 1
 device=none
+T 84600 84500 5 10 0 1 0 0 1
+source=deco64_8i_nand.7.sch
 }
 N 84800 87000 11300 87000 4
 N 25600 63900 28000 63900 4
@@ -1917,6 +2057,8 @@ T 87395 76895 5 10 1 1 0 0 1
 refdes=SI5
 T 88095 76995 5 10 0 1 0 0 1
 device=none
+T 87000 76900 5 10 0 1 0 0 1
+source=deco64_inv.5.sch
 }
 C 87000 79700 1 0 0 inverter.sym
 {
@@ -1926,6 +2068,8 @@ T 87395 79695 5 10 1 1 0 0 1
 refdes=SI6
 T 88095 79795 5 10 0 1 0 0 1
 device=none
+T 87000 79700 5 10 0 1 0 0 1
+source=deco64_inv.6.sch
 }
 C 87000 82500 1 0 0 inverter.sym
 {
@@ -1935,6 +2079,8 @@ T 87395 82495 5 10 1 1 0 0 1
 refdes=SI7
 T 88095 82595 5 10 0 1 0 0 1
 device=none
+T 87000 82500 5 10 0 1 0 0 1
+source=deco64_inv.7.sch
 }
 C 87000 85300 1 0 0 inverter.sym
 {
@@ -1944,6 +2090,8 @@ T 87395 85295 5 10 1 1 0 0 1
 refdes=SI8
 T 88095 85395 5 10 0 1 0 0 1
 device=none
+T 87000 85300 5 10 0 1 0 0 1
+source=deco64_inv.8.sch
 }
 N 86400 85600 87000 85600 4
 N 87000 82800 86400 82800 4
@@ -1952,9 +2100,11 @@ N 87000 77200 86400 77200 4
 C 88900 80700 1 0 0 4i_nand.sym
 {
 T 90175 82295 5 10 1 1 0 0 1
-refdes=S67
+refdes=SN4_2
 T 89875 80690 5 10 0 1 0 0 1
 device=none
+T 88900 80700 5 10 0 1 0 0 1
+source=deco64_4i_nand.2.sch
 }
 N 88000 77200 88800 77200 4
 N 88800 77200 88800 81000 4
