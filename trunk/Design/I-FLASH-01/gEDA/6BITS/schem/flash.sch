@@ -6,7 +6,7 @@ device=none
 T 36075 70395 5 10 1 1 0 0 1
 refdes=SC1
 T 35100 69400 5 10 0 0 0 0 1
-source=SUBcomp.7.sch
+source=SUBcomp.6.sch
 }
 C 35100 67400 1 0 0 comparador.sym
 {
@@ -959,6 +959,8 @@ T 61695 27000 5 10 0 1 180 6 1
 device=none
 T 61795 52400 5 10 1 1 180 6 1
 refdes=S1
+T 60700 52600 5 10 0 0 0 0 1
+source=deco64.sch
 }
 C 41600 70400 1 0 0 comparador.sym
 {
@@ -967,7 +969,7 @@ device=none
 T 42575 71395 5 10 1 1 0 0 1
 refdes=SC32
 T 41600 70400 5 10 0 0 0 0 1
-source=SUBcomp.7.sch
+source=SUBcomp.6.sch
 }
 C 41600 68400 1 0 0 comparador.sym
 {
@@ -1862,7 +1864,7 @@ device=none
 C 59300 52100 1 0 0 inverter.sym
 {
 T 98595 120095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 52195 5 5 1 1 0 4 1
 refdes=SI1
 T 60295 51995 5 10 0 1 0 0 1
@@ -1871,7 +1873,7 @@ device=none
 C 58200 51700 1 0 0 inverter.sym
 {
 T 97495 119695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 51795 5 5 1 1 0 4 1
 refdes=SI2
 T 59195 51595 5 10 0 1 0 0 1
@@ -1880,7 +1882,7 @@ device=none
 C 57100 51300 1 0 0 inverter.sym
 {
 T 96395 119295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 51395 5 5 1 1 0 4 1
 refdes=SI3
 T 58095 51195 5 10 0 1 0 0 1
@@ -1889,7 +1891,7 @@ device=none
 C 59300 50900 1 0 0 inverter.sym
 {
 T 98595 118895 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 50995 5 5 1 1 0 4 1
 refdes=SI4
 T 60295 50795 5 10 0 1 0 0 1
@@ -1898,7 +1900,7 @@ device=none
 C 58200 50500 1 0 0 inverter.sym
 {
 T 97495 118495 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 50595 5 5 1 1 0 4 1
 refdes=SI5
 T 59195 50395 5 10 0 1 0 0 1
@@ -1907,7 +1909,7 @@ device=none
 C 57100 50100 1 0 0 inverter.sym
 {
 T 96395 118095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 50195 5 5 1 1 0 4 1
 refdes=SI6
 T 58095 49995 5 10 0 1 0 0 1
@@ -1916,7 +1918,7 @@ device=none
 C 59300 49700 1 0 0 inverter.sym
 {
 T 98595 117695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 49795 5 5 1 1 0 4 1
 refdes=SI7
 T 60295 49595 5 10 0 1 0 0 1
@@ -1925,7 +1927,7 @@ device=none
 C 58200 49300 1 0 0 inverter.sym
 {
 T 97495 117295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 49395 5 5 1 1 0 4 1
 refdes=SI8
 T 59195 49195 5 10 0 1 0 0 1
@@ -1934,7 +1936,7 @@ device=none
 C 57100 48900 1 0 0 inverter.sym
 {
 T 96395 116895 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 48995 5 5 1 1 0 4 1
 refdes=SI9
 T 58095 48795 5 10 0 1 0 0 1
@@ -1943,7 +1945,7 @@ device=none
 C 59300 48500 1 0 0 inverter.sym
 {
 T 98595 116495 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 48595 5 5 1 1 0 4 1
 refdes=SI10
 T 60295 48395 5 10 0 1 0 0 1
@@ -1952,7 +1954,7 @@ device=none
 C 58200 48100 1 0 0 inverter.sym
 {
 T 97495 116095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 48195 5 5 1 1 0 4 1
 refdes=SI11
 T 59195 47995 5 10 0 1 0 0 1
@@ -1961,7 +1963,7 @@ device=none
 C 57100 47700 1 0 0 inverter.sym
 {
 T 96395 115695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 47795 5 5 1 1 0 4 1
 refdes=SI12
 T 58095 47595 5 10 0 1 0 0 1
@@ -1970,7 +1972,7 @@ device=none
 C 59300 47300 1 0 0 inverter.sym
 {
 T 98595 115295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 47395 5 5 1 1 0 4 1
 refdes=SI13
 T 60295 47195 5 10 0 1 0 0 1
@@ -1979,7 +1981,7 @@ device=none
 C 58200 46900 1 0 0 inverter.sym
 {
 T 97495 114895 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 46995 5 5 1 1 0 4 1
 refdes=SI14
 T 59195 46795 5 10 0 1 0 0 1
@@ -1988,7 +1990,7 @@ device=none
 C 57100 46500 1 0 0 inverter.sym
 {
 T 96395 114495 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 46595 5 5 1 1 0 4 1
 refdes=SI15
 T 58095 46395 5 10 0 1 0 0 1
@@ -1997,7 +1999,7 @@ device=none
 C 59300 46100 1 0 0 inverter.sym
 {
 T 98595 114095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 46195 5 5 1 1 0 4 1
 refdes=SI16
 T 60295 45995 5 10 0 1 0 0 1
@@ -2006,7 +2008,7 @@ device=none
 C 58200 45700 1 0 0 inverter.sym
 {
 T 97495 113695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 45795 5 5 1 1 0 4 1
 refdes=SI17
 T 59195 45595 5 10 0 1 0 0 1
@@ -2015,7 +2017,7 @@ device=none
 C 57100 45300 1 0 0 inverter.sym
 {
 T 96395 113295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 45395 5 5 1 1 0 4 1
 refdes=SI18
 T 58095 45195 5 10 0 1 0 0 1
@@ -2024,7 +2026,7 @@ device=none
 C 59300 44900 1 0 0 inverter.sym
 {
 T 98595 112895 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 44995 5 5 1 1 0 4 1
 refdes=SI19
 T 60295 44795 5 10 0 1 0 0 1
@@ -2033,7 +2035,7 @@ device=none
 C 58200 44500 1 0 0 inverter.sym
 {
 T 97495 112495 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 44595 5 5 1 1 0 4 1
 refdes=SI20
 T 59195 44395 5 10 0 1 0 0 1
@@ -2042,7 +2044,7 @@ device=none
 C 57100 44100 1 0 0 inverter.sym
 {
 T 96395 112095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 44195 5 5 1 1 0 4 1
 refdes=SI21
 T 58095 43995 5 10 0 1 0 0 1
@@ -2051,7 +2053,7 @@ device=none
 C 59300 43700 1 0 0 inverter.sym
 {
 T 98595 111695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 43795 5 5 1 1 0 4 1
 refdes=SI22
 T 60295 43595 5 10 0 1 0 0 1
@@ -2060,7 +2062,7 @@ device=none
 C 58200 43300 1 0 0 inverter.sym
 {
 T 97495 111295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 43395 5 5 1 1 0 4 1
 refdes=SI23
 T 59195 43195 5 10 0 1 0 0 1
@@ -2069,7 +2071,7 @@ device=none
 C 57100 42900 1 0 0 inverter.sym
 {
 T 96395 110895 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 42995 5 5 1 1 0 4 1
 refdes=SI24
 T 58095 42795 5 10 0 1 0 0 1
@@ -2078,7 +2080,7 @@ device=none
 C 59300 42500 1 0 0 inverter.sym
 {
 T 98595 110495 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 42595 5 5 1 1 0 4 1
 refdes=SI25
 T 60295 42395 5 10 0 1 0 0 1
@@ -2087,7 +2089,7 @@ device=none
 C 58200 42100 1 0 0 inverter.sym
 {
 T 97495 110095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 42195 5 5 1 1 0 4 1
 refdes=SI26
 T 59195 41995 5 10 0 1 0 0 1
@@ -2096,7 +2098,7 @@ device=none
 C 57100 41700 1 0 0 inverter.sym
 {
 T 96395 109695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 41795 5 5 1 1 0 4 1
 refdes=SI27
 T 58095 41595 5 10 0 1 0 0 1
@@ -2105,7 +2107,7 @@ device=none
 C 59300 41300 1 0 0 inverter.sym
 {
 T 98595 109295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 41395 5 5 1 1 0 4 1
 refdes=SI28
 T 60295 41195 5 10 0 1 0 0 1
@@ -2114,7 +2116,7 @@ device=none
 C 58200 40900 1 0 0 inverter.sym
 {
 T 97495 108895 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 40995 5 5 1 1 0 4 1
 refdes=SI29
 T 59195 40795 5 10 0 1 0 0 1
@@ -2123,7 +2125,7 @@ device=none
 C 57100 40500 1 0 0 inverter.sym
 {
 T 96395 108495 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 40595 5 5 1 1 0 4 1
 refdes=SI30
 T 58095 40395 5 10 0 1 0 0 1
@@ -2132,7 +2134,7 @@ device=none
 C 59300 40100 1 0 0 inverter.sym
 {
 T 98595 108095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 40195 5 5 1 1 0 4 1
 refdes=SI31
 T 60295 39995 5 10 0 1 0 0 1
@@ -2141,7 +2143,7 @@ device=none
 C 58200 39700 1 0 0 inverter.sym
 {
 T 97495 107695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 39795 5 5 1 1 0 4 1
 refdes=SI32
 T 59195 39595 5 10 0 1 0 0 1
@@ -2150,7 +2152,7 @@ device=none
 C 57100 39300 1 0 0 inverter.sym
 {
 T 96395 107295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 39395 5 5 1 1 0 4 1
 refdes=SI33
 T 58095 39195 5 10 0 1 0 0 1
@@ -2159,7 +2161,7 @@ device=none
 C 59300 38900 1 0 0 inverter.sym
 {
 T 98595 106895 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 38995 5 5 1 1 0 4 1
 refdes=SI34
 T 60295 38795 5 10 0 1 0 0 1
@@ -2168,7 +2170,7 @@ device=none
 C 58200 38500 1 0 0 inverter.sym
 {
 T 97495 106495 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 38595 5 5 1 1 0 4 1
 refdes=SI35
 T 59195 38395 5 10 0 1 0 0 1
@@ -2177,7 +2179,7 @@ device=none
 C 57100 38100 1 0 0 inverter.sym
 {
 T 96395 106095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 38195 5 5 1 1 0 4 1
 refdes=SI36
 T 58095 37995 5 10 0 1 0 0 1
@@ -2186,7 +2188,7 @@ device=none
 C 59300 37700 1 0 0 inverter.sym
 {
 T 98595 105695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 37795 5 5 1 1 0 4 1
 refdes=SI37
 T 60295 37595 5 10 0 1 0 0 1
@@ -2195,7 +2197,7 @@ device=none
 C 58200 37300 1 0 0 inverter.sym
 {
 T 97495 105295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 37395 5 5 1 1 0 4 1
 refdes=SI38
 T 59195 37195 5 10 0 1 0 0 1
@@ -2204,7 +2206,7 @@ device=none
 C 57100 36900 1 0 0 inverter.sym
 {
 T 96395 104895 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 36995 5 5 1 1 0 4 1
 refdes=SI39
 T 58095 36795 5 10 0 1 0 0 1
@@ -2213,7 +2215,7 @@ device=none
 C 59300 36500 1 0 0 inverter.sym
 {
 T 98595 104495 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 36595 5 5 1 1 0 4 1
 refdes=SI40
 T 60295 36395 5 10 0 1 0 0 1
@@ -2222,7 +2224,7 @@ device=none
 C 58200 36100 1 0 0 inverter.sym
 {
 T 97495 104095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 36195 5 5 1 1 0 4 1
 refdes=SI41
 T 59195 35995 5 10 0 1 0 0 1
@@ -2231,7 +2233,7 @@ device=none
 C 57100 35700 1 0 0 inverter.sym
 {
 T 96395 103695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 35795 5 5 1 1 0 4 1
 refdes=SI42
 T 58095 35595 5 10 0 1 0 0 1
@@ -2240,7 +2242,7 @@ device=none
 C 59300 35300 1 0 0 inverter.sym
 {
 T 98595 103295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 35395 5 5 1 1 0 4 1
 refdes=SI43
 T 60295 35195 5 10 0 1 0 0 1
@@ -2249,7 +2251,7 @@ device=none
 C 58200 34900 1 0 0 inverter.sym
 {
 T 97495 102895 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 34995 5 5 1 1 0 4 1
 refdes=SI44
 T 59195 34795 5 10 0 1 0 0 1
@@ -2258,7 +2260,7 @@ device=none
 C 57100 34500 1 0 0 inverter.sym
 {
 T 96395 102495 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 34595 5 5 1 1 0 4 1
 refdes=SI45
 T 58095 34395 5 10 0 1 0 0 1
@@ -2267,7 +2269,7 @@ device=none
 C 59300 34100 1 0 0 inverter.sym
 {
 T 98595 102095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 34195 5 5 1 1 0 4 1
 refdes=SI46
 T 60295 33995 5 10 0 1 0 0 1
@@ -2276,7 +2278,7 @@ device=none
 C 58200 33700 1 0 0 inverter.sym
 {
 T 97495 101695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 33795 5 5 1 1 0 4 1
 refdes=SI47
 T 59195 33595 5 10 0 1 0 0 1
@@ -2285,7 +2287,7 @@ device=none
 C 57100 33300 1 0 0 inverter.sym
 {
 T 96395 101295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 33395 5 5 1 1 0 4 1
 refdes=SI48
 T 58095 33195 5 10 0 1 0 0 1
@@ -2294,7 +2296,7 @@ device=none
 C 59300 32900 1 0 0 inverter.sym
 {
 T 98595 100895 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 32995 5 5 1 1 0 4 1
 refdes=SI49
 T 60295 32795 5 10 0 1 0 0 1
@@ -2303,7 +2305,7 @@ device=none
 C 58200 32500 1 0 0 inverter.sym
 {
 T 97495 100495 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 32595 5 5 1 1 0 4 1
 refdes=SI50
 T 59195 32395 5 10 0 1 0 0 1
@@ -2312,7 +2314,7 @@ device=none
 C 57100 32100 1 0 0 inverter.sym
 {
 T 96395 100095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 32195 5 5 1 1 0 4 1
 refdes=SI51
 T 58095 31995 5 10 0 1 0 0 1
@@ -2321,7 +2323,7 @@ device=none
 C 59300 31700 1 0 0 inverter.sym
 {
 T 98595 99695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 31795 5 5 1 1 0 4 1
 refdes=SI52
 T 60295 31595 5 10 0 1 0 0 1
@@ -2330,7 +2332,7 @@ device=none
 C 58200 31300 1 0 0 inverter.sym
 {
 T 97495 99295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 31395 5 5 1 1 0 4 1
 refdes=SI53
 T 59195 31195 5 10 0 1 0 0 1
@@ -2339,7 +2341,7 @@ device=none
 C 57100 30900 1 0 0 inverter.sym
 {
 T 96395 98895 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 30995 5 5 1 1 0 4 1
 refdes=SI54
 T 58095 30795 5 10 0 1 0 0 1
@@ -2348,7 +2350,7 @@ device=none
 C 59300 30500 1 0 0 inverter.sym
 {
 T 98595 98495 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 30595 5 5 1 1 0 4 1
 refdes=SI55
 T 60295 30395 5 10 0 1 0 0 1
@@ -2357,7 +2359,7 @@ device=none
 C 58200 30100 1 0 0 inverter.sym
 {
 T 97495 98095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 30195 5 5 1 1 0 4 1
 refdes=SI56
 T 59195 29995 5 10 0 1 0 0 1
@@ -2366,7 +2368,7 @@ device=none
 C 57100 29700 1 0 0 inverter.sym
 {
 T 96395 97695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 29795 5 5 1 1 0 4 1
 refdes=SI57
 T 58095 29595 5 10 0 1 0 0 1
@@ -2375,7 +2377,7 @@ device=none
 C 59300 29300 1 0 0 inverter.sym
 {
 T 98595 97295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 29395 5 5 1 1 0 4 1
 refdes=SI58
 T 60295 29195 5 10 0 1 0 0 1
@@ -2384,7 +2386,7 @@ device=none
 C 58200 28900 1 0 0 inverter.sym
 {
 T 97495 96895 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 28995 5 5 1 1 0 4 1
 refdes=SI59
 T 59195 28795 5 10 0 1 0 0 1
@@ -2393,7 +2395,7 @@ device=none
 C 57100 28500 1 0 0 inverter.sym
 {
 T 96395 96495 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 28595 5 5 1 1 0 4 1
 refdes=SI60
 T 58095 28395 5 10 0 1 0 0 1
@@ -2402,7 +2404,7 @@ device=none
 C 59300 28100 1 0 0 inverter.sym
 {
 T 98595 96095 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 59795 28195 5 5 1 1 0 4 1
 refdes=SI61
 T 60295 27995 5 10 0 1 0 0 1
@@ -2411,7 +2413,7 @@ device=none
 C 58200 27700 1 0 0 inverter.sym
 {
 T 97495 95695 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 58695 27795 5 5 1 1 0 4 1
 refdes=SI62
 T 59195 27595 5 10 0 1 0 0 1
@@ -2420,7 +2422,7 @@ device=none
 C 57100 27300 1 0 0 inverter.sym
 {
 T 96395 95295 5 10 0 1 0 0 1
-device=cmos_inverter
+device=none
 T 57595 27395 5 5 1 1 0 4 1
 refdes=SI63
 T 58095 27195 5 10 0 1 0 0 1
