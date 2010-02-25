@@ -6,7 +6,7 @@ device=none
 T 36075 70395 5 10 1 1 0 0 1
 refdes=SC1
 T 35100 69400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.1.sch
 }
 C 35100 67400 1 0 0 comparador.sym
 {
@@ -15,7 +15,7 @@ device=none
 T 36075 68395 5 10 1 1 0 0 1
 refdes=SC2
 T 35100 67400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.2.sch
 }
 C 34800 69200 1 90 0 resistor-1.sym
 {
@@ -155,7 +155,7 @@ device=none
 T 36075 66395 5 10 1 1 0 0 1
 refdes=SC3
 T 35100 65400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.3.sch
 }
 N 34700 67300 34700 66200 4
 N 35100 66300 34700 66300 4
@@ -177,7 +177,7 @@ device=none
 T 36075 64395 5 10 1 1 0 0 1
 refdes=SC4
 T 35100 63400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.4.sch
 }
 N 34700 65300 34700 64200 4
 N 35100 64300 34700 64300 4
@@ -199,7 +199,7 @@ device=none
 T 36075 62395 5 10 1 1 0 0 1
 refdes=SC5
 T 35100 61400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.5.sch
 }
 N 34700 63300 34700 62200 4
 N 35100 62300 34700 62300 4
@@ -221,7 +221,7 @@ device=none
 T 36075 60395 5 10 1 1 0 0 1
 refdes=SC6
 T 35100 59400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.6.sch
 }
 N 34700 61300 34700 60200 4
 N 35100 60300 34700 60300 4
@@ -243,7 +243,7 @@ device=none
 T 36075 58395 5 10 1 1 0 0 1
 refdes=SC7
 T 35100 57400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.7.sch
 }
 N 34700 59300 34700 58200 4
 N 35100 58300 34700 58300 4
@@ -265,7 +265,7 @@ device=none
 T 36075 56395 5 10 1 1 0 0 1
 refdes=SC8
 T 35100 55400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.8.sch
 }
 N 34700 57300 34700 56200 4
 N 35100 56300 34700 56300 4
@@ -287,7 +287,7 @@ device=none
 T 36075 54395 5 10 1 1 0 0 1
 refdes=SC9
 T 35100 53400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.9.sch
 }
 N 34700 55300 34700 54200 4
 N 35100 54300 34700 54300 4
@@ -309,7 +309,7 @@ device=none
 T 36075 52395 5 10 1 1 0 0 1
 refdes=SC10
 T 35100 51400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.10.sch
 }
 N 34700 53300 34700 52200 4
 N 35100 52300 34700 52300 4
@@ -331,7 +331,7 @@ device=none
 T 36075 50395 5 10 1 1 0 0 1
 refdes=SC11
 T 35100 49400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.11.sch
 }
 N 34700 51300 34700 50200 4
 N 35100 50300 34700 50300 4
@@ -353,7 +353,7 @@ device=none
 T 36075 48395 5 10 1 1 0 0 1
 refdes=SC12
 T 35100 47400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.12.sch
 }
 N 34700 49300 34700 48200 4
 N 35100 48300 34700 48300 4
@@ -375,7 +375,7 @@ device=none
 T 36075 46395 5 10 1 1 0 0 1
 refdes=SC13
 T 35100 45400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.13.sch
 }
 N 34700 47300 34700 46200 4
 N 35100 46300 34700 46300 4
@@ -397,7 +397,7 @@ device=none
 T 36075 44395 5 10 1 1 0 0 1
 refdes=SC14
 T 35100 43400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.14.sch
 }
 N 34700 45300 34700 44200 4
 N 35100 44300 34700 44300 4
@@ -419,7 +419,7 @@ device=none
 T 36075 42395 5 10 1 1 0 0 1
 refdes=SC15
 T 35100 41400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.15.sch
 }
 N 35100 42300 34700 42300 4
 N 35000 41700 35100 41700 4
@@ -440,7 +440,7 @@ device=none
 T 36075 40395 5 10 1 1 0 0 1
 refdes=SC16
 T 35100 39400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.16.sch
 }
 N 34700 41300 34700 40200 4
 N 35100 40300 34700 40300 4
@@ -462,7 +462,7 @@ device=none
 T 36075 38395 5 10 1 1 0 0 1
 refdes=SC17
 T 35100 37400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.17.sch
 }
 N 34700 39300 34700 38200 4
 N 35100 38300 34700 38300 4
@@ -484,7 +484,7 @@ device=none
 T 36075 36395 5 10 1 1 0 0 1
 refdes=SC18
 T 35100 35400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.18.sch
 }
 N 34700 37300 34700 36200 4
 N 35100 36300 34700 36300 4
@@ -506,7 +506,7 @@ device=none
 T 36075 34395 5 10 1 1 0 0 1
 refdes=SC19
 T 35100 33400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.19.sch
 }
 N 34700 35300 34700 34200 4
 N 35100 34300 34700 34300 4
@@ -528,7 +528,7 @@ device=none
 T 36075 32395 5 10 1 1 0 0 1
 refdes=SC20
 T 35100 31400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.20.sch
 }
 N 34700 33300 34700 32200 4
 N 35100 32300 34700 32300 4
@@ -550,7 +550,7 @@ device=none
 T 36075 30395 5 10 1 1 0 0 1
 refdes=SC21
 T 35100 29400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.21.sch
 }
 N 34700 31300 34700 30200 4
 N 35100 30300 34700 30300 4
@@ -572,7 +572,7 @@ device=none
 T 36075 28395 5 10 1 1 0 0 1
 refdes=SC22
 T 35100 27400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.22.sch
 }
 N 34700 29300 34700 28200 4
 N 35100 28300 34700 28300 4
@@ -594,7 +594,7 @@ device=none
 T 36075 26395 5 10 1 1 0 0 1
 refdes=SC23
 T 35100 25400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.23.sch
 }
 N 34700 27300 34700 26200 4
 N 35100 26300 34700 26300 4
@@ -616,7 +616,7 @@ device=none
 T 36075 24395 5 10 1 1 0 0 1
 refdes=SC24
 T 35100 23400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.24.sch
 }
 N 34700 25300 34700 24200 4
 N 35100 24300 34700 24300 4
@@ -638,7 +638,7 @@ device=none
 T 36075 22395 5 10 1 1 0 0 1
 refdes=SC25
 T 35100 21400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.25.sch
 }
 N 34700 23300 34700 22200 4
 N 35100 22300 34700 22300 4
@@ -660,7 +660,7 @@ device=none
 T 36075 20395 5 10 1 1 0 0 1
 refdes=SC26
 T 35100 19400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.26.sch
 }
 N 34700 21300 34700 20200 4
 N 35100 20300 34700 20300 4
@@ -682,7 +682,7 @@ device=none
 T 36075 18395 5 10 1 1 0 0 1
 refdes=SC27
 T 35100 17400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.27.sch
 }
 N 34700 19300 34700 18200 4
 N 35100 18300 34700 18300 4
@@ -704,7 +704,7 @@ device=none
 T 36075 16395 5 10 1 1 0 0 1
 refdes=SC28
 T 35100 15400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.28.sch
 }
 N 34700 17300 34700 16200 4
 N 35100 16300 34700 16300 4
@@ -726,7 +726,7 @@ device=none
 T 36075 14395 5 10 1 1 0 0 1
 refdes=SC29
 T 35100 13400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.29.sch
 }
 N 34700 15300 34700 14200 4
 N 35100 14300 34700 14300 4
@@ -748,7 +748,7 @@ device=none
 T 36075 12395 5 10 1 1 0 0 1
 refdes=SC30
 T 35100 11400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.30.sch
 }
 N 34700 13300 34700 12200 4
 N 35100 12300 34700 12300 4
@@ -770,7 +770,7 @@ device=none
 T 36075 10495 5 10 1 1 0 0 1
 refdes=SC31
 T 35100 9400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.31.sch
 }
 N 34700 11300 34700 10200 4
 N 35100 10300 34700 10300 4
@@ -969,7 +969,7 @@ device=none
 T 42575 71395 5 10 1 1 0 0 1
 refdes=SC32
 T 41600 70400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.32.sch
 }
 C 41600 68400 1 0 0 comparador.sym
 {
@@ -978,7 +978,7 @@ device=none
 T 42575 69395 5 10 1 1 0 0 1
 refdes=SC33
 T 41600 68400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.33.sch
 }
 C 41300 70200 1 90 0 resistor-1.sym
 {
@@ -1017,7 +1017,7 @@ device=none
 T 42575 67395 5 10 1 1 0 0 1
 refdes=SC34
 T 41600 66400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.34.sch
 }
 N 41200 68300 41200 67200 4
 N 41600 67300 41200 67300 4
@@ -1039,7 +1039,7 @@ device=none
 T 42575 65395 5 10 1 1 0 0 1
 refdes=SC35
 T 41600 64400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.35.sch
 }
 N 41200 66300 41200 65200 4
 N 41600 65300 41200 65300 4
@@ -1061,7 +1061,7 @@ device=none
 T 42575 63395 5 10 1 1 0 0 1
 refdes=SC36
 T 41600 62400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.36.sch
 }
 N 41200 64300 41200 63200 4
 N 41600 63300 41200 63300 4
@@ -1083,7 +1083,7 @@ device=none
 T 42575 61395 5 10 1 1 0 0 1
 refdes=SC37
 T 41600 60400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.37.sch
 }
 N 41200 62300 41200 61200 4
 N 41600 61300 41200 61300 4
@@ -1105,7 +1105,7 @@ device=none
 T 42575 59395 5 10 1 1 0 0 1
 refdes=SC38
 T 41600 58400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.38.sch
 }
 N 41200 60300 41200 59200 4
 N 41600 59300 41200 59300 4
@@ -1127,7 +1127,7 @@ device=none
 T 42575 57395 5 10 1 1 0 0 1
 refdes=SC39
 T 41600 56400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.39.sch
 }
 N 41200 58300 41200 57200 4
 N 41600 57300 41200 57300 4
@@ -1149,7 +1149,7 @@ device=none
 T 42575 55395 5 10 1 1 0 0 1
 refdes=SC40
 T 41600 54400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.40.sch
 }
 N 41200 56300 41200 55200 4
 N 41600 55300 41200 55300 4
@@ -1171,7 +1171,7 @@ device=none
 T 42575 53395 5 10 1 1 0 0 1
 refdes=SC41
 T 41600 52400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.41.sch
 }
 N 41200 54300 41200 53200 4
 N 41600 53300 41200 53300 4
@@ -1198,7 +1198,7 @@ device=none
 T 42575 51395 5 10 1 1 0 0 1
 refdes=SC42
 T 41600 50400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.42.sch
 }
 N 41200 52300 41200 51200 4
 N 41600 51300 41200 51300 4
@@ -1220,7 +1220,7 @@ device=none
 T 42575 49395 5 10 1 1 0 0 1
 refdes=SC43
 T 41600 48400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.43.sch
 }
 N 41200 50300 41200 49200 4
 N 41600 49300 41200 49300 4
@@ -1242,7 +1242,7 @@ device=none
 T 42575 47395 5 10 1 1 0 0 1
 refdes=SC44
 T 41600 46400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.44.sch
 }
 N 41200 48300 41200 47200 4
 N 41600 47300 41200 47300 4
@@ -1264,7 +1264,7 @@ device=none
 T 42575 45395 5 10 1 1 0 0 1
 refdes=SC45
 T 41600 44400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.45.sch
 }
 N 41200 46300 41200 45200 4
 N 41600 45300 41200 45300 4
@@ -1286,7 +1286,7 @@ device=none
 T 42575 43395 5 10 1 1 0 0 1
 refdes=SC46
 T 41600 42400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.46.sch
 }
 N 41600 43300 41200 43300 4
 N 41500 42700 41600 42700 4
@@ -1307,7 +1307,7 @@ device=none
 T 42575 41395 5 10 1 1 0 0 1
 refdes=SC47
 T 41600 40400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.47.sch
 }
 N 41200 42300 41200 41200 4
 N 41600 41300 41200 41300 4
@@ -1329,7 +1329,7 @@ device=none
 T 42575 39395 5 10 1 1 0 0 1
 refdes=SC48
 T 41600 38400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.48.sch
 }
 N 41200 40300 41200 39200 4
 N 41600 39300 41200 39300 4
@@ -1351,7 +1351,7 @@ device=none
 T 42575 37395 5 10 1 1 0 0 1
 refdes=SC49
 T 41600 36400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.49.sch
 }
 N 41200 38300 41200 37200 4
 N 41600 37300 41200 37300 4
@@ -1373,7 +1373,7 @@ device=none
 T 42575 35395 5 10 1 1 0 0 1
 refdes=SC50
 T 41600 34400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.50.sch
 }
 N 41200 36300 41200 35200 4
 N 41600 35300 41200 35300 4
@@ -1395,7 +1395,7 @@ device=none
 T 42575 33395 5 10 1 1 0 0 1
 refdes=SC51
 T 41600 32400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.51.sch
 }
 N 41200 34300 41200 33200 4
 N 41600 33300 41200 33300 4
@@ -1417,7 +1417,7 @@ device=none
 T 42575 31395 5 10 1 1 0 0 1
 refdes=SC52
 T 41600 30400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.52.sch
 }
 N 41200 32300 41200 31200 4
 N 41600 31300 41200 31300 4
@@ -1439,7 +1439,7 @@ device=none
 T 42575 29395 5 10 1 1 0 0 1
 refdes=SC53
 T 41600 28400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.53.sch
 }
 N 41200 30300 41200 29200 4
 N 41600 29300 41200 29300 4
@@ -1461,7 +1461,7 @@ device=none
 T 42575 27395 5 10 1 1 0 0 1
 refdes=SC54
 T 41600 26400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.54.sch
 }
 N 41200 28300 41200 27200 4
 N 41600 27300 41200 27300 4
@@ -1483,7 +1483,7 @@ device=none
 T 42575 25395 5 10 1 1 0 0 1
 refdes=SC55
 T 41600 24400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.55.sch
 }
 N 41200 26300 41200 25200 4
 N 41600 25300 41200 25300 4
@@ -1505,7 +1505,7 @@ device=none
 T 42575 23395 5 10 1 1 0 0 1
 refdes=SC56
 T 41600 22400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.56.sch
 }
 N 41200 24300 41200 23200 4
 N 41600 23300 41200 23300 4
@@ -1527,7 +1527,7 @@ device=none
 T 42575 21395 5 10 1 1 0 0 1
 refdes=SC57
 T 41600 20400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.57.sch
 }
 N 41200 22300 41200 21200 4
 N 41600 21300 41200 21300 4
@@ -1549,7 +1549,7 @@ device=none
 T 42575 19395 5 10 1 1 0 0 1
 refdes=SC58
 T 41600 18400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.58.sch
 }
 N 41200 20300 41200 19200 4
 N 41600 19300 41200 19300 4
@@ -1571,7 +1571,7 @@ device=none
 T 42575 17395 5 10 1 1 0 0 1
 refdes=SC59
 T 41600 16400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.59.sch
 }
 N 41200 18300 41200 17200 4
 N 41600 17300 41200 17300 4
@@ -1593,7 +1593,7 @@ device=none
 T 42575 15395 5 10 1 1 0 0 1
 refdes=SC60
 T 41600 14400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.60.sch
 }
 N 41200 16300 41200 15200 4
 N 41600 15300 41200 15300 4
@@ -1615,7 +1615,7 @@ device=none
 T 42575 13395 5 10 1 1 0 0 1
 refdes=SC61
 T 41600 12400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.61.sch
 }
 N 41200 14300 41200 13200 4
 N 41600 13300 41200 13300 4
@@ -1637,7 +1637,7 @@ device=none
 T 42575 11495 5 10 1 1 0 0 1
 refdes=SC62
 T 41600 10400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.62.sch
 }
 N 41200 12300 41200 11200 4
 N 41600 11300 41200 11300 4
@@ -2973,7 +2973,7 @@ device=none
 T 42575 9495 5 10 1 1 0 0 1
 refdes=SC63
 T 41600 8400 5 10 0 0 0 0 1
-source=SUBcomp.6.sch
+source=comp.63.sch
 }
 C 41900 9600 1 0 0 vdd-1.sym
 N 41500 8700 41500 71500 4
