@@ -17,10 +17,10 @@ M_M10           M10(d=N53250 g=IN1 s=N53536 b=0 ) CN @I-NAND.NAND-7(sch_1):INS53
 M_M13           M13(d=N53536 g=IN1 s=N53542 b=0 ) CN @I-NAND.NAND-7(sch_1):INS53466@BREAKOUT.MbreakN.Normal(chips)
 _    _(VOUT=VOUT)
 _    _(IN1=IN1)
-_    _(IN4=IN1)
-_    _(IN3=IN1)
 _    _(IN2=IN1)
+_    _(IN3=IN1)
+_    _(IN4=IN1)
+_    _(IN5=IN1)
 _    _(IN6=IN1)
 _    _(IN7=IN1)
-_    _(IN5=IN1)
 .ENDALIASES

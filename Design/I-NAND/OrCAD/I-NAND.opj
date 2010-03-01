@@ -95,7 +95,7 @@
          ".\i-nand-pspicefiles\neg\transient.sim"
         (DisplayName "NEG-transient")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-nand-pspicefiles\nand-5\transient.sim")))
+      (ActiveProfile ".\i-nand-pspicefiles\nand-8\transient.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (VPULSE
@@ -157,14 +157,16 @@
       (Path "Design Resources"
          "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-5")
+         "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-8")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-2")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Simulation Profiles")
       (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-5"
-         "NAND-5"))
+         "D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-2"
+         "NAND-2"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -174,10 +176,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 1661 0 702")
+        (Placement "44 2 3 -1 -1 -8 -30 150 1811 150 852")
         (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/"))
+        (Zoom "135"))
       (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-NAND\ORCAD\I-NAND.DSN")
-      (Schematic "NAND-5")
-      (Page "NAND-5"))))
+      (Schematic "NAND-2")
+      (Page "NAND-2"))))
