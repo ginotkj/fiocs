@@ -111,7 +111,7 @@
          ".\i-ffd-pspicefiles\test ffd con c en loop\transient.sim"
         (DisplayName "TEST FFD con C en LOOP-transient")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-ffd-pspicefiles\test ffd con c en loop\transient.sim")))
+      (ActiveProfile ".\i-ffd-pspicefiles\test ffd\transient.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (C
@@ -177,11 +177,30 @@
   (MPSSessionName "FABRICIO")
   (GlobalState
     (FileView
-      (Path "Design Resources")
-      (Select "Design Resources"))
+      (Path "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
         (Placement "44 0 1 0 996 -8 -30 0 453 0 1023"))
-      (Tab 0))))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 125 1786 125 827")
+        (Scroll "0 0")
+        (Zoom "135")
+        (Occurrence "/"))
+      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD\ORCAD\I-FFD.DSN")
+      (Schematic "TEST FFD")
+      (Page "TEST FFD"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 75 1707 75 777")
+        (Scroll "0 0")
+        (Zoom "135")
+        (Occurrence "/FFD"))
+      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD\ORCAD\I-FFD.DSN")
+      (Schematic "S-FFD")
+      (Page "S-FFD"))))

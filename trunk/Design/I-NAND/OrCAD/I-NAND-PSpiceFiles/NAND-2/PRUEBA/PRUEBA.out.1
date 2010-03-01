@@ -1,7 +1,7 @@
 
-**** 02/16/10 10:38:38 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/13/10 19:37:42 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
+ ** Profile: "NAND-2-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-2\transient.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -22,76 +22,40 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 180p 0 
+.TRAN  0 5n 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
-.INC "..\NAND-8.net" 
+.INC "..\NAND-2.net" 
 
 
 
-**** INCLUDING NAND-8.net ****
+**** INCLUDING NAND-2.net ****
 * source I-NAND
-M_M16         OUT IN1 N66465 N66465 CMOSP  
+V_VDD         N39971 0 3.3
+M_M5         OUT IN1 N39971 N39971 CMOSP  
 + L=.18u  
 + W=.2u         
-M_M5         OUT IN1 N66465 N66465 CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_M11         OUT IN1 N66465 N66465 CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_M9         OUT IN1 N66465 N66465 CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_M12         OUT IN1 N66465 N66465 CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_M1         OUT IN1 N67495 0 CMOSN  
+M_M6         OUT IN1 N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_M6         N66385 IN1 N66425 0 CMOSN  
+M_M2         N39991 IN1 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
+M_M4         OUT IN1 N39971 N39971 CMOSP  
++ L=.18u  
++ W=.2u         
 V_VIN         IN1 0  
-+PULSE 0 3.3 10p 0 0 100p 150p
-M_M7         N66425 IN1 N66937 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-V_VDD         N66465 0 3.3
-M_M2         N67495 IN1 N66385 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_M13         N67207 IN1 N67213 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_M10         N66937 IN1 N67207 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_M3         OUT IN1 N66465 N66465 CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_M14         N67213 IN1 N66527 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_M8         OUT IN1 N66465 N66465 CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_M4         OUT IN1 N66465 N66465 CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_M15         N66527 IN1 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++PULSE 0 3.3 0.01n 0 0 0.03n 0.05n
 
 **** RESUMING transient.cir ****
 .END
 
-WARNING -- Mosfet M_M16, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_M16, model CMOSP: Ps = 0 is less than W
-WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
-**** 02/16/10 10:38:38 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
+WARNING -- Mosfet M_M6, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
+**** 02/13/10 19:37:42 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
+ ** Profile: "NAND-2-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-2\transient.sim ] 
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -203,13 +167,14 @@ WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
        CJSWG  422.000000E-12  330.000000E-12 
 
 
-WARNING -- Mosfet M_M16, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_M16, model CMOSP: Ps = 0 is less than W
-WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
-**** 02/16/10 10:38:38 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
+WARNING -- Mosfet M_M6, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
+WARNING -- Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_VIN
+**** 02/13/10 19:37:42 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
+ ** Profile: "NAND-2-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-2\transient.sim ] 
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -222,11 +187,7 @@ WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(  IN1)    0.0000  (  OUT)    3.3000  (N66385)     .0523 (N66425)     .0347     
-
-(N66465)    3.3000 (N66527)     .0044 (N66937)     .0238 (N67207)     .0158     
-
-(N67213)     .0096 (N67495)     .1054 
+(  IN1)    0.0000  (  OUT)    3.3000  (N39971)    3.3000 (N39991)     .0537 
 
 
 
@@ -234,26 +195,96 @@ WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
+    V_VDD       -1.296E-10
     V_VIN        0.000E+00
-    V_VDD       -2.456E-11
 
-    TOTAL POWER DISSIPATION   8.11E-11  WATTS
-
+    TOTAL POWER DISSIPATION   4.28E-10  WATTS
 
 
-          JOB CONCLUDED
-
-**** 02/16/10 10:38:38 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+ERROR -- Convergence problem in transient analysis at Time =  60.00E-12
+         Time step =  2.159E-21, minimum allowable step size =  5.000E-21
 
- ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
+  These voltages failed to converge:
+
+    V(OUT)                    =    -4.356V  \    -3.773V
+    V(N39991)                 =    -3.262V  \    -2.523V
+
+  These supply currents failed to converge:
+
+    I(V_VDD)                  =  -150.97KA  \  -150.76KA
+    I(V_VIN)                  =   124.74KA  \   204.11KA
+
+  These devices failed to converge:
+    M_M6      M_M2      
+
+ERROR -- Discontinuing simulation due to convergence problem
 
 
- ****     JOB STATISTICS SUMMARY
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-******************************************************************************
+(  IN1) 660.0E-12  (  OUT)   -4.3557  (N39971)    3.3000 (N39991)   -3.2623 
 
 
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 5e-009
+**** Param: TMAX = 0
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 10
 
-  Total job time (using Solver 1)   =         .89
-
+ **** Published Runtime Parameters *****************************
+                                                               
+                                       ABSTOL =      1.0000E-12
+                                         GMIN =      1.0000E-12
+                                         ITL1 =      1.5000E+02
+                                         ITL2 =      2.0000E+01
+                                         ITL4 =      1.0000E+01
+                                       RELTOL =      1.0000E-03
+                                       RUNFOR =      0.0000E+00
+                                         TMAX =      0.0000E+00
+                                        TSTOP =      5.0000E-09
+                                     V_VDD.ac =      0.0000E+00
+                                V_VDD.acphase =      0.0000E+00
+                                     V_VDD.dc =      3.3000E+00
+                                     V_VIN.ac =      0.0000E+00
+                                V_VIN.acphase =      0.0000E+00
+                                     V_VIN.dc =      0.0000E+00
+                                        VNTOL =      1.0000E-06
+                                               
+               
+
+ERROR -- Convergence problem in transient analysis at Time =  60.00E-12
+         Time step =  2.159E-21, minimum allowable step size =  5.000E-21
+
+  These voltages failed to converge:
+
+    V(OUT)                    =    -4.356V  \    -3.773V
+    V(N39991)                 =    -3.262V  \    -2.523V
+
+  These supply currents failed to converge:
+
+    I(V_VDD)                  =  -150.97KA  \  -150.76KA
+    I(V_VIN)                  =   124.74KA  \   204.11KA
+
+  These devices failed to converge:
+    M_M6      M_M2      
+
+ERROR -- Discontinuing simulation due to convergence problem
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN1) 660.0E-12  (  OUT)   -4.3557  (N39971)    3.3000 (N39991)   -3.2623 
+
+
+**** Interrupt ****

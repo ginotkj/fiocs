@@ -1,5 +1,5 @@
 
-**** 02/13/10 20:50:38 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/16/10 10:52:46 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 77668176 *
 
  ** Profile: "NAND-2-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-2\transient.sim ] 
 
@@ -53,7 +53,7 @@ WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
-**** 02/13/10 20:50:38 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/16/10 10:52:46 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 77668176 *
 
  ** Profile: "NAND-2-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-2\transient.sim ] 
 
@@ -171,7 +171,7 @@ WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
-**** 02/13/10 20:50:38 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/16/10 10:52:46 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 77668176 *
 
  ** Profile: "NAND-2-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-2\transient.sim ] 
 
@@ -203,7 +203,7 @@ WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
 
           JOB CONCLUDED
 
-**** 02/13/10 20:50:38 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 02/16/10 10:52:46 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 77668176 *
 
  ** Profile: "NAND-2-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-2\transient.sim ] 
 
@@ -215,5 +215,5 @@ WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =         .16
+  Total job time (using Solver 1)   =         .11
 

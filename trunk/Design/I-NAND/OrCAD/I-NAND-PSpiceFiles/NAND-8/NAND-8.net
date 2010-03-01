@@ -20,6 +20,8 @@ M_M1         OUT IN1 N67495 0 CMOSN
 M_M6         N66385 IN1 N66425 0 CMOSN  
 + L=.18u  
 + W=.18u         
+V_VIN         IN1 0  
++PULSE 0 3.3 10p 0 0 100p 150p
 M_M7         N66425 IN1 N66937 0 CMOSN  
 + L=.18u  
 + W=.18u         
@@ -39,7 +41,6 @@ M_M3         OUT IN1 N66465 N66465 CMOSP
 M_M14         N67213 IN1 N66527 0 CMOSN  
 + L=.18u  
 + W=.18u         
-V_VIN         IN1 0 3.3
 M_M8         OUT IN1 N66465 N66465 CMOSP  
 + L=.18u  
 + W=.2u         
