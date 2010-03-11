@@ -128,13 +128,6 @@ N 48000 45100 48000 44500 4
 N 48000 44500 47400 44500 4
 N 45000 49200 45000 49500 4
 N 45000 48900 45000 49200 4
-C 43000 45000 1 0 0 in-1.sym
-{
-T 43000 45300 5 10 0 0 0 0 1
-device=INPUT
-T 43000 45300 5 10 1 1 0 0 1
-refdes=Vbias
-}
 T 54100 40100 9 10 1 0 0 0 1
 Facundo J Ferrer
 T 54000 40400 9 10 1 0 0 0 1
@@ -161,7 +154,7 @@ C 45600 46500 1 0 0 spice-subcircuit-IO-1.sym
 T 46500 46900 5 10 0 1 0 0 1
 device=spice-IO
 T 46450 46750 5 10 1 1 0 0 1
-refdes=P4
+refdes=P3
 T 45600 46500 5 10 1 1 0 0 1
 pinlabel=V-
 }
@@ -170,7 +163,7 @@ C 47800 46200 1 0 0 spice-subcircuit-IO-1.sym
 T 48700 46600 5 10 0 1 0 0 1
 device=spice-IO
 T 48650 46450 5 10 1 1 0 0 1
-refdes=P6
+refdes=P4
 T 48300 46700 5 10 1 1 0 0 1
 pinlabel=Vout
 }
@@ -179,7 +172,7 @@ C 45300 49300 1 90 0 spice-subcircuit-IO-1.sym
 T 44900 50200 5 10 0 1 90 0 1
 device=spice-IO
 T 45050 50150 5 10 1 1 90 0 1
-refdes=P8
+refdes=P5
 T 44600 49800 5 10 1 1 180 0 1
 pinlabel=Vdd
 }
@@ -195,3 +188,13 @@ model-name=comp
 N 47400 46500 48000 46500 4
 N 45600 46800 45800 46800 4
 N 42800 46800 42400 46800 4
+C 43600 45400 1 180 0 spice-subcircuit-IO-1.sym
+{
+T 42700 45000 5 10 0 1 180 0 1
+device=spice-IO
+T 42750 45150 5 10 1 1 180 0 1
+refdes=P1
+T 42800 45400 5 10 1 1 0 0 1
+pinlabel=Vbias
+}
+N 43400 45100 43600 45100 4
