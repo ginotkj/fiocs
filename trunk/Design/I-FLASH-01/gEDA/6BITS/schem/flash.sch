@@ -1,4 +1,4 @@
-v 20081231 1
+v 20100214 2
 C 35100 69400 1 0 0 comparador.sym
 {
 T 36275 70395 5 10 0 1 0 0 1
@@ -6,7 +6,7 @@ device=none
 T 36075 70395 5 10 1 1 0 0 1
 refdes=SC1
 T 35100 69400 5 10 0 0 0 0 1
-source=comp.1.sch
+source=comp1.sch
 }
 C 35100 67400 1 0 0 comparador.sym
 {
