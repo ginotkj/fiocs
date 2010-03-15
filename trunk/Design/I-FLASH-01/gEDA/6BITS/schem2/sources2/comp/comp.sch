@@ -145,7 +145,7 @@ C 42600 47100 1 180 0 spice-subcircuit-IO-1.sym
 T 41700 46700 5 10 0 1 180 0 1
 device=spice-IO
 T 41750 46850 5 10 1 1 180 0 1
-refdes=P2
+refdes=P1
 T 41900 47100 5 10 1 1 0 0 1
 pinlabel=V+
 }
@@ -154,7 +154,7 @@ C 45600 46500 1 0 0 spice-subcircuit-IO-1.sym
 T 46500 46900 5 10 0 1 0 0 1
 device=spice-IO
 T 46450 46750 5 10 1 1 0 0 1
-refdes=P3
+refdes=P2
 T 45600 46500 5 10 1 1 0 0 1
 pinlabel=V-
 }
@@ -163,7 +163,7 @@ C 47800 46200 1 0 0 spice-subcircuit-IO-1.sym
 T 48700 46600 5 10 0 1 0 0 1
 device=spice-IO
 T 48650 46450 5 10 1 1 0 0 1
-refdes=P4
+refdes=P5
 T 48300 46700 5 10 1 1 0 0 1
 pinlabel=Vout
 }
@@ -172,7 +172,7 @@ C 45300 49300 1 90 0 spice-subcircuit-IO-1.sym
 T 44900 50200 5 10 0 1 90 0 1
 device=spice-IO
 T 45050 50150 5 10 1 1 90 0 1
-refdes=P5
+refdes=P3
 T 44600 49800 5 10 1 1 180 0 1
 pinlabel=Vdd
 }
@@ -193,7 +193,7 @@ C 43600 45400 1 180 0 spice-subcircuit-IO-1.sym
 T 42700 45000 5 10 0 1 180 0 1
 device=spice-IO
 T 42750 45150 5 10 1 1 180 0 1
-refdes=P1
+refdes=P4
 T 42800 45400 5 10 1 1 0 0 1
 pinlabel=Vbias
 }
