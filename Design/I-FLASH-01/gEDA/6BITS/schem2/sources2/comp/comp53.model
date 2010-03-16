@@ -1,0 +1,11 @@
+.SUBCKT comp-model-53 7 4 6 8 2 
+*==============  Begin SPICE netlist of main design ============
+M6 8 5 2 2 pmos4  l=0.8u w=10u
+M7 8 7 0 0 nmos4  l=0.8u w=3u
+M5 3 7 0 0 nmos4  l=0.8u w=3u
+M4 3 6 5 0 nmos4  l=0.8u w=3u
+M2 5 1 2 2 pmos4  l=0.8u w=10u
+M3 1 4 3 0 nmos4  l=0.8u w=3u
+M1 2 1 1 2 pmos4  l=0.8u w=10u
+.ends comp-model-53
+*******************************
