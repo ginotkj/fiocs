@@ -1,3 +1,6 @@
+* PSpice Model Editor - Version 16.0.0
+
+*$
 .MODEL CMOSN NMOS (                                LEVEL   = 49
 +VERSION = 3.1            TNOM    = 27             TOX     = 4.5E-9
 +XJ      = 1E-7           NCH     = 2.3549E17      VTH0    = 0.2941942
@@ -35,3 +38,4 @@
 +PUB     = 0              PVSAT   = 790.3921888    PETA0   = -6.758848E-5
 +PKETA   = -0.0148729      )
 *
+*$
