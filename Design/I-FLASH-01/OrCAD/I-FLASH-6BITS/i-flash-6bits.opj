@@ -120,16 +120,28 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn")
+         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
-         "Design Cache")
+         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
+         "TEST")
       (Path "Outputs")
       (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"))
+         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
+         "TEST" "TEST"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 0 648 -8 -30 0 368 0 820"))
-      (Tab 0))))
+        (Placement "44 0 1 0 648 -8 -30 0 368 0 820"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 50 1773 50 709")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
+      (Schematic "TEST")
+      (Page "TEST"))))
