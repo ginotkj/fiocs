@@ -1,7 +1,7 @@
+
+**** 03/16/10 19:41:47 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
-**** 02/13/10 19:21:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
-
- ** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
+ ** Profile: "NEG-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -18,11 +18,12 @@
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
-* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.LIB "../../../i-nand-pspicefiles/i-nand.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 5u 0 
+.TRAN  0 10p 0 .01p 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\NEG.net" 
 
@@ -31,25 +32,27 @@
 **** INCLUDING NEG.net ****
 * source I-NAND
 V_VDD         N29931 0 3.3
+V_Vin         IN 0  
++PULSE 0 3.3 1p 0 0 10p 10p
 M_M5         OUT IN N29931 N29931 CMOSP  
 + L=.18u  
 + W=.2u         
 M_M6         OUT IN 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-V_V1         IN 0  
-+SIN 1.5 1.5 1Meg 0 0 0
 
 **** RESUMING transient.cir ****
 .END
 
+Mosfet M_M5, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
+Mosfet M_M6, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
-**** 02/13/10 19:21:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 03/16/10 19:41:47 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
+ ** Profile: "NEG-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -161,13 +164,16 @@ WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
        CJSWG  422.000000E-12  330.000000E-12 
 
 
+Mosfet M_M5, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
+Mosfet M_M6, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
-**** 02/13/10 19:21:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
+WARNING -- Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_Vin
+**** 03/16/10 19:41:47 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
+ ** Profile: "NEG-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -180,7 +186,7 @@ WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(   IN)    1.5000  (  OUT)     .2948  (N29931)    3.3000 
+(   IN)    0.0000  (  OUT)    3.3000  (N29931)    3.3000 
 
 
 
@@ -188,18 +194,18 @@ WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_VDD       -6.105E-05
-    V_V1         0.000E+00
+    V_VDD       -7.804E-10
+    V_Vin        0.000E+00
 
-    TOTAL POWER DISSIPATION   2.01E-04  WATTS
+    TOTAL POWER DISSIPATION   2.58E-09  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 02/13/10 19:21:50 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 03/16/10 19:41:47 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "NEG-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
+ ** Profile: "NEG-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
 
 
  ****     JOB STATISTICS SUMMARY
@@ -209,5 +215,5 @@ WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =         .20
+  Total job time (using Solver 1)   =         .12
 
