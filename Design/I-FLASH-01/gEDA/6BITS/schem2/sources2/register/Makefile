@@ -32,7 +32,7 @@ all: $(DRCFILES) $(CIRFILES)
 
 %.model : %.sch
 	@echo
-	@echo "Generating MODEL file: [$@]"
+	@echo "Generating NET file: [$@]"
 	@$(GNET) $(CIRFLAGS) -o $@ $< >/dev/null 2>&1
 	@echo "Checking for errors in [$@]"
 	@grep -l -v 'No valid value attribute found' $@ >/dev/null 2>&1
