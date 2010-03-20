@@ -2,7 +2,7 @@ v 20100214 2
 C 35100 69400 1 0 0 comparador.sym
 {
 T 36275 70395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 70395 5 10 1 1 0 0 1
 refdes=SC1
 T 35100 69400 5 10 0 0 0 0 1
@@ -11,7 +11,7 @@ source=comp1.sch
 C 35100 67400 1 0 0 comparador.sym
 {
 T 36275 68395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 68395 5 10 1 1 0 0 1
 refdes=SC2
 T 35100 67400 5 10 0 0 0 0 1
@@ -146,7 +146,7 @@ value=10k
 C 35100 65400 1 0 0 comparador.sym
 {
 T 36275 66395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 66395 5 10 1 1 0 0 1
 refdes=SC3
 T 35100 65400 5 10 0 0 0 0 1
@@ -168,7 +168,7 @@ value=10k
 C 35100 63400 1 0 0 comparador.sym
 {
 T 36275 64395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 64395 5 10 1 1 0 0 1
 refdes=SC4
 T 35100 63400 5 10 0 0 0 0 1
@@ -190,7 +190,7 @@ value=10k
 C 35100 61400 1 0 0 comparador.sym
 {
 T 36275 62395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 62395 5 10 1 1 0 0 1
 refdes=SC5
 T 35100 61400 5 10 0 0 0 0 1
@@ -212,7 +212,7 @@ value=10k
 C 35100 59400 1 0 0 comparador.sym
 {
 T 36275 60395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 60395 5 10 1 1 0 0 1
 refdes=SC6
 T 35100 59400 5 10 0 0 0 0 1
@@ -234,7 +234,7 @@ value=10k
 C 35100 57400 1 0 0 comparador.sym
 {
 T 36275 58395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 58395 5 10 1 1 0 0 1
 refdes=SC7
 T 35100 57400 5 10 0 0 0 0 1
@@ -256,7 +256,7 @@ value=10k
 C 35100 55400 1 0 0 comparador.sym
 {
 T 36275 56395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 56395 5 10 1 1 0 0 1
 refdes=SC8
 T 35100 55400 5 10 0 0 0 0 1
@@ -278,7 +278,7 @@ value=10k
 C 35100 53400 1 0 0 comparador.sym
 {
 T 36275 54395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 54395 5 10 1 1 0 0 1
 refdes=SC9
 T 35100 53400 5 10 0 0 0 0 1
@@ -300,7 +300,7 @@ value=10k
 C 35100 51400 1 0 0 comparador.sym
 {
 T 36275 52395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 52395 5 10 1 1 0 0 1
 refdes=SC10
 T 35100 51400 5 10 0 0 0 0 1
@@ -322,7 +322,7 @@ value=10k
 C 35100 49400 1 0 0 comparador.sym
 {
 T 36275 50395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 50395 5 10 1 1 0 0 1
 refdes=SC11
 T 35100 49400 5 10 0 0 0 0 1
@@ -344,7 +344,7 @@ value=10k
 C 35100 47400 1 0 0 comparador.sym
 {
 T 36275 48395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 48395 5 10 1 1 0 0 1
 refdes=SC12
 T 35100 47400 5 10 0 0 0 0 1
@@ -366,7 +366,7 @@ value=10k
 C 35100 45400 1 0 0 comparador.sym
 {
 T 36275 46395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 46395 5 10 1 1 0 0 1
 refdes=SC13
 T 35100 45400 5 10 0 0 0 0 1
@@ -388,7 +388,7 @@ value=10k
 C 35100 43400 1 0 0 comparador.sym
 {
 T 36275 44395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 44395 5 10 1 1 0 0 1
 refdes=SC14
 T 35100 43400 5 10 0 0 0 0 1
@@ -410,7 +410,7 @@ value=10k
 C 35100 41400 1 0 0 comparador.sym
 {
 T 36275 42395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 42395 5 10 1 1 0 0 1
 refdes=SC15
 T 35100 41400 5 10 0 0 0 0 1
@@ -431,7 +431,7 @@ value=10k
 C 35100 39400 1 0 0 comparador.sym
 {
 T 36275 40395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 40395 5 10 1 1 0 0 1
 refdes=SC16
 T 35100 39400 5 10 0 0 0 0 1
@@ -453,7 +453,7 @@ value=10k
 C 35100 37400 1 0 0 comparador.sym
 {
 T 36275 38395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 38395 5 10 1 1 0 0 1
 refdes=SC17
 T 35100 37400 5 10 0 0 0 0 1
@@ -475,7 +475,7 @@ value=10k
 C 35100 35400 1 0 0 comparador.sym
 {
 T 36275 36395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 36395 5 10 1 1 0 0 1
 refdes=SC18
 T 35100 35400 5 10 0 0 0 0 1
@@ -497,7 +497,7 @@ value=10k
 C 35100 33400 1 0 0 comparador.sym
 {
 T 36275 34395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 34395 5 10 1 1 0 0 1
 refdes=SC19
 T 35100 33400 5 10 0 0 0 0 1
@@ -519,7 +519,7 @@ value=10k
 C 35100 31400 1 0 0 comparador.sym
 {
 T 36275 32395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 32395 5 10 1 1 0 0 1
 refdes=SC20
 T 35100 31400 5 10 0 0 0 0 1
@@ -541,7 +541,7 @@ value=10k
 C 35100 29400 1 0 0 comparador.sym
 {
 T 36275 30395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 30395 5 10 1 1 0 0 1
 refdes=SC21
 T 35100 29400 5 10 0 0 0 0 1
@@ -563,7 +563,7 @@ value=10k
 C 35100 27400 1 0 0 comparador.sym
 {
 T 36275 28395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 28395 5 10 1 1 0 0 1
 refdes=SC22
 T 35100 27400 5 10 0 0 0 0 1
@@ -585,7 +585,7 @@ value=10k
 C 35100 25400 1 0 0 comparador.sym
 {
 T 36275 26395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 26395 5 10 1 1 0 0 1
 refdes=SC23
 T 35100 25400 5 10 0 0 0 0 1
@@ -607,7 +607,7 @@ value=10k
 C 35100 23400 1 0 0 comparador.sym
 {
 T 36275 24395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 24395 5 10 1 1 0 0 1
 refdes=SC24
 T 35100 23400 5 10 0 0 0 0 1
@@ -629,7 +629,7 @@ value=10k
 C 35100 21400 1 0 0 comparador.sym
 {
 T 36275 22395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 22395 5 10 1 1 0 0 1
 refdes=SC25
 T 35100 21400 5 10 0 0 0 0 1
@@ -651,7 +651,7 @@ value=10k
 C 35100 19400 1 0 0 comparador.sym
 {
 T 36275 20395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 20395 5 10 1 1 0 0 1
 refdes=SC26
 T 35100 19400 5 10 0 0 0 0 1
@@ -673,7 +673,7 @@ value=10k
 C 35100 17400 1 0 0 comparador.sym
 {
 T 36275 18395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 18395 5 10 1 1 0 0 1
 refdes=SC27
 T 35100 17400 5 10 0 0 0 0 1
@@ -695,7 +695,7 @@ value=10k
 C 35100 15400 1 0 0 comparador.sym
 {
 T 36275 16395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 16395 5 10 1 1 0 0 1
 refdes=SC28
 T 35100 15400 5 10 0 0 0 0 1
@@ -717,7 +717,7 @@ value=10k
 C 35100 13400 1 0 0 comparador.sym
 {
 T 36275 14395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 14395 5 10 1 1 0 0 1
 refdes=SC29
 T 35100 13400 5 10 0 0 0 0 1
@@ -739,7 +739,7 @@ value=10k
 C 35100 11400 1 0 0 comparador.sym
 {
 T 36275 12395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 12395 5 10 1 1 0 0 1
 refdes=SC30
 T 35100 11400 5 10 0 0 0 0 1
@@ -761,7 +761,7 @@ value=10k
 C 35100 9400 1 0 0 comparador.sym
 {
 T 36275 10395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 36075 10495 5 10 1 1 0 0 1
 refdes=SC31
 T 35100 9400 5 10 0 0 0 0 1
@@ -951,7 +951,7 @@ net=Vin:1
 C 60700 52600 1 180 1 deco64.sym
 {
 T 61695 27000 5 10 0 1 180 6 1
-device=none
+device=deco64-model
 T 61795 52400 5 10 1 1 180 6 1
 refdes=S1
 T 60700 52600 5 10 0 0 0 0 1
@@ -960,7 +960,7 @@ source=deco64.sch
 C 41600 70400 1 0 0 comparador.sym
 {
 T 42775 71395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 71395 5 10 1 1 0 0 1
 refdes=SC32
 T 41600 70400 5 10 0 0 0 0 1
@@ -969,7 +969,7 @@ source=comp.32.sch
 C 41600 68400 1 0 0 comparador.sym
 {
 T 42775 69395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 69395 5 10 1 1 0 0 1
 refdes=SC33
 T 41600 68400 5 10 0 0 0 0 1
@@ -1008,7 +1008,7 @@ value=10k
 C 41600 66400 1 0 0 comparador.sym
 {
 T 42775 67395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 67395 5 10 1 1 0 0 1
 refdes=SC34
 T 41600 66400 5 10 0 0 0 0 1
@@ -1030,7 +1030,7 @@ value=10k
 C 41600 64400 1 0 0 comparador.sym
 {
 T 42775 65395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 65395 5 10 1 1 0 0 1
 refdes=SC35
 T 41600 64400 5 10 0 0 0 0 1
@@ -1052,7 +1052,7 @@ value=10k
 C 41600 62400 1 0 0 comparador.sym
 {
 T 42775 63395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 63395 5 10 1 1 0 0 1
 refdes=SC36
 T 41600 62400 5 10 0 0 0 0 1
@@ -1074,7 +1074,7 @@ value=10k
 C 41600 60400 1 0 0 comparador.sym
 {
 T 42775 61395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 61395 5 10 1 1 0 0 1
 refdes=SC37
 T 41600 60400 5 10 0 0 0 0 1
@@ -1096,7 +1096,7 @@ value=10k
 C 41600 58400 1 0 0 comparador.sym
 {
 T 42775 59395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 59395 5 10 1 1 0 0 1
 refdes=SC38
 T 41600 58400 5 10 0 0 0 0 1
@@ -1118,7 +1118,7 @@ value=10k
 C 41600 56400 1 0 0 comparador.sym
 {
 T 42775 57395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 57395 5 10 1 1 0 0 1
 refdes=SC39
 T 41600 56400 5 10 0 0 0 0 1
@@ -1140,7 +1140,7 @@ value=10k
 C 41600 54400 1 0 0 comparador.sym
 {
 T 42775 55395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 55395 5 10 1 1 0 0 1
 refdes=SC40
 T 41600 54400 5 10 0 0 0 0 1
@@ -1162,7 +1162,7 @@ value=10k
 C 41600 52400 1 0 0 comparador.sym
 {
 T 42775 53395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 53395 5 10 1 1 0 0 1
 refdes=SC41
 T 41600 52400 5 10 0 0 0 0 1
@@ -1189,7 +1189,7 @@ value=10k
 C 41600 50400 1 0 0 comparador.sym
 {
 T 42775 51395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 51395 5 10 1 1 0 0 1
 refdes=SC42
 T 41600 50400 5 10 0 0 0 0 1
@@ -1211,7 +1211,7 @@ value=10k
 C 41600 48400 1 0 0 comparador.sym
 {
 T 42775 49395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 49395 5 10 1 1 0 0 1
 refdes=SC43
 T 41600 48400 5 10 0 0 0 0 1
@@ -1233,7 +1233,7 @@ value=10k
 C 41600 46400 1 0 0 comparador.sym
 {
 T 42775 47395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 47395 5 10 1 1 0 0 1
 refdes=SC44
 T 41600 46400 5 10 0 0 0 0 1
@@ -1255,7 +1255,7 @@ value=10k
 C 41600 44400 1 0 0 comparador.sym
 {
 T 42775 45395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 45395 5 10 1 1 0 0 1
 refdes=SC45
 T 41600 44400 5 10 0 0 0 0 1
@@ -1277,7 +1277,7 @@ value=10k
 C 41600 42400 1 0 0 comparador.sym
 {
 T 42775 43395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 43395 5 10 1 1 0 0 1
 refdes=SC46
 T 41600 42400 5 10 0 0 0 0 1
@@ -1298,7 +1298,7 @@ value=10k
 C 41600 40400 1 0 0 comparador.sym
 {
 T 42775 41395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 41395 5 10 1 1 0 0 1
 refdes=SC47
 T 41600 40400 5 10 0 0 0 0 1
@@ -1320,7 +1320,7 @@ value=10k
 C 41600 38400 1 0 0 comparador.sym
 {
 T 42775 39395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 39395 5 10 1 1 0 0 1
 refdes=SC48
 T 41600 38400 5 10 0 0 0 0 1
@@ -1342,7 +1342,7 @@ value=10k
 C 41600 36400 1 0 0 comparador.sym
 {
 T 42775 37395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 37395 5 10 1 1 0 0 1
 refdes=SC49
 T 41600 36400 5 10 0 0 0 0 1
@@ -1364,7 +1364,7 @@ value=10k
 C 41600 34400 1 0 0 comparador.sym
 {
 T 42775 35395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 35395 5 10 1 1 0 0 1
 refdes=SC50
 T 41600 34400 5 10 0 0 0 0 1
@@ -1386,7 +1386,7 @@ value=10k
 C 41600 32400 1 0 0 comparador.sym
 {
 T 42775 33395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 33395 5 10 1 1 0 0 1
 refdes=SC51
 T 41600 32400 5 10 0 0 0 0 1
@@ -1408,7 +1408,7 @@ value=10k
 C 41600 30400 1 0 0 comparador.sym
 {
 T 42775 31395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 31395 5 10 1 1 0 0 1
 refdes=SC52
 T 41600 30400 5 10 0 0 0 0 1
@@ -1430,7 +1430,7 @@ value=10k
 C 41600 28400 1 0 0 comparador.sym
 {
 T 42775 29395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 29395 5 10 1 1 0 0 1
 refdes=SC53
 T 41600 28400 5 10 0 0 0 0 1
@@ -1452,7 +1452,7 @@ value=10k
 C 41600 26400 1 0 0 comparador.sym
 {
 T 42775 27395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 27395 5 10 1 1 0 0 1
 refdes=SC54
 T 41600 26400 5 10 0 0 0 0 1
@@ -1474,7 +1474,7 @@ value=10k
 C 41600 24400 1 0 0 comparador.sym
 {
 T 42775 25395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 25395 5 10 1 1 0 0 1
 refdes=SC55
 T 41600 24400 5 10 0 0 0 0 1
@@ -1496,7 +1496,7 @@ value=10k
 C 41600 22400 1 0 0 comparador.sym
 {
 T 42775 23395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 23395 5 10 1 1 0 0 1
 refdes=SC56
 T 41600 22400 5 10 0 0 0 0 1
@@ -1518,7 +1518,7 @@ value=10k
 C 41600 20400 1 0 0 comparador.sym
 {
 T 42775 21395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 21395 5 10 1 1 0 0 1
 refdes=SC57
 T 41600 20400 5 10 0 0 0 0 1
@@ -1540,7 +1540,7 @@ value=10k
 C 41600 18400 1 0 0 comparador.sym
 {
 T 42775 19395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 19395 5 10 1 1 0 0 1
 refdes=SC58
 T 41600 18400 5 10 0 0 0 0 1
@@ -1562,7 +1562,7 @@ value=10k
 C 41600 16400 1 0 0 comparador.sym
 {
 T 42775 17395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 17395 5 10 1 1 0 0 1
 refdes=SC59
 T 41600 16400 5 10 0 0 0 0 1
@@ -1584,7 +1584,7 @@ value=10k
 C 41600 14400 1 0 0 comparador.sym
 {
 T 42775 15395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 15395 5 10 1 1 0 0 1
 refdes=SC60
 T 41600 14400 5 10 0 0 0 0 1
@@ -1606,7 +1606,7 @@ value=10k
 C 41600 12400 1 0 0 comparador.sym
 {
 T 42775 13395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 13395 5 10 1 1 0 0 1
 refdes=SC61
 T 41600 12400 5 10 0 0 0 0 1
@@ -1628,7 +1628,7 @@ value=10k
 C 41600 10400 1 0 0 comparador.sym
 {
 T 42775 11395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 11495 5 10 1 1 0 0 1
 refdes=SC62
 T 41600 10400 5 10 0 0 0 0 1
@@ -1859,693 +1859,567 @@ device=none
 C 59300 52100 1 0 0 inverter.sym
 {
 T 98595 120095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 52195 5 5 1 1 0 4 1
 refdes=SI1
-T 60295 51995 5 10 0 1 0 0 1
-device=none
 T 59300 52100 5 10 0 1 0 0 1
 source=inv.1.sch
 }
 C 58200 51700 1 0 0 inverter.sym
 {
 T 97495 119695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 51795 5 5 1 1 0 4 1
 refdes=SI2
-T 59195 51595 5 10 0 1 0 0 1
-device=none
 T 58200 51700 5 10 0 1 0 0 1
 source=inv.2.sch
 }
 C 57100 51300 1 0 0 inverter.sym
 {
 T 96395 119295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 51395 5 5 1 1 0 4 1
 refdes=SI3
-T 58095 51195 5 10 0 1 0 0 1
-device=none
 T 57100 51300 5 10 0 1 0 0 1
 source=inv.3.sch
 }
 C 59300 50900 1 0 0 inverter.sym
 {
 T 98595 118895 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 50995 5 5 1 1 0 4 1
 refdes=SI4
-T 60295 50795 5 10 0 1 0 0 1
-device=none
 T 59300 50900 5 10 0 1 0 0 1
 source=inv.4.sch
 }
 C 58200 50500 1 0 0 inverter.sym
 {
 T 97495 118495 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 50595 5 5 1 1 0 4 1
 refdes=SI5
-T 59195 50395 5 10 0 1 0 0 1
-device=none
 T 58200 50500 5 10 0 1 0 0 1
 source=inv.5.sch
 }
 C 57100 50100 1 0 0 inverter.sym
 {
 T 96395 118095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 50195 5 5 1 1 0 4 1
 refdes=SI6
-T 58095 49995 5 10 0 1 0 0 1
-device=none
 T 57100 50100 5 10 0 1 0 0 1
 source=inv.6.sch
 }
 C 59300 49700 1 0 0 inverter.sym
 {
 T 98595 117695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 49795 5 5 1 1 0 4 1
 refdes=SI7
-T 60295 49595 5 10 0 1 0 0 1
-device=none
 T 59300 49700 5 10 0 1 0 0 1
 source=inv.7.sch
 }
 C 58200 49300 1 0 0 inverter.sym
 {
 T 97495 117295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 49395 5 5 1 1 0 4 1
 refdes=SI8
-T 59195 49195 5 10 0 1 0 0 1
-device=none
 T 58200 49300 5 10 0 1 0 0 1
 source=inv.8.sch
 }
 C 57100 48900 1 0 0 inverter.sym
 {
 T 96395 116895 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 48995 5 5 1 1 0 4 1
 refdes=SI9
-T 58095 48795 5 10 0 1 0 0 1
-device=none
 T 57100 48900 5 10 0 1 0 0 1
 source=inv.9.sch
 }
 C 59300 48500 1 0 0 inverter.sym
 {
 T 98595 116495 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 48595 5 5 1 1 0 4 1
 refdes=SI10
-T 60295 48395 5 10 0 1 0 0 1
-device=none
 T 59300 48500 5 10 0 1 0 0 1
 source=inv.10.sch
 }
 C 58200 48100 1 0 0 inverter.sym
 {
 T 97495 116095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 48195 5 5 1 1 0 4 1
 refdes=SI11
-T 59195 47995 5 10 0 1 0 0 1
-device=none
 T 58200 48100 5 10 0 1 0 0 1
 source=inv.11.sch
 }
 C 57100 47700 1 0 0 inverter.sym
 {
 T 96395 115695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 47795 5 5 1 1 0 4 1
 refdes=SI12
-T 58095 47595 5 10 0 1 0 0 1
-device=none
 T 57100 47700 5 10 0 1 0 0 1
 source=inv.12.sch
 }
 C 59300 47300 1 0 0 inverter.sym
 {
 T 98595 115295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 47395 5 5 1 1 0 4 1
 refdes=SI13
-T 60295 47195 5 10 0 1 0 0 1
-device=none
 T 59300 47300 5 10 0 1 0 0 1
 source=inv.13.sch
 }
 C 58200 46900 1 0 0 inverter.sym
 {
 T 97495 114895 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 46995 5 5 1 1 0 4 1
 refdes=SI14
-T 59195 46795 5 10 0 1 0 0 1
-device=none
 T 58200 46900 5 10 0 1 0 0 1
 source=inv.14.sch
 }
 C 57100 46500 1 0 0 inverter.sym
 {
 T 96395 114495 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 46595 5 5 1 1 0 4 1
 refdes=SI15
-T 58095 46395 5 10 0 1 0 0 1
-device=none
 T 57100 46500 5 10 0 1 0 0 1
 source=inv.15.sch
 }
 C 59300 46100 1 0 0 inverter.sym
 {
 T 98595 114095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 46195 5 5 1 1 0 4 1
 refdes=SI16
-T 60295 45995 5 10 0 1 0 0 1
-device=none
 T 59300 46100 5 10 0 1 0 0 1
 source=inv.16.sch
 }
 C 58200 45700 1 0 0 inverter.sym
 {
 T 97495 113695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 45795 5 5 1 1 0 4 1
 refdes=SI17
-T 59195 45595 5 10 0 1 0 0 1
-device=none
 T 58200 45700 5 10 0 1 0 0 1
 source=inv.17.sch
 }
 C 57100 45300 1 0 0 inverter.sym
 {
 T 96395 113295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 45395 5 5 1 1 0 4 1
 refdes=SI18
-T 58095 45195 5 10 0 1 0 0 1
-device=none
 T 57100 45300 5 10 0 1 0 0 1
 source=inv.18.sch
 }
 C 59300 44900 1 0 0 inverter.sym
 {
 T 98595 112895 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 44995 5 5 1 1 0 4 1
 refdes=SI19
-T 60295 44795 5 10 0 1 0 0 1
-device=none
 T 59300 44900 5 10 0 1 0 0 1
 source=inv.19.sch
 }
 C 58200 44500 1 0 0 inverter.sym
 {
 T 97495 112495 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 44595 5 5 1 1 0 4 1
 refdes=SI20
-T 59195 44395 5 10 0 1 0 0 1
-device=none
 T 58200 44500 5 10 0 1 0 0 1
 source=inv.20.sch
 }
 C 57100 44100 1 0 0 inverter.sym
 {
 T 96395 112095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 44195 5 5 1 1 0 4 1
 refdes=SI21
-T 58095 43995 5 10 0 1 0 0 1
-device=none
 T 57100 44100 5 10 0 1 0 0 1
 source=inv.21.sch
 }
 C 59300 43700 1 0 0 inverter.sym
 {
 T 98595 111695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 43795 5 5 1 1 0 4 1
 refdes=SI22
-T 60295 43595 5 10 0 1 0 0 1
-device=none
 T 59300 43700 5 10 0 1 0 0 1
 source=inv.22.sch
 }
 C 58200 43300 1 0 0 inverter.sym
 {
 T 97495 111295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 43395 5 5 1 1 0 4 1
 refdes=SI23
-T 59195 43195 5 10 0 1 0 0 1
-device=none
 T 58200 43300 5 10 0 1 0 0 1
 source=inv.23.sch
 }
 C 57100 42900 1 0 0 inverter.sym
 {
 T 96395 110895 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 42995 5 5 1 1 0 4 1
 refdes=SI24
-T 58095 42795 5 10 0 1 0 0 1
-device=none
 T 57100 42900 5 10 0 1 0 0 1
 source=inv.24.sch
 }
 C 59300 42500 1 0 0 inverter.sym
 {
 T 98595 110495 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 42595 5 5 1 1 0 4 1
 refdes=SI25
-T 60295 42395 5 10 0 1 0 0 1
-device=none
 T 59300 42500 5 10 0 1 0 0 1
 source=inv.25.sch
 }
 C 58200 42100 1 0 0 inverter.sym
 {
 T 97495 110095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 42195 5 5 1 1 0 4 1
 refdes=SI26
-T 59195 41995 5 10 0 1 0 0 1
-device=none
 T 58200 42100 5 10 0 1 0 0 1
 source=inv.26.sch
 }
 C 57100 41700 1 0 0 inverter.sym
 {
 T 96395 109695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 41795 5 5 1 1 0 4 1
 refdes=SI27
-T 58095 41595 5 10 0 1 0 0 1
-device=none
 T 57100 41700 5 10 0 1 0 0 1
 source=inv.27.sch
 }
 C 59300 41300 1 0 0 inverter.sym
 {
 T 98595 109295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 41395 5 5 1 1 0 4 1
 refdes=SI28
-T 60295 41195 5 10 0 1 0 0 1
-device=none
 T 59300 41300 5 10 0 1 0 0 1
 source=inv.28.sch
 }
 C 58200 40900 1 0 0 inverter.sym
 {
 T 97495 108895 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 40995 5 5 1 1 0 4 1
 refdes=SI29
-T 59195 40795 5 10 0 1 0 0 1
-device=none
 T 58200 40900 5 10 0 1 0 0 1
 source=inv.29.sch
 }
 C 57100 40500 1 0 0 inverter.sym
 {
 T 96395 108495 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 40595 5 5 1 1 0 4 1
 refdes=SI30
-T 58095 40395 5 10 0 1 0 0 1
-device=none
 T 57100 40500 5 10 0 1 0 0 1
 source=inv.30.sch
 }
 C 59300 40100 1 0 0 inverter.sym
 {
 T 98595 108095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 40195 5 5 1 1 0 4 1
 refdes=SI31
-T 60295 39995 5 10 0 1 0 0 1
-device=none
 T 59300 40100 5 10 0 1 0 0 1
 source=inv.31.sch
 }
 C 58200 39700 1 0 0 inverter.sym
 {
 T 97495 107695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 39795 5 5 1 1 0 4 1
 refdes=SI32
-T 59195 39595 5 10 0 1 0 0 1
-device=none
 T 58200 39700 5 10 0 1 0 0 1
 source=inv.32.sch
 }
 C 57100 39300 1 0 0 inverter.sym
 {
 T 96395 107295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 39395 5 5 1 1 0 4 1
 refdes=SI33
-T 58095 39195 5 10 0 1 0 0 1
-device=none
 T 57100 39300 5 10 0 1 0 0 1
 source=inv.33.sch
 }
 C 59300 38900 1 0 0 inverter.sym
 {
 T 98595 106895 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 38995 5 5 1 1 0 4 1
 refdes=SI34
-T 60295 38795 5 10 0 1 0 0 1
-device=none
 T 59300 38900 5 10 0 1 0 0 1
 source=inv.34.sch
 }
 C 58200 38500 1 0 0 inverter.sym
 {
 T 97495 106495 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 38595 5 5 1 1 0 4 1
 refdes=SI35
-T 59195 38395 5 10 0 1 0 0 1
-device=none
 T 58200 38500 5 10 0 1 0 0 1
 source=inv.35.sch
 }
 C 57100 38100 1 0 0 inverter.sym
 {
 T 96395 106095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 38195 5 5 1 1 0 4 1
 refdes=SI36
-T 58095 37995 5 10 0 1 0 0 1
-device=none
 T 57100 38100 5 10 0 1 0 0 1
 source=inv.36.sch
 }
 C 59300 37700 1 0 0 inverter.sym
 {
 T 98595 105695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 37795 5 5 1 1 0 4 1
 refdes=SI37
-T 60295 37595 5 10 0 1 0 0 1
-device=none
 T 59300 37700 5 10 0 1 0 0 1
 source=inv.37.sch
 }
 C 58200 37300 1 0 0 inverter.sym
 {
 T 97495 105295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 37395 5 5 1 1 0 4 1
 refdes=SI38
-T 59195 37195 5 10 0 1 0 0 1
-device=none
 T 58200 37300 5 10 0 1 0 0 1
 source=inv.38.sch
 }
 C 57100 36900 1 0 0 inverter.sym
 {
 T 96395 104895 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 36995 5 5 1 1 0 4 1
 refdes=SI39
-T 58095 36795 5 10 0 1 0 0 1
-device=none
 T 57100 36900 5 10 0 1 0 0 1
 source=inv.39.sch
 }
 C 59300 36500 1 0 0 inverter.sym
 {
 T 98595 104495 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 36595 5 5 1 1 0 4 1
 refdes=SI40
-T 60295 36395 5 10 0 1 0 0 1
-device=none
 T 59300 36500 5 10 0 1 0 0 1
 source=inv.40.sch
 }
 C 58200 36100 1 0 0 inverter.sym
 {
 T 97495 104095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 36195 5 5 1 1 0 4 1
 refdes=SI41
-T 59195 35995 5 10 0 1 0 0 1
-device=none
 T 58200 36100 5 10 0 1 0 0 1
 source=inv.41.sch
 }
 C 57100 35700 1 0 0 inverter.sym
 {
 T 96395 103695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 35795 5 5 1 1 0 4 1
 refdes=SI42
-T 58095 35595 5 10 0 1 0 0 1
-device=none
 T 57100 35700 5 10 0 1 0 0 1
 source=inv.42.sch
 }
 C 59300 35300 1 0 0 inverter.sym
 {
 T 98595 103295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 35395 5 5 1 1 0 4 1
 refdes=SI43
-T 60295 35195 5 10 0 1 0 0 1
-device=none
 T 59300 35300 5 10 0 1 0 0 1
 source=inv.43.sch
 }
 C 58200 34900 1 0 0 inverter.sym
 {
 T 97495 102895 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 34995 5 5 1 1 0 4 1
 refdes=SI44
-T 59195 34795 5 10 0 1 0 0 1
-device=none
 T 58200 34900 5 10 0 1 0 0 1
 source=inv.44.sch
 }
 C 57100 34500 1 0 0 inverter.sym
 {
 T 96395 102495 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 34595 5 5 1 1 0 4 1
 refdes=SI45
-T 58095 34395 5 10 0 1 0 0 1
-device=none
 T 57100 34500 5 10 0 1 0 0 1
 source=inv.45.sch
 }
 C 59300 34100 1 0 0 inverter.sym
 {
 T 98595 102095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 34195 5 5 1 1 0 4 1
 refdes=SI46
-T 60295 33995 5 10 0 1 0 0 1
-device=none
 T 59300 34100 5 10 0 1 0 0 1
 source=inv.46.sch
 }
 C 58200 33700 1 0 0 inverter.sym
 {
 T 97495 101695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 33795 5 5 1 1 0 4 1
 refdes=SI47
-T 59195 33595 5 10 0 1 0 0 1
-device=none
 T 58200 33700 5 10 0 1 0 0 1
 source=inv.47.sch
 }
 C 57100 33300 1 0 0 inverter.sym
 {
 T 96395 101295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 33395 5 5 1 1 0 4 1
 refdes=SI48
-T 58095 33195 5 10 0 1 0 0 1
-device=none
 T 57100 33300 5 10 0 1 0 0 1
 source=inv.48.sch
 }
 C 59300 32900 1 0 0 inverter.sym
 {
 T 98595 100895 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 32995 5 5 1 1 0 4 1
 refdes=SI49
-T 60295 32795 5 10 0 1 0 0 1
-device=none
 T 59300 32900 5 10 0 1 0 0 1
 source=inv.49.sch
 }
 C 58200 32500 1 0 0 inverter.sym
 {
 T 97495 100495 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 32595 5 5 1 1 0 4 1
 refdes=SI50
-T 59195 32395 5 10 0 1 0 0 1
-device=none
 T 58200 32500 5 10 0 1 0 0 1
 source=inv.50.sch
 }
 C 57100 32100 1 0 0 inverter.sym
 {
 T 96395 100095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 32195 5 5 1 1 0 4 1
 refdes=SI51
-T 58095 31995 5 10 0 1 0 0 1
-device=none
 T 57100 32100 5 10 0 1 0 0 1
 source=inv.51.sch
 }
 C 59300 31700 1 0 0 inverter.sym
 {
 T 98595 99695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 31795 5 5 1 1 0 4 1
 refdes=SI52
-T 60295 31595 5 10 0 1 0 0 1
-device=none
 T 59300 31700 5 10 0 1 0 0 1
 source=inv.52.sch
 }
 C 58200 31300 1 0 0 inverter.sym
 {
 T 97495 99295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 31395 5 5 1 1 0 4 1
 refdes=SI53
-T 59195 31195 5 10 0 1 0 0 1
-device=none
 T 58200 31300 5 10 0 1 0 0 1
 source=inv.53.sch
 }
 C 57100 30900 1 0 0 inverter.sym
 {
 T 96395 98895 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 30995 5 5 1 1 0 4 1
 refdes=SI54
-T 58095 30795 5 10 0 1 0 0 1
-device=none
 T 57100 30900 5 10 0 1 0 0 1
 source=inv.54.sch
 }
 C 59300 30500 1 0 0 inverter.sym
 {
 T 98595 98495 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 30595 5 5 1 1 0 4 1
 refdes=SI55
-T 60295 30395 5 10 0 1 0 0 1
-device=none
 T 59300 30500 5 10 0 1 0 0 1
 source=inv.55.sch
 }
 C 58200 30100 1 0 0 inverter.sym
 {
 T 97495 98095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 30195 5 5 1 1 0 4 1
 refdes=SI56
-T 59195 29995 5 10 0 1 0 0 1
-device=none
 T 58200 30100 5 10 0 1 0 0 1
 source=inv.56.sch
 }
 C 57100 29700 1 0 0 inverter.sym
 {
 T 96395 97695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 29795 5 5 1 1 0 4 1
 refdes=SI57
-T 58095 29595 5 10 0 1 0 0 1
-device=none
 T 57100 29700 5 10 0 1 0 0 1
 source=inv.57.sch
 }
 C 59300 29300 1 0 0 inverter.sym
 {
 T 98595 97295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 29395 5 5 1 1 0 4 1
 refdes=SI58
-T 60295 29195 5 10 0 1 0 0 1
-device=none
 T 59300 29300 5 10 0 1 0 0 1
 source=inv.58.sch
 }
 C 58200 28900 1 0 0 inverter.sym
 {
 T 97495 96895 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 28995 5 5 1 1 0 4 1
 refdes=SI59
-T 59195 28795 5 10 0 1 0 0 1
-device=none
 T 58200 28900 5 10 0 1 0 0 1
 source=inv.59.sch
 }
 C 57100 28500 1 0 0 inverter.sym
 {
 T 96395 96495 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 28595 5 5 1 1 0 4 1
 refdes=SI60
-T 58095 28395 5 10 0 1 0 0 1
-device=none
 T 57100 28500 5 10 0 1 0 0 1
 source=inv.60.sch
 }
 C 59300 28100 1 0 0 inverter.sym
 {
 T 98595 96095 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 59795 28195 5 5 1 1 0 4 1
 refdes=SI61
-T 60295 27995 5 10 0 1 0 0 1
-device=none
 T 59300 28100 5 10 0 1 0 0 1
 source=inv.61.sch
 }
 C 58200 27700 1 0 0 inverter.sym
 {
 T 97495 95695 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 58695 27795 5 5 1 1 0 4 1
 refdes=SI62
-T 59195 27595 5 10 0 1 0 0 1
-device=none
 T 58200 27700 5 10 0 1 0 0 1
 source=inv.62.sch
 }
 C 57100 27300 1 0 0 inverter.sym
 {
 T 96395 95295 5 10 0 1 0 0 1
-device=none
+device=inv-model
 T 57595 27395 5 5 1 1 0 4 1
 refdes=SI63
-T 58095 27195 5 10 0 1 0 0 1
-device=none
 T 57100 27300 5 10 0 1 0 0 1
 source=inv.63.sch
 }
@@ -3090,7 +2964,7 @@ N 47100 34000 47100 39400 4
 C 41600 8400 1 0 0 comparador.sym
 {
 T 42775 9395 5 10 0 1 0 0 1
-device=none
+device=comp-model
 T 42575 9495 5 10 1 1 0 0 1
 refdes=SC63
 T 41600 8400 5 10 0 0 0 0 1
