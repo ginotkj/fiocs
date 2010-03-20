@@ -5,11 +5,11 @@ N 48200 46900 48400 46900 4
 T 51800 40900 9 16 1 0 0 0 1
 Inverter Gate
 T 50100 40400 9 10 1 0 0 0 1
-<filename>
+inv38.sch
 T 50500 40100 9 10 1 0 0 0 1
-current_page
+38
 T 52200 40100 9 10 1 0 0 0 1
-total_pages
+63
 T 54200 40400 9 10 1 0 0 0 1
 1
 T 54300 40100 9 10 1 0 0 0 1
@@ -57,7 +57,7 @@ device=spice-subcircuit-LL
 T 45100 47700 5 10 1 1 0 0 1
 refdes=A1
 T 45100 47400 5 10 1 1 0 0 1
-model-name=inv
+model-name=inv38
 }
 C 47700 46500 1 180 0 spice-subcircuit-IO-1.sym
 {
