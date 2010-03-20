@@ -3198,7 +3198,7 @@ C 63700 38200 1 90 0 resistor-1.sym
 T 63300 38500 5 10 0 0 90 0 1
 device=RESISTOR
 T 63400 38400 5 10 1 1 90 0 1
-refdes=R1
+refdes=R65
 T 63700 38200 5 10 1 1 0 0 1
 value=500k
 }
@@ -3207,7 +3207,7 @@ C 64500 38200 1 90 0 resistor-1.sym
 T 64100 38500 5 10 0 0 90 0 1
 device=RESISTOR
 T 64200 38400 5 10 1 1 90 0 1
-refdes=R2
+refdes=R66
 T 64500 38200 5 10 1 1 0 0 1
 value=500k
 }
@@ -3216,7 +3216,7 @@ C 65300 38200 1 90 0 resistor-1.sym
 T 64900 38500 5 10 0 0 90 0 1
 device=RESISTOR
 T 65000 38400 5 10 1 1 90 0 1
-refdes=R3
+refdes=R67
 T 65300 38200 5 10 1 1 0 0 1
 value=500k
 }
@@ -3225,7 +3225,7 @@ C 66100 38200 1 90 0 resistor-1.sym
 T 65700 38500 5 10 0 0 90 0 1
 device=RESISTOR
 T 65800 38400 5 10 1 1 90 0 1
-refdes=R4
+refdes=R68
 T 66100 38200 5 10 1 1 0 0 1
 value=500k
 }
@@ -3234,7 +3234,7 @@ C 66900 38200 1 90 0 resistor-1.sym
 T 66500 38500 5 10 0 0 90 0 1
 device=RESISTOR
 T 66600 38400 5 10 1 1 90 0 1
-refdes=R5
+refdes=R69
 T 66900 38200 5 10 1 1 0 0 1
 value=500k
 }
@@ -3243,7 +3243,7 @@ C 67700 38200 1 90 0 resistor-1.sym
 T 67300 38500 5 10 0 0 90 0 1
 device=RESISTOR
 T 67400 38400 5 10 1 1 90 0 1
-refdes=R6
+refdes=R70
 T 67700 38200 5 10 1 1 0 0 1
 value=500k
 }
