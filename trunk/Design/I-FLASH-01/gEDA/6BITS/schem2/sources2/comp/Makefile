@@ -18,16 +18,16 @@ DRCFILES := $(patsubst %.sch,%.drc,$(wildcard *.sch))
 CIRFILES := $(patsubst %.sch,%.model,$(wildcard *.sch))
 
 title:
-	@echo "####################################"
-	@echo "#     Starting compiling GATES     #"
-	@echo "####################################"
+	@echo "#########################################"
+	@echo "#     Starting compiling COMPARATORS    #"
+	@echo "#########################################"
 	@make all
 
 all: $(DRCFILES) $(CIRFILES)
 	@echo
-	@echo "####################################"
-	@echo "#      Finish compiling GATES      #"
-	@echo "####################################"
+	@echo "#########################################"
+	@echo "#      Finish compiling COMPARATORS     #"
+	@echo "#########################################"
 
 
 %.model : %.sch

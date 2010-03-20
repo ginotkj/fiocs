@@ -19,14 +19,14 @@ CIRFILES := $(patsubst %.sch,%.model,$(wildcard *.sch))
 
 title:
 	@echo "####################################"
-	@echo "#     Starting compiling GATES     #"
+	@echo "#     Starting compiling DECOS     #"
 	@echo "####################################"
 	@make all
 
 all: $(DRCFILES) $(CIRFILES)
 	@echo
 	@echo "####################################"
-	@echo "#      Finish compiling GATES      #"
+	@echo "#      Finish compiling DECOS      #"
 	@echo "####################################"
 
 
