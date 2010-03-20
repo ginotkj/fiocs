@@ -6,7 +6,7 @@ device=comp-model
 T 36075 70395 5 10 1 1 0 0 1
 refdes=XC1
 T 35100 69400 5 10 0 0 0 0 1
-model-name=comp.model
+model-name=comp1.model
 }
 C 35100 67400 1 0 0 comparador.sym
 {
