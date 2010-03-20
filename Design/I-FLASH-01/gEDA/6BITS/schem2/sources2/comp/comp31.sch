@@ -135,11 +135,11 @@ T 54000 40400 9 10 1 0 0 0 1
 T 52200 41000 9 10 1 0 0 0 1
 Comparator
 T 50100 40400 9 10 1 0 0 0 1
-<filename>
+comp31.sch
 T 50500 40100 9 10 1 0 0 0 1
-current_page
+31
 T 52100 40100 9 10 1 0 0 0 1
-total_pages
+63
 C 42600 47100 1 180 0 spice-subcircuit-IO-1.sym
 {
 T 41700 46700 5 10 0 1 180 0 1
@@ -183,7 +183,7 @@ device=spice-subcircuit-LL
 T 41000 49900 5 10 1 1 0 0 1
 refdes=A1
 T 41000 49600 5 10 1 1 0 0 1
-model-name=comp
+model-name=comp31
 }
 N 47400 46500 48000 46500 4
 N 45600 46800 45800 46800 4
