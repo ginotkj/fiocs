@@ -6,7 +6,7 @@ device=comp-model
 T 36075 70395 5 10 1 1 0 0 1
 refdes=XC1
 T 35100 69400 5 10 0 0 0 0 1
-model-name=comp1.model
+model-name=comp1
 }
 C 35100 67400 1 0 0 comparador.sym
 {
@@ -15,7 +15,7 @@ device=comp-model
 T 36075 68395 5 10 1 1 0 0 1
 refdes=XC2
 T 35100 67400 5 10 0 0 0 0 1
-model-name=comp2.model
+model-name=comp2
 }
 C 34800 69200 1 90 0 resistor-1.sym
 {
@@ -150,7 +150,7 @@ device=comp-model
 T 36075 66395 5 10 1 1 0 0 1
 refdes=XC3
 T 35100 65400 5 10 0 0 0 0 1
-model-name=comp3.model
+model-name=comp3
 }
 N 34700 67300 34700 66200 4
 N 35100 66300 34700 66300 4
@@ -172,7 +172,7 @@ device=comp-model
 T 36075 64395 5 10 1 1 0 0 1
 refdes=XC4
 T 35100 63400 5 10 0 0 0 0 1
-model-name=comp4.model
+model-name=comp4
 }
 N 34700 65300 34700 64200 4
 N 35100 64300 34700 64300 4
@@ -194,7 +194,7 @@ device=comp-model
 T 36075 62395 5 10 1 1 0 0 1
 refdes=XC5
 T 35100 61400 5 10 0 0 0 0 1
-model-name=comp5.model
+model-name=comp5
 }
 N 34700 63300 34700 62200 4
 N 35100 62300 34700 62300 4
@@ -216,7 +216,7 @@ device=comp-model
 T 36075 60395 5 10 1 1 0 0 1
 refdes=XC6
 T 35100 59400 5 10 0 0 0 0 1
-model-name=comp6.model
+model-name=comp6
 }
 N 34700 61300 34700 60200 4
 N 35100 60300 34700 60300 4
@@ -238,7 +238,7 @@ device=comp-model
 T 36075 58395 5 10 1 1 0 0 1
 refdes=XC7
 T 35100 57400 5 10 0 0 0 0 1
-model-name=comp7.model
+model-name=comp7
 }
 N 34700 59300 34700 58200 4
 N 35100 58300 34700 58300 4
@@ -260,7 +260,7 @@ device=comp-model
 T 36075 56395 5 10 1 1 0 0 1
 refdes=XC8
 T 35100 55400 5 10 0 0 0 0 1
-model-name=comp8.model
+model-name=comp8
 }
 N 34700 57300 34700 56200 4
 N 35100 56300 34700 56300 4
@@ -282,7 +282,7 @@ device=comp-model
 T 36075 54395 5 10 1 1 0 0 1
 refdes=XC9
 T 35100 53400 5 10 0 0 0 0 1
-model-name=comp9.model
+model-name=comp9
 }
 N 34700 55300 34700 54200 4
 N 35100 54300 34700 54300 4
@@ -304,7 +304,7 @@ device=comp-model
 T 36075 52395 5 10 1 1 0 0 1
 refdes=XC10
 T 35100 51400 5 10 0 0 0 0 1
-model-name=comp10.model
+model-name=comp10
 }
 N 34700 53300 34700 52200 4
 N 35100 52300 34700 52300 4
@@ -326,7 +326,7 @@ device=comp-model
 T 36075 50395 5 10 1 1 0 0 1
 refdes=XC11
 T 35100 49400 5 10 0 0 0 0 1
-model-name=comp11.model
+model-name=comp11
 }
 N 34700 51300 34700 50200 4
 N 35100 50300 34700 50300 4
@@ -348,7 +348,7 @@ device=comp-model
 T 36075 48395 5 10 1 1 0 0 1
 refdes=XC12
 T 35100 47400 5 10 0 0 0 0 1
-model-name=comp12.model
+model-name=comp12
 }
 N 34700 49300 34700 48200 4
 N 35100 48300 34700 48300 4
@@ -370,7 +370,7 @@ device=comp-model
 T 36075 46395 5 10 1 1 0 0 1
 refdes=XC13
 T 35100 45400 5 10 0 0 0 0 1
-model-name=comp13.model
+model-name=comp13
 }
 N 34700 47300 34700 46200 4
 N 35100 46300 34700 46300 4
@@ -392,7 +392,7 @@ device=comp-model
 T 36075 44395 5 10 1 1 0 0 1
 refdes=XC14
 T 35100 43400 5 10 0 0 0 0 1
-model-name=comp14.model
+model-name=comp14
 }
 N 34700 45300 34700 44200 4
 N 35100 44300 34700 44300 4
@@ -414,7 +414,7 @@ device=comp-model
 T 36075 42395 5 10 1 1 0 0 1
 refdes=XC15
 T 35100 41400 5 10 0 0 0 0 1
-model-name=comp15.model
+model-name=comp15
 }
 N 35100 42300 34700 42300 4
 N 35000 41700 35100 41700 4
@@ -435,7 +435,7 @@ device=comp-model
 T 36075 40395 5 10 1 1 0 0 1
 refdes=XC16
 T 35100 39400 5 10 0 0 0 0 1
-model-name=comp16.model
+model-name=comp16
 }
 N 34700 41300 34700 40200 4
 N 35100 40300 34700 40300 4
@@ -457,7 +457,7 @@ device=comp-model
 T 36075 38395 5 10 1 1 0 0 1
 refdes=XC17
 T 35100 37400 5 10 0 0 0 0 1
-model-name=comp17.model
+model-name=comp17
 }
 N 34700 39300 34700 38200 4
 N 35100 38300 34700 38300 4
@@ -479,7 +479,7 @@ device=comp-model
 T 36075 36395 5 10 1 1 0 0 1
 refdes=XC18
 T 35100 35400 5 10 0 0 0 0 1
-model-name=comp18.model
+model-name=comp18
 }
 N 34700 37300 34700 36200 4
 N 35100 36300 34700 36300 4
@@ -501,7 +501,7 @@ device=comp-model
 T 36075 34395 5 10 1 1 0 0 1
 refdes=XC19
 T 35100 33400 5 10 0 0 0 0 1
-model-name=comp19.model
+model-name=comp19
 }
 N 34700 35300 34700 34200 4
 N 35100 34300 34700 34300 4
@@ -523,7 +523,7 @@ device=comp-model
 T 36075 32395 5 10 1 1 0 0 1
 refdes=XC20
 T 35100 31400 5 10 0 0 0 0 1
-model-name=comp20.model
+model-name=comp20
 }
 N 34700 33300 34700 32200 4
 N 35100 32300 34700 32300 4
@@ -545,7 +545,7 @@ device=comp-model
 T 36075 30395 5 10 1 1 0 0 1
 refdes=XC21
 T 35100 29400 5 10 0 0 0 0 1
-model-name=comp21.model
+model-name=comp21
 }
 N 34700 31300 34700 30200 4
 N 35100 30300 34700 30300 4
@@ -567,7 +567,7 @@ device=comp-model
 T 36075 28395 5 10 1 1 0 0 1
 refdes=XC22
 T 35100 27400 5 10 0 0 0 0 1
-model-name=comp22.model
+model-name=comp22
 }
 N 34700 29300 34700 28200 4
 N 35100 28300 34700 28300 4
@@ -589,7 +589,7 @@ device=comp-model
 T 36075 26395 5 10 1 1 0 0 1
 refdes=XC23
 T 35100 25400 5 10 0 0 0 0 1
-model-name=comp23.model
+model-name=comp23
 }
 N 34700 27300 34700 26200 4
 N 35100 26300 34700 26300 4
@@ -611,7 +611,7 @@ device=comp-model
 T 36075 24395 5 10 1 1 0 0 1
 refdes=XC24
 T 35100 23400 5 10 0 0 0 0 1
-model-name=comp24.model
+model-name=comp24
 }
 N 34700 25300 34700 24200 4
 N 35100 24300 34700 24300 4
@@ -633,7 +633,7 @@ device=comp-model
 T 36075 22395 5 10 1 1 0 0 1
 refdes=XC25
 T 35100 21400 5 10 0 0 0 0 1
-model-name=comp25.model
+model-name=comp25
 }
 N 34700 23300 34700 22200 4
 N 35100 22300 34700 22300 4
@@ -655,7 +655,7 @@ device=comp-model
 T 36075 20395 5 10 1 1 0 0 1
 refdes=XC26
 T 35100 19400 5 10 0 0 0 0 1
-model-name=comp26.model
+model-name=comp26
 }
 N 34700 21300 34700 20200 4
 N 35100 20300 34700 20300 4
@@ -677,7 +677,7 @@ device=comp-model
 T 36075 18395 5 10 1 1 0 0 1
 refdes=XC27
 T 35100 17400 5 10 0 0 0 0 1
-model-name=comp27.model
+model-name=comp27
 }
 N 34700 19300 34700 18200 4
 N 35100 18300 34700 18300 4
@@ -699,7 +699,7 @@ device=comp-model
 T 36075 16395 5 10 1 1 0 0 1
 refdes=XC28
 T 35100 15400 5 10 0 0 0 0 1
-model-name=comp28.model
+model-name=comp28
 }
 N 34700 17300 34700 16200 4
 N 35100 16300 34700 16300 4
@@ -721,7 +721,7 @@ device=comp-model
 T 36075 14395 5 10 1 1 0 0 1
 refdes=XC29
 T 35100 13400 5 10 0 0 0 0 1
-model-name=comp29.model
+model-name=comp29
 }
 N 34700 15300 34700 14200 4
 N 35100 14300 34700 14300 4
@@ -743,7 +743,7 @@ device=comp-model
 T 36075 12395 5 10 1 1 0 0 1
 refdes=XC30
 T 35100 11400 5 10 0 0 0 0 1
-model-name=comp30.model
+model-name=comp30
 }
 N 34700 13300 34700 12200 4
 N 35100 12300 34700 12300 4
@@ -765,7 +765,7 @@ device=comp-model
 T 36075 10495 5 10 1 1 0 0 1
 refdes=XC31
 T 35100 9400 5 10 0 0 0 0 1
-model-name=comp31.model
+model-name=comp31
 }
 N 34700 11300 34700 10200 4
 N 35100 10300 34700 10300 4
@@ -955,7 +955,7 @@ device=deco64-model
 T 61795 52400 5 10 1 1 180 6 1
 refdes=XD1
 T 60700 52600 5 10 0 0 0 0 1
-model-name=deco64.model
+model-name=deco64
 }
 C 41600 70400 1 0 0 comparador.sym
 {
@@ -964,7 +964,7 @@ device=comp-model
 T 42575 71395 5 10 1 1 0 0 1
 refdes=XC32
 T 41600 70400 5 10 0 0 0 0 1
-model-name=comp32.model
+model-name=comp32
 }
 C 41600 68400 1 0 0 comparador.sym
 {
@@ -973,7 +973,7 @@ device=comp-model
 T 42575 69395 5 10 1 1 0 0 1
 refdes=XC33
 T 41600 68400 5 10 0 0 0 0 1
-model-name=comp33.model
+model-name=comp33
 }
 C 41300 70200 1 90 0 resistor-1.sym
 {
@@ -1012,7 +1012,7 @@ device=comp-model
 T 42575 67395 5 10 1 1 0 0 1
 refdes=XC34
 T 41600 66400 5 10 0 0 0 0 1
-model-name=comp34.model
+model-name=comp34
 }
 N 41200 68300 41200 67200 4
 N 41600 67300 41200 67300 4
@@ -1034,7 +1034,7 @@ device=comp-model
 T 42575 65395 5 10 1 1 0 0 1
 refdes=XC35
 T 41600 64400 5 10 0 0 0 0 1
-model-name=comp35.model
+model-name=comp35
 }
 N 41200 66300 41200 65200 4
 N 41600 65300 41200 65300 4
@@ -1056,7 +1056,7 @@ device=comp-model
 T 42575 63395 5 10 1 1 0 0 1
 refdes=XC36
 T 41600 62400 5 10 0 0 0 0 1
-model-name=comp36.model
+model-name=comp36
 }
 N 41200 64300 41200 63200 4
 N 41600 63300 41200 63300 4
@@ -1078,7 +1078,7 @@ device=comp-model
 T 42575 61395 5 10 1 1 0 0 1
 refdes=XC37
 T 41600 60400 5 10 0 0 0 0 1
-model-name=comp37.model
+model-name=comp37
 }
 N 41200 62300 41200 61200 4
 N 41600 61300 41200 61300 4
@@ -1100,7 +1100,7 @@ device=comp-model
 T 42575 59395 5 10 1 1 0 0 1
 refdes=XC38
 T 41600 58400 5 10 0 0 0 0 1
-model-name=comp38.model
+model-name=comp38
 }
 N 41200 60300 41200 59200 4
 N 41600 59300 41200 59300 4
@@ -1122,7 +1122,7 @@ device=comp-model
 T 42575 57395 5 10 1 1 0 0 1
 refdes=XC39
 T 41600 56400 5 10 0 0 0 0 1
-model-name=comp39.model
+model-name=comp39
 }
 N 41200 58300 41200 57200 4
 N 41600 57300 41200 57300 4
@@ -1144,7 +1144,7 @@ device=comp-model
 T 42575 55395 5 10 1 1 0 0 1
 refdes=XC40
 T 41600 54400 5 10 0 0 0 0 1
-model-name=comp40.model
+model-name=comp40
 }
 N 41200 56300 41200 55200 4
 N 41600 55300 41200 55300 4
@@ -1166,7 +1166,7 @@ device=comp-model
 T 42575 53395 5 10 1 1 0 0 1
 refdes=XC41
 T 41600 52400 5 10 0 0 0 0 1
-model-name=comp41.model
+model-name=comp41
 }
 N 41200 54300 41200 53200 4
 N 41600 53300 41200 53300 4
@@ -1193,7 +1193,7 @@ device=comp-model
 T 42575 51395 5 10 1 1 0 0 1
 refdes=XC42
 T 41600 50400 5 10 0 0 0 0 1
-model-name=comp42.model
+model-name=comp42
 }
 N 41200 52300 41200 51200 4
 N 41600 51300 41200 51300 4
@@ -1215,7 +1215,7 @@ device=comp-model
 T 42575 49395 5 10 1 1 0 0 1
 refdes=XC43
 T 41600 48400 5 10 0 0 0 0 1
-model-name=comp43.model
+model-name=comp43
 }
 N 41200 50300 41200 49200 4
 N 41600 49300 41200 49300 4
@@ -1237,7 +1237,7 @@ device=comp-model
 T 42575 47395 5 10 1 1 0 0 1
 refdes=XC44
 T 41600 46400 5 10 0 0 0 0 1
-model-name=comp44.model
+model-name=comp44
 }
 N 41200 48300 41200 47200 4
 N 41600 47300 41200 47300 4
@@ -1259,7 +1259,7 @@ device=comp-model
 T 42575 45395 5 10 1 1 0 0 1
 refdes=XC45
 T 41600 44400 5 10 0 0 0 0 1
-model-name=comp45.model
+model-name=comp45
 }
 N 41200 46300 41200 45200 4
 N 41600 45300 41200 45300 4
@@ -1281,7 +1281,7 @@ device=comp-model
 T 42575 43395 5 10 1 1 0 0 1
 refdes=XC46
 T 41600 42400 5 10 0 0 0 0 1
-model-name=comp46.model
+model-name=comp46
 }
 N 41600 43300 41200 43300 4
 N 41500 42700 41600 42700 4
@@ -1302,7 +1302,7 @@ device=comp-model
 T 42575 41395 5 10 1 1 0 0 1
 refdes=XC47
 T 41600 40400 5 10 0 0 0 0 1
-model-name=comp47.model
+model-name=comp47
 }
 N 41200 42300 41200 41200 4
 N 41600 41300 41200 41300 4
@@ -1324,7 +1324,7 @@ device=comp-model
 T 42575 39395 5 10 1 1 0 0 1
 refdes=XC48
 T 41600 38400 5 10 0 0 0 0 1
-model-name=comp48.model
+model-name=comp48
 }
 N 41200 40300 41200 39200 4
 N 41600 39300 41200 39300 4
@@ -1346,7 +1346,7 @@ device=comp-model
 T 42575 37395 5 10 1 1 0 0 1
 refdes=XC49
 T 41600 36400 5 10 0 0 0 0 1
-model-name=comp49.model
+model-name=comp49
 }
 N 41200 38300 41200 37200 4
 N 41600 37300 41200 37300 4
@@ -1368,7 +1368,7 @@ device=comp-model
 T 42575 35395 5 10 1 1 0 0 1
 refdes=XC50
 T 41600 34400 5 10 0 0 0 0 1
-model-name=comp50.model
+model-name=comp50
 }
 N 41200 36300 41200 35200 4
 N 41600 35300 41200 35300 4
@@ -1390,7 +1390,7 @@ device=comp-model
 T 42575 33395 5 10 1 1 0 0 1
 refdes=XC51
 T 41600 32400 5 10 0 0 0 0 1
-model-name=comp51.model
+model-name=comp51
 }
 N 41200 34300 41200 33200 4
 N 41600 33300 41200 33300 4
@@ -1412,7 +1412,7 @@ device=comp-model
 T 42575 31395 5 10 1 1 0 0 1
 refdes=XC52
 T 41600 30400 5 10 0 0 0 0 1
-model-name=comp52.model
+model-name=comp52
 }
 N 41200 32300 41200 31200 4
 N 41600 31300 41200 31300 4
@@ -1434,7 +1434,7 @@ device=comp-model
 T 42575 29395 5 10 1 1 0 0 1
 refdes=XC53
 T 41600 28400 5 10 0 0 0 0 1
-model-name=comp53.model
+model-name=comp53
 }
 N 41200 30300 41200 29200 4
 N 41600 29300 41200 29300 4
@@ -1456,7 +1456,7 @@ device=comp-model
 T 42575 27395 5 10 1 1 0 0 1
 refdes=XC54
 T 41600 26400 5 10 0 0 0 0 1
-model-name=comp54.model
+model-name=comp54
 }
 N 41200 28300 41200 27200 4
 N 41600 27300 41200 27300 4
@@ -1478,7 +1478,7 @@ device=comp-model
 T 42575 25395 5 10 1 1 0 0 1
 refdes=XC55
 T 41600 24400 5 10 0 0 0 0 1
-model-name=comp55.model
+model-name=comp55
 }
 N 41200 26300 41200 25200 4
 N 41600 25300 41200 25300 4
@@ -1500,7 +1500,7 @@ device=comp-model
 T 42575 23395 5 10 1 1 0 0 1
 refdes=XC56
 T 41600 22400 5 10 0 0 0 0 1
-model-name=comp56.model
+model-name=comp56
 }
 N 41200 24300 41200 23200 4
 N 41600 23300 41200 23300 4
@@ -1522,7 +1522,7 @@ device=comp-model
 T 42575 21395 5 10 1 1 0 0 1
 refdes=XC57
 T 41600 20400 5 10 0 0 0 0 1
-model-name=comp57.model
+model-name=comp57
 }
 N 41200 22300 41200 21200 4
 N 41600 21300 41200 21300 4
@@ -1544,7 +1544,7 @@ device=comp-model
 T 42575 19395 5 10 1 1 0 0 1
 refdes=XC58
 T 41600 18400 5 10 0 0 0 0 1
-model-name=comp58.model
+model-name=comp58
 }
 N 41200 20300 41200 19200 4
 N 41600 19300 41200 19300 4
@@ -1566,7 +1566,7 @@ device=comp-model
 T 42575 17395 5 10 1 1 0 0 1
 refdes=XC59
 T 41600 16400 5 10 0 0 0 0 1
-model-name=comp59.model
+model-name=comp59
 }
 N 41200 18300 41200 17200 4
 N 41600 17300 41200 17300 4
@@ -1588,7 +1588,7 @@ device=comp-model
 T 42575 15395 5 10 1 1 0 0 1
 refdes=XC60
 T 41600 14400 5 10 0 0 0 0 1
-model-name=comp60.model
+model-name=comp60
 }
 N 41200 16300 41200 15200 4
 N 41600 15300 41200 15300 4
@@ -1610,7 +1610,7 @@ device=comp-model
 T 42575 13395 5 10 1 1 0 0 1
 refdes=XC61
 T 41600 12400 5 10 0 0 0 0 1
-model-name=comp61.model
+model-name=comp61
 }
 N 41200 14300 41200 13200 4
 N 41600 13300 41200 13300 4
@@ -1632,7 +1632,7 @@ device=comp-model
 T 42575 11495 5 10 1 1 0 0 1
 refdes=XC62
 T 41600 10400 5 10 0 0 0 0 1
-model-name=comp62.model
+model-name=comp62
 }
 N 41200 12300 41200 11200 4
 N 41600 11300 41200 11300 4
@@ -1863,7 +1863,7 @@ device=inv-model
 T 59795 52195 5 5 1 1 0 4 1
 refdes=XI1
 T 59300 52100 5 10 0 1 0 0 1
-model-name=inv1.model
+model-name=inv1
 }
 C 58200 51700 1 0 0 inverter.sym
 {
@@ -1872,7 +1872,7 @@ device=inv-model
 T 58695 51795 5 5 1 1 0 4 1
 refdes=XI2
 T 58200 51700 5 10 0 1 0 0 1
-model-name=inv2.model
+model-name=inv2
 }
 C 57100 51300 1 0 0 inverter.sym
 {
@@ -1881,7 +1881,7 @@ device=inv-model
 T 57595 51395 5 5 1 1 0 4 1
 refdes=XI3
 T 57100 51300 5 10 0 1 0 0 1
-model-name=inv3.model
+model-name=inv3
 }
 C 59300 50900 1 0 0 inverter.sym
 {
@@ -1890,7 +1890,7 @@ device=inv-model
 T 59795 50995 5 5 1 1 0 4 1
 refdes=XI4
 T 59300 50900 5 10 0 1 0 0 1
-model-name=inv4.model
+model-name=inv4
 }
 C 58200 50500 1 0 0 inverter.sym
 {
@@ -1899,7 +1899,7 @@ device=inv-model
 T 58695 50595 5 5 1 1 0 4 1
 refdes=XI5
 T 58200 50500 5 10 0 1 0 0 1
-model-name=inv5.model
+model-name=inv5
 }
 C 57100 50100 1 0 0 inverter.sym
 {
@@ -1908,7 +1908,7 @@ device=inv-model
 T 57595 50195 5 5 1 1 0 4 1
 refdes=XI6
 T 57100 50100 5 10 0 1 0 0 1
-model-name=inv6.model
+model-name=inv6
 }
 C 59300 49700 1 0 0 inverter.sym
 {
@@ -1917,7 +1917,7 @@ device=inv-model
 T 59795 49795 5 5 1 1 0 4 1
 refdes=XI7
 T 59300 49700 5 10 0 1 0 0 1
-model-name=inv7.model
+model-name=inv7
 }
 C 58200 49300 1 0 0 inverter.sym
 {
@@ -1926,7 +1926,7 @@ device=inv-model
 T 58695 49395 5 5 1 1 0 4 1
 refdes=XI8
 T 58200 49300 5 10 0 1 0 0 1
-model-name=inv8.model
+model-name=inv8
 }
 C 57100 48900 1 0 0 inverter.sym
 {
@@ -1935,7 +1935,7 @@ device=inv-model
 T 57595 48995 5 5 1 1 0 4 1
 refdes=XI9
 T 57100 48900 5 10 0 1 0 0 1
-model-name=inv9.model
+model-name=inv9
 }
 C 59300 48500 1 0 0 inverter.sym
 {
@@ -1944,7 +1944,7 @@ device=inv-model
 T 59795 48595 5 5 1 1 0 4 1
 refdes=XI10
 T 59300 48500 5 10 0 1 0 0 1
-model-name=inv10.model
+model-name=inv10
 }
 C 58200 48100 1 0 0 inverter.sym
 {
@@ -1953,7 +1953,7 @@ device=inv-model
 T 58695 48195 5 5 1 1 0 4 1
 refdes=XI11
 T 58200 48100 5 10 0 1 0 0 1
-model-name=inv11.model
+model-name=inv11
 }
 C 57100 47700 1 0 0 inverter.sym
 {
@@ -1962,7 +1962,7 @@ device=inv-model
 T 57595 47795 5 5 1 1 0 4 1
 refdes=XI12
 T 57100 47700 5 10 0 1 0 0 1
-model-name=inv12.model
+model-name=inv12
 }
 C 59300 47300 1 0 0 inverter.sym
 {
@@ -1971,7 +1971,7 @@ device=inv-model
 T 59795 47395 5 5 1 1 0 4 1
 refdes=XI13
 T 59300 47300 5 10 0 1 0 0 1
-model-name=inv13.model
+model-name=inv13
 }
 C 58200 46900 1 0 0 inverter.sym
 {
@@ -1980,7 +1980,7 @@ device=inv-model
 T 58695 46995 5 5 1 1 0 4 1
 refdes=XI14
 T 58200 46900 5 10 0 1 0 0 1
-model-name=inv14.model
+model-name=inv14
 }
 C 57100 46500 1 0 0 inverter.sym
 {
@@ -1989,7 +1989,7 @@ device=inv-model
 T 57595 46595 5 5 1 1 0 4 1
 refdes=XI15
 T 57100 46500 5 10 0 1 0 0 1
-model-name=inv15.model
+model-name=inv15
 }
 C 59300 46100 1 0 0 inverter.sym
 {
@@ -1998,7 +1998,7 @@ device=inv-model
 T 59795 46195 5 5 1 1 0 4 1
 refdes=XI16
 T 59300 46100 5 10 0 1 0 0 1
-model-name=inv16.model
+model-name=inv16
 }
 C 58200 45700 1 0 0 inverter.sym
 {
@@ -2007,7 +2007,7 @@ device=inv-model
 T 58695 45795 5 5 1 1 0 4 1
 refdes=XI17
 T 58200 45700 5 10 0 1 0 0 1
-model-name=inv17.model
+model-name=inv17
 }
 C 57100 45300 1 0 0 inverter.sym
 {
@@ -2016,7 +2016,7 @@ device=inv-model
 T 57595 45395 5 5 1 1 0 4 1
 refdes=XI18
 T 57100 45300 5 10 0 1 0 0 1
-model-name=inv18.model
+model-name=inv18
 }
 C 59300 44900 1 0 0 inverter.sym
 {
@@ -2025,7 +2025,7 @@ device=inv-model
 T 59795 44995 5 5 1 1 0 4 1
 refdes=XI19
 T 59300 44900 5 10 0 1 0 0 1
-model-name=inv19.model
+model-name=inv19
 }
 C 58200 44500 1 0 0 inverter.sym
 {
@@ -2034,7 +2034,7 @@ device=inv-model
 T 58695 44595 5 5 1 1 0 4 1
 refdes=XI20
 T 58200 44500 5 10 0 1 0 0 1
-model-name=inv20.model
+model-name=inv20
 }
 C 57100 44100 1 0 0 inverter.sym
 {
@@ -2043,7 +2043,7 @@ device=inv-model
 T 57595 44195 5 5 1 1 0 4 1
 refdes=XI21
 T 57100 44100 5 10 0 1 0 0 1
-model-name=inv21.model
+model-name=inv21
 }
 C 59300 43700 1 0 0 inverter.sym
 {
@@ -2052,7 +2052,7 @@ device=inv-model
 T 59795 43795 5 5 1 1 0 4 1
 refdes=XI22
 T 59300 43700 5 10 0 1 0 0 1
-model-name=inv22.model
+model-name=inv22
 }
 C 58200 43300 1 0 0 inverter.sym
 {
@@ -2061,7 +2061,7 @@ device=inv-model
 T 58695 43395 5 5 1 1 0 4 1
 refdes=XI23
 T 58200 43300 5 10 0 1 0 0 1
-model-name=inv23.model
+model-name=inv23
 }
 C 57100 42900 1 0 0 inverter.sym
 {
@@ -2070,7 +2070,7 @@ device=inv-model
 T 57595 42995 5 5 1 1 0 4 1
 refdes=XI24
 T 57100 42900 5 10 0 1 0 0 1
-model-name=inv24.model
+model-name=inv24
 }
 C 59300 42500 1 0 0 inverter.sym
 {
@@ -2079,7 +2079,7 @@ device=inv-model
 T 59795 42595 5 5 1 1 0 4 1
 refdes=XI25
 T 59300 42500 5 10 0 1 0 0 1
-model-name=inv25.model
+model-name=inv25
 }
 C 58200 42100 1 0 0 inverter.sym
 {
@@ -2088,7 +2088,7 @@ device=inv-model
 T 58695 42195 5 5 1 1 0 4 1
 refdes=XI26
 T 58200 42100 5 10 0 1 0 0 1
-model-name=inv26.model
+model-name=inv26
 }
 C 57100 41700 1 0 0 inverter.sym
 {
@@ -2097,7 +2097,7 @@ device=inv-model
 T 57595 41795 5 5 1 1 0 4 1
 refdes=XI27
 T 57100 41700 5 10 0 1 0 0 1
-model-name=inv27.model
+model-name=inv27
 }
 C 59300 41300 1 0 0 inverter.sym
 {
@@ -2106,7 +2106,7 @@ device=inv-model
 T 59795 41395 5 5 1 1 0 4 1
 refdes=XI28
 T 59300 41300 5 10 0 1 0 0 1
-model-name=inv28.model
+model-name=inv28
 }
 C 58200 40900 1 0 0 inverter.sym
 {
@@ -2115,7 +2115,7 @@ device=inv-model
 T 58695 40995 5 5 1 1 0 4 1
 refdes=XI29
 T 58200 40900 5 10 0 1 0 0 1
-model-name=inv29.model
+model-name=inv29
 }
 C 57100 40500 1 0 0 inverter.sym
 {
@@ -2124,7 +2124,7 @@ device=inv-model
 T 57595 40595 5 5 1 1 0 4 1
 refdes=XI30
 T 57100 40500 5 10 0 1 0 0 1
-model-name=inv30.model
+model-name=inv30
 }
 C 59300 40100 1 0 0 inverter.sym
 {
@@ -2133,7 +2133,7 @@ device=inv-model
 T 59795 40195 5 5 1 1 0 4 1
 refdes=XI31
 T 59300 40100 5 10 0 1 0 0 1
-model-name=inv31.model
+model-name=inv31
 }
 C 58200 39700 1 0 0 inverter.sym
 {
@@ -2142,7 +2142,7 @@ device=inv-model
 T 58695 39795 5 5 1 1 0 4 1
 refdes=XI32
 T 58200 39700 5 10 0 1 0 0 1
-model-name=inv32.model
+model-name=inv32
 }
 C 57100 39300 1 0 0 inverter.sym
 {
@@ -2151,7 +2151,7 @@ device=inv-model
 T 57595 39395 5 5 1 1 0 4 1
 refdes=XI33
 T 57100 39300 5 10 0 1 0 0 1
-model-name=inv33.model
+model-name=inv33
 }
 C 59300 38900 1 0 0 inverter.sym
 {
@@ -2160,7 +2160,7 @@ device=inv-model
 T 59795 38995 5 5 1 1 0 4 1
 refdes=XI34
 T 59300 38900 5 10 0 1 0 0 1
-model-name=inv34.model
+model-name=inv34
 }
 C 58200 38500 1 0 0 inverter.sym
 {
@@ -2169,7 +2169,7 @@ device=inv-model
 T 58695 38595 5 5 1 1 0 4 1
 refdes=XI35
 T 58200 38500 5 10 0 1 0 0 1
-model-name=inv35.model
+model-name=inv35
 }
 C 57100 38100 1 0 0 inverter.sym
 {
@@ -2178,7 +2178,7 @@ device=inv-model
 T 57595 38195 5 5 1 1 0 4 1
 refdes=XI36
 T 57100 38100 5 10 0 1 0 0 1
-model-name=inv36.model
+model-name=inv36
 }
 C 59300 37700 1 0 0 inverter.sym
 {
@@ -2187,7 +2187,7 @@ device=inv-model
 T 59795 37795 5 5 1 1 0 4 1
 refdes=XI37
 T 59300 37700 5 10 0 1 0 0 1
-model-name=inv37.model
+model-name=inv37
 }
 C 58200 37300 1 0 0 inverter.sym
 {
@@ -2196,7 +2196,7 @@ device=inv-model
 T 58695 37395 5 5 1 1 0 4 1
 refdes=XI38
 T 58200 37300 5 10 0 1 0 0 1
-model-name=inv38.model
+model-name=inv38
 }
 C 57100 36900 1 0 0 inverter.sym
 {
@@ -2205,7 +2205,7 @@ device=inv-model
 T 57595 36995 5 5 1 1 0 4 1
 refdes=XI39
 T 57100 36900 5 10 0 1 0 0 1
-model-name=inv39.model
+model-name=inv39
 }
 C 59300 36500 1 0 0 inverter.sym
 {
@@ -2214,7 +2214,7 @@ device=inv-model
 T 59795 36595 5 5 1 1 0 4 1
 refdes=XI40
 T 59300 36500 5 10 0 1 0 0 1
-model-name=inv40.model
+model-name=inv40
 }
 C 58200 36100 1 0 0 inverter.sym
 {
@@ -2223,7 +2223,7 @@ device=inv-model
 T 58695 36195 5 5 1 1 0 4 1
 refdes=XI41
 T 58200 36100 5 10 0 1 0 0 1
-model-name=inv41.model
+model-name=inv41
 }
 C 57100 35700 1 0 0 inverter.sym
 {
@@ -2232,7 +2232,7 @@ device=inv-model
 T 57595 35795 5 5 1 1 0 4 1
 refdes=XI42
 T 57100 35700 5 10 0 1 0 0 1
-model-name=inv42.model
+model-name=inv42
 }
 C 59300 35300 1 0 0 inverter.sym
 {
@@ -2241,7 +2241,7 @@ device=inv-model
 T 59795 35395 5 5 1 1 0 4 1
 refdes=XI43
 T 59300 35300 5 10 0 1 0 0 1
-model-name=inv43.model
+model-name=inv43
 }
 C 58200 34900 1 0 0 inverter.sym
 {
@@ -2250,7 +2250,7 @@ device=inv-model
 T 58695 34995 5 5 1 1 0 4 1
 refdes=XI44
 T 58200 34900 5 10 0 1 0 0 1
-model-name=inv44.model
+model-name=inv44
 }
 C 57100 34500 1 0 0 inverter.sym
 {
@@ -2259,7 +2259,7 @@ device=inv-model
 T 57595 34595 5 5 1 1 0 4 1
 refdes=XI45
 T 57100 34500 5 10 0 1 0 0 1
-model-name=inv45.model
+model-name=inv45
 }
 C 59300 34100 1 0 0 inverter.sym
 {
@@ -2268,7 +2268,7 @@ device=inv-model
 T 59795 34195 5 5 1 1 0 4 1
 refdes=XI46
 T 59300 34100 5 10 0 1 0 0 1
-model-name=inv46.model
+model-name=inv46
 }
 C 58200 33700 1 0 0 inverter.sym
 {
@@ -2277,7 +2277,7 @@ device=inv-model
 T 58695 33795 5 5 1 1 0 4 1
 refdes=XI47
 T 58200 33700 5 10 0 1 0 0 1
-model-name=inv47.model
+model-name=inv47
 }
 C 57100 33300 1 0 0 inverter.sym
 {
@@ -2286,7 +2286,7 @@ device=inv-model
 T 57595 33395 5 5 1 1 0 4 1
 refdes=XI48
 T 57100 33300 5 10 0 1 0 0 1
-model-name=inv48.model
+model-name=inv48
 }
 C 59300 32900 1 0 0 inverter.sym
 {
@@ -2295,7 +2295,7 @@ device=inv-model
 T 59795 32995 5 5 1 1 0 4 1
 refdes=XI49
 T 59300 32900 5 10 0 1 0 0 1
-model-name=inv49.model
+model-name=inv49
 }
 C 58200 32500 1 0 0 inverter.sym
 {
@@ -2304,7 +2304,7 @@ device=inv-model
 T 58695 32595 5 5 1 1 0 4 1
 refdes=XI50
 T 58200 32500 5 10 0 1 0 0 1
-model-name=inv50.model
+model-name=inv50
 }
 C 57100 32100 1 0 0 inverter.sym
 {
@@ -2313,7 +2313,7 @@ device=inv-model
 T 57595 32195 5 5 1 1 0 4 1
 refdes=XI51
 T 57100 32100 5 10 0 1 0 0 1
-model-name=inv51.model
+model-name=inv51
 }
 C 59300 31700 1 0 0 inverter.sym
 {
@@ -2322,7 +2322,7 @@ device=inv-model
 T 59795 31795 5 5 1 1 0 4 1
 refdes=XI52
 T 59300 31700 5 10 0 1 0 0 1
-model-name=inv52.model
+model-name=inv52
 }
 C 58200 31300 1 0 0 inverter.sym
 {
@@ -2331,7 +2331,7 @@ device=inv-model
 T 58695 31395 5 5 1 1 0 4 1
 refdes=XI53
 T 58200 31300 5 10 0 1 0 0 1
-model-name=inv53.model
+model-name=inv53
 }
 C 57100 30900 1 0 0 inverter.sym
 {
@@ -2340,7 +2340,7 @@ device=inv-model
 T 57595 30995 5 5 1 1 0 4 1
 refdes=XI54
 T 57100 30900 5 10 0 1 0 0 1
-model-name=inv54.model
+model-name=inv54
 }
 C 59300 30500 1 0 0 inverter.sym
 {
@@ -2349,7 +2349,7 @@ device=inv-model
 T 59795 30595 5 5 1 1 0 4 1
 refdes=XI55
 T 59300 30500 5 10 0 1 0 0 1
-model-name=inv55.model
+model-name=inv55
 }
 C 58200 30100 1 0 0 inverter.sym
 {
@@ -2358,7 +2358,7 @@ device=inv-model
 T 58695 30195 5 5 1 1 0 4 1
 refdes=XI56
 T 58200 30100 5 10 0 1 0 0 1
-model-name=inv56.model
+model-name=inv56
 }
 C 57100 29700 1 0 0 inverter.sym
 {
@@ -2367,7 +2367,7 @@ device=inv-model
 T 57595 29795 5 5 1 1 0 4 1
 refdes=XI57
 T 57100 29700 5 10 0 1 0 0 1
-model-name=inv57.model
+model-name=inv57
 }
 C 59300 29300 1 0 0 inverter.sym
 {
@@ -2376,7 +2376,7 @@ device=inv-model
 T 59795 29395 5 5 1 1 0 4 1
 refdes=XI58
 T 59300 29300 5 10 0 1 0 0 1
-model-name=inv58.model
+model-name=inv58
 }
 C 58200 28900 1 0 0 inverter.sym
 {
@@ -2385,7 +2385,7 @@ device=inv-model
 T 58695 28995 5 5 1 1 0 4 1
 refdes=XI59
 T 58200 28900 5 10 0 1 0 0 1
-model-name=inv59.model
+model-name=inv59
 }
 C 57100 28500 1 0 0 inverter.sym
 {
@@ -2394,7 +2394,7 @@ device=inv-model
 T 57595 28595 5 5 1 1 0 4 1
 refdes=XI60
 T 57100 28500 5 10 0 1 0 0 1
-model-name=inv60.model
+model-name=inv60
 }
 C 59300 28100 1 0 0 inverter.sym
 {
@@ -2403,7 +2403,7 @@ device=inv-model
 T 59795 28195 5 5 1 1 0 4 1
 refdes=XI61
 T 59300 28100 5 10 0 1 0 0 1
-model-name=inv61.model
+model-name=inv61
 }
 C 58200 27700 1 0 0 inverter.sym
 {
@@ -2412,7 +2412,7 @@ device=inv-model
 T 58695 27795 5 5 1 1 0 4 1
 refdes=XI62
 T 58200 27700 5 10 0 1 0 0 1
-model-name=inv62.model
+model-name=inv62
 }
 C 57100 27300 1 0 0 inverter.sym
 {
@@ -2421,7 +2421,7 @@ device=inv-model
 T 57595 27395 5 5 1 1 0 4 1
 refdes=XI63
 T 57100 27300 5 10 0 1 0 0 1
-model-name=inv63.model
+model-name=inv63
 }
 N 57800 27400 60800 27400 4
 N 57800 28600 60800 28600 4
@@ -2968,7 +2968,7 @@ device=comp-model
 T 42575 9495 5 10 1 1 0 0 1
 refdes=XC63
 T 41600 8400 5 10 0 0 0 0 1
-model-name=comp63.model
+model-name=comp63
 }
 C 41900 9600 1 0 0 vdd-1.sym
 N 41500 8700 41600 8700 4
