@@ -94,7 +94,7 @@ C 48400 82600 1 0 0 spice-model-1.sym
 T 48500 83300 5 10 0 1 0 0 1
 device=model
 T 48500 83200 5 10 1 1 0 0 1
-refdes=A1
+refdes=A128
 T 49700 82900 5 10 1 1 0 0 1
 model-name=nmos4
 T 48900 82700 5 10 1 1 0 0 1
@@ -105,7 +105,7 @@ C 48400 81700 1 0 0 spice-model-1.sym
 T 48500 82400 5 10 0 1 0 0 1
 device=model
 T 48500 82300 5 10 1 1 0 0 1
-refdes=A2
+refdes=A129
 T 49700 82000 5 10 1 1 0 0 1
 model-name=pmos4
 T 48900 81800 5 10 1 1 0 0 1
@@ -116,7 +116,7 @@ C 48400 81000 1 0 0 spice-include-1.sym
 T 48500 81300 5 10 0 1 0 0 1
 device=include
 T 48500 81400 5 10 1 1 0 0 1
-refdes=A3
+refdes=A130
 T 48900 81100 5 10 1 1 0 0 1
 file=flash.cmd
 }
@@ -936,7 +936,7 @@ C 35800 61400 1 180 0 generic-power.sym
 T 35600 61150 5 10 1 1 180 3 1
 net=Vbias:1
 }
-N 34700 9300 34700 8600 4
+N 34700 9300 34700 8800 4
 C 35800 9400 1 180 0 generic-power.sym
 {
 T 35600 9150 5 10 1 1 180 3 1
@@ -986,14 +986,14 @@ value=10k
 }
 N 41200 70200 41200 69200 4
 N 41600 69300 41200 69300 4
-N 41200 71500 41200 71100 4
-N 41600 71300 41200 71300 4
+N 41200 71300 41200 71100 4
+N 39500 71300 41600 71300 4
 N 41600 70700 41500 70700 4
 N 41500 68700 41600 68700 4
 N 42900 69000 54900 69000 4
 {
 T 42900 69000 5 10 1 0 0 0 1
-netname=comp33
+netname=net_comp33
 }
 C 41900 69600 1 0 0 vdd-1.sym
 C 41300 68300 1 90 0 resistor-1.sym
@@ -1174,7 +1174,7 @@ N 41500 52700 41600 52700 4
 N 42900 53000 50100 53000 4
 {
 T 42900 53000 5 10 1 0 0 0 1
-netname=comp41
+netname=net_comp41
 }
 C 41900 53600 1 0 0 vdd-1.sym
 C 41300 52300 1 90 0 resistor-1.sym
@@ -1806,56 +1806,20 @@ C 41900 71600 1 0 0 vdd-1.sym
 N 36400 66000 54000 66000 4
 {
 T 36400 66000 5 10 1 0 0 0 1
-netname=comp3
+netname=net_comp3
 }
 N 36400 44000 46200 44000 4
 {
 T 36400 44000 5 10 1 0 0 0 1
-netname=comp14
+netname=net_comp14
 }
 N 36400 46000 45600 46000 4
 {
 T 36400 46000 5 10 1 0 0 0 1
-netname=comp13
+netname=net_comp13
 }
 N 34700 42200 34700 43300 4
 N 41200 43200 41200 44300 4
-C 34800 7200 1 90 0 input-2.sym
-{
-T 34600 7200 5 10 1 0 90 0 1
-net=VREF:1
-T 34100 7800 5 10 0 0 90 0 1
-device=none
-T 34700 7700 5 10 1 1 90 7 1
-value=INPUT
-}
-C 35100 7200 1 90 0 input-2.sym
-{
-T 35300 7200 5 10 1 0 90 0 1
-net=INPUT:1
-T 34400 7800 5 10 0 0 90 0 1
-device=none
-T 35000 7700 5 10 1 1 90 7 1
-value=INPUT
-}
-C 41300 72900 1 90 1 input-2.sym
-{
-T 41100 72900 5 10 1 0 270 2 1
-net=VREF:1
-T 41200 72400 5 10 1 1 270 7 1
-value=INPUT
-T 40600 72300 5 10 0 0 270 2 1
-device=none
-}
-C 41600 72900 1 90 1 input-2.sym
-{
-T 41800 72900 5 10 1 0 270 2 1
-net=INPUT:1
-T 41500 72400 5 10 1 1 270 7 1
-value=INPUT
-T 40900 72300 5 10 0 0 270 2 1
-device=none
-}
 C 59300 52100 1 0 0 inverter.sym
 {
 T 98595 120095 5 10 0 1 0 0 1
@@ -2489,7 +2453,7 @@ N 60000 48600 60800 48600 4
 N 36400 70000 55200 70000 4
 {
 T 36400 70000 5 10 1 0 0 0 1
-netname=comp1
+netname=net_comp1
 }
 N 60800 52400 55200 52400 4
 N 55200 52400 55200 70000 4
@@ -2500,37 +2464,37 @@ N 54600 52000 54600 68000 4
 N 36400 68000 54600 68000 4
 {
 T 36400 68000 5 10 1 0 0 0 1
-netname=comp2
+netname=net_comp2
 }
 N 36400 64000 53400 64000 4
 {
 T 36400 64000 5 10 1 0 0 0 1
-netname=comp4
+netname=net_comp4
 }
 N 36400 62000 52800 62000 4
 {
 T 36400 62000 5 10 1 0 0 0 1
-netname=comp5
+netname=net_comp5
 }
 N 36400 60000 52200 60000 4
 {
 T 36400 60000 5 10 1 0 0 0 1
-netname=comp6
+netname=net_comp6
 }
 N 36400 58000 51600 58000 4
 {
 T 36400 58000 5 10 1 0 0 0 1
-netname=comp7
+netname=net_comp7
 }
 N 36400 56000 51000 56000 4
 {
 T 36400 56000 5 10 1 0 0 0 1
-netname=comp8
+netname=net_comp8
 }
 N 36400 54000 50400 54000 4
 {
 T 36400 54000 5 10 1 0 0 0 1
-netname=comp9
+netname=net_comp9
 }
 N 60800 51600 54000 51600 4
 N 54000 51600 54000 66000 4
@@ -2549,12 +2513,12 @@ N 50400 49200 50400 54000 4
 N 36400 52000 49800 52000 4
 {
 T 36400 52000 5 10 1 0 0 0 1
-netname=comp10
+netname=net_comp10
 }
 N 36400 50000 49200 50000 4
 {
 T 36400 50000 5 10 1 0 0 0 1
-netname=comp11
+netname=net_comp11
 }
 N 60800 48800 49800 48800 4
 N 49800 48800 49800 52000 4
@@ -2563,7 +2527,7 @@ N 49200 48400 49200 50000 4
 N 36400 48000 60800 48000 4
 {
 T 36400 48000 5 10 1 0 0 0 1
-netname=comp12
+netname=net_comp12
 }
 N 58200 51800 57000 51800 4
 N 57000 51800 57000 52000 4
@@ -2596,14 +2560,14 @@ N 46800 46800 46800 42000 4
 N 36400 42000 46800 42000 4
 {
 T 36400 42000 5 10 1 0 0 0 1
-netname=comp15
+netname=net_comp15
 }
 N 60800 46400 47400 46400 4
 N 47400 46400 47400 40000 4
 N 36400 40000 47400 40000 4
 {
 T 36400 40000 5 10 1 0 0 0 1
-netname=comp16
+netname=net_comp16
 }
 N 60800 46000 48000 46000 4
 N 60800 45600 48600 45600 4
@@ -2624,90 +2588,90 @@ N 48000 38000 48000 46000 4
 N 36400 38000 48000 38000 4
 {
 T 36400 38000 5 10 1 0 0 0 1
-netname=comp17
+netname=net_comp17
 }
 N 36400 36000 48600 36000 4
 {
 T 36400 36000 5 10 1 0 0 0 1
-netname=comp18
+netname=net_comp18
 }
 N 48600 36000 48600 45600 4
 N 49200 34600 49200 45200 4
 N 36400 34000 45900 34000 4
 {
 T 36400 34000 5 10 1 0 0 0 1
-netname=comp19
+netname=net_comp19
 }
 N 49800 32000 49800 44800 4
 N 36400 32000 49800 32000 4
 {
 T 36400 32000 5 10 1 0 0 0 1
-netname=comp20
+netname=net_comp20
 }
 N 50400 30000 50400 44400 4
 N 36400 30000 50400 30000 4
 {
 T 36400 30000 5 10 1 0 0 0 1
-netname=comp21
+netname=net_comp21
 }
 N 36400 28000 51000 28000 4
 {
 T 36400 28000 5 10 1 0 0 0 1
-netname=comp22
+netname=net_comp22
 }
 N 51000 28000 51000 44000 4
 N 36400 26000 51600 26000 4
 {
 T 36400 26000 5 10 1 0 0 0 1
-netname=comp23
+netname=net_comp23
 }
 N 51600 26000 51600 43600 4
 N 36400 24000 52200 24000 4
 {
 T 36400 24000 5 10 1 0 0 0 1
-netname=comp24
+netname=net_comp24
 }
 N 52200 24000 52200 43200 4
 N 36400 22000 52800 22000 4
 {
 T 36400 22000 5 10 1 0 0 0 1
-netname=comp25
+netname=net_comp25
 }
 N 52800 22000 52800 42800 4
 N 36400 20000 53400 20000 4
 {
 T 36400 20000 5 10 1 0 0 0 1
-netname=comp26
+netname=net_comp26
 }
 N 53400 20000 53400 42400 4
 N 36400 18000 54000 18000 4
 {
 T 36400 18000 5 10 1 0 0 0 1
-netname=comp27
+netname=net_comp27
 }
 N 54000 18000 54000 42000 4
 N 36400 16000 54600 16000 4
 {
 T 36400 16000 5 10 1 0 0 0 1
-netname=comp28
+netname=net_comp28
 }
 N 54600 16000 54600 41600 4
 N 36400 14000 55200 14000 4
 {
 T 36400 14000 5 10 1 0 0 0 1
-netname=comp29
+netname=net_comp29
 }
 N 55200 14000 55200 41200 4
 N 36400 12000 55800 12000 4
 {
 T 36400 12000 5 10 1 0 0 0 1
-netname=comp30
+netname=net_comp30
 }
 N 55800 12000 55800 40800 4
 N 36400 10000 56400 10000 4
 {
 T 36400 10000 5 10 1 0 0 0 1
-netname=comp31
+netname=net_comp31
 }
 N 56400 10000 56400 40400 4
 N 59300 47400 57000 47400 4
@@ -2751,7 +2715,7 @@ N 57000 40200 57000 40400 4
 N 42900 71000 55500 71000 4
 {
 T 42900 71000 5 10 1 0 0 0 1
-netname=comp32
+netname=net_comp32
 }
 N 55500 40000 55500 71000 4
 N 55500 40000 60800 40000 4
@@ -2764,63 +2728,63 @@ N 60800 37600 51900 37600 4
 N 42900 59000 51900 59000 4
 {
 T 42900 59000 5 10 1 0 0 0 1
-netname=comp38
+netname=net_comp38
 }
 N 51900 37600 51900 59000 4
 N 42900 61000 52500 61000 4
 {
 T 42900 61000 5 10 1 0 0 0 1
-netname=comp37
+netname=net_comp37
 }
 N 52500 38000 52500 61000 4
 N 42900 63000 53100 63000 4
 {
 T 42900 63000 5 10 1 0 0 0 1
-netname=comp36
+netname=net_comp36
 }
 N 53100 38400 53100 63000 4
 N 42900 65000 53700 65000 4
 {
 T 42900 65000 5 10 1 0 0 0 1
-netname=comp35
+netname=net_comp35
 }
 N 53700 38800 53700 65000 4
 N 42900 67000 54300 67000 4
 {
 T 42900 67000 5 10 1 0 0 0 1
-netname=comp34
+netname=net_comp34
 }
 N 54300 39200 54300 67000 4
 N 54900 39600 54900 69000 4
 N 42900 57000 51300 57000 4
 {
 T 42900 57000 5 10 1 0 0 0 1
-netname=comp39
+netname=net_comp39
 }
 N 42900 55000 50700 55000 4
 {
 T 42900 55000 5 10 1 0 0 0 1
-netname=comp40
+netname=net_comp40
 }
 N 42900 51000 49500 51000 4
 {
 T 42900 51000 5 10 1 0 0 0 1
-netname=comp42
+netname=net_comp42
 }
 N 42900 49000 48900 49000 4
 {
 T 42900 49000 5 10 1 0 0 0 1
-netname=comp43
+netname=net_comp43
 }
 N 42900 47000 48300 47000 4
 {
 T 42900 47000 5 10 1 0 0 0 1
-netname=comp44
+netname=net_comp44
 }
 N 42900 45000 47700 45000 4
 {
 T 42900 45000 5 10 1 0 0 0 1
-netname=comp45
+netname=net_comp45
 }
 N 60800 37200 51300 37200 4
 N 51300 37200 51300 57000 4
@@ -2839,22 +2803,22 @@ N 47700 34800 47700 45000 4
 N 42900 43000 47100 43000 4
 {
 T 42900 43000 5 10 1 0 0 0 1
-netname=comp46
+netname=net_comp46
 }
 N 42900 41000 46800 41000 4
 {
 T 42900 41000 5 10 1 0 0 0 1
-netname=comp47
+netname=net_comp47
 }
 N 42900 39000 46800 39000 4
 {
 T 42900 39000 5 10 1 0 0 0 1
-netname=comp48
+netname=net_comp48
 }
 N 42900 37000 46500 37000 4
 {
 T 42900 37000 5 10 1 0 0 0 1
-netname=comp49
+netname=net_comp49
 }
 N 60800 34400 47400 34400 4
 N 47100 39700 47100 43000 4
@@ -2869,40 +2833,40 @@ N 46200 32800 46200 35000 4
 N 42900 35000 46200 35000 4
 {
 T 42900 35000 5 10 1 0 0 0 1
-netname=comp50
+netname=net_comp50
 }
 N 60800 32400 45900 32400 4
 N 45900 32400 45900 33000 4
 N 42900 33000 45900 33000 4
 {
 T 42900 33000 5 10 1 0 0 0 1
-netname=comp51
+netname=net_comp51
 }
 N 42900 11000 56100 11000 4
 {
 T 42900 11000 5 10 1 0 0 0 1
-netname=comp62
+netname=net_comp62
 }
 N 56100 11000 56100 28000 4
 N 42900 13000 55500 13000 4
 {
 T 42900 13000 5 10 1 0 0 0 1
-netname=comp61
+netname=net_comp61
 }
 N 42900 15000 54900 15000 4
 {
 T 42900 15000 5 10 1 0 0 0 1
-netname=comp60
+netname=net_comp60
 }
 N 42900 17000 54300 17000 4
 {
 T 42900 17000 5 10 1 0 0 0 1
-netname=comp59
+netname=net_comp59
 }
 N 42900 19000 53700 19000 4
 {
 T 42900 19000 5 10 1 0 0 0 1
-netname=comp58
+netname=net_comp58
 }
 N 60800 28000 56100 28000 4
 N 60800 28400 55500 28400 4
@@ -2925,35 +2889,35 @@ N 53100 21000 53100 30000 4
 N 42900 21000 53100 21000 4
 {
 T 42900 21000 5 10 1 0 0 0 1
-netname=comp57
+netname=net_comp57
 }
 N 52500 23000 52500 30400 4
 N 42900 23000 52500 23000 4
 {
 T 42900 23000 5 10 1 0 0 0 1
-netname=comp56
+netname=net_comp56
 }
 N 42900 25000 51900 25000 4
 {
 T 42900 25000 5 10 1 0 0 0 1
-netname=comp55
+netname=net_comp55
 }
 N 51300 27000 51300 31200 4
 N 42900 27000 51300 27000 4
 {
 T 42900 27000 5 10 1 0 0 0 1
-netname=comp54
+netname=net_comp54
 }
 N 50700 29000 50700 31600 4
 N 42900 29000 50700 29000 4
 {
 T 42900 29000 5 10 1 0 0 0 1
-netname=comp53
+netname=net_comp53
 }
 N 42900 31000 50100 31000 4
 {
 T 42900 31000 5 10 1 0 0 0 1
-netname=comp52
+netname=net_comp52
 }
 N 49200 34600 45900 34600 4
 N 45900 34600 45900 34000 4
@@ -2988,11 +2952,10 @@ C 42300 8400 1 180 0 generic-power.sym
 T 42100 8150 5 10 1 1 180 3 1
 net=Vbias:1
 }
-C 41100 8000 1 0 0 gnd-1.sym
 N 42900 9000 56700 9000 4
 {
 T 42900 9000 5 10 1 0 0 0 1
-netname=comp63
+netname=net_comp63
 }
 N 56700 9000 56700 27600 4
 N 56700 27600 60800 27600 4
@@ -3341,11 +3304,35 @@ N 66000 38200 66000 35600 4
 N 66800 38200 66800 35600 4
 N 67600 35600 67600 38200 4
 N 62500 36000 63600 36000 4
+{
+T 62500 36000 5 10 1 0 0 0 1
+netname=out_1sb
+}
 N 62500 36400 64400 36400 4
+{
+T 62500 36400 5 10 1 0 0 0 1
+netname=out_2sb
+}
 N 62500 36800 65200 36800 4
+{
+T 62500 36800 5 10 1 0 0 0 1
+netname=out_3sb
+}
 N 62500 37200 66000 37200 4
+{
+T 62500 37200 5 10 1 0 0 0 1
+netname=out_4sb
+}
 N 62500 37600 66800 37600 4
+{
+T 62500 37600 5 10 1 0 0 0 1
+netname=out_5sb
+}
 N 62500 38000 67600 38000 4
+{
+T 62500 38000 5 10 1 0 0 0 1
+netname=out_6sb
+}
 C 34800 71800 1 0 0 generic-power.sym
 {
 T 35000 72050 5 10 1 1 0 3 1
@@ -3365,12 +3352,7 @@ C 43200 82800 1 0 0 generic-power.sym
 T 43400 83050 5 10 1 1 0 3 1
 net=Vref1:1
 }
-C 41700 7600 1 180 0 generic-power.sym
-{
-T 41500 7350 5 10 1 1 180 3 1
-net=Vref2:1
-}
-N 41500 7600 41500 71500 4
+N 41500 8700 41500 71500 4
 C 43200 80300 1 0 0 generic-power.sym
 {
 T 43400 80550 5 10 1 1 0 3 1
@@ -3388,3 +3370,1410 @@ T 43900 79550 5 10 1 1 0 0 1
 value=DC 1V
 }
 C 43300 78800 1 0 0 gnd-1.sym
+C 73000 84200 1 0 0 spice-model-1.sym
+{
+T 73100 84900 5 10 0 1 0 0 1
+device=model
+T 73100 84800 5 10 1 1 0 0 1
+refdes=A1
+T 74300 84500 5 10 1 1 0 0 1
+model-name=comp1
+T 73500 84300 5 10 1 1 0 0 1
+file=sources2/comp/comp1.model
+}
+C 73000 83200 1 0 0 spice-model-1.sym
+{
+T 73100 83900 5 10 0 1 0 0 1
+device=model
+T 73100 83800 5 10 1 1 0 0 1
+refdes=A2
+T 74300 83500 5 10 1 1 0 0 1
+model-name=comp2
+T 73500 83300 5 10 1 1 0 0 1
+file=sources2/comp/comp2.model
+}
+C 73000 82200 1 0 0 spice-model-1.sym
+{
+T 73100 82900 5 10 0 1 0 0 1
+device=model
+T 73100 82800 5 10 1 1 0 0 1
+refdes=A3
+T 74300 82500 5 10 1 1 0 0 1
+model-name=comp3
+T 73500 82300 5 10 1 1 0 0 1
+file=sources2/comp/comp3.model
+}
+C 73000 81200 1 0 0 spice-model-1.sym
+{
+T 73100 81900 5 10 0 1 0 0 1
+device=model
+T 73100 81800 5 10 1 1 0 0 1
+refdes=A4
+T 74300 81500 5 10 1 1 0 0 1
+model-name=comp4
+T 73500 81300 5 10 1 1 0 0 1
+file=sources2/comp/comp4.model
+}
+C 73000 80200 1 0 0 spice-model-1.sym
+{
+T 73100 80900 5 10 0 1 0 0 1
+device=model
+T 73100 80800 5 10 1 1 0 0 1
+refdes=A5
+T 74300 80500 5 10 1 1 0 0 1
+model-name=comp5
+T 73500 80300 5 10 1 1 0 0 1
+file=sources2/comp/comp5.model
+}
+C 73000 79200 1 0 0 spice-model-1.sym
+{
+T 73100 79900 5 10 0 1 0 0 1
+device=model
+T 73100 79800 5 10 1 1 0 0 1
+refdes=A6
+T 74300 79500 5 10 1 1 0 0 1
+model-name=comp6
+T 73500 79300 5 10 1 1 0 0 1
+file=sources2/comp/comp6.model
+}
+C 73000 78200 1 0 0 spice-model-1.sym
+{
+T 73100 78900 5 10 0 1 0 0 1
+device=model
+T 73100 78800 5 10 1 1 0 0 1
+refdes=A7
+T 74300 78500 5 10 1 1 0 0 1
+model-name=comp7
+T 73500 78300 5 10 1 1 0 0 1
+file=sources2/comp/comp7.model
+}
+C 73000 77200 1 0 0 spice-model-1.sym
+{
+T 73100 77900 5 10 0 1 0 0 1
+device=model
+T 73100 77800 5 10 1 1 0 0 1
+refdes=A8
+T 74300 77500 5 10 1 1 0 0 1
+model-name=comp8
+T 73500 77300 5 10 1 1 0 0 1
+file=sources2/comp/comp8.model
+}
+C 73000 76200 1 0 0 spice-model-1.sym
+{
+T 73100 76900 5 10 0 1 0 0 1
+device=model
+T 73100 76800 5 10 1 1 0 0 1
+refdes=A9
+T 74300 76500 5 10 1 1 0 0 1
+model-name=comp9
+T 73500 76300 5 10 1 1 0 0 1
+file=sources2/comp/comp9.model
+}
+C 73000 75200 1 0 0 spice-model-1.sym
+{
+T 73100 75900 5 10 0 1 0 0 1
+device=model
+T 73100 75800 5 10 1 1 0 0 1
+refdes=A10
+T 74300 75500 5 10 1 1 0 0 1
+model-name=comp10
+T 73500 75300 5 10 1 1 0 0 1
+file=sources2/comp/comp10.model
+}
+C 73000 74200 1 0 0 spice-model-1.sym
+{
+T 73100 74900 5 10 0 1 0 0 1
+device=model
+T 73100 74800 5 10 1 1 0 0 1
+refdes=A11
+T 74300 74500 5 10 1 1 0 0 1
+model-name=comp11
+T 73500 74300 5 10 1 1 0 0 1
+file=sources2/comp/comp11.model
+}
+C 73000 73200 1 0 0 spice-model-1.sym
+{
+T 73100 73900 5 10 0 1 0 0 1
+device=model
+T 73100 73800 5 10 1 1 0 0 1
+refdes=A12
+T 74300 73500 5 10 1 1 0 0 1
+model-name=comp12
+T 73500 73300 5 10 1 1 0 0 1
+file=sources2/comp/comp12.model
+}
+C 73000 72200 1 0 0 spice-model-1.sym
+{
+T 73100 72900 5 10 0 1 0 0 1
+device=model
+T 73100 72800 5 10 1 1 0 0 1
+refdes=A13
+T 74300 72500 5 10 1 1 0 0 1
+model-name=comp13
+T 73500 72300 5 10 1 1 0 0 1
+file=sources2/comp/comp13.model
+}
+C 73000 71200 1 0 0 spice-model-1.sym
+{
+T 73100 71900 5 10 0 1 0 0 1
+device=model
+T 73100 71800 5 10 1 1 0 0 1
+refdes=A14
+T 74300 71500 5 10 1 1 0 0 1
+model-name=comp14
+T 73500 71300 5 10 1 1 0 0 1
+file=sources2/comp/comp14.model
+}
+C 73000 70200 1 0 0 spice-model-1.sym
+{
+T 73100 70900 5 10 0 1 0 0 1
+device=model
+T 73100 70800 5 10 1 1 0 0 1
+refdes=A15
+T 74300 70500 5 10 1 1 0 0 1
+model-name=comp15
+T 73500 70300 5 10 1 1 0 0 1
+file=sources2/comp/comp15.model
+}
+C 73000 69200 1 0 0 spice-model-1.sym
+{
+T 73100 69900 5 10 0 1 0 0 1
+device=model
+T 73100 69800 5 10 1 1 0 0 1
+refdes=A16
+T 74300 69500 5 10 1 1 0 0 1
+model-name=comp16
+T 73500 69300 5 10 1 1 0 0 1
+file=sources2/comp/comp16.model
+}
+C 73000 68200 1 0 0 spice-model-1.sym
+{
+T 73100 68900 5 10 0 1 0 0 1
+device=model
+T 73100 68800 5 10 1 1 0 0 1
+refdes=A17
+T 74300 68500 5 10 1 1 0 0 1
+model-name=comp17
+T 73500 68300 5 10 1 1 0 0 1
+file=sources2/comp/comp17.model
+}
+C 73000 67200 1 0 0 spice-model-1.sym
+{
+T 73100 67900 5 10 0 1 0 0 1
+device=model
+T 73100 67800 5 10 1 1 0 0 1
+refdes=A18
+T 74300 67500 5 10 1 1 0 0 1
+model-name=comp18
+T 73500 67300 5 10 1 1 0 0 1
+file=sources2/comp/comp18.model
+}
+C 73000 66200 1 0 0 spice-model-1.sym
+{
+T 73100 66900 5 10 0 1 0 0 1
+device=model
+T 73100 66800 5 10 1 1 0 0 1
+refdes=A19
+T 74300 66500 5 10 1 1 0 0 1
+model-name=comp19
+T 73500 66300 5 10 1 1 0 0 1
+file=sources2/comp/comp19.model
+}
+C 73000 65200 1 0 0 spice-model-1.sym
+{
+T 73100 65900 5 10 0 1 0 0 1
+device=model
+T 73100 65800 5 10 1 1 0 0 1
+refdes=A20
+T 74300 65500 5 10 1 1 0 0 1
+model-name=comp20
+T 73500 65300 5 10 1 1 0 0 1
+file=sources2/comp/comp20.model
+}
+C 73000 64200 1 0 0 spice-model-1.sym
+{
+T 73100 64900 5 10 0 1 0 0 1
+device=model
+T 73100 64800 5 10 1 1 0 0 1
+refdes=A21
+T 74300 64500 5 10 1 1 0 0 1
+model-name=comp21
+T 73500 64300 5 10 1 1 0 0 1
+file=sources2/comp/comp21.model
+}
+C 73000 63200 1 0 0 spice-model-1.sym
+{
+T 73100 63900 5 10 0 1 0 0 1
+device=model
+T 73100 63800 5 10 1 1 0 0 1
+refdes=A22
+T 74300 63500 5 10 1 1 0 0 1
+model-name=comp22
+T 73500 63300 5 10 1 1 0 0 1
+file=sources2/comp/comp22.model
+}
+C 73000 62200 1 0 0 spice-model-1.sym
+{
+T 73100 62900 5 10 0 1 0 0 1
+device=model
+T 73100 62800 5 10 1 1 0 0 1
+refdes=A23
+T 74300 62500 5 10 1 1 0 0 1
+model-name=comp23
+T 73500 62300 5 10 1 1 0 0 1
+file=sources2/comp/comp23.model
+}
+C 73000 61200 1 0 0 spice-model-1.sym
+{
+T 73100 61900 5 10 0 1 0 0 1
+device=model
+T 73100 61800 5 10 1 1 0 0 1
+refdes=A24
+T 74300 61500 5 10 1 1 0 0 1
+model-name=comp24
+T 73500 61300 5 10 1 1 0 0 1
+file=sources2/comp/comp24.model
+}
+C 73000 60200 1 0 0 spice-model-1.sym
+{
+T 73100 60900 5 10 0 1 0 0 1
+device=model
+T 73100 60800 5 10 1 1 0 0 1
+refdes=A25
+T 74300 60500 5 10 1 1 0 0 1
+model-name=comp25
+T 73500 60300 5 10 1 1 0 0 1
+file=sources2/comp/comp25.model
+}
+C 73000 59200 1 0 0 spice-model-1.sym
+{
+T 73100 59900 5 10 0 1 0 0 1
+device=model
+T 73100 59800 5 10 1 1 0 0 1
+refdes=A26
+T 74300 59500 5 10 1 1 0 0 1
+model-name=comp26
+T 73500 59300 5 10 1 1 0 0 1
+file=sources2/comp/comp26.model
+}
+C 73000 58200 1 0 0 spice-model-1.sym
+{
+T 73100 58900 5 10 0 1 0 0 1
+device=model
+T 73100 58800 5 10 1 1 0 0 1
+refdes=A27
+T 74300 58500 5 10 1 1 0 0 1
+model-name=comp27
+T 73500 58300 5 10 1 1 0 0 1
+file=sources2/comp/comp27.model
+}
+C 73000 57200 1 0 0 spice-model-1.sym
+{
+T 73100 57900 5 10 0 1 0 0 1
+device=model
+T 73100 57800 5 10 1 1 0 0 1
+refdes=A28
+T 74300 57500 5 10 1 1 0 0 1
+model-name=comp28
+T 73500 57300 5 10 1 1 0 0 1
+file=sources2/comp/comp28.model
+}
+C 73000 56200 1 0 0 spice-model-1.sym
+{
+T 73100 56900 5 10 0 1 0 0 1
+device=model
+T 73100 56800 5 10 1 1 0 0 1
+refdes=A29
+T 74300 56500 5 10 1 1 0 0 1
+model-name=comp29
+T 73500 56300 5 10 1 1 0 0 1
+file=sources2/comp/comp29.model
+}
+C 73000 55200 1 0 0 spice-model-1.sym
+{
+T 73100 55900 5 10 0 1 0 0 1
+device=model
+T 73100 55800 5 10 1 1 0 0 1
+refdes=A30
+T 74300 55500 5 10 1 1 0 0 1
+model-name=comp30
+T 73500 55300 5 10 1 1 0 0 1
+file=sources2/comp/comp30.model
+}
+C 73000 54200 1 0 0 spice-model-1.sym
+{
+T 73100 54900 5 10 0 1 0 0 1
+device=model
+T 73100 54800 5 10 1 1 0 0 1
+refdes=A31
+T 74300 54500 5 10 1 1 0 0 1
+model-name=comp31
+T 73500 54300 5 10 1 1 0 0 1
+file=sources2/comp/comp31.model
+}
+C 73000 53200 1 0 0 spice-model-1.sym
+{
+T 73100 53900 5 10 0 1 0 0 1
+device=model
+T 73100 53800 5 10 1 1 0 0 1
+refdes=A32
+T 74300 53500 5 10 1 1 0 0 1
+model-name=comp32
+T 73500 53300 5 10 1 1 0 0 1
+file=sources2/comp/comp32.model
+}
+C 73000 52200 1 0 0 spice-model-1.sym
+{
+T 73100 52900 5 10 0 1 0 0 1
+device=model
+T 73100 52800 5 10 1 1 0 0 1
+refdes=A33
+T 74300 52500 5 10 1 1 0 0 1
+model-name=comp33
+T 73500 52300 5 10 1 1 0 0 1
+file=sources2/comp/comp33.model
+}
+C 73000 51200 1 0 0 spice-model-1.sym
+{
+T 73100 51900 5 10 0 1 0 0 1
+device=model
+T 73100 51800 5 10 1 1 0 0 1
+refdes=A34
+T 74300 51500 5 10 1 1 0 0 1
+model-name=comp34
+T 73500 51300 5 10 1 1 0 0 1
+file=sources2/comp/comp34.model
+}
+C 73000 50200 1 0 0 spice-model-1.sym
+{
+T 73100 50900 5 10 0 1 0 0 1
+device=model
+T 73100 50800 5 10 1 1 0 0 1
+refdes=A35
+T 74300 50500 5 10 1 1 0 0 1
+model-name=comp35
+T 73500 50300 5 10 1 1 0 0 1
+file=sources2/comp/comp35.model
+}
+C 73000 49200 1 0 0 spice-model-1.sym
+{
+T 73100 49900 5 10 0 1 0 0 1
+device=model
+T 73100 49800 5 10 1 1 0 0 1
+refdes=A36
+T 74300 49500 5 10 1 1 0 0 1
+model-name=comp36
+T 73500 49300 5 10 1 1 0 0 1
+file=sources2/comp/comp36.model
+}
+C 73000 48200 1 0 0 spice-model-1.sym
+{
+T 73100 48900 5 10 0 1 0 0 1
+device=model
+T 73100 48800 5 10 1 1 0 0 1
+refdes=A37
+T 74300 48500 5 10 1 1 0 0 1
+model-name=comp37
+T 73500 48300 5 10 1 1 0 0 1
+file=sources2/comp/comp37.model
+}
+C 73000 47200 1 0 0 spice-model-1.sym
+{
+T 73100 47900 5 10 0 1 0 0 1
+device=model
+T 73100 47800 5 10 1 1 0 0 1
+refdes=A38
+T 74300 47500 5 10 1 1 0 0 1
+model-name=comp38
+T 73500 47300 5 10 1 1 0 0 1
+file=sources2/comp/comp38.model
+}
+C 73000 46200 1 0 0 spice-model-1.sym
+{
+T 73100 46900 5 10 0 1 0 0 1
+device=model
+T 73100 46800 5 10 1 1 0 0 1
+refdes=A39
+T 74300 46500 5 10 1 1 0 0 1
+model-name=comp39
+T 73500 46300 5 10 1 1 0 0 1
+file=sources2/comp/comp39.model
+}
+C 73000 45200 1 0 0 spice-model-1.sym
+{
+T 73100 45900 5 10 0 1 0 0 1
+device=model
+T 73100 45800 5 10 1 1 0 0 1
+refdes=A40
+T 74300 45500 5 10 1 1 0 0 1
+model-name=comp40
+T 73500 45300 5 10 1 1 0 0 1
+file=sources2/comp/comp40.model
+}
+C 73000 44200 1 0 0 spice-model-1.sym
+{
+T 73100 44900 5 10 0 1 0 0 1
+device=model
+T 73100 44800 5 10 1 1 0 0 1
+refdes=A41
+T 74300 44500 5 10 1 1 0 0 1
+model-name=comp41
+T 73500 44300 5 10 1 1 0 0 1
+file=sources2/comp/comp41.model
+}
+C 73000 43200 1 0 0 spice-model-1.sym
+{
+T 73100 43900 5 10 0 1 0 0 1
+device=model
+T 73100 43800 5 10 1 1 0 0 1
+refdes=A42
+T 74300 43500 5 10 1 1 0 0 1
+model-name=comp42
+T 73500 43300 5 10 1 1 0 0 1
+file=sources2/comp/comp42.model
+}
+C 73000 42200 1 0 0 spice-model-1.sym
+{
+T 73100 42900 5 10 0 1 0 0 1
+device=model
+T 73100 42800 5 10 1 1 0 0 1
+refdes=A43
+T 74300 42500 5 10 1 1 0 0 1
+model-name=comp43
+T 73500 42300 5 10 1 1 0 0 1
+file=sources2/comp/comp43.model
+}
+C 73000 41200 1 0 0 spice-model-1.sym
+{
+T 73100 41900 5 10 0 1 0 0 1
+device=model
+T 73100 41800 5 10 1 1 0 0 1
+refdes=A44
+T 74300 41500 5 10 1 1 0 0 1
+model-name=comp44
+T 73500 41300 5 10 1 1 0 0 1
+file=sources2/comp/comp44.model
+}
+C 73000 40200 1 0 0 spice-model-1.sym
+{
+T 73100 40900 5 10 0 1 0 0 1
+device=model
+T 73100 40800 5 10 1 1 0 0 1
+refdes=A45
+T 74300 40500 5 10 1 1 0 0 1
+model-name=comp45
+T 73500 40300 5 10 1 1 0 0 1
+file=sources2/comp/comp45.model
+}
+C 73000 39200 1 0 0 spice-model-1.sym
+{
+T 73100 39900 5 10 0 1 0 0 1
+device=model
+T 73100 39800 5 10 1 1 0 0 1
+refdes=A46
+T 74300 39500 5 10 1 1 0 0 1
+model-name=comp46
+T 73500 39300 5 10 1 1 0 0 1
+file=sources2/comp/comp46.model
+}
+C 73000 38200 1 0 0 spice-model-1.sym
+{
+T 73100 38900 5 10 0 1 0 0 1
+device=model
+T 73100 38800 5 10 1 1 0 0 1
+refdes=A47
+T 74300 38500 5 10 1 1 0 0 1
+model-name=comp47
+T 73500 38300 5 10 1 1 0 0 1
+file=sources2/comp/comp47.model
+}
+C 73000 37200 1 0 0 spice-model-1.sym
+{
+T 73100 37900 5 10 0 1 0 0 1
+device=model
+T 73100 37800 5 10 1 1 0 0 1
+refdes=A48
+T 74300 37500 5 10 1 1 0 0 1
+model-name=comp48
+T 73500 37300 5 10 1 1 0 0 1
+file=sources2/comp/comp48.model
+}
+C 73000 36200 1 0 0 spice-model-1.sym
+{
+T 73100 36900 5 10 0 1 0 0 1
+device=model
+T 73100 36800 5 10 1 1 0 0 1
+refdes=A49
+T 74300 36500 5 10 1 1 0 0 1
+model-name=comp49
+T 73500 36300 5 10 1 1 0 0 1
+file=sources2/comp/comp49.model
+}
+C 73000 35200 1 0 0 spice-model-1.sym
+{
+T 73100 35900 5 10 0 1 0 0 1
+device=model
+T 73100 35800 5 10 1 1 0 0 1
+refdes=A50
+T 74300 35500 5 10 1 1 0 0 1
+model-name=comp50
+T 73500 35300 5 10 1 1 0 0 1
+file=sources2/comp/comp50.model
+}
+C 73000 34200 1 0 0 spice-model-1.sym
+{
+T 73100 34900 5 10 0 1 0 0 1
+device=model
+T 73100 34800 5 10 1 1 0 0 1
+refdes=A51
+T 74300 34500 5 10 1 1 0 0 1
+model-name=comp51
+T 73500 34300 5 10 1 1 0 0 1
+file=sources2/comp/comp51.model
+}
+C 73000 33200 1 0 0 spice-model-1.sym
+{
+T 73100 33900 5 10 0 1 0 0 1
+device=model
+T 73100 33800 5 10 1 1 0 0 1
+refdes=A52
+T 74300 33500 5 10 1 1 0 0 1
+model-name=comp52
+T 73500 33300 5 10 1 1 0 0 1
+file=sources2/comp/comp52.model
+}
+C 73000 32200 1 0 0 spice-model-1.sym
+{
+T 73100 32900 5 10 0 1 0 0 1
+device=model
+T 73100 32800 5 10 1 1 0 0 1
+refdes=A53
+T 74300 32500 5 10 1 1 0 0 1
+model-name=comp53
+T 73500 32300 5 10 1 1 0 0 1
+file=sources2/comp/comp53.model
+}
+C 73000 31200 1 0 0 spice-model-1.sym
+{
+T 73100 31900 5 10 0 1 0 0 1
+device=model
+T 73100 31800 5 10 1 1 0 0 1
+refdes=A54
+T 74300 31500 5 10 1 1 0 0 1
+model-name=comp54
+T 73500 31300 5 10 1 1 0 0 1
+file=sources2/comp/comp54.model
+}
+C 73000 30200 1 0 0 spice-model-1.sym
+{
+T 73100 30900 5 10 0 1 0 0 1
+device=model
+T 73100 30800 5 10 1 1 0 0 1
+refdes=A55
+T 74300 30500 5 10 1 1 0 0 1
+model-name=comp55
+T 73500 30300 5 10 1 1 0 0 1
+file=sources2/comp/comp55.model
+}
+C 73000 29200 1 0 0 spice-model-1.sym
+{
+T 73100 29900 5 10 0 1 0 0 1
+device=model
+T 73100 29800 5 10 1 1 0 0 1
+refdes=A56
+T 74300 29500 5 10 1 1 0 0 1
+model-name=comp56
+T 73500 29300 5 10 1 1 0 0 1
+file=sources2/comp/comp56.model
+}
+C 73000 28200 1 0 0 spice-model-1.sym
+{
+T 73100 28900 5 10 0 1 0 0 1
+device=model
+T 73100 28800 5 10 1 1 0 0 1
+refdes=A57
+T 74300 28500 5 10 1 1 0 0 1
+model-name=comp57
+T 73500 28300 5 10 1 1 0 0 1
+file=sources2/comp/comp57.model
+}
+C 73000 27200 1 0 0 spice-model-1.sym
+{
+T 73100 27900 5 10 0 1 0 0 1
+device=model
+T 73100 27800 5 10 1 1 0 0 1
+refdes=A58
+T 74300 27500 5 10 1 1 0 0 1
+model-name=comp58
+T 73500 27300 5 10 1 1 0 0 1
+file=sources2/comp/comp58.model
+}
+C 73000 26200 1 0 0 spice-model-1.sym
+{
+T 73100 26900 5 10 0 1 0 0 1
+device=model
+T 73100 26800 5 10 1 1 0 0 1
+refdes=A59
+T 74300 26500 5 10 1 1 0 0 1
+model-name=comp59
+T 73500 26300 5 10 1 1 0 0 1
+file=sources2/comp/comp59.model
+}
+C 73000 25200 1 0 0 spice-model-1.sym
+{
+T 73100 25900 5 10 0 1 0 0 1
+device=model
+T 73100 25800 5 10 1 1 0 0 1
+refdes=A60
+T 74300 25500 5 10 1 1 0 0 1
+model-name=comp60
+T 73500 25300 5 10 1 1 0 0 1
+file=sources2/comp/comp60.model
+}
+C 73000 24200 1 0 0 spice-model-1.sym
+{
+T 73100 24900 5 10 0 1 0 0 1
+device=model
+T 73100 24800 5 10 1 1 0 0 1
+refdes=A61
+T 74300 24500 5 10 1 1 0 0 1
+model-name=comp61
+T 73500 24300 5 10 1 1 0 0 1
+file=sources2/comp/comp61.model
+}
+C 73000 23200 1 0 0 spice-model-1.sym
+{
+T 73100 23900 5 10 0 1 0 0 1
+device=model
+T 73100 23800 5 10 1 1 0 0 1
+refdes=A62
+T 74300 23500 5 10 1 1 0 0 1
+model-name=comp62
+T 73500 23300 5 10 1 1 0 0 1
+file=sources2/comp/comp62.model
+}
+C 73000 22200 1 0 0 spice-model-1.sym
+{
+T 73100 22900 5 10 0 1 0 0 1
+device=model
+T 73100 22800 5 10 1 1 0 0 1
+refdes=A63
+T 74300 22500 5 10 1 1 0 0 1
+model-name=comp63
+T 73500 22300 5 10 1 1 0 0 1
+file=sources2/comp/comp63.model
+}
+C 78000 84200 1 0 0 spice-model-1.sym
+{
+T 78100 84900 5 10 0 1 0 0 1
+device=model
+T 78100 84800 5 10 1 1 0 0 1
+refdes=A64
+T 79300 84500 5 10 1 1 0 0 1
+model-name=inv1
+T 78500 84300 5 10 1 1 0 0 1
+file=sources2/gates/inv1.model
+}
+C 78000 83200 1 0 0 spice-model-1.sym
+{
+T 78100 83900 5 10 0 1 0 0 1
+device=model
+T 78100 83800 5 10 1 1 0 0 1
+refdes=A65
+T 79300 83500 5 10 1 1 0 0 1
+model-name=inv2
+T 78500 83300 5 10 1 1 0 0 1
+file=sources2/gates/inv2.model
+}
+C 78000 82200 1 0 0 spice-model-1.sym
+{
+T 78100 82900 5 10 0 1 0 0 1
+device=model
+T 78100 82800 5 10 1 1 0 0 1
+refdes=A66
+T 79300 82500 5 10 1 1 0 0 1
+model-name=inv3
+T 78500 82300 5 10 1 1 0 0 1
+file=sources2/gates/inv3.model
+}
+C 78000 81200 1 0 0 spice-model-1.sym
+{
+T 78100 81900 5 10 0 1 0 0 1
+device=model
+T 78100 81800 5 10 1 1 0 0 1
+refdes=A67
+T 79300 81500 5 10 1 1 0 0 1
+model-name=inv4
+T 78500 81300 5 10 1 1 0 0 1
+file=sources2/gates/inv4.model
+}
+C 78000 80200 1 0 0 spice-model-1.sym
+{
+T 78100 80900 5 10 0 1 0 0 1
+device=model
+T 78100 80800 5 10 1 1 0 0 1
+refdes=A68
+T 79300 80500 5 10 1 1 0 0 1
+model-name=inv5
+T 78500 80300 5 10 1 1 0 0 1
+file=sources2/gates/inv5.model
+}
+C 78000 79200 1 0 0 spice-model-1.sym
+{
+T 78100 79900 5 10 0 1 0 0 1
+device=model
+T 78100 79800 5 10 1 1 0 0 1
+refdes=A69
+T 79300 79500 5 10 1 1 0 0 1
+model-name=inv6
+T 78500 79300 5 10 1 1 0 0 1
+file=sources2/gates/inv6.model
+}
+C 78000 78200 1 0 0 spice-model-1.sym
+{
+T 78100 78900 5 10 0 1 0 0 1
+device=model
+T 78100 78800 5 10 1 1 0 0 1
+refdes=A70
+T 79300 78500 5 10 1 1 0 0 1
+model-name=inv7
+T 78500 78300 5 10 1 1 0 0 1
+file=sources2/gates/inv7.model
+}
+C 78000 77200 1 0 0 spice-model-1.sym
+{
+T 78100 77900 5 10 0 1 0 0 1
+device=model
+T 78100 77800 5 10 1 1 0 0 1
+refdes=A71
+T 79300 77500 5 10 1 1 0 0 1
+model-name=inv8
+T 78500 77300 5 10 1 1 0 0 1
+file=sources2/gates/inv8.model
+}
+C 78000 76200 1 0 0 spice-model-1.sym
+{
+T 78100 76900 5 10 0 1 0 0 1
+device=model
+T 78100 76800 5 10 1 1 0 0 1
+refdes=A72
+T 79300 76500 5 10 1 1 0 0 1
+model-name=inv9
+T 78500 76300 5 10 1 1 0 0 1
+file=sources2/gates/inv9.model
+}
+C 78000 75200 1 0 0 spice-model-1.sym
+{
+T 78100 75900 5 10 0 1 0 0 1
+device=model
+T 78100 75800 5 10 1 1 0 0 1
+refdes=A73
+T 79300 75500 5 10 1 1 0 0 1
+model-name=inv10
+T 78500 75300 5 10 1 1 0 0 1
+file=sources2/gates/inv10.model
+}
+C 78000 74200 1 0 0 spice-model-1.sym
+{
+T 78100 74900 5 10 0 1 0 0 1
+device=model
+T 78100 74800 5 10 1 1 0 0 1
+refdes=A74
+T 79300 74500 5 10 1 1 0 0 1
+model-name=inv11
+T 78500 74300 5 10 1 1 0 0 1
+file=sources2/gates/inv11.model
+}
+C 78000 73200 1 0 0 spice-model-1.sym
+{
+T 78100 73900 5 10 0 1 0 0 1
+device=model
+T 78100 73800 5 10 1 1 0 0 1
+refdes=A75
+T 79300 73500 5 10 1 1 0 0 1
+model-name=inv12
+T 78500 73300 5 10 1 1 0 0 1
+file=sources2/gates/inv12.model
+}
+C 78000 72200 1 0 0 spice-model-1.sym
+{
+T 78100 72900 5 10 0 1 0 0 1
+device=model
+T 78100 72800 5 10 1 1 0 0 1
+refdes=A76
+T 79300 72500 5 10 1 1 0 0 1
+model-name=inv13
+T 78500 72300 5 10 1 1 0 0 1
+file=sources2/gates/inv13.model
+}
+C 78000 71200 1 0 0 spice-model-1.sym
+{
+T 78100 71900 5 10 0 1 0 0 1
+device=model
+T 78100 71800 5 10 1 1 0 0 1
+refdes=A77
+T 79300 71500 5 10 1 1 0 0 1
+model-name=inv14
+T 78500 71300 5 10 1 1 0 0 1
+file=sources2/gates/inv14.model
+}
+C 78000 70200 1 0 0 spice-model-1.sym
+{
+T 78100 70900 5 10 0 1 0 0 1
+device=model
+T 78100 70800 5 10 1 1 0 0 1
+refdes=A78
+T 79300 70500 5 10 1 1 0 0 1
+model-name=inv15
+T 78500 70300 5 10 1 1 0 0 1
+file=sources2/gates/inv15.model
+}
+C 78000 69200 1 0 0 spice-model-1.sym
+{
+T 78100 69900 5 10 0 1 0 0 1
+device=model
+T 78100 69800 5 10 1 1 0 0 1
+refdes=A79
+T 79300 69500 5 10 1 1 0 0 1
+model-name=inv16
+T 78500 69300 5 10 1 1 0 0 1
+file=sources2/gates/inv16.model
+}
+C 78000 68200 1 0 0 spice-model-1.sym
+{
+T 78100 68900 5 10 0 1 0 0 1
+device=model
+T 78100 68800 5 10 1 1 0 0 1
+refdes=A80
+T 79300 68500 5 10 1 1 0 0 1
+model-name=inv17
+T 78500 68300 5 10 1 1 0 0 1
+file=sources2/gates/inv17.model
+}
+C 78000 67200 1 0 0 spice-model-1.sym
+{
+T 78100 67900 5 10 0 1 0 0 1
+device=model
+T 78100 67800 5 10 1 1 0 0 1
+refdes=A81
+T 79300 67500 5 10 1 1 0 0 1
+model-name=inv18
+T 78500 67300 5 10 1 1 0 0 1
+file=sources2/gates/inv18.model
+}
+C 78000 66200 1 0 0 spice-model-1.sym
+{
+T 78100 66900 5 10 0 1 0 0 1
+device=model
+T 78100 66800 5 10 1 1 0 0 1
+refdes=A82
+T 79300 66500 5 10 1 1 0 0 1
+model-name=inv19
+T 78500 66300 5 10 1 1 0 0 1
+file=sources2/gates/inv19.model
+}
+C 78000 65200 1 0 0 spice-model-1.sym
+{
+T 78100 65900 5 10 0 1 0 0 1
+device=model
+T 78100 65800 5 10 1 1 0 0 1
+refdes=A83
+T 79300 65500 5 10 1 1 0 0 1
+model-name=inv20
+T 78500 65300 5 10 1 1 0 0 1
+file=sources2/gates/inv20.model
+}
+C 78000 64200 1 0 0 spice-model-1.sym
+{
+T 78100 64900 5 10 0 1 0 0 1
+device=model
+T 78100 64800 5 10 1 1 0 0 1
+refdes=A84
+T 79300 64500 5 10 1 1 0 0 1
+model-name=inv21
+T 78500 64300 5 10 1 1 0 0 1
+file=sources2/gates/inv21.model
+}
+C 78000 63200 1 0 0 spice-model-1.sym
+{
+T 78100 63900 5 10 0 1 0 0 1
+device=model
+T 78100 63800 5 10 1 1 0 0 1
+refdes=A85
+T 79300 63500 5 10 1 1 0 0 1
+model-name=inv22
+T 78500 63300 5 10 1 1 0 0 1
+file=sources2/gates/inv22.model
+}
+C 78000 62200 1 0 0 spice-model-1.sym
+{
+T 78100 62900 5 10 0 1 0 0 1
+device=model
+T 78100 62800 5 10 1 1 0 0 1
+refdes=A86
+T 79300 62500 5 10 1 1 0 0 1
+model-name=inv23
+T 78500 62300 5 10 1 1 0 0 1
+file=sources2/gates/inv23.model
+}
+C 78000 61200 1 0 0 spice-model-1.sym
+{
+T 78100 61900 5 10 0 1 0 0 1
+device=model
+T 78100 61800 5 10 1 1 0 0 1
+refdes=A87
+T 79300 61500 5 10 1 1 0 0 1
+model-name=inv24
+T 78500 61300 5 10 1 1 0 0 1
+file=sources2/gates/inv24.model
+}
+C 78000 60200 1 0 0 spice-model-1.sym
+{
+T 78100 60900 5 10 0 1 0 0 1
+device=model
+T 78100 60800 5 10 1 1 0 0 1
+refdes=A88
+T 79300 60500 5 10 1 1 0 0 1
+model-name=inv25
+T 78500 60300 5 10 1 1 0 0 1
+file=sources2/gates/inv25.model
+}
+C 78000 59200 1 0 0 spice-model-1.sym
+{
+T 78100 59900 5 10 0 1 0 0 1
+device=model
+T 78100 59800 5 10 1 1 0 0 1
+refdes=A89
+T 79300 59500 5 10 1 1 0 0 1
+model-name=inv26
+T 78500 59300 5 10 1 1 0 0 1
+file=sources2/gates/inv26.model
+}
+C 78000 58200 1 0 0 spice-model-1.sym
+{
+T 78100 58900 5 10 0 1 0 0 1
+device=model
+T 78100 58800 5 10 1 1 0 0 1
+refdes=A90
+T 79300 58500 5 10 1 1 0 0 1
+model-name=inv27
+T 78500 58300 5 10 1 1 0 0 1
+file=sources2/gates/inv27.model
+}
+C 78000 57200 1 0 0 spice-model-1.sym
+{
+T 78100 57900 5 10 0 1 0 0 1
+device=model
+T 78100 57800 5 10 1 1 0 0 1
+refdes=A91
+T 79300 57500 5 10 1 1 0 0 1
+model-name=inv28
+T 78500 57300 5 10 1 1 0 0 1
+file=sources2/gates/inv28.model
+}
+C 78000 56200 1 0 0 spice-model-1.sym
+{
+T 78100 56900 5 10 0 1 0 0 1
+device=model
+T 78100 56800 5 10 1 1 0 0 1
+refdes=A92
+T 79300 56500 5 10 1 1 0 0 1
+model-name=inv29
+T 78500 56300 5 10 1 1 0 0 1
+file=sources2/gates/inv29.model
+}
+C 78000 55200 1 0 0 spice-model-1.sym
+{
+T 78100 55900 5 10 0 1 0 0 1
+device=model
+T 78100 55800 5 10 1 1 0 0 1
+refdes=A93
+T 79300 55500 5 10 1 1 0 0 1
+model-name=inv30
+T 78500 55300 5 10 1 1 0 0 1
+file=sources2/gates/inv30.model
+}
+C 78000 54200 1 0 0 spice-model-1.sym
+{
+T 78100 54900 5 10 0 1 0 0 1
+device=model
+T 78100 54800 5 10 1 1 0 0 1
+refdes=A94
+T 79300 54500 5 10 1 1 0 0 1
+model-name=inv31
+T 78500 54300 5 10 1 1 0 0 1
+file=sources2/gates/inv31.model
+}
+C 78000 53200 1 0 0 spice-model-1.sym
+{
+T 78100 53900 5 10 0 1 0 0 1
+device=model
+T 78100 53800 5 10 1 1 0 0 1
+refdes=A95
+T 79300 53500 5 10 1 1 0 0 1
+model-name=inv32
+T 78500 53300 5 10 1 1 0 0 1
+file=sources2/gates/inv32.model
+}
+C 78000 52200 1 0 0 spice-model-1.sym
+{
+T 78100 52900 5 10 0 1 0 0 1
+device=model
+T 78100 52800 5 10 1 1 0 0 1
+refdes=A96
+T 79300 52500 5 10 1 1 0 0 1
+model-name=inv33
+T 78500 52300 5 10 1 1 0 0 1
+file=sources2/gates/inv33.model
+}
+C 78000 51200 1 0 0 spice-model-1.sym
+{
+T 78100 51900 5 10 0 1 0 0 1
+device=model
+T 78100 51800 5 10 1 1 0 0 1
+refdes=A97
+T 79300 51500 5 10 1 1 0 0 1
+model-name=inv34
+T 78500 51300 5 10 1 1 0 0 1
+file=sources2/gates/inv34.model
+}
+C 78000 50200 1 0 0 spice-model-1.sym
+{
+T 78100 50900 5 10 0 1 0 0 1
+device=model
+T 78100 50800 5 10 1 1 0 0 1
+refdes=A98
+T 79300 50500 5 10 1 1 0 0 1
+model-name=inv35
+T 78500 50300 5 10 1 1 0 0 1
+file=sources2/gates/inv35.model
+}
+C 78000 49200 1 0 0 spice-model-1.sym
+{
+T 78100 49900 5 10 0 1 0 0 1
+device=model
+T 78100 49800 5 10 1 1 0 0 1
+refdes=A99
+T 79300 49500 5 10 1 1 0 0 1
+model-name=inv36
+T 78500 49300 5 10 1 1 0 0 1
+file=sources2/gates/inv36.model
+}
+C 78000 48200 1 0 0 spice-model-1.sym
+{
+T 78100 48900 5 10 0 1 0 0 1
+device=model
+T 78100 48800 5 10 1 1 0 0 1
+refdes=A100
+T 79300 48500 5 10 1 1 0 0 1
+model-name=inv37
+T 78500 48300 5 10 1 1 0 0 1
+file=sources2/gates/inv37.model
+}
+C 78000 47200 1 0 0 spice-model-1.sym
+{
+T 78100 47900 5 10 0 1 0 0 1
+device=model
+T 78100 47800 5 10 1 1 0 0 1
+refdes=A101
+T 79300 47500 5 10 1 1 0 0 1
+model-name=inv38
+T 78500 47300 5 10 1 1 0 0 1
+file=sources2/gates/inv38.model
+}
+C 78000 46200 1 0 0 spice-model-1.sym
+{
+T 78100 46900 5 10 0 1 0 0 1
+device=model
+T 78100 46800 5 10 1 1 0 0 1
+refdes=A102
+T 79300 46500 5 10 1 1 0 0 1
+model-name=inv39
+T 78500 46300 5 10 1 1 0 0 1
+file=sources2/gates/inv39.model
+}
+C 78000 45200 1 0 0 spice-model-1.sym
+{
+T 78100 45900 5 10 0 1 0 0 1
+device=model
+T 78100 45800 5 10 1 1 0 0 1
+refdes=A103
+T 79300 45500 5 10 1 1 0 0 1
+model-name=inv40
+T 78500 45300 5 10 1 1 0 0 1
+file=sources2/gates/inv40.model
+}
+C 78000 44200 1 0 0 spice-model-1.sym
+{
+T 78100 44900 5 10 0 1 0 0 1
+device=model
+T 78100 44800 5 10 1 1 0 0 1
+refdes=A104
+T 79300 44500 5 10 1 1 0 0 1
+model-name=inv41
+T 78500 44300 5 10 1 1 0 0 1
+file=sources2/gates/inv41.model
+}
+C 78000 43200 1 0 0 spice-model-1.sym
+{
+T 78100 43900 5 10 0 1 0 0 1
+device=model
+T 78100 43800 5 10 1 1 0 0 1
+refdes=A105
+T 79300 43500 5 10 1 1 0 0 1
+model-name=inv42
+T 78500 43300 5 10 1 1 0 0 1
+file=sources2/gates/inv42.model
+}
+C 78000 42200 1 0 0 spice-model-1.sym
+{
+T 78100 42900 5 10 0 1 0 0 1
+device=model
+T 78100 42800 5 10 1 1 0 0 1
+refdes=A106
+T 79300 42500 5 10 1 1 0 0 1
+model-name=inv43
+T 78500 42300 5 10 1 1 0 0 1
+file=sources2/gates/inv43.model
+}
+C 78000 41200 1 0 0 spice-model-1.sym
+{
+T 78100 41900 5 10 0 1 0 0 1
+device=model
+T 78100 41800 5 10 1 1 0 0 1
+refdes=A107
+T 79300 41500 5 10 1 1 0 0 1
+model-name=inv44
+T 78500 41300 5 10 1 1 0 0 1
+file=sources2/gates/inv44.model
+}
+C 78000 40200 1 0 0 spice-model-1.sym
+{
+T 78100 40900 5 10 0 1 0 0 1
+device=model
+T 78100 40800 5 10 1 1 0 0 1
+refdes=A108
+T 79300 40500 5 10 1 1 0 0 1
+model-name=inv45
+T 78500 40300 5 10 1 1 0 0 1
+file=sources2/gates/inv45.model
+}
+C 78000 39200 1 0 0 spice-model-1.sym
+{
+T 78100 39900 5 10 0 1 0 0 1
+device=model
+T 78100 39800 5 10 1 1 0 0 1
+refdes=A109
+T 79300 39500 5 10 1 1 0 0 1
+model-name=inv46
+T 78500 39300 5 10 1 1 0 0 1
+file=sources2/gates/inv46.model
+}
+C 78000 38200 1 0 0 spice-model-1.sym
+{
+T 78100 38900 5 10 0 1 0 0 1
+device=model
+T 78100 38800 5 10 1 1 0 0 1
+refdes=A110
+T 79300 38500 5 10 1 1 0 0 1
+model-name=inv47
+T 78500 38300 5 10 1 1 0 0 1
+file=sources2/gates/inv47.model
+}
+C 78000 37200 1 0 0 spice-model-1.sym
+{
+T 78100 37900 5 10 0 1 0 0 1
+device=model
+T 78100 37800 5 10 1 1 0 0 1
+refdes=A111
+T 79300 37500 5 10 1 1 0 0 1
+model-name=inv48
+T 78500 37300 5 10 1 1 0 0 1
+file=sources2/gates/inv48.model
+}
+C 78000 36200 1 0 0 spice-model-1.sym
+{
+T 78100 36900 5 10 0 1 0 0 1
+device=model
+T 78100 36800 5 10 1 1 0 0 1
+refdes=A112
+T 79300 36500 5 10 1 1 0 0 1
+model-name=inv49
+T 78500 36300 5 10 1 1 0 0 1
+file=sources2/gates/inv49.model
+}
+C 78000 35200 1 0 0 spice-model-1.sym
+{
+T 78100 35900 5 10 0 1 0 0 1
+device=model
+T 78100 35800 5 10 1 1 0 0 1
+refdes=A113
+T 79300 35500 5 10 1 1 0 0 1
+model-name=inv50
+T 78500 35300 5 10 1 1 0 0 1
+file=sources2/gates/inv50.model
+}
+C 78000 34200 1 0 0 spice-model-1.sym
+{
+T 78100 34900 5 10 0 1 0 0 1
+device=model
+T 78100 34800 5 10 1 1 0 0 1
+refdes=A114
+T 79300 34500 5 10 1 1 0 0 1
+model-name=inv51
+T 78500 34300 5 10 1 1 0 0 1
+file=sources2/gates/inv51.model
+}
+C 78000 33200 1 0 0 spice-model-1.sym
+{
+T 78100 33900 5 10 0 1 0 0 1
+device=model
+T 78100 33800 5 10 1 1 0 0 1
+refdes=A115
+T 79300 33500 5 10 1 1 0 0 1
+model-name=inv52
+T 78500 33300 5 10 1 1 0 0 1
+file=sources2/gates/inv52.model
+}
+C 78000 32200 1 0 0 spice-model-1.sym
+{
+T 78100 32900 5 10 0 1 0 0 1
+device=model
+T 78100 32800 5 10 1 1 0 0 1
+refdes=A116
+T 79300 32500 5 10 1 1 0 0 1
+model-name=inv53
+T 78500 32300 5 10 1 1 0 0 1
+file=sources2/gates/inv53.model
+}
+C 78000 31200 1 0 0 spice-model-1.sym
+{
+T 78100 31900 5 10 0 1 0 0 1
+device=model
+T 78100 31800 5 10 1 1 0 0 1
+refdes=A117
+T 79300 31500 5 10 1 1 0 0 1
+model-name=inv54
+T 78500 31300 5 10 1 1 0 0 1
+file=sources2/gates/inv54.model
+}
+C 78000 30200 1 0 0 spice-model-1.sym
+{
+T 78100 30900 5 10 0 1 0 0 1
+device=model
+T 78100 30800 5 10 1 1 0 0 1
+refdes=A118
+T 79300 30500 5 10 1 1 0 0 1
+model-name=inv55
+T 78500 30300 5 10 1 1 0 0 1
+file=sources2/gates/inv55.model
+}
+C 78000 29200 1 0 0 spice-model-1.sym
+{
+T 78100 29900 5 10 0 1 0 0 1
+device=model
+T 78100 29800 5 10 1 1 0 0 1
+refdes=A119
+T 79300 29500 5 10 1 1 0 0 1
+model-name=inv56
+T 78500 29300 5 10 1 1 0 0 1
+file=sources2/gates/inv56.model
+}
+C 78000 28200 1 0 0 spice-model-1.sym
+{
+T 78100 28900 5 10 0 1 0 0 1
+device=model
+T 78100 28800 5 10 1 1 0 0 1
+refdes=A120
+T 79300 28500 5 10 1 1 0 0 1
+model-name=inv57
+T 78500 28300 5 10 1 1 0 0 1
+file=sources2/gates/inv57.model
+}
+C 78000 27200 1 0 0 spice-model-1.sym
+{
+T 78100 27900 5 10 0 1 0 0 1
+device=model
+T 78100 27800 5 10 1 1 0 0 1
+refdes=A121
+T 79300 27500 5 10 1 1 0 0 1
+model-name=inv58
+T 78500 27300 5 10 1 1 0 0 1
+file=sources2/gates/inv58.model
+}
+C 78000 26200 1 0 0 spice-model-1.sym
+{
+T 78100 26900 5 10 0 1 0 0 1
+device=model
+T 78100 26800 5 10 1 1 0 0 1
+refdes=A122
+T 79300 26500 5 10 1 1 0 0 1
+model-name=inv59
+T 78500 26300 5 10 1 1 0 0 1
+file=sources2/gates/inv59.model
+}
+C 78000 25200 1 0 0 spice-model-1.sym
+{
+T 78100 25900 5 10 0 1 0 0 1
+device=model
+T 78100 25800 5 10 1 1 0 0 1
+refdes=A123
+T 79300 25500 5 10 1 1 0 0 1
+model-name=inv60
+T 78500 25300 5 10 1 1 0 0 1
+file=sources2/gates/inv60.model
+}
+C 78000 24200 1 0 0 spice-model-1.sym
+{
+T 78100 24900 5 10 0 1 0 0 1
+device=model
+T 78100 24800 5 10 1 1 0 0 1
+refdes=A124
+T 79300 24500 5 10 1 1 0 0 1
+model-name=inv61
+T 78500 24300 5 10 1 1 0 0 1
+file=sources2/gates/inv61.model
+}
+C 78000 23200 1 0 0 spice-model-1.sym
+{
+T 78100 23900 5 10 0 1 0 0 1
+device=model
+T 78100 23800 5 10 1 1 0 0 1
+refdes=A125
+T 79300 23500 5 10 1 1 0 0 1
+model-name=inv62
+T 78500 23300 5 10 1 1 0 0 1
+file=sources2/gates/inv62.model
+}
+C 78000 22200 1 0 0 spice-model-1.sym
+{
+T 78100 22900 5 10 0 1 0 0 1
+device=model
+T 78100 22800 5 10 1 1 0 0 1
+refdes=A126
+T 79300 22500 5 10 1 1 0 0 1
+model-name=inv63
+T 78500 22300 5 10 1 1 0 0 1
+file=sources2/gates/inv63.model
+}
+C 83000 84200 1 0 0 spice-model-1.sym
+{
+T 83100 84900 5 10 0 1 0 0 1
+device=model
+T 83100 84800 5 10 1 1 0 0 1
+refdes=A127
+T 84300 84500 5 10 1 1 0 0 1
+model-name=deco64
+T 83500 84300 5 10 1 1 0 0 1
+file=sources2/deco/deco64.model
+}
+N 34700 8800 39500 8800 4
+N 39500 8800 39500 71300 4
+N 41500 71500 39700 71500 4
+N 39700 8600 39700 71500 4
+N 39700 8600 35000 8600 4
+C 41400 8300 1 180 0 generic-power.sym
+{
+T 41200 8050 5 10 1 1 180 3 1
+net=Vref2:1
+}

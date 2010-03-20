@@ -2888,3 +2888,848 @@ device=4i_nand-model
 T 84700 66100 5 10 0 0 0 0 1
 model-name=deco64_4inand1
 }
+C 100000 85000 1 0 0 spice-model-1.sym
+{
+T 100100 85700 5 10 0 1 0 0 1
+device=model
+T 100100 85600 5 10 1 1 0 0 1
+refdes=A1
+T 101300 85300 5 10 1 1 0 0 1
+model-name=deco64_2inand1
+T 100500 85100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand1.model
+}
+C 100000 84000 1 0 0 spice-model-1.sym
+{
+T 100100 84700 5 10 0 1 0 0 1
+device=model
+T 100100 84600 5 10 1 1 0 0 1
+refdes=A2
+T 101300 84300 5 10 1 1 0 0 1
+model-name=deco64_2inand2
+T 100500 84100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand2.model
+}
+C 100000 83000 1 0 0 spice-model-1.sym
+{
+T 100100 83700 5 10 0 1 0 0 1
+device=model
+T 100100 83600 5 10 1 1 0 0 1
+refdes=A3
+T 101300 83300 5 10 1 1 0 0 1
+model-name=deco64_2inand3
+T 100500 83100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand3.model
+}
+C 100000 82000 1 0 0 spice-model-1.sym
+{
+T 100100 82700 5 10 0 1 0 0 1
+device=model
+T 100100 82600 5 10 1 1 0 0 1
+refdes=A4
+T 101300 82300 5 10 1 1 0 0 1
+model-name=deco64_2inand4
+T 100500 82100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand4.model
+}
+C 100000 81000 1 0 0 spice-model-1.sym
+{
+T 100100 81700 5 10 0 1 0 0 1
+device=model
+T 100100 81600 5 10 1 1 0 0 1
+refdes=A5
+T 101300 81300 5 10 1 1 0 0 1
+model-name=deco64_2inand5
+T 100500 81100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand5.model
+}
+C 100000 80000 1 0 0 spice-model-1.sym
+{
+T 100100 80700 5 10 0 1 0 0 1
+device=model
+T 100100 80600 5 10 1 1 0 0 1
+refdes=A6
+T 101300 80300 5 10 1 1 0 0 1
+model-name=deco64_2inand6
+T 100500 80100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand6.model
+}
+C 100000 79000 1 0 0 spice-model-1.sym
+{
+T 100100 79700 5 10 0 1 0 0 1
+device=model
+T 100100 79600 5 10 1 1 0 0 1
+refdes=A7
+T 101300 79300 5 10 1 1 0 0 1
+model-name=deco64_2inand7
+T 100500 79100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand7.model
+}
+C 100000 78000 1 0 0 spice-model-1.sym
+{
+T 100100 78700 5 10 0 1 0 0 1
+device=model
+T 100100 78600 5 10 1 1 0 0 1
+refdes=A8
+T 101300 78300 5 10 1 1 0 0 1
+model-name=deco64_2inand8
+T 100500 78100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand8.model
+}
+C 100000 77000 1 0 0 spice-model-1.sym
+{
+T 100100 77700 5 10 0 1 0 0 1
+device=model
+T 100100 77600 5 10 1 1 0 0 1
+refdes=A9
+T 101300 77300 5 10 1 1 0 0 1
+model-name=deco64_2inand9
+T 100500 77100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand9.model
+}
+C 100000 76000 1 0 0 spice-model-1.sym
+{
+T 100100 76700 5 10 0 1 0 0 1
+device=model
+T 100100 76600 5 10 1 1 0 0 1
+refdes=A10
+T 101300 76300 5 10 1 1 0 0 1
+model-name=deco64_2inand10
+T 100500 76100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand10.model
+}
+C 100000 75000 1 0 0 spice-model-1.sym
+{
+T 100100 75700 5 10 0 1 0 0 1
+device=model
+T 100100 75600 5 10 1 1 0 0 1
+refdes=A11
+T 101300 75300 5 10 1 1 0 0 1
+model-name=deco64_2inand11
+T 100500 75100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand11.model
+}
+C 100000 74000 1 0 0 spice-model-1.sym
+{
+T 100100 74700 5 10 0 1 0 0 1
+device=model
+T 100100 74600 5 10 1 1 0 0 1
+refdes=A12
+T 101300 74300 5 10 1 1 0 0 1
+model-name=deco64_2inand12
+T 100500 74100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand12.model
+}
+C 100000 73000 1 0 0 spice-model-1.sym
+{
+T 100100 73700 5 10 0 1 0 0 1
+device=model
+T 100100 73600 5 10 1 1 0 0 1
+refdes=A13
+T 101300 73300 5 10 1 1 0 0 1
+model-name=deco64_2inand13
+T 100500 73100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand13.model
+}
+C 100000 72000 1 0 0 spice-model-1.sym
+{
+T 100100 72700 5 10 0 1 0 0 1
+device=model
+T 100100 72600 5 10 1 1 0 0 1
+refdes=A14
+T 101300 72300 5 10 1 1 0 0 1
+model-name=deco64_2inand14
+T 100500 72100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand14.model
+}
+C 100000 71000 1 0 0 spice-model-1.sym
+{
+T 100100 71700 5 10 0 1 0 0 1
+device=model
+T 100100 71600 5 10 1 1 0 0 1
+refdes=A15
+T 101300 71300 5 10 1 1 0 0 1
+model-name=deco64_2inand15
+T 100500 71100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand15.model
+}
+C 100000 70000 1 0 0 spice-model-1.sym
+{
+T 100100 70700 5 10 0 1 0 0 1
+device=model
+T 100100 70600 5 10 1 1 0 0 1
+refdes=A16
+T 101300 70300 5 10 1 1 0 0 1
+model-name=deco64_2inand16
+T 100500 70100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand16.model
+}
+C 100000 69000 1 0 0 spice-model-1.sym
+{
+T 100100 69700 5 10 0 1 0 0 1
+device=model
+T 100100 69600 5 10 1 1 0 0 1
+refdes=A17
+T 101300 69300 5 10 1 1 0 0 1
+model-name=deco64_2inand17
+T 100500 69100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand17.model
+}
+C 100000 68000 1 0 0 spice-model-1.sym
+{
+T 100100 68700 5 10 0 1 0 0 1
+device=model
+T 100100 68600 5 10 1 1 0 0 1
+refdes=A18
+T 101300 68300 5 10 1 1 0 0 1
+model-name=deco64_2inand18
+T 100500 68100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand18.model
+}
+C 100000 67000 1 0 0 spice-model-1.sym
+{
+T 100100 67700 5 10 0 1 0 0 1
+device=model
+T 100100 67600 5 10 1 1 0 0 1
+refdes=A19
+T 101300 67300 5 10 1 1 0 0 1
+model-name=deco64_2inand19
+T 100500 67100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand19.model
+}
+C 100000 66000 1 0 0 spice-model-1.sym
+{
+T 100100 66700 5 10 0 1 0 0 1
+device=model
+T 100100 66600 5 10 1 1 0 0 1
+refdes=A20
+T 101300 66300 5 10 1 1 0 0 1
+model-name=deco64_2inand20
+T 100500 66100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand20.model
+}
+C 100000 65000 1 0 0 spice-model-1.sym
+{
+T 100100 65700 5 10 0 1 0 0 1
+device=model
+T 100100 65600 5 10 1 1 0 0 1
+refdes=A21
+T 101300 65300 5 10 1 1 0 0 1
+model-name=deco64_2inand21
+T 100500 65100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand21.model
+}
+C 100000 64000 1 0 0 spice-model-1.sym
+{
+T 100100 64700 5 10 0 1 0 0 1
+device=model
+T 100100 64600 5 10 1 1 0 0 1
+refdes=A22
+T 101300 64300 5 10 1 1 0 0 1
+model-name=deco64_2inand22
+T 100500 64100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand22.model
+}
+C 100000 63000 1 0 0 spice-model-1.sym
+{
+T 100100 63700 5 10 0 1 0 0 1
+device=model
+T 100100 63600 5 10 1 1 0 0 1
+refdes=A23
+T 101300 63300 5 10 1 1 0 0 1
+model-name=deco64_2inand23
+T 100500 63100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand23.model
+}
+C 100000 62000 1 0 0 spice-model-1.sym
+{
+T 100100 62700 5 10 0 1 0 0 1
+device=model
+T 100100 62600 5 10 1 1 0 0 1
+refdes=A24
+T 101300 62300 5 10 1 1 0 0 1
+model-name=deco64_2inand24
+T 100500 62100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand24.model
+}
+C 100000 61000 1 0 0 spice-model-1.sym
+{
+T 100100 61700 5 10 0 1 0 0 1
+device=model
+T 100100 61600 5 10 1 1 0 0 1
+refdes=A25
+T 101300 61300 5 10 1 1 0 0 1
+model-name=deco64_2inand25
+T 100500 61100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand25.model
+}
+C 100000 60000 1 0 0 spice-model-1.sym
+{
+T 100100 60700 5 10 0 1 0 0 1
+device=model
+T 100100 60600 5 10 1 1 0 0 1
+refdes=A26
+T 101300 60300 5 10 1 1 0 0 1
+model-name=deco64_2inand26
+T 100500 60100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand26.model
+}
+C 100000 59000 1 0 0 spice-model-1.sym
+{
+T 100100 59700 5 10 0 1 0 0 1
+device=model
+T 100100 59600 5 10 1 1 0 0 1
+refdes=A27
+T 101300 59300 5 10 1 1 0 0 1
+model-name=deco64_2inand27
+T 100500 59100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand27.model
+}
+C 100000 58000 1 0 0 spice-model-1.sym
+{
+T 100100 58700 5 10 0 1 0 0 1
+device=model
+T 100100 58600 5 10 1 1 0 0 1
+refdes=A28
+T 101300 58300 5 10 1 1 0 0 1
+model-name=deco64_2inand28
+T 100500 58100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand28.model
+}
+C 100000 57000 1 0 0 spice-model-1.sym
+{
+T 100100 57700 5 10 0 1 0 0 1
+device=model
+T 100100 57600 5 10 1 1 0 0 1
+refdes=A29
+T 101300 57300 5 10 1 1 0 0 1
+model-name=deco64_2inand29
+T 100500 57100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand29.model
+}
+C 100000 56000 1 0 0 spice-model-1.sym
+{
+T 100100 56700 5 10 0 1 0 0 1
+device=model
+T 100100 56600 5 10 1 1 0 0 1
+refdes=A30
+T 101300 56300 5 10 1 1 0 0 1
+model-name=deco64_2inand30
+T 100500 56100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand30.model
+}
+C 100000 55000 1 0 0 spice-model-1.sym
+{
+T 100100 55700 5 10 0 1 0 0 1
+device=model
+T 100100 55600 5 10 1 1 0 0 1
+refdes=A31
+T 101300 55300 5 10 1 1 0 0 1
+model-name=deco64_2inand31
+T 100500 55100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand31.model
+}
+C 100000 54000 1 0 0 spice-model-1.sym
+{
+T 100100 54700 5 10 0 1 0 0 1
+device=model
+T 100100 54600 5 10 1 1 0 0 1
+refdes=A32
+T 101300 54300 5 10 1 1 0 0 1
+model-name=deco64_2inand32
+T 100500 54100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand32.model
+}
+C 100000 53000 1 0 0 spice-model-1.sym
+{
+T 100100 53700 5 10 0 1 0 0 1
+device=model
+T 100100 53600 5 10 1 1 0 0 1
+refdes=A33
+T 101300 53300 5 10 1 1 0 0 1
+model-name=deco64_2inand33
+T 100500 53100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand33.model
+}
+C 100000 52000 1 0 0 spice-model-1.sym
+{
+T 100100 52700 5 10 0 1 0 0 1
+device=model
+T 100100 52600 5 10 1 1 0 0 1
+refdes=A34
+T 101300 52300 5 10 1 1 0 0 1
+model-name=deco64_2inand34
+T 100500 52100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand34.model
+}
+C 100000 51000 1 0 0 spice-model-1.sym
+{
+T 100100 51700 5 10 0 1 0 0 1
+device=model
+T 100100 51600 5 10 1 1 0 0 1
+refdes=A35
+T 101300 51300 5 10 1 1 0 0 1
+model-name=deco64_2inand35
+T 100500 51100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand35.model
+}
+C 100000 50000 1 0 0 spice-model-1.sym
+{
+T 100100 50700 5 10 0 1 0 0 1
+device=model
+T 100100 50600 5 10 1 1 0 0 1
+refdes=A36
+T 101300 50300 5 10 1 1 0 0 1
+model-name=deco64_2inand36
+T 100500 50100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand36.model
+}
+C 100000 49000 1 0 0 spice-model-1.sym
+{
+T 100100 49700 5 10 0 1 0 0 1
+device=model
+T 100100 49600 5 10 1 1 0 0 1
+refdes=A37
+T 101300 49300 5 10 1 1 0 0 1
+model-name=deco64_2inand37
+T 100500 49100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand37.model
+}
+C 100000 48000 1 0 0 spice-model-1.sym
+{
+T 100100 48700 5 10 0 1 0 0 1
+device=model
+T 100100 48600 5 10 1 1 0 0 1
+refdes=A38
+T 101300 48300 5 10 1 1 0 0 1
+model-name=deco64_2inand38
+T 100500 48100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand38.model
+}
+C 100000 47000 1 0 0 spice-model-1.sym
+{
+T 100100 47700 5 10 0 1 0 0 1
+device=model
+T 100100 47600 5 10 1 1 0 0 1
+refdes=A39
+T 101300 47300 5 10 1 1 0 0 1
+model-name=deco64_2inand39
+T 100500 47100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand39.model
+}
+C 100000 46000 1 0 0 spice-model-1.sym
+{
+T 100100 46700 5 10 0 1 0 0 1
+device=model
+T 100100 46600 5 10 1 1 0 0 1
+refdes=A40
+T 101300 46300 5 10 1 1 0 0 1
+model-name=deco64_2inand40
+T 100500 46100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand40.model
+}
+C 100000 45000 1 0 0 spice-model-1.sym
+{
+T 100100 45700 5 10 0 1 0 0 1
+device=model
+T 100100 45600 5 10 1 1 0 0 1
+refdes=A41
+T 101300 45300 5 10 1 1 0 0 1
+model-name=deco64_2inand41
+T 100500 45100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand41.model
+}
+C 100000 44000 1 0 0 spice-model-1.sym
+{
+T 100100 44700 5 10 0 1 0 0 1
+device=model
+T 100100 44600 5 10 1 1 0 0 1
+refdes=A42
+T 101300 44300 5 10 1 1 0 0 1
+model-name=deco64_2inand42
+T 100500 44100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand42.model
+}
+C 100000 43000 1 0 0 spice-model-1.sym
+{
+T 100100 43700 5 10 0 1 0 0 1
+device=model
+T 100100 43600 5 10 1 1 0 0 1
+refdes=A43
+T 101300 43300 5 10 1 1 0 0 1
+model-name=deco64_2inand50
+T 100500 43100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand50.model
+}
+C 100000 42000 1 0 0 spice-model-1.sym
+{
+T 100100 42700 5 10 0 1 0 0 1
+device=model
+T 100100 42600 5 10 1 1 0 0 1
+refdes=A44
+T 101300 42300 5 10 1 1 0 0 1
+model-name=deco64_2inand59
+T 100500 42100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand59.model
+}
+C 100000 41000 1 0 0 spice-model-1.sym
+{
+T 100100 41700 5 10 0 1 0 0 1
+device=model
+T 100100 41600 5 10 1 1 0 0 1
+refdes=A45
+T 101300 41300 5 10 1 1 0 0 1
+model-name=deco64_2inand43
+T 100500 41100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand43.model
+}
+C 100000 40000 1 0 0 spice-model-1.sym
+{
+T 100100 40700 5 10 0 1 0 0 1
+device=model
+T 100100 40600 5 10 1 1 0 0 1
+refdes=A46
+T 101300 40300 5 10 1 1 0 0 1
+model-name=deco64_2inand44
+T 100500 40100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand44.model
+}
+C 100000 39000 1 0 0 spice-model-1.sym
+{
+T 100100 39700 5 10 0 1 0 0 1
+device=model
+T 100100 39600 5 10 1 1 0 0 1
+refdes=A47
+T 101300 39300 5 10 1 1 0 0 1
+model-name=deco64_2inand45
+T 100500 39100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand45.model
+}
+C 100000 38000 1 0 0 spice-model-1.sym
+{
+T 100100 38700 5 10 0 1 0 0 1
+device=model
+T 100100 38600 5 10 1 1 0 0 1
+refdes=A48
+T 101300 38300 5 10 1 1 0 0 1
+model-name=deco64_2inand46
+T 100500 38100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand46.model
+}
+C 100000 37000 1 0 0 spice-model-1.sym
+{
+T 100100 37700 5 10 0 1 0 0 1
+device=model
+T 100100 37600 5 10 1 1 0 0 1
+refdes=A49
+T 101300 37300 5 10 1 1 0 0 1
+model-name=deco64_2inand47
+T 100500 37100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand47.model
+}
+C 100000 36000 1 0 0 spice-model-1.sym
+{
+T 100100 36700 5 10 0 1 0 0 1
+device=model
+T 100100 36600 5 10 1 1 0 0 1
+refdes=A50
+T 101300 36300 5 10 1 1 0 0 1
+model-name=deco64_2inand48
+T 100500 36100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand48.model
+}
+C 100000 35000 1 0 0 spice-model-1.sym
+{
+T 100100 35700 5 10 0 1 0 0 1
+device=model
+T 100100 35600 5 10 1 1 0 0 1
+refdes=A51
+T 101300 35300 5 10 1 1 0 0 1
+model-name=deco64_2inand49
+T 100500 35100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand49.model
+}
+C 100000 34000 1 0 0 spice-model-1.sym
+{
+T 100100 34700 5 10 0 1 0 0 1
+device=model
+T 100100 34600 5 10 1 1 0 0 1
+refdes=A52
+T 101300 34300 5 10 1 1 0 0 1
+model-name=deco64_2inand51
+T 100500 34100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand51.model
+}
+C 100000 33000 1 0 0 spice-model-1.sym
+{
+T 100100 33700 5 10 0 1 0 0 1
+device=model
+T 100100 33600 5 10 1 1 0 0 1
+refdes=A53
+T 101300 33300 5 10 1 1 0 0 1
+model-name=deco64_2inand52
+T 100500 33100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand52.model
+}
+C 100000 32000 1 0 0 spice-model-1.sym
+{
+T 100100 32700 5 10 0 1 0 0 1
+device=model
+T 100100 32600 5 10 1 1 0 0 1
+refdes=A54
+T 101300 32300 5 10 1 1 0 0 1
+model-name=deco64_2inand53
+T 100500 32100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand53.model
+}
+C 100000 31000 1 0 0 spice-model-1.sym
+{
+T 100100 31700 5 10 0 1 0 0 1
+device=model
+T 100100 31600 5 10 1 1 0 0 1
+refdes=A55
+T 101300 31300 5 10 1 1 0 0 1
+model-name=deco64_2inand54
+T 100500 31100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand54.model
+}
+C 100000 30000 1 0 0 spice-model-1.sym
+{
+T 100100 30700 5 10 0 1 0 0 1
+device=model
+T 100100 30600 5 10 1 1 0 0 1
+refdes=A56
+T 101300 30300 5 10 1 1 0 0 1
+model-name=deco64_2inand55
+T 100500 30100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand55.model
+}
+C 100000 29000 1 0 0 spice-model-1.sym
+{
+T 100100 29700 5 10 0 1 0 0 1
+device=model
+T 100100 29600 5 10 1 1 0 0 1
+refdes=A57
+T 101300 29300 5 10 1 1 0 0 1
+model-name=deco64_2inand56
+T 100500 29100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand56.model
+}
+C 100000 28000 1 0 0 spice-model-1.sym
+{
+T 100100 28700 5 10 0 1 0 0 1
+device=model
+T 100100 28600 5 10 1 1 0 0 1
+refdes=A58
+T 101300 28300 5 10 1 1 0 0 1
+model-name=deco64_2inand57
+T 100500 28100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand57.model
+}
+C 100000 27000 1 0 0 spice-model-1.sym
+{
+T 100100 27700 5 10 0 1 0 0 1
+device=model
+T 100100 27600 5 10 1 1 0 0 1
+refdes=A59
+T 101300 27300 5 10 1 1 0 0 1
+model-name=deco64_2inand58
+T 100500 27100 5 10 1 1 0 0 1
+file=../gates/deco64_2inand58.model
+}
+C 100000 26000 1 0 0 spice-model-1.sym
+{
+T 100100 26700 5 10 0 1 0 0 1
+device=model
+T 100100 26600 5 10 1 1 0 0 1
+refdes=A60
+T 101300 26300 5 10 1 1 0 0 1
+model-name=deco64_inv2
+T 100500 26100 5 10 1 1 0 0 1
+file=../gates/deco64_inv2.model
+}
+C 100000 25000 1 0 0 spice-model-1.sym
+{
+T 100100 25700 5 10 0 1 0 0 1
+device=model
+T 100100 25600 5 10 1 1 0 0 1
+refdes=A61
+T 101300 25300 5 10 1 1 0 0 1
+model-name=deco64_inv1
+T 100500 25100 5 10 1 1 0 0 1
+file=../gates/deco64_inv1.model
+}
+C 100000 24000 1 0 0 spice-model-1.sym
+{
+T 100100 24700 5 10 0 1 0 0 1
+device=model
+T 100100 24600 5 10 1 1 0 0 1
+refdes=A62
+T 101300 24300 5 10 1 1 0 0 1
+model-name=deco64_inv3
+T 100500 24100 5 10 1 1 0 0 1
+file=../gates/deco64_inv3.model
+}
+C 100000 23000 1 0 0 spice-model-1.sym
+{
+T 100100 23700 5 10 0 1 0 0 1
+device=model
+T 100100 23600 5 10 1 1 0 0 1
+refdes=A63
+T 101300 23300 5 10 1 1 0 0 1
+model-name=deco64_inv4
+T 100500 23100 5 10 1 1 0 0 1
+file=../gates/deco64_inv4.model
+}
+C 100000 22000 1 0 0 spice-model-1.sym
+{
+T 100100 22700 5 10 0 1 0 0 1
+device=model
+T 100100 22600 5 10 1 1 0 0 1
+refdes=A64
+T 101300 22300 5 10 1 1 0 0 1
+model-name=deco64_inv5
+T 100500 22100 5 10 1 1 0 0 1
+file=../gates/deco64_inv5.model
+}
+C 100000 21000 1 0 0 spice-model-1.sym
+{
+T 100100 21700 5 10 0 1 0 0 1
+device=model
+T 100100 21600 5 10 1 1 0 0 1
+refdes=A65
+T 101300 21300 5 10 1 1 0 0 1
+model-name=deco64_inv6
+T 100500 21100 5 10 1 1 0 0 1
+file=../gates/deco64_inv6.model
+}
+C 100000 20000 1 0 0 spice-model-1.sym
+{
+T 100100 20700 5 10 0 1 0 0 1
+device=model
+T 100100 20600 5 10 1 1 0 0 1
+refdes=A66
+T 101300 20300 5 10 1 1 0 0 1
+model-name=deco64_inv7
+T 100500 20100 5 10 1 1 0 0 1
+file=../gates/deco64_inv7.model
+}
+C 100000 19000 1 0 0 spice-model-1.sym
+{
+T 100100 19700 5 10 0 1 0 0 1
+device=model
+T 100100 19600 5 10 1 1 0 0 1
+refdes=A67
+T 101300 19300 5 10 1 1 0 0 1
+model-name=deco64_inv8
+T 100500 19100 5 10 1 1 0 0 1
+file=../gates/deco64_inv8.model
+}
+C 100000 18000 1 0 0 spice-model-1.sym
+{
+T 100100 18700 5 10 0 1 0 0 1
+device=model
+T 100100 18600 5 10 1 1 0 0 1
+refdes=A68
+T 101300 18300 5 10 1 1 0 0 1
+model-name=deco64_8inand1
+T 100500 18100 5 10 1 1 0 0 1
+file=../gates/deco64_8inand1.model
+}
+C 100000 17000 1 0 0 spice-model-1.sym
+{
+T 100100 17700 5 10 0 1 0 0 1
+device=model
+T 100100 17600 5 10 1 1 0 0 1
+refdes=A69
+T 101300 17300 5 10 1 1 0 0 1
+model-name=deco64_8inand2
+T 100500 17100 5 10 1 1 0 0 1
+file=../gates/deco64_8inand2.model
+}
+C 100000 16000 1 0 0 spice-model-1.sym
+{
+T 100100 16700 5 10 0 1 0 0 1
+device=model
+T 100100 16600 5 10 1 1 0 0 1
+refdes=A70
+T 101300 16300 5 10 1 1 0 0 1
+model-name=deco64_8inand3
+T 100500 16100 5 10 1 1 0 0 1
+file=../gates/deco64_8inand3.model
+}
+C 100000 15000 1 0 0 spice-model-1.sym
+{
+T 100100 15700 5 10 0 1 0 0 1
+device=model
+T 100100 15600 5 10 1 1 0 0 1
+refdes=A71
+T 101300 15300 5 10 1 1 0 0 1
+model-name=deco64_8inand4
+T 100500 15100 5 10 1 1 0 0 1
+file=../gates/deco64_8inand4.model
+}
+C 100000 14000 1 0 0 spice-model-1.sym
+{
+T 100100 14700 5 10 0 1 0 0 1
+device=model
+T 100100 14600 5 10 1 1 0 0 1
+refdes=A72
+T 101300 14300 5 10 1 1 0 0 1
+model-name=deco64_8inand5
+T 100500 14100 5 10 1 1 0 0 1
+file=../gates/deco64_8inand5.model
+}
+C 100000 13000 1 0 0 spice-model-1.sym
+{
+T 100100 13700 5 10 0 1 0 0 1
+device=model
+T 100100 13600 5 10 1 1 0 0 1
+refdes=A73
+T 101300 13300 5 10 1 1 0 0 1
+model-name=deco64_8inand6
+T 100500 13100 5 10 1 1 0 0 1
+file=../gates/deco64_8inand6.model
+}
+C 100000 12000 1 0 0 spice-model-1.sym
+{
+T 100100 12700 5 10 0 1 0 0 1
+device=model
+T 100100 12600 5 10 1 1 0 0 1
+refdes=A74
+T 101300 12300 5 10 1 1 0 0 1
+model-name=deco64_8inand7
+T 100500 12100 5 10 1 1 0 0 1
+file=../gates/deco64_8inand7.model
+}
+C 100000 11000 1 0 0 spice-model-1.sym
+{
+T 100100 11700 5 10 0 1 0 0 1
+device=model
+T 100100 11600 5 10 1 1 0 0 1
+refdes=A75
+T 101300 11300 5 10 1 1 0 0 1
+model-name=deco64_4inand2
+T 100500 11100 5 10 1 1 0 0 1
+file=../gates/deco64_4inand2.model
+}
+C 100000 10000 1 0 0 spice-model-1.sym
+{
+T 100100 10700 5 10 0 1 0 0 1
+device=model
+T 100100 10600 5 10 1 1 0 0 1
+refdes=A76
+T 101300 10300 5 10 1 1 0 0 1
+model-name=deco64_4inand1
+T 100500 10100 5 10 1 1 0 0 1
+file=../gates/deco64_4inand1.model
+}
+C 108400 84900 1 0 0 spice-subcircuit-LL-1.sym
+{
+T 108500 85200 5 10 0 1 0 0 1
+device=spice-subcircuit-LL
+T 108500 85300 5 10 1 1 0 0 1
+refdes=A77
+T 108500 85000 5 10 1 1 0 0 1
+model-name=deco64
+}
