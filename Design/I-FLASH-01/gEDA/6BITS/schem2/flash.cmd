@@ -10,7 +10,7 @@ set filetype=ascii
 
 set combplot
 
-* op
+op
 * destroy all
 
 * 2MHz de clock

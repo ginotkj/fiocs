@@ -14,6 +14,8 @@
 NAME 	= flash.cir # Name of executable file
 SRC	= flash.sch # List of *.c
 DRC	= flash.drc
+RAW	= flash.raw
+BIN	= flash.bin
 LOG	= *log
 ################
 # Optional add #
@@ -49,9 +51,14 @@ $(NAME) : parts $(DRC)
 	@echo "#####################################"
 	@echo
 	@echo "Generating CIR file: [$@]"
-	@$(GNET) $(CIRFLAGS) -o $@ $< >/dev/null 2>&1
+	@$(GNET) $(CIRFLAGS) -o $@ $(SRC) >/dev/null 2>&1
 	@echo "Checking for errors in [$@]"
 	@grep -l -v 'No valid value attribute found' $@ >/dev/null 2>&1
+	@echo
+	@echo "#####################################"
+	@echo "#             FLASH DONE            #"
+	@echo "#####################################"
+	@echo
 
 
 parts:
@@ -92,7 +99,7 @@ deco:
 
 clean:
 	@echo "Cleaning all files..."
-	@-$(RM) $(DRC) $(NAME) *~ $(LOG)
+	@-$(RM) $(DRC) $(NAME) $(RAW) $(BIN) *~ $(LOG)
 
 clean-all:
 	@echo
@@ -104,7 +111,7 @@ clean-all:
 	( cd $$i ; make clean) ; \
 	done
 	@echo "Cleaning all files..."
-	@-$(RM) $(DRC) $(NAME) *~ $(LOG)
+	@-$(RM) $(DRC) $(BIN) $(RAW) $(NAME) *~ $(LOG)
 
 clean-drc:
 	@echo "Cleaning drc files..."
@@ -112,7 +119,7 @@ clean-drc:
 
 clean-model:
 	@echo "Cleaning model files..."
-	@-$(RM) $(CIRFILES) *~ $(LOG)
+	@-$(RM) $(NAME) *~ $(LOG)
 
 clean-gates-drc:
 	@cd $(GATES-DIR) ; make clean-drc
