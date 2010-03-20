@@ -1,0 +1,52 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<title>The Linux Development Platform - Page 147</title>
+
+<style type="text/css">
+<!--
+.ft0{font-size:9px;font-family:Arial;color:#000000;}
+.ft1{font-size:12px;font-family:Courier;color:#000000;}
+BODY {background-image:url(0130091154_147.jpg); background-repeat:no-repeat;}
+-->
+</style>
+</head><body bgcolor="#ffffff" text="#000000">
+
+<div style="position: absolute; top: 162px; left: 158px;"><nobr><span class="ft0">124Chapter4  &#8226;  Using GNU make</span></nobr></div>
+<div style="position: absolute; top: 218px; left: 225px;"><nobr><span class="ft1">FTPDIR = ftp-dir</span></nobr></div>
+<div style="position: absolute; top: 234px; left: 225px;"><nobr><span class="ft1">TFTPDIR = tftp-dir</span></nobr></div>
+<div style="position: absolute; top: 250px; left: 225px;"><nobr><span class="ft1">DNSDIR = dns-dir</span></nobr></div>
+<div style="position: absolute; top: 265px; left: 225px;"><nobr><span class="ft1">COMDIR = common-dir</span></nobr></div>
+<div style="position: absolute; top: 297px; left: 225px;"><nobr><span class="ft1">SUBDIRS = $(COMDIR) $(FTPDIR) $(TFTPDIR) $(DNSDIR) </span></nobr></div>
+<div style="position: absolute; top: 328px; left: 225px;"><nobr><span class="ft1"># Default Target</span></nobr></div>
+<div style="position: absolute; top: 359px; left: 225px;"><nobr><span class="ft1">all:</span></nobr></div>
+<div style="position: absolute; top: 375px; left: 225px;"><nobr><span class="ft1">  @echo </span></nobr></div>
+<div style="position: absolute; top: 391px; left: 225px;"><nobr><span class="ft1">  @echo "#######################################"</span></nobr></div>
+<div style="position: absolute; top: 406px; left: 225px;"><nobr><span class="ft1">  @echo "###        BUILDING ALL TARGETS     ###"</span></nobr></div>
+<div style="position: absolute; top: 422px; left: 225px;"><nobr><span class="ft1">  @echo "#######################################"</span></nobr></div>
+<div style="position: absolute; top: 438px; left: 225px;"><nobr><span class="ft1">  @echo </span></nobr></div>
+<div style="position: absolute; top: 453px; left: 225px;"><nobr><span class="ft1">  for i in $(SUBDIRS) ; do   \</span></nobr></div>
+<div style="position: absolute; top: 469px; left: 225px;"><nobr><span class="ft1">         ( cd $$i ; make ) ;       \</span></nobr></div>
+<div style="position: absolute; top: 485px; left: 225px;"><nobr><span class="ft1">  done</span></nobr></div>
+<div style="position: absolute; top: 516px; left: 225px;"><nobr><span class="ft1"># Rules to build individual targets</span></nobr></div>
+<div style="position: absolute; top: 548px; left: 225px;"><nobr><span class="ft1">libs: </span></nobr></div>
+<div style="position: absolute; top: 563px; left: 225px;"><nobr><span class="ft1">  @cd $(COMDIR) ; make</span></nobr></div>
+<div style="position: absolute; top: 595px; left: 225px;"><nobr><span class="ft1">ftp: </span></nobr></div>
+<div style="position: absolute; top: 610px; left: 225px;"><nobr><span class="ft1">  @cd $(FTPDIR) ; make</span></nobr></div>
+<div style="position: absolute; top: 642px; left: 225px;"><nobr><span class="ft1">tftp: </span></nobr></div>
+<div style="position: absolute; top: 657px; left: 225px;"><nobr><span class="ft1">  @cd $(TFTPDIR) ; make</span></nobr></div>
+<div style="position: absolute; top: 689px; left: 225px;"><nobr><span class="ft1">dnsresolver: </span></nobr></div>
+<div style="position: absolute; top: 704px; left: 225px;"><nobr><span class="ft1">  @cd $(DNSDIR) ; make</span></nobr></div>
+<div style="position: absolute; top: 736px; left: 225px;"><nobr><span class="ft1">clean:</span></nobr></div>
+<div style="position: absolute; top: 751px; left: 225px;"><nobr><span class="ft1">  rm -f *~</span></nobr></div>
+<div style="position: absolute; top: 767px; left: 225px;"><nobr><span class="ft1">  for i in $(SUBDIRS) ; do   \</span></nobr></div>
+<div style="position: absolute; top: 783px; left: 225px;"><nobr><span class="ft1">         ( cd $$i ; make clean) ;  \</span></nobr></div>
+<div style="position: absolute; top: 798px; left: 225px;"><nobr><span class="ft1">        done</span></nobr></div>
+<div style="position: absolute; top: 830px; left: 225px;"><nobr><span class="ft1">install:</span></nobr></div>
+<div style="position: absolute; top: 845px; left: 225px;"><nobr><span class="ft1">  for i in $(SUBDIRS) ; do   \</span></nobr></div>
+<div style="position: absolute; top: 861px; left: 225px;"><nobr><span class="ft1">         ( cd $$i ; make install); \</span></nobr></div>
+<div style="position: absolute; top: 877px; left: 225px;"><nobr><span class="ft1">  done</span></nobr></div>
+<div style="position: absolute; top: 20px; left: 680px;"><nobr><span class="fto"><a href="http://www.faqs.org/docs/ldev/0130091154_148.htm"> Next Page &gt;&gt;</a></span></nobr></div>
+<div style="position: absolute; top: 20px; left: 70px;"><nobr><span class="fto"><a href="http://www.faqs.org/docs/ldev/0130091154_146.htm">&lt;&lt; Previous Page</a></span></nobr></div>
+<div style="position: absolute; top: 20px; left: 350px;"><nobr><span class="fto"><a href="http://www.faqs.org/docs/ldev/index.html">Back to the Table of Contents</a></span></nobr></div>
+</body></html>

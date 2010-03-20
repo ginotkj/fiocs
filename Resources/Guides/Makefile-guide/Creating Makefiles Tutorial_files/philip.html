@@ -1,0 +1,24 @@
+
+var d=document;
+var r=escape(d.referrer);
+var x=screen.width+'x'+screen.height;
+var c=screen.colorDepth;
+var a='1';
+var t=escape(d.title);
+var u=escape(d.location);
+var j="Unknown";
+var z=Math.round(99999*Math.random());
+var ce=(navigator.cookieEnabled)? true : false
+if (typeof navigator.cookieEnabled=="undefined" && !ce) {
+  d.cookie="t"
+  ce=(d.cookie=="t") ? true : false
+  d.cookie=""
+}
+d.write('<sc'+'ript language="JavaS'+'cript">j = "JavaScript 1"</script'+'>');
+d.write('<sc'+'ript language="JavaS'+'cript1.1">j = "JavaScript 1.1"</script'+'>');
+d.write('<sc'+'ript language="JavaS'+'cript1.2">j = "JavaScript 1.2"</script'+'>');
+d.write('<sc'+'ript language="JavaS'+'cript1.3">j = "JavaScript 1.3"</script'+'>');
+d.write('<sc'+'ript language="JavaS'+'cript1.4">j = "JavaScript 1.4"</script'+'>');
+d.write('<sc'+'ript language="JavaS'+'cript1.5">j = "JavaScript 1.5"</script'+'>');
+d.write('<sc'+'ript language="JavaS'+'cript2.0">j = "JavaScript 2.0"</script'+'>');
+d.write('<img src="http://fry.webtistic.com/hit.php?a='+a+'&r='+r+'&x='+x+'&c='+c+'&t='+t+'&u='+u+'&j='+j+'&ce='+ce+'&z='+z+'" border="0" alt="Webtistic">');

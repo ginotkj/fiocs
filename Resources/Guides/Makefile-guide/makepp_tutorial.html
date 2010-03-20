@@ -1,0 +1,1221 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>Tutorial on writing makefiles</title></head><body>
+<h1>Tutorial on writing makefiles</h1>
+<ul><li><a href="#Do%20I%20need%20a%20makefile%3f">Do I need a makefile?</a>
+</li><li><a href="#A%20simple%20makefile">A simple makefile</a>
+<ul><li><a href="#Using%20variables">Using variables</a>
+</li><li><a href="#Pattern%20rules">Pattern rules</a>
+</li></ul></li><li><a href="#Phony%20targets">Phony targets</a>
+</li><li><a href="#Working%20with%20several%20directories">Working with several directories</a>
+<ul><li><a href="#Template%20or%20boilerplate%20files">Template or boilerplate files</a>
+</li><li><a href="#The%20%2dF%20compilation%20option">The -F compilation option</a>
+</li></ul></li><li><a href="#Using%20Wildcards">Using Wildcards</a>
+</li><li><a href="#Functions%20and%20Advanced%20Variable%20Usage">Functions and Advanced Variable Usage</a>
+<ul><li><a href="#Lists%20of%20corresponding%20files">Lists of corresponding files</a>
+</li><li><a href="#Source%2fObject%20Separation%20and%20Variant%20Builds">Source/Object Separation and Variant Builds</a>
+</li><li><a href="#Explicit%20specifications%20of%20alternate%20directories">Explicit specifications of alternate directories</a>
+</li><li><a href="#Repositories">Repositories</a>
+</li></ul></li><li><a href="#Debugging%20Makefiles">Debugging Makefiles</a>
+<ul><li><a href="#%2emakepp_log">.makepp_log</a>
+</li><li><a href="#Common%20errors%20in%20makefiles">Common errors in makefiles</a>
+</li></ul></li></ul><hr>
+<p>A <i>makefile</i> is the set of instructions that you use to tell makepp how to
+build your program.  Makepp can accept most makefiles written for the standard
+unix make, but if you're starting from scratch, it is often much simpler to
+use some of makepp's advanced features.  This is an introduction for writing
+makefiles that are specific to makepp.
+</p><p>If you already know a lot about writing makefiles, you might want to at
+least peruse the later sections of this file because they show the
+preferred way to do things with makepp, which is often different from
+the traditional way to do it with make.  Another source of examples and
+advice on writing makefiles for makepp is <a href="http://makepp.sourceforge.net/1.19/makepp_cookbook.html">makepp_cookbook</a>.
+</p><p>Building a program from its source files can be a complicated and
+time-consuming operation.  The commands are too long to be typed in
+manually every time.  However, a straightforward shell script is seldom
+used for compiling a program, because it's too time-consuming to
+recompile all modules when only one of them has changed.
+</p><p>However, it's too error-prone to allow a human to tell the computer
+which files need to be recompiled.  Forgetting to recompile a file can
+mean hours of frustrating debugging.  A reliable automatic tool is
+necessary for determining exactly which modules need recompilation.
+</p><p>Makepp (short for Make-plus-plus, or <strong>make++</strong>) is a tool for solving
+exactly this problem.  It is an improvement on the <strong>make</strong> program, a
+standard tool that has been around for many years.  It relies either on
+its own builtin knowledge (in very simple cases), or on a file called a
+<i>makefile</i> that contains a detailed recipe for building the program.
+</p><p>Usually, the input files are program source code, and the output files
+are executables, but makepp doesn't care what they are.  You can use a
+makefile to control any kind of procedure where you need to selectively
+execute certain commands depending on which files have changed.  You
+could, for example, use makepp to do data analysis, where your input
+files are raw data and analysis programs, and your output files are
+processed data or graphs or whatever.  Makepp will figure out which of
+the processed data files need to be updated whenever some of the data
+files or analysis programs change.  The examples in this introduction
+will assume you are building an executable program from source code, but
+you can do a lot more with makepp than just that if you use your
+imagination.
+</p><p>If your program consists of a single module, you probably don't need
+makepp, because you know that any change that you make requires
+recompiling that module.  However, if your program consists of even just
+two modules, then you will definitely want to use a program like makepp.</p><h2><a name="Do I need a makefile?">Do I need a makefile?</a></h2>
+If your program is relatively simple and doesn't require anything particularly
+special, makepp may already know how to build it without your explicitly
+giving instructions.  For example, suppose you have a program in a single
+source file, called <code>test.c</code>.  You can just type <code><a&nbsp;href="makepp.html">makepp&nbsp;test</a&nbsp;href="makepp.html"></code> and your
+program will build like this:
+<p></p><pre>    % <a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a> test
+    makepp: Entering directory `/somewhere/or/other'
+    gcc -g -Wall -c test.c -o test.o
+    gcc -g -Wall test.o     -o test
+    Warning: on unix, to run a program called 'test', you must type
+       ./test
+    rather than just 'test'.
+
+</pre>
+<p>
+</p><p>These are the basic commands needed to compile a program on unix.  If
+these commands don't make any sense to you, see
+<a href="http://makepp.sourceforge.net/1.19/makepp_tutorial_compilation.html">makepp_tutorial_compilation</a>.
+</p><p>Makepp contains builtin rules for C, C++, and Fortran.
+</p><p>Makepp can sometimes figure out how to compile programs that are
+contained in more than one source file, or programs that must be linked
+with various system libraries.  It does this by guessing which source
+files and libraries you need based on the files that you include.  The
+actual algorithm is too complicated to discuss here in a tutorial (but
+see <a href="http://makepp.sourceforge.net/1.19/makepp_builtin.html">makepp_builtin</a>); you can try it, and if it doesn't work
+automatically for you, you need to write your own makefile.
+</p><p>By default, for C and C++, makepp compiles the program with debug
+information and without optimization.  If you want to turn on
+optimization so that your program runs faster, change the command line
+to:
+</p><p></p><pre>    <a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a> CFLAGS=-O2 test
+
+</pre>
+<p>If you're compiling C++ instead of C, use <code>CXXFLAGS=-O2</code> instead of
+<code>CFLAGS=-O2</code>.  For a complete list of other options you can configure without
+writing a makefile, see <a href="http://makepp.sourceforge.net/1.19/makepp_builtin.html">makepp_builtin</a>.
+</p><p>Makepp's builtin rules are somewhat more powerful than the
+standard unix make, but if you write programs of any complexity,
+it's likely that you'll need a makefile eventually to tell
+makepp what to do.
+</p><p>If you are not familiar with unix compilation commands, it may be helpful at
+this point to read <a href="http://makepp.sourceforge.net/1.19/makepp_tutorial_compilation.html">makepp_tutorial_compilation</a> for a description of what
+these cryptic unix compilation commands do.</p><h2><a name="A simple makefile">A simple makefile</a></h2>
+
+<p>Suppose you are writing a C++ program which has two source
+modules, <code>processing.cxx</code> and <code>gui.cxx</code>, along
+with numerous include files.  If you were to build your program from
+scratch, you would need to execute something like these
+commands:
+</p><p></p><pre>    c++ -c processing.cxx -o processing.o
+    c++ -c gui.cxx -o gui.o
+    c++ processing.o gui.o -o my_program
+
+</pre>
+<p>The first two commands are compilation commands, and the third invokes
+the linker to combine the two object files into a single executable.  If
+you make changes to <code>gui.cxx</code> but not to <code>processing.cxx</code>, then you
+don't need to reexecute the first command, but you do need to execute
+the last two commands.  makepp can figure this out for you
+automatically.
+</p><p>(If you've never worked with make before, you may be thinking that you
+could combine the above three commands into a single command, like this:
+</p><p></p><pre>    c++ processing.cxx gui.cxx -o my_program
+
+</pre>
+<p>When you omit the <code>-c</code> option to the compiler, it combines the
+compilation and linking step.  This is often quite convenient when you
+are not writing a makefile.  However, it's not a good idea to do this in
+a makefile, because it always recompiles both modules even if one of
+them hasn't changed, and this can take a significant amount of extra
+time.)
+</p><p>In order to use makepp to control the build process, you'll need to
+write a &lt;imakefile&lt;/i.  The makefile is a text file that contains the
+recipe for building your program.  It usually resides in the same
+directory as the sources, and it is usually called <code>Makefile</code>.
+</p><p>Each one of these commands should be a separate <i>rule</i> in a makefile.
+A rule is an instruction for building one or more output files from one
+or more input files.  Makepp determines which rules need to be
+reexecuted by determining whether any of the input files for a rule have
+changed since the last time the rule was executed.
+</p><p>A rule has a syntax like this:
+</p><p></p><pre>    output_filenames : input_filenames
+    	actions
+
+</pre>
+<p>The first line of the rule contains a space-separated list of output
+files, followed by a colon, followed by a space-separated list of input
+files.  The output files are also called <i>targets</i>, and the input files
+are also called <i>dependencies</i>; we say that the target file depends on
+the dependencies, because if any of the dependencies change, the target
+must be rebuilt.
+</p><p>The remaining lines of the rule (the <i>actions</i>) are shell commands to
+be executed.  Each action must be indented with at least one space
+(traditional make requires a tab character).  Usually, there's just one
+action line, but there can be as many as you want; each line is executed
+sequentially, and if any one of them fails, the remainder are not
+executed.  The rule ends at the first line which is not indented.
+</p><p>You can place the rules in any order in the makefile, but it is
+traditional to write the rule that links the program first, followed by
+the compilation rules.  One reason for this is that if you simply type &#8220;<code><a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a></code>&#8221;, then makepp attempts to build the first target in the file,
+which means that it will build your whole program and not just a piece
+of it.  (If you want to build something other than the first target, you
+have to specify the name of the target on the command line, e.g., &#8220;<code><a&nbsp;href="makepp.html">makepp&nbsp;processing.o</a&nbsp;href="makepp.html"></code>&#8221;.)
+</p><p>The above compilation commands should be written as three separate
+rules.  A makefile for building this program could look like this:
+</p><p></p><pre>    # Link command:
+    my_program: processing.o gui.o
+    	c++ processing.o gui.o -o my_program
+    
+    # <a href="http://makepp.sourceforge.net/1.19/makepp_tutorial_compilation.html#Compilation">Compilation</a> commands:
+    processing.o: processing.cxx
+    	c++ -c processing.cxx -o processing.o
+    
+    gui.o: gui.cxx
+    	c++ -c gui.cxx -o gui.o
+
+</pre>
+<p>
+</p><p>(Characters on a line following a <code>#</code> are ignored; they are just
+comments.  You do not need the &#8220;<code>#&nbsp;Link&nbsp;command:</code>&#8221; comment in the
+makefile at all.)
+</p><p>To use this makefile, simply cd to the directory and type &#8220;<code><a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a></code>&#8221;.
+Makepp will attempt to build the first target in the makefile, which is
+<code>my_program</code>.  (If you don't want it to build the first target, then
+you have to supply a the name of the target you actually want to build
+on the command line.)
+</p><p>When makepp attempts to build <code>my_program</code>, it realizes that it first
+must build <code>processing.o</code> and <code>gui.o</code> before it can execute the link
+command.  So it looks at the other rules in the makefile to determine
+how to build these.
+</p><p>In order to build <code>processing.o</code>, makepp uses the second rule.  Since
+<code>processing.o</code> depends on <code>processing.cxx</code>, makepp will also try to
+make <code>processing.cxx</code>.  There is no rule to make <code>processing.cxx</code>; it
+must already exist.
+</p><p>Makepp checks whether <code>processing.cxx</code> has changed since the last time
+<code>processing.o</code> was built.  By default, it determines this by looking at
+the dates on the file.  Makepp remembers what the date of
+<code>processing.cxx</code> was the last time <code>processing.o</code> was made by storing
+it in a separate file (in a subdirectory called <code>.<a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a></code>).  Makepp
+will execute the actions to build the target if any of the following is
+true:</p><ul>
+<li>The target does not exist.
+</li><li>The target exists, but makepp does not have any information about the last
+build.
+</li><li>The date on any input file has changed since the last build.
+</li><li>The date on any target has changed since the last build.
+</li><li>The actions have changed since the last build.
+</li><li>The last build occured on a different architecture (different CPU type or
+operating system type).</li></ul>
+<p>It might seem a little funny that makepp executes the action if either
+the output file or the input files have changed since the last build.
+Makepp is designed to guarantee that your build is correct, according to
+the commands in the makefile.  If you go and modify the file yourself,
+then makepp can't guarantee that the modified file is actually correct,
+so it insists on rebuilding.  (For more information on how makepp
+decides whether to rebuild, and how you can control this, see
+<a href="http://makepp.sourceforge.net/1.19/makepp_signatures.html">makepp_signatures</a>.)
+</p><p>Now <code>processing.o</code> might not depend only on <code>processing.cxx</code>; if
+<code>processing.cxx</code> includes any <code>.h</code> files, then it needs to be
+recompiled if any of those <code>.h</code> files has changed, even if
+<code>processing.cxx</code> itself has not changed.  You could modify the rule
+like this:
+</p><p></p><pre>    # Unnecessary listing of .h files
+    processing.o: processing.cxx processing.h simple_vector.h list.h
+    	c++ -c processing.cxx -o processing.o
+
+</pre>
+<p>However, it is a real nuisance to modify the makefile every time you
+change the list of files that are included, and it is also extremely
+error prone.  You would not only have to list the files that
+<code>processing.cxx</code> includes, but also all the files that those files
+include, etc.  <strong>You don't have to do this.</strong> Makepp is smart enough to
+check for include files automatically.  Any time it sees a command that
+looks like a C or C++ compilation (by looking at the first word of the
+action), it reads in the source files looking for <code>#include</code>
+directives.  It knows where to look for include files by scanning for
+<code>-I</code> options on your compiler command line.  Any files which are
+included are automatically added to the dependency list, and any files
+which those include.  If any of them has changed, the file will be
+recompiled.
+</p><p>Once makepp knows that <code>processing.o</code> is up to date, it then determines
+whether <code>gui.o</code> needs to be rebuilt by applying the same procedure to
+the third rule.  When both <code>processing.o</code> and <code>gui.o</code> are known to be
+built correctly, then makepp applies the same procedure to see if the
+link command needs to be reexecuted.
+</p><p>The above makefile will work, but even for this simple problem, an
+experienced user is not likely to write his makefile this way.  Several
+improvements are discussed in the next sections.</p><h3><a name="Using variables">Using variables</a></h3>
+So far, our makefile for compiling our program of two modules
+looks like this:
+<p></p><pre>    # Link command:
+    my_program: processing.o gui.o
+    	c++ processing.o gui.o -o my_program
+    
+    # <a href="http://makepp.sourceforge.net/1.19/makepp_tutorial_compilation.html#Compilation">Compilation</a> commands:
+    processing.o: processing.cxx
+    	c++ -c processing.cxx -o processing.o
+    
+    gui.o: gui.cxx
+    	c++ -c gui.cxx -o gui.o
+
+</pre>
+<p>
+</p><p>This works wonderfully, but suppose now we want to change some compilation
+options.  Or maybe we want to use a different compiler.  We'd have to change
+all three compilation lines.
+</p><p>Similarly, suppose we want to change the list of modules to compile.  We'd
+have to change it in two places.
+</p><p>Duplication of information like this is a recipe for disaster.  If you
+go and change your makefile, it's pretty much guaranteed that at some
+point, you or someone else will forget to change one of the places.
+Depending on what the change is (especially if it affects preprocessor
+definitions), this can lead to subtle and hard-to-debug problems in your
+program.
+</p><p>The way to avoid duplication of information is to specify the
+information only once and store it in a variable, which can be accessed
+each time the information is needed.
+</p><p></p><pre>    # Define the symbols we might want to change:
+    CXX	:= c++
+    CXXFLAGS := -g
+    
+    OBJECTS	:= processing.o gui.o
+    
+    my_program: $(OBJECTS)
+    	$(CXX) $(OBJECTS) -o my_program
+    
+    processing.o: processing.cxx
+    	$(CXX) $(INCLUDES) $(CXXFLAGS) -c processing.cxx -o processing.o
+    
+    gui.o: gui.cxx
+    	$(CXX) $(CXXFLAGS) -c gui.cxx -o gui.o
+
+</pre>
+<p>
+</p><p>Here <code>$(CXX)</code> expands to be the value of the variable <code>CXX</code>, and
+similarly for <code>$(CXXFLAGS)</code> and <code>$(OBJECTS)</code>.  Now we can just change
+one line in the makefile, and all relevant compilation commands are
+affected.
+</p><p>In fact, we don't even need to change the makefile to change compilation
+options.  Assignments specified on the command line override assignments
+in the makefile.  For example, we could type this to the shell:
+</p><p></p><pre>    <a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a> CXXFLAGS="-g -O2"
+
+</pre>
+<p>
+</p><p>which overrides the setting of <code>CXXFLAGS</code> in the makefile.  It is as if
+the makefile contained the line
+</p><p></p><pre>    CXXFLAGS := -g -O2
+
+</pre>
+<p>instead of the definition it does contain.
+</p><p>It might not at all be useful to be able to override these things for
+your own development, but if you distribute your sources to other
+people, they might appreciate it.
+</p><p>Variable names are case sensitive (e.g., <code>OBJECTS</code> is different from
+<code>objects</code>).  Usually people write most variables in upper case only,
+but you don't have to.
+</p><p>If you need to put a literal dollar sign into a rule action, write it
+with a double dollar sign, like this:
+</p><p></p><pre>    test:
+    	for testfile in *.test; do run_test $$testfile; done
+
+</pre>
+<p>Conventionally, there are a few variables which you might want to set.
+These are just conventions, but you will see them in a lot of makefiles.
+</p><p></p><pre>    CC	    := cc		# The C compiler.
+    CFLAGS  := -g		# C compilation options which relate to
+    				# optimization or debugging (usually
+    				# just -g or -O).  Usually this wouldn't
+    				# <a href="http://makepp.sourceforge.net/1.19/makepp_statements.html#include">include</a> -I options to specify the
+    				# <a href="http://makepp.sourceforge.net/1.19/makepp_statements.html#include">include</a> directories, because then you
+    				# couldn't override it on the command line
+    				# easily as in the above example.
+    CXX	     := c++             # The C++ compiler.  (Sometimes "CPP" instead
+    				# of CXX.)
+    CXXFLAGS := -g		# C++ compilation options related to 
+    				# optimization or debugging (-O or -g).
+    F77	     := f77		# The fortran compiler.
+    FFLAGS   :=	        	# Optimization flags for fortran.
+
+</pre>
+<p>
+</p><p>Makepp will guess appropriate values for some of these variables if you
+don't specify them (see <a href="http://makepp.sourceforge.net/1.19/makepp_builtin.html">makepp_builtin</a>), but it is usually best to
+set them explicitly--it makes it easier on anyone reading your makefile.
+</p><p>There are a lot more extremely powerful things you can do with
+variables, but first we need to explain some more things about
+makefiles.</p><h3><a name="Pattern rules">Pattern rules</a></h3>
+
+<p>Having one rule for each compilation command is fine when there are only
+a few files, but what if your program consists of dozens of source
+files?  Most of them have to be compiled with very similar commands.  It
+is tedious to type in a separate rule for each source file, and then if
+you decide to change the rules, you have to change the makefile in a
+dozen places.  A better solution to this problem is to use a <i>pattern
+rule</i>.
+</p><p>A pattern rule is a concise way of specifying a rule for many files at
+once.  The rule will depend on the file names, but usually it depends on
+them in a simple way.  You specify a pattern by using the <code>%</code> wildcard.
+When present in the dependency list, <code>%</code> matches any string of any
+length; when present in the list of targets, <code>%</code> stands for the string
+that <code>%</code> in the dependency list matched.
+</p><p>The following pattern rule will take any <code>.c</code> file and compile it into
+a <code>.o</code> file:
+</p><p></p><pre>    %.o: %.c
+    	$(CC) $(CFLAGS) $(INCLUDES) -c $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre>
+<p>
+</p><p>(This assumes that you have the variables <code>CC</code>, <code>CFLAGS</code>, and
+<code>INCLUDES</code> defined to be something suitable.  Makepp will guess a value
+for <code>CC</code> and <code>CFLAGS</code>.)
+</p><p>The first line of the rule says that it applies to every possible input
+file that matches the pattern <code>%.c</code>.  These <code>.c</code> files can be
+transformed into the corresponding <code>.o</code> file using the specified
+actions.
+</p><p>The action of rule is quite similar to the other actions we've seen
+previously, except that it uses <i>automatic variables</i>.  An automatic variable
+is a variable whose value is automatically set by makepp depending on the rule
+that it appears in.  The most useful automatic variables are:</p><dl>
+<dt><a name="C&lt;$(input)&gt;"></a><a name="$(input)"></a><strong><code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>)</code></strong>
+</dt><dd>
+The name of the first input file.  In this rule, this would be the file
+that matches the <code>%.c</code> pattern.  <code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#dependency">dependency</a>)</code> is a synonymn for
+<code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>)</code>.  In older makefiles, you will also see the cryptic symbol
+<code>&lt;</code> used as well.
+</dd><dt><a name="C&lt;$(output)&gt;"></a><a name="$(output)"></a><strong><code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)</code></strong>
+</dt><dd>
+The name of the first output file.  In this rule, this would be the file
+that matches the <code>%.o</code> pattern.  <code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#target">target</a>)</code> and <code>$@</code> are synonymns.
+</dd><dt><a name="C&lt;$(inputs)&gt;"></a><a name="$(inputs)"></a><strong><code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>)</code></strong>
+</dt><dd>
+The name of all explicitly listed input files.  In this case, since
+there is only one, <code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>)</code> is equivalent to <code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>)</code>.
+<code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#dependencies">dependencies</a>)</code> and <code>$^</code> are synonymns.
+</dd><dt><a name="C&lt;$(outputs)&gt;"></a><a name="$(outputs)"></a><strong><code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#outputs">outputs</a>)</code></strong>
+</dt><dd>
+The name of all explicitly listed targets.  In this case, since there is
+only one, <code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#outputs">outputs</a>)</code> is equivalent to <code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)</code>.  <code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#targets">targets</a>)</code> is
+a synonymn for <code>$(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#outputs">outputs</a>)</code>.</dd></dl>
+<p>Note that these variables are lower case.
+</p><p>You can use these automatic variables even for non-pattern
+rules.  This avoids repeating target filenames.
+</p><p>You can actually do considerably more complicated things with
+pattern rules.  For example,
+</p><p></p><pre>    # Put the object files into a separate directory:
+    objects/%.o: %.cpp
+    	$(CXX) $(CXXFLAGS) -c $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+    
+    # Run a preprocessor to make source files:
+    moc_%.cxx: %.h
+    	$(MOC) $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre>
+<p>Using pattern rules and automatic variables, we'd probably
+rewrite our makefile for our simple program like this:
+</p><p></p><pre>    CXX	:= c++
+    CXXFLAGS := -g
+    INCLUDES := -I.		# This would contain any -I options to the
+    				# compiler, <a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#if">if</a> there are any.
+    LIBS     := -L/usr/X11R6/lib -lX11 # Contains libraries we need to link in.
+    OBJECTS  := processing.o gui.o
+    
+    my_program: $(OBJECTS)
+    	$(CXX) $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>) $(LIBS)
+    
+    %.o: %.cxx
+    	$(CXX) $(INCLUDES) $(CXXFLAGS) -c $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre>
+<p>Now we don't have to have an explicit rule for each object file we need
+to produce.  If we want to add another module to our program, we only
+have to change the one line that defines the <code>OBJECTS</code> variable.  Note
+that this makefile is now much more concise than our original makefile.
+Each piece of information occurs only once so there is no possibility of
+making a mistake by changing information in one place and forgetting to
+change it in others.
+</p><p>When you use pattern rules, it's not uncommon for there to be two
+different rules that can produce the same file.  If both rules are
+pattern rules, then the one that occurs later in the makefile is
+actually used.  If one rule is a pattern rule, and the other is an
+explicit rule (one that actually names the target file explicitly), then
+the explicit rule is used.  This is often helpful if you want to compile
+most modules with the same command, but there is one module that needs
+slightly different compilation options, as shown in this makefile
+fragment:
+</p><p></p><pre>    CXXFLAGS := -g -O2
+    FAST_CXXFLAGS := -DNO_DEBUG -O6 -malign-double -funroll-all-loops
+    
+    %.o: %.cpp
+    	$(CXX) $(CXXFLAGS) -c $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+    
+    time_critical_subs.o: time_critical_subs.cpp
+    	$(CXX) $(FAST_CXXFLAGS) -c $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre>
+<p>There is also another syntax that can be more convenient for affecting
+compilation options for just one or a few targets.  It is possible to
+tell makepp that a variable should have a different value for certain
+specific targets.  In this example, it would look like this:
+</p><p></p><pre>    CXXFLAGS := -g -O2
+    FAST_CXXFLAGS := -DNO_DEBUG -O6 -malign-double -funroll-all-loops
+    
+    %.o: %.cpp
+    	$(CXX) $(CXXFLAGS) -c $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+    
+    time_critical_subs.o: CXXFLAGS := $(FAST_CXXFLAGS)
+
+</pre>
+<p>In general, if you specify a variable name after a list of targets, then
+it takes a different value when the build command for those targets is
+being determined.
+</p><p>If you find yourself wanting to do something with patterns that isn't
+expressed easily using the <code>%</code> wildcard, makepp has another syntax
+which is somewhat harder to read, but considerably more powerful.  See
+the <code>:foreach</code> clause for more details.
+</p><p>Makepp actually has builtin rules for compiling C or C++ or Fortran
+code, which are available if you don't override them with your own
+rules.  The builtin rules are almost identical to the examples above.
+Most makefiles contain pattern rules for compilation, but you can depend
+on the builtin rules if you want.</p><h2><a name="Phony targets">Phony targets</a></h2>
+
+<p>Often it is convenient to put commands into the makefile that don't
+actually build a file, but are somehow logically associated with the
+build process.  For example, a very common procedure in makefiles is
+something like this:
+</p><p></p><pre>    prefix=/usr/local
+    
+    install: our_program
+    	install -m 0755 our_program $(prefix)/bin
+    	install -m 0644 *.png $(prefix)/share/our_program/icons
+    
+    .PHONY: install
+
+</pre>
+<p>When someone types <code><a&nbsp;href="makepp.html">makepp&nbsp;install</a&nbsp;href="makepp.html"></code>, then makepp first builds
+<code>our_program</code>, then runs the commands associated with the install
+target.  The <code>install</code> command simply copies its arguments to the
+specified directory, and sets the file's protection to the indicated
+value.  So it copies <code>our_program</code> into <code>/usr/local/bin</code>, and some
+associated data files into <code>/usr/local/share/our_program/icons</code>.  But
+this doesn't create a file called <code>install</code> in the current directory.
+</p><p>The <code>install</code> target here is called a <i>phony target</i> because makepp
+treats it as if it were a real file, but it is not actually a file, it's
+just a trick for forcing makepp to build its dependencies and then run
+some commands.
+</p><p>That's what the line
+    .PHONY: install
+</p><p>is for.  It tells makepp that it really shouldn't expect the file
+<code>./install</code> to exist after the commands have executed.  If you forget
+the phony declaration, then makepp will expect the file <code>install</code> to
+exist after executing the commands, and it will complain loudly if it
+does not.
+</p><p>
+</p><p>You can also write the phony declaration like this:
+    $(phony install): our_program
+    	...
+</p><p>and then omit the <code>.PHONY:&nbsp;install</code> line.  This means that you can
+declare the target as phony on the same line as you define it, which may
+make your makefiles more readable.
+</p><p>Phony targets are extremely common in makefiles.  In almost all
+makefiles, the first target is the phony target <code>all</code>, like this:
+</p><p></p><pre>    $(<a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#phony">phony</a> all): program1 program2 program3
+
+</pre>
+<p>If no target is specified on the command line, makepp attempts to build
+the first target in the file.  If your makefile makes more than just one
+program, you most likely want to build all of the programs by default.
+In this example, if the programmer just types <code><a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a></code> without any
+arguments, makepp attempts to build <code>all</code>, which forces it to build all
+three programs from this directory.
+</p><p>Here is a sample makefile fragment that illustrates some commonly used
+phony targets:
+</p><p></p><pre>    PROGRAMS	:= combobulator discombobulator
+    
+    $(<a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#phony">phony</a> all): $(PROGRAMS)	# All is the first <a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#target">target</a>, so it's the default.
+    
+    combobulator: $(COMBOBULATOR_OBJS)
+    	$(CXX) $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+    
+    discombobulator: $(DISCOMBOBULATOR_OBJS)
+    	$(CXX) $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+    
+    #
+    # This <a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#target">target</a> makes sure everything is compiled, and then puts the
+    # programs into a place where everyone can access them.  We make the
+    # directories <a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#if">if</a> they don't exist yet.
+    #
+    prefix	:= /usr/local
+    
+    $(<a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#phony">phony</a> install): all
+    	test -d $(prefix) || mkdir $(prefix)
+    	test -d $(prefix)/bin || mkdir $(prefix)/bin
+    	for prog in $(PROGRAMS); do \
+    	  install -m 0755 $$prog $(prefix)/bin; \
+    	done
+    	test -d $(prefix)/share || mkdir $(prefix)/share
+    	test -d $(prefix)/share/combobulate || mkdir -p $(prefix)/share/combobulate
+    	for icon in *.xbm; do \
+    	  install -m 0644 $$icon $(prefix)/share/combobulate; \
+    	done
+    # Note the use of the double dollar sign to pass a single dollar sign to
+    # the shell.  Note also the backslashes at the end of a line to indicate
+    # that a shell command continues to the next line.
+    
+    #
+    # This <a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#target">target</a> gets rid of all the junk that gets built during compiles.
+    # (Note that this could be done more thoroughly with the <a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#only_targets">only_targets</a>
+    # function.)
+    #
+    $(<a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#phony">phony</a> clean):
+    	rm -f $(PROGRAMS) *.o
+    
+    #
+    # This <a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#target">target</a> makes a source distribution for shipping out to someone.
+    #
+    VERSION := 3.14
+    
+    $(<a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#phony">phony</a> distribution):
+    	rm -rf combobulate-$(VERSION)	# Get rid of previous junk, <a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#if">if</a> any.
+    	mkdir combobulate-$(VERSION)
+    	cp *.c *.h Makefile README INSTALL combobulate-$(VERSION)
+    	tar cf - combobulate-$(VERSION) | gzip -9c &gt; combobulate-$(VERSION).tar.gz
+    	rm -rf combobulate-$(VERSION)
+    
+    #
+    # This <a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#target">target</a> runs regression tests to make sure the program(s) are
+    # doing what they are supposed to do.
+    #
+    $(<a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#phony">phony</a> test): $(PROGRAMS)
+    	<a href="http://makepp.sourceforge.net/1.19/makepp_rules.html#noecho">noecho</a> for testfile in *.test; do \
+    	   ./combobulate $$testfile | ./discombobulate - &gt; junk_output; \
+    	  <a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#if">if</a> cmp -s junk_output $$testfile; then \
+    	    echo passed $$testfile; \
+    	  else \
+    	    echo failed $$testfile; \
+    	  fi; \
+    	done
+    #
+    # If "<a href="http://makepp.sourceforge.net/1.19/makepp_rules.html#noecho">noecho</a>" is the first word of the action, the action itself is not
+    # printed before it is executed.  In this case, printing the action
+    # would merely clutter up the screen so it is very common to suppress
+    # printing for such long commands.
+    #
+
+</pre><h2><a name="Working with several directories">Working with several directories</a></h2>
+
+<p>If your program grows to a substantial size, or if it uses libraries
+that need to be built but should be kept separate, it is quite likely
+that you have split up your sources into several directories.  One of
+the main motivations for writing makepp was to make dealing with several
+directories much easier than with the standard make utility.  If you're
+familiar with the standard unix make, you'll notice that with makepp,
+you don't have to mess around with ugly complexities like recursive
+invocations of make.
+</p><p>With makepp, you simply put a separate makefile in each directory that
+builds the relevant files in that directory.  When a makefile refers to
+files whose build commands are in different makefiles, makepp
+automatically finds the appropriate build rules in the other makefiles.
+All actions in each makefile are executed with the current directory set
+to be the directory containing the makefile, so each makefile can be
+written independently of all the others.  No makefile has to know
+anything about the other makefiles; it does not even have to tell makepp
+to load the rules from those other makefiles.
+</p><p>When you've written your makefiles, cd to the directory that contains
+your main program, and type <code><a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a></code> just like you usually would.
+Makepp will load in the makefile from that directory.  It will notice
+that this makefile refers to files in other directories, and it will
+examine those other directories to see if there is a makefile in them.
+In this way, all relevant makefiles will be loaded.
+</p><p>As a simple example, suppose your top level directory contains
+the following makefile:
+</p><p></p><pre>    # Top level makefile:
+    
+    CXX	:= c++
+    CXXFLAGS := -O2
+    my_program: main.o goodies/libgoodies.so
+    	$(CXX) $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+    
+    %.o: %.cxx
+    	$(CXX) $(CXXFLAGS) -c $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre>
+<p>You would need to write a makefile in the directory
+<code>goodies</code> which builds <code>libgoodies.so</code>, like
+this:
+</p><p></p><pre>    # goodies/Makefile
+    
+    CXX	:= c++
+    CXXFLAGS := -O2
+    
+    MODULES = candy.o chips.o licorice.o cookies.o popcorn.o spinach.o
+    
+    libgoodies.so: $(MODULES)
+    	$(CXX) -shared $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+    			# Note that the command is written assuming that
+    			# the current directory is the subdirectory
+    			# "goodies", not the top level subdirectory.
+    			# Makepp cds into this directory before executing
+    			# any commands from this makefile.
+    
+    %.o: %.cxx
+    	$(CXX) $(CXXFLAGS) -fpic -c $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre>
+<p>
+</p><p>And that's all you need to do.
+</p><p>Any variables which you specify on the command line override the
+definition of the variable in <i>all</i> makefiles.  Thus, for example, if
+you type <code><a&nbsp;href="makepp.html">makepp&nbsp;CXXFLAGS="-g"</a&nbsp;href="makepp.html"></code>, all modules will be recompiled for
+debug because the definition of <code>CXXFLAGS</code> in both makefiles is
+overridden.
+</p><p>The directories containing other sources need not be subdirectories of
+the top-level directory (as they are in this example).  They can be
+anywhere in the file system; makepp will automatically load a makefile
+from any directory that contains a file which is a dependency of some
+target it is trying to build.  It will also load a makefile from any
+directory that is scanned by a wildcard.
+</p><p>Automatic loading works if files built by your makefile all reside in
+the same directory as the makefile itself.  If you write your makefile
+so that its rules produce files in a different directory than the
+makefile itself, then you might have to tell makepp where to look for
+the makefiles, since it doesn't have any way of guessing.  You can do
+this using the <code><a href="http://makepp.sourceforge.net/1.19/makepp_statements.html#load_makefile">load_makefile</a></code> statement in your makefile.  For more
+information about this and other issues related to multi-directory
+builds, see <a href="http://makepp.sourceforge.net/1.19/makepp_cookbook.html#Tips%20for%20multiple%20directories">makepp_cookbook/Tips for multiple directories</a>.
+</p><p>One caveat: if you reference the variable <code>$(MAKE)</code> in your makefile,
+makepp automatically goes into backward compatibility mode and turns off
+automatic loading.</p><h3><a name="Template or boilerplate files">Template or boilerplate files</a></h3>
+Makepp has several other features which make life slightly easier for
+programmers who have to maintain a program spanning several directories.
+In the above examples, you'll notice that the definitions of the
+variables <code>CXX</code> and <code>CXXFLAGS</code> have to be repeated in each makefile.
+It can be a nuisance to reenter the same information into every
+makefile, and it could be a problem if you ever decide to change it--you
+may have to modify dozens of different makefiles.
+<p>
+</p><p>What you can do instead is to put all of the information that's common
+to each makefile into a separate file, located perhaps at the top of the
+directory tree.  Common information usually includes variable
+definitions, and sometimes also pattern rules.  (In the above example,
+however, the pattern rules are not the same in both makefiles.)  Let's
+suppose you've called this file <code>standard_defs.mk</code>.  Then each makefile
+simply needs to contain a statement like this:
+</p><p></p><pre>    <a href="http://makepp.sourceforge.net/1.19/makepp_statements.html#include">include</a> standard_defs.mk
+
+</pre>
+<p>When makepp sees this statement, it inserts the contents of the file
+into the makefile at that point.  The <code><a href="http://makepp.sourceforge.net/1.19/makepp_statements.html#include">include</a></code> statement first looks
+for the file in the current directory, then in the parent of the current
+directory, and so on up to the top level of the file system, so you
+don't actually need to specify <code>../standard_defs.mk</code> or
+<code>../../../../standard_defs.mk</code>.
+</p><p>
+</p><p>So we could rewrite the above makefiles to look like this.
+<code>standard_defs.mk</code> would exist in the top level directory, and it might
+contain the following definitions:
+</p><p></p><pre>    # standard_defs.mk
+    CXX	:= c++
+    CXXFLAGS := -O2
+    
+    #
+    # We've also included a pattern rule that might be useful in one or more
+    # subdirectories.  This pattern rule is for C compilation for putting
+    # things into a shared library (that's what the -fpic option is for).
+    #
+    %.o: %.cxx
+    	$(CXX) $(CXXFLAGS) -fpic -c $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre>
+<p>
+</p><p>Note that since the included file is actually inserted into each
+makefile, rules in the included file are applied with the default
+directory set to the directory containing the makefile that included the
+file, not the directory containing the include file.
+</p><p>The top level <code>Makefile</code> might look like this:
+</p><p></p><pre>    # Top level makefile
+    <a href="http://makepp.sourceforge.net/1.19/makepp_statements.html#include">include</a> standard_defs.mk
+    
+    my_program: main.o goodies/libgoodies.so
+    	$(CXX) $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+    
+    #
+    # Note that this pattern rule overrides the one found in standard_defs.mk,
+    # because <a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a> sees it later.  This pattern rule is for compilation for
+    # a module that doesn't belong in a shared library.
+    #
+    %.o: %.cxx
+    	$(CXX) $(CXXFLAGS) $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre>
+<p>
+</p><p>And the subdirectory's makefile might look like this:
+</p><p></p><pre>    # goodies/Makefile
+    <a href="http://makepp.sourceforge.net/1.19/makepp_statements.html#include">include</a> standard_defs.mk
+    
+    MODULES = candy.o chips.o licorice.o cookies.o popcorn.o spinach.o
+    
+    libgoodies.so: $(MODULES)
+    	$(CXX) -shared $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+    
+    # We don't need the pattern rule for compilation of .cxx to .o files, 
+    # because it's contained in standard_defs.mk.
+
+</pre><h3><a name="The -F compilation option">The -F compilation option</a></h3>
+
+<p>If you run makepp from within an editor such as emacs, and you are
+editing sources from several different directories, you may find that
+the default directory for makepp differs depending on which file you
+were most recently editing.  As a result, makepp may not load the
+correct makefile.
+</p><p>What you can do to ensure that makepp always loads the correct
+makefile(s), no matter what directory happens to be your current
+directory, is to use the <code>-F</code> command line option, like this:
+</p><p></p><pre>    <a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a> -F ~/src/my_program
+
+</pre>
+<p>Makepp will first cd to the directory <code>~/src/my_program</code> before it
+attempts to load a makefile.</p><h2><a name="Using Wildcards">Using Wildcards</a></h2>
+
+<p>Up until this point, we've had to explicitly list all of the modules
+that go into a program or a library.  The previous makefile, for
+example, contained this line:
+</p><p></p><pre>    MODULES = candy.o chips.o licorice.o cookies.o popcorn.o spinach.o
+    
+    libgoodies.so: $(MODULES)
+    	$(CXX) -shared $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre>
+<p>In this case, listing all of the modules that go into <code>libgoodies.so</code>
+is not such a big deal since there aren't very many of them.  But
+sometimes it can be a real nuisance to list all of the object files,
+especially if this list is changing rapidly during development.
+Frequently, you want every single module in the whole directory to be
+compiled into your program or library.  It would be a lot easier if you
+could just tell makepp to do that without listing them all.
+</p><p>Well, you can.  The above lines could be rewritten as:
+</p><p></p><pre>    libgoodies.so: *.o
+    	$(CXX) -shared $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre>
+<p>The <code>*.o</code> wildcard matches any existing <code>.o</code> files, or any <code>.o</code> files
+which do not yet exist but can be made by any of the rules that makepp
+knows about from any makefiles that it has read.  So the wildcard will
+return the same list of files, no matter whether you haven't compiled
+anything yet, or whether all the modules have been compiled before.
+</p><p>Of course, if you contaminate your directories with extra files that
+shouldn't be compiled directly into your library, (e.g., if you write
+little test programs and leave them in same directory as the library
+source files), then these modules will be incorrectly included into your
+library.  If you choose to use wildcards, it's up to you to keep the
+directory clean enough.
+</p><p>Makepp supports the usual unix wildcards and one additional one:</p><ul>
+<li>Matches any string of 0 or more characters.  It will not match the <code>/</code>
+character.  For example, <code>a*c</code> matches <code>ac</code>, <code>abc</code>, and <code>aaaaabc</code>,
+but not <code>aa/bc</code>.
+</li><li>Matches exactly one character (not including <code>/</code>).  For example,
+<code>???.o</code> matches all filenames that have 3 characters before the <code>.o</code>
+extension.
+<p>
+</p></li><li>Matches any of a list of characters at that position.  For example,
+<code>[abc].o</code> matches <code>a.o</code>, <code>b.o</code>, <code>c.o</code>, but not <code>abc.o</code> or <code>d.o</code>.
+You can also specify a range of characters, e.g., <code>data_[0-9]</code> will
+match <code>data_0</code>, <code>data_1</code>, etc.
+</li><li>This is a special wildcard, found only in makepp (and the zsh shell,
+from which I stole the idea).  It matches any number of intervening
+directories.  For example, <code>**/*.o</code> matches <code>xyz.o</code>,
+<code>test_programs/abc.o</code>, and <code>a/deeply/nested/subdirectory/def.o</code>.
+<p>If your sources are contained in several subdirectories, and
+you want to link all the object modules together, you could
+write it like this:
+</p><p></p><pre>    liboodles.so: **/*.o
+    	$(CXX) -shared $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre></li></ul><h2><a name="Functions and Advanced Variable Usage">Functions and Advanced Variable Usage</a></h2>
+
+<p>Makepp has a number of extremely powerful ways of manipulating
+text. This tutorial shows a few of the more useful ways, but you might
+want to glance through <a href="http://makepp.sourceforge.net/1.19/makepp_variables.html">makepp_variables</a> and <a href="http://makepp.sourceforge.net/1.19/makepp_functions.html">makepp_functions</a> for a
+more complete list.</p><h3><a name="Lists of corresponding files">Lists of corresponding files</a></h3>
+A common problem in makefiles is the maintenance of two lists of files
+which correspond.  Consider the following two variables:
+<p></p><pre>    SOURCES := a.cpp bc.cpp def.cpp
+    OBJS := a.o bc.o def.o
+
+</pre>
+<p>We might want to have a list of sources if the makefile can build source
+distributions, and we might need a list of objects for the link command.
+It's tedious to change both lines whenever a new module is added, and
+it's not unlikely that a programmer will change one line and forget to
+change the other.  Here we will show four different ways to avoid the
+duplication.</p><dl>
+<dt><a name="The patsubst function"><strong>The patsubst function</strong></a>
+</dt><dd>
+The first is to use makepp's functions to convert one list into another.
+A function invocation looks a little like a variable, except that a
+function can take arguments:
+<p></p><pre>    $(function arg1 arg2 arg3 ...)
+
+</pre>
+<p>Makepp supplies many powerful functions, but probably the most useful of
+them is the <code><a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#patsubst">patsubst</a></code> function.  You could write the above lines like
+this:
+</p><p></p><pre>    SOURCES = a.cpp bc.cpp def.cpp
+    OBJS = $(<a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#patsubst">patsubst</a> %.cpp, %.o, $(SOURCES))
+
+</pre>
+<p>The <code><a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#patsubst">patsubst</a></code> function applies a pattern to every word in a list of
+words, and performs a simple textual substitution.  Any words in the
+list that match the pattern in the first argument are put into the
+output after making the substitution indicated by the second argument.
+The <code>%</code> wildcard matches any string of 0 or more characters.  In this
+example, the pattern <code>%.cpp</code> is applied to every word in <code>$(SOURCES)</code>.
+The first word, <code>a.cpp</code> matches the pattern, and the <code>%</code> wildcard
+matches the string <code>a</code>.  The <code>%</code> in the second argument is then
+replaced by <code>a</code>, and the result is <code>a.o</code>.  For the second argument,
+<code>%</code> matches <code>bc</code>, so the result is <code>bc.o</code>.
+</p><p>Makepp's functions can strip directory names, remove extensions, filter
+out matching words, return the output from shell commands, and other
+useful tricks.  In addition, you can also write your own functions in
+perl that can be called from other parts of the makefile.  See
+<a href="http://makepp.sourceforge.net/1.19/makepp_extending.html">makepp_extending</a> for details.
+</p></dd><dt><a name="Substitution references"><strong>Substitution references</strong></a>
+</dt><dd>
+Since the <code><a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#patsubst">patsubst</a></code> function is so common, there is an abbreviated
+syntax for it called a <i>substitution reference</i>.  We could have written
+the above lines like this:
+<p></p><pre>    SOURCES = a.cpp bc.cpp def.cpp
+    OBJS = $(SOURCES:%.cpp=%.o)
+
+</pre>
+</dd><dt><a name="rc-style substitution"><strong>rc-style substitution</strong></a>
+</dt><dd>
+Sometimes invocations of <code><a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#patsubst">patsubst</a></code> or the equivalent substitution
+references can be somewhat cryptic.  Makepp provides another option
+which is sometimes more convenient: i&lt;rc-style substitution (so called
+because it was pioneered by the rc shell).
+<p></p><pre>    MODULES := a bc def
+    SOURCES := $(MODULES).cpp
+    OBJS := $(MODULES).o
+
+</pre>
+<p>What happened here is that when it evaluated <code>$(MODULES).cpp</code>, makepp
+appended <code>.cpp</code> to every word in <code>$(MODULES)</code>, and similarly for
+<code>$(MODULES).o</code>.  In general, any characters preceding the
+<code>$(variable)</code> (up to a word delimiter) are placed before each word in
+<code>$(variable)</code>, and any characters following <code>$(variable)</code> are placed
+after each word in <code>$(variable)</code>.  Thus the result of evaluating
+<code>x$(MODULES)y</code> would be <code>xay&nbsp;xbcy&nbsp;xdefy</code>.
+</p></dd><dt><a name="Inline perl code"><strong>Inline perl code</strong></a>
+</dt><dd>
+If you know perl, you can insert perl code to perform arbitrary
+manipulations on variables into your makefile.  This is best illustrated
+by an example:
+<p></p><pre>    SOURCES := a.cpp bc.cpp def.cpp
+    <a href="http://makepp.sourceforge.net/1.19/makepp_statements.html#perl_begin">perl_begin</a>
+    ($OBJS = $SOURCES) =~ s/\.cpp/.o/g;
+    perl_end
+
+</pre>
+<p>Any text between the <code><a href="http://makepp.sourceforge.net/1.19/makepp_statements.html#perl_begin">perl_begin</a></code> statement and the <code>perl_end</code>
+statement is passed off to the perl interpreter.  All variables in the
+makefile (except automatic variables) are accessible as perl scalars.
+Any variables you set with perl code will be accessible in the makefile.
+</p><p>So what the above example does is to copy the text from <code>$SOURCES</code> to
+<code>$OBJS</code>, then substitute each occurence of <code>.cpp</code> with <code>.o</code>.
+</p><p>In this example, using inline perl code is probably unnecessary since
+there are easier and clearer ways of doing the same manipulation.  But
+the full power of the perl interpreter is available if you need it.</p></dd></dl><h3><a name="Source/Object Separation and Variant Builds">Source/Object Separation and Variant Builds</a></h3>
+
+<p>Up to this point all of the makefiles we have seen put the object files
+in the same directory as the source files.  This is usually the way
+makefiles are written, and it's certainly the simplest way to do things.
+However, suppose you have to compile your program on both a linux
+machine and a Solaris machine.  The binaries from the two machines are
+incompatible, of course.  Unlike the traditional make, makepp is smart
+enough to know that if the last compilation was on linux, and the
+current compilation is on Solaris, a recompilation of everything is
+necessary.
+</p><p>But this still leaves a problem: when you recompile on Solaris, you wipe
+out your linux binaries.  Then when you switch back to linux, you have
+to recompile everything again, even though the source files that haven't
+changed.
+</p><p>A related problem is if you build your program with several different
+options.  Suppose for example that you usually compile your program with
+optimization:
+</p><p></p><pre>    CFLAGS	:= -O2
+    
+    %.o: %.c
+    	$(CC) $(CFLAGS) -c $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+    
+    my_program: *.o
+    	$(CC) $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre>
+<p>However, you discover a bug, and you want to enable debugging on all
+files, so you do change <code>CFLAGS</code>:
+</p><p></p><pre>    CFLAGS	:= -g -DMALLOC_DEBUG
+
+</pre>
+<p>Makepp realizes that the build commands have changed, and it needs to
+recompile everything.  But again, recompiling with debugging enabled
+wipes out your old binaries, so if you want to turn optimization back
+on, everything must be recompiled again, even the files that haven't
+changed.
+</p><p>The obvious solution to these problems is to put the
+architecture-dependent or build-variant-dependent files in a separate
+subdirectory.  There are two basic techniques for doing this: explicitly
+specifying an alternate directory, or using repositories.</p><h3><a name="Explicit specifications of alternate directories">Explicit specifications of alternate directories</a></h3>
+
+<p>You could rewrite the rules in your makefile to dump the objects into a
+different directory, like this:
+</p><p></p><pre>    ARCH	:= $(shell uname -m)	# ARCH becomes the <a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a> from the uname -m command.
+    CFLAGS	:= -O2
+    OBJDIR	:= $(ARCH)-optim
+    
+    $(OBJDIR)/%.o: %.c
+    	$(CC) $(CFLAGS) -c $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#input">input</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+    
+    $(OBJDIR)/my_program: $(OBJDIR)/*.o
+    	$(CC) $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) -o $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#output">output</a>)
+
+</pre>
+<p>Now when you run makepp, <code>ARCH</code> is automatically set to something
+different for each architecture, and all of the objects are placed in a
+different directory for each architecture, so they don't overwrite each
+other.  If you want to recompile turning on debugging, then you would
+have to change both <code>CFLAGS</code> and <code>OBJDIR</code>.
+</p><p>One problem with this approach is that implicit loading will no longer work.
+The only place that makepp knows to look for a makefile when it needs to build
+something is in the directory of the file it's trying to build.  If this is a
+problem for you, then you can explicitly tell makepp where to look using the
+<code><a href="http://makepp.sourceforge.net/1.19/makepp_statements.html#load_makefile">load_makefile</a></code> statement.</p><h3><a name="Repositories">Repositories</a></h3>
+
+<p>Repositories are a magical way of using a makefile that is written to
+put objects in the same directory, but having makepp automatically put
+the objects in a different directory.  Suppose we start with the
+original makefile above (before we modified it to put the objects in a
+different directory), and we've been working on linux so our source
+directory is filled with linux binaries.  When we want to recompile our
+code on solaris instead of linux, we use the following command instead
+of just typing <code><a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a></code>:
+</p><p></p><pre>    % mkdir solaris
+    % cd solaris
+    % <a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a> -R ..
+
+</pre>
+<p>What the <code>-R</code> option to makepp does in this case is to declare the
+directory <code>..</code> (which is the original source directory) as a
+repository.  A repository is just a way of getting makepp to trick all
+of the actions into believing that all files in one directory tree are
+actually located in a different directory tree in the file system.  In
+the above example, makepp pretends that all the files in <code>..</code> (and all
+subdirectories of <code>..</code>) are actually in the current directory (and
+corresponding subdirectories).
+</p><p>More precisely, a repository is a place where makepp looks if it needs
+to find a file that doesn't exist in the current directory tree.  If the
+file exists in the current directory tree, it is used; if it doesn't
+exist, but a file exists in the repository, makepp makes a temporary
+symbolic link from the file in the repository to the current directory.
+(A symbolic link is an alias for the original file.  It's like a copy,
+except that trying to access the link actually accesses the original
+file.)  The rule actions then act on the file in the current directory,
+but actually reference the files in the repository.
+</p><p>In this example, initially we start off with a blank new directory
+<code>solaris</code>.  (It doesn't have to be blank, of course, and it won't be
+the second time you run makepp.)  Makepp is run in this directory, and
+it sees that there is no makefile there.  However, there is a makefile
+in the repository, so it links in the one from the repository, and reads
+it.  The pattern rule in the makefile that converts <code>.c</code> files into
+<code>.o</code> files causes makepp to link all the <code>.c</code> files that it needs from
+the repository, and run the compilation command from the <code>solaris</code>
+subdirectory.  Therefore the <code>.o</code> files are now placed into the
+<code>solaris</code> subdirectory, not in the top level directory.  When the build
+command is finished, any files linked from the repository are deleted,
+so the <code>solaris</code> subdirectory will contain only the binary files for
+Solaris.  Any <code>.o</code> files that exist in the repository are unmodified,
+so when you go back to your linux machine and rerun makepp, most of your
+program will not have to be recompiled.
+</p><p>Sometimes it might be more convenient to use a different form of the
+repository command.  The above three shell commands could be entirely
+replaced by the following one command:
+</p><p></p><pre>    % <a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a> -R solaris=. -F solaris
+
+</pre>
+<p>What this does is to say that the files in the current directory are to
+be linked into the <code>solaris</code> subdirectory as necessary.  (The
+<code>solaris</code> subdirectory will be created automatically if it does not
+exist.)  Then the <code>-F</code> option causes makepp to cd to the solaris
+directory and execute the makefile there (which will be linked from the
+repository).
+</p><p>Using a repository does not have the same drawbacks as explicitly
+specifying an object directory; makefiles will be implicitly loaded as
+expected, since as far as makepp is concerned, the makefile actually is
+in the same directory as the target files.  However, if your build
+involves not just one but several directory trees, using repositories
+can become quite complicated.
+</p><p>Repositories are just a way of pretending that things located at one
+place in the file system are actually in a different place for the
+duration of the build.  This is a very powerful technique that can be
+used for more than just separating your sources and binaries.  For more
+details, see <a href="http://makepp.sourceforge.net/1.19/makepp_repositories.html">makepp_repositories</a>.</p><h2><a name="Debugging Makefiles">Debugging Makefiles</a></h2>
+<h3><a name=".makepp_log">.makepp_log</a></h3>
+If you have a complicated build procedure, you find that makepp is
+rebuilding things more often than you think they need to be rebuilt.  Or
+you may find that it is not rebuilding things when it should.  You don't
+have to keep staring at your makefiles until you see the problem.  On
+every build, makepp produces a log file that explains which rule it
+thought it was supposed to use to build each target, what files it
+thought each target depended on, and (if it did decide to rebuild) why
+it thought a rebuild was necessary.  This file is called <code>.makepp_log</code>
+and it is placed in the directory you actually ran makepp from.  (Of
+course, the filename has a leading period, which means that you won't
+see it there unless you specifically look for it.  It's designed to be
+unobtrusive.)
+<p>The log file's format is more or less self-explanatory.  Indentation in
+the log file conveys depth in makepp's inference tree.  Suppose the
+target is <code>all</code>, and <code>all</code> depends on <code>my_program</code>, and <code>my_program</code>
+depends on <code>*.o</code>, which depend on the corresponding <code>.c</code> files.  Log
+messages related to <code>all</code> will not be indented, log messages related to
+building the target <code>my_program</code> will be indented two spaces, log
+messages related to building any of the object files will be indented 4
+spaces, and log messages related to building any of the source files
+will be indented 6 spaces.
+</p><p>If you're doing a parallel make (using the <code>-j</code> command line option),
+the order of the messages in the log file will not make nearly as much
+sense since messages from different targets will be interspersed.  You
+might try debugging a serial make first.</p><h3><a name="Common errors in makefiles">Common errors in makefiles</a></h3>
+<dl>
+<dt><a name="Not specifying all dependencies"><strong>Not specifying all dependencies</strong></a>
+</dt><dd>
+Makepp is designed to be extremely clever about finding dependencies,
+and if you just use a standard unix C or C++ compiler command, it is
+actually somewhat difficult to get makepp to miss something.  (Please
+send me examples if you find that it missed something, so I can make
+makepp smarter.)  However, if you are running commands other than
+compilation, or dealing with languages other than C or C++, it is much
+easier to run into problems.
+<p>If you don't tell makepp all of the dependencies of a file, and it can't
+infer them by looking at the command line or scanning the files for
+includes, then it may not rebuild a file when it should.  You can make
+this kind of error less likely by using only automatic variables in your
+actions, rather than repeating the dependency lists.  For example,
+</p><p></p><pre>    combined_file: a b c
+         do_something a b c d &gt; combined_file
+
+</pre>
+<p>has an error because <i>d</i> is mentioned in the action but not in the
+dependency list.  If the command had been written using automatic
+variables like this:
+</p><p></p><pre>    combined_file a b c d
+        do_something $(<a href="http://makepp.sourceforge.net/1.19/makepp_variables.html#inputs">inputs</a>) &gt; combined_file
+
+</pre>
+<p>then it would have been impossible to make this mistake.
+</p><p>Another way that a missing dependency can occur is if a program actually
+uses a file but doesn't take the file's name on the command line.  For
+example, if you're compiling Fortran code, makepp at the moment doesn't
+know how to scan for included files.  Thus you must explicitly list any
+files that are included.
+</p><p>One thing that is sometimes helpful for testing is to start with a
+completely clean directory--just the bare minimum you think should be
+necessary--and rebuild absolute everything from scratch.  This can be
+most conveniently done by using repositories, like this:
+</p><p></p><pre>    rm -rf test-build-<a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#dir">dir</a>
+    <a href="http://makepp.sourceforge.net/1.19/makepp.html">makepp</a> -R test-build-<a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#dir">dir</a>=. -F test-build-<a href="http://makepp.sourceforge.net/1.19/makepp_functions.html#dir">dir</a>
+
+</pre>
+<p>If the build fails because some file is not present, it means that
+makepp didn't realize some file was a dependency, because it only links
+files from the repository that it thought were needed.  Performing this
+test occasionally may save hours of debugging later.  I have worked on
+projects where this was never done for months because recompilation took
+so long.  As a result, many little problems crept in.  There were some
+object files that didn't have source files any more, some source files
+that were never properly rebuilt by a preprocessing command, etc.
+</p><p>Of course, this won't catch all missing dependencies, but it will catch
+some of them.
+</p></dd><dt><a name="Not specifying all targets"><strong>Not specifying all targets</strong></a>
+</dt><dd>
+You must specify <strong>all</strong> files that a given command modifies as targets,
+or else makepp may not have realized they have changed.  You can specify
+more than one target.  For example,
+<p></p><pre>    y.tab.h y.tab.c: parse.y
+    	yacc -d parse.y
+
+</pre>
+<p>If you had forgotten to specify <i>y.tab.h</i> as a target, then makepp
+would not know to rebuild <i>y.tab.h</i> using this command, and files that
+depend on <i>y.tab.h</i> might not be recompiled after the yacc command is
+run.</p></dd></dl>
+<p>Please suggest things that you have found confusing or dangerous, and
+I'll either note them or try to fix makepp so they aren't a danger any
+more.
+</p><p>&lt;!DOCTYPE HTML PUBLIC &#8220;-//IETF//DTD HTML//EN"
+&lt;html
+&lt;head
+&lt;titleUsing Qt's moc preprocessor&lt;/title
+&lt;/head
+</p><p>&lt;body
+&lt;h1Using Qt's moc preprocessor&lt;/h1
+</p><p>
+</p><p>
+</p><p>
+</p><p>&lt;hr
+&lt;a href="t_index.html"Tutorial index&lt;/a
+|
+&lt;a href="t_debugging.html"Next (debugging makefiles)&lt;/a
+|
+&lt;a href="t_functions.html"Previous (functions and variables)&lt;/a
+&lt;br
+&lt;!-- $Id: makepp_tutorial.pod,v 1.3 2003/07/15 00:50:38 grholt Exp $ --
+&lt;!-- Created: Fri Aug 25 23:04:23 PDT 2000 --
+&lt;!-- hhmts start --
+Last modified: Tue Dec 26 21:08:53 PST 2000
+&lt;!-- hhmts end --
+&lt;/body
+&lt;/html
+&lt;!DOCTYPE HTML PUBLIC &#8220;-//IETF//DTD HTML//EN"
+&lt;html
+&lt;head
+&lt;titleWhat is in a makefile&lt;/title
+&lt;/head
+</p><p>&lt;body
+&lt;h1What is in a makefile&lt;/h1
+</p><p>
+</p><p>
+</p><p>
+</p><p>&lt;hr
+&lt;a href="t_index.html"Tutorial index&lt;/a
+|
+&lt;a href="t_functions.html"Next (functions and variables)&lt;/a
+|
+&lt;a href="t_dirs.html"Previous (directories)&lt;/a
+&lt;br
+&lt;!-- $Id: makepp_tutorial.pod,v 1.3 2003/07/15 00:50:38 grholt Exp $ --
+&lt;!-- Created: Fri Aug 25 21:16:52 PDT 2000 --
+&lt;!-- hhmts start --
+Last modified: Fri Aug 25 22:57:09 PDT 2000
+&lt;!-- hhmts end --
+&lt;/body
+&lt;/html
+&lt;h1Libraries and Makepp&lt;/h1
+</p><p>
+</p><p>Libraries are used for several reasons.
+&lt;ol
+&lt;liA subroutine or collection of subroutines that is used in many
+different programs is often put into a library.  For example,
+the C functions printf, fprintf, etc., are all part of the
+standard C library that every program links with.
+&lt;liA library
+</p><p>
+</p><p>
+</p><p>Two kinds of libraries are common on unix systems: static and
+dynamic (or shared).  Static libraries have a <code>.a</code>
+suffix, and dynamic libraries have a <code>.so</code> (or
+sometimes <code>.sa</code>) suffix.
+</p><p></p></body></html>

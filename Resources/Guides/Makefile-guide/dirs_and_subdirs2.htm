@@ -1,0 +1,71 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<title>Makefile in the dns-dir Directory</title>
+
+<style type="text/css">
+<!--
+.ft0{font-size:9px;font-family:Arial;color:#000000;}
+.ft1{font-size:13px;font-family:Arial;color:#000000;}
+.ft2{font-size:13px;font-family:Times New Roman;color:#000000;}
+.ft3{font-size:13px;font-family:Courier;color:#000000;}
+.ft4{font-size:12px;font-family:Courier;color:#000000;}
+BODY {background-image:url(0130091154_150.jpg); background-repeat:no-repeat;}
+-->
+</style>
+</head><body bgcolor="#ffffff" text="#000000">
+
+<div style="position: absolute; top: 162px; left: 158px;"><nobr><span class="ft0">Working with Multiple Makefiles and Directories127</span></nobr></div>
+<div style="position: absolute; top: 202px; left: 192px;"><nobr><span class="ft1">4.4.4Makefile in the tftp-dir Directory</span></nobr></div>
+<div style="position: absolute; top: 225px; left: 192px;"><nobr><span class="ft2">The makefile in the </span></nobr></div>
+<div style="position: absolute; top: 225px; left: 309px;"><nobr><span class="ft3">tftp-dir</span></nobr></div>
+<div style="position: absolute; top: 225px; left: 376px;"><nobr><span class="ft2"> directory builds the </span></nobr></div>
+<div style="position: absolute; top: 225px; left: 496px;"><nobr><span class="ft3">tftp</span></nobr></div>
+<div style="position: absolute; top: 225px; left: 530px;"><nobr><span class="ft2"> target. It compiles and then</span></nobr></div>
+<div style="position: absolute; top: 243px; left: 158px;"><nobr><span class="ft2">statically links the object files using the library we built in the </span></nobr></div>
+<div style="position: absolute; top: 243px; left: 521px;"><nobr><span class="ft3">common-dir</span></nobr></div>
+<div style="position: absolute; top: 243px; left: 605px;"><nobr><span class="ft2"> directory. This</span></nobr></div>
+<div style="position: absolute; top: 261px; left: 158px;"><nobr><span class="ft2">makefile is shown below. It also has rules to install the target and clean the directory.</span></nobr></div>
+<div style="position: absolute; top: 286px; left: 225px;"><nobr><span class="ft4"># Variable definition</span></nobr></div>
+<div style="position: absolute; top: 301px; left: 225px;"><nobr><span class="ft4">SRCS = tftp.c </span></nobr></div>
+<div style="position: absolute; top: 317px; left: 225px;"><nobr><span class="ft4">OBJS = tftp.o </span></nobr></div>
+<div style="position: absolute; top: 332px; left: 225px;"><nobr><span class="ft4">HDRS = tftp.h </span></nobr></div>
+<div style="position: absolute; top: 363px; left: 225px;"><nobr><span class="ft4">CC = gcc</span></nobr></div>
+<div style="position: absolute; top: 378px; left: 225px;"><nobr><span class="ft4">CFLAGS = -g -O2 -c</span></nobr></div>
+<div style="position: absolute; top: 393px; left: 225px;"><nobr><span class="ft4">INCLUDES = -I../common-dir</span></nobr></div>
+<div style="position: absolute; top: 408px; left: 225px;"><nobr><span class="ft4">LIBSDIR = ../common-dir</span></nobr></div>
+<div style="position: absolute; top: 424px; left: 225px;"><nobr><span class="ft4">LDFLAGS = -static -L$(LIBSDIR)</span></nobr></div>
+<div style="position: absolute; top: 439px; left: 225px;"><nobr><span class="ft4">INSTALLDIR = /root</span></nobr></div>
+<div style="position: absolute; top: 470px; left: 225px;"><nobr><span class="ft4"># Default Target</span></nobr></div>
+<div style="position: absolute; top: 500px; left: 225px;"><nobr><span class="ft4">tftp: $(SRCS) $(HDRS)</span></nobr></div>
+<div style="position: absolute; top: 516px; left: 225px;"><nobr><span class="ft4">  $(CC) $(CFLAGS) $(INCLUDES) tftp.c</span></nobr></div>
+<div style="position: absolute; top: 531px; left: 225px;"><nobr><span class="ft4">  $(CC) $(LDFLAGS) $(COMMON) $(OBJS) -lcommon -o tftp</span></nobr></div>
+<div style="position: absolute; top: 562px; left: 225px;"><nobr><span class="ft4">install:</span></nobr></div>
+<div style="position: absolute; top: 577px; left: 225px;"><nobr><span class="ft4">  cp tftp $(INSTALLDIR)</span></nobr></div>
+<div style="position: absolute; top: 608px; left: 225px;"><nobr><span class="ft4">clean:</span></nobr></div>
+<div style="position: absolute; top: 623px; left: 225px;"><nobr><span class="ft4">  @echo "Deleting files ..."</span></nobr></div>
+<div style="position: absolute; top: 638px; left: 225px;"><nobr><span class="ft4">  rm -f tftp $(OBJS) *~</span></nobr></div>
+<div style="position: absolute; top: 671px; left: 192px;"><nobr><span class="ft1">4.4.5Makefile in the dns-dir Directory</span></nobr></div>
+<div style="position: absolute; top: 694px; left: 192px;"><nobr><span class="ft2">The makefile in the </span></nobr></div>
+<div style="position: absolute; top: 694px; left: 302px;"><nobr><span class="ft3">dns-dir</span></nobr></div>
+<div style="position: absolute; top: 694px; left: 360px;"><nobr><span class="ft2"> directory builds the </span></nobr></div>
+<div style="position: absolute; top: 694px; left: 474px;"><nobr><span class="ft3">dnsresolver</span></nobr></div>
+<div style="position: absolute; top: 694px; left: 565px;"><nobr><span class="ft2"> target. It compiles and</span></nobr></div>
+<div style="position: absolute; top: 712px; left: 158px;"><nobr><span class="ft2">then statically links the object files using the library we built in the </span></nobr></div>
+<div style="position: absolute; top: 712px; left: 551px;"><nobr><span class="ft3">common-dir</span></nobr></div>
+<div style="position: absolute; top: 712px; left: 634px;"><nobr><span class="ft2"> directory.</span></nobr></div>
+<div style="position: absolute; top: 730px; left: 158px;"><nobr><span class="ft2">This makefile is shown below.</span></nobr></div>
+<div style="position: absolute; top: 755px; left: 225px;"><nobr><span class="ft4"># Variable definition</span></nobr></div>
+<div style="position: absolute; top: 770px; left: 225px;"><nobr><span class="ft4">SRCS = dnsresolver.c </span></nobr></div>
+<div style="position: absolute; top: 786px; left: 225px;"><nobr><span class="ft4">OBJS = dnsresolver.o </span></nobr></div>
+<div style="position: absolute; top: 801px; left: 225px;"><nobr><span class="ft4">HDRS = dnsresolver.h </span></nobr></div>
+<div style="position: absolute; top: 832px; left: 225px;"><nobr><span class="ft4">CC = gcc</span></nobr></div>
+<div style="position: absolute; top: 847px; left: 225px;"><nobr><span class="ft4">CFLAGS = -g -O2 -c</span></nobr></div>
+<div style="position: absolute; top: 862px; left: 225px;"><nobr><span class="ft4">INCLUDES = -I../common-dir</span></nobr></div>
+<div style="position: absolute; top: 877px; left: 225px;"><nobr><span class="ft4">LIBSDIR = ../common-dir</span></nobr></div>
+<div style="position: absolute; top: 893px; left: 225px;"><nobr><span class="ft4">LDFLAGS = -static -L$(LIBSDIR)</span></nobr></div>
+<div style="position: absolute; top: 908px; left: 225px;"><nobr><span class="ft4">INSTALLDIR = /root</span></nobr></div>
+<div style="position: absolute; top: 20px; left: 680px;"><nobr><span class="fto"><a href="http://www.faqs.org/docs/ldev/0130091154_151.htm"> Next Page &gt;&gt;</a></span></nobr></div>
+<div style="position: absolute; top: 20px; left: 70px;"><nobr><span class="fto"><a href="http://www.faqs.org/docs/ldev/0130091154_149.htm">&lt;&lt; Previous Page</a></span></nobr></div>
+<div style="position: absolute; top: 20px; left: 350px;"><nobr><span class="fto"><a href="http://www.faqs.org/docs/ldev/index.html">Back to the Table of Contents</a></span></nobr></div>
+</body></html>
