@@ -1,0 +1,297 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<title>Creating Makefiles Tutorial</title>
+<link rel="stylesheet" href="Creating%20Makefiles%20Tutorial_files/style.html" type="text/css">
+<link rel="stylesheet" href="Creating%20Makefiles%20Tutorial_files/code-highlight.css" type="text/css">
+
+<meta name="keywords" content="source, code, php, c, c++, perl, html, example, shellscript, linux, development, programming, resource, archive, script, sourcecode, help, basic, tutorials, sample, program, snippit, examples">
+<meta name="description" content="Source code examples in many different languages.  View source code snippets in php, c, c++, perl, javascript, pythong and more.">
+
+<script src="Creating%20Makefiles%20Tutorial_files/yetii.js" type="text/javascript"></script>
+
+</head><body>
+
+<div class="page_container">
+
+	<div class="page_header">
+		<a href="http://www.metalshell.com/" alt="home"><img src="Creating%20Makefiles%20Tutorial_files/mslogo.jpg" border="0"></a>
+
+		<div class="logged_in_box">
+			
+		</div>
+
+		<div class="search_box">
+			<form action="http://www.metalshell.com/search.php" id="cse-search-box">
+			  <div>
+			    <input name="cx" value="partner-pub-8813449396242280:9dg4jqh9ayh" type="hidden">
+			    <input name="cof" value="FORID:10" type="hidden">
+			    <input name="ie" value="ISO-8859-1" type="hidden">
+			    <input style="background: rgb(255, 255, 255) url(http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif) no-repeat scroll left center; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" name="q" size="31" type="text">
+			    <input name="sa" value="Search" type="submit">
+			  </div>
+			<input value="www.metalshell.com/view/tutorial/120/" name="siteurl" type="hidden"></form>
+			<script type="text/javascript" src="Creating%20Makefiles%20Tutorial_files/brand.html"></script>
+		</div>
+	</div>
+
+	<div class="page_header_sub">
+		&nbsp;
+	</div>
+
+	<div class="page_body_right">
+		<div class="menu_title">
+			<div class="new_icon"></div>
+			Forums
+		</div>
+
+		<div class="menu_links">
+			<a href="http://www.metalshell.com/c/">C</a><br>
+			<a href="http://www.metalshell.com/cpp/">C++</a><br>
+			<a href="http://www.metalshell.com/php/">PHP</a><br>
+			<a href="http://www.metalshell.com/perl/">Perl</a><br>
+			<a href="http://www.metalshell.com/python/">Python</a><br>
+			<a href="http://www.metalshell.com/javascript/">Javascript</a><br>
+		</div>
+
+		<div style="height: 4px;"></div>
+		<div class="menu_title">
+			Advertisement
+		</div>
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-8813449396242280";
+/* 160x600, created 9/16/08 */
+google_ad_slot = "0905929650";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="Creating%20Makefiles%20Tutorial_files/show_ads.js">
+</script><script src="Creating%20Makefiles%20Tutorial_files/expansion_embed.js"></script><script src="Creating%20Makefiles%20Tutorial_files/test_domain.js"></script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 600px; position: relative; visibility: visible; width: 160px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 600px; position: relative; visibility: visible; width: 160px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame1" marginheight="0" marginwidth="0" name="google_ads_frame" src="Creating%20Makefiles%20Tutorial_files/ads.html" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" frameborder="0" height="600" scrolling="no" width="160"></iframe></ins></ins>
+		
+	</div>
+
+	<div class="page_body_left">
+
+		<div class="menu_title">
+			Browse Code
+		</div>
+
+		<div class="menu_links" style="background: rgb(230, 240, 255) none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;">
+			<a href="http://www.metalshell.com/source/c/">C</a><br>
+			<ul class="sub_menu_list">
+				<li><a href="http://www.metalshell.com/source/c/database/">database</a></li><li><a href="http://www.metalshell.com/source/c/encryption/">encryption</a></li><li><a href="http://www.metalshell.com/source/c/files/">files</a></li><li><a href="http://www.metalshell.com/source/c/general/">general</a></li><li><a href="http://www.metalshell.com/source/c/gnome/">gnome</a></li><li><a href="http://www.metalshell.com/source/c/internet/">internet</a></li><li><a href="http://www.metalshell.com/source/c/linux/">linux</a></li><li><a href="http://www.metalshell.com/source/c/math/">math</a></li><li><a href="http://www.metalshell.com/source/c/runtime/">runtime</a></li><li><a href="http://www.metalshell.com/source/c/strings/">strings</a></li><li><a href="http://www.metalshell.com/source/c/structures/">structures</a></li><li><a href="http://www.metalshell.com/source/c/windows/">windows</a></li>
+			</ul>
+			<a href="http://www.metalshell.com/source/cpp/">C++</a><br>
+			<ul class="sub_menu_list">
+				<li><a href="http://www.metalshell.com/source/cpp/classes/">classes</a></li><li><a href="http://www.metalshell.com/source/cpp/files/">files</a></li><li><a href="http://www.metalshell.com/source/cpp/general/">general</a></li><li><a href="http://www.metalshell.com/source/cpp/input/">input</a></li><li><a href="http://www.metalshell.com/source/cpp/internet/">internet</a></li><li><a href="http://www.metalshell.com/source/cpp/math/">math</a></li><li><a href="http://www.metalshell.com/source/cpp/opengl/">opengl</a></li><li><a href="http://www.metalshell.com/source/cpp/overloading/">overloading</a></li><li><a href="http://www.metalshell.com/source/cpp/stl/">stl</a></li><li><a href="http://www.metalshell.com/source/cpp/strings/">strings</a></li>
+			</ul>
+			<a href="http://www.metalshell.com/source/php/">PHP</a><br>
+			<ul class="sub_menu_list">
+				<li><a href="http://www.metalshell.com/source/php/cgi/">cgi</a></li><li><a href="http://www.metalshell.com/source/php/database/">database</a></li><li><a href="http://www.metalshell.com/source/php/files/">files</a></li><li><a href="http://www.metalshell.com/source/php/general/">general</a></li><li><a href="http://www.metalshell.com/source/php/internet/">internet</a></li><li><a href="http://www.metalshell.com/source/php/math/">math</a></li><li><a href="http://www.metalshell.com/source/php/xml/">xml</a></li>
+			</ul>
+			<a href="http://www.metalshell.com/source/perl/">PERL</a><br>
+			<ul class="sub_menu_list">
+				<li><a href="http://www.metalshell.com/source/perl/cgi/">cgi</a></li><li><a href="http://www.metalshell.com/source/perl/database/">database</a></li><li><a href="http://www.metalshell.com/source/perl/files/">files</a></li><li><a href="http://www.metalshell.com/source/perl/general/">general</a></li><li><a href="http://www.metalshell.com/source/perl/internet/">internet</a></li><li><a href="http://www.metalshell.com/source/perl/runtime/">runtime</a></li>
+			</ul>
+			<a href="http://www.metalshell.com/source/python/">PYTHON</a><br>
+			<ul class="sub_menu_list">
+				<li><a href="http://www.metalshell.com/source/python/files/">files</a></li><li><a href="http://www.metalshell.com/source/python/general/">general</a></li><li><a href="http://www.metalshell.com/source/python/modules/">modules</a></li><li><a href="http://www.metalshell.com/source/python/structures/">structures</a></li>
+			</ul>
+			<a href="http://www.metalshell.com/source/javascript/">JAVASCRIPT</a><br>
+			<ul class="sub_menu_list">
+				<li><a href="http://www.metalshell.com/source/javascript/ajax/">ajax</a></li><li><a href="http://www.metalshell.com/source/javascript/general/">general</a></li>
+			</ul>
+		</div>
+		<div style="height: 4px;"></div>
+		<div class="menu_title">
+			Links
+		</div>
+		
+		<div class="menu_links">
+			<a href="http://www.codeproject.com/">The Code Project</a><br>
+			<a href="http://www.developer.com/">Developer.com</a><br>
+			<a href="http://www.sitepoint.com/">Site Point</a><br>
+			<a href="http://www.blueparrot.com/">Blue Parrot</a><br>
+			<a href="http://www.gamedev.net/">Game Dev</a><br>
+		</div>
+	</div>
+
+	<div class="page_body_main">
+		<div class="tutorial"><h2>Managing Projects Using Makefiles</h2>
+<br>
+<br><h4>Introduction</h4>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As you begin to work on larger
+projects you will find it necessary to have a means to organize the
+compilation of your source code. Having to compile multiple files from
+the command line can become a tedious and time consuming task. The GNU
+Make program will make this process much easier to deal with. If you
+have ever compiled or installed software on your linux system the
+chances are you have run â&#8364;&#732;makeâ&#8364;&#8482; to compile it for you.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When you run â&#8364;&#732;makeâ&#8364;&#8482; it looks for
+a file named â&#8364;&#732;Makefileâ&#8364;&#8482;, this file holds a set of rules for
+compiling the project. The files you are compiling are automatically
+examined to detect changes, if a change has been made or a certain file
+is not present it will be compiled, otherwise itâ&#8364;&#8482;ll be left
+unchanged. This is very useful when you start making very small changes
+to a large program, you only need to recompile the files you made
+changes too and then link them together.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This tutorial will go over the basic
+steps for creating your own Makefiles and getting a handle on compiling
+your multifile projects.
+<br>
+<br><h4>Basic Makefile</h4>
+<br><pre class="tutbox">&nbsp;
+<br><span class="tutgreen"># Basic Makefile 
+<br>
+<br># all is the default target and is called when just â&#8364;&#732;makeâ&#8364;&#8482; with
+<br># no options is run.</span>
+<br>all: myprog
+<br>
+<br><span class="tutgreen"># define myprog and the files it requires to compile.  If main.o or
+<br># file.o are not up to date they will be called upon to be updated before
+<br># myprog is compiled together.  Note that tabs are required</span>
+<br>myprog: main.o file.o
+<br>	g++ -o myprog main.o file.o
+<br>
+<br><span class="tutgreen"># to compile main.o the file main.cpp is checked for updates.  If main.cpp
+<br># is not present an error will be presented.  If main.cpp has not changed
+<br># since the last build it will not be recompiled.</span>
+<br>main.o: main.cpp
+<br>	g++ -Wall -c -o main.o main.cpp
+<br>
+<br>file.o: file.cpp
+<br>	g++ -Wall -c -o file.o file.cpp
+<br>&nbsp;</pre>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using this Makefile you can compile
+your program in one simple step. The files â&#8364;&#732;main.cppâ&#8364;&#8482;,
+â&#8364;&#732;file.cppâ&#8364;&#8482;, and â&#8364;&#732;file.hâ&#8364;&#8482; must exist or an error will occur.
+Files are checked up to date by comparing their last time modified with
+its dependencies. So when main.o is checked if it is older then
+main.cpp it will be compiled, otherwise nothing will happen. This rule
+is applied to all of the compile directives. You should also note the
+gaps before the compile line are tab's and are required so it doesn't
+get confused with other dependencies.
+<br>
+<br>When â&#8364;&#732;makeâ&#8364;&#8482; is run for the first time you should see the following happen.
+<br>
+<br><pre class="tutbox">&nbsp;
+<br>$ make
+<br>g++ -Wall -c -o main.o main.cpp
+<br>g++ -Wall -c -o file.o file.cpp
+<br>g++ -o myprog main.o file.o
+<br>&nbsp;</pre>
+<br>Now run make again.
+<br>
+<br><pre class="tutbox">&nbsp;
+<br>$ make
+<br>make: Nothing to be done for `all'.
+<br>&nbsp;</pre>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you make a change to file.cpp and
+run â&#8364;&#732;makeâ&#8364;&#8482; again, file.o will be older then file.cpp so it will be
+compiled, and myprog will be older then file.o so it will be compiled.
+<br>
+<br><pre class="tutbox">&nbsp;
+<br>$ touch file.cpp
+<br>$ make
+<br>g++ -Wall -c -o file.o file.cpp
+<br>g++ -o myprog main.o file.o
+<br>&nbsp;</pre> 
+<br><h4>Variables</h4>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sometimes you need to make changes to
+the options you pass to the compiler, like adding or removing -DDEBUG
+to define debugging for your program. It would be silly to hand edit
+every single compile directive to make changes. This is where variables
+to define your compiler and compiler options will make your life
+simplier.
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The following will assign the value
+"gcc" to the variable CC, append " -o" to it and then display the
+value. All variables must first be defined before you can access them.
+$ or $(VARIABLE) is the notation used to access a variable.
+<br>
+<br><pre class="tutbox">&nbsp;
+<br>CC = gcc
+<br>CC += -o
+<br>
+<br>all:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   @echo $
+<br>&nbsp;</pre>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A typical Makefile will define your
+compiler name, compiler flags, and compile line in variables. Below is
+a modified version of the first Makefile.
+<br>
+<br><pre class="tutbox">&nbsp;
+<br><span class="tutgreen"># Basic Makefile with variables</span>
+<br>
+<br>CC = g++
+<br>CFLAGS = -Wall -O2
+<br>COMPILE = $(CC) $(CFLAGS) -c
+<br>
+<br>all: myprog
+<br>
+<br>myprog: main.o file.o
+<br>	$(CC) -o myprog main.o file.o
+<br>
+<br>main.o: main.cpp
+<br>	$(COMPILE) -o main.o main.cpp
+<br>
+<br>file.o: file.cpp
+<br>	$(COMPILE) -o file.o file.cpp
+<br>&nbsp;</pre>
+<br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This will allow you to change your
+options without having to modify every single line. We can also take
+this a step further, you will notice that main.o and file.o are
+compiled in the same manner with just different filenames. Makefiles
+enable you to use wildcards to match file names and compile multiple
+files with one definition. Consider the following.
+<br>
+<br><pre class="tutbox">&nbsp;
+<br><span class="tutgreen"># Automated Makefile</span>
+<br>
+<br>CC = g++
+<br>CFLAGS = -Wall -O2
+<br>COMPILE = $(CC) $(CFLAGS) -c
+<br>OBJFILES := $(patsubst %.cpp,%.o,$(wildcard *.cpp))
+<br>
+<br>all: myprog
+<br>
+<br>myprog: $(OBJFILES)
+<br>	$(CC) -o myprog $(OBJFILES)
+<br>
+<br>%.o: %.cpp
+<br>	$(COMPILE) -o $@ $&lt;
+<br>&nbsp;</pre>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This Makefile will compile any .cpp
+file in the current directory. The first change you see from the
+previous example is the OBJFILES variable. This variable is filled with
+.o targets using the wildcard command and patsubst. The $(wildcard
+*.cpp) will retrieve any .cpp file in the current directory and store
+it in a variable. The patsubstr functions is used to convert a file
+from one format to another. In this case each .cpp file is converted
+into a .o extension and then stored into OBJFILES. This variable is
+then used to compile each .cpp file.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instead of having main.o: main.cpp
+we now have %.o: %.cpp. Any target that has a .o extension will goto
+here. In the compile line you will see two new variables $@ and $&lt;.
+$@ will match the target and the $&lt; will match the dependency, so
+basically $@ will be replace with main.o and $&lt; will be replaced
+with main.cpp.</div>
+
+	</div>
+</div>
+
+
+<div class="page_footer">
+	&nbsp;
+</div>
+
+<script type="text/javascript" language="javascript" src="Creating%20Makefiles%20Tutorial_files/philip.html"></script><script language="JavaScript">j = "JavaScript 1"</script><script language="JavaScript1.1">j = "JavaScript 1.1"</script><script language="JavaScript1.2">j = "JavaScript 1.2"</script><script language="JavaScript1.3">j = "JavaScript 1.3"</script><script language="JavaScript1.4">j = "JavaScript 1.4"</script><script language="JavaScript1.5">j = "JavaScript 1.5"</script><script language="JavaScript2.0">j = "JavaScript 2.0"</script><img src="Creating%20Makefiles%20Tutorial_files/hit.gif" alt="Webtistic" border="0">
+<noscript>
+<a href="http://www.webtistic.com/">
+<img SRC="http://fry.webtistic.com/hit.php?a=1" border="0" alt="Webtistic - Traffic Analysis">
+</a></noscript>
+
+</body></html>
