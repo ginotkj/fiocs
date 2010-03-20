@@ -410,6 +410,6 @@ device=spice-subcircuit-LL
 T 49400 47400 5 10 1 1 0 0 1
 refdes=A1
 T 49400 47100 5 10 1 1 0 0 1
-model-name=8inand
+model-name=deco64_8inand
 }
 N 45100 40100 46400 40100 4
