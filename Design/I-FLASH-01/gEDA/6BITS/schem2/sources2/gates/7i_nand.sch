@@ -248,11 +248,11 @@ N 47800 48100 47800 48600 4
 T 51700 40900 9 16 1 0 0 0 1
 7-input NAND Gate
 T 50200 40400 9 10 1 0 0 0 1
-7i_nand.sch
+<filename>
 T 50400 40100 9 10 1 0 0 0 1
-1
+current_page
 T 52100 40100 9 10 1 0 0 0 1
-1
+total_pages
 T 54100 40400 9 10 1 0 0 0 1
 2
 T 54200 40100 9 10 1 0 0 0 1
@@ -364,7 +364,7 @@ C 51100 44000 1 0 0 spice-subcircuit-LL-1.sym
 T 51200 44300 5 10 0 1 0 0 1
 device=spice-subcircuit-LL
 T 51200 44100 5 10 1 1 0 0 1
-model-name=7i_nand
+model-name=7inand
 T 51200 44400 5 10 0 1 0 0 1
 refdes=A1
 }

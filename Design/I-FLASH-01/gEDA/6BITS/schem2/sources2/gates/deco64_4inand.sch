@@ -174,7 +174,7 @@ device=spice-subcircuit-LL
 T 41500 49400 5 10 1 1 0 0 1
 refdes=A1
 T 41500 49100 5 10 1 1 0 0 1
-model-name=4inand
+model-name=deco64_4inand
 }
 C 45400 46000 1 180 0 spice-subcircuit-IO-1.sym
 {

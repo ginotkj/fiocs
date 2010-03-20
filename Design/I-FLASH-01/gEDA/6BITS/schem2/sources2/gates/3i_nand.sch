@@ -114,17 +114,17 @@ N 50400 48900 49900 48900 4
 C 47100 43200 1 0 0 gnd-1.sym
 N 46400 48900 46600 48900 4
 T 52400 40900 9 10 1 0 0 0 1
-3 NAND 1
+3-input NAND Gate
 T 54200 40100 9 10 1 0 0 0 1
 Fabricio N Altamiranda
 T 54700 40400 9 10 1 0 0 0 1
-2
+3
 T 50500 40400 9 10 1 0 0 0 1
-TRINA
+<filename>
 T 50500 40100 9 10 1 0 0 0 1
-1
+current_page
 T 52100 40100 9 10 1 0 0 0 1
-1
+total_pages
 C 40800 48900 1 0 0 spice-subcircuit-LL-1.sym
 {
 T 40900 49200 5 10 0 1 0 0 1
@@ -132,7 +132,7 @@ device=spice-subcircuit-LL
 T 40900 49300 5 10 1 1 0 0 1
 refdes=A1
 T 40900 49000 5 10 1 1 0 0 1
-model-name=3i_nand
+model-name=3inand
 }
 C 50600 47800 1 0 0 spice-subcircuit-IO-1.sym
 {

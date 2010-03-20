@@ -179,11 +179,11 @@ N 52200 46500 52200 47400 4
 T 51700 40900 9 16 1 0 0 0 1
 5-input NAND Gate
 T 50000 40400 9 10 1 0 0 0 1
-5i_nand.sch
+<filename>
 T 50400 40100 9 10 1 0 0 0 1
-1
+current_page
 T 52100 40100 9 10 1 0 0 0 1
-1
+total_pages
 T 54100 40400 9 10 1 0 0 0 1
 2
 T 54200 40100 9 10 1 0 0 0 1
@@ -211,7 +211,7 @@ device=spice-subcircuit-LL
 T 41500 49200 5 10 1 1 0 0 1
 refdes=A1
 T 41500 48900 5 10 1 1 0 0 1
-model-name=5i_nand
+model-name=5inand
 }
 C 53300 46500 1 0 0 spice-subcircuit-IO-1.sym
 {
