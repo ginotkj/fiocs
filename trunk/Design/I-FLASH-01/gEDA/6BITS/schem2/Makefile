@@ -1,3 +1,4 @@
+
 ##
 ## Makefile
 ##  
@@ -12,6 +13,7 @@
 ##############################
 NAME 	= flash.cir # Name of executable file
 SRC	= flash.sch # List of *.c
+DRC	= flash.drc
 LOG	= *log
 ################
 # Optional add #
@@ -40,8 +42,17 @@ CIRFLAGS = -g spice-sdb
 
 all: $(NAME)
 
-$(NAME) : parts
-	@echo 
+$(NAME) : parts $(DRC)
+	@echo
+	@echo "#####################################"
+	@echo "#            MAKING FLASH           #"
+	@echo "#####################################"
+	@echo
+	@echo "Generating CIR file: [$@]"
+	@$(GNET) $(CIRFLAGS) -o $@ $< >/dev/null 2>&1
+	@echo "Checking for errors in [$@]"
+	@grep -l -v 'No valid value attribute found' $@ >/dev/null 2>&1
+
 
 parts:
 	@echo
@@ -65,7 +76,7 @@ register:
 deco:
 	@cd $(DECOS-DIR) ; make
 
-%.net : %.sch
+%.model : %.sch
 	@echo
 	@echo "Generating CIR file: [$@]"
 	@$(GNET) $(CIRFLAGS) -o $@ $< >/dev/null 2>&1
@@ -81,7 +92,7 @@ deco:
 
 clean:
 	@echo "Cleaning all files..."
-	@-$(RM) $(DRCFILES) $(CIRFILES) *~ $(LOG)
+	@-$(RM) $(DRC) $(NAME) *~ $(LOG)
 
 clean-all:
 	@echo
@@ -93,11 +104,11 @@ clean-all:
 	( cd $$i ; make clean) ; \
 	done
 	@echo "Cleaning all files..."
-	@-$(RM) $(DRCFILES) $(CIRFILES) *~ $(LOG)
+	@-$(RM) $(DRC) $(NAME) *~ $(LOG)
 
 clean-drc:
 	@echo "Cleaning drc files..."
-	@-$(RM) $(DRCFILES) *~ $(LOG)
+	@-$(RM) $(DRC) *~ $(LOG)
 
 clean-model:
 	@echo "Cleaning model files..."

@@ -2888,14 +2888,3 @@ device=4i_nand-model
 T 84700 66100 5 10 0 0 0 0 1
 model-name=deco64_4inand1
 }
-C 95100 86700 1 0 0 spice-model-1.sym
-{
-T 95200 87400 5 10 0 1 0 0 1
-device=model
-T 95200 87300 5 10 1 1 0 0 1
-refdes=A1
-T 96400 87000 5 10 1 1 0 0 1
-model-name=deco64_8inand7
-T 95600 86800 5 10 1 1 0 0 1
-file=deco64_8inand7.model
-}
