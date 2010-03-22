@@ -35,14 +35,25 @@ RM 	= /bin/rm -f
 COMP	= gzip -9v
 UNCOMP	= gzip -df
 GNET	= gnetlist
+NGSIM	= ngspice
 
 DRCFLAGS = -g drc2
 CIRFLAGS = -g spice-sdb
+SIMFLAGS = -b -o $(RAW)
 ##############################
 # Basic Compile Instructions #
 ##############################
 
 all: $(NAME)
+
+sim: $(NAME)
+	@echo 
+	@echo "#####################################"
+	@echo "#             SIMULATING            #"
+	@echo "#####################################"
+	@echo
+	$(NGSIM) $(SIMFLAGS) $< >/dev/null 2>&1
+	@echo "Finish!"
 
 $(NAME) : parts $(DRC)
 	@echo
