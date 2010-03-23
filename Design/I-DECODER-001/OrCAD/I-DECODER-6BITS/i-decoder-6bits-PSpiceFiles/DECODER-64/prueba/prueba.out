@@ -1,0 +1,98 @@
+
+**** 03/22/10 19:19:54 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "DECODER-64-prueba"  [ D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits-pspicefiles\d
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "prueba.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-decoder-6bits-pspicefiles/i-decoder-6bits.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 15u 0 0.001u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\DECODER-64.net" 
+
+
+
+**** INCLUDING DECODER-64.net ****
+* source I-DECODER-6BITS
+R_R3         N114932 4SB  100k  
+R_R5         N114932 2SB  100k  
+V_SENALES_-V2         -V2 0  
++PULSE 0 3 1.9u .1u 0 13u 15u
+V_SENALES_V13         N147117 0  
++PULSE 3 0 12.9u .1u 0 2u 15u
+V_SENALES_-V10         -V10 0  
++PULSE 0 3 9.9u .1u 0 5u 15u
+V_SENALES_V8         N146497 0  
++PULSE 3 0 7.9u .1u 0 7u 15u
+V_SENALES_V6         N146272 0  
++PULSE 3 0 5.9u .1u 0 9u 15u
+V_SENALES_V3         N145929 0  
++PULSE 3 0 2.9u .1u 0 12u 15u
+V_SENALES_V14         N147236 0  
++PULSE 3 0 13.9u .1u 0 1u 15u
+V_SENALES_V11         N146861 0  
++PULSE 3 0 10.9u .1u 0 4u 15u
+V_SENALES_-V8         -V8 0  
++PULSE 0 3 7.9u .1u 0 7u 15u
+V_SENALES_-V6         -V6 0  
++PULSE 0 3 5.9u .1u 0 9u 15u
+V_SENALES_V4         N146038 0  
++PULSE 3 0 3.9u .1u 0 11u 15u
+V_SENALES_V7         N146384 0  
++PULSE 3 0 6.9u .1u 0 8u 15u
+V_SENALES_-V14         -V14 0  
++PULSE 0 3 13.9u .1u 0 1u 15u
+V_SENALES_V12         N146978 0  
++PULSE 3 0 11.9u .1u 0 3u 15u
+V_SENALES_V9         N146611 0  
++PULSE 3 0 8.9u .1u 0 6u 15u
+V_SENALES_-V4         -V4 0  
++PULSE 0 3 3.9u .1u 0 11u 15u
+V_SENALES_V1         N145693 0  
++PULSE 3 0 0.9u .1u 0 14u 15u
+V_SENALES_V5         N146161 0  
++PULSE 3 0 4.9u .1u 0 10u 15u
+V_SENALES_V15         N147379 0  
++PULSE 3 0 14.9u .1u 0u 0u 15u
+V_SENALES_-V12         -V12 0  
++PULSE 0 3 11.9u .1u 0 3u 15u
+V_SENALES_V2         N145810 0  
++PULSE 3 0 1.9u .1u 0 13u 15u
+V_SENALES_V10         N146726 0  
++PULSE 3 0 9.9u .1u 0 5u 15u
+R_R2         N114932 5SB  100k  
+R_R4         N114932 3SB  100k  
+V_VDD         N114932 0 3.3
+X_U1         -V2 -V4 -V6 -V8 -V10 -V12 -V14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
++  0 0 0 0 0 0 2SB 3SB 4SB 5SB N145693 N145810 N145929 N146038 N146161 N146272
++  N146384 N146497 N146611 N146726 N146861 N146978 N147117 N147236 N147379
++  N114932 N114932 N114932 N114932 N114932 N114932 N114932 N114932 N114932
++  N114932 N114932 N114932 N114932 N114932 N114932 N114932 N114932 N114932
++  N114932 N114932 N114932 N114932 N114932 N114932 N114932 N114932 N114932
++  N114932 N114932 N114932 N114932 N114932 N114932 N114932 N114932 N114932
++  N114932 N114932 N114932 N114932 N114932 N114932 N114932 N114932 N114932
++  N114932 N114932 N114932 0 LSB MSB N114932 
+R_R1         N114932 MSB  100k  
+R_R6         N114932 LSB  100k  
+
+**** RESUMING prueba.cir ****
+.END
+
+ERROR -- Subcircuit N114932 used by X_U1 is undefined
