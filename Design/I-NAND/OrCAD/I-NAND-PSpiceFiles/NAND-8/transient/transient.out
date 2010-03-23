@@ -1,7 +1,7 @@
-
-**** 02/16/10 10:38:38 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
 
- ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
+**** 03/18/10 16:46:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -18,7 +18,8 @@
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
-* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.LIB "../../../i-nand-pspicefiles/i-nand.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 
@@ -85,13 +86,15 @@ M_M15         N66527 IN1 0 0 CMOSN
 **** RESUMING transient.cir ****
 .END
 
+Mosfet M_M16, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M16, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M16, model CMOSP: Ps = 0 is less than W
+Mosfet M_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
-**** 02/16/10 10:38:38 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 03/18/10 16:46:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
+ ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -203,13 +206,15 @@ WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
        CJSWG  422.000000E-12  330.000000E-12 
 
 
+Mosfet M_M16, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M16, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M16, model CMOSP: Ps = 0 is less than W
+Mosfet M_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
-**** 02/16/10 10:38:38 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 03/18/10 16:46:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
+ ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -226,7 +231,7 @@ WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
 
 (N66465)    3.3000 (N66527)     .0044 (N66937)     .0238 (N67207)     .0158     
 
-(N67213)     .0096 (N67495)     .1054 
+(N67213)     .0096 (N67495)     .1053 
 
 
 
@@ -237,15 +242,15 @@ WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
     V_VIN        0.000E+00
     V_VDD       -2.456E-11
 
-    TOTAL POWER DISSIPATION   8.11E-11  WATTS
+    TOTAL POWER DISSIPATION   8.10E-11  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 02/16/10 10:38:38 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 03/18/10 16:46:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
+ ** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
 
 
  ****     JOB STATISTICS SUMMARY
@@ -255,5 +260,5 @@ WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =         .89
+  Total job time (using Solver 1)   =         .08
 

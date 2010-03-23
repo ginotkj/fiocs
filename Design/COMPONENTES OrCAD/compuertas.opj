@@ -3,8 +3,6 @@
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library")
-    (File ".\compuertas.olb"
-      (Type "Schematic Library"))
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
     (NoModify))
@@ -24,12 +22,11 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\COMPONENTES OrCAD\compuertas.olb"))
+      (Select "Referenced Projects"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 0 678 -8 -30 0 711 0 820"))
+        (Placement "44 2 3 0 983 -8 -30 0 711 0 812"))
       (Tab 0)))
   (MPSSessionName "FABRICIO"))

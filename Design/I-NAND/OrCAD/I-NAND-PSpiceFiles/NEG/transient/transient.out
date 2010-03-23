@@ -1,5 +1,5 @@
-
-**** 03/16/10 19:41:47 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+**** 03/18/10 16:46:01 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "NEG-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
 
@@ -50,7 +50,7 @@ WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
 Mosfet M_M6, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
-**** 03/16/10 19:41:47 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 03/18/10 16:46:01 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "NEG-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
 
@@ -171,7 +171,7 @@ Mosfet M_M6, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSN: Ps = 0 is less than W
 WARNING -- Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_Vin
-**** 03/16/10 19:41:47 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 03/18/10 16:46:01 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "NEG-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
 
@@ -203,7 +203,7 @@ WARNING -- Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_Vin
 
           JOB CONCLUDED
 
-**** 03/16/10 19:41:47 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 03/18/10 16:46:01 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "NEG-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\neg\transient.sim ] 
 
@@ -215,5 +215,5 @@ WARNING -- Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_Vin
 
 
 
-  Total job time (using Solver 1)   =         .12
+  Total job time (using Solver 1)   =         .14
 

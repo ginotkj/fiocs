@@ -13,10 +13,10 @@ M_M7            M7(d=OUT g=VBIAS s=0 b=0 ) CN @I-COMPARADOR-01.TEST(sch_1):INS39
 V_VQ-           VQ-(+=N43113 -=0 ) CN @I-COMPARADOR-01.TEST(sch_1):INS42616@SOURCE.VDC.Normal(chips)
 M_M1            M1(d=N39461 g=IN- s=VEQUILIBRIO b=0 ) CN @I-COMPARADOR-01.TEST(sch_1):INS39255@BREAKOUT.MbreakN.Normal(chips)
 V_VDD           VDD(+=N39211 -=0 ) CN @I-COMPARADOR-01.TEST(sch_1):INS39746@SOURCE.VDC.Normal(chips)
-_    _(Vequilibrio=VEQUILIBRIO)
-_    _(OUT=OUT)
 _    _(IN-=IN-)
-_    _(Vdiferencial=VDIFERENCIAL)
 _    _(IN+=IN+)
+_    _(Vequilibrio=VEQUILIBRIO)
 _    _(VBIAS=VBIAS)
+_    _(Vdiferencial=VDIFERENCIAL)
+_    _(OUT=OUT)
 .ENDALIASES

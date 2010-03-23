@@ -1,4 +1,4 @@
-** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
+** Profile: "NAND-8-transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-8\transient.sim ] 
 
 ** Creating circuit file "transient.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -6,7 +6,8 @@
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
-* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.LIB "../../../i-nand-pspicefiles/i-nand.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 

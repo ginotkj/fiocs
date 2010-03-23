@@ -28,9 +28,7 @@
     (File ".\i-decoder-6bits-pspicefiles\test\test.net"
       (Type "Report"))
     (File ".\i-decoder-6bits-pspicefiles\s-decoder\s-decoder.net"
-      (Type "Report"))
-    (File "d:\documents\tesis\fiocs\design\componentes orcad\compuertas.olb"
-      (Type "Schematic Library")))
+      (Type "Report")))
   (Folder "PSpice Resources"
     (Folder "Stimulus Files")
     (Folder "Include Files")
@@ -152,9 +150,11 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\i-decoder-6bits.dsn")
-      (Path "Design Resources" ".\i-decoder-6bits.dsn" "TEST")
-      (Path "Design Resources" ".\i-decoder-6bits.dsn" "S-DECODER")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
+         "S-DECODER")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
