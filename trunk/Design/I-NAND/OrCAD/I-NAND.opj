@@ -3,23 +3,13 @@
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
     (Folder "Library"
-      (File "C:\Program Files\OrCAD 16\tools\capture\library\pspice\analog.olb"
-        (DisplayName
-           "C:\Program Files\OrCAD 16\tools\capture\library\pspice\analog.olb")
+      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\analog.olb"
         (Type "Schematic Library"))
-      (File "C:\Program Files\OrCAD 16\tools\capture\library\pspice\source.olb"
-        (DisplayName
-           "C:\Program Files\OrCAD 16\tools\capture\library\pspice\source.olb")
+      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\source.olb"
         (Type "Schematic Library"))
-      (File
-         "C:\Program Files\OrCAD 16\tools\capture\library\pspice\sourcstm.olb"
-        (DisplayName
-           "C:\Program Files\OrCAD 16\tools\capture\library\pspice\sourcstm.olb")
+      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\sourcstm.olb"
         (Type "Schematic Library"))
-      (File
-         "C:\Program Files\OrCAD 16\tools\capture\library\pspice\special.olb"
-        (DisplayName
-           "C:\Program Files\OrCAD 16\tools\capture\library\pspice\special.olb")
+      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\special.olb"
         (Type "Schematic Library")))
     (NoModify)
     (File "i-nand.dsn"
@@ -61,7 +51,9 @@
     (File ".\i-nand-pspicefiles\nand-7\nand-7.net"
       (Type "Report"))
     (File ".\i-nand-pspicefiles\neg\neg.net"
-      (Type "Report")))
+      (Type "Report"))
+    (File "d:\documents\tesis\fiocs\design\componentes orcad\compuertas.olb"
+      (Type "Schematic Library")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
       (Sort User)
@@ -98,10 +90,15 @@
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-nand-pspicefiles\neg\transient.sim"
         (DisplayName "NEG-transient")
-        (Type "PSpice Profile"))
-      (ActiveProfile ".\i-nand-pspicefiles\neg\transient.sim")))
+        (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (PORTRIGHT-L
+      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (VPULSE
       (FullPartName "VPULSE.Normal")
       (LibraryName
@@ -135,12 +132,6 @@
     (0
       (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
-    (PORTRIGHT-L
-      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
-    (PORTRIGHT-R
-      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
     (C
       (FullPartName "C.Normal")
       (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
@@ -161,27 +152,11 @@
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn")
       (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NEG")
-      (Path "Design Resources" "Library")
-      (Path "Outputs")
-      (Path "PSpice Resources")
-      (Path "PSpice Resources" "Model Libraries")
-      (Path "PSpice Resources" "Simulation Profiles")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NEG" "NEG"))
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-7")
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 374 0 1023"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 75 1798 75 734")
-        (Scroll "0 0")
-        (Zoom "129")
-        (Occurrence "/"))
-      (Path "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.DSN")
-      (Schematic "NEG")
-      (Page "NEG"))))
+        (Placement "44 2 3 -1 -1 -8 -30 19 837 -11 805"))
+      (Tab 0))))

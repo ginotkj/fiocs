@@ -1,7 +1,7 @@
 
-**** 02/16/10 20:21:11 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 03/18/10 16:44:35 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
+ ** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -19,7 +19,7 @@
 * Profile Libraries :
 * Local Libraries :
 .LIB "../../../i-ffd-pspicefiles/i-ffd.lib" 
-* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 
@@ -134,13 +134,20 @@ R_R2         Q N09541  100k
 **** RESUMING transient.cir ****
 .END
 
+WARNING -- Library file D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd-pspicefiles\i-ffd.lib has changed since index file i-ffd.ind was created.
+WARNING -- The timestamp changed from Thu Nov 26 20:13:53 2009 to Mon Mar 15 10:37:47 2010.
+Making new index file i-ffd.ind for library file i-ffd.lib
+Index has 2 entries from 1 file(s).
+
+Mosfet M_FFD_NAND_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_FFD_NAND_M1, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_FFD_NAND_M1, model CMOSN: Ps = 0 is less than W
+Mosfet M_FFD_NAND_M3, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
-**** 02/16/10 20:21:11 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 03/18/10 16:44:35 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
+ ** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -253,13 +260,15 @@ WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
        CJSWG  330.000000E-12  422.000000E-12 
 
 
+Mosfet M_FFD_NAND_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_FFD_NAND_M1, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_FFD_NAND_M1, model CMOSN: Ps = 0 is less than W
+Mosfet M_FFD_NAND_M3, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
-**** 02/16/10 20:21:11 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 03/18/10 16:44:35 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
+ ** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -300,9 +309,9 @@ WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
 
           JOB CONCLUDED
 
-**** 02/16/10 20:21:11 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 03/18/10 16:44:35 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
+ ** Profile: "TEST FFD-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd-pspicefiles\test ffd\transient.sim ] 
 
 
  ****     JOB STATISTICS SUMMARY
@@ -312,5 +321,5 @@ WARNING -- Mosfet M_FFD_NAND_M3, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =         .72
+  Total job time (using Solver 1)   =         .70
 

@@ -95,21 +95,19 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\E-OPAMPA-01\OrCAD\e-opampa-01.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\E-OPAMPA-01\OrCAD\e-opampa-01.dsn"
+         "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\E-OPAMPA-01\OrCAD\e-opampa-01.dsn"
+         "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 310 0 897"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -28 254 1995 0 897")
-        (Scroll "-240 62")
-        (Zoom "125")
-        (Occurrence "/"))
-      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\E-OPAMPA-01\E-OPAMPA-01.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PAGE1"))))
+        (Placement "44 0 1 -1 -1 -8 -30 0 924 0 980"))
+      (Tab 0))))

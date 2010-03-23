@@ -135,8 +135,8 @@ V_V1            V1(+=N09541 -=0 ) CN @I-FFD.TEST FFD(sch_1):INS9519@SOURCE.VDC.N
 V_V2            V2(+=D -=0 ) CN @I-FFD.TEST FFD(sch_1):INS9555@SOURCE.VPULSE.Normal(chips)
 R_R1            R1(1=-Q 2=N09541 ) CN @I-FFD.TEST FFD(sch_1):INS9605@ANALOG.R.Normal(chips)
 R_R2            R2(1=Q 2=N09541 ) CN @I-FFD.TEST FFD(sch_1):INS9627@ANALOG.R.Normal(chips)
-_    _(D=D)
 _    _(-Q=-Q)
 _    _(Q=Q)
 _    _(C=C)
+_    _(D=D)
 .ENDALIASES

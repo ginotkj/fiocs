@@ -1,6 +1,6 @@
-STATUS: PSpice Model Import Wizard for "Capture" (10.5.0.a001)
+STATUS: PSpice Model Import Wizard for "Capture" (16.0.0.p001)
 STATUS:  
    INFO: OLB driven flow
-   INFO: Input File: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\COMPONENTES ORCAD\COMPUERTAS.OLB
-   INFO: Symbol Name: COMP
+   INFO: Input File: D:\DOCUMENTS\TESIS\FIOCS\DESIGN\COMPONENTES ORCAD\COMPUERTAS.OLB
+   INFO: Symbol Name: NAND-3
 STATUS: 0 Error messages, 0 Warning messages
