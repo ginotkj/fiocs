@@ -7,8 +7,6 @@
         (Type "Schematic Library"))
       (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\source.olb"
         (Type "Schematic Library"))
-      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\sourcstm.olb"
-        (Type "Schematic Library"))
       (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\special.olb"
         (Type "Schematic Library"))
       (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\breakout.olb"
@@ -25,54 +23,58 @@
     (ANNOTATE_No_Page_Number_Change "TRUE")
     (ANNOTATE_Property_Combine "{Value}{Source Package}")
     (RootChangedForceReNetlist "x")
-    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+    (PSPICE_Regenerate_Netlist_Flag "TRUE"))
   (Folder "Outputs"
     (File ".\i-decoder-6bits-pspicefiles\test\test.net"
       (Type "Report"))
-    (File ".\i-decoder-6bits-pspicefiles\s-decoder-64\s-decoder-64.net"
-      (Type "Report"))
-    (File ".\i-decoder-6bits-pspicefiles\decoder-64\decoder-64.net"
-      (Type "Report"))
-    (File ".\i-decoder-6bits-pspicefiles\prueba\prueba.net"
-      (Type "Report"))
-    (File ".\i-decoder-6bits-pspicefiles\2 decoder-64\2 decoder-64.net"
+    (File ".\i-decoder-6bits-pspicefiles\s-decoder\s-decoder.net"
       (Type "Report"))
     (File "d:\documents\tesis\fiocs\design\componentes orcad\compuertas.olb"
-      (Type "Schematic Library"))
-    (File ".\i-decoder-6bits-pspicefiles\ndecoder-64\ndecoder-64.net"
-      (Type "Report")))
+      (Type "Schematic Library")))
   (Folder "PSpice Resources"
     (Folder "Stimulus Files")
     (Folder "Include Files")
     (Folder "Simulation Profiles"
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-decoder-6bits-pspicefiles\s-decoder-64\bias.sim"
-        (DisplayName "S-DECODER-64-bias")
+         ".\i-decoder-6bits-pspicefiles\s-decoder\bias.sim"
+        (DisplayName "S-DECODER-bias")
         (Type "PSpice Profile"))
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-decoder-6bits-pspicefiles\s-decoder-64\transient.sim"
-        (DisplayName "S-DECODER-64-transient")
+         ".\i-decoder-6bits-pspicefiles\test\bias.sim"
+        (DisplayName "TEST-bias")
         (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-decoder-6bits-pspicefiles\decoder-64\prueba.sim"
-        (DisplayName "DECODER-64-prueba")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-decoder-6bits-pspicefiles\ndecoder-64\prueba.sim"
-        (DisplayName "NDECODER-64-prueba")
-        (Type "PSpice Profile"))
-      (ActiveProfile ".\i-decoder-6bits-pspicefiles\ndecoder-64\prueba.sim"))
+      (ActiveProfile ".\i-decoder-6bits-pspicefiles\test\bias.sim"))
     (Folder "Model Libraries"
       (File "C:\OrCAD\OrCAD_16.0\tools\capture\library\pspice\BREAKOUT.OLB"
         (DisplayName
            "C:\OrCAD\OrCAD_16.0\tools\capture\library\pspice\BREAKOUT.OLB")
         (Type "PSpiceLibrary"))
-      (File ".\i-decoder-6bits-pspicefiles\i-decoder-6bits.lib"
-        (DisplayName ".\i-decoder-6bits-pspicefiles\i-decoder-6bits.lib")
-        (Type "PSpiceLibrary"))
       (Sort User)))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (S-DECODER
+      (FullPartName "S-DECODER.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\COMPONENTES ORCAD\COMPUERTAS.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (DECODIFICADOR
+      (FullPartName "DECODIFICADOR.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\COMPONENTES ORCAD\COMPUERTAS.OLB")
+      (DeviceIndex "0"))
     (N-DECODER-64
       (FullPartName "N-DECODER-64.Normal")
       (LibraryName
@@ -82,11 +84,6 @@
       (FullPartName "S-DECODER-64.Normal")
       (LibraryName
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\COMPONENTES ORCAD\COMPUERTAS.OLB")
-      (DeviceIndex "0"))
-    (R
-      (FullPartName "R.Normal")
-      (LibraryName
-         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
       (DeviceIndex "0"))
     (S2-DECODER-64
       (FullPartName "S2-DECODER-64.Normal")
@@ -134,15 +131,6 @@
     (PORTRIGHT-L
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
-    (VDC
-      (FullPartName "VDC.Normal")
-      (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
-    (0
-      (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
     (PORTRIGHT-R
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
@@ -164,19 +152,17 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
-         "NDECODER-64")
+      (Path "Design Resources" ".\i-decoder-6bits.dsn")
+      (Path "Design Resources" ".\i-decoder-6bits.dsn" "TEST")
+      (Path "Design Resources" ".\i-decoder-6bits.dsn" "S-DECODER")
       (Path "Design Resources" "Library")
       (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
-         "INVERSOR"))
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 480 601 -8 -30 139 1067 17 829"))
+        (Placement "44 3 3 -1 -1 -8 -30 0 735 0 945"))
       (Tab 0))))
