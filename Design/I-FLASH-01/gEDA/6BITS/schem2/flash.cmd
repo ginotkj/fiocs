@@ -15,7 +15,7 @@ op
 
 * 2MHz de clock
 *tran 2ns 2us 0
-tran 2ns 2000ns 0
+tran 50ns 300us 0
 
 write flash.bin
 .endc
