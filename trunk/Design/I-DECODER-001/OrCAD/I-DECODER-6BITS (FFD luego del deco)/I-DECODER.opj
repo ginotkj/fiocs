@@ -64,15 +64,15 @@
         (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
-    (DECODIFICADOR
-      (FullPartName "DECODIFICADOR.Normal")
-      (LibraryName
-         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS (FFD LUEGO DEL DECO)\I-DECODER.OLB")
-      (DeviceIndex "0"))
     (S-DECODER
       (FullPartName "S-DECODER.Normal")
       (LibraryName
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\COMPONENTES ORCAD\COMPUERTAS.OLB")
+      (DeviceIndex "0"))
+    (DECODIFICADOR
+      (FullPartName "DECODIFICADOR.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS (FFD LUEGO DEL DECO)\I-DECODER.OLB")
       (DeviceIndex "0"))
     (DECODER
       (FullPartName "DECODER.Normal")
@@ -124,14 +124,22 @@
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS (FFD luego del deco)\i-decoder.dsn"
          "DECODIFICADOR")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS (FFD luego del deco)\i-decoder.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS (FFD luego del deco)\i-decoder.dsn"
+         "Design Cache")
       (Path "Design Resources" "Library")
       (Path "Outputs")
+      (Path "Outputs"
+         "d:\documents\tesis\fiocs\design\componentes orcad\compuertas.olb")
       (Select "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS (FFD luego del deco)\i-decoder.dsn"
-         "DECODIFICADOR"))
+         "DECODIFICADOR" "DECODIFICADOR3"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 0 605 -8 -30 0 200 0 394"))
+        (Placement "44 2 3 0 605 -8 -30 -4 235 0 944"))
       (Tab 0))))
