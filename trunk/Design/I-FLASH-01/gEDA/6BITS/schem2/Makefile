@@ -17,6 +17,7 @@ DRC	= flash.drc
 RAW	= flash.raw
 BIN	= flash.bin
 LOG	= *log
+GWV	= flash2.gw
 ################
 # Optional add #
 ################
@@ -36,7 +37,9 @@ COMP	= gzip -9v
 UNCOMP	= gzip -df
 GNET	= gnetlist
 NGSIM	= ngspice
+GWAVE	= gwave
 
+GWVFLAGS = -s
 DRCFLAGS = -g drc2
 CIRFLAGS = -g spice-sdb
 SIMFLAGS = -b -o $(RAW)
@@ -54,6 +57,8 @@ sim: $(NAME)
 	@echo
 	$(NGSIM) $(SIMFLAGS) $< >/dev/null 2>&1
 	@echo "Finish!"
+	@echo "Starting up gwAVE and sending to background..."
+	$(GWAVE) $(GWVFLAGS) $(GWV) >/dev/null 2>&1 &
 
 $(NAME) : parts $(DRC)
 	@echo
