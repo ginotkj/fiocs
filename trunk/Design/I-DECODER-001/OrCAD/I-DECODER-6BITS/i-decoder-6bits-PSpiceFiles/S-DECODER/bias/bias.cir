@@ -1,19 +1,19 @@
-** Profile: "S-DECODER-64-transient"  [ D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits-pspicefiles\s-decoder-64\transient.sim ] 
+** Profile: "S-DECODER-bias"  [ D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits-PSpiceFiles\S-DECODER\bias.sim ] 
 
-** Creating circuit file "transient.cir" 
+** Creating circuit file "bias.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
 
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
+.LIB "C:/OrCAD/OrCAD_16.0/tools/capture/library/pspice/BREAKOUT.OLB" 
 .LIB "../../../i-decoder-6bits-pspicefiles/i-decoder-6bits.lib" 
 * From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 100ns 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
-.INC "..\S-DECODER-64.net" 
+.INC "..\S-DECODER.net" 
 
 
 .END

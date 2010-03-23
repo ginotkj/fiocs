@@ -1,0 +1,1938 @@
+
+**** 03/23/10 20:13:30 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "S-DECODER-bias"  [ D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits-PSpiceFiles\S-DE
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/OrCAD/OrCAD_16.0/tools/capture/library/pspice/BREAKOUT.OLB" 
+.LIB "../../../i-decoder-6bits-pspicefiles/i-decoder-6bits.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\S-DECODER.net" 
+
+
+
+**** INCLUDING S-DECODER.net ****
+* source I-DECODER-6BITS
+.EXTERNAL INPUT 5SB
+.EXTERNAL INPUT C1
+.EXTERNAL INPUT C2
+.EXTERNAL INPUT C3
+.EXTERNAL INPUT C4
+.EXTERNAL INPUT C5
+.EXTERNAL INPUT C6
+.EXTERNAL INPUT C7
+.EXTERNAL INPUT C8
+.EXTERNAL INPUT C9
+.EXTERNAL INPUT C10
+.EXTERNAL INPUT C11
+.EXTERNAL INPUT C12
+.EXTERNAL INPUT C13
+.EXTERNAL INPUT C14
+.EXTERNAL INPUT C15
+.EXTERNAL INPUT C16
+.EXTERNAL INPUT C17
+.EXTERNAL INPUT C18
+.EXTERNAL INPUT C19
+.EXTERNAL INPUT C20
+.EXTERNAL INPUT C21
+.EXTERNAL INPUT C22
+.EXTERNAL INPUT C23
+.EXTERNAL INPUT C24
+.EXTERNAL INPUT C25
+.EXTERNAL INPUT C26
+.EXTERNAL INPUT C27
+.EXTERNAL INPUT C28
+.EXTERNAL INPUT C29
+.EXTERNAL INPUT C30
+.EXTERNAL INPUT C31
+.EXTERNAL INPUT C32
+.EXTERNAL INPUT C33
+.EXTERNAL INPUT C34
+.EXTERNAL INPUT C35
+.EXTERNAL INPUT C36
+.EXTERNAL INPUT C37
+.EXTERNAL INPUT C38
+.EXTERNAL INPUT C39
+.EXTERNAL INPUT C40
+.EXTERNAL INPUT C41
+.EXTERNAL INPUT C42
+.EXTERNAL INPUT C43
+.EXTERNAL INPUT C44
+.EXTERNAL INPUT C45
+.EXTERNAL INPUT C46
+.EXTERNAL INPUT C47
+.EXTERNAL INPUT C48
+.EXTERNAL INPUT C49
+.EXTERNAL INPUT C50
+.EXTERNAL INPUT C51
+.EXTERNAL INPUT C52
+.EXTERNAL INPUT C53
+.EXTERNAL INPUT C54
+.EXTERNAL INPUT C55
+.EXTERNAL INPUT C56
+.EXTERNAL INPUT C57
+.EXTERNAL INPUT C58
+.EXTERNAL INPUT C59
+.EXTERNAL INPUT C60
+.EXTERNAL INPUT C61
+.EXTERNAL INPUT C62
+.EXTERNAL INPUT C63
+.EXTERNAL INPUT LSB
+.EXTERNAL INPUT VDD
+.EXTERNAL INPUT MSB
+.EXTERNAL INPUT 2SB
+.EXTERNAL INPUT 3SB
+.EXTERNAL INPUT 4SB
+.EXTERNAL INPUT GND
+M_U37_M5         N568231 N568555 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U37_M6         N568231 N568555 U37_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U37_M2         U37_N39991 C26 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U37_M4         N568231 C26 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U120_M5         N575362 X2 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U120_M6         N575362 X2 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U133_M5         N573056 C54 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U133_M6         N573056 C54 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U106_M5         N572206 N572144 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U106_M6         N572206 N572144 U106_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U106_M2         U106_N39991 C45 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U106_M4         N572206 C45 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U83_M5         N577760 N578686 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U83_M6         N577760 N578686 U83_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U83_M2         U83_N39991 C15 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U83_M4         N577760 C15 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U7_M5         N259645 C8 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U7_M6         N259645 C8 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U69_M5         N577828 N578514 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U69_M6         N577828 N578514 U69_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U69_M2         U69_N39991 C21 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U69_M4         N577828 C21 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U87_M5         N578636 C6 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U87_M6         N578636 C6 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U128_M5         N572144 C44 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U128_M6         N572144 C44 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U55_M5         N567821 C44 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U55_M6         N567821 C44 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U121_M5         N575328 X1 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U121_M6         N575328 X1 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U38_M5         N568189 N568565 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U38_M6         N568189 N568565 U38_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U38_M2         U38_N39991 C30 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U38_M4         N568189 C30 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U60_M5         N568499 C4 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U60_M6         N568499 C4 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U26_M5         N565104 C24 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U26_M6         N565104 C24 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U96_M5         N578552 C26 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U96_M6         N578552 C26 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U70_M5         N577832 N578524 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U70_M6         N577832 N578524 U70_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U70_M2         U70_N39991 C23 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U70_M4         N577832 C23 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U64_M5         N568545 C20 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U64_M6         N568545 C20 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U134_M5         N573066 C56 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U134_M6         N573066 C56 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U10_M5         N565404 N565082 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U10_M6         N565404 N565082 U10_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U10_M2         U10_N39991 C12 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U10_M4         N565404 C12 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U88_M5         N578650 C8 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U88_M6         N578650 C8 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U129_M5         N572160 C46 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U129_M6         N572160 C46 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U20_M5         -C32 C32 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U20_M6         -C32 C32 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+V_V1         VDD GND 3.3
+M_U71_M5         N579510 N578534 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U71_M6         N579510 N578534 U71_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U71_M2         U71_N39991 C25 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U71_M4         N579510 C25 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U75_M5         N577856 N578578 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U75_M6         N577856 N578578 U75_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U75_M2         U75_N39991 C31 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U75_M4         N577856 C31 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U11_M5         N565416 N565094 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U11_M6         N565416 N565094 U11_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U11_M2         U11_N39991 C20 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U11_M4         N565416 C20 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U27_M5         N564920 C32 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U27_M6         N564920 C32 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U97_M5         N578562 C28 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U97_M6         N578562 C28 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U109_M5         N572622 N573020 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U109_M6         N572622 N573020 U109_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U109_M2         U109_N39991 C49 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U109_M4         N572622 C49 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U135_M5         N573076 C58 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U135_M6         N573076 C58 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U89_M5         N578662 C10 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U89_M6         N578662 C10 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U76_M5         N577720 C1 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U76_M6         N577720 C1 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U43_M5         N567441 N569141 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U43_M6         N567441 N569141 U43_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U43_M2         U43_N39991 C34 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U43_M4         N567441 C34 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U56_M5         N567831 C48 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U56_M6         N567831 C48 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U72_M5         N577840 N578552 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U72_M6         N577840 N578552 U72_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U72_M2         U72_N39991 C27 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U72_M4         N577840 C27 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U12_M5         N564842 N565104 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U12_M6         N564842 N565104 U12_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U12_M2         U12_N39991 C28 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U12_M4         N564842 C28 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U116_M16         X4 N572634 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U116_M5         X4 N572658 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U116_M11         X4 N572622 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U116_M9         X4 N572642 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U116_M1         X4 N572622 U116_N67495 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U116_M6         U116_N66385 N572630 U116_N66425 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U116_M7         U116_N66425 N572634 U116_N66937 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U116_M12         X4 N572580 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U116_M2         U116_N67495 N572626 U116_N66385 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U116_M13         U116_N67207 N572642 U116_N67213 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U116_M10         U116_N66937 N572580 U116_N67207 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U116_M3         X4 N572626 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U116_M14         U116_N67213 N572650 U116_N66527 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U116_M8         X4 N572650 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U116_M4         X4 N572630 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U116_M15         U116_N66527 N572658 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U84_M16         X1 N577748 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U84_M5         X1 N577760 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U84_M11         X1 N577720 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U84_M9         X1 N577784 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U84_M1         X1 N577720 U84_N67495 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U84_M6         U84_N66385 N577736 U84_N66425 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U84_M7         U84_N66425 N577748 U84_N66937 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U84_M12         X1 N577796 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U84_M2         U84_N67495 N577728 U84_N66385 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U84_M13         U84_N67207 N577784 U84_N67213 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U84_M10         U84_N66937 N577796 U84_N67207 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U84_M3         X1 N577728 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U84_M14         U84_N67213 N577772 U84_N66527 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U84_M8         X1 N577772 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U84_M4         X1 N577736 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U84_M15         U84_N66527 N577760 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U110_M5         N572626 N573036 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U110_M6         N572626 N573036 U110_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U110_M2         U110_N39991 C51 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U110_M4         N572626 C51 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U122_M7         LSB N575328 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U122_M8         LSB N575362 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U122_M12         LSB N575374 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U122_M9         LSB N575382 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U122_M1         LSB N575328 U122_N88766 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U122_M10         U122_N88906 N575382 U122_N88946 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U122_M3         U122_N88766 N575362 U122_N88906 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U122_M11         U122_N88946 N575374 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U61_M5         N568511 C8 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U61_M6         N568511 C8 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U65_M5         N568555 C24 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U65_M6         N568555 C24 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U28_M5         N565120 C40 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U28_M6         N565120 C40 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U123_M5         N572074 C34 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U123_M6         N572074 C34 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U98_M5         N578578 C30 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U98_M6         N578578 C30 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U1_M5         -C16 C16 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U1_M6         -C16 C16 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U77_M5         N577728 N578608 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U77_M6         N577728 N578608 U77_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U77_M2         U77_N39991 C3 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U77_M4         N577728 C3 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U21_M5         N259565 C16 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U21_M6         N259565 C16 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U44_M5         N567415 N567801 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U44_M6         N567415 N567801 U44_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U44_M2         U44_N39991 C38 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U44_M4         N567415 C38 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U136_M5         N573086 C60 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U136_M6         N573086 C60 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U100_M5         N572170 N572064 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U100_M6         N572170 N572064 U100_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U100_M2         U100_N39991 C33 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U100_M4         N572170 C33 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U73_M5         N577848 N578562 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U73_M6         N577848 N578562 U73_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U73_M2         U73_N39991 C29 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U73_M4         N577848 C29 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U13_M5         N565392 N564920 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U13_M6         N565392 N564920 U13_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U13_M2         U13_N39991 C36 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U13_M4         N565392 C36 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U130_M5         N572064 C32 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U130_M6         N572064 C32 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U90_M5         N578674 C12 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U90_M6         N578674 C12 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U111_M5         N572630 N573046 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U111_M6         N572630 N573046 U111_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U111_M2         U111_N39991 C53 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U111_M4         N572630 C53 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U31_M5         N568171 C2 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U31_M6         N568171 C2 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U57_M5         N567841 C52 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U57_M6         N567841 C52 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U2_M5         N259199 -C32 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U2_M6         N259199 -C32 U2_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U2_M2         U2_N39991 C48 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U2_M4         N259199 C48 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U78_M5         N577736 N578622 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U78_M6         N577736 N578622 U78_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U78_M2         U78_N39991 C5 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U78_M4         N577736 C5 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U101_M5         N572182 N572074 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U101_M6         N572182 N572074 U101_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U101_M2         U101_N39991 C35 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U101_M4         N572182 C35 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U107_M16         X3 N572190 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U107_M5         X3 N572214 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U107_M11         X3 N572170 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U107_M9         X3 N572198 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U107_M1         X3 N572170 U107_N67495 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U107_M6         U107_N66385 N572186 U107_N66425 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U107_M7         U107_N66425 N572190 U107_N66937 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U107_M12         X3 N572512 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U107_M2         U107_N67495 N572182 U107_N66385 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U107_M13         U107_N67207 N572198 U107_N67213 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U107_M10         U107_N66937 N572512 U107_N67207 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U107_M3         X3 N572182 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U107_M14         U107_N67213 N572206 U107_N66527 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U107_M8         X3 N572206 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U107_M4         X3 N572186 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U107_M15         U107_N66527 N572214 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U29_M5         N565130 C48 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U29_M6         N565130 C48 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U124_M5         N572104 C36 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U124_M6         N572104 C36 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U99_M5         N578480 C16 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U99_M6         N578480 C16 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U45_M5         N567879 N567811 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U45_M6         N567879 N567811 U45_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U45_M2         U45_N39991 C42 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U45_M4         N567879 C42 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U14_M5         N565380 N565120 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U14_M6         N565380 N565120 U14_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U14_M2         U14_N39991 C44 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U14_M4         N565380 C44 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U40_M5         N568485 N5684051 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U40_M6         N568485 N5684051 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U112_M5         N572634 N573056 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U112_M6         N572634 N573056 U112_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U112_M2         U112_N39991 C55 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U112_M4         N572634 C55 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U51_M5         N568303 N567861 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U51_M6         N568303 N567861 U51_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U51_M2         U51_N39991 C62 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U51_M4         N568303 C62 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U137_M5         N573096 C62 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U137_M6         N573096 C62 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U32_M5         N568263 N568499 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U32_M6         N568263 N568499 U32_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U32_M2         U32_N39991 C6 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U32_M4         N568263 C6 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U9_M5         N565346 C4 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U9_M6         N565346 C4 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U79_M5         N577748 N578636 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U79_M6         N577748 N578636 U79_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U79_M2         U79_N39991 C7 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U79_M4         N577748 C7 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U17_M16         N565498 N564842 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U17_M5         N565498 N565360 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U17_M11         N565498 N565346 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U17_M9         N565498 N565380 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U17_M1         N565498 N565346 U17_N67495 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U17_M6         U17_N66385 N565416 U17_N66425 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U17_M7         U17_N66425 N564842 U17_N66937 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U17_M12         N565498 N565392 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U17_M2         U17_N67495 N565404 U17_N66385 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U17_M13         U17_N67207 N565380 U17_N67213 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U17_M10         U17_N66937 N565392 U17_N67207 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U17_M3         N565498 N565404 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U17_M14         U17_N67213 N565368 U17_N66527 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U17_M8         N565498 N565368 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U17_M4         N565498 N565416 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U17_M15         U17_N66527 N565360 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U92_M5         N578504 C18 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U92_M6         N578504 C18 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U91_M5         N578686 C14 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U91_M6         N578686 C14 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U102_M5         N572186 N572104 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U102_M6         N572186 N572104 U102_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U102_M2         U102_N39991 C37 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U102_M4         N572186 C37 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U41_M5         N567401 N567419 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U41_M6         N567401 N567419 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U58_M5         N567851 C56 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U58_M6         N567851 C56 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U46_M5         N567883 N567821 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U46_M6         N567883 N567821 U46_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U46_M2         U46_N39991 C46 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U46_M4         N567883 C46 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U15_M5         N565368 N565130 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U15_M6         N565368 N565130 U15_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U15_M2         U15_N39991 C52 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U15_M4         N565368 C52 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U22_M5         N259543 C32 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U22_M6         N259543 C32 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U113_M5         N572580 N573066 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U113_M6         N572580 N573066 U113_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U113_M2         U113_N39991 C57 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U113_M4         N572580 C57 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U62_M5         N568523 C12 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U62_M6         N568523 C12 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U117_M5         N572658 N573096 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U117_M6         N572658 N573096 U117_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U117_M2         U117_N39991 C63 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U117_M4         N572658 C63 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U52_M5         N569141 C32 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U52_M6         N569141 C32 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U33_M5         N568271 N568511 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U33_M6         N568271 N568511 U33_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U33_M2         U33_N39991 C10 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U33_M4         N568271 C10 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U66_M5         N568565 C28 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U66_M6         N568565 C28 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U30_M5         N564924 C56 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U30_M6         N564924 C56 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U125_M5         N572114 C38 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U125_M6         N572114 C38 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U3_M5         5SB -C16 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U3_M6         5SB -C16 U3_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U3_M2         U3_N39991 N259199 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U3_M4         5SB N259199 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U80_M5         N577796 N578650 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U80_M6         N577796 N578650 U80_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U80_M2         U80_N39991 C9 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U80_M4         N577796 C9 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U18_M5         N565340 N565498 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U18_M6         N565340 N565498 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U118_M5         N575374 X4 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U118_M6         N575374 X4 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U103_M5         N572190 N572114 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U103_M6         N572190 N572114 U103_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U103_M2         U103_N39991 C39 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U103_M4         N572190 C39 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U47_M5         N568995 N567831 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U47_M6         N568995 N567831 U47_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U47_M2         U47_N39991 C50 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U47_M4         N568995 C50 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U16_M5         N565360 N564924 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U16_M6         N565360 N564924 U16_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U16_M2         U16_N39991 C60 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U16_M4         N565360 C60 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U8_M7         4SB N259645 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U8_M8         4SB N259649 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U8_M12         4SB N259627 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U8_M9         4SB N259637 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U8_M1         4SB N259645 U8_N88766 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U8_M10         U8_N88906 N259637 U8_N88946 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U8_M3         U8_N88766 N259649 U8_N88906 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U8_M11         U8_N88946 N259627 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U93_M5         N578514 C20 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U93_M6         N578514 C20 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U34_M5         N568285 N568523 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U34_M6         N568285 N568523 U34_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U34_M2         U34_N39991 C14 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U34_M4         N568285 C14 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U114_M5         N572642 N573076 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U114_M6         N572642 N573076 U114_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U114_M2         U114_N39991 C59 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U114_M4         N572642 C59 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U23_M5         N259605 C48 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U23_M6         N259605 C48 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U131_M5         N573036 C50 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U131_M6         N573036 C50 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U108_M5         N572214 N572160 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U108_M6         N572214 N572160 U108_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U108_M2         U108_N39991 C47 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U108_M4         N572214 C47 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U81_M5         N577784 N578662 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U81_M6         N577784 N578662 U81_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U81_M2         U81_N39991 C11 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U81_M4         N577784 C11 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U39_M16         N567419 N568285 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U39_M5         N567419 N568189 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U39_M11         N567419 N568171 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U39_M9         N567419 N568243 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U39_M1         N567419 N568171 U39_N67495 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U39_M6         U39_N66385 N568271 U39_N66425 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U39_M7         U39_N66425 N568285 U39_N66937 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U39_M12         N567419 N568251 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U39_M2         U39_N67495 N568263 U39_N66385 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U39_M13         U39_N67207 N568243 U39_N67213 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U39_M10         U39_N66937 N568251 U39_N67207 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U39_M3         N567419 N568263 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U39_M14         U39_N67213 N568231 U39_N66527 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U39_M8         N567419 N568231 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U39_M4         N567419 N568271 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U39_M15         U39_N66527 N568189 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U4_M5         N259627 N259605 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U4_M6         N259627 N259605 U4_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U4_M2         U4_N39991 C56 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U4_M4         N259627 C56 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U19_M5         3SB N565340 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U19_M6         3SB N565340 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U85_M5         N578608 C2 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U85_M6         N578608 C2 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U126_M5         N572124 C40 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U126_M6         N572124 C40 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U48_M5         N568069 N567841 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U48_M6         N568069 N567841 U48_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U48_M2         U48_N39991 C54 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U48_M4         N568069 C54 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U24_M5         N565082 C8 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U24_M6         N565082 C8 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U53_M5         N567801 C36 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U53_M6         N567801 C36 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U104_M5         N572512 N572124 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U104_M6         N572512 N572124 U104_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U104_M2         U104_N39991 C41 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U104_M4         N572512 C41 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U35_M5         N568251 N568535 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U35_M6         N568251 N568535 U35_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U35_M2         U35_N39991 C18 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U35_M4         N568251 C18 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U42_M5         2SB N568485 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U42_M6         2SB N568485 U42_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U42_M2         U42_N39991 N567401 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U42_M4         2SB N567401 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U50_M16         N5684051 N567883 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U50_M5         N5684051 N568303 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U50_M11         N5684051 N567441 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U50_M9         N5684051 N568069 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U50_M1         N5684051 N567441 U50_N67495 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U50_M6         U50_N66385 N567879 U50_N66425 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U50_M7         U50_N66425 N567883 U50_N66937 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U50_M12         N5684051 N568995 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U50_M2         U50_N67495 N567415 U50_N66385 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U50_M13         U50_N67207 N568069 U50_N67213 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U50_M10         U50_N66937 N568995 U50_N67207 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U50_M3         N5684051 N567415 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U50_M14         U50_N67213 N568185 U50_N66527 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U50_M8         N5684051 N568185 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U50_M4         N5684051 N567879 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U50_M15         U50_N66527 N568303 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U115_M5         N572650 N573086 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U115_M6         N572650 N573086 U115_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U115_M2         U115_N39991 C61 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U115_M4         N572650 C61 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U138_M5         N573020 C48 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U138_M6         N573020 C48 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U59_M5         N567861 C60 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U59_M6         N567861 C60 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U67_M5         N577814 N578480 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U67_M6         N577814 N578480 U67_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U67_M2         U67_N39991 C17 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U67_M4         N577814 C17 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U94_M5         N578524 C22 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U94_M6         N578524 C22 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U5_M5         N259637 N259543 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U5_M6         N259637 N259543 U5_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U5_M2         U5_N39991 C40 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U5_M4         N259637 C40 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U132_M5         N573046 C52 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U132_M6         N573046 C52 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U74_M16         X2 N577832 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U74_M5         X2 N577856 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U74_M11         X2 N577814 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U74_M9         X2 N577840 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U74_M1         X2 N577814 U74_N67495 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U74_M6         U74_N66385 N577828 U74_N66425 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U74_M7         U74_N66425 N577832 U74_N66937 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U74_M12         X2 N579510 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U74_M2         U74_N67495 N577818 U74_N66385 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U74_M13         U74_N67207 N577840 U74_N67213 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U74_M10         U74_N66937 N579510 U74_N67207 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U74_M3         X2 N577818 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U74_M14         U74_N67213 N577848 U74_N66527 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U74_M8         X2 N577848 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U74_M4         X2 N577828 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U74_M15         U74_N66527 N577856 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U105_M5         N572198 N572134 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U105_M6         N572198 N572134 U105_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U105_M2         U105_N39991 C43 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U105_M4         N572198 C43 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U82_M5         N577772 N578674 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U82_M6         N577772 N578674 U82_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U82_M2         U82_N39991 C13 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U82_M4         N577772 C13 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U63_M5         N568535 C16 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U63_M6         N568535 C16 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U86_M5         N578622 C4 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U86_M6         N578622 C4 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U49_M5         N568185 N567851 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U49_M6         N568185 N567851 U49_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U49_M2         U49_N39991 C58 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U49_M4         N568185 C58 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U36_M5         N568243 N568545 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U36_M6         N568243 N568545 U36_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U36_M2         U36_N39991 C22 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U36_M4         N568243 C22 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U127_M5         N572134 C42 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U127_M6         N572134 C42 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U119_M5         N575382 X3 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U119_M6         N575382 X3 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U68_M5         N577818 N578504 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U68_M6         N577818 N578504 U68_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U68_M2         U68_N39991 C19 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U68_M4         N577818 C19 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U6_M5         N259649 N259565 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U6_M6         N259649 N259565 U6_N39991 GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U6_M2         U6_N39991 C24 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U6_M4         N259649 C24 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U54_M5         N567811 C40 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U54_M6         N567811 C40 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U25_M5         N565094 C16 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U25_M6         N565094 C16 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+M_U95_M5         N578534 C24 VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_U95_M6         N578534 C24 GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+
+**** RESUMING bias.cir ****
+.END
+
+ERROR -- Node N568231 is floating
+ERROR -- Node N568555 is floating
+ERROR -- Node VDD is floating
+ERROR -- Node U37_N39991 is floating
+ERROR -- Node GND is floating
+ERROR -- Node C26 is floating
+ERROR -- Node N575362 is floating
+ERROR -- Node X2 is floating
+ERROR -- Node N573056 is floating
+ERROR -- Node C54 is floating
+ERROR -- Node N572206 is floating
+ERROR -- Node N572144 is floating
+ERROR -- Node U106_N39991 is floating
+ERROR -- Node C45 is floating
+ERROR -- Node N577760 is floating
+ERROR -- Node N578686 is floating
+ERROR -- Node U83_N39991 is floating
+ERROR -- Node C15 is floating
+ERROR -- Node N259645 is floating
+ERROR -- Node C8 is floating
+ERROR -- Node N577828 is floating
+ERROR -- Node N578514 is floating
+ERROR -- Node U69_N39991 is floating
+ERROR -- Node C21 is floating
+ERROR -- Node N578636 is floating
+ERROR -- Node C6 is floating
+ERROR -- Node C44 is floating
+ERROR -- Node N567821 is floating
+ERROR -- Node N575328 is floating
+ERROR -- Node X1 is floating
+ERROR -- Node N568189 is floating
+ERROR -- Node N568565 is floating
+ERROR -- Node U38_N39991 is floating
+ERROR -- Node C30 is floating
+ERROR -- Node N568499 is floating
+ERROR -- Node C4 is floating
+ERROR -- Node N565104 is floating
+ERROR -- Node C24 is floating
+ERROR -- Node N578552 is floating
+ERROR -- Node N577832 is floating
+ERROR -- Node N578524 is floating
+ERROR -- Node U70_N39991 is floating
+ERROR -- Node C23 is floating
+ERROR -- Node N568545 is floating
+ERROR -- Node C20 is floating
+ERROR -- Node N573066 is floating
+ERROR -- Node C56 is floating
+ERROR -- Node N565404 is floating
+ERROR -- Node N565082 is floating
+ERROR -- Node U10_N39991 is floating
+ERROR -- Node C12 is floating
+ERROR -- Node N578650 is floating
+ERROR -- Node N572160 is floating
+ERROR -- Node C46 is floating
+ERROR -- Node -C32 is floating
+ERROR -- Node C32 is floating
+ERROR -- Node N579510 is floating
+ERROR -- Node N578534 is floating
+ERROR -- Node U71_N39991 is floating
+ERROR -- Node C25 is floating
+ERROR -- Node N577856 is floating
+ERROR -- Node N578578 is floating
+ERROR -- Node U75_N39991 is floating
+ERROR -- Node C31 is floating
+ERROR -- Node N565416 is floating
+ERROR -- Node N565094 is floating
+ERROR -- Node U11_N39991 is floating
+ERROR -- Node N564920 is floating
+ERROR -- Node N578562 is floating
+ERROR -- Node C28 is floating
+ERROR -- Node N572622 is floating
+ERROR -- Node N573020 is floating
+ERROR -- Node U109_N39991 is floating
+ERROR -- Node C49 is floating
+ERROR -- Node N573076 is floating
+ERROR -- Node C58 is floating
+ERROR -- Node N578662 is floating
+ERROR -- Node C10 is floating
+ERROR -- Node N577720 is floating
+ERROR -- Node C1 is floating
+ERROR -- Node N567441 is floating
+ERROR -- Node N569141 is floating
+ERROR -- Node U43_N39991 is floating
+ERROR -- Node C34 is floating
+ERROR -- Node N567831 is floating
+ERROR -- Node C48 is floating
+ERROR -- Node N577840 is floating
+ERROR -- Node U72_N39991 is floating
+ERROR -- Node C27 is floating
+ERROR -- Node N564842 is floating
+ERROR -- Node U12_N39991 is floating
+ERROR -- Node X4 is floating
+ERROR -- Node N572634 is floating
+ERROR -- Node N572658 is floating
+ERROR -- Node N572642 is floating
+ERROR -- Node U116_N67495 is floating
+ERROR -- Node U116_N66385 is floating
+ERROR -- Node N572630 is floating
+ERROR -- Node U116_N66425 is floating
+ERROR -- Node U116_N66937 is floating
+ERROR -- Node N572580 is floating
+ERROR -- Node N572626 is floating
+ERROR -- Node U116_N67207 is floating
+ERROR -- Node U116_N67213 is floating
+ERROR -- Node N572650 is floating
+ERROR -- Node U116_N66527 is floating
+ERROR -- Node N577748 is floating
+ERROR -- Node N577784 is floating
+ERROR -- Node U84_N67495 is floating
+ERROR -- Node U84_N66385 is floating
+ERROR -- Node N577736 is floating
+ERROR -- Node U84_N66425 is floating
+ERROR -- Node U84_N66937 is floating
+ERROR -- Node N577796 is floating
+ERROR -- Node N577728 is floating
+ERROR -- Node U84_N67207 is floating
+ERROR -- Node U84_N67213 is floating
+ERROR -- Node N577772 is floating
+ERROR -- Node U84_N66527 is floating
+ERROR -- Node N573036 is floating
+ERROR -- Node U110_N39991 is floating
+ERROR -- Node C51 is floating
+ERROR -- Node LSB is floating
+ERROR -- Node N575374 is floating
+ERROR -- Node N575382 is floating
+ERROR -- Node U122_N88766 is floating
+ERROR -- Node U122_N88906 is floating
+ERROR -- Node U122_N88946 is floating
+ERROR -- Node N568511 is floating
+ERROR -- Node N565120 is floating
+ERROR -- Node C40 is floating
+ERROR -- Node N572074 is floating
+ERROR -- Node -C16 is floating
+ERROR -- Node C16 is floating
+ERROR -- Node N578608 is floating
+ERROR -- Node U77_N39991 is floating
+ERROR -- Node C3 is floating
+ERROR -- Node N259565 is floating
+ERROR -- Node N567415 is floating
+ERROR -- Node N567801 is floating
+ERROR -- Node U44_N39991 is floating
+ERROR -- Node C38 is floating
+ERROR -- Node N573086 is floating
+ERROR -- Node C60 is floating
+ERROR -- Node N572170 is floating
+ERROR -- Node N572064 is floating
+ERROR -- Node U100_N39991 is floating
+ERROR -- Node C33 is floating
+ERROR -- Node N577848 is floating
+ERROR -- Node U73_N39991 is floating
+ERROR -- Node C29 is floating
+ERROR -- Node N565392 is floating
+ERROR -- Node U13_N39991 is floating
+ERROR -- Node C36 is floating
+ERROR -- Node N578674 is floating
+ERROR -- Node N573046 is floating
+ERROR -- Node U111_N39991 is floating
+ERROR -- Node C53 is floating
+ERROR -- Node N568171 is floating
+ERROR -- Node C2 is floating
+ERROR -- Node N567841 is floating
+ERROR -- Node C52 is floating
+ERROR -- Node N259199 is floating
+ERROR -- Node U2_N39991 is floating
+ERROR -- Node N578622 is floating
+ERROR -- Node U78_N39991 is floating
+ERROR -- Node C5 is floating
+ERROR -- Node N572182 is floating
+ERROR -- Node U101_N39991 is floating
+ERROR -- Node C35 is floating
+ERROR -- Node X3 is floating
+ERROR -- Node N572190 is floating
+ERROR -- Node N572214 is floating
+ERROR -- Node N572198 is floating
+ERROR -- Node U107_N67495 is floating
+ERROR -- Node U107_N66385 is floating
+ERROR -- Node N572186 is floating
+ERROR -- Node U107_N66425 is floating
+ERROR -- Node U107_N66937 is floating
+ERROR -- Node N572512 is floating
+ERROR -- Node U107_N67207 is floating
+ERROR -- Node U107_N67213 is floating
+ERROR -- Node U107_N66527 is floating
+ERROR -- Node N565130 is floating
+ERROR -- Node N572104 is floating
+ERROR -- Node N578480 is floating
+ERROR -- Node N567879 is floating
+ERROR -- Node N567811 is floating
+ERROR -- Node U45_N39991 is floating
+ERROR -- Node C42 is floating
+ERROR -- Node N565380 is floating
+ERROR -- Node U14_N39991 is floating
+ERROR -- Node N568485 is floating
+ERROR -- Node N5684051 is floating
+ERROR -- Node U112_N39991 is floating
+ERROR -- Node C55 is floating
+ERROR -- Node N568303 is floating
+ERROR -- Node N567861 is floating
+ERROR -- Node U51_N39991 is floating
+ERROR -- Node C62 is floating
+ERROR -- Node N573096 is floating
+ERROR -- Node N568263 is floating
+ERROR -- Node U32_N39991 is floating
+ERROR -- Node N565346 is floating
+ERROR -- Node U79_N39991 is floating
+ERROR -- Node C7 is floating
+ERROR -- Node N565498 is floating
+ERROR -- Node N565360 is floating
+ERROR -- Node U17_N67495 is floating
+ERROR -- Node U17_N66385 is floating
+ERROR -- Node U17_N66425 is floating
+ERROR -- Node U17_N66937 is floating
+ERROR -- Node U17_N67207 is floating
+ERROR -- Node U17_N67213 is floating
+ERROR -- Node N565368 is floating
+ERROR -- Node U17_N66527 is floating
+ERROR -- Node N578504 is floating
+ERROR -- Node C18 is floating
+ERROR -- Node C14 is floating
+ERROR -- Node U102_N39991 is floating
+ERROR -- Node C37 is floating
+ERROR -- Node N567401 is floating
+ERROR -- Node N567419 is floating
+ERROR -- Node N567851 is floating
+ERROR -- Node N567883 is floating
+ERROR -- Node U46_N39991 is floating
+ERROR -- Node U15_N39991 is floating
+ERROR -- Node N259543 is floating
+ERROR -- Node U113_N39991 is floating
+ERROR -- Node C57 is floating
+ERROR -- Node N568523 is floating
+ERROR -- Node U117_N39991 is floating
+ERROR -- Node C63 is floating
+ERROR -- Node N568271 is floating
+ERROR -- Node U33_N39991 is floating
+ERROR -- Node N564924 is floating
+ERROR -- Node N572114 is floating
+ERROR -- Node 5SB is floating
+ERROR -- Node U3_N39991 is floating
+ERROR -- Node U80_N39991 is floating
+ERROR -- Node C9 is floating
+ERROR -- Node N565340 is floating
+ERROR -- Node U103_N39991 is floating
+ERROR -- Node C39 is floating
+ERROR -- Node N568995 is floating
+ERROR -- Node U47_N39991 is floating
+ERROR -- Node C50 is floating
+ERROR -- Node U16_N39991 is floating
+ERROR -- Node 4SB is floating
+ERROR -- Node N259649 is floating
+ERROR -- Node N259627 is floating
+ERROR -- Node N259637 is floating
+ERROR -- Node U8_N88766 is floating
+ERROR -- Node U8_N88906 is floating
+ERROR -- Node U8_N88946 is floating
+ERROR -- Node N568285 is floating
+ERROR -- Node U34_N39991 is floating
+ERROR -- Node U114_N39991 is floating
+ERROR -- Node C59 is floating
+ERROR -- Node N259605 is floating
+ERROR -- Node U108_N39991 is floating
+ERROR -- Node C47 is floating
+ERROR -- Node U81_N39991 is floating
+ERROR -- Node C11 is floating
+ERROR -- Node N568243 is floating
+ERROR -- Node U39_N67495 is floating
+ERROR -- Node U39_N66385 is floating
+ERROR -- Node U39_N66425 is floating
+ERROR -- Node U39_N66937 is floating
+ERROR -- Node N568251 is floating
+ERROR -- Node U39_N67207 is floating
+ERROR -- Node U39_N67213 is floating
+ERROR -- Node U39_N66527 is floating
+ERROR -- Node U4_N39991 is floating
+ERROR -- Node 3SB is floating
+ERROR -- Node N572124 is floating
+ERROR -- Node N568069 is floating
+ERROR -- Node U48_N39991 is floating
+ERROR -- Node U104_N39991 is floating
+ERROR -- Node C41 is floating
+ERROR -- Node N568535 is floating
+ERROR -- Node U35_N39991 is floating
+ERROR -- Node 2SB is floating
+ERROR -- Node U42_N39991 is floating
+ERROR -- Node U50_N67495 is floating
+ERROR -- Node U50_N66385 is floating
+ERROR -- Node U50_N66425 is floating
+ERROR -- Node U50_N66937 is floating
+ERROR -- Node U50_N67207 is floating
+ERROR -- Node U50_N67213 is floating
+ERROR -- Node N568185 is floating
+ERROR -- Node U50_N66527 is floating
+ERROR -- Node U115_N39991 is floating
+ERROR -- Node C61 is floating
+ERROR -- Node N577814 is floating
+ERROR -- Node U67_N39991 is floating
+ERROR -- Node C17 is floating
+ERROR -- Node C22 is floating
+ERROR -- Node U5_N39991 is floating
+ERROR -- Node U74_N67495 is floating
+ERROR -- Node U74_N66385 is floating
+ERROR -- Node U74_N66425 is floating
+ERROR -- Node U74_N66937 is floating
+ERROR -- Node N577818 is floating
+ERROR -- Node U74_N67207 is floating
+ERROR -- Node U74_N67213 is floating
+ERROR -- Node U74_N66527 is floating
+ERROR -- Node N572134 is floating
+ERROR -- Node U105_N39991 is floating
+ERROR -- Node C43 is floating
+ERROR -- Node U82_N39991 is floating
+ERROR -- Node C13 is floating
+ERROR -- Node U49_N39991 is floating
+ERROR -- Node U36_N39991 is floating
+ERROR -- Node U68_N39991 is floating
+ERROR -- Node C19 is floating
+ERROR -- Node U6_N39991 is floating
