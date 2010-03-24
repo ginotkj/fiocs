@@ -32,65 +32,16 @@
     (width_start "80")
     (width_End "80"))
   (Folder "Outputs"
-    (File ".\i-nand-pspicefiles\schematic1\schematic1.net"
-      (Type "Report"))
-    (File ".\i-nand-pspicefiles\nand\nand.net"
-      (Type "Report"))
-    (File ".\i-nand-pspicefiles\nand-testeo\nand-testeo.net"
-      (Type "Report"))
-    (File ".\i-nand-pspicefiles\nand-2\nand-2.net"
-      (Type "Report"))
-    (File ".\i-nand-pspicefiles\nand-4\nand-4.net"
-      (Type "Report"))
-    (File ".\i-nand-pspicefiles\nand-8\nand-8.net"
-      (Type "Report"))
-    (File ".\i-nand-pspicefiles\nand-3\nand-3.net"
-      (Type "Report"))
-    (File ".\i-nand-pspicefiles\nand-5\nand-5.net"
-      (Type "Report"))
-    (File ".\i-nand-pspicefiles\nand-7\nand-7.net"
-      (Type "Report"))
-    (File ".\i-nand-pspicefiles\neg\neg.net"
-      (Type "Report"))
     (File "d:\documents\tesis\fiocs\design\componentes orcad\compuertas.olb"
+      (Type "Schematic Library"))
+    (File ".\i-nand.olb"
       (Type "Schematic Library")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
-      (Sort User)
-      (File ".\i-nand-pspicefiles\i-nand.lib"
-        (Type "PSpiceLibrary")
-        (DisplayName ".\i-nand-pspicefiles\i-nand.lib")))
+      (Sort User))
     (Folder "Stimulus Files")
     (Folder "Include Files")
-    (Folder "Simulation Profiles"
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-2\transient.sim"
-        (DisplayName "NAND-2-transient")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-4\transient.sim"
-        (DisplayName "NAND-4-transient")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-8\transient.sim"
-        (DisplayName "NAND-8-transient")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-3\transient.sim"
-        (DisplayName "NAND-3-transient")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-5\transient.sim"
-        (DisplayName "NAND-5-transient")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-7\transient.sim"
-        (DisplayName "NAND-7-transient")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\neg\transient.sim"
-        (DisplayName "NEG-transient")
-        (Type "PSpice Profile"))))
+    (Folder "Simulation Profiles"))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (PORTRIGHT-L
@@ -151,12 +102,12 @@
       (Path "Design Resources")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-7")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb")
+      (Path "PSpice Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 19 837 -11 805"))
+        (Placement "44 2 3 -1 -1 -8 -30 19 837 -11 801"))
       (Tab 0))))
