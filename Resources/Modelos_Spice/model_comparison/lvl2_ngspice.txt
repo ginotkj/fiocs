@@ -1,0 +1,56 @@
+13.18 Mos2: Level 2 MOSfet model with Meyer capacitance model
+
+ic Vector of D-S, G-S, B-S voltages |
+l Length |
+w Width |
+ad Drain area |
+as Source area |
+pd Drain perimeter |
+ps Source perimeter |
+nrd Drain squares |
+nrs Source squares |
+icvds Initial D-S voltage |
+icvgs Initial G-S voltage |
+icvbs Initial B-S voltage |
+temp Instance operating temperature |
+nmos N type MOSfet model |
+pmos P type MOSfet model |
+vto Threshold voltage |
+vt0 (null) |
+kp Transconductance parameter |
+gamma Bulk threshold parameter |
+phi Surface potential |
+lambda Channel length modulation |
+rd Drain ohmic resistance |
+rs Source ohmic resistance |
+cbd B-D junction capacitance |
+cbs B-S junction capacitance |
+is Bulk junction sat. current |
+pb Bulk junction potential |
+cgso Gate-source overlap cap. |
+cgdo Gate-drain overlap cap. |
+cgbo Gate-bulk overlap cap. |
+rsh Sheet resistance |
+cj Bottom junction cap per area |
+mj Bottom grading coefficient |
+cjsw Side junction cap per area |
+mjsw Side grading coefficient |
+js Bulk jct. sat. current density |
+tox Oxide thickness |
+ld Lateral diffusion |
+u0 Surface mobility |
+uo (null) |
+fc Forward bias jct. fit param. |
+nsub Substrate doping |
+tpg Gate type |
+nss Surface state density |
+delta Width effect on threshold |
+uexp Crit. field exp for mob. deg. |
+ucrit Crit. field for mob. degradation |
+vmax Maximum carrier drift velocity |
+xj Junction depth |
+neff Total channel charge coeff. |
+nfs Fast surface state density |
+tnom Parameter measurement temperature |
+kf Flicker noise coefficient |
+af Flicker noise exponent |

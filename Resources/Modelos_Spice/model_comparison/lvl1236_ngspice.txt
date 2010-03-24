@@ -1,0 +1,45 @@
+NGSPICE level 1, 2, 3 and 6 parameters:
+
+name 		parameter																				units		default		example
+LEVEL		model index 		  - 		  1
+VTO			zero-bias threshold voltage (VT 0) V 0.0 1.0
+KP			transconductance parameter A/V 2 2.0e-5 3.1e-5
+GAMMA 		bulk threshold parameter V 1/2 0.0 0.37
+PHI 		surface potential (U) V 0.6 0.65
+LAMBDA 		channel-length modulation (MOS1and MOS2 only) (L)1/V 0.0 0.02
+RD 			drain ohmic resistance Z 0.0 1.0
+RS 			source ohmic resistance Z 0.0 1.0
+CBD 		zero-bias B-D junction capacitance F 0.0 20fF
+CBS 		zero-bias B-S junction capacitance F 0.0 20fF
+IS 			bulk junction saturation current (IS) A 1.0e-14 1.0e-15
+PB 			bulk junction potential V 0.8 0.87
+CGSO 		gate-source overlap capacitance permeter channel width F/m 0.0 4.0e-11
+CGDO 		gate-drain overlap capacitance per meterchannel width F/m 0.0 4.0e-11
+CGBO 		gate-bulk overlap capacitance per meterchannel length F/m 0.0 2.0e-10
+RSH 		drain and source diffusion sheet resistance Z/[] 0.0 10.0
+CJ 			zero-bias bulk junction bottom cap. per sq-meter of junction area F/m2 0.0 2.0e-4
+MJ 			bulk junction bottom grading coeff. - 0.5 0.5
+CJSW 		zero-bias bulk junction sidewall cap. per meter of junction perimeter F/m 0.0 1.0e-9
+MJSW 		bulk junction sidewall grading coeff. - 0.50(level1),0.33(level2,3)
+JS 			bulk junction saturation current per sq-meter of junction area A/m2 1.0e-8
+TOX 		oxide thickness meter 1.0e-7 1.0e-7
+NSUB 		substrate doping 1/cm3 0.0 4.0e15
+NSS 		surface state density 1/cm2 0.0 1.0e10
+NFS 		fast surface state density 1/cm2 0.0 1.0e10
+TPG 		type of gate material: +1 opp. to substrate, -1 same as substrate, 0 Al gate - 1.0
+XJ 			metallurgical junction depth meter 0.0 1M
+LD 			lateral diffusion meter 0.0 0.8M
+UO 			surface mobility cm2/V s 600 700
+UCRIT 		critical field for mobility degradation (MOS2 only)V/cm 1.0e4 1.0e4
+UEXP 		critical field exponent in mobility degradation (MOS2 only) - 0.0 0.1
+UTRA 		transverse field coeff. (mobility) (deleted for MOS2) - 0.0 0.3
+VMAX 		maximum drift velocity of carriers m/s 0.0 5.0e4
+NEFF 		total channel-charge (fixed and mobile) coefficient (MOS2 only) - 1.0 5.0
+KF 			flicker noise coefficient - 0.0 1.0e-26
+AF 			flicker noise exponent - 1.0 1.2
+FC 			coefficient for forward-bias depletion capacitance formula - 0.5
+DELTA 		width effect on threshold voltage(MOS2 and MOS3)- 0.0 1.0
+THETA 		mobility modulation (MOS3 only) 1/V 0.0 0.1
+ETA 		static feedback (MOS3 only) - 0.0 1.0
+KAPPA 		saturation field factor (MOS3 only) - 0.2 0.5
+TNOM 		parameter measurement temperature oC 27 50
