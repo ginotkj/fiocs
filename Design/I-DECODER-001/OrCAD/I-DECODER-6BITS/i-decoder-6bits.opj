@@ -157,10 +157,7 @@
          "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
-         "TEST")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
-         "SENALES")
+         "S-DECODER")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
@@ -168,7 +165,7 @@
       (Path "PSpice Resources" "Simulation Profiles")
       (Select "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
-         "TEST" "TEST"))
+         "S-DECODER" "S2-DECODER"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
