@@ -24,7 +24,7 @@
            "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\special.olb")
         (Type "Schematic Library")))
     (NoModify)
-    (File "i-flash-6bits.dsn"
+    (File ".\i-flash-6bits.dsn"
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
@@ -40,46 +40,68 @@
     (File "d:\documents\tesis\trunk\design\componentes orcad\compuertas.olb"
       (Type "Schematic Library"))
     (File ".\i-flash-6bits-pspicefiles\test\test.net"
-      (Type "Report")))
+      (Type "Report"))
+    (File ".\i-flash-6bits.olb"
+      (Type "Schematic Library")))
   (Folder "PSpice Resources"
-    (Folder "Model Libraries")
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\i-flash-6bits-pspicefiles\i-flash-6bits.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\i-flash-6bits-pspicefiles\i-flash-6bits.lib")))
     (Folder "Stimulus Files")
     (Folder "Include Files")
     (Folder "Simulation Profiles"
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-flash-6bits-pspicefiles\s-flash-64\bias.sim"
-        (DisplayName "S-FLASH-64-bias")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-flash-6bits-pspicefiles\test\bias.sim"
-        (DisplayName "TEST-bias")
-        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-flash-6bits-pspicefiles\test\transient.sim")
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-flash-6bits-pspicefiles\test\transient.sim"
         (DisplayName "TEST-transient")
-        (Type "PSpice Profile"))
-      (ActiveProfile ".\i-flash-6bits-pspicefiles\test\transient.sim")))
+        (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
-    (R
-      (FullPartName "R.Normal")
+    (0
       (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (MbreakP
+      (FullPartName "MbreakP.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (MbreakN
+      (FullPartName "MbreakN.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
       (DeviceIndex "0"))
     (VDC
       (FullPartName "VDC.Normal")
       (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (S-FLASH-64
+      (FullPartName "S-FLASH-64.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.OLB")
+      (DeviceIndex "0"))
+    (S-FFD-nands
+      (FullPartName "S-FFD-nands.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FFD\ORCAD\I-FFD.OLB")
+      (DeviceIndex "0"))
+    (S-DECODER
+      (FullPartName "S-DECODER.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.OLB")
       (DeviceIndex "0"))
     (GND
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (PORTRIGHT-R
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
-    (0
-      (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
     (VCC_CIRCLE
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
@@ -114,25 +136,23 @@
       (FullPartName "VSTIM.Normal")
       (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
       (DeviceIndex "0")))
-  (LastUsedLibraryBrowseDirectory "LIBRARY\PSPICE")
+  (LastUsedLibraryBrowseDirectory
+     "C:\OrCAD\OrCAD_16.0\tools\capture\library\pspice")
   (MPSSessionName "FABRICIO")
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
-         "TEST")
+      (Path "Design Resources" ".\i-flash-6bits.dsn")
+      (Path "Design Resources" ".\i-flash-6bits.dsn" "TEST")
       (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
-         "TEST" "TEST"))
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 0 648 -8 -30 0 368 0 820"))
+        (Placement "44 0 1 0 648 -8 -30 0 368 0 812"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
@@ -144,4 +164,103 @@
       (Path
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
       (Schematic "TEST")
-      (Page "TEST"))))
+      (Page "TEST"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 100 1794 100 759")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/U2"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
+      (Schematic "S-FLASH-64")
+      (Page "S1-FLASH-64"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 125 1819 125 784")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/U2"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
+      (Schematic "S-FLASH-64")
+      (Page "S2-FLASH-64"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 150 1844 150 809")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/U2"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
+      (Schematic "S-FLASH-64")
+      (Page "S3-FLASH-64"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 225 1919 225 884")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/U2/U9"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
+      (Schematic "S-DECODER")
+      (Page "S1-DECODER"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 250 1944 250 909")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/U2/U9"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
+      (Schematic "S-DECODER")
+      (Page "S2-DECODER"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 275 1969 275 934")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/U2/U9"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
+      (Schematic "S-DECODER")
+      (Page "S3-DECODER"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 300 1994 300 959")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/U2/U9"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
+      (Schematic "S-DECODER")
+      (Page "S4-DECODER"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 325 2019 325 984")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/U2/U9"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
+      (Schematic "S-DECODER")
+      (Page "S5-DECODER"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 1694 0 659")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/U2/U9"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
+      (Schematic "S-DECODER")
+      (Page "S6-DECODER"))))
