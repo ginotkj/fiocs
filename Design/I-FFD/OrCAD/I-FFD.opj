@@ -57,7 +57,9 @@
       (Type "Report"))
     (File
        ".\i-ffd-pspicefiles\test ffd con c en loop\test ffd con c en loop.net"
-      (Type "Report")))
+      (Type "Report"))
+    (File ".\i-ffd.olb"
+      (Type "Schematic Library")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
       (Sort User)
@@ -114,6 +116,14 @@
       (ActiveProfile ".\i-ffd-pspicefiles\test ffd\transient.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (NAND-2
+      (FullPartName "NAND-2.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-3
+      (FullPartName "NAND-3.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
     (C
       (FullPartName "C.Normal")
       (LibraryName
@@ -177,30 +187,22 @@
   (MPSSessionName "FABRICIO")
   (GlobalState
     (FileView
-      (Path "Design Resources"))
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn" "S-FFD")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn" "S-FFD-nands")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn" "S-NAND-2")
+      (Path "Outputs")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.olb")
+      (Select "Outputs" "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.olb"
+         "S-FFD-nands"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 0 996 -8 -30 0 453 0 1023"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 125 1786 125 827")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/"))
-      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD\ORCAD\I-FFD.DSN")
-      (Schematic "TEST FFD")
-      (Page "TEST FFD"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 75 1707 75 777")
-        (Scroll "0 0")
-        (Zoom "135")
-        (Occurrence "/FFD"))
-      (Path "D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-FFD\ORCAD\I-FFD.DSN")
-      (Schematic "S-FFD")
-      (Page "S-FFD"))))
+        (Placement "44 2 3 0 996 -8 -30 0 453 0 1023"))
+      (Tab 0))))

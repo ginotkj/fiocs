@@ -46,7 +46,9 @@
     (File "..\componentes orcad\compuertas.olb"
       (Type "Schematic Library"))
     (File ".\i-comparador-01-pspicefiles\test\test.net"
-      (Type "Report")))
+      (Type "Report"))
+    (File ".\i-comparador-01.olb"
+      (Type "Schematic Library")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
       (Sort User)
@@ -79,6 +81,11 @@
         (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (S-COMP
+      (FullPartName "S-COMP.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-COMPARADOR-01\ORCAD\I-COMPARADOR-01.OLB")
+      (DeviceIndex "0"))
     (VSIN
       (FullPartName "VSIN.Normal")
       (LibraryName
@@ -139,11 +146,15 @@
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
          "TEST")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
+         "S-COMP")
       (Path "Design Resources" "Library")
       (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
-         "TEST" "TEST"))
+      (Path "Outputs"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.olb")
+      (Select "Outputs"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.olb"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
