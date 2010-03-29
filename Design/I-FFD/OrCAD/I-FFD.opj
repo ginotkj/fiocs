@@ -112,8 +112,7 @@
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-ffd-pspicefiles\test ffd con c en loop\transient.sim"
         (DisplayName "TEST FFD con C en LOOP-transient")
-        (Type "PSpice Profile"))
-      (ActiveProfile ".\i-ffd-pspicefiles\test ffd\transient.sim")))
+        (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (NAND-2
@@ -190,16 +189,9 @@
       (Path "Design Resources")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn" "S-FFD")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn" "S-FFD-nands")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn" "S-NAND-2")
       (Path "Outputs")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.olb")
-      (Select "Outputs" "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.olb"
-         "S-FFD-nands"))
+      (Select "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn" "S-FFD-nands"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
