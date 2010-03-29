@@ -142,12 +142,21 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\i-flash-6bits.dsn")
-      (Path "Design Resources" ".\i-flash-6bits.dsn" "TEST")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
+         "TEST")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
+         "S-FLASH-64")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
-      (Path "PSpice Resources" "Simulation Profiles"))
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
+         "S-FLASH-64" "S1-FLASH-64"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -157,18 +166,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 1773 50 709")
-        (Scroll "0 0")
-        (Zoom "129")
-        (Occurrence "/"))
-      (Path
-         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
-      (Schematic "TEST")
-      (Page "TEST"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 100 1794 100 759")
+        (Placement "44 0 1 -1 -1 -8 -30 300 2023 300 959")
         (Scroll "0 0")
         (Zoom "129")
         (Occurrence "/U2"))
@@ -179,7 +177,29 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 125 1819 125 784")
+        (Placement "44 0 1 -1 -1 -8 -30 325 2019 325 984")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/U2/C8"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-COMPARADOR-01\ORCAD\I-COMPARADOR-01.OLB")
+      (Schematic "S-COMP")
+      (Page "S-COMP"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 1694 0 659")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
+      (Schematic "TEST")
+      (Page "TEST"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 25 1719 25 684")
         (Scroll "0 0")
         (Zoom "129")
         (Occurrence "/U2"))
@@ -190,7 +210,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 150 1844 150 809")
+        (Placement "44 0 1 -1 -1 -8 -30 50 1744 50 709")
         (Scroll "0 0")
         (Zoom "129")
         (Occurrence "/U2"))
@@ -201,66 +221,11 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 225 1919 225 884")
+        (Placement "44 0 1 -1 -1 -8 -30 75 1769 75 734")
         (Scroll "0 0")
         (Zoom "129")
         (Occurrence "/U2/U9"))
       (Path
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
       (Schematic "S-DECODER")
-      (Page "S1-DECODER"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 250 1944 250 909")
-        (Scroll "0 0")
-        (Zoom "129")
-        (Occurrence "/U2/U9"))
-      (Path
-         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
-      (Schematic "S-DECODER")
-      (Page "S2-DECODER"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 275 1969 275 934")
-        (Scroll "0 0")
-        (Zoom "129")
-        (Occurrence "/U2/U9"))
-      (Path
-         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
-      (Schematic "S-DECODER")
-      (Page "S3-DECODER"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 300 1994 300 959")
-        (Scroll "0 0")
-        (Zoom "129")
-        (Occurrence "/U2/U9"))
-      (Path
-         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
-      (Schematic "S-DECODER")
-      (Page "S4-DECODER"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 325 2019 325 984")
-        (Scroll "0 0")
-        (Zoom "129")
-        (Occurrence "/U2/U9"))
-      (Path
-         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
-      (Schematic "S-DECODER")
-      (Page "S5-DECODER"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 1694 0 659")
-        (Scroll "0 0")
-        (Zoom "129")
-        (Occurrence "/U2/U9"))
-      (Path
-         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
-      (Schematic "S-DECODER")
-      (Page "S6-DECODER"))))
+      (Page "S1-DECODER"))))

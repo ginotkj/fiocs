@@ -1,7 +1,7 @@
 
-**** 03/26/10 19:10:28 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 03/26/10 20:31:07 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-PSpiceFiles\TEST\transi
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-pspicefiles\test\transi
 
 
  ****     CIRCUIT DESCRIPTION
@@ -23,7 +23,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 10u 0 
+.TRAN  0 2u 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\TEST.net" 
 
@@ -340,22 +340,22 @@ M_U2_U10_U1_M1         U2_U10_Y U2_U10_X U2_U10_U1_N27355 U2_U10_U1_N27355
 M_U2_U10_U1_M5         U2_U10_Y U2_U10_N62152 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U10_U2_M5         U2_U10_N62124 U2_U10_N62152 N115794 N115794 CMOSP  
+M_U2_U10_U2_M5         U2_U10_N62128 U2_U10_N62152 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U10_U2_M6         U2_U10_N62124 U2_U10_N62152 U2_U10_U2_N39991 0 CMOSN  
+M_U2_U10_U2_M6         U2_U10_N62128 U2_U10_N62152 U2_U10_U2_N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
 M_U2_U10_U2_M2         U2_U10_U2_N39991 U2_U10_X 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_U2_U10_U2_M4         U2_U10_N62124 U2_U10_X N115794 N115794 CMOSP  
+M_U2_U10_U2_M4         U2_U10_N62128 U2_U10_X N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U10_U3_M5         U2_U10_X U2_U10_N62124 N115794 N115794 CMOSP  
+M_U2_U10_U3_M5         U2_U10_X U2_U10_N62128 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U10_U3_M6         U2_U10_X U2_U10_N62124 U2_U10_U3_N39991 0 CMOSN  
+M_U2_U10_U3_M6         U2_U10_X U2_U10_N62128 U2_U10_U3_N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
 M_U2_U10_U3_M2         U2_U10_U3_N39991 N116065 0 0 CMOSN  
@@ -462,22 +462,22 @@ M_U2_U13_U1_M1         U2_U13_Y U2_U13_X U2_U13_U1_N27355 U2_U13_U1_N27355
 M_U2_U13_U1_M5         U2_U13_Y U2_U13_N62152 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U13_U2_M5         U2_U13_N62124 U2_U13_N62152 N115794 N115794 CMOSP  
+M_U2_U13_U2_M5         U2_U13_N62128 U2_U13_N62152 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U13_U2_M6         U2_U13_N62124 U2_U13_N62152 U2_U13_U2_N39991 0 CMOSN  
+M_U2_U13_U2_M6         U2_U13_N62128 U2_U13_N62152 U2_U13_U2_N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
 M_U2_U13_U2_M2         U2_U13_U2_N39991 U2_U13_X 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_U2_U13_U2_M4         U2_U13_N62124 U2_U13_X N115794 N115794 CMOSP  
+M_U2_U13_U2_M4         U2_U13_N62128 U2_U13_X N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U13_U3_M5         U2_U13_X U2_U13_N62124 N115794 N115794 CMOSP  
+M_U2_U13_U3_M5         U2_U13_X U2_U13_N62128 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U13_U3_M6         U2_U13_X U2_U13_N62124 U2_U13_U3_N39991 0 CMOSN  
+M_U2_U13_U3_M6         U2_U13_X U2_U13_N62128 U2_U13_U3_N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
 M_U2_U13_U3_M2         U2_U13_U3_N39991 N116065 0 0 CMOSN  
@@ -983,22 +983,22 @@ M_U2_U12_U1_M1         U2_U12_Y U2_U12_X U2_U12_U1_N27355 U2_U12_U1_N27355
 M_U2_U12_U1_M5         U2_U12_Y U2_U12_N62152 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U12_U2_M5         U2_U12_N62124 U2_U12_N62152 N115794 N115794 CMOSP  
+M_U2_U12_U2_M5         U2_U12_N62128 U2_U12_N62152 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U12_U2_M6         U2_U12_N62124 U2_U12_N62152 U2_U12_U2_N39991 0 CMOSN  
+M_U2_U12_U2_M6         U2_U12_N62128 U2_U12_N62152 U2_U12_U2_N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
 M_U2_U12_U2_M2         U2_U12_U2_N39991 U2_U12_X 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_U2_U12_U2_M4         U2_U12_N62124 U2_U12_X N115794 N115794 CMOSP  
+M_U2_U12_U2_M4         U2_U12_N62128 U2_U12_X N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U12_U3_M5         U2_U12_X U2_U12_N62124 N115794 N115794 CMOSP  
+M_U2_U12_U3_M5         U2_U12_X U2_U12_N62128 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U12_U3_M6         U2_U12_X U2_U12_N62124 U2_U12_U3_N39991 0 CMOSN  
+M_U2_U12_U3_M6         U2_U12_X U2_U12_N62128 U2_U12_U3_N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
 M_U2_U12_U3_M2         U2_U12_U3_N39991 N116065 0 0 CMOSN  
@@ -1126,22 +1126,22 @@ M_U2_U15_U1_M1         U2_U15_Y U2_U15_X U2_U15_U1_N27355 U2_U15_U1_N27355
 M_U2_U15_U1_M5         U2_U15_Y U2_U15_N62152 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U15_U2_M5         U2_U15_N62124 U2_U15_N62152 N115794 N115794 CMOSP  
+M_U2_U15_U2_M5         U2_U15_N62128 U2_U15_N62152 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U15_U2_M6         U2_U15_N62124 U2_U15_N62152 U2_U15_U2_N39991 0 CMOSN  
+M_U2_U15_U2_M6         U2_U15_N62128 U2_U15_N62152 U2_U15_U2_N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
 M_U2_U15_U2_M2         U2_U15_U2_N39991 U2_U15_X 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_U2_U15_U2_M4         U2_U15_N62124 U2_U15_X N115794 N115794 CMOSP  
+M_U2_U15_U2_M4         U2_U15_N62128 U2_U15_X N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U15_U3_M5         U2_U15_X U2_U15_N62124 N115794 N115794 CMOSP  
+M_U2_U15_U3_M5         U2_U15_X U2_U15_N62128 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U15_U3_M6         U2_U15_X U2_U15_N62124 U2_U15_U3_N39991 0 CMOSN  
+M_U2_U15_U3_M6         U2_U15_X U2_U15_N62128 U2_U15_U3_N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
 M_U2_U15_U3_M2         U2_U15_U3_N39991 N116065 0 0 CMOSN  
@@ -1605,22 +1605,22 @@ M_U2_U11_U1_M1         U2_U11_Y U2_U11_X U2_U11_U1_N27355 U2_U11_U1_N27355
 M_U2_U11_U1_M5         U2_U11_Y U2_U11_N62152 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U11_U2_M5         U2_U11_N62124 U2_U11_N62152 N115794 N115794 CMOSP  
+M_U2_U11_U2_M5         U2_U11_N62128 U2_U11_N62152 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U11_U2_M6         U2_U11_N62124 U2_U11_N62152 U2_U11_U2_N39991 0 CMOSN  
+M_U2_U11_U2_M6         U2_U11_N62128 U2_U11_N62152 U2_U11_U2_N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
 M_U2_U11_U2_M2         U2_U11_U2_N39991 U2_U11_X 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_U2_U11_U2_M4         U2_U11_N62124 U2_U11_X N115794 N115794 CMOSP  
+M_U2_U11_U2_M4         U2_U11_N62128 U2_U11_X N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U11_U3_M5         U2_U11_X U2_U11_N62124 N115794 N115794 CMOSP  
+M_U2_U11_U3_M5         U2_U11_X U2_U11_N62128 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U11_U3_M6         U2_U11_X U2_U11_N62124 U2_U11_U3_N39991 0 CMOSN  
+M_U2_U11_U3_M6         U2_U11_X U2_U11_N62128 U2_U11_U3_N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
 M_U2_U11_U3_M2         U2_U11_U3_N39991 N116065 0 0 CMOSN  
@@ -3264,22 +3264,22 @@ M_U2_U14_U1_M1         U2_U14_Y U2_U14_X U2_U14_U1_N27355 U2_U14_U1_N27355
 M_U2_U14_U1_M5         U2_U14_Y U2_U14_N62152 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U14_U2_M5         U2_U14_N62124 U2_U14_N62152 N115794 N115794 CMOSP  
+M_U2_U14_U2_M5         U2_U14_N62128 U2_U14_N62152 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U14_U2_M6         U2_U14_N62124 U2_U14_N62152 U2_U14_U2_N39991 0 CMOSN  
+M_U2_U14_U2_M6         U2_U14_N62128 U2_U14_N62152 U2_U14_U2_N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
 M_U2_U14_U2_M2         U2_U14_U2_N39991 U2_U14_X 0 0 CMOSN  
 + L=.18u  
 + W=.18u         
-M_U2_U14_U2_M4         U2_U14_N62124 U2_U14_X N115794 N115794 CMOSP  
+M_U2_U14_U2_M4         U2_U14_N62128 U2_U14_X N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U14_U3_M5         U2_U14_X U2_U14_N62124 N115794 N115794 CMOSP  
+M_U2_U14_U3_M5         U2_U14_X U2_U14_N62128 N115794 N115794 CMOSP  
 + L=.18u  
 + W=.2u         
-M_U2_U14_U3_M6         U2_U14_X U2_U14_N62124 U2_U14_U3_N39991 0 CMOSN  
+M_U2_U14_U3_M6         U2_U14_X U2_U14_N62128 U2_U14_U3_N39991 0 CMOSN  
 + L=.18u  
 + W=.18u         
 M_U2_U14_U3_M2         U2_U14_U3_N39991 N116065 0 0 CMOSN  
@@ -3576,9 +3576,9 @@ WARNING -- Mosfet M_U2_C7_M7, model CMOSN: Ps = 0 is less than W
 Mosfet M_U2_U10_U6_M6, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_U2_U10_U6_M6, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_U2_U10_U6_M6, model CMOSN: Ps = 0 is less than W
-**** 03/26/10 19:10:28 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 03/26/10 20:31:07 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-PSpiceFiles\TEST\transi
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-pspicefiles\test\transi
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -4110,17 +4110,17 @@ ERROR -- Convergence problem in transient bias point calculation
 
 (U2_C63_N27085)     .1618             (U2_C63_N27165)     .1216                 
 
-(U2_U10_N62124) 45.94E-06             (U2_U10_N62152)     .1981                 
+(U2_U10_N62128) 45.94E-06             (U2_U10_N62152)     .1981                 
 
-(U2_U11_N62124)     .1996             (U2_U11_N62152) 44.15E-06                 
+(U2_U11_N62128)     .1996             (U2_U11_N62152) 44.15E-06                 
 
-(U2_U12_N62124) 46.61E-06             (U2_U12_N62152)     .1976                 
+(U2_U12_N62128) 46.61E-06             (U2_U12_N62152)     .1976                 
 
-(U2_U13_N62124)     .1996             (U2_U13_N62152) 44.23E-06                 
+(U2_U13_N62128)     .1996             (U2_U13_N62152) 44.23E-06                 
 
-(U2_U14_N62124)    -.0212             (U2_U14_N62152)     .1540                 
+(U2_U14_N62128)    -.0212             (U2_U14_N62152)     .1540                 
 
-(U2_U15_N62124) 44.12E-06             (U2_U15_N62152)     .1997                 
+(U2_U15_N62128) 44.12E-06             (U2_U15_N62152)     .1997                 
 
 (U2_U9_N259199) 138.7E-06             (U2_U9_N259339)     .1979                 
 
@@ -4416,7 +4416,7 @@ ERROR -- Convergence problem in transient bias point calculation
     V(U2_U14_U1_N27355)       =   125.20mV  \   103.14mV
     V(U2_U14_U1_N27381)       =   598.28uV  \   581.86uV
     V(U2_U14_X)               =   127.25mV  \   102.83mV
-    V(U2_U14_N62124)          =    4.376mV  \   -21.23mV
+    V(U2_U14_N62128)          =    4.376mV  \   -21.23mV
     V(U2_U14_U2_N39991)       =    4.223mV  \   -21.24mV
     V(U2_U14_U3_N39991)       =  -104.90mV  \  -147.73mV
     V(U2_U14_U4_N39991)       =    4.814mV  \    2.948mV
@@ -4435,7 +4435,7 @@ ERROR -- Convergence problem in transient bias point calculation
 **** Param: ABSTOL = 1e-012
 **** Param: VNTOL = 1e-006
 **** Param: GMIN = 1e-012
-**** Param: TSTOP = 1e-005
+**** Param: TSTOP = 2e-006
 **** Param: TMAX = 0
 **** Param: ITL1 = 500
 **** Param: ITL2 = 100
@@ -4907,7 +4907,7 @@ ERROR -- Convergence problem in transient bias point calculation
                                        RELTOL =      1.0000E-03
                                        RUNFOR =      0.0000E+00
                                          TMAX =      0.0000E+00
-                                        TSTOP =      1.0000E-05
+                                        TSTOP =      2.0000E-06
                                V_1R-DIV_V1.ac =      0.0000E+00
                           V_1R-DIV_V1.acphase =      0.0000E+00
                                V_1R-DIV_V1.dc =      2.0000E-01
@@ -4939,9 +4939,9 @@ ERROR -- Convergence problem in transient bias point calculation
                                                
                
 
-**** 03/26/10 19:10:28 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 03/26/10 20:31:07 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-PSpiceFiles\TEST\transi
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-pspicefiles\test\transi
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -5348,17 +5348,17 @@ ERROR -- Convergence problem in transient bias point calculation
 
 (U2_C63_N27085)    2.9390             (U2_C63_N27165)    1.8177                 
 
-(U2_U10_N62124) 939.9E-09             (U2_U10_N62152)    3.3000                 
+(U2_U10_N62128) 939.9E-09             (U2_U10_N62152)    3.3000                 
 
-(U2_U11_N62124)    3.3000             (U2_U11_N62152) 939.9E-09                 
+(U2_U11_N62128)    3.3000             (U2_U11_N62152) 939.9E-09                 
 
-(U2_U12_N62124)    3.3000             (U2_U12_N62152) 939.9E-09                 
+(U2_U12_N62128)    3.3000             (U2_U12_N62152) 939.9E-09                 
 
-(U2_U13_N62124) 939.9E-09             (U2_U13_N62152)    3.3000                 
+(U2_U13_N62128) 939.9E-09             (U2_U13_N62152)    3.3000                 
 
-(U2_U14_N62124)    3.3000             (U2_U14_N62152) 939.9E-09                 
+(U2_U14_N62128)    3.3000             (U2_U14_N62152) 939.9E-09                 
 
-(U2_U15_N62124) 939.9E-09             (U2_U15_N62152)    3.3000                 
+(U2_U15_N62128) 939.9E-09             (U2_U15_N62152)    3.3000                 
 
 (U2_U9_N259199) 982.4E-09             (U2_U9_N259339)    3.3000                 
 
@@ -5670,9 +5670,9 @@ ERROR -- Convergence problem in transient bias point calculation
 
           JOB CONCLUDED
 
-**** 03/26/10 19:10:28 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 03/26/10 20:31:07 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-PSpiceFiles\TEST\transi
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-pspicefiles\test\transi
 
 
  ****     JOB STATISTICS SUMMARY
@@ -5682,5 +5682,5 @@ ERROR -- Convergence problem in transient bias point calculation
 
 
 
-  Total job time (using Solver 1)   =       61.06
+  Total job time (using Solver 1)   =       38.19
 

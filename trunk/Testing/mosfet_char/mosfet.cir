@@ -9,7 +9,7 @@
 * PSpice Model Editor - Version 16.0.0
 
 *$
-.MODEL nmos18 NMOS (                                LEVEL   = 49
+.MODEL nmos18 NMOS (                                LEVEL   = 7
 +VERSION = 3.1            TNOM    = 27             TOX     = 4.5E-9
 +XJ      = 1E-7           NCH     = 2.3549E17      VTH0    = 0.2941942
 +K1      = 0.5413546      K2      = -0.0323322     K3      = 1.000406E-3
@@ -50,10 +50,10 @@
 *^^^^^^^^  End of included SPICE model from nmos.model ^^^^^^^^
 *
 *==============  Begin SPICE netlist of main design ============
-.INCLUDE mosfet.cmd
 VIDS vds 1 DC 0V
 VDS vds 0 DC 1V
 VGS vgs 0 DC 1V
 M1 1 vgs 0 0 nmos18  l=.18u w=.18u as=10p ad=10p
-*.DC VDS 0 10 0.5 VGS 0 5 1
+.DC VDS 0 10 0.001 VGS 0 5 1
+.PROBE
 .END
