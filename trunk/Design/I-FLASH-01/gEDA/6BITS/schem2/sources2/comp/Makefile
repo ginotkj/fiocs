@@ -17,6 +17,10 @@ CIRFLAGS = -g spice-sdb
 DRCFILES := $(patsubst %.sch,%.drc,$(wildcard *.sch))
 CIRFILES := $(patsubst %.sch,%.model,$(wildcard *.sch))
 
+PARTCMD	= /bin/bash make_parts.sh
+PART	= comp
+QTY	= 63
+
 title:
 	@echo "#########################################"
 	@echo "#     Starting compiling COMPARATORS    #"
@@ -43,6 +47,14 @@ all: $(DRCFILES) $(CIRFILES)
 	@$(GNET) $(DRCFLAGS) -o $@ $< >/dev/null 2>&1
 	@echo "Checking for errors in [$@]"
 	@grep -l "No errors found" $@ >/dev/null 2>&1
+
+schems:
+	@echo
+	@echo "*************************************"
+	@echo "*         MAKING COMP SCHMES        *"
+	@echo "*************************************"
+	@echo
+	@-$(PARTCMD) $(PART) $(QTY)
 
 clean-drc:
 	@echo "Cleaning drc files..."

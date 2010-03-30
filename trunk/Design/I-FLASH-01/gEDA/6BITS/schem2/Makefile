@@ -17,7 +17,7 @@ DRC	= flash.drc
 RAW	= flash.raw
 BIN	= flash.bin
 LOG	= *log
-GWV	= flash2.gw
+GWV	= flash4.gw
 ################
 # Optional add #
 ################
@@ -85,6 +85,16 @@ parts:
 	@echo
 	for i in $(SUBDIRS) ; do \
 	( cd $$i ; make ) ; \
+	done
+
+schems:
+	@echo
+	@echo "*************************************"
+	@echo "*         MAKING FLASH SCHMES       *"
+	@echo "*************************************"
+	@echo
+	for i in $(SUBDIRS) ; do \
+	( cd $$i ; make schems) ; \
 	done
 
 gates:
