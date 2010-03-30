@@ -1,0 +1,22 @@
+#!/usr/bin/gwave -s
+!#
+; gwave script
+(require-n-wavepanels 1)
+(set! default-measure1-function 5)
+(let ((df (if script-target-datafile
+           script-target-datafile
+           (find-or-load-wavefile "flash.bin"))))
+ (wavepanel-add-var-setup df (nth-wavepanel 0) "vref2" 4)
+ (wavepanel-add-var-setup df (nth-wavepanel 0) "vin" 3)
+ (wavepanel-add-var-setup df (nth-wavepanel 0) "vref1" 2)
+ (wavepanel-add-var-setup df (nth-wavepanel 0) "vbias" 1)
+ (wavepanel-add-var-setup df (nth-wavepanel 0) "vdd" 0)
+)
+(x-zoom! 0.0 5.0e-4)
+(wtable-set-xlogscale! #f)
+(set! default-wavepanel-type 0)
+(gtk-tooltips-enable gwave-tooltips)
+(let ((wp (nth-wavepanel 0)))
+ (set-wavepanel-ylogscale! wp #f)
+ (set-wavepanel-type! wp 0)
+)
