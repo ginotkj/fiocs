@@ -29,6 +29,13 @@ all: $(DRCFILES) $(CIRFILES)
 	@echo "#      Finish compiling DECOS      #"
 	@echo "####################################"
 
+schems:
+	@echo
+	@echo "*************************************"
+	@echo "*         MAKING DECO SCHMES        *"
+	@echo "*************************************"
+	@echo
+	@echo "Nothing to do with DECO"
 
 %.model : %.sch
 	@echo

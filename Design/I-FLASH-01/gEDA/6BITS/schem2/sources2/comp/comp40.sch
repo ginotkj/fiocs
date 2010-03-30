@@ -7,11 +7,11 @@ device=PMOS_TRANSISTOR
 T 43200 48100 5 10 1 1 180 0 1
 refdes=M1
 T 43200 48300 5 8 1 1 180 0 1
-model-name=pmos4
+model-name=pmos180
 T 43200 48600 5 8 1 0 180 0 1
-w=10u
+w=.6u
 T 43200 48800 5 8 1 0 180 0 1
-l=0.8u
+l=.2u
 }
 C 42800 46300 1 0 0 asic-nmos-1.sym
 {
@@ -20,11 +20,11 @@ device=NMOS_TRANSISTOR
 T 43600 47100 5 10 1 1 0 0 1
 refdes=M3
 T 43600 46900 5 8 1 1 0 0 1
-model-name=nmos4
+model-name=nmos180
 T 43600 46600 5 8 1 0 0 0 1
-w=3u
+w=.4u
 T 43600 46400 5 8 1 0 0 0 1
-l=0.8u
+l=.2u
 }
 C 44400 47900 1 0 0 asic-pmos-1.sym
 {
@@ -33,11 +33,11 @@ device=PMOS_TRANSISTOR
 T 45200 48700 5 10 1 1 0 0 1
 refdes=M2
 T 45200 48500 5 8 1 1 0 0 1
-model-name=pmos4
+model-name=pmos180
 T 45200 48200 5 8 1 0 0 0 1
-w=10u
+w=.6u
 T 45200 48000 5 8 1 0 0 0 1
-l=0.8u
+l=.2u
 }
 C 45600 47300 1 180 0 asic-nmos-1.sym
 {
@@ -46,11 +46,11 @@ device=NMOS_TRANSISTOR
 T 44800 46500 5 10 1 1 180 0 1
 refdes=M4
 T 44800 46700 5 8 1 1 180 0 1
-model-name=nmos4
+model-name=nmos180
 T 44800 47000 5 8 1 0 180 0 1
-w=3u
+w=.4u
 T 44800 47200 5 8 1 0 180 0 1
-l=0.8u
+l=.2u
 }
 N 43400 47900 43400 47300 4
 N 45000 47900 45000 47300 4
@@ -76,11 +76,11 @@ device=NMOS_TRANSISTOR
 T 44400 45400 5 10 1 1 0 0 1
 refdes=M5
 T 44400 45200 5 8 1 1 0 0 1
-model-name=nmos4
+model-name=nmos180
 T 44400 44900 5 8 1 0 0 0 1
-w=3u
+w=.6u
 T 44400 44700 5 8 1 0 0 0 1
-l=0.8u
+l=.2u
 }
 N 44200 44400 44200 44600 4
 N 44800 44500 44200 44500 4
@@ -91,11 +91,11 @@ device=NMOS_TRANSISTOR
 T 47600 45400 5 10 1 1 0 0 1
 refdes=M7
 T 47600 45200 5 8 1 1 0 0 1
-model-name=nmos4
+model-name=nmos180
 T 47600 44900 5 8 1 0 0 0 1
-w=3u
+w=.4u
 T 47600 44700 5 8 1 0 0 0 1
-l=0.8u
+l=.2u
 }
 C 46800 47100 1 0 0 asic-pmos-1.sym
 {
@@ -104,11 +104,11 @@ device=PMOS_TRANSISTOR
 T 47600 47900 5 10 1 1 0 0 1
 refdes=M6
 T 47600 47700 5 8 1 1 0 0 1
-model-name=pmos4
+model-name=pmos180
 T 47600 47400 5 8 1 0 0 0 1
-w=10u
+w=.8u
 T 47600 47200 5 8 1 0 0 0 1
-l=0.8u
+l=.2u
 }
 N 47400 45600 47400 47100 4
 N 47400 48100 47400 49200 4

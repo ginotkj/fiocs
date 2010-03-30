@@ -17,6 +17,18 @@ CIRFLAGS = -g spice-sdb
 DRCFILES := $(patsubst %.sch,%.drc,$(wildcard *.sch))
 CIRFILES := $(patsubst %.sch,%.model,$(wildcard *.sch))
 
+PARTCMD	= /bin/bash make_parts.sh
+PART1	= deco64_2inand
+QTY1	= 59
+PART2	= deco64_4inand
+QTY2	= 2
+PART3	= deco64_8inand
+QTY3	= 7
+PART4	= deco64_inv
+QTY4	= 8
+PART5	= inv
+QTY5	= 63
+
 title:
 	@echo "####################################"
 	@echo "#     Starting compiling GATES     #"
@@ -29,6 +41,17 @@ all: $(DRCFILES) $(CIRFILES)
 	@echo "#      Finish compiling GATES      #"
 	@echo "####################################"
 
+schems:
+	@echo
+	@echo "*************************************"
+	@echo "*         MAKING GATES SCHMES        *"
+	@echo "*************************************"
+	@echo
+	@-$(PARTCMD) $(PART1) $(QTY1)
+	@-$(PARTCMD) $(PART2) $(QTY2)
+	@-$(PARTCMD) $(PART3) $(QTY3)
+	@-$(PARTCMD) $(PART4) $(QTY4)
+	@-$(PARTCMD) $(PART5) $(QTY5)
 
 %.model : %.sch
 	@echo

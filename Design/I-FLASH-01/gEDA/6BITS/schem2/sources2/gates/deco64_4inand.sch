@@ -7,11 +7,11 @@ device=NMOS_TRANSISTOR
 T 47500 46000 5 10 1 1 0 0 1
 refdes=M1
 T 47900 46000 5 8 1 1 0 0 1
-model-name=nmos4
+model-name=nmos180
 T 47100 45800 5 8 1 0 0 0 1
-w=3u
+w=.18u
 T 47100 45500 5 8 1 0 0 0 1
-l=0.8u
+l=.18u
 }
 C 47200 44100 1 0 0 asic-nmos-1.sym
 {
@@ -20,11 +20,11 @@ device=NMOS_TRANSISTOR
 T 47500 44900 5 10 1 1 0 0 1
 refdes=M2
 T 47900 44900 5 8 1 1 0 0 1
-model-name=nmos4
+model-name=nmos180
 T 47100 44700 5 8 1 0 0 0 1
-w=3u
+w=.18u
 T 47100 44400 5 8 1 0 0 0 1
-l=0.8u
+l=.18u
 }
 C 44300 46900 1 0 0 asic-pmos-1.sym
 {
@@ -33,11 +33,11 @@ device=PMOS_TRANSISTOR
 T 44600 47700 5 10 1 1 0 0 1
 refdes=M3
 T 45000 47700 5 8 1 1 0 0 1
-model-name=pmos4
+model-name=pmos180
 T 44100 47500 5 8 1 0 0 0 1
-w=10u
+w=.2u
 T 44300 47200 5 8 1 0 0 0 1
-l=0.8u
+l=.18u
 }
 C 46300 46900 1 0 0 asic-pmos-1.sym
 {
@@ -46,11 +46,11 @@ device=PMOS_TRANSISTOR
 T 46600 47700 5 10 1 1 0 0 1
 refdes=M4
 T 47000 47700 5 8 1 1 0 0 1
-model-name=pmos4
+model-name=pmos180
 T 46100 47500 5 8 1 0 0 0 1
-w=10u
+w=.2u
 T 46300 47200 5 8 1 0 0 0 1
-l=0.8u
+l=.18u
 }
 N 44900 46900 44900 46800 4
 N 46900 46800 46900 46900 4
@@ -68,11 +68,11 @@ device=PMOS_TRANSISTOR
 T 48500 47700 5 10 1 1 0 0 1
 refdes=M5
 T 48900 47700 5 8 1 1 0 0 1
-model-name=pmos4
+model-name=pmos180
 T 48000 47500 5 8 1 0 0 0 1
-w=10u
+w=.2u
 T 48200 47200 5 8 1 0 0 0 1
-l=0.8u
+l=.18u
 }
 C 50200 46900 1 0 0 asic-pmos-1.sym
 {
@@ -81,11 +81,11 @@ device=PMOS_TRANSISTOR
 T 50500 47700 5 10 1 1 0 0 1
 refdes=M6
 T 50900 47700 5 8 1 1 0 0 1
-model-name=pmos4
+model-name=pmos180
 T 50000 47500 5 8 1 0 0 0 1
-w=10u
+w=.2u
 T 50200 47200 5 8 1 0 0 0 1
-l=0.8u
+l=.18u
 }
 N 48800 46900 48800 46800 4
 N 50800 46800 50800 46900 4
@@ -102,11 +102,11 @@ device=NMOS_TRANSISTOR
 T 47500 43800 5 10 1 1 0 0 1
 refdes=M7
 T 47900 43800 5 8 1 1 0 0 1
-model-name=nmos4
+model-name=nmos180
 T 47100 43600 5 8 1 0 0 0 1
-w=3u
+w=.18u
 T 47100 43300 5 8 1 0 0 0 1
-l=0.8u
+l=.18u
 }
 C 47200 41900 1 0 0 asic-nmos-1.sym
 {
@@ -115,11 +115,11 @@ device=NMOS_TRANSISTOR
 T 47500 42700 5 10 1 1 0 0 1
 refdes=M8
 T 47900 42700 5 8 1 1 0 0 1
-model-name=nmos4
+model-name=nmos180
 T 47100 42500 5 8 1 0 0 0 1
-w=3u
+w=.18u
 T 47100 42200 5 8 1 0 0 0 1
-l=0.8u
+l=.18u
 }
 N 47800 43000 47800 42900 4
 N 47900 42400 48300 42400 4

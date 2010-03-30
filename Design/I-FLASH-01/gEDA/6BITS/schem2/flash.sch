@@ -58,7 +58,7 @@ device=VOLTAGE_SOURCE
 T 41400 80150 5 10 0 0 0 0 1
 footprint=none
 T 42000 79750 5 10 1 1 180 0 1
-value=DC 1V
+value=DC .33V
 }
 C 40700 81600 1 0 0 vdc-1.sym
 {
@@ -71,19 +71,7 @@ footprint=none
 T 41500 82050 5 10 1 1 0 0 1
 value=DC 3.3V
 }
-C 43100 81600 1 0 0 vdc-1.sym
-{
-T 43800 82550 5 10 1 1 0 0 1
-refdes=Vref1
-T 43800 82450 5 10 0 0 0 0 1
-device=VOLTAGE_SOURCE
-T 43800 82650 5 10 0 0 0 0 1
-footprint=none
-T 43900 82050 5 10 1 1 0 0 1
-value=DC 7.3V
-}
 C 40900 76200 1 0 0 gnd-1.sym
-C 43300 81300 1 0 0 gnd-1.sym
 C 40900 81300 1 0 0 gnd-1.sym
 T 45600 76100 9 14 1 0 0 0 1
 6-bit Flash converter
@@ -104,9 +92,9 @@ device=model
 T 48500 83200 5 10 1 1 0 0 1
 refdes=A128
 T 49700 82900 5 10 1 1 0 0 1
-model-name=nmos4
+model-name=nmos180
 T 48900 82700 5 10 1 1 0 0 1
-file=nmos4.model
+file=nmos180.model
 }
 C 48400 81700 1 0 0 spice-model-1.sym
 {
@@ -115,9 +103,9 @@ device=model
 T 48500 82300 5 10 1 1 0 0 1
 refdes=A129
 T 49700 82000 5 10 1 1 0 0 1
-model-name=pmos4
+model-name=pmos180
 T 48900 81800 5 10 1 1 0 0 1
-file=pmos4.model
+file=pmos180.model
 }
 C 48400 81000 1 0 0 spice-include-1.sym
 {
@@ -132,13 +120,13 @@ C 40900 78800 1 0 0 gnd-1.sym
 C 40700 76500 1 0 0 vsin-1.sym
 {
 T 41400 77550 5 10 1 1 0 0 1
-refdes=V_in1
+refdes=Vin1
 T 41400 77350 5 10 0 0 0 0 1
 device=vsin
 T 41400 77550 5 10 0 0 0 0 1
 footprint=none
 T 41400 77050 5 10 1 1 0 0 1
-value=sin 1 5 1k 30u
+value=sin .2 4 100k 30u
 }
 C 39900 75200 0 0 0 title-A.sym
 C 35400 68600 1 0 0 vdd-1.sym
@@ -1070,7 +1058,7 @@ C 35400 70600 1 0 0 vdd-1.sym
 C 40800 77900 1 0 0 generic-power.sym
 {
 T 41000 78150 5 10 1 1 0 3 1
-net=Vin:1
+net=Vin1:1
 }
 C 60700 52600 1 180 1 deco64.sym
 {
@@ -3587,40 +3575,16 @@ netname=out_6sb
 C 34800 71800 1 0 0 generic-power.sym
 {
 T 35000 72050 5 10 1 1 0 3 1
-net=Vin:1
+net=Vin2:1
 }
 N 35000 8600 35000 71800 4
-C 34200 71800 1 0 0 generic-power.sym
+N 31800 71700 34700 71700 4
 {
-T 34400 72050 5 10 1 1 0 3 1
-net=Vref1:1
+T 31800 71700 5 10 1 1 0 0 1
+netname=Vref1_n
 }
-N 34400 71800 34400 71700 4
-N 34400 71700 34700 71700 4
 N 34700 71400 34700 71700 4
-C 43200 82800 1 0 0 generic-power.sym
-{
-T 43400 83050 5 10 1 1 0 3 1
-net=Vref1:1
-}
 N 41500 8700 41500 71500 4
-C 43200 80300 1 0 0 generic-power.sym
-{
-T 43400 80550 5 10 1 1 0 3 1
-net=Vref2:1
-}
-C 43100 79100 1 0 0 vdc-1.sym
-{
-T 43800 80050 5 10 1 1 0 0 1
-refdes=Vref2
-T 43800 79950 5 10 0 0 0 0 1
-device=VOLTAGE_SOURCE
-T 43800 80150 5 10 0 0 0 0 1
-footprint=none
-T 43900 79550 5 10 1 1 0 0 1
-value=DC 1V
-}
-C 43300 78800 1 0 0 gnd-1.sym
 C 73000 84200 1 0 0 spice-model-1.sym
 {
 T 73100 84900 5 10 0 1 0 0 1
@@ -5023,10 +4987,58 @@ N 39500 8800 39500 71300 4
 N 41500 71500 39700 71500 4
 N 39700 8600 39700 71500 4
 N 39700 8600 35000 8600 4
-C 41400 8300 1 180 0 generic-power.sym
-{
-T 41200 8050 5 10 1 1 180 3 1
-net=Vref2:1
-}
 C 65400 39800 1 0 0 vdd-1.sym
 N 41000 77900 41000 77700 4
+C 45800 79800 1 0 0 generic-power.sym
+{
+T 46000 80050 5 10 1 1 0 3 1
+net=Vin2:1
+}
+C 45700 77800 1 0 0 vdc-1.sym
+{
+T 46400 78750 5 10 1 1 0 0 1
+refdes=Vin2
+T 46400 78650 5 10 0 0 0 0 1
+device=VOLTAGE_SOURCE
+T 46400 78850 5 10 0 0 0 0 1
+footprint=none
+T 46500 78250 5 10 1 1 0 0 1
+value=DC 2.6V
+}
+C 45900 77500 1 0 0 gnd-1.sym
+C 31500 70500 1 0 0 vdc-1.sym
+{
+T 32200 71450 5 10 1 1 0 0 1
+refdes=Vref1
+T 32200 71350 5 10 0 0 0 0 1
+device=VOLTAGE_SOURCE
+T 32200 71550 5 10 0 0 0 0 1
+footprint=none
+T 32300 70950 5 10 1 1 0 0 1
+value=DC 4V
+}
+C 31700 70100 1 0 0 gnd-1.sym
+N 31800 70500 31800 70400 4
+C 40900 6600 1 0 0 vdc-1.sym
+{
+T 41600 7550 5 10 1 1 0 0 1
+refdes=Vref2
+T 41600 7450 5 10 0 0 0 0 1
+device=VOLTAGE_SOURCE
+T 41600 7650 5 10 0 0 0 0 1
+footprint=none
+T 41700 7050 5 10 1 1 0 0 1
+value=DC .2V
+}
+C 41100 6000 1 0 0 gnd-1.sym
+N 41200 6600 41200 6300 4
+N 41200 8300 41200 7800 4
+{
+T 41200 8300 5 10 1 1 0 0 1
+netname=Vref2_n
+}
+N 46000 79800 46000 79000 4
+{
+T 46000 79800 5 10 1 1 0 0 1
+netname=Vin2_n
+}

@@ -36,6 +36,13 @@ all: $(DRCFILES) $(CIRFILES)
 	@$(GNET) $(CIRFLAGS) -o $@ $< >/dev/null 2>&1
 	@echo "Checking for errors in [$@]"
 	@grep -l -v 'No valid value attribute found' $@ >/dev/null 2>&1
+schems:
+	@echo
+	@echo "*************************************"
+	@echo "*         MAKING REGS SCHMES        *"
+	@echo "*************************************"
+	@echo
+	@echo "Nothing to do with REGISTERS"
 
 %.drc : %.sch
 	@echo
