@@ -1,0 +1,630 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<title>Single Event Effects</title>
+</head><body background="see_data/blue_paper.gif">
+
+
+<h1>Single Event Effects</h1>
+
+
+<p>A <i>single event effect</i> (SEE) results from, as the term suggests,
+a single, energetic particle.  The possibility of single-event
+upsets was first postulated by Wallmark and Marcus in 1962.[1]  The
+first actual satellite anomalies were reported by Binder <i>et al.</i> in 1975.[2]
+Some of the early pioneering work was by May and Woods, who
+investigated alpha-particle-induced soft errors.[3]  In their work the
+source of alpha particles was not from space but rather from the
+natural decay of trace (ppm) concentrations of uranium and
+thorium present in integrated circuit packaging materials. </p>
+
+
+<p>Single event phenomena can be classified into three effects
+(in order of permanency):</p>
+
+<ol>
+<li>Single event upset (soft error)
+</li><li>Single event latchup (soft or hard error)
+</li><li>Single event burnout (hard failure)
+</li></ol>
+
+<h3>Single Event Upset</h3>
+
+<p><i>Single event upset</i> (SEU) is defined by NASA as "radiation-induced
+errors in microelectronic circuits caused when charged particles
+(usually from the radiation belts or from cosmic rays) lose energy
+by ionizing the medium through which they pass, leaving behind a
+wake of electron-hole pairs." [Ref: NASA Thesaurus]  SEUs are transient 
+soft errors, and are non-destructive.  A reset or rewriting of the device results
+in normal device behavior thereafter.  An SEU may  occur in analog,
+digital, or optical components, or may have effects in surrounding
+interface circuitry.  SEUs typically appear as transient pluses in
+logic or support circuitry, or as bit flips in memory cells or
+registers.  Also possible is a <i>multiple-bit SEU</i> in which 
+a single ion hits two or more bits causing simultaneous errors.
+Multiple-bit SEU is a problem for single-bit <i>error detection and correction</i> 
+(EDAC) where it is impossible to assign bits within a word to different chips 
+(<i>e.g.</i>, a problem for DRAMs and certain SRAMs).
+A severe SEU is the single-event functional interrupt
+(SEFI) in which an SEU in the device's control circuitry places the
+device into a test mode, halt, or undefined state.  The SEFI halts
+normal operations, and requires a power reset to recover.</p>
+
+<p align="center"><img src="see_data/multi-seu.jpg" alt="Multi-bit_SEU" align="center" height="146" width="359"><br>
+[Source: <a href="http://www.spacerad.com/">Space Radiation Associates</a>]</p>
+
+
+<h3>Single Event Latchup</h3>
+
+<p><i>Single event latchup</i> (SEL) is a condition that causes loss
+of device functionality due to a single-event induced current
+state.  Kolasinski <i>et al.</i> first observed SEL in 1979 during
+ground testing.[4] SELs are hard errors, and are potentially
+destructive (<i>i.e.</i>, may cause permanent damage).  The SEL results
+in a high operating current, above device specifications.  The latched
+condition can destroy the device, drag down the bus voltage,
+or damage the power supply. Originally, the concern was latchup
+caused by heavy ions, however, latchup can be caused by protons
+in very sensitive devices.[5,6] An SEL is cleared by a power
+off-on reset or power strobing of the device.  If power is not
+removed quickly, catastrophic failure may occur due to excessive
+heating, or metallization or bond wire failure. 
+SEL is strongly temperature dependent: the threshold for latchup decreases at 
+high temperature, and the cross section increases as well.[7,8]
+</p>
+
+<h3>Single Event Burnout</h3>
+
+<p><i>Single event burnout</i> (SEB) is a condition that can cause device
+destruction due to a high current state in a power transistor.  SEB
+causes the device to fail permanently.  SEBs include burnout of power
+MOSFETs, gate rupture, frozen bits, and noise in CCDs (charge-coupled
+devices).  SEB of power MOSFETs was first reported by Waskiewicz
+<i>et al.</i> in 1986.[9] Only SEB of n-channel power MOSFETs has
+been reported.[10] An SEB can be triggered in a power MOSFET biased
+in the OFF state (<i>i.e.</i>, blocking a high drain-source voltage)
+when a heavy ion passing through deposits enough charge to turn the device
+on.  SEB susceptibility has been shown to decrease with increasing temperature.[11]</p>
+
+<p>A power MOSFET may undergo <i>single-event gate rupture</i> (SEGR), which
+is the formation of a conducting path (<i>i.e.</i>, localized dielectric
+breakdown) in the gate oxide resulting in a destructive burnout.
+Fischer was the first to report on SEGR of power MOSFETs in 1987.[12]
+SEB can also occur in bipolar junction transistors (BJTs) as was
+first reported by Titus <i>et al.</i> in 1991.[13]  Swift <i>et al.</i>
+have described a new hard error, that of single-event dielectric
+rupture (SEDR).[14] SEDR (also referred to as micro-damage)
+occurs in CMOS and is similar to SEGR observed in power MOSFETs.</p>
+
+<hr>
+
+<h2>Environmental and Design Factors</h2>
+
+<p>To estimate the upset rate, one must consider the mechanism by which
+radiation particles cause the anomaly.  The SEUs
+are caused by two different space radiation sources:</p>
+
+<ol>
+<li>high energy protons, and
+</li><li>cosmic rays, specifically,
+the heavy ion component of either solar or galactic origins.
+</li></ol>
+
+<p>The latter heavy ions cause direct ionization within a device.
+Protons can make a large contribution to the overall upset rate (particularly for LEO).
+When the feature size is &lt;0.3 µm, then protons will create SEU by direct ionization.
+Protons typically do not cause an upset through direct ionization, 
+but rather through complex nuclear reactions (spallation) in the vicinity 
+of the sensitive node (see figure below).
+<i>Spallation</i> is a nuclear reaction in which two or more fragments
+or particles are ejected from the target nucleus; it is the heavy recoil nuclei ions, 
+such as <sup>25</sup>Mg, which can then cause SEU.  Example
+spallation reactions from neutrons and protons include
+Si(<i>n</i>,<img src="see_data/greek_alpha.gif" alt="a">)Mg, Si(<i>n</i>,<i>p</i>)Al [15], 
+Si(<i>p</i>,2<i>p</i>)Al, and 
+Si(<i>p</i>,<i>p</i><img src="see_data/greek_alpha.gif" alt="a">)Mg.[16,17,18] </p>
+
+<p align="CENTER"><img src="see_data/figure01.gif" alt="see" align="center" height="324" width="538"><br>
+Schematic showing how galactic cosmic rays deposit energy in an electronic device.<br>
+(Source <i>Spacecraft Anomalies due to Radiation Environment in Space</i>
+by Lauriente and Vampola [19]) </p>
+
+<p>Solar flare particle events pose the most extreme SEU producing
+environment, especially for spacecraft in interplanetary space.[20]
+Experiments aboard the Combined Release and Radiation Effects
+Satellite (CRRES) showed a dramatic increase during a solar
+flare.[21]  However, 90% of all SEUs on CRRES were produced by protons
+contrary to the pre-launch prediction that most upsets would be
+caused by cosmic rays.[22] Gussenhoven <i>et al.</i> state that 
+based on CRRES data that most single-event upsets come from high 
+energy protons via nuclear interactions and not through direct 
+deposition from either protons or cosmic rays.[23]  
+For LEO satellites, trapped protons,
+especially in the South Atlantic Anomaly (SAA), are the greatest
+SEE threat.  The SAA, located at 30° S. latitude, 34.5° E.
+longitude, is shown in the geomagnetic field of Figure 2.  Solar cycle
+activity affects the presence of trapped electrons and protons as shown below:</p>
+
+
+<center><table border="1">
+<tbody><tr>
+<td> </td>
+<td>Solar Min</td>
+<td>Solar Max</td>
+</tr>
+<tr>
+<td>Electron Intensities</td>
+<td>lower</td>
+<td>higher</td>
+</tr>
+<tr>
+<td>Proton Intensities</td>
+<td>higher</td>
+<td>lower</td>
+</tr>
+</tbody></table></center>
+
+
+<p align="center"><img src="see_data/figure20.jpg" alt="GeomagSAA" align="center" height="267" width="419"><br>
+Geomagnetic field at sea level.  Note the South Atlantic Anomaly
+(SAA) which is centered off the southeastern coast of South America<br>
+(from the <a href="http://see.msfc.nasa.gov/">
+Space Environments &amp; Effects Program</a> at NASA's Marshall Space
+Flight Center). </p>
+
+
+<p>Given the division of SEEs into soft and hard errors, it is obvious
+that permanent hard errors are to be completely avoided.
+Avoidance may be realized through parts selection and shielding.
+Unfortunately, shielding is of little value for preventing SEUs.
+For mitigating soft SEEs, other methods, such as error
+detection and correction (EDAC), and redundancy, may be employed.</p>
+
+<p>Shielding typically has little effect. Shielding high-energy protons while 
+observing weight restrictions is a difficult task.  Adams found that under some 
+conditions that shielding can worsen the problem, since as ions slow down in the 
+shielding their LET increases.[24]
+Shielding produces significant reductions in soft components like solar flare 
+particles, and moderate reductions in the trapped proton flux.
+Shielding is ineffective against galactic cosmic rays due to their high energies. </p>
+
+<h4>Critical Charge</h4>
+
+<p>SEU was first observed in bipolar flip-flops in 1979.
+Original work in this area was treated with skepticism.
+SEU has emerged as one of the major issues for application of microelectronics in space.
+SEU effects have become worse as devices have evolved because of
+lower &#8220;critical charge&#8221; due to small device dimensions, and
+large numbers of transistors per chip and overall complexity.
+Nichols ranks the susceptibility of current technologies to SEUs:[25] </p>
+
+<ul>
+<li>CMOS/SOS (least susceptible)
+</li><li>CMOS
+</li><li>Standard bipolar
+</li><li>Low power Schottky bipolar
+</li><li>NMOS DRAMs (most susceptible)
+</li></ul>
+
+<p>For GaAs circuits, latchup and burnout do not occur.[26] However,
+SEU susceptibility is slightly higher in GaAs devices than in Si devices.[27]</p>
+
+<p>Device immunity is determined by its <i>linear energy transfer threshold</i> (LET<sub>th</sub>).
+The LET<sub>th</sub> is defined as the minimum LET to cause a single-event effect at a 
+particle fluence of 10<sup>7</sup> ions/cm<sup>2</sup>.  
+SEE-immune is defined as a device having an LET<sub>th</sub> &gt; 100 MeV·cm²/mg [28] (~iron threshold, Z&gt;26).
+Low LET<sub>th</sub> implies proton sensitivity.
+If a device is not SEU immune, the device is analyzed for SEU rates and effects 
+as follows: </p>
+
+<table align="center" border="1">
+
+<tbody><tr>
+<th>Device LET<sub>th</sub>
+</th><th>Environment to be Assessed
+</th></tr>
+
+<tr>
+<td>&lt; 10 MeV·cm²/mg
+</td><td>Cosmic ray ions, trapped protons, solar flare protons
+</td></tr>
+
+<tr>
+<td>10 - 100 MeV·cm²/mg
+</td><td>Cosmic ray ions
+</td></tr>
+
+<tr>
+<td>&gt; 100 MeV·cm²/mg
+</td><td>No analysis required
+</td></tr>
+
+</tbody></table>
+
+<p>The LET<sub>th</sub> usually reduces as a device accumulates large TID.[29]
+
+</p><p>The present trends (<i>e.g.</i>, device size and power reduction, line resolution 
+increase, increased memory and speed) will only heighten the SEU susceptibility.
+This is easily seen when one considers the device as a simple capacitor (<i>C</i>) upon 
+which the ionized particle deposits sufficient charge (<i>Q</i>) to result in a voltage 
+(<i>i.e.</i>, logic state) change. SEU occurs when LET &gt; <i>Q<sub>crit</sub></i>. </p>
+
+<p>Since the LET<sub>th</sub> is equivalent to the LET required to produce a voltage change 
+(<img src="see_data/greeku_delta.gif" alt="D"><i>V</i>) sufficient for an SEU, then mathematically:
+</p>
+
+<p align="center">LET<sub>th</sub> <img src="see_data/greek_alpha.gif" alt="a"> 
+<img src="see_data/greeku_delta.gif" alt="D"><i>V</i> = <i>Q</i>/<i>C</i> </p>
+
+<p>As the size of these active devices decreases, the capacitance will decrease and 
+so the charge necessary to induce the SEU. The depth of the devices has been generally 
+unchanged; it is the length and width of these devices that have been reduced.  
+If we consider a square device of feature size, <i>L x L</i>, the critical charge for 
+state change is proportional to the feature size squared (<i>Q<sub>crit</sub></i> 
+<img src="see_data/greek_alpha.gif" alt="a"> <i>L</i><sup>2</sup>).  Robinson <i>et al.</i> 
+present the measured critical charge for a number of IC technologies (including NMOS, 
+CMOS/bulk CMOS/SOS, i<sup>2</sup>L, GaAs, ECL, CMOS/SOI, and VHSIC bipolar) as being:[30] </p>
+
+<p align="center"><i>Q<sub>crit</sub></i> = (0.023 pC/µm<sup>2</sup>) <i>L</i><sup>2</sup> </p>
+
+<p>This <i>critical charge</i> is that charge necessary to flip a binary "1" to a "0" or 
+vice-versa, but is less than the total stored charge.
+Specifically, <i>Q<sub>crit</sub></i> is then the difference between the storage node charge and 
+the minimum charge required for the sensing amplifier to read correctly.[31]
+In SRAM circuits, <i>Q<sub>crit</sub></i> depends not just on the charge collected but also the 
+temporal shape of the current pulse.
+</p>
+
+<hr>
+
+<center><img src="see_data/SEU-ion.gif" alt="SEU-ion" align="center" height="357" width="517"><br>
+[Source: "<a href="http://parts.jpl.nasa.gov/docs/Radcrs_Final.pdf">Space Radiation 
+Effects on Microelectronics</a>," NASA Jet Propulsion Laboratory]</center>
+
+
+<h3>Elementary Model for Heavy Ions</h3>
+
+<p>A very elementary model of SEU behavior can be formed using the concept of 
+LET through some depth of a parallelepiped-shaped device.
+Start by calculating the energy deposited, <i>E<sub>dep</sub></i>, as the particle 
+traverses a chord of length <i>s</i> through the sensitive volume of the device
+(see diagram below). </p>
+
+<p align="center"><i>E<sub>dep</sub></i> = <i>LET</i> <img src="see_data/greek_rho.gif" alt="p"> <i>s</i> </p>
+
+<p>The deposited charge depends on the energy required to generate an electron-hole pair,
+<i>w<sub>ehp</sub></i>, </p>
+
+<p align="center"><i>Q<sub>dep</sub></i> = <i>E<sub>dep</sub> q</i> / <i>w<sub>ehp</sub></i> </p>
+
+<p>where <i>q</i>=1.6022x10<sup>-19</sup> Coulombs/<i>e</i> and <i>w<sub>ehp</sub></i> for
+a few materials are given in the table below: </p>
+
+<p align="center">Properties of intrinsic germanium, silicon, gallium
+arsenide, silicon dioxide, silicon nitride, and aluminum oxide at 27°C
+unless otherwise noted.[27] </p>
+
+<table align="center" border="1">
+
+<tbody><tr>
+<th>Material
+</th><th>Ge
+</th><th>Si
+</th><th>GaAs
+</th><th>SiO<sub>2</sub>
+</th><th>Si<sub>3</sub>N<sub>4</sub>
+</th><th>Al<sub>2</sub>O<sub>3</sub>
+</th></tr>
+
+<tr>
+<td>Type
+</td><td>Semiconductor
+</td><td>Semiconductor
+</td><td>Semiconductor
+</td><td>Insulator
+</td><td>Insulator
+</td><td>Insulator
+</td></tr>
+
+<tr>
+<td>Atomic/Molecular Weight
+</td><td align="center">72.6
+</td><td align="center">28.09
+</td><td align="center">144.63
+</td><td align="center">60.08
+</td><td align="center">140.27
+</td><td align="center">101.96
+</td></tr>
+
+<tr>
+<td>Density (g/cm<sup>3</sup>)
+</td><td align="center">5.33
+</td><td align="center">2.33
+</td><td align="center">5.32
+</td><td align="center">2.27
+</td><td align="center">3.44
+</td><td align="center">3.97
+</td></tr>
+
+<tr>
+<td>Electron-hole pair generation energy (eV)
+</td><td align="center">2.8
+</td><td align="center">3.6
+</td><td align="center">4.8
+</td><td align="center">17.
+</td><td align="center">10.8
+</td><td align="center">19.1
+</td></tr>
+
+</tbody></table>
+
+<p align="center"><img src="see_data/SEUion-model.gif" alt="SEUion-model" align="center" height="120" width="360"> </p>
+
+<p>Using such a simple approach, a first-order estimate of the minimum LET required for 
+causing an SEU can be computed.  Consider a parallelepiped of dimensions <i>a</i>, 
+<i>b</i>, <i>c</i> where <i>c</i> is the device depth.  The minimum LET corresponds 
+to the maximum chord length possible, <i>s<sub>max</sub></i>, which is the diagonal 
+of the parallelepiped. </p>
+
+<p align="center"><i>s<sup>2</sup><sub>max</sub></i> = <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> + <i>c</i><sup>2</sup> </p>
+
+<p>The minimum LET necessary to cause an upset can then be calculated from </p>
+
+<p align="center">LET<sub>th</sub> = <i>Q<sub>crit</sub> w<sub>ehp</sub></i> / (<i>q</i> <img src="see_data/greek_rho.gif" alt="p"> <i>s<sub>max</sub></i>) </p>
+
+<p>Likewise, there is a minimum distance, <i>s<sub>min</sub></i>, that a particle of 
+given LET must travel before being able to deposit sufficient energy to cause an SEU. </p>
+
+<p align="center"><i>s<sub>min</sub></i> = <i>Q<sub>crit</sub> w<sub>ehp</sub></i> / (<i>q</i> <img src="see_data/greek_rho.gif" alt="p"> LET) </p>
+
+<p>Hence, the particle <i>angle of incidence</i> upon the device is also important.  
+As the incidence angle deviates from normal, the path length traversed by the radiation 
+increases.  The angle from incident at which upsets occur for a given particle LET is 
+known as the <i>critical angle</i>, <img src="see_data/greek_theta.gif" alt="O"><sub>c</sub> </p>
+
+<p align="center">cos(<img src="see_data/greek_theta.gif" alt="O"><sub>c</sub>) = LET / LET<sub>C</sub> </p>
+
+<p>The particles that produce upset are between an angle of <img src="see_data/greek_theta.gif" alt="O"><sub>c</sub>
+and <img src="see_data/greek_pi.gif" alt="pi">/2. Therefore, there are two potential 
+cases (note LET<sub>C</sub> &lt; LET<sub>th</sub>)</p>
+<ol>
+<li>If LET &gt; LET<sub>C</sub>, then all incident angles produce upset.
+</li><li>If LET &lt; LET<sub>C</sub>, then there is a critical angle, <img src="see_data/greek_theta.gif" alt="O"><sub>c</sub>, above which upsets occur.
+</li></ol>
+
+<p align="center"><img src="see_data/criticalangle.gif" alt="CriticalAngle" align="center" height="70" width="240"> </p>
+
+<p>For a parallelepiped particles incident at an angle <img src="see_data/greek_theta.gif" alt="O"> 
+have a path that is 1/cos(<img src="see_data/greek_theta.gif" alt="O">) longer than 
+the path at normal incidence, thus producing more ionization charge. 
+[Note: This "cosine law" fails in some cases, and must be checked for each device technology.]
+Unlike SEU behavior, SEB and SEGR susceptibility has been shown to decrease with increasing angles of incidence.
+[7,8,32,33] </p>
+
+<p>The energy deposited per unit path length as an energetic particle travels 
+through a material is the <i>linear energy transfer</i> (LET).  Note that the LET is 
+normally defined by <i>dE</i>/<i>dx</i>; however, the LET used in SEU studies is 
+actually the <i>mass stopping power</i> defined by (<i>dE</i>/<i>dx</i>)/<img src="see_data/greek_rho.gif" alt="p"> 
+where <img src="see_data/greek_rho.gif" alt="p"> is the material density.  
+This results in an LET unit of MeV/(mg/cm<sup>2</sup>) of material, which is the 
+energy loss per density thickness.  <i>Density thickness</i> (<i>t<sub>d</sub></i>) 
+is the product of the material density and its thickness (<i>t</i>), 
+<i>i.e.</i>, <i>t<sub>d</sub></i> =<img src="see_data/greek_rho.gif" alt="p">·<i>t</i>.  
+Therefore, the density thickness describes the areal density of electrons 
+(electrons/cm<sup>2</sup>).  The LET is dependent on the particle, its energy, 
+and the material traversed. </p>
+
+<hr>
+
+<h3>Practical SEU Calculation</h3>
+
+<p>The upset rate may be reported as errors per day per chip, or 
+errors per day per bit (errors/bit-day).  Error rates of hardened 
+devices can be of the order of 10<sup>-8</sup> errors/bit-day; 
+unhardened devices are generally several orders of magnitude higher.</p>
+
+<center><img src="see_data/SEU-calc.gif" alt="SEU-calc" align="center" height="323" width="388"><br>
+[Source: "<a href="http://parts.jpl.nasa.gov/docs/Radcrs_Final.pdf">Space Radiation 
+Effects on Microelectronics</a>," NASA Jet Propulsion Laboratory]</center>
+
+
+<p>There are three basic steps in the calculation of SEU Rates:
+</p><ol>
+<li>Measure the cross section (<img src="see_data/greek_sigma.gif" alt="s">) versus LET for example using
+accelerator testing.  The device <i>cross section</i> is defined as the ratio of the 
+number of upsets to the particle fluence.  The experimentally determined cross 
+section is a function of particle energy (LET).<br><br>
+
+<center><img src="see_data/LETcurve.gif" alt="LETcurve" align="center" height="415" width="534"><br>
+[Source: The Aerospace Corporation <a href="http://www.aero.org/capabilities/seet/primer.html">SEE Primer</a>]</center>
+<br><br>
+
+</li><li>Determine the sensitive device volume.
+The sensitive volume is smaller than the actual device physical volume.
+The sensitive volume is generally different for SEE from heavy ions and protons, 
+as well as SEL.
+The sensitive geometry and critical charge are the most difficult parameters to determine.
+
+</li><li>To determine the device error rate, integrate the cross section and 
+sensitive device volume with the LET spectrum.
+</li></ol>
+
+<p align="CENTER"><img src="see_data/400km_orbit.gif" alt="400km_orbit" align="center" height="304" width="503"><br>
+[Source: The Aerospace Corporation <a href="http://www.aero.org/capabilities/seet/primer.html">SEE Primer</a>]</p>
+
+<p>In LEO, the inner belt (trapped) protons are the most important source.  
+For LEO satellites, trapped protons, especially in the South Atlantic Anomaly (SAA), 
+are the greatest SEE threat.
+For GEO, the cosmic and solar particles initiate SEEs. 
+The galactic cosmic ray environment is modeled using CREME;
+the solar flares can be modeled using JPL or CREME models.
+Solar flare particle events pose the most extreme SEU producing environment, 
+especially for spacecraft in interplanetary space.[20] </p>
+
+
+<p align="CENTER"><img src="see_data/ASICfig3-4-8.gif" alt="HeinrichCurve" align="center" height="432" width="385"><br>
+[Source: <a href="http://parts.jpl.nasa.gov/asic/title.page.html">The NASA
+ASIC Guide: Assuring ASICS for Space</a>]</p>
+
+<p>The Heinrich Curve above shows the integral energy loss spectrum at GEO.  
+The 100% curve corresponds to solar max condition, and the environment is always worse.  
+The 10% curve combines solar minimum cosmic rays and solar proton activity so that the 
+environment is worse only 10% of the time.  The 0.03% curve corresponds to an anomalously
+large solar flare. </p>
+
+<p>Petersen <i>et al.</i> have developed a simple expression for the upset rate at 
+GEO from galactic rays.[34] The GEO flux is due to galactic cosmic rays since protons 
+at the outer edge of the radiation belts is assumed negligible. SEU error rate 
+expressions are obtained using chord distribution function for the cross section. 
+After integrating the flux and cross section over the range of energies (LET), 
+the "figure of merit" formula for the error rate for the 10% environment results: </p>
+
+<p align="center"><i>R</i> = 5x10<sup>-10</sup> <img src="see_data/greek_sigma.gif" alt="s"><sub>sat</sub> / (LET<sub>crit</sub>)<sup>2</sup> </p>
+
+<p>where <i>R</i> is the SEU error rate in errors per bit-day; 
+<img src="see_data/greek_sigma.gif" alt="s"><sub>sat</sub> is the saturation SEU 
+cross section in µm<sup>2</sup>; and LET<sub>crit</sub> is the critical LET
+in units of pC/µm.  For design purposes, the error rate may be estimated using the
+above expression with <img src="see_data/greek_sigma.gif" alt="s"><sub>sat</sub> = <i>a b</i>
+with (<i>a</i>,<i>b</i> &gt;&gt; <i>c</i>), and
+LET<sub>crit</sub>=<i>Q<sub>crit</sub></i>/<i>c</i> where <i>c</i> is the silicon device 
+depth, and <i>a</i> and <i>b</i> are its sides in microns (µm).
+The above expression provides an upper-bound estimate.
+One can replace the numeral 5 in the &#8220;figure of merit&#8221; equation with a value of 3.5 for GaAs devices.
+Multipliers have been developed for the figure of merit (FOM) formula to scale the error 
+rate to other environments, especially solar flares: </p>
+
+<table align="center" border="1">
+
+<tbody><tr>
+<th>Environment
+</th><th>Multiplier
+</th></tr>
+
+<tr>
+<td>Petersen model (SEU figure of merit)
+</td><td align="center">1.0
+</td></tr>
+
+<tr>
+<td>Galactic model (solar minimum)
+</td><td align="center">0.44
+</td></tr>
+
+<tr>
+<td>"Ordinary" flare
+</td><td align="center">13
+</td></tr>
+
+<tr>
+<td>90% worst-case flare
+</td><td align="center">33
+</td></tr>
+
+<tr>
+<td>Anomalously large flare
+</td><td align="center">5000
+</td></tr>
+
+</tbody></table>
+
+<hr>
+<h3>References</h3>
+
+<ol>
+<li>J.T. Wallmark, S.M. Marcus, "Minimum size and maximum packaging density of 
+non-redundant semiconductor devices," <cite>Proc. IRE</cite>, vol. 50, pp. 286-298, 
+March 1962.
+</li><li>D. Binder, E.C. Smith, A.B. Holman, "Satellite anomalies from galactic cosmic 
+rays," <cite>IEEE Trans. on Nuclear Science</cite>, vol. NS-22, no. 6, pp. 2675-2680, 
+Dec. 1975.
+</li><li>T.C. May, M.H. Woods, "Alpha-particle-induced soft errors in dynamic memories," 
+<cite>IEEE Trans. on Electron Devices</cite>, vol. ED-26, no. 1, pp. 2-9, Jan. 1979.
+</li><li>W.A. Kolasinski, J.B. Blake, J.K. Anthony, W.E. Price, E.C. Smith, "Simulation of 
+cosmic-ray induced soft errors and latchup in integrated-circuit computer memories," 
+<cite>IEEE Trans. on Nuclear Science</cite>, vol. NS-26, no. 6, pp. 5087-5091, 1979.
+</li><li>D.K. Nichols, J.R. Cross, R.K. Watson, H.R. Schwartz, R.L. Pease, "An observation 
+of proton-induced latchup," <cite>IEEE Trans. on Nuclear Science</cite>, vol. 39, 
+no. 6, pp. 1654-1656, 1992.
+</li><li>L. Adams, E.J. Daly, R. Harboe-Sorensen, R. Nickson, J. Haines, W. Schafer, 
+M. Conrad, H. Griech, J. Merkel, T. Schwall, R. Henneck, "A verified proton induced 
+latchup in space," <cite>IEEE Trans on Nuclear Science</cite>, vol. 39, no. 6, 
+pp. 1804-1808, Dec. 1992.
+</li><li>I. Mouret, M. Allenspach, R.D. Schrimpf, J.R. Brews, K.F. Galloway, P. Calvel, 
+"Temperature and angular dependence of substrate response in SEGR," <cite>IEEE Trans. 
+on Nuclear Science</cite>, vol. 41, no. 6, pp. 2216-2221, 1994.
+</li><li>I. Mouret, M.-C. Calvet, P. Calvel, P. Tastet, M. Allenspach, K.A. LaBel, J.L. Titus,
+C.F. Wheatley, R.D. Schrimpf, K.F. Galloway, "Experimental evidence of the temperature 
+and angular dependence in SEGR," <cite>Proceedings of the Third European Conference on 
+Radiation and its Effects on Components and Systems</cite> (RADECS), Arcachon, France, 
+Sept. 1995.
+</li><li>A.E. Waskiewicz, J.W. Groninger, V.H. Strahan, D.M. Long, "Burnout of power MOS 
+transistors with heavy ions of Californium-252," <cite>IEEE Trans. on Nuclear Science</cite>,
+vol. 33, no. 6, pp. 1710-1713, 1986.
+</li><li>G.H. Johnson, J.H. Hohl, R.D. Schrimpf, K.F. Galloway, "Simulating single-event 
+burnout in n-channel power MOSFETs," <cite>IEEE Trans. on Electron Devices</cite>, 
+vol. 40, pp. 1001-1008, 1993.
+</li><li>G.H. Johnson, R.D. Schrimpf, K.F. Galloway, R. Koga, "Temperature dependence of 
+single-event burnout in n-channel power MOSFETs," <cite>IEEE Trans. on Nuclear Science</cite>, 
+vol. 39, pp. 1605-1612, 1992.
+</li><li>T.A. Fischer, "Heavy-ion-induced, gate-rupture in power MOSFETs," <cite>IEEE Trans. 
+on Nuclear Science</cite>, vol. 34, no. 6, pp. 1786-1791, 1987.
+</li><li>J.L. Titus, G.H. Johnson, R.D. Schrimpf, K.F. Galloway, "Single event burnout of 
+power bipolar junction transistors," <cite>IEEE Trans. on Nuclear Science</cite>, 
+vol. NS-38, no. 6, pp. 1315-1322, 1991.
+</li><li>G.M. Swift, D.J. Padgett, A.H. Johnston, "A new class of single event hard errors," 
+<cite>IEEE Trans. on Nuclear Science</cite>, vol. 41, no. 6, pp. 2043-2048, 1994.
+</li><li>R. Silberberg, "Neutron induced SEU's in the atmosphere," <cite>IEEE Trans. on 
+Nuclear Science</cite>, vol. 31, no. 6, pp. 1183-1185, Dec. 1984.
+</li><li>E.L. Petersen, "Nuclear reactions in semiconductors," <cite>IEEE Trans. on Nuclear 
+Science</cite>, vol. NS-27, no. 6, pp. 1494-1499, Dec. 1980.
+</li><li>E. Petersen, "Soft errors due to protons in the radiation belts," <cite>IEEE Trans. 
+on Nuclear Science</cite>, vol. NS-28, no. 6, pp. 3981-3986, Dec. 1981.
+</li><li>E.L. Petersen, P. Shapiro, J.H. Adams, E.A. Burke, "Calculation of cosmic-ray induced
+soft upsets and scaling in VLSI devices," <cite>IEEE Trans. on Nuclear Science</cite>, 
+vol. NS-29, no. 6, pp. 2055-2063, Dec. 1982.
+</li><li>M. Lauriente, A. L. Vampola, "Spacecraft anomalies due to radiation environment 
+in space," <cite>NASDA/JAERI 2nd International Workshop on Radiation Effects of
+Semiconductor Devices for Space Applications</cite>, Tokyo, Japan, March 1996.
+</li><li>J.H. Adams, A. Gelman, "The effects of solar flares on single event upset rates," 
+<cite>IEEE Trans. on Nuclear Science</cite>, vol. NS-31, no. 6, pp. 1212-1216, Dec. 1984.
+</li><li>A. Campbell, P. McDonald, K. Ray, "Single event upset rates in space," <cite>IEEE 
+Trans. on Nuclear Science</cite>, vol. 39, no. 6, pp. 1828-1835, Dec. 1992.
+</li><li>M.D. Violet, A.R. Frederickson, "Spacecraft anomalies on the CRRES satellite 
+correlated with the environment and insulator samples," <cite>IEEE Trans. on Nuclear 
+Science</cite>, vol. 40, no. 6, pp. 1512-1520, Dec. 1993.
+</li><li>M.S. Gussenhoven, E.G. Mullen, D.H. Brautigam, "Improved understanding of the Earth's 
+radiation belts from the CRRES satellite," <cite>IEEE Trans. on Nuclear Science</cite>, 
+vol. 43, no. 2, pp. 353-368, April 1996.
+</li><li>J.H. Adams, "The variability of single event upset rates in the natural environment," 
+<cite>IEEE Trans. on Nuclear Science</cite>, vol. NS-30, no. 6, pp. 4475-4480, Dec. 1983.
+</li><li>D.K. Nichols, "Trends in electronic parts susceptibility to single event upset 
+space station environment," Jet Propulsion Laboratory, JPL D-4785 (internal document), 
+Sept. 1987.
+</li><li>S. Karp, B.K. Gilbert, "Digital system design in the presence of single event 
+upsets," <cite>IEEE Trans. on Aerospace and Electronic Systems</cite>, vol. 29, no. 2, 
+pp. 310-316, April 1993.
+</li><li>G.C. Messenger, M.S. Ash, <cite>The Effects of Radiation on Electronic Systems</cite>,
+2nd edition, Van Nostrand Reinhold, NY, 1992.
+</li><li>K. LaBel, "Single event effects specification," 
+<a href="http://radhome.gsfc.nasa.gov/radhome/papers/seespec.htm">radhome.gsfc.nasa.gov/radhome/papers/seespec.htm</a>, 1993.
+</li><li>J.H.  Trainor, "Instrument and spacecraft faults associated with nuclear radiation 
+in space," <cite>Advances in Space Research</cite>, vol. 14, no. 10, pp. 685-693, 1994.
+</li><li>P. Robinson, W. Lee, R. Aguero, S. Gabriel, "Anomalies due to single event upsets,"
+<cite>Journal of Spacecraft and Rockets</cite>, vol. 31, no. 2, pp. 166-171, Mar-Apr 1994.
+</li><li>J.C. Pickel, J.T. Blanford, "Cosmic ray induced errors in MOS memory cells," 
+<cite>IEEE Trans. on Nuclear Science</cite>, vol. 25, no. 6, pp. 1166-1171, Dec. 1978.
+</li><li>J.L. Titus, L.S. Jamiolkowski, C.F. Wheatley, "Development of cosmic ray hardened 
+power MOSFETs," <cite>IEEE Trans. on Nuclear Science</cite>, vol. 36, no. 6, pp. 2375-2382, 1989.
+</li><li>J. Titus, C.F. Wheatley, "Experimental studies of single-event gate rupture and 
+burnout in vertical power MOSFETs," <cite>IEEE Trans. on Nuclear Science</cite>, 
+vol. 43, no. 2, pp. 533-545, 1996.
+</li><li>E.L. Petersen, J.B. Longworthy, S.E. Diehl, "Suggested single event upset figure of merit," 
+<cite>IEEE Trans. on Nuclear Science</cite>, vol. 30, no. 6, pp. 4533-4539, Dec. 1983.
+</li></ol>
+
+
+<p></p><hr><i>Last updated: January 18, 2006</i><br>
+Back to <a href="http://www.eas.asu.edu/%7Eholbert/eee560/eee560.html">Dr. Holbert's EEE598 Course</a><br>
+Send comments to <img src="see_data/email.gif" align="top"> <img src="see_data/mailbox.gif" alt="mailbox" align="center" border="0" height="34" width="29"><p></p>
+</body></html>

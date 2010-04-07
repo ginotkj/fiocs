@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="sv" xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head>
+
+
+
+<title>TSL - Single event effects</title>
+<style type="text/css" media="screen">
+@import url(../uu_css/maincss.css);
+</style>
+<link rel="stylesheet" type="text/css" media="print" href="tsl_see_data/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="tsl_see_data/rightcol.css">
+<link rel="stylesheet" type="text/css" media="screen" href="tsl_see_data/rightpics.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Description" content="The Svedberg Laboratory, the particle accelerator in Uppsala">
+<meta name="Keywords" content="cyclotron, synchrocyclotron protonbeam, protontherapy, irradiation, electronics testing, partikelaccelerator, cancerbehandling, elektronikbesträlning">
+<!-- ReadSpeaker script nedan -->
+<script type="text/javascript" language="JavaScript"> <!--
+function sayit()
+{ if (window.getSelection) // recent Mozilla versions
+{ var selectedString = window.getSelection(); }
+else if (document.all) // MSIE 4+
+{ rng = document.selection.createRange(); selectedString=rng.text; }
+else if (document.getSelection) //older Mozilla versions
+{ var selectedString = document.getSelection(); }
+document.rs_form.rstext.value = selectedString;
+document.rs_form.url.value = document.location.href; } //-->
+</script>
+<meta http-equiv="Refresh" content="240">
+</head><body class="red">
+
+<!-- Kom ih&aring; att byta i nedanst&aring;ende rad mot din enhet och dess url -->
+<div id="smulrad" class="smulrad"><a href="http://www.uu.se/" title="To the homepage of the Uppsala university."> 
+  UPPSALA UNIVERSITET</a> : <a href="http://www.tsl.uu.se/welcome.html" title="To the homepage of TSL">The 
+  Svedberg Lab</a> : <a href="http://www.tsl.uu.se/radiation_testing/welcome.html">Radiation testing page</a> 
+  : Why testing</div>
+
+<!-- Start header -->
+
+<div id="leftcolumn"> 
+	<a href="http://www.uu.se/">
+	<img src="tsl_see_data/uulogo_red.gif" alt="Uppsala universitet" height="160" width="160"></a> 
+	
+  <!-- lyssna-knapp -->
+  <div id="knapp"> 
+    <form class="ISI_REMOVE" id="rs_form" name="rs_form" action="http://isi.phoneticom.com/cgi-bin/uursone" method="post" onsubmit="sayit()" target="rs">
+      <input class="saysubmit" accesskey="L" title="Listen to page/marked text" alt="Listen" value="Listen" type="submit">
+      <input name="rstext" type="hidden">
+      <input name="customerid" value="47" type="hidden">
+      <input name="url" type="hidden">
+      <input name="id" value="1" type="hidden">
+      <input name="type" value="2" type="hidden">
+      <input name="lang" value="en" type="hidden">
+    </form>
+  </div>
+  <div class="hide"> <a href="#maincontent" title="Hoppa över länkar" accesskey="2">Hoppa 
+    över länkar</a> </div>
+  <p> <br>
+    <a href="http://www.tsl.uu.se/welcome.html" title="To the homepage of TSL"> <b>TSL home</b></a><br>
+    <br>
+    <b><a href="http://www.tsl.uu.se/radiation_testing/welcome.html">Radiation testing</a></b><br>
+    <a href="http://www.tsl.uu.se/radiation_testing/tsl_why_testing.html">Why testing</a><br>
+    <a href="http://www.tsl.uu.se/radiation_testing/tsl_beam_data.html">Beam data</a><br>
+    <a href="http://www.tsl.uu.se/radiation_testing/tsl_setting_up_test.html">Setting up a test</a><br>
+    <a href="http://www.tsl.uu.se/radiation_testing/tsl_publications.html">Publications</a><br>
+    <a href="http://www.tsl.uu.se/radiation_testing/tsl_contact_us.html">Contact us</a><br>
+    <br>
+  </p>
+  </div>
+
+<!-- End header --> 
+
+
+
+<!-- start main content -->
+
+<!-- ISI_LISTEN_START -->
+<div id="testingcontent"> 
+  <h1 align="left"><strong>What are single event effects?</strong></h1>
+  
+  <p>Electronics devices are sensitive to irradiation. It has been known since 
+    long that if irradiating a device with a large number of ionizing particles 
+    (for instance protons, neutrons or α particles) the actual device material 
+    gets damaged with malfunctioning as result. This is the result of , e.g., 
+    changes in the crystal lattice. Each incoming particle makes little damage, 
+    but the summed effect can make the component stop functioning. Such effects 
+    typically require large radiation doses. Thus, one single interaction is not 
+    sufficient for this to happen.<br>
+  </p>
+  <p> Single Event Effects (SEE), on the other hand, are caused by one single 
+    incoming particle. As an example, in space outside the atmosphere there is 
+    a flux of cosmic rays, i.e., protons, ( particles and atomic nuclei at high 
+    energies. If just one such charged particle happens to hit the active volume 
+    in a bit of a computer memory, it deposits free charge in it. Since charge 
+    is what represents the information (0 = no charge, 1 = more than a minimum 
+    amount of charge), this can flip a bit from 0 to 1 (or vice versa). Thus, 
+    nature is randomly re-programming computer memories due to the action of cosmic 
+    rays.<br>
+    <img src="tsl_see_data/space_computer_see.jpg" height="204" width="262"> <img src="tsl_see_data/protons_from_space.png" height="227" width="380"></p>
+  <p> The atmosphere provides very efficient shielding from these cosmic rays, 
+    but still there are problems also at ground level. The primary cosmic rays 
+    (mostly protons) induce nuclear reactions in the upper atmosphere, so called 
+    spallation reactions. This essentially means that a high-energy proton hits 
+    a nitrogen or oxygen atomic nucleus and smashes it into pieces. The result 
+    of this is a whole spectrum of various particles with a wide range of energies. 
+    Most of these particles are stopped by the atmosphere, but some of them penetrate 
+    it and reach altitudes occupied by man (0-10 km). The most important particles 
+    for SEE are neutrons, which are uncharged and therefore penetrate the atmosphere 
+    rather efficiently, and they interact strongly with nuclei, which makes them 
+    efficient in causing SEEs.<br>
+    <img src="tsl_see_data/see.png" height="283" width="486"> </p>
+  <p> Another source of SEEs are impurities in the device material. For instance, 
+    in lead used for soldering, there might be traces of uranium or thorium, which 
+    both are naturally radioactive elements, decaying by α emission. The α particle 
+    can then release charge and cause a SEE.<br>
+  </p>
+  <h3> There is a formal technical definition of SEE:</h3>
+  <pre>    “SEE is any measurable or observable change in state or performance of a microelectronic 
+    device, component, subsystem, or system (digital or analog) resulting from 
+    a single energetic particle strike. SEE include single-event upset (SEU), 
+    multiple-bit upset (MBU), multiple-cell upset (MCU), single-event functional 
+    interrupt (SEFI), single-event latch-up (SEL), single-event hard error (SHE),single-event 
+    transient (SET), single-event burnout (SEB), and single-event gate rupture 
+    (SEGR).”<br>
+    (JEDEC Standard JESD 89A, ”Measurement and Reporting of Alpha Particle and 
+    Terrestrial Cosmic Ray-Induced Soft Errors in Semiconductor Devices”, 2006)</pre>
+  </div>
+<div id="footer" class="sidfot"> 
+  <p>©2009-. The Svedberg Laboratory | Updated: 2009-06-30<br>
+    Webmaster: <a href="mailto:mikael.pettersson%20%5Ba%5D%20tsl.uu.se">Mikael Pettersson</a> 
+    | ph:+46-(0)18-4713877 </p>
+  <p>
+		<a href="http://validator.w3.org/check?uri=referer">
+		<img src="tsl_see_data/valid-xhtml10.png" alt="Valid XHTML 1.0!" height="31" width="88">
+		</a>
+	</p>
+</div>
+<!-- End footer -->
+<!-- start rightcolumn -->
+<!-- ISI_LISTEN_STOP -->
+<!-- End rightcolumn-->
+<!-- start rightpics -->
+<!-- End rightpics-->
+</body></html>
