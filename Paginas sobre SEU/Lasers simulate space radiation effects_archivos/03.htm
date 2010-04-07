@@ -1,0 +1,673 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<!-- InstanceBegin template="/Templates/crosslink-template.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Lasers Simulate Space Radiation Effects</title>
+<!-- InstanceEndEditable -->
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+	<meta name="generator" content="BBEdit 6.5.2">
+	<style type="text/css" media="all">@import url(/main.css);</style>
+	<script language="JavaScript1.2" src="03_data/main.js" type="text/javascript"></script>
+	<!--[if gte IE 7]>
+<style type="text/css" media="all">@import url(/ie7.css);</style>
+<![endif]-->
+
+<style type="text/css" media="all">@import url(/publications/crosslink/crosslink.css);</style>
+<!-- InstanceParam name="leftcolumnmessage" type="boolean" value="false" --><!-- InstanceParam name="rightcolumn" type="boolean" value="false" -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head><body>
+
+<div id="bodycontainer">
+<div id="body">
+<!-- Logo and Search banner -->
+
+<div id="logosearch">
+<form name="gs" method="GET" action="http://google-fringe.aero.org/search"> 
+
+<div id="logolink">
+<a href="http://www.aero.org/index.html">The Aerospace Corporation Homepage</a>
+</div>
+
+
+<div id="logobarcontent">
+
+
+<input name="q" value="Search Our Site" size="20" maxlength="120" id="searchinput" onfocus="if(this.value == 'Search Our Site'){this.value='';}" type="text">
+                  <input name="sort" value="date:D:L:d1" type="hidden">
+                  <input name="output" value="xml_no_dtd" type="hidden">
+                  <input name="oe" value="UTF-8" type="hidden">
+                  <input name="ie" value="UTF-8" type="hidden">
+                  <input name="client" value="default_frontend" type="hidden">
+                  <input name="proxystylesheet" value="aero_frontend" type="hidden">
+                  <input name="site" value="default_collection" type="hidden">
+&nbsp;
+<input name="btnG" value="Search" id="searchform" type="submit">
+&nbsp;
+</div>
+
+</form></div>
+
+<!--
+
+
+[[!~~ Logo and Search banner ~~]]
+
+[[div id="logosearch"]]
+[[form method="get" action="http://google-fringe.aero.org/search"]] 
+
+[[div id="logolink"]]
+[[a href="/index.html"]]The Aerospace Corporation Homepage[[/a]]
+[[/div]]
+
+
+[[div id="logobarcontent"]]
+
+
+[[input TYPE="text" name="q" value="Search Our Site" SIZE=20 MAXLENGTH=120 id="searchinput" ONFOCUS="if(this.value == 'Search Our Site'){this.value='';}"]][[!~~ ONBLUR="{this.value='Search Our Site';}"~~]]
+[[input type="hidden" name="site" value="aero_fringe"]]                    
+[[input type="hidden" name="client" value="aero_fringe"]]                  
+[[input type="hidden" name="restrict" value="wwwexternal"]]  
+[[input type="hidden" name="proxystylesheet" value="http://www.aero.org/stylesheet_www.xslt"]]                                             
+[[input type="hidden" name="output" value="xml_no_dtd"]]     
+&nbsp;
+[[input type=submit name="btnG" value="Search" id="searchform"]]
+&nbsp;[[/form]]
+[[/div]]
+
+
+[[/div]]
+
+-->
+
+
+<!-- Main Nav banner -->
+
+<div class="spacer">&nbsp;</div>
+
+<div id="mainnav">
+<ul>
+	<li><a href="http://www.aero.org/corporation/">About Us</a>
+	   <ul>
+		 <li><a href="http://www.aero.org/corporation/ffrdc.html">What is an FFRDC?</a></li>
+		 <li><a href="http://www.aero.org/general/faq.html">Frequently Asked Questions</a></li>
+		 <li><a href="http://www.aero.org/corporation/history.html">Our History</a></li>
+		 <li><a href="http://www.aero.org/corporation/visionandvalues.html">Vision and Values</a></li>
+		 <li><a href="http://www.aero.org/corporation/organizations.html">Organizations</a></li>
+		 <li><a href="http://www.aero.org/corporation/locations.html">Locations</a></li>
+		 <li><a href="http://www.aero.org/corporation/officers.html">Corporate Officers</a></li>
+		 <li><a href="http://www.aero.org/corporation/board/board.html">Board of Trustees</a></li>
+		 <li><a href="http://www.aero.org/corporation/3404-94.pdf">Org Chart (PDF)</a></li>
+		 <li><a href="http://www.aero.org/corporation/AerospaceAR.pdf">Annual Report (PDF)</a></li>
+	   </ul>
+	</li>
+	
+	<li><a href="http://www.aero.org/news/">News</a>
+		<ul>
+			<li><a href="http://www.aero.org/news/index.html">Current</a></li>
+			<li><a href="http://www.aero.org/news/06archive.html">2006 Archive</a></li>
+			<li><a href="http://www.aero.org/news/05archive.html">2005 Archive</a></li>
+			<li><a href="http://www.aero.org/news/news2004.html">2004 Archive</a></li>
+			<li><a href="http://www.aero.org/news/news2003.html">2003 Archive</a></li>
+			<li><a href="http://www.aero.org/news/02archive.html">2002 Archive</a></li>
+			<li><a href="http://www.aero.org/news/01archive.html">2001 Archive</a></li>
+			<li><a href="http://www.aero.org/news/00archive.html">2000 Archive</a></li>
+			<li><a href="http://www.aero.org/news/99archive.html">1999 Archive</a></li>
+			<li><a href="http://www.aero.org/news/98archive.html">1998 Archive</a></li>
+		</ul>
+	</li>
+	
+	<li><a href="http://www.aero.org/programs/">Programs</a>
+		<ul>
+			<li><a href="http://www.aero.org/programs/launch.html">Launch</a></li>
+			<li><a href="http://www.aero.org/programs/satellites.html">Satellites</a></li>
+			<li><a href="http://www.aero.org/programs/control.html">Control Systems</a></li>
+		</ul>
+</li>
+	
+	<li><a href="http://www.aero.org/capabilities/">Capabilities</a>
+		<ul>
+		  	<li><a href="http://www.aero.org/capabilities/sys-engr.html">Systems Engineering</a></li>
+    		<li><a href="http://www.aero.org/capabilities/launchver.html">Launch Verification</a></li>
+    		<li><a href="http://www.aero.org/capabilities/lv-sys.html">Vehicle Systems</a></li>
+    		<li><a href="http://www.aero.org/capabilities/communication.html">Communications and Networking </a></li>
+    		<li><a href="http://www.aero.org/capabilities/electronic.html">Electronics and Sensors </a></li>
+    		<li><a href="http://www.aero.org/capabilities/comp-sys.html">Computers and Software</a> </li>
+    		<li><a href="http://www.aero.org/capabilities/labops.html">Testing and Research</a> </li>
+    		<li><a href="http://www.aero.org/capabilities/researchtech.html">Specialty Centers</a></li>
+    		<li><a href="http://www.aeropatents.org/">Technology Licensing</a></li>
+			<li><a href="http://www.aero.org/capabilities/civcomm.html">Civil and Commercial</a></li>
+		</ul>
+	</li>
+	
+	<li><a href="http://www.aero.org/careers/">Careers</a>
+		<ul>
+			 <li><a href="http://www.aero.org/careers/jobs/index.html">Current Openings</a></li>
+			 <li><a href="http://www.aero.org/careers/apply.html">How to Apply</a></li>
+			 <li><a href="http://www.aero.org/careers/benefits.html">Benefits</a></li>
+			 <li><a href="http://www.aero.org/careers/diversity.html">Diversity</a></li>
+			 <li><a href="http://www.aero.org/careers/graduates.html">New Graduates</a></li>
+			 <li><a href="http://www.aero.org/careers/intern.html">Internships</a></li>
+		</ul>
+	</li>
+	
+	<li><a href="http://www.aero.org/education/">Education</a>
+		<ul>
+			 <li><a href="http://www.aero.org/education/tai/index.html">The Aerospace Institute</a></li>
+			 <li><a href="http://www.aero.org/education/students.html">Space for Students</a></li>
+     <li><a href="http://www.aero.org/education/herndonfair.html">Herndon Memorial Science Competition</a></li>
+		</ul>
+	</li>
+	
+	<li><a href="http://www.aero.org/publications/">Publications</a>
+		<ul>
+			<li><a href="http://www.aero.org/publications/crosslink/index.html">Crosslink</a></li>
+			<li><a href="http://www.aero.org/publications/books.html">Books by <br>The Aerospace Press</a></li>
+			<li><a href="http://www.aero.org/corporation/AerospaceAR.pdf">Annual Report</a></li>
+			<li><a href="https://aeroweb.aero.org/p_dir/propaprscat.nsf/title?openview&amp;Check=Next&amp;count=10&amp;Start=1">Professional Papers</a></li>
+	        <li><a href="https://aeroweb.aero.org/m_dir/maddl.nsf">Mission Assurance Library</a></li>
+		</ul>
+	
+	</li>
+	
+	<li><a href="http://www.aero.org/conferences/">Conferences</a></li>
+
+</ul>
+
+</div>
+<div class="spacer">&nbsp;</div>
+		
+
+
+
+<!-- Left Nav and Content -->
+
+<table border="0" cellpadding="0" cellspacing="0" width="780">
+	<tbody><tr>
+
+<!--Left Nav starts here-->
+
+	  <td id="left" bgcolor="#ffffff" valign="top" width="175">
+
+
+<div id="navhead">
+ 	<ul style="margin-bottom: 0pt;">
+	<li><a href="http://www.aero.org/publications/index.html">Publications</a></li>
+	</ul>
+ </div>
+
+<div class="navlist">
+   
+<ul style="margin-bottom: 0pt;">
+  <!-- TemplateBeginEditable name="left navigation" --> 
+     <li class="navlist-section"><a href="http://www.aero.org/publications/crosslink/index.html">Crosslink</a></li>
+     
+  <li><a href="http://www.aero.org/publications/crosslink/winter2008/index.html">Current Issue</a></li>
+	 <li><a href="http://www.aero.org/publications/crosslink/previous.html">Previous Issues</a></li>
+     <li><a href="http://www.aero.org/publications/crosslink/headlines.html">Headlines</a></li>
+     <li><a href="http://www.aero.org/publications/crosslink/search.html">Search Crosslink</a></li>
+     <li><a href="http://www.aero.org/publications/crosslink/contact.html">Contact Us</a></li>
+  <!-- TemplateEndEditable --> 
+</ul>
+</div>
+
+
+<!--Highlight goes here-->
+  
+ 
+
+	</td>
+
+<!--right column starts here-->
+
+	<td valign="top">
+	
+	<!--Content starts here-->
+ 
+        <!-- InstanceBeginEditable name="bannergraphic" --><img src="03_data/crosslink-banner.jpg" alt="" align="default" height="70" hspace="0" vspace="0" width="602"> <!-- InstanceEndEditable -->
+ 
+        <div id="content">
+  
+
+    <div id="bodycontent">
+  
+
+   
+    <!-- InstanceBeginEditable name="bodycontent" -->
+
+<!-- Article starts here -->
+
+
+<h2 class="cl_title">Lasers Simulate Space Radiation Effects</h2>
+<h4 class="cl_author"><a href="http://www.aero.org/publications/crosslink/winter2000/contributors.html#03">Susan Humphrey, Stephen LaLumondiere, and Steven Moss</a></h4>
+<p>
+Imagine that Serbian terrorists have assembled in preparation for an
+attack on nearby NATO troops stationed in Kosovo as part of a newly
+negotiated peace agreement. Unbeknown to the Serbs, their every
+movement and every communication have been followed by national
+intelligence assets &#8212;satellites&#8212;orbiting unseen in space. As the Serbs
+prepare to attack, allied commanders make use of intelligence
+information from these assets to direct their preparations and
+response.
+</p>
+
+<p>At the most critical moment, however, the flow of information is
+suddenly and unexpectedly cut off. The normal operation of the
+satellites has been disrupted by intense solar flare activity. The
+resulting surge of extremely energetic particles rips through sensitive
+microelectronic devices onboard the satellites, producing single event
+phenomena (SEP).
+</p>
+
+<p>SEP disrupt device and system performance and, in some cases, may
+even result in the destruction of the devices or systems affected.
+Whether a scenario like this ever occurs depends upon our ability to
+develop space systems containing microelectronic devices that are
+tolerant of SEP.
+</p>
+<h3 class="cl_subhead">Single Event Phenomena</h3>
+
+<p>Microelectronic devices are susceptible to damage or interruption
+from exposure to radiation. Such devices contain structures made up of
+semiconductor materials that operate by regulating current flow or the
+amount of electrical charge held in a potential well. Interaction with
+radiation, including any energetic particle (electrons, protons,
+neutrons) or photon (gamma rays, X-rays), alters these precisely
+regulated conditions and produces SEP (see sidebar, <a href="http://www.aero.org/publications/crosslink/winter2000/03_sidebar1.html" target="sidebar1" onclick="window.open('03_sidebar1.html','03_sidebar1','location=no,height=480,width=540,status=no,resizable,scrollbars');
+return false;">Types of Single Event Effects</a>).
+</p>
+<table class="rightalign" align="right" border="1" cellpadding="10" cellspacing="4" width="390">
+	<tbody><tr>
+		<td><img src="03_data/03_01.gif" alt="cosmic rays" height="280" width="360">
+		<p class="cl_cap">Cosmic
+rays traversing a microelectronic device generate a track of charge
+that can alter precisely regulated current flow or charge storage.
+Single event phenomena can cause temporary or permanent damage to such
+devices.</p></td>
+	</tr>
+</tbody></table>
+<p>
+SEP are classified by the type of effect that occurs in the device,
+known as a single event effect (SEE). Types of SEE include single event
+upset, latchup, burnout, gate rupture, and total dose.
+</p>
+
+<p>Testing microelectronic devices for their degree of vulnerability to
+SEP is therefore integral to designing devices to be used in space
+systems. The Aerospace Corporation is developing a system to generate
+short-pulse X-rays for SEE testing of electronics that promises to
+overcome disadvantages of typical testing methods used today. Testing
+using this new method (explained in greater detail later in the
+article) is expected to begin in 2000.
+</p>
+
+<h3 class="cl_subhead">The Radiation Environment</h3>
+
+<p>SEP occur both in the terrestrial and the space environment. SEP in
+the space environment are primarily induced by energetic protons and
+heavy ions, although space contains other energetic particles (e. g.,
+electrons, X-rays, and gamma rays). The highest day-to-day fluxes of
+protons near Earth occur in the Van Allen radiation belts that surround
+our planet. Radiation belts are formed as a result of Earth's magnetic
+field, which traps energetic electrons and protons within the belt
+regions. The energetic proton belt extends from an altitude of about
+500 kilometers to an altitude of 2.5 Earth radii (approximately 16,000
+kilometers).
+</p>
+
+<p>Spacecraft at altitudes below 500 kilometers experience few effects
+because potentially disruptive protons are trapped at higher altitudes;
+the Earth's magnetic field also provides some measure of protection
+from both galactic cosmic rays and solar protons. Spacecraft above the
+proton belt (for example, satellites in geosynchronous equatorial orbit
+at very high altitude or spacecraft on interplanetary missions)
+experience SEP caused by solar protons and galactic cosmic rays, which
+consist primarily of protons and alpha particles and a small number of
+heavier nuclei. However, spacecraft that traverse the proton belt are
+vulnerable to SEP from three sources: energetic protons in the belt,
+galactic cosmic rays, and solar protons. </p>
+
+<p>
+Solar flares may also produce stressing environments for satellites and
+may temporarily or permanently degrade system performance. During and
+immediately after flares, energetic particle fluxes encountered by
+spacecraft may increase by orders of magnitude. Typical solar flares
+last only a few days. Nonetheless, some mission specifications require
+that systems be impervious to single event latchup (SEL) and only
+minimally responsive to other SEP throughout even a significant solar
+flare event. </p>
+<table align="center" bgcolor="#6699cc" cellpadding="10" cellspacing="4" width="450">
+	<tbody><tr>
+		<td><img src="03_data/03_02.gif" alt="magnetosphere" height="252" width="420">
+		<p class="cl_cap">The
+space radiation environment includes energetic protons, electrons,
+gamma rays, X-rays, and heavy ions. All of these can produce single
+event phenomena that have the potential to disrupt device and system
+performance&#8212;or even destroy the devices or systems affected.</p></td>
+	</tr>
+</tbody></table>
+<p>
+The frequency of SEP occurrences can be reduced with shielding; that
+is, using dense metallic shields to cover electronic parts. However,
+the most energetic particles found in space will penetrate more
+shielding than most system designers will tolerate. Consequently, other
+methods of mitigating SEP must be used.
+</p>
+
+<p>One widely used approach is to employ microelectronic devices that
+have been specially designed and engineered to be invulnerable to the
+space radiation environment or, at least, more tolerant of the
+environment. However, development of such devices is expensive, and
+their performance (processor speed, for example) generally lags the
+performance of commercially available nontolerant devices by 10 years
+or more. </p>
+
+<p>
+A growing body of literature has recently been developed around SEP in
+the terrestrial environment. The most energetic cosmic rays penetrate
+the Earth's magnetic field and interact with nitrogen and oxygen nuclei
+in the upper atmosphere. These nuclear interactions yield neutrons that
+can penetrate to the ground. Anyone who uses a solid-state digital
+camera can observe these events simply by taking extended "exposures"
+in the dark. Frame-to-frame variations in the output in the form of
+intense, single-pixel spikes are due to cosmic ray effects.
+</p>
+
+<p>Aircraft designers at Boeing, Airbus, and elsewhere are now taking
+account of SEP in systems design for aircraft that fly at higher
+altitudes (above 30,000 feet). Manufacturers of pacemakers for control
+of heartbeat irregularities worry about SEP effects on the performance
+of microcontrollers within the pacemaker. Finally, microelectronic
+device performance may be degraded by SEP due to alpha particle decay
+from radioactive isotopes of ions that are impurities in metals
+commonly used for the microelectronics themselves. </p>
+
+<p>
+Regardless of whether radiation-tolerant or commercially available
+nontolerant devices are used in a system, the system designer will need
+to know their susceptibility to SEP. Consequently, tests of SEP
+susceptibility are typically required for all devices to be used aboard
+a spacecraft. Tests for SEP vulnerability in devices to be used
+terrestrially are becoming increasingly important.
+</p>
+
+<h3 class="cl_subhead">Traditional Testing Methods</h3>
+
+<p>The level of exposure a given device can survive determines the
+"hardness" of the device. In order to classify devices according to
+hardness, it is necessary to test them for SEE using calibrated methods
+that can be correlated to the different types of radiation
+environments. Traditionally, this is achieved by exposing the
+electronic device to radiation from particle accelerators such as Van
+de Graaff generators, cyclotrons, or synchrotrons, from radioactive
+elements such as Californium, and from laser sources.
+</p>
+
+<p>Based on the results of SEE testing by one or more of these methods,
+the hardness of a device can be assessed. The probability of
+encountering a SEE during the required performance lifetime can be
+predicted as well. In the event that the device or part of the device
+is susceptible to SEE, then it may require special shielding or may
+need to be redesigned to withstand the radiation environment. </p>
+<table class="rightalign" align="right" border="1" cellpadding="10" cellspacing="4" width="339">
+	<tbody><tr>
+		<td><img src="03_data/03_03.gif" alt="ablation of metal targets" height="255" vspace="5" width="309">
+		<p class="cl_cap">Ablation
+of metal targets with intense femtosecond laser pulses produces a dense
+plasma that emits ultrashort bursts of X-rays. These X-ray pulses can
+be guided to precisely determined locations on a device under test
+using monocapillary optics.</p></td>
+	</tr>
+</tbody></table>
+<p>
+Particle accelerator testing is the most widely accepted method for
+measuring SEE susceptibility. Circuits are characterized for SEE
+sensitivity by measuring the cross section as a function of accelerator
+ion linear energy transfer (LET) for a variety of particles at a range
+of energies. </p>
+
+<p>
+Californium (<sup>252</sup>Cf) is a radioactive isotope that
+spontaneously decays to produce an array of high-energy particles,
+alpha particles, and neutrons, which are used to simulate the space
+radiation environment. However, Californium emission does not provide
+as wide a range of particle energies as is available with particle
+accelerator techniques and thus does not provide a sufficient range of
+LET data to correlate to most space environments. </p>
+
+<p>
+Most recently, laser testing methods have been developed that use a
+short laser pulse, less than 10 picoseconds, to probe a device for SEE
+vulnerability. It has been shown that the phenomena in the
+semiconductor device caused by an ultrashort laser pulse and a charged
+particle are similar. Devices are probed with a single laser pulse for
+SEE, and thresholds for SEE are determined by the absorbed laser
+energy. </p>
+
+<p>
+Laser probing of device susceptibility has several advantages over particle beam techniques: 
+</p>
+
+<ul>
+	<li>Laser beams can be focused to small spots, allowing location
+of sensitive nodes in complex integrated circuits with submicron
+precision. </li>
+
+	<li>Repeated laser excitation does not damage the material, whereas particle beam excitation produces permanent damage. </li>
+
+	<li>Lasers are less expensive and more convenient to operate than particle beam facilities. </li>
+</ul>
+
+<p>
+The principal disadvantage of laser-based techniques for simulating SEE
+is that the laser light cannot penetrate metal. Thus, a sensitive node
+completely covered with metal cannot be interrogated using laser-based
+techniques. Modern high-performance integrated cicuits have smaller
+features, higher levels of integration, and multilevel metalization
+architectures compared with previous versions, leaving many complex
+integrated circuits essentially covered with metal and impenetrable to
+laser light. </p>
+
+<h3 class="cl_subhead">Short-Pulse X-Ray Generation</h3>
+
+<p>
+Using short pulses of X-ray radiation capable of penetrating layers of
+metalization overcomes the disadvantages of laser testing of device
+susceptibility to SEE while preserving its advantages. To be reliable
+for hardness assurance testing, such a system must meet special
+criteria. In order to generate SEE in electronic devices, the X-rays
+must be produced in the 0.8 to 5 kilo-electron-volt energy range to be
+transmitted through metalization (for example, aluminum, polysilicon,
+copper) and oxide layers and be absorbed in the active region of the
+device. Additionally, charged particles pass through semiconductor
+devices in less than 1 trillionth of a second. Thus, the X-ray pulse
+duration must be ultrafast.
+</p>
+
+<p>Recently, ultrashort X-ray pulses have been produced using
+ultrashort laser pulses via high harmonic generation, generation of
+ultrashort electron bunches that produce X-rays when launched into
+metal surfaces, and laser ablation of metals to generate dense plasmas
+that emit X-ray pulses. Of these techniques, the latter is the most
+feasible for producing pulses in the required energy range and for
+focusability of the X-ray pulses. In this method, ultrashort bursts of
+X-rays are generated through the ablation of metal targets illuminated
+with intense femtosecond laser pulses. The dense plasma produced by
+ablation generates X-ray pulses with ultrashort pulse durations.
+</p>
+<table align="center" bgcolor="#6699cc" cellpadding="10" cellspacing="4" width="454">
+	<tbody><tr>
+		<td><img src="03_data/03_05.gif" alt="testing microelectronics" height="254" vspace="6" width="424">
+		<p class="cl_cap">Testing
+microelectronic devices for their degree of vulnerability to single
+event phenomena is integral to designing devices to be used in space
+systems. Aerospace researchers have designed a laser amplifier system
+that produces extremely intense laser pulses. These pulses produce
+short bursts of X-rays that can be directed at microelectronic devices
+for testing.</p></td>
+	</tr>
+</tbody></table>
+<p>
+X-rays generated by this technique are emitted in all directions and
+need to be focused to be usable for SEE testing. We use tapered
+monocapillary optics to focus X-rays onto a sample. These monocapillary
+optics are hollow glass tubes that work as waveguides for X-rays via
+total external reflection. Tubes with input end openings of 25
+millimeters have been used to focus X-rays to diameters as small as 3.5
+millimeters; nothing, in principle, precludes production of tubes with
+exit openings of 50 nanometers or less.
+</p>
+
+<h3 class="cl_subhead">SEE Testing at The Aerospace Corporation</h3>
+
+<p>We are in the process of developing a system to generate short pulse
+X-rays to be used for SEE testing of electronics. The X-ray pulses are
+generated by the laser ablation technique. We have designed a laser
+amplifier system to produce the extremely intense laser pulses
+necessary. The laser amplifier is based on a mode-locked
+titanium:sapphire laser that produces 100-femtosecond pulses with
+tunable wavelength ranging from 700 to 900 nanometers. The laser output
+is amplified in two stages. First, a regenerative amplifier increases
+the oscillator pulse energy from the nanojoule to the millijoule level.
+A second stage multipass amplifier boosts the pulse energy to
+approximately 200 millijoules. Before reaching the first amplifier, the
+100-femtosecond pulses from the oscillator are temporally stretched to
+200 picoseconds in order to avoid laser induced damage of the optics
+through the amplification process. The output of the multipass
+amplifier is spatially expanded, recompressed back to 100 femtoseconds,
+and then focused onto the target. </p>
+
+<p>
+The focusing optics and the target are enclosed in a vacuum chamber to
+prevent damage to the focusing optics, ionization of the air and
+absorption of the X-rays by air. A portion of the X-rays generated is
+collected and focused onto the device to be tested. </p>
+
+<p>
+Testing of microelectronic devices for SEP susceptibility using ultrashort X-ray pulses will begin in 2000.
+</p>
+
+<h3 class="cl_subhead">Further Reading</h3>
+
+<ol>
+	<li>J. S.Mellinger, S. Buchner, D. McMorrow, W. J. Stapor, T. R.
+Weatherford, and A. B. Campbell. "Critical Evaluation of the Pulsed
+Laser Method for Single Event Effects Testing and Fundamental Studies."
+<i>IEEE Transactions on Nuclear Science</i>, Vol. NS-41, pages 2574&#8211;2584, 1994.</li>
+	<li>G. C. Messenger and M. S. Ash. <i>Single Event Effects</i>. Chapman-Hall, New York, 1997.</li>
+	<li>S.
+C. Moss, S. D. LaLumondiere, J. R. Scarpulla, K. P. MacWilliams, W. R.
+Crain, and R. Koga. "Correlation of Picosecond Laser-Induced Latchup
+and Energetic Particle-Induced Latchup in CMOS Test Structures." <i>IEEE Transactions on Nuclear Science</i>, Vol. NS-42, pages 1948&#8211;1956, 1995.</li>
+	<li>M. M. Murnane, H. C. Kapteyn, M. D. Rosen, and R. W. Falcone. "Ultrafast X-ray pulses from laser-produced plasmas." <i>Science</i>, Vol. 251, pages 531&#8211;536, 1991.</li>
+	<li>C. Tribble, <i>The Space Environment: Implications for Spacecraft Design</i>. Princeton University Press, Princeton, NJ, 1995. </li>
+	<li>Technical
+articles on space radiation effects can be found in the IEEE
+Transactions on Nuclear Science. A general primer on single event
+effects as well as data on single event phenomena in microelectronic
+devices can be found online at The Aerospace Corporation Web site (<a href="http://www.aero.org/capabilities/seet/">http://www.aero.org/capabilities/seet/</a>). Other relevant online databases include sites at NASA (<a href="http://radnet.jpl.nasa.gov/">http://radnet.jpl.nasa.gov</a> and <a href="http://flick.gsfc.nasa.gov/radhome">http://flick.gsfc.nasa.gov/radhome</a>) and the U.S. Naval Research Laboratory (<a href="http://redex.nrl.navy.mil/">http://redex.nrl.navy.mil</a>).</li>
+</ol>
+
+<br clear="all">
+<p><a href="http://www.aero.org/publications/crosslink/winter2000/index.html">To Winter 1999/2000 Table of Contents</a></p>
+
+
+
+
+<br clear="all">
+
+
+<!-- Article ends here -->
+
+      <!-- InstanceEndEditable -->
+	  
+	</div>
+  
+
+  </div>
+  
+		
+	    </td></tr>
+</tbody></table>
+<div id="spacer2">
+<img src="03_data/single-pixel.gif" alt="" border="0" height="2">
+<!-- FOOTER -->
+ 
+
+<br clear="all">
+
+<form method="get" action="http://google-fringe.aero.org/search"> 
+
+<div class="footer1">
+
+<hr noshade="noshade" size="1" width="780">
+
+<a href="http://www.aero.org/index.html">Home</a>&nbsp;&nbsp;
+<a href="http://www.aero.org/general/feedback.html">Contact Us</a>&nbsp;&nbsp;
+<a href="http://www.aero.org/general/faq.html">FAQ</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<input name="q" size="20" maxlength="255" value="Search Our Site" id="footersearchinput" onfocus="if(this.value == 'Search Our Site'){this.value='';}" type="text">        
+                  <input name="sort" value="date:D:L:d1" type="hidden">
+                  <input name="output" value="xml_no_dtd" type="hidden">
+                  <input name="oe" value="UTF-8" type="hidden">
+                  <input name="ie" value="UTF-8" type="hidden">
+                  <input name="client" value="default_frontend" type="hidden">
+                  <input name="proxystylesheet" value="aero_frontend" type="hidden">
+                  <input name="site" value="default_collection" type="hidden">
+<input name="btnG" value="Search" id="footersearchform" type="submit">                                 
+
+<a href="http://www.aero.org/general/search-hints.html">(options)</a>
+
+<hr noshade="noshade" size="1" width="780">
+
+</div>
+
+<!-- SUBJECT CATEGORIES -->
+
+<div class="footer1">
+[ <a href="http://www.aero.org/corporation/">About Us</a> |
+<a href="http://www.aero.org/news/">News</a> |
+<a href="http://www.aero.org/programs/">Programs</a> |
+<a href="http://www.aero.org/capabilities/">Capabilities</a> |
+<a href="http://www.aero.org/careers/">Careers</a> |
+<a href="http://www.aero.org/education/">Education</a> |
+<a href="http://www.aero.org/conferences/">Conferences</a> |
+<a href="http://www.aero.org/publications/">Publications</a> ]
+
+<hr noshade="noshade" size="1" width="780">
+</div>
+
+<!-- COPYRIGHT -->
+
+
+<div class="footer2">
+<a href="http://www.aero.org/general/copyright.html">Copyright and Terms of Use</a>, © 1995-2009 The Aerospace Corporation. All rights reserved.
+ Send any questions or comments regarding this service to 
+ 
+<script language="JavaScript">
+document.write('<a hre'+'f="ma'+'ilto'+':'+'%77%77%77%6d%61%69%6c%40%61%65%72%6f%2e%6f%72%67">&#119;&#101;&#98;&#109;&#97;&#115;&#116;&#101;&#114;<\/a>');
+</script><a href="mailto:%77%77%77%6d%61%69%6c%40%61%65%72%6f%2e%6f%72%67">webmaster</a>.
+</div>
+
+<br>
+
+
+<div class="footer2">
+        
+        This page was last modified on 11/23/07
+</div>
+
+</form>
+
+
+<script src="03_data/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1965000-1";
+urchinTracker();
+</script>
+</div>
+</div>
+</div>
+
+<!-- InstanceEnd --></body></html>
