@@ -102,9 +102,13 @@
       (Path "Design Resources")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-2")
       (Path "Outputs")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb")
-      (Path "PSpice Resources"))
+      (Path "PSpice Resources")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-2"
+         "NAND-2"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

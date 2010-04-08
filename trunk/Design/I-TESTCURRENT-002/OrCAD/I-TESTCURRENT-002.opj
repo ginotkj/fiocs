@@ -86,17 +86,28 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-002\i-testcurrent-002.dsn")
+         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-002\OrCAD\i-testcurrent-002.dsn")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-002\i-testcurrent-002.dsn"
+         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-002\OrCAD\i-testcurrent-002.dsn"
          "SCHEMATIC1")
       (Path "Outputs")
       (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-002\i-testcurrent-002.dsn"
+         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-002\OrCAD\i-testcurrent-002.dsn"
          "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -28 0 291 0 817"))
-      (Tab 0))))
+        (Placement "44 0 1 160 953 -8 -30 0 291 0 817"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 150 1869 150 805")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-TESTCURRENT-002\ORCAD\I-TESTCURRENT-002.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))
