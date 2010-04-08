@@ -1,4 +1,4 @@
-** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-002\i-testcurrent-002-pspicefiles\schematic1\test.sim ] 
+** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-002\OrCAD\i-testcurrent-002-pspicefiles\schematic1\test.sim ] 
 
 ** Creating circuit file "test.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -6,11 +6,11 @@
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
-* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 100p 0.1p 0.01p 
+.TRAN  0 2n 0.1p 0.01p 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 

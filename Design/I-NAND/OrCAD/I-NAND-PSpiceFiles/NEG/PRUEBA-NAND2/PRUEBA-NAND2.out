@@ -1,0 +1,47 @@
+
+**** 04/06/10 23:58:17 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "NEG-PRUEBA-NAND2"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NEG\PRUEBA-NAND2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "PRUEBA-NAND2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\NEG.net" 
+
+
+
+**** INCLUDING NEG.net ****
+* source I-NAND
+.EXTERNAL INPUT IN
+.EXTERNAL INPUT VDD
+.EXTERNAL INPUT OUT
+.EXTERNAL INPUT GND
+M_M5         OUT IN VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+M_M6         OUT IN GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+
+**** RESUMING PRUEBA-NAND2.cir ****
+.END
+
+ERROR -- Model CMOSP used by M_M5 is undefined
+ERROR -- Model CMOSN used by M_M6 is undefined

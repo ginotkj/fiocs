@@ -1,7 +1,7 @@
 
-**** 11/11/09 12:27:21 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 04/07/10 16:40:00 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-002\i-testcurrent-002-pspicefiles\schematic1\test.sim
+ ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-002\OrCAD\i-testcurrent-002-pspicefiles\schematic1\te
 
 
  ****     CIRCUIT DESCRIPTION
@@ -18,11 +18,11 @@
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
-* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 100p 0.1p 0.01p 
+.TRAN  0 2n 0.1p 0.01p 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 
@@ -31,16 +31,16 @@
 **** INCLUDING SCHEMATIC1.net ****
 * source I-TESTCURRENT-002
 I_I1         N14389 0 DC 0Adc AC 0Aac
-+EXP 0m 1m 1.5p .5p 4p 1p
++EXP 0m 1m 500p 15p 510p 500p
 R_R1         N14389 N14398  1k TC=0,0 
 R_R2         0 N14398  1k TC=0,0 
 
 **** RESUMING test.cir ****
 .END
 
-**** 11/11/09 12:27:21 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 04/07/10 16:40:00 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-002\i-testcurrent-002-pspicefiles\schematic1\test.sim
+ ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-002\OrCAD\i-testcurrent-002-pspicefiles\schematic1\te
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -68,9 +68,9 @@ R_R2         0 N14398  1k TC=0,0
 
           JOB CONCLUDED
 
-**** 11/11/09 12:27:21 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 04/07/10 16:40:00 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-002\i-testcurrent-002-pspicefiles\schematic1\test.sim
+ ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-002\OrCAD\i-testcurrent-002-pspicefiles\schematic1\te
 
 
  ****     JOB STATISTICS SUMMARY
@@ -80,5 +80,5 @@ R_R2         0 N14398  1k TC=0,0
 
 
 
-  Total job time (using Solver 1)   =         .86
+  Total job time (using Solver 1)   =       10.53
 

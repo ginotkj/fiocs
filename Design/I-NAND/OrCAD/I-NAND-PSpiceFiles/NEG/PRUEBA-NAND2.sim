@@ -2,18 +2,18 @@
 
 @Settings: 3 1
 @General:
-ProfileName= "bias" 
-ProfileFile= "bias.sim" 
-Connectivity= "TEST.net" 
-NetlistFile= "bias.cir" 
-DataFile= "bias.dat" 
-OutFile= "bias.out" 
+ProfileName= "PRUEBA-NAND2" 
+ProfileFile= "PRUEBA-NAND2.sim" 
+Connectivity= "NEG.net" 
+NetlistFile= "PRUEBA-NAND2.cir" 
+DataFile= "PRUEBA-NAND2.dat" 
+OutFile= "PRUEBA-NAND2.out" 
 Notes=
 @#$BEGINNOTES
 @#$ENDNOTES
 @End General
 @Analysis: 0 0
-+0 0 0 
++0 0 0 0 
 +0 "1000ns" 
 +1 "" 
 +2 "0" 
@@ -49,7 +49,7 @@ Notes=
 +2 "" 
 @End Analysis
 @Analysis: 4 0
-+0 0 1 0 0 0 3 0 
++0 0 1 0 0 0 3 0 0 0
 +0 "" 
 +1 "" 
 +2 "" 
@@ -110,6 +110,7 @@ SaveFile 0 ""
 @End Analysis
 @Analysis: 11 1
 + 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
++ 0 0 0 0 0 0 0 0 0
 @End Analysis
 @Analysis: 12 0
 +2236960 0
@@ -121,4 +122,16 @@ SaveFile 0 ""
 +1 1 1 "*" 
 @End Analysis
 @Analysis: 15 0
+@End Analysis
+@Analysis: 16 0
++0 "0" 
++1 "0" 
++2 "chkpt_default, , ," 
+@End Analysis
+@Analysis: 17 0
++0 "-1" 
++1 "" 
++2 "-1" 
++3 "-1" 
++4 "1" 
 @End Analysis

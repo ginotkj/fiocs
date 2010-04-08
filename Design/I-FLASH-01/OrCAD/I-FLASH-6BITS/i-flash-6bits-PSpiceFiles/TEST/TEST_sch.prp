@@ -497,7 +497,7 @@
             ("level"	"0")
             ("model_params"
                 ("VALUE"
-                    ("value"	"5k")
+                    ("value"	"10k")
                     ("pspice_param"	"VALUE")
                     ("distrib"	"FLAT")
                 )
@@ -729,9 +729,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("1R-DIV.R3"
+        ("1R-DIV.R19"
             ("device_name"	"R")
-            ("pspice_path"	"R_1R-DIV_R3")
+            ("pspice_path"	"R_1R-DIV_R19")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -746,9 +746,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("1R-DIV.R19"
+        ("1R-DIV.R3"
             ("device_name"	"R")
-            ("pspice_path"	"R_1R-DIV_R19")
+            ("pspice_path"	"R_1R-DIV_R3")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1126,7 +1126,7 @@
             ("level"	"0")
             ("model_params"
                 ("VALUE"
-                    ("value"	"5k")
+                    ("value"	"10k")
                     ("pspice_param"	"VALUE")
                     ("distrib"	"FLAT")
                 )
@@ -1273,9 +1273,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("1R-DIV.R61"
+        ("1R-DIV.R40"
             ("device_name"	"R")
-            ("pspice_path"	"R_1R-DIV_R61")
+            ("pspice_path"	"R_1R-DIV_R40")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1290,9 +1290,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("1R-DIV.R40"
+        ("1R-DIV.R61"
             ("device_name"	"R")
-            ("pspice_path"	"R_1R-DIV_R40")
+            ("pspice_path"	"R_1R-DIV_R61")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1352,6 +1352,23 @@
                 )
             )
         )
+        ("1R-DIV.R54"
+            ("device_name"	"R")
+            ("pspice_path"	"R_1R-DIV_R54")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10k")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
         ("1R-DIV.R12"
             ("device_name"	"R")
             ("pspice_path"	"R_1R-DIV_R12")
@@ -1372,23 +1389,6 @@
         ("1R-DIV.R41"
             ("device_name"	"R")
             ("pspice_path"	"R_1R-DIV_R41")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10k")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("1R-DIV.R54"
-            ("device_name"	"R")
-            ("pspice_path"	"R_1R-DIV_R54")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1715,7 +1715,7 @@
             ("level"	"0")
             ("model_params"
                 ("VALUE"
-                    ("value"	"5k")
+                    ("value"	"10k")
                     ("pspice_param"	"VALUE")
                     ("distrib"	"FLAT")
                 )
@@ -1947,9 +1947,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("2R-DIV.R3"
+        ("2R-DIV.R19"
             ("device_name"	"R")
-            ("pspice_path"	"R_2R-DIV_R3")
+            ("pspice_path"	"R_2R-DIV_R19")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1964,9 +1964,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("2R-DIV.R19"
+        ("2R-DIV.R3"
             ("device_name"	"R")
-            ("pspice_path"	"R_2R-DIV_R19")
+            ("pspice_path"	"R_2R-DIV_R3")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2344,7 +2344,7 @@
             ("level"	"0")
             ("model_params"
                 ("VALUE"
-                    ("value"	"5k")
+                    ("value"	"10k")
                     ("pspice_param"	"VALUE")
                     ("distrib"	"FLAT")
                 )
@@ -2491,9 +2491,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("2R-DIV.R61"
+        ("2R-DIV.R40"
             ("device_name"	"R")
-            ("pspice_path"	"R_2R-DIV_R61")
+            ("pspice_path"	"R_2R-DIV_R40")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2508,9 +2508,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("2R-DIV.R40"
+        ("2R-DIV.R61"
             ("device_name"	"R")
-            ("pspice_path"	"R_2R-DIV_R40")
+            ("pspice_path"	"R_2R-DIV_R61")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2570,6 +2570,23 @@
                 )
             )
         )
+        ("2R-DIV.R54"
+            ("device_name"	"R")
+            ("pspice_path"	"R_2R-DIV_R54")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10k")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
         ("2R-DIV.R12"
             ("device_name"	"R")
             ("pspice_path"	"R_2R-DIV_R12")
@@ -2590,23 +2607,6 @@
         ("2R-DIV.R41"
             ("device_name"	"R")
             ("pspice_path"	"R_2R-DIV_R41")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10k")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("2R-DIV.R54"
-            ("device_name"	"R")
-            ("pspice_path"	"R_2R-DIV_R54")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2706,7 +2706,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"2.4")
+                    ("value"	"2.6")
                     ("pspice_param"	"DC")
                 )
             )
