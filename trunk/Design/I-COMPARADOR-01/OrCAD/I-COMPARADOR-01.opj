@@ -145,16 +145,19 @@
          "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
-         "TEST")
+         "S-COMP")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
-         "S-COMP")
-      (Path "Design Resources" "Library")
+         "Design Cache")
       (Path "Outputs")
       (Path "Outputs"
          "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.olb")
+      (Path "Outputs"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.olb"
+         "S-COMP")
       (Select "Outputs"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.olb"))
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.olb"
+         "S-COMP" "S-COMP"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

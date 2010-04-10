@@ -1,0 +1,46 @@
+*****************************************
+
+******* Analysis Started On:Fri Apr 09 19:14:00 2010
+
+Advance Analyses Project File Name : D:/Documents/TESIS/fiocs/Design/I-FLASH-01/OrCAD/I-FLASH-6BITS/i-flash-6bits-PSpiceFiles/PRUEBA/PRUEBA.$ap
+
+
+Processing analysis specifications
+
+Listing Profiles:
+ - transient.sim
+
+
+-- Loading simulation profile transient.sim --
+
+
+************ Parametric sweep Run 1 ************
+
+Param : va.dc  (V_VA.DC) = 200m
+
+Specs : max(v(u7.u2.d-msb)) = 3.29818463325500
+Specs : max(v(u7.u2.d-5sb)) = 3.29999399185181
+Specs : max(v(u7.u2.d-4sb)) = 3.29999399185181
+Specs : max(v(u7.u2.d-3sb)) = 3.29999399185181
+Specs : max(v(u7.u2.d-2sb)) = 3.29999518394470
+Specs : max(v(u7.u2.d-lsb)) = 3.29999399185181
+
+
+************ Parametric sweep Run 2 ************
+
+Param : va.dc  (V_VA.DC) = 245m
+
+Specs : max(v(u7.u2.d-msb)) = 3.29817748069763
+Specs : max(v(u7.u2.d-5sb)) = 3.29999399185181
+Specs : max(v(u7.u2.d-4sb)) = 3.29999399185181
+Specs : max(v(u7.u2.d-3sb)) = 3.29999399185181
+Specs : max(v(u7.u2.d-2sb)) = 3.29999518394470
+Specs : max(v(u7.u2.d-lsb)) = 3.75980926037300u
+Analysis stopped
+
+******* Analysis stopped at:Fri Apr 09 19:18:14 2010
+
+Analysis time: 00:04:14
+
+
+End of advanced analysis session
