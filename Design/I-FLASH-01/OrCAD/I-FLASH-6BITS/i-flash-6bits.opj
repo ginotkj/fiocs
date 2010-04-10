@@ -77,10 +77,20 @@
       (ActiveProfile ".\i-flash-6bits-pspicefiles\prueba\transient.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (S-COMP
+      (FullPartName "S-COMP.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-COMPARADOR-01\ORCAD\I-COMPARADOR-01.OLB")
+      (DeviceIndex "0"))
     (R
       (FullPartName "R.Normal")
       (LibraryName
          "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (S-COMP_0
+      (FullPartName "S-COMP_0.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
       (DeviceIndex "0"))
     (VCC
       (LibraryName "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
@@ -163,11 +173,12 @@
       (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
       (DeviceIndex "0")))
   (LastUsedLibraryBrowseDirectory
-     "C:\OrCAD\OrCAD_16.0\tools\capture\library\pspice")
+     "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD")
   (MPSSessionName "FABRICIO")
   (GlobalState
     (FileView
       (Path "Design Resources")
+      (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
@@ -176,12 +187,12 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 1120 953 -8 -30 0 368 0 812"))
+        (Placement "44 0 1 160 953 -8 -30 0 368 0 812"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 320 957 -8 -30 250 1973 250 909")
+        (Placement "44 2 3 -1 -1 -8 -30 275 1998 275 934")
         (Scroll "0 0")
         (Zoom "129")
         (Occurrence "/"))
@@ -192,7 +203,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 1 160 957 -8 -30 0 1694 0 659")
+        (Placement "44 0 1 -1 -1 -8 -30 75 1769 75 734")
         (Scroll "0 0")
         (Zoom "129")
         (Occurrence "/U7"))
@@ -203,7 +214,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 1 320 957 -8 -30 25 1719 25 684")
+        (Placement "44 0 1 -1 -1 -8 -30 100 1794 100 759")
         (Scroll "0 0")
         (Zoom "129")
         (Occurrence "/U7/U2"))
@@ -214,7 +225,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 800 953 -8 -30 50 1744 50 709")
+        (Placement "44 0 1 -1 -1 -8 -30 125 1819 125 784")
         (Scroll "0 0")
         (Zoom "129")
         (Occurrence "/U7/U2"))
@@ -225,33 +236,11 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 640 953 -8 -30 75 1769 75 734")
-        (Scroll "60 35")
-        (Zoom "258")
+        (Placement "44 0 1 -1 -1 -8 -30 150 1844 150 809")
+        (Scroll "0 0")
+        (Zoom "129")
         (Occurrence "/U7/U2"))
       (Path
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
       (Schematic "S-FLASH-64")
-      (Page "S3-FLASH-64"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 200 1894 200 859")
-        (Scroll "0 0")
-        (Zoom "129")
-        (Occurrence "/U7/U2/U9"))
-      (Path
-         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.DSN")
-      (Schematic "S-DECODER")
-      (Page "S1-DECODER"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 225 1919 225 884")
-        (Scroll "0 0")
-        (Zoom "129")
-        (Occurrence "/U7/U2/C1"))
-      (Path
-         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-COMPARADOR-01\ORCAD\I-COMPARADOR-01.OLB")
-      (Schematic "S-COMP")
-      (Page "S-COMP"))))
+      (Page "S3-FLASH-64"))))

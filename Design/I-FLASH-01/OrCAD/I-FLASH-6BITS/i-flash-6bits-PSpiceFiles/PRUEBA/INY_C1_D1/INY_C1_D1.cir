@@ -1,0 +1,19 @@
+** Profile: "PRUEBA-INY_C1_D1"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-PSpiceFiles\PRUEBA\INY_C1_D1.sim ] 
+
+** Creating circuit file "INY_C1_D1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-flash-6bits-pspicefiles/i-flash-6bits.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\PRUEBA.net" 
+
+
+.END

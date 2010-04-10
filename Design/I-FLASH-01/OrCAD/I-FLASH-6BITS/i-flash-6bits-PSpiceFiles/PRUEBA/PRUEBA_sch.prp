@@ -53,7 +53,6 @@
                 ("device_max_ops")
             )
         )
-        ("IEXP")
         ("VDC")
     )
     ("instances"
@@ -72,21 +71,6 @@
                 ("POWER"	"0.25")
                 ("SLOPE"	"0.005")
                 ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("I5"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_I5")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
             )
         )
         ("R7"
@@ -121,21 +105,6 @@
                 ("POWER"	"0.25")
                 ("SLOPE"	"0.005")
                 ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
             )
         )
         ("U7.1R-DIV.R42"
@@ -2585,23 +2554,6 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("R16"
-            ("device_name"	"R")
-            ("pspice_path"	"R_R16")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"1k")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
         ("R11"
             ("device_name"	"R")
             ("pspice_path"	"R_R11")
@@ -2641,21 +2593,6 @@
                 )
             )
         )
-        ("I2"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_I2")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
         ("R12"
             ("device_name"	"R")
             ("pspice_path"	"R_R12")
@@ -2679,40 +2616,8 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"2.22")
+                    ("value"	"3")
                     ("pspice_param"	"DC")
-                )
-            )
-        )
-        ("R14"
-            ("device_name"	"R")
-            ("pspice_path"	"R_R14")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"1k")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("I3"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_I3")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
                 )
             )
         )
@@ -2723,23 +2628,6 @@
             ("model_params"
                 ("VALUE"
                     ("value"	"100k")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("R17"
-            ("device_name"	"R")
-            ("pspice_path"	"R_R17")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"1k")
                     ("pspice_param"	"VALUE")
                     ("distrib"	"FLAT")
                 )
@@ -2784,21 +2672,6 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("I4"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_I4")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
         ("R4"
             ("device_name"	"R")
             ("pspice_path"	"R_R4")
@@ -2823,23 +2696,6 @@
             ("model_params"
                 ("VALUE"
                     ("value"	"100k")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("R15"
-            ("device_name"	"R")
-            ("pspice_path"	"R_R15")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"1k")
                     ("pspice_param"	"VALUE")
                     ("distrib"	"FLAT")
                 )
