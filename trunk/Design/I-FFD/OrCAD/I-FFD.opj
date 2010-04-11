@@ -189,13 +189,16 @@
       (Path "Design Resources")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn" "S-FFD-nands")
       (Path "Outputs")
       (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.olb")
-      (Select "Outputs" "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.olb"
-         "S-FFD-nands"))
+      (Select "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn" "S-FFD-nands"
+         "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 0 996 -8 -30 0 453 0 1023"))
+        (Placement "44 2 3 0 996 -8 -30 0 453 0 816"))
       (Tab 0))))
