@@ -100,15 +100,21 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-2")
       (Path "Outputs")
-      (Path "PSpice Resources")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-2"
-         "NAND-2"))
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
+         "NAND-2")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
+         "NAND-3")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
+         "NAND-4")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
+         "NAND-5")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
+         "NAND-7")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
+         "NAND-8")
+      (Path "PSpice Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

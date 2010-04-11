@@ -107,9 +107,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R42"
+        ("CONV.1R-DIV.R42"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R42")
+            ("pspice_path"	"R_CONV_1R-DIV_R42")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -124,9 +124,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R15"
+        ("CONV.1R-DIV.R15"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R15")
+            ("pspice_path"	"R_CONV_1R-DIV_R15")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -141,9 +141,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R55"
+        ("CONV.1R-DIV.R55"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R55")
+            ("pspice_path"	"R_CONV_1R-DIV_R55")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -158,9 +158,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R63"
+        ("CONV.1R-DIV.R63"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R63")
+            ("pspice_path"	"R_CONV_1R-DIV_R63")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -175,9 +175,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R29"
+        ("CONV.1R-DIV.R29"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R29")
+            ("pspice_path"	"R_CONV_1R-DIV_R29")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -192,9 +192,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R68"
+        ("CONV.1R-DIV.R68"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R68")
+            ("pspice_path"	"R_CONV_1R-DIV_R68")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -209,9 +209,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R43"
+        ("CONV.1R-DIV.R43"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R43")
+            ("pspice_path"	"R_CONV_1R-DIV_R43")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -226,9 +226,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R56"
+        ("CONV.1R-DIV.R56"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R56")
+            ("pspice_path"	"R_CONV_1R-DIV_R56")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -243,9 +243,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R30"
+        ("CONV.1R-DIV.R30"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R30")
+            ("pspice_path"	"R_CONV_1R-DIV_R30")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -260,9 +260,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R16"
+        ("CONV.1R-DIV.R16"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R16")
+            ("pspice_path"	"R_CONV_1R-DIV_R16")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -277,9 +277,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R70"
+        ("CONV.1R-DIV.R70"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R70")
+            ("pspice_path"	"R_CONV_1R-DIV_R70")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -294,9 +294,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R8"
+        ("CONV.1R-DIV.R8"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R8")
+            ("pspice_path"	"R_CONV_1R-DIV_R8")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -311,9 +311,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R1"
+        ("CONV.1R-DIV.R1"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R1")
+            ("pspice_path"	"R_CONV_1R-DIV_R1")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -328,9 +328,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R64"
+        ("CONV.1R-DIV.R64"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R64")
+            ("pspice_path"	"R_CONV_1R-DIV_R64")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -345,9 +345,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R44"
+        ("CONV.1R-DIV.R44"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R44")
+            ("pspice_path"	"R_CONV_1R-DIV_R44")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -362,9 +362,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R57"
+        ("CONV.1R-DIV.R57"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R57")
+            ("pspice_path"	"R_CONV_1R-DIV_R57")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -379,9 +379,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R31"
+        ("CONV.1R-DIV.R31"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R31")
+            ("pspice_path"	"R_CONV_1R-DIV_R31")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -396,9 +396,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R17"
+        ("CONV.1R-DIV.R17"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R17")
+            ("pspice_path"	"R_CONV_1R-DIV_R17")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -413,9 +413,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R65"
+        ("CONV.1R-DIV.R65"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R65")
+            ("pspice_path"	"R_CONV_1R-DIV_R65")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -430,9 +430,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R2"
+        ("CONV.1R-DIV.R2"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R2")
+            ("pspice_path"	"R_CONV_1R-DIV_R2")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -447,9 +447,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R45"
+        ("CONV.1R-DIV.R45"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R45")
+            ("pspice_path"	"R_CONV_1R-DIV_R45")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -464,9 +464,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R58"
+        ("CONV.1R-DIV.R58"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R58")
+            ("pspice_path"	"R_CONV_1R-DIV_R58")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -481,9 +481,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R18"
+        ("CONV.1R-DIV.R18"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R18")
+            ("pspice_path"	"R_CONV_1R-DIV_R18")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -498,9 +498,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R32"
+        ("CONV.1R-DIV.R32"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R32")
+            ("pspice_path"	"R_CONV_1R-DIV_R32")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -515,9 +515,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R66"
+        ("CONV.1R-DIV.R66"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R66")
+            ("pspice_path"	"R_CONV_1R-DIV_R66")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -532,9 +532,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R9"
+        ("CONV.1R-DIV.R9"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R9")
+            ("pspice_path"	"R_CONV_1R-DIV_R9")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -549,9 +549,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R46"
+        ("CONV.1R-DIV.R46"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R46")
+            ("pspice_path"	"R_CONV_1R-DIV_R46")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -566,9 +566,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R3"
+        ("CONV.1R-DIV.R3"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R3")
+            ("pspice_path"	"R_CONV_1R-DIV_R3")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -583,9 +583,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R19"
+        ("CONV.1R-DIV.R19"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R19")
+            ("pspice_path"	"R_CONV_1R-DIV_R19")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -600,9 +600,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R33"
+        ("CONV.1R-DIV.R33"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R33")
+            ("pspice_path"	"R_CONV_1R-DIV_R33")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -617,9 +617,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R67"
+        ("CONV.1R-DIV.R67"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R67")
+            ("pspice_path"	"R_CONV_1R-DIV_R67")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -634,9 +634,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R47"
+        ("CONV.1R-DIV.R47"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R47")
+            ("pspice_path"	"R_CONV_1R-DIV_R47")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -651,9 +651,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R20"
+        ("CONV.1R-DIV.R20"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R20")
+            ("pspice_path"	"R_CONV_1R-DIV_R20")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -668,9 +668,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R34"
+        ("CONV.1R-DIV.R34"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R34")
+            ("pspice_path"	"R_CONV_1R-DIV_R34")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -685,9 +685,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R69"
+        ("CONV.1R-DIV.R69"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R69")
+            ("pspice_path"	"R_CONV_1R-DIV_R69")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -702,9 +702,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R10"
+        ("CONV.1R-DIV.R10"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R10")
+            ("pspice_path"	"R_CONV_1R-DIV_R10")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -719,9 +719,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R48"
+        ("CONV.1R-DIV.R48"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R48")
+            ("pspice_path"	"R_CONV_1R-DIV_R48")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -736,9 +736,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R21"
+        ("CONV.1R-DIV.R21"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R21")
+            ("pspice_path"	"R_CONV_1R-DIV_R21")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -753,9 +753,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R4"
+        ("CONV.1R-DIV.R4"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R4")
+            ("pspice_path"	"R_CONV_1R-DIV_R4")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -770,9 +770,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R35"
+        ("CONV.1R-DIV.R35"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R35")
+            ("pspice_path"	"R_CONV_1R-DIV_R35")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -787,9 +787,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R49"
+        ("CONV.1R-DIV.R49"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R49")
+            ("pspice_path"	"R_CONV_1R-DIV_R49")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -804,9 +804,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R37"
+        ("CONV.1R-DIV.R37"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R37")
+            ("pspice_path"	"R_CONV_1R-DIV_R37")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -821,9 +821,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R22"
+        ("CONV.1R-DIV.R22"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R22")
+            ("pspice_path"	"R_CONV_1R-DIV_R22")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -838,9 +838,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R50"
+        ("CONV.1R-DIV.R50"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R50")
+            ("pspice_path"	"R_CONV_1R-DIV_R50")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -855,9 +855,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R36"
+        ("CONV.1R-DIV.R36"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R36")
+            ("pspice_path"	"R_CONV_1R-DIV_R36")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -872,9 +872,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R5"
+        ("CONV.1R-DIV.R5"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R5")
+            ("pspice_path"	"R_CONV_1R-DIV_R5")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -889,9 +889,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R38"
+        ("CONV.1R-DIV.R38"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R38")
+            ("pspice_path"	"R_CONV_1R-DIV_R38")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -906,9 +906,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R51"
+        ("CONV.1R-DIV.R51"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R51")
+            ("pspice_path"	"R_CONV_1R-DIV_R51")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -923,9 +923,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R23"
+        ("CONV.1R-DIV.R23"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R23")
+            ("pspice_path"	"R_CONV_1R-DIV_R23")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -940,9 +940,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R11"
+        ("CONV.1R-DIV.R11"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R11")
+            ("pspice_path"	"R_CONV_1R-DIV_R11")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -957,9 +957,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R59"
+        ("CONV.1R-DIV.R59"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R59")
+            ("pspice_path"	"R_CONV_1R-DIV_R59")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -974,9 +974,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R25"
+        ("CONV.1R-DIV.R25"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R25")
+            ("pspice_path"	"R_CONV_1R-DIV_R25")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -991,9 +991,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R39"
+        ("CONV.1R-DIV.R39"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R39")
+            ("pspice_path"	"R_CONV_1R-DIV_R39")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1008,9 +1008,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R24"
+        ("CONV.1R-DIV.R24"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R24")
+            ("pspice_path"	"R_CONV_1R-DIV_R24")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1025,9 +1025,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R26"
+        ("CONV.1R-DIV.R26"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R26")
+            ("pspice_path"	"R_CONV_1R-DIV_R26")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1042,9 +1042,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R52"
+        ("CONV.1R-DIV.R52"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R52")
+            ("pspice_path"	"R_CONV_1R-DIV_R52")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1059,9 +1059,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R60"
+        ("CONV.1R-DIV.R60"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R60")
+            ("pspice_path"	"R_CONV_1R-DIV_R60")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1076,9 +1076,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R6"
+        ("CONV.1R-DIV.R6"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R6")
+            ("pspice_path"	"R_CONV_1R-DIV_R6")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1093,9 +1093,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R27"
+        ("CONV.1R-DIV.R27"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R27")
+            ("pspice_path"	"R_CONV_1R-DIV_R27")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1110,9 +1110,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R61"
+        ("CONV.1R-DIV.R61"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R61")
+            ("pspice_path"	"R_CONV_1R-DIV_R61")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1127,9 +1127,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R40"
+        ("CONV.1R-DIV.R40"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R40")
+            ("pspice_path"	"R_CONV_1R-DIV_R40")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1144,9 +1144,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R53"
+        ("CONV.1R-DIV.R53"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R53")
+            ("pspice_path"	"R_CONV_1R-DIV_R53")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1161,9 +1161,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R13"
+        ("CONV.1R-DIV.R13"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R13")
+            ("pspice_path"	"R_CONV_1R-DIV_R13")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1178,9 +1178,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.V1"
+        ("CONV.1R-DIV.V1"
             ("device_name"	"VDC")
-            ("pspice_path"	"V_U7_1R-DIV_V1")
+            ("pspice_path"	"V_CONV_1R-DIV_V1")
             ("level"	"0")
             ("model_params"
                 ("DC"
@@ -1189,9 +1189,9 @@
                 )
             )
         )
-        ("U7.1R-DIV.R12"
+        ("CONV.1R-DIV.R12"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R12")
+            ("pspice_path"	"R_CONV_1R-DIV_R12")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1206,9 +1206,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R41"
+        ("CONV.1R-DIV.R41"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R41")
+            ("pspice_path"	"R_CONV_1R-DIV_R41")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1223,9 +1223,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R54"
+        ("CONV.1R-DIV.R54"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R54")
+            ("pspice_path"	"R_CONV_1R-DIV_R54")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1240,9 +1240,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R14"
+        ("CONV.1R-DIV.R14"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R14")
+            ("pspice_path"	"R_CONV_1R-DIV_R14")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1257,9 +1257,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R62"
+        ("CONV.1R-DIV.R62"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R62")
+            ("pspice_path"	"R_CONV_1R-DIV_R62")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1274,9 +1274,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R28"
+        ("CONV.1R-DIV.R28"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R28")
+            ("pspice_path"	"R_CONV_1R-DIV_R28")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1291,9 +1291,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.1R-DIV.R7"
+        ("CONV.1R-DIV.R7"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_1R-DIV_R7")
+            ("pspice_path"	"R_CONV_1R-DIV_R7")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1308,9 +1308,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R42"
+        ("CONV.2R-DIV.R42"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R42")
+            ("pspice_path"	"R_CONV_2R-DIV_R42")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1325,9 +1325,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R15"
+        ("CONV.2R-DIV.R15"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R15")
+            ("pspice_path"	"R_CONV_2R-DIV_R15")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1342,9 +1342,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R55"
+        ("CONV.2R-DIV.R55"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R55")
+            ("pspice_path"	"R_CONV_2R-DIV_R55")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1359,9 +1359,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R63"
+        ("CONV.2R-DIV.R63"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R63")
+            ("pspice_path"	"R_CONV_2R-DIV_R63")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1376,9 +1376,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R29"
+        ("CONV.2R-DIV.R29"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R29")
+            ("pspice_path"	"R_CONV_2R-DIV_R29")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1393,9 +1393,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R68"
+        ("CONV.2R-DIV.R68"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R68")
+            ("pspice_path"	"R_CONV_2R-DIV_R68")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1410,9 +1410,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R43"
+        ("CONV.2R-DIV.R43"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R43")
+            ("pspice_path"	"R_CONV_2R-DIV_R43")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1427,9 +1427,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R56"
+        ("CONV.2R-DIV.R56"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R56")
+            ("pspice_path"	"R_CONV_2R-DIV_R56")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1444,9 +1444,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R30"
+        ("CONV.2R-DIV.R30"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R30")
+            ("pspice_path"	"R_CONV_2R-DIV_R30")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1461,9 +1461,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R16"
+        ("CONV.2R-DIV.R16"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R16")
+            ("pspice_path"	"R_CONV_2R-DIV_R16")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1478,9 +1478,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R70"
+        ("CONV.2R-DIV.R70"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R70")
+            ("pspice_path"	"R_CONV_2R-DIV_R70")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1495,9 +1495,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R8"
+        ("CONV.2R-DIV.R8"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R8")
+            ("pspice_path"	"R_CONV_2R-DIV_R8")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1512,9 +1512,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R1"
+        ("CONV.2R-DIV.R1"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R1")
+            ("pspice_path"	"R_CONV_2R-DIV_R1")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1529,9 +1529,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R64"
+        ("CONV.2R-DIV.R64"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R64")
+            ("pspice_path"	"R_CONV_2R-DIV_R64")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1546,9 +1546,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R44"
+        ("CONV.2R-DIV.R44"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R44")
+            ("pspice_path"	"R_CONV_2R-DIV_R44")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1563,9 +1563,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R57"
+        ("CONV.2R-DIV.R57"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R57")
+            ("pspice_path"	"R_CONV_2R-DIV_R57")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1580,9 +1580,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R31"
+        ("CONV.2R-DIV.R31"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R31")
+            ("pspice_path"	"R_CONV_2R-DIV_R31")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1597,9 +1597,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R17"
+        ("CONV.2R-DIV.R17"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R17")
+            ("pspice_path"	"R_CONV_2R-DIV_R17")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1614,9 +1614,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R65"
+        ("CONV.2R-DIV.R65"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R65")
+            ("pspice_path"	"R_CONV_2R-DIV_R65")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1631,9 +1631,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R2"
+        ("CONV.2R-DIV.R2"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R2")
+            ("pspice_path"	"R_CONV_2R-DIV_R2")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1648,9 +1648,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R45"
+        ("CONV.2R-DIV.R45"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R45")
+            ("pspice_path"	"R_CONV_2R-DIV_R45")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1665,9 +1665,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R58"
+        ("CONV.2R-DIV.R58"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R58")
+            ("pspice_path"	"R_CONV_2R-DIV_R58")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1682,9 +1682,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R18"
+        ("CONV.2R-DIV.R18"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R18")
+            ("pspice_path"	"R_CONV_2R-DIV_R18")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1699,9 +1699,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R32"
+        ("CONV.2R-DIV.R32"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R32")
+            ("pspice_path"	"R_CONV_2R-DIV_R32")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1716,9 +1716,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R66"
+        ("CONV.2R-DIV.R66"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R66")
+            ("pspice_path"	"R_CONV_2R-DIV_R66")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1733,9 +1733,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R9"
+        ("CONV.2R-DIV.R9"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R9")
+            ("pspice_path"	"R_CONV_2R-DIV_R9")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1750,9 +1750,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R46"
+        ("CONV.2R-DIV.R46"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R46")
+            ("pspice_path"	"R_CONV_2R-DIV_R46")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1767,9 +1767,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R3"
+        ("CONV.2R-DIV.R3"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R3")
+            ("pspice_path"	"R_CONV_2R-DIV_R3")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1784,9 +1784,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R19"
+        ("CONV.2R-DIV.R19"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R19")
+            ("pspice_path"	"R_CONV_2R-DIV_R19")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1801,9 +1801,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R33"
+        ("CONV.2R-DIV.R33"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R33")
+            ("pspice_path"	"R_CONV_2R-DIV_R33")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1818,9 +1818,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R67"
+        ("CONV.2R-DIV.R67"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R67")
+            ("pspice_path"	"R_CONV_2R-DIV_R67")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1835,9 +1835,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R47"
+        ("CONV.2R-DIV.R47"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R47")
+            ("pspice_path"	"R_CONV_2R-DIV_R47")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1852,9 +1852,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R20"
+        ("CONV.2R-DIV.R20"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R20")
+            ("pspice_path"	"R_CONV_2R-DIV_R20")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1869,9 +1869,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R34"
+        ("CONV.2R-DIV.R34"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R34")
+            ("pspice_path"	"R_CONV_2R-DIV_R34")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1886,9 +1886,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R69"
+        ("CONV.2R-DIV.R69"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R69")
+            ("pspice_path"	"R_CONV_2R-DIV_R69")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1903,9 +1903,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R10"
+        ("CONV.2R-DIV.R10"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R10")
+            ("pspice_path"	"R_CONV_2R-DIV_R10")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1920,9 +1920,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R48"
+        ("CONV.2R-DIV.R48"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R48")
+            ("pspice_path"	"R_CONV_2R-DIV_R48")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1937,9 +1937,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R21"
+        ("CONV.2R-DIV.R21"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R21")
+            ("pspice_path"	"R_CONV_2R-DIV_R21")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1954,9 +1954,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R4"
+        ("CONV.2R-DIV.R4"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R4")
+            ("pspice_path"	"R_CONV_2R-DIV_R4")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1971,9 +1971,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R35"
+        ("CONV.2R-DIV.R35"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R35")
+            ("pspice_path"	"R_CONV_2R-DIV_R35")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1988,9 +1988,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R49"
+        ("CONV.2R-DIV.R49"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R49")
+            ("pspice_path"	"R_CONV_2R-DIV_R49")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2005,9 +2005,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R37"
+        ("CONV.2R-DIV.R37"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R37")
+            ("pspice_path"	"R_CONV_2R-DIV_R37")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2022,9 +2022,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R22"
+        ("CONV.2R-DIV.R22"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R22")
+            ("pspice_path"	"R_CONV_2R-DIV_R22")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2039,9 +2039,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R50"
+        ("CONV.2R-DIV.R50"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R50")
+            ("pspice_path"	"R_CONV_2R-DIV_R50")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2056,9 +2056,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R36"
+        ("CONV.2R-DIV.R36"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R36")
+            ("pspice_path"	"R_CONV_2R-DIV_R36")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2073,9 +2073,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R5"
+        ("CONV.2R-DIV.R5"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R5")
+            ("pspice_path"	"R_CONV_2R-DIV_R5")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2090,9 +2090,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R38"
+        ("CONV.2R-DIV.R38"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R38")
+            ("pspice_path"	"R_CONV_2R-DIV_R38")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2107,9 +2107,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R51"
+        ("CONV.2R-DIV.R51"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R51")
+            ("pspice_path"	"R_CONV_2R-DIV_R51")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2124,9 +2124,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R23"
+        ("CONV.2R-DIV.R23"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R23")
+            ("pspice_path"	"R_CONV_2R-DIV_R23")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2141,9 +2141,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R11"
+        ("CONV.2R-DIV.R11"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R11")
+            ("pspice_path"	"R_CONV_2R-DIV_R11")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2158,9 +2158,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R59"
+        ("CONV.2R-DIV.R59"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R59")
+            ("pspice_path"	"R_CONV_2R-DIV_R59")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2175,9 +2175,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R25"
+        ("CONV.2R-DIV.R25"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R25")
+            ("pspice_path"	"R_CONV_2R-DIV_R25")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2192,9 +2192,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R39"
+        ("CONV.2R-DIV.R39"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R39")
+            ("pspice_path"	"R_CONV_2R-DIV_R39")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2209,9 +2209,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R24"
+        ("CONV.2R-DIV.R24"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R24")
+            ("pspice_path"	"R_CONV_2R-DIV_R24")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2226,9 +2226,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R26"
+        ("CONV.2R-DIV.R26"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R26")
+            ("pspice_path"	"R_CONV_2R-DIV_R26")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2243,9 +2243,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R52"
+        ("CONV.2R-DIV.R52"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R52")
+            ("pspice_path"	"R_CONV_2R-DIV_R52")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2260,9 +2260,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R60"
+        ("CONV.2R-DIV.R60"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R60")
+            ("pspice_path"	"R_CONV_2R-DIV_R60")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2277,9 +2277,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R6"
+        ("CONV.2R-DIV.R6"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R6")
+            ("pspice_path"	"R_CONV_2R-DIV_R6")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2294,9 +2294,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R27"
+        ("CONV.2R-DIV.R27"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R27")
+            ("pspice_path"	"R_CONV_2R-DIV_R27")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2311,9 +2311,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R61"
+        ("CONV.2R-DIV.R61"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R61")
+            ("pspice_path"	"R_CONV_2R-DIV_R61")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2328,9 +2328,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R40"
+        ("CONV.2R-DIV.R40"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R40")
+            ("pspice_path"	"R_CONV_2R-DIV_R40")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2345,9 +2345,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R53"
+        ("CONV.2R-DIV.R53"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R53")
+            ("pspice_path"	"R_CONV_2R-DIV_R53")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2362,9 +2362,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R13"
+        ("CONV.2R-DIV.R13"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R13")
+            ("pspice_path"	"R_CONV_2R-DIV_R13")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2379,9 +2379,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.V1"
+        ("CONV.2R-DIV.V1"
             ("device_name"	"VDC")
-            ("pspice_path"	"V_U7_2R-DIV_V1")
+            ("pspice_path"	"V_CONV_2R-DIV_V1")
             ("level"	"0")
             ("model_params"
                 ("DC"
@@ -2390,9 +2390,9 @@
                 )
             )
         )
-        ("U7.2R-DIV.R12"
+        ("CONV.2R-DIV.R12"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R12")
+            ("pspice_path"	"R_CONV_2R-DIV_R12")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2407,9 +2407,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R41"
+        ("CONV.2R-DIV.R41"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R41")
+            ("pspice_path"	"R_CONV_2R-DIV_R41")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2424,9 +2424,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R54"
+        ("CONV.2R-DIV.R54"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R54")
+            ("pspice_path"	"R_CONV_2R-DIV_R54")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2441,9 +2441,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R14"
+        ("CONV.2R-DIV.R14"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R14")
+            ("pspice_path"	"R_CONV_2R-DIV_R14")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2458,9 +2458,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R62"
+        ("CONV.2R-DIV.R62"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R62")
+            ("pspice_path"	"R_CONV_2R-DIV_R62")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2475,9 +2475,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R28"
+        ("CONV.2R-DIV.R28"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R28")
+            ("pspice_path"	"R_CONV_2R-DIV_R28")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2492,9 +2492,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("U7.2R-DIV.R7"
+        ("CONV.2R-DIV.R7"
             ("device_name"	"R")
-            ("pspice_path"	"R_U7_2R-DIV_R7")
+            ("pspice_path"	"R_CONV_2R-DIV_R7")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
