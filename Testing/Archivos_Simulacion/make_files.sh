@@ -44,14 +44,15 @@ then
 	echo "" >> $dir/$drain.cir
 	echo "I_I1    $drain 0 DC 0Adc AC 0Aac" >> $dir/$drain.cir
 	echo "+EXP 0 5m 2n 2.004n 2.015n 500ps" >> $dir/$drain.cir
+	echo "" >> $dir/$drain.cir
 	echo "*TENSIONES DE SALIDA" >> $dir/$drain.cir
 	echo "" >> $dir/$drain.cir
-	echo ".PROBE/CSDF V([CONV_FLASH_D-MSB])" >> $dir/$drain.cir
-	echo ".PROBE/CSDF V([CONV_FLASH_D-5SB])" >> $dir/$drain.cir
-	echo ".PROBE/CSDF V([CONV_FLASH_D-4SB])" >> $dir/$drain.cir
-	echo ".PROBE/CSDF V([CONV_FLASH_D-3SB])" >> $dir/$drain.cir
-	echo ".PROBE/CSDF V([CONV_FLASH_D-2SB])" >> $dir/$drain.cir
-	echo ".PROBE/CSDF V([CONV_FLASH_D-LSB])" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([C_F_D-MSB])" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([C_F_D-5SB])" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([C_F_D-4SB])" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([C_F_D-3SB])" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([C_F_D-2SB])" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([C_F_D-LSB])" >> $dir/$drain.cir
 	echo "" >> $dir/$drain.cir
 	echo "*TENSION Y CORRIENTE EN EL PUNTO DE FALLA" >> $dir/$drain.cir
 	echo "" >> $dir/$drain.cir
