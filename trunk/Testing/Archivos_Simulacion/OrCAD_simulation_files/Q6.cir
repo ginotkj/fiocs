@@ -17,7 +17,8 @@
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
-.LIB "../../../i-flash-6bits-pspicefiles/i-flash-6bits.lib" 
+*.LIB "../../../i-flash-6bits-pspicefiles/i-flash-6bits.lib" 
+.LIB D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-PSpiceFiles\i-flash-6bits.lib" 
 * From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
