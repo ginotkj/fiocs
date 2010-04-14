@@ -18,7 +18,7 @@
 * Profile Libraries :
 * Local Libraries :
 *.LIB "../../../i-flash-6bits-pspicefiles/i-flash-6bits.lib" 
-.LIB D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-PSpiceFiles\i-flash-6bits.lib" 
+.LIB "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-PSpiceFiles\i-flash-6bits.lib" 
 * From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
@@ -3508,14 +3508,15 @@ R_R5         2SB N116990  100k
 
 I_I1    C_N117530 0 DC 0Adc AC 0Aac
 +EXP 0 5m 2n 2.004n 2.015n 500ps
+
 *TENSIONES DE SALIDA
 
-.PROBE/CSDF V([CONV_FLASH_D-MSB])
-.PROBE/CSDF V([CONV_FLASH_D-5SB])
-.PROBE/CSDF V([CONV_FLASH_D-4SB])
-.PROBE/CSDF V([CONV_FLASH_D-3SB])
-.PROBE/CSDF V([CONV_FLASH_D-2SB])
-.PROBE/CSDF V([CONV_FLASH_D-LSB])
+.PROBE/CSDF V([C_F_D-MSB])
+.PROBE/CSDF V([C_F_D-5SB])
+.PROBE/CSDF V([C_F_D-4SB])
+.PROBE/CSDF V([C_F_D-3SB])
+.PROBE/CSDF V([C_F_D-2SB])
+.PROBE/CSDF V([C_F_D-LSB])
 
 *TENSION Y CORRIENTE EN EL PUNTO DE FALLA
 
