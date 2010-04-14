@@ -179,4 +179,48 @@
       (Path
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
       (Schematic "PRUEBA")
-      (Page "PRUEBA"))))
+      (Page "PRUEBA"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 75 691 75 758")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/C"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
+      (Schematic "FLASH")
+      (Page "FLASH"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 100 716 100 783")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/C/F"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
+      (Schematic "S-FLASH-64")
+      (Page "S1-FLASH-64"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 125 741 125 808")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/C/F"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
+      (Schematic "S-FLASH-64")
+      (Page "S2-FLASH-64"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 150 766 150 833")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/C/F"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
+      (Schematic "S-FLASH-64")
+      (Page "S3-FLASH-64"))))
