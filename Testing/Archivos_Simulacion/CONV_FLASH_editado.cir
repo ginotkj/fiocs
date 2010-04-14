@@ -26,8 +26,8 @@
 .OPTIONS NODE
 .OPTIONS ITL1= 300
 .OPTIONS ITL2= 100
-.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
-.INC "..\PRUEBA.net" 
+*.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+*.INC "..\PRUEBA.net" 
 
 
 
@@ -3503,5 +3503,3 @@ R_R3         4SB N116990  100k
 R_R4         3SB N116990  100k  
 R_R5         2SB N116990  100k  
 
-**** RESUMING transient.cir ****
-.END
