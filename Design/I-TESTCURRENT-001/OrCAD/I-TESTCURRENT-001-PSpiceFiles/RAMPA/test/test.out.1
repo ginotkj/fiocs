@@ -1,0 +1,44 @@
+
+**** 04/15/10 10:54:10 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\I-TESTCURRENT-001-PSpiceFiles\RAMPA\test.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-testcurrent-001-pspicefiles/i-testcurrent-001.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 4n 1.5n 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\RAMPA.net" 
+
+
+
+**** INCLUDING RAMPA.net ****
+* source I-TESTCURRENT-001
+I_I2         N17580 GND_0 DC 0Adc AC 0Aac
++PULSE 0 4m 2n 30p 150p 0p 10n
+R_R1         N17580 ITEST  1k TC=0,0 
+R_R2         GND_0 ITEST  1k TC=0,0 
+
+**** RESUMING test.cir ****
+.END
+
+ERROR -- Node N17580 is floating
+ERROR -- Node GND_0 is floating
+ERROR -- Node ITEST is floating
