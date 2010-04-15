@@ -1,6 +1,5 @@
 ("FILE_TYPE"	"PMAP File"
     ("devices"
-        ("IEXP")
         ("IPULSE")
         ("R"
             ("info"
@@ -57,9 +56,9 @@
         )
     )
     ("instances"
-        ("I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_I1")
+        ("I2"
+            ("device_name"	"IPULSE")
+            ("pspice_path"	"I_I2")
             ("level"	"0")
             ("model_params"
                 ("DC"
@@ -72,9 +71,9 @@
                 )
             )
         )
-        ("I2"
+        ("I3"
             ("device_name"	"IPULSE")
-            ("pspice_path"	"I_I2")
+            ("pspice_path"	"I_I3")
             ("level"	"0")
             ("model_params"
                 ("DC"

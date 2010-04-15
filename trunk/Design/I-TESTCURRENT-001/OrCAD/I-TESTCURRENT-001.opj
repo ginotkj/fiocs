@@ -30,9 +30,16 @@
     (ANNOTATE_Reset_References_to_1 "FALSE")
     (ANNOTATE_No_Page_Number_Change "TRUE")
     (ANNOTATE_Property_Combine "{Value}{Source Package}")
-    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x"))
   (Folder "Outputs"
     (File ".\i-testcurrent-001-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (File ".\i-testcurrent-001-pspicefiles\doble-rampa\doble-rampa.net"
+      (Type "Report"))
+    (File ".\i-testcurrent-001-pspicefiles\rampa\rampa.net"
+      (Type "Report"))
+    (File ".\i-testcurrent-001-pspicefiles\exponencial\exponencial.net"
       (Type "Report")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
@@ -44,12 +51,28 @@
     (Folder "Include Files")
     (Folder "Simulation Profiles"
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-testcurrent-001-pspicefiles\schematic1\test.sim"
-        (DisplayName "SCHEMATIC1-test")
+         ".\i-testcurrent-001-pspicefiles\doble-rampa\test.sim"
+        (DisplayName "DOBLE-RAMPA-test")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-testcurrent-001-pspicefiles\schematic1\test.sim")))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-testcurrent-001-pspicefiles\rampa\test.sim"
+        (DisplayName "RAMPA-test")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-testcurrent-001-pspicefiles\exponencial\test.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-testcurrent-001-pspicefiles\exponencial\test.sim"
+        (DisplayName "EXPONENCIAL-test")
+        (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (IEXP
+      (FullPartName "IEXP.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (R
       (FullPartName "R.Normal")
       (LibraryName
@@ -97,26 +120,44 @@
       (FullPartName "VSTIM.Normal")
       (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
       (DeviceIndex "0")))
-  (LastUsedLibraryBrowseDirectory "LIBRARY\PSPICE")
+  (LastUsedLibraryBrowseDirectory
+     "C:\OrCAD\OrCAD_16.0\tools\capture\library\pspice")
   (MPSSessionName "FABRICIO")
   (GlobalState
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn")
+         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn")
       (Path "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
-         "SCHEMATIC1")
+         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
+         "EXPONENCIAL")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
+         "DOBLE-RAMPA")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
+         "RAMPA")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Simulation Profiles")
       (Select "Design Resources"
-         "D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
-         "SCHEMATIC1" "PAGE1"))
+         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
+         "RAMPA" "RAMPA"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -28 1 334 1 818"))
-      (Tab 0))))
+        (Placement "44 0 1 -1 -1 -8 -30 1 334 1 818"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 334 1978 22 717")
+        (Scroll "335 254")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-TESTCURRENT-001\ORCAD\I-TESTCURRENT-001.DSN")
+      (Schematic "EXPONENCIAL")
+      (Page "EXPONENCIAL"))))

@@ -1,7 +1,7 @@
 
-**** 11/11/09 15:48:11 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 04/15/10 10:49:05 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\i-testcurrent-001-pspicefiles\schematic1\test.sim
+ ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\schematic1\te
 
 
  ****     CIRCUIT DESCRIPTION
@@ -19,11 +19,11 @@
 * Profile Libraries :
 * Local Libraries :
 .LIB "../../../i-testcurrent-001-pspicefiles/i-testcurrent-001.lib" 
-* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 .20n 0.1p 0.001u 
+.TRAN  0 3n 1.5n 0.001u 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 
@@ -31,19 +31,19 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source I-TESTCURRENT-001
-I_I1         N20034 0 DC 0Adc AC 0Aac
-+EXP 0m 500u 1.5p .5p 2.5p 1.5p
-I_I2         N20034 0 DC 0Adc AC 0Aac
-+PULSE 0 200u 1.5p .8p 130p 9p 0
+I_I2         N20046 0 DC 0Adc AC 0Aac
++PULSE 0 4m 2n 30p 150p 0p 10n
+I_I3         N20046 0 DC 0Adc AC 0Aac
++PULSE 0 2m 2n 60p 1n 50p 10n
 R_R2         0 ITEST  1k TC=0,0 
-R_R1         N20034 ITEST  1k TC=0,0 
+R_R1         N20046 ITEST  1k TC=0,0 
 
 **** RESUMING test.cir ****
 .END
 
-**** 11/11/09 15:48:11 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 04/15/10 10:49:05 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\i-testcurrent-001-pspicefiles\schematic1\test.sim
+ ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\schematic1\te
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -56,7 +56,7 @@ R_R1         N20034 ITEST  1k TC=0,0
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(ITEST)    0.0000  (N20034)    0.0000 
+(ITEST)    0.0000  (N20046)    0.0000 
 
 
 
@@ -71,9 +71,9 @@ R_R1         N20034 ITEST  1k TC=0,0
 
           JOB CONCLUDED
 
-**** 11/11/09 15:48:11 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 04/15/10 10:49:05 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\TRUNK\Design\I-TESTCURRENT-001\i-testcurrent-001-pspicefiles\schematic1\test.sim
+ ** Profile: "SCHEMATIC1-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\schematic1\te
 
 
  ****     JOB STATISTICS SUMMARY
