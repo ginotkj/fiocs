@@ -1,7 +1,7 @@
 * source I-TESTCURRENT-001
-I_I1         N20034 0 DC 0Adc AC 0Aac
-+EXP 0m 500u 1.5p .5p 2.5p 1.5p
-I_I2         N20034 0 DC 0Adc AC 0Aac
-+PULSE 0 200u 1.5p .8p 130p 9p 0
+I_I2         N20046 0 DC 0Adc AC 0Aac
++PULSE 0 4m 2n 30p 150p 0p 10n
+I_I3         N20046 0 DC 0Adc AC 0Aac
++PULSE 0 2m 2n 60p 1n 50p 10n
 R_R2         0 ITEST  1k TC=0,0 
-R_R1         N20034 ITEST  1k TC=0,0 
+R_R1         N20046 ITEST  1k TC=0,0 
