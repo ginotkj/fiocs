@@ -23,8 +23,8 @@ mos=$(echo $line | grep ^M )
 if [ ! -z "$mos" ]
 then
     tran=$(echo $mos | awk '{print $1}')
-    gate=$(echo $mos | awk '{print $2}')
-    drain=$(echo $mos | awk '{print $3}')
+    gate=$(echo $mos | awk '{print $3}')
+    drain=$(echo $mos | awk '{print $2}')
     source=$(echo $mos | awk '{print $4}')
     bulk=$(echo $mos | awk '{print $5}')
     typo=$(echo $mos | awk '{print $6}')
@@ -58,10 +58,36 @@ then
 	echo "" >> $dir/$drain.cir
 	echo ".PROBE/CSDF ID($tran)" >> $dir/$drain.cir
 	echo ".PROBE/CSDF I(I_I1)" >> $dir/$drain.cir
-	echo ".PROBE/CSDF V($drain)" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([$drain])" >> $dir/$drain.cir
 	echo "" >> $dir/$drain.cir
 	echo ".END" >> $dir/$drain.cir
     fi
+    if [ "$typo" == "CMOSP" ]
+	then
+	cp $orig $dir/$drain.cir
+	echo "*INYECCION" >> $dir/$drain.cir
+	echo "" >> $dir/$drain.cir
+	echo "I_I1    $drain 0 DC 0Adc AC 0Aac" >> $dir/$drain.cir
+	echo "+EXP 0 5m 2n 2.004n 2.015n 500ps" >> $dir/$drain.cir
+	echo "" >> $dir/$drain.cir
+	echo "*TENSIONES DE SALIDA" >> $dir/$drain.cir
+	echo "" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([C_F_D-MSB])" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([C_F_D-5SB])" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([C_F_D-4SB])" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([C_F_D-3SB])" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([C_F_D-2SB])" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([C_F_D-LSB])" >> $dir/$drain.cir
+	echo "" >> $dir/$drain.cir
+	echo "*TENSION Y CORRIENTE EN EL PUNTO DE FALLA" >> $dir/$drain.cir
+	echo "" >> $dir/$drain.cir
+	echo ".PROBE/CSDF ID($tran)" >> $dir/$drain.cir
+	echo ".PROBE/CSDF I(I_I1)" >> $dir/$drain.cir
+	echo ".PROBE/CSDF V([$drain])" >> $dir/$drain.cir
+	echo "" >> $dir/$drain.cir
+	echo ".END" >> $dir/$drain.cir
+    fi
+
 fi
 #read aux
 #sleep 1
