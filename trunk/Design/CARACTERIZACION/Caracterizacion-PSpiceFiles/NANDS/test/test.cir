@@ -1,0 +1,19 @@
+** Profile: "NANDS-test"  [ D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion-pspicefiles\nands\test.sim ] 
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../caracterizacion-pspicefiles/caracterizacion.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_VB 0 3.3 1m 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\NANDS.net" 
+
+
+.END
