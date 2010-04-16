@@ -1,0 +1,100 @@
+* source CARACTERIZACION
+V_VDD         N14526 0 3.3
+V_VB         N14686 0 0Vdc
+R_R1         N14526 N15042  1Meg  
+M_U1_M16         N14590 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U1_M5         N14590 N14686 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U1_M11         N14590 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U1_M9         N14590 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U1_M1         N14590 N14526 U1_ND2 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U1_M6         U1_ND3 N14526 U1_ND4 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U1_M7         U1_ND4 N14526 U1_ND5 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U1_M12         N14590 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U1_M2         U1_ND2 N14526 U1_ND3 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U1_M13         U1_ND6 N14526 U1_ND7 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U1_M10         U1_ND5 N14526 U1_ND6 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U1_M3         N14590 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U1_M14         U1_ND7 N14526 U1_ND8 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U1_M8         N14590 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U1_M4         N14590 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U1_M15         U1_ND8 N14686 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U2_M16         N15042 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U2_M5         N15042 N14590 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U2_M11         N15042 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U2_M9         N15042 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U2_M1         N15042 N14526 U2_ND2 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U2_M6         U2_ND3 N14526 U2_ND4 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U2_M7         U2_ND4 N14526 U2_ND5 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U2_M12         N15042 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U2_M2         U2_ND2 N14526 U2_ND3 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U2_M13         U2_ND6 N14526 U2_ND7 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U2_M10         U2_ND5 N14526 U2_ND6 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U2_M3         N15042 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U2_M14         U2_ND7 N14526 U2_ND8 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_U2_M8         N15042 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U2_M4         N15042 N14526 N14526 N14526 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U2_M15         U2_ND8 N14590 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
