@@ -23,10 +23,10 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 15n 0 1p 
+.TRAN  0 15n 0 50p 
 .OPTIONS NODE
-.OPTIONS ITL1= 300
-.OPTIONS ITL2= 100
+*.OPTIONS ITL1= 300
+*.OPTIONS ITL2= 100
 *.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 *.INC "..\PRUEBA.net" 
 
