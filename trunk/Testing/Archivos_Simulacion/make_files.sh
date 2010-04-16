@@ -4,6 +4,48 @@
 #
 
 opt=$1
+if [ -z "$opt" ]
+then
+failtype=$1
+else
+failtype=$2
+fi
+
+if [ "$failtype" == "exp" ]
+then
+	fail="
+	I_I1         aquifalla 0 DC 0Adc AC 0Aac
+	+EXP 0 4m 2n 30p 2.2n 500p"
+elif [ "$failtype" == "rampa" ]
+then
+	fail="
+	I_I1         aquifalla 0 DC 0Adc AC 0Aac
+	+PULSE 0 4m 2n 50p 1.5n 100p 10n"
+elif [ "$failtype" == "rampa2" ]
+then
+	fail="
+	I_I1         aquifalla 0 DC 0Adc AC 0Aac
+	+PULSE 0 4m 2n 30p 150p 0p 10n
+	I_I2         aquifalla 0 DC 0Adc AC 0Aac
+	+PULSE 0 2m 2n 60p 1n 50p 10n"
+else
+	fail="
+	* FALLA EXPONENCIAL
+	*I_I1         aquifalla 0 DC 0Adc AC 0Aac
+	*+EXP 0 4m 2n 30p 2.2n 500p
+	
+	* FALLA RAMPA
+	*I_I1         aquifalla 0 DC 0Adc AC 0Aac
+	*+PULSE 0 4m 2n 50p 1.5n 100p 10n
+	
+	*	FALLA DOBLE RAMPA
+	*I_I1         aquifalla 0 DC 0Adc AC 0Aac
+	*+PULSE 0 4m 2n 30p 150p 0p 10n
+	*I_I2         aquifalla 0 DC 0Adc AC 0Aac
+	*+PULSE 0 2m 2n 60p 1n 50p 10n
+	"
+fi
+
 orig=CONV_FLASH_editado.cir
 
 dos2unix $orig
@@ -42,8 +84,9 @@ then
 	cp $orig $dir/$drain.cir
 	echo "*INYECCION" >> $dir/$drain.cir
 	echo "" >> $dir/$drain.cir
-	echo "I_I1    $drain 0 DC 0Adc AC 0Aac" >> $dir/$drain.cir
-	echo "+EXP 0 5m 2n 2.004n 2.015n 500ps" >> $dir/$drain.cir
+	#echo "I_I1    $drain 0 DC 0Adc AC 0Aac" >> $dir/$drain.cir
+	echo "$fail" >> $dir/$drain.cir
+	sed -i -e "s/aquifalla/$drain/" $dir/$drain.cir
 	echo "" >> $dir/$drain.cir
 	echo "*TENSIONES DE SALIDA" >> $dir/$drain.cir
 	echo "" >> $dir/$drain.cir
@@ -67,8 +110,9 @@ then
 	cp $orig $dir/$drain.cir
 	echo "*INYECCION" >> $dir/$drain.cir
 	echo "" >> $dir/$drain.cir
-	echo "I_I1    $drain 0 DC 0Adc AC 0Aac" >> $dir/$drain.cir
-	echo "+EXP 0 5m 2n 2.004n 2.015n 500ps" >> $dir/$drain.cir
+	#echo "I_I1    $drain 0 DC 0Adc AC 0Aac" >> $dir/$drain.cir
+	echo "$fail" >> $dir/$drain.cir
+	sed -i -e "s/aquifalla/$drain/" $dir/$drain.cir
 	echo "" >> $dir/$drain.cir
 	echo "*TENSIONES DE SALIDA" >> $dir/$drain.cir
 	echo "" >> $dir/$drain.cir
