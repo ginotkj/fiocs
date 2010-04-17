@@ -1,0 +1,46 @@
+
+Circuit: * gnetlist -g spice-sdb -o i-comparador-01.sch.cir i-comparador-01.sch
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+out_f                                  4.99979
+8                                            5
+7                                          1.5
+biasglob                                   2.5
+vcc                                          5
+in_1                                       1.5
+5                                    0.0852947
+bias2                                  0.23419
+out_1b                                 4.87843
+out_2b                                0.289471
+out_2a                                 1.45243
+out_1a                                 1.78086
+bias1                                0.0852947
+in_2                                         0
+3                                      1.45243
+4                                     0.289471
+2                                      1.78086
+1                                      4.87843
+6                                      0.23419
+v5#branch                                    0
+v1a#branch                         4.35293e-06
+v1b#branch                         5.72638e-12
+vout#branch                        2.11288e-09
+vbias2#branch                      1.10977e-05
+vbias1#branch                      4.35293e-06
+v2a#branch                          5.5486e-06
+v2b#branch                         5.54913e-06
+v4#branch                                    0
+v1#branch                         -1.55008e-05
+v2#branch                                    0
+v3#branch                             -1.5e-05
+
+
+No. of Data Rows : 220008
+

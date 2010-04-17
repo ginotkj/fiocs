@@ -1,0 +1,158 @@
+(ExpressProject "I-COMPARADOR-01"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "C:\Program Files\OrCAD 16\tools\capture\library\pspice\analog.olb"
+        (DisplayName
+           "C:\Program Files\OrCAD 16\tools\capture\library\pspice\analog.olb")
+        (Type "Schematic Library"))
+      (File "C:\Program Files\OrCAD 16\tools\capture\library\pspice\source.olb"
+        (DisplayName
+           "C:\Program Files\OrCAD 16\tools\capture\library\pspice\source.olb")
+        (Type "Schematic Library"))
+      (File
+         "C:\Program Files\OrCAD 16\tools\capture\library\pspice\sourcstm.olb"
+        (DisplayName
+           "C:\Program Files\OrCAD 16\tools\capture\library\pspice\sourcstm.olb")
+        (Type "Schematic Library"))
+      (File
+         "C:\Program Files\OrCAD 16\tools\capture\library\pspice\special.olb"
+        (DisplayName
+           "C:\Program Files\OrCAD 16\tools\capture\library\pspice\special.olb")
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "i-comparador-01.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "TRUE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x"))
+  (Folder "Outputs"
+    (File ".\i-comparador-01-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (File ".\i-comparador-01-pspicefiles\schematic2\schematic2.net"
+      (Type "Report"))
+    (File ".\i-comparador-01-pspicefiles\comp-nor\comp-nor.net"
+      (Type "Report"))
+    (File ".\i-comparador-01-pspicefiles\comp-01\comp-01.net"
+      (Type "Report"))
+    (File "..\componentes orcad\compuertas.olb"
+      (Type "Schematic Library"))
+    (File ".\i-comparador-01-pspicefiles\test\test.net"
+      (Type "Report"))
+    (File ".\i-comparador-01.olb"
+      (Type "Schematic Library")))
+  (Folder "PSpice Resources"
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\i-comparador-01-pspicefiles\i-comparador-01.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\i-comparador-01-pspicefiles\i-comparador-01.lib")))
+    (Folder "Stimulus Files")
+    (Folder "Include Files")
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-comparador-01-pspicefiles\s-comp-neg\bias.sim"
+        (DisplayName "S-COMP-NEG-bias")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-comparador-01-pspicefiles\s-comp\bias.sim"
+        (DisplayName "S-COMP-bias")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-comparador-01-pspicefiles\s-comp\transient.sim"
+        (DisplayName "S-COMP-transient")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-comparador-01-pspicefiles\s-comp-neg\transient.sim"
+        (DisplayName "S-COMP-NEG-transient")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-comparador-01-pspicefiles\test\transient.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-comparador-01-pspicefiles\test\transient.sim"
+        (DisplayName "TEST-transient")
+        (Type "PSpice Profile"))))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (S-COMP
+      (FullPartName "S-COMP.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-COMPARADOR-01\ORCAD\I-COMPARADOR-01.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "D:\ORCAD10.5_15.7\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-L
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (MbreakP
+      (FullPartName "MbreakP.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (MbreakN
+      (FullPartName "MbreakN.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (QbreakN
+      (FullPartName "QbreakN.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSTIM
+      (FullPartName "VSTIM.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory "LIBRARY\PSPICE")
+  (MPSSessionName "FABRICIO")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Outputs")
+      (Path "Outputs"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.olb")
+      (Path "Outputs"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.olb"
+         "S-COMP")
+      (Select "Outputs"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.olb"
+         "S-COMP"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 360 0 816"))
+      (Tab 0))))
