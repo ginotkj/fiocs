@@ -1,29 +1,30 @@
 * source I-COMPARADOR-01
-M_M2         VDIFERENCIAL IN+ VEQUILIBRIO 0 CMOSN  
+M_M2         ND+ IN+ NDBIAS 0 CMOSN  
 + L=.2u  
 + W=.4u         
-V_VREF         IN+ N398131 0
-M_M3         N39461 N39461 N39211 N39211 CMOSP  
+V_VREF         IN+ N398131 1
+M_M3         ND- ND- N39211 N39211 CMOSP  
 + L=.2u  
 + W=.6u         
-M_M4         VDIFERENCIAL N39461 N39211 N39211 CMOSP  
+M_M4         ND+ ND- N39211 N39211 CMOSP  
 + L=.2u  
 + W=.6u         
-M_M5         VEQUILIBRIO VBIAS 0 0 CMOSN  
+I_I1         ND- 0 DC 0Adc AC 0Aac
++PULSE 0 4m 2n 50p 1.5n 100p 0
+M_M5         NDBIAS VBIAS 0 0 CMOSN  
 + L=.2u  
 + W=.6u         
-V_VQ+         N398131 0 1
-V_VIN         IN- N43113  
-+SIN 0 20m 100k 0 0 0
-M_M6         OUT VDIFERENCIAL N39211 N39211 CMOSP  
+V_VQ+         N398131 0 .2
+M_M6         NOUT ND+ N39211 N39211 CMOSP  
 + L=.2u  
 + W=.8u         
 V_VBIAS         VBIAS 0 .33
-M_M7         OUT VBIAS 0 0 CMOSN  
+M_M7         NOUT VBIAS 0 0 CMOSN  
 + L=.2u  
 + W=.4u         
-V_VQ-         N43113 0 1
-M_M1         N39461 IN- VEQUILIBRIO 0 CMOSN  
+V_VQ-         N43113 0 .2
+V_VIN         IN- N43113 0
+M_M1         ND- IN- NDBIAS 0 CMOSN  
 + L=.2u  
 + W=.4u         
 V_VDD         N39211 0 3.3

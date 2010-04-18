@@ -1,6 +1,8 @@
 * source CARACTERIZACION
 R_R4         NAND4 N00173  1Meg  
 R_R1         NEG N00173  1Meg  
+V_V1         ENTRADA 0  
++PULSE 0 3.3 0 100n 100n 50n 250n
 R_R7         NAND8 N00173  1Meg  
 M_U1_M16         NAND8 N00173 N00173 N00173 CMOSP  
 + L=.18u  
@@ -187,4 +189,3 @@ M_U4_M5         NAND3 ENTRADA N00173 N00173 CMOSP
 + L=.18u  
 + W=.2u         
 R_R5         NAND5 N00173  1Meg  
-V_VB         ENTRADA 0 0

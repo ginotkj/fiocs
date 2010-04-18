@@ -1,5 +1,5 @@
 
-**** 04/16/10 13:05:48 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/17/10 18:28:15 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "NANDS-test"  [ D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion-pspicefiles\nands\test.sim ] 
 
@@ -23,7 +23,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.DC LIN V_VB 0 3.3 1m 
+.TRAN  0 250n 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\NANDS.net" 
 
@@ -33,6 +33,8 @@
 * source CARACTERIZACION
 R_R4         NAND4 N00173  1Meg  
 R_R1         NEG N00173  1Meg  
+V_V1         ENTRADA 0  
++PULSE 0 3.3 0 100n 100n 50n 250n
 R_R7         NAND8 N00173  1Meg  
 M_U1_M16         NAND8 N00173 N00173 N00173 CMOSP  
 + L=.18u  
@@ -219,7 +221,6 @@ M_U4_M5         NAND3 ENTRADA N00173 N00173 CMOSP
 + L=.18u  
 + W=.2u         
 R_R5         NAND5 N00173  1Meg  
-V_VB         ENTRADA 0 0
 
 **** RESUMING test.cir ****
 .END
@@ -230,7 +231,7 @@ WARNING -- Mosfet M_U1_M16, model CMOSP: Ps = 0 is less than W
 Mosfet M_U1_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_U1_M1, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
-**** 04/16/10 13:05:48 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/17/10 18:28:15 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "NANDS-test"  [ D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion-pspicefiles\nands\test.sim ] 
 
@@ -349,17 +350,54 @@ WARNING -- Mosfet M_U1_M16, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_U1_M16, model CMOSP: Ps = 0 is less than W
 Mosfet M_U1_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_U1_M1, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
-Mosfet M_U1_M16, model CMOSP: Using BSIM VERSION 3.1 or lower
-WARNING -- Mosfet M_U1_M16, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_U1_M16, model CMOSP: Ps = 0 is less than W
-Mosfet M_U1_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
-WARNING -- Mosfet M_U1_M1, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
+**** 04/17/10 18:28:15 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "NANDS-test"  [ D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion-pspicefiles\nands\test.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  NEG)    3.3000  (NAND2)    3.3000  (NAND3)    3.3000  (NAND4)    3.3000      
+
+(NAND5)    3.3000  (NAND7)    3.3000  (NAND8)    3.3000  (N00173)    3.3000     
+
+(U1_ND2)    2.7361 (U1_ND3)    2.6961 (U1_ND4)    2.6773 (U1_ND5)    2.6654     
+
+(U1_ND6)    2.6567 (U1_ND7)    2.6499 (U1_ND8)    2.6444 (U2_ND2)    2.7365     
+
+(U4_ND2)    2.7367 (U4_ND3)    2.6967 (U5_ND2)    2.7367 (U5_ND3)    2.6967     
+
+(U5_ND4)    2.6779 (U6_ND2)    2.7366 (U6_ND3)    2.6966 (U6_ND4)    2.6778     
+
+(U6_ND5)    2.6659 (U7_ND2)    2.7363 (U7_ND3)    2.6963 (U7_ND4)    2.6775     
+
+(U7_ND5)    2.6656 (U7_ND6)    2.6569 (U7_ND7)    2.6501 (ENTRADA)    0.0000    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_VDD       -4.530E-09
+
+    TOTAL POWER DISSIPATION   1.49E-08  WATTS
+
+
 
           JOB CONCLUDED
 
-**** 04/16/10 13:05:48 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/17/10 18:28:15 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "NANDS-test"  [ D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion-pspicefiles\nands\test.sim ] 
 
@@ -371,5 +409,5 @@ WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =        2.28
+  Total job time (using Solver 1)   =         .19
 

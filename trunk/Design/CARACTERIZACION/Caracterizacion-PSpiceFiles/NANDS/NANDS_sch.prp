@@ -186,16 +186,5 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("VB"
-            ("device_name"	"VDC")
-            ("pspice_path"	"V_VB")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0")
-                    ("pspice_param"	"DC")
-                )
-            )
-        )
     )
 )
