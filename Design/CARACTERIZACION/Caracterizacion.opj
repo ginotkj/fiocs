@@ -124,14 +124,11 @@
          "D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion.dsn")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion.dsn"
-         "NAND8")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion.dsn"
          "NANDS")
       (Path "Outputs")
       (Select "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion.dsn"
-         "NAND8" "NAND8"))
+         "NANDS" "NANDS"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -141,11 +138,10 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 100 1105 100 572")
+        (Placement "44 2 3 -1 -1 -8 -30 75 1723 75 774")
         (Scroll "0 0")
-        (Zoom "100")
-        (Occurrence "/"))
+        (Zoom "135"))
       (Path
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\CARACTERIZACION\CARACTERIZACION.DSN")
-      (Schematic "NAND8")
-      (Page "NAND8"))))
+      (Schematic "NANDS")
+      (Page "NANDS"))))

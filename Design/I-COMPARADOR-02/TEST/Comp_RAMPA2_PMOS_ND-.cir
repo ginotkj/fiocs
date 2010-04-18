@@ -1,0 +1,71 @@
+
+**** 04/17/10 16:10:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\I-COMPARADOR-01-PSpiceFiles/i-comparador-01.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+
+.STEP V_VIN LIST 0.5 0.99 1 1.01 1.5
+.TRAN  0 50n 0 10p 
+.PROBE V(*) I(*) 
+
+*.INC "..\TEST.net" 
+
+
+
+**** INCLUDING TEST.net ****
+* source I-COMPARADOR-01
+
+M_M2         ND+ IN+ NDBIAS 0 CMOSN  
++ L=.2u  
++ W=.4u         
+V_VREF         IN+ N398131 1
+M_M3         ND- ND- N39211 N39211 CMOSP  
++ L=.2u  
++ W=.6u         
+M_M4         ND+ ND- N39211 N39211 CMOSP  
++ L=.2u  
++ W=.6u         
+M_M5         NDBIAS VBIAS 0 0 CMOSN  
++ L=.2u  
++ W=.6u         
+V_VQ+         N398131 0 .2
+M_M6         NOUT ND+ N39211 N39211 CMOSP  
++ L=.2u  
++ W=.8u         
+V_VBIAS         VBIAS 0 .33
+M_M7         NOUT VBIAS 0 0 CMOSN  
++ L=.2u  
++ W=.4u         
+V_VQ-         N43113 0 .2
+V_VIN         IN- N43113 0
+M_M1         ND- IN- NDBIAS 0 CMOSN  
++ L=.2u  
++ W=.4u         
+V_VDD         N39211 0 3.3
+
+I_I1         0 ND- DC 0Adc AC 0Aac
++PULSE 0 4m 2n 30p 150p 0p 100n
+I_I2         0 ND- DC 0Adc AC 0Aac
++PULSE 0 2m 2n 60p 2n 50p 100n
+
+.END

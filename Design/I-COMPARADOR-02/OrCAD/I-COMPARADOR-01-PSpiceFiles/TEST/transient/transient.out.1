@@ -1,7 +1,7 @@
 
-**** 11/05/09 19:21:45 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 04/17/10 16:10:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\I-COMPARADOR-01-PSpiceFiles\TEST\transient.sim ] 
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
 
 
  ****     CIRCUIT DESCRIPTION
@@ -19,43 +19,44 @@
 * Profile Libraries :
 * Local Libraries :
 .LIB "../../../i-comparador-01-pspicefiles/i-comparador-01.lib" 
-* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 30u 0 .01u 
-.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.TRAN  0 50n 0 50p 
+.PROBE V(*) I(*) 
 .INC "..\TEST.net" 
 
 
 
 **** INCLUDING TEST.net ****
 * source I-COMPARADOR-01
-M_M2         N39249 IN+ N39525 0 CMOSN  
+M_M2         ND+ IN+ NDBIAS 0 CMOSN  
 + L=.2u  
 + W=.4u         
-V_VREF         IN+ N398131 0Vdc
-M_M3         N39461 N39461 N39211 N39211 CMOSP  
+V_VREF         IN+ N398131 1
+M_M3         ND- ND- N39211 N39211 CMOSP  
 + L=.2u  
 + W=.6u         
-M_M4         N39249 N39461 N39211 N39211 CMOSP  
+M_M4         ND+ ND- N39211 N39211 CMOSP  
 + L=.2u  
 + W=.6u         
-M_M5         N39525 VBIAS 0 0 CMOSN  
+I_I1         ND- 0 DC 0Adc AC 0Aac
++PULSE 0 4m 2n 50p 1.5n 100p 0
+M_M5         NDBIAS VBIAS 0 0 CMOSN  
 + L=.2u  
 + W=.6u         
-V_VQ+         N398131 0 .3
-V_VIN         IN- N43113  
-+SIN 0 20m 100k 0 0 0
-M_M6         OUT N39249 N39211 N39211 CMOSP  
+V_VQ+         N398131 0 .2
+M_M6         NOUT ND+ N39211 N39211 CMOSP  
 + L=.2u  
 + W=.8u         
-V_VBIAS         VBIAS 0 .3
-M_M7         OUT VBIAS 0 0 CMOSN  
+V_VBIAS         VBIAS 0 .33
+M_M7         NOUT VBIAS 0 0 CMOSN  
 + L=.2u  
 + W=.4u         
-V_VQ-         N43113 0 .3
-M_M1         N39461 IN- N39525 0 CMOSN  
+V_VQ-         N43113 0 .2
+V_VIN         IN- N43113 0
+M_M1         ND- IN- NDBIAS 0 CMOSN  
 + L=.2u  
 + W=.4u         
 V_VDD         N39211 0 3.3
@@ -63,17 +64,21 @@ V_VDD         N39211 0 3.3
 **** RESUMING transient.cir ****
 .END
 
+Mosfet M_M2, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M2, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M2, model CMOSN: Ps = 0 is less than W
+Mosfet M_M5, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M5, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSN: Ps = 0 is less than W
+Mosfet M_M3, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
+Mosfet M_M6, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
-**** 11/05/09 19:21:45 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+**** 04/17/10 16:10:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
- ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\I-COMPARADOR-01-PSpiceFiles\TEST\transient.sim ] 
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -186,43 +191,69 @@ WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
        CJSWG  330.000000E-12  422.000000E-12 
 
 
+Mosfet M_M2, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M2, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M2, model CMOSN: Ps = 0 is less than W
+Mosfet M_M5, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M5, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSN: Ps = 0 is less than W
+Mosfet M_M3, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
+Mosfet M_M6, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
-ERROR -- Convergence problem in transient bias point calculation
+WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
+**** 04/17/10 16:10:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
 
 
-  Last node voltages tried were:
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
 
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(  IN+) 3.000E-06  (  IN-) 3.000E-06  (  OUT) 30.50E-06  (VBIAS) 3.000E-06      
+(  IN+)    1.2000  (  IN-)     .2000  (  ND+)     .0217  (  ND-)    3.0523      
 
-(N39211) 33.00E-06 (N39249)    -.5746 (N39461)    -.5746 (N39525)    -.5524     
+( NOUT)    3.2989  (VBIAS)     .3300  (N39211)    3.3000 (N43113)     .2000     
 
-(N43113) 3.000E-06 (N398131) 3.000E-06                   
+(NDBIAS)     .0217 (N398131)     .2000                   
 
 
-  These voltages failed to converge:
 
-    V(N39249)                 =  -733.46mV  \  -574.65mV
-    V(N39525)                 =  -243.84mV  \  -552.38mV
-    V(N39461)                 =  -733.46mV  \  -574.65mV
-    V(OUT)                    =    35.51uV  \    30.50uV
 
-  These supply currents failed to converge:
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
 
-    I(V_VDD)                  =   -16.74uA  \    6.147uA
+    V_VREF       0.000E+00
+    V_VQ+        0.000E+00
+    V_VBIAS      0.000E+00
+    V_VQ-        0.000E+00
+    V_VIN        0.000E+00
+    V_VDD       -4.463E-07
 
-  These devices failed to converge:
-    M_M2      M_M3      M_M4      M_M5      M_M6      M_M1      
+    TOTAL POWER DISSIPATION   1.47E-06  WATTS
 
-Try running with .OPTION STEPGMIN
 
-**** Interrupt ****
+
+          JOB CONCLUDED
+
+**** 04/17/10 16:10:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .42
+
