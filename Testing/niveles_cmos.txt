@@ -1,0 +1,39 @@
+CMOS 5v
+entrada
+0 - 1.5 => cero
+3.5 - 5 => uno
+salida
+4,4 - 5 => uno
+0 - 0.33 => cero
+
+
+margen respecto entrada
+30% cero
+30% uno
+
+margenes maximo cero (entrada) minimo uno:
+1,5(in) -> 4,4(out) => margen: 34%
+3.5(in) -> .33(out) => margen: 10%
+
+===================================================
+CMOS 3.3v:
+
+sin margen:
+0 - 1.2 => cero
+1.65 - 3.3 => uno
+
+entrada con margen:
+0 - 1 => cero
+2.3 - 3.3 => uno
+
+salida con margen:
+2.75 - 3.3 => uno
+0 - 0.4 => cero
+
+margenes maximo cero (entrada) minimo uno:
+1(in) -> 2.75(out) => margen: 36%
+2.3(in) -> 0.4(out) => margen: 17%
+
+
+
+
