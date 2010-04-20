@@ -2,13 +2,13 @@ REFERENCIAS DEL PROFE
 
 Para el modelado del pulso de corriente a inyectar
 
-[21] G. Messenger, “Collection of Charge on Junction Nodes from Ion Tracks,” IEEE Transactions on Nuclear Sciences. Vol. 29, Nº. 6, pp. 2024-2031, December 1982. 
-[15] J. Espinosa-Durán, J. Velasco-Medina, G. Huertas, R. Velasco, J. Huertas. “Measuring SET effects in CMOS operational amplifier using a built-in detector”. Proceedings AFRICON Conference, pp. 1-7. September 2007.
+DONE - [21] G. Messenger, “Collection of Charge on Junction Nodes from Ion Tracks,” IEEE Transactions on Nuclear Sciences. Vol. 29, Nº. 6, pp. 2024-2031, December 1982. 
+DONE - [15] J. Espinosa-Durán, J. Velasco-Medina, G. Huertas, R. Velasco, J. Huertas. “Measuring SET effects in CMOS operational amplifier using a built-in detector”. Proceedings AFRICON Conference, pp. 1-7. September 2007.
 [13] W. Chen, V. Pouget, H. Barnaby, J. Cressler, G. Niu, P. Fouillat, Y. Deval, D. Lewis. “ Investigation of single-event transients in voltage-controlled oscillators”. IEEE Transactions on Nuclear Science. Vol. 50, Nº 6, pp. 2081-2087. December 2003.
-[16] E. Mikkola, B. Vermeire,  J. Barnaby, H. Park, K. Borhani. “SET tolerant CMOS comparator”. IEEE Transactions on Nuclear Science. Vol. 51, Nº 6, pp. 3609-3614. December 2004.
-[17] J. Kauppila, L. Massengill, W. Colman, A. Kauppi-la, S. Sanathanamurthy. “Single event simulation me-thodology for analog/mixed signal design hardening”. IEEE Transactions on Nuclear Science. Vol. 51, Nº 6, pp. 3603-3608. December 2004.
+DONE - [16] E. Mikkola, B. Vermeire,  J. Barnaby, H. Park, K. Borhani. “SET tolerant CMOS comparator”. IEEE Transactions on Nuclear Science. Vol. 51, Nº 6, pp. 3609-3614. December 2004.
+DONE - [17] J. Kauppila, L. Massengill, W. Colman, A. Kauppi-la, S. Sanathanamurthy. “Single event simulation me-thodology for analog/mixed signal design hardening”. IEEE Transactions on Nuclear Science. Vol. 51, Nº 6, pp. 3603-3608. December 2004.
 [19] A. Ammari, R. Leveugle, C. Lazzari, R. Reis. “SET fault injection methods in analog circuits: a case study”. Proceedings 8th IEEE Latin American Test Workshop, pp. 125-129. March 2007.
-[2] R. Leveugle, A. Ammari. “Early SEU fault injection in digital, analog and mixed-signal circuits: a global flow”. Proceedings of the IEEE Design, Automation and Test in Europe Conference and Exhibition, pp. 590-595. February 2004.
+DONE - [2] R. Leveugle, A. Ammari. “Early SEU fault injection in digital, analog and mixed-signal circuits: a global flow”. Proceedings of the IEEE Design, Automation and Test in Europe Conference and Exhibition, pp. 590-595. February 2004.
 
 Para modelado del efecto del impacto de iones en los puntos sensibles de un transistor
 
