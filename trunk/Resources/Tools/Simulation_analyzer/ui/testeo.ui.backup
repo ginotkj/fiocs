@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>590</width>
+    <height>278</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>mencoder TV Capture GUI</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="runButton">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>30</y>
+      <width>95</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Run</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stopButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>60</y>
+      <width>95</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stop</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>10</y>
+      <width>461</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Main Parameters</string>
+     </attribute>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>20</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Audio Codec</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>54</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Channel</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="channel">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>10</y>
+        <width>58</width>
+        <height>26</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="audiocodec">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>40</y>
+        <width>201</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>none</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>copy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>pcm</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>mp3lame</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>lavc</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QToolButton" name="showAudioCodecsButton">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>10</y>
+        <width>27</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="number_rb">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>96</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>number</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="freq_rb">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>80</y>
+        <width>96</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>frequency</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="frequency">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>40</y>
+        <width>116</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="decimals">
+       <number>3</number>
+      </property>
+      <property name="maximum">
+       <double>9999.989999999999782</double>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="lavc_video_options_box">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>341</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>lavc video options</string>
+      </property>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>35</x>
+         <y>60</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Video Bitrate</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>35</x>
+         <y>30</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Video Codec</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lavc_videobitrate">
+       <property name="geometry">
+        <rect>
+         <x>175</x>
+         <y>55</y>
+         <width>151</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>3000</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="lavc_videocodec">
+       <property name="geometry">
+        <rect>
+         <x>175</x>
+         <y>25</y>
+         <width>151</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>mpeg4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mjpeg</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>h263</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>h263p</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mspeg4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mspeg4v2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>wmv1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>wmv2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>rv10</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mpeg1video</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>huffyuv</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="previewButton">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>80</y>
+        <width>151</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>preview command</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="status_label">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>110</y>
+      <width>91</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stopped</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>590</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPrueba">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionSave_configuration"/>
+    <addaction name="actionReload_configuration"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout_mtvcgui"/>
+   </widget>
+   <addaction name="menuPrueba"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSave_configuration">
+   <property name="text">
+    <string>Save configuration</string>
+   </property>
+  </action>
+  <action name="actionAbout_mtvcgui">
+   <property name="text">
+    <string>About mtvcgui</string>
+   </property>
+  </action>
+  <action name="actionReload_configuration">
+   <property name="text">
+    <string>Restore saved configuration</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>runButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>run_mencoder()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>497</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>332</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>previewButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>preview_command()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>570</x>
+     <y>458</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>469</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSalir</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>324</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stopButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>stop_button_pressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>397</x>
+     <y>497</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>528</x>
+     <y>526</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSave_configuration</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>save_configuration()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>324</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAbout_mtvcgui</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>show_about_dialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>261</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionReload_configuration</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>set_params_from_config()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>261</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showAudioCodecsButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>show_available_audio_codecs()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>667</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>261</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>number_rb</sender>
+   <signal>clicked()</signal>
+   <receiver>channel</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>number_rb</sender>
+   <signal>clicked()</signal>
+   <receiver>frequency</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>freq_rb</sender>
+   <signal>clicked()</signal>
+   <receiver>channel</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>freq_rb</sender>
+   <signal>clicked()</signal>
+   <receiver>frequency</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>audiocodec</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>audio_codec_selected(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>488</x>
+     <y>89</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>24</x>
+     <y>486</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>channel</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>channel_changed(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>127</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>261</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>frequency</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>frequency_changed(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>157</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>261</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>run_mencoder()</slot>
+  <slot>preview_command()</slot>
+  <slot>stop_button_pressed()</slot>
+  <slot>save_configuration()</slot>
+  <slot>show_about_dialog()</slot>
+  <slot>show_available_audio_codecs()</slot>
+  <slot>show_available_video_codecs()</slot>
+  <slot>shedule_recording()</slot>
+  <slot>cancel_shedule()</slot>
+  <slot>set_params_from_config()</slot>
+  <slot>preview_with_mplayer()</slot>
+  <slot>audio_codec_selected(int)</slot>
+  <slot>video_codec_selected(int)</slot>
+  <slot>channel_changed(QString)</slot>
+  <slot>frequency_changed(QString)</slot>
+  <slot>brightness_changed(int)</slot>
+  <slot>contrast_changed(int)</slot>
+  <slot>hue_changed(int)</slot>
+  <slot>saturation_changed(int)</slot>
+  <slot>norm_changed(int)</slot>
+ </slots>
+</ui>
