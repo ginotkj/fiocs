@@ -126,24 +126,10 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
-         "DOBLE-RAMPA")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
-         "EXPONENCIAL")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
-         "RAMPA")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
-      (Path "PSpice Resources" "Simulation Profiles")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
-         "DOBLE-RAMPA" "DOBLE-RAMPA"))
+      (Path "PSpice Resources" "Simulation Profiles"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

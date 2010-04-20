@@ -72,10 +72,14 @@
          ".\i-comparador-01-pspicefiles\s-comp-neg\transient.sim"
         (DisplayName "S-COMP-NEG-transient")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-comparador-01-pspicefiles\test\transient.sim")
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-comparador-01-pspicefiles\test\transient.sim"
         (DisplayName "TEST-transient")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-comparador-01-pspicefiles\test\bias.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-comparador-01-pspicefiles\test\bias.sim"
+        (DisplayName "TEST-bias")
         (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
@@ -145,15 +149,7 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01.dsn"
-         "TEST")
-      (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01.dsn"
-         "TEST" "TEST"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -163,9 +159,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 1698 50 749")
-        (Scroll "0 0")
-        (Zoom "135")
+        (Placement "44 2 3 -1 -1 -8 -30 50 1346 50 749")
+        (Scroll "209 255")
+        (Zoom "174")
         (Occurrence "/"))
       (Path
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-COMPARADOR-02\ORCAD\I-COMPARADOR-01.DSN")
