@@ -1,5 +1,5 @@
 
-**** 04/17/10 19:53:20 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/19/10 19:12:39 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
   
 
@@ -37,7 +37,7 @@
 *Analysis directives: 
 
 .STEP V_VIN LIST 0.5 0.99 1 1.01 1.5
-.TRAN  0 50n 0 10p 
+.TRAN  0 1u 0 10p 
 .PROBE V(*) I(*) 
 
 *.INC "..\TEST.net" 
@@ -93,7 +93,7 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_M6, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
-**** 04/17/10 19:53:20 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/19/10 19:12:39 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
   
 
@@ -232,7 +232,7 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_M6, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
-**** 04/17/10 19:53:20 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/19/10 19:12:39 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
   
 
@@ -283,7 +283,7 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_M6, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
-**** 04/17/10 19:53:20 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/19/10 19:12:39 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
   
 
@@ -334,7 +334,7 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_M6, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
-**** 04/17/10 19:53:20 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/19/10 19:12:39 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
   
 
@@ -385,7 +385,7 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_M6, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
-**** 04/17/10 19:53:20 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/19/10 19:12:39 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
   
 
@@ -436,7 +436,7 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_M6, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
-**** 04/17/10 19:53:20 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/19/10 19:12:39 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
   
 
@@ -478,7 +478,7 @@ WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
 
           JOB CONCLUDED
 
-**** 04/17/10 19:53:20 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/19/10 19:12:39 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
   
 
@@ -492,5 +492,5 @@ WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =        3.93
+  Total job time (using Solver 1)   =       40.00
 

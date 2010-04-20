@@ -11,7 +11,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 50n 0 50p 
+.TRAN  0 10u 0 50p 
 .PROBE V(*) I(*) 
 .INC "..\TEST.net" 
 

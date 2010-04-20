@@ -9,8 +9,6 @@ M_M3         ND- ND- N39211 N39211 CMOSP
 M_M4         ND+ ND- N39211 N39211 CMOSP  
 + L=.2u  
 + W=.6u         
-I_I1         ND- 0 DC 0Adc AC 0Aac
-+PULSE 0 4m 2n 50p 1.5n 100p 0
 M_M5         NDBIAS VBIAS 0 0 CMOSN  
 + L=.2u  
 + W=.6u         
@@ -23,7 +21,7 @@ M_M7         NOUT VBIAS 0 0 CMOSN
 + L=.2u  
 + W=.4u         
 V_VQ-         N43113 0 .2
-V_VIN         IN- N43113 0
+V_VIN         IN- N43113 1.5
 M_M1         ND- IN- NDBIAS 0 CMOSN  
 + L=.2u  
 + W=.4u         

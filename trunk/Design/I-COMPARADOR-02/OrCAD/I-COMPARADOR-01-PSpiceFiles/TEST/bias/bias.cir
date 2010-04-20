@@ -1,4 +1,4 @@
-** Profile: "TEST-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-COMPARADOR-01\OrCAD\I-COMPARADOR-01-PSpiceFiles\TEST\bias.sim ] 
+** Profile: "TEST-bias"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\I-COMPARADOR-01-PSpiceFiles\TEST\bias.sim ] 
 
 ** Creating circuit file "bias.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -7,7 +7,7 @@
 * Profile Libraries :
 * Local Libraries :
 .LIB "../../../i-comparador-01-pspicefiles/i-comparador-01.lib" 
-* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
 .lib "nom.lib" 
 
 *Analysis directives: 

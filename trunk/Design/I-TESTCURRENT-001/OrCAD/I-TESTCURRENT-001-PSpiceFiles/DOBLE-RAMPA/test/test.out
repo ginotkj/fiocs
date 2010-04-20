@@ -1,5 +1,5 @@
-
-**** 04/18/10 18:26:02 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+**** 04/19/10 11:30:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\doble-rampa\
 
@@ -41,7 +41,7 @@ R_R1         N20046 ITEST  1k TC=0,0
 **** RESUMING test.cir ****
 .END
 
-**** 04/18/10 18:26:02 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/19/10 11:30:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\doble-rampa\
 
@@ -71,7 +71,7 @@ R_R1         N20046 ITEST  1k TC=0,0
 
           JOB CONCLUDED
 
-**** 04/18/10 18:26:02 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/19/10 11:30:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\doble-rampa\
 
