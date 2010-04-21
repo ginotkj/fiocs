@@ -106,6 +106,7 @@ class ParserMain():
             self.dir_list = os.listdir(name_dir)
         else:
             print "INFO: Directory not found!"
+            self.dir_dict = {}
             return 255
 
         for i in self.dir_list:

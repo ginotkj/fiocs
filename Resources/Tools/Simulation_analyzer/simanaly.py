@@ -67,6 +67,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         #self.ui = Ui_MainWindow()
         self.setupUi(self)
         self.parser = ParserMain()
+        self.treeWidget
 
     def update_status(self):
         self.statusbar.showMessage("Analyze button pressed!")
@@ -75,18 +76,57 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         dialog = AboutDialog(self)
         dialog.show()
 
+    def add_one(self):
+        for item in self.treeWidget.selectedItems():
+            self.listWidget.addItem(item.text(0))
+
+    def add_all(self):
+        for item in self.treeWidget.selectedItems():
+            print "EL TYPE ES: %s" % item.type()
+            if item.type() == 0:
+                self.listWidget.addItem(item.text(0))
+
+    def remove_one(self):
+        pass
+
+    def remove_all(self):
+        pass
+
     def list_dir(self):
-        self.listWidget.clear()
+        dirmodel = QtGui.QFileSystemModel()
+        dirmodel.setRootPath(QtCore.QDir.currentPath())
+        self.treeView.setModel(dirmodel)
+
+    def list_dir2(self):
+        self.treeWidget.clear()
         dirpath = self.lineEdit.text()
         if dirpath:
-            #self.listWidget.addItem(dirpath)
             dirdict = self.parser._readdir(str(dirpath))
-            print "INFO: %s" % dirdict
-            for files in dirdict:
-                self.listWidget.addItem(files)
+            print "EXITSTATUS: %s" % dirdict
+            if dirdict != 255:
+                for files in dirdict:
+                    # ADD TREE REAL VIEW
+                    #if dirdict[files] == "dir":
+                    #    temp = self.parser._readdir(dirpath + files)
+                    #    dirfile = QtGui.QTreeWidgetItem(QtCore.QStringList(files))
+                    #    for dir in temp:
+                    #        listfile = QtGui.QTreeWidgetItem(QtCore.QStringList(dir))
+                    #        dirfile.addChild(listfile)
+                    #else:
+                    #    dirfile = QtGui.QTreeWidgetItem(QtCore.QStringList(files))
+                    if dirdict[files] == "dir":
+                        item = QtGui.QTreeWidgetItem(QtCore.QStringList(files),1)
+                        item.setDisabled(True)
+                        print "DIRTYPE: %s" % item.type()
+                    item = QtGui.QTreeWidgetItem(QtCore.QStringList(files),0)
+                    print "FILETYPE: %s" % item.type()
+                    self.treeWidget.addTopLevelItem(item)
+            else:
+                item = QtGui.QTreeWidgetItem(QtCore.QStringList("Not a valid path"))
+                self.treeWidget.addTopLevelItem(item)
         else:
-            element = "Not a valid path"
-            self.listWidget.addItem(element)
+            item = QtGui.QTreeWidgetItem(QtCore.QStringList("Not a valid path"))
+            self.treeWidget.addTopLevelItem(item)
 
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
@@ -95,4 +135,4 @@ if __name__ == '__main__':
     win.show()
     status = app.exec_()
     #win.exit_cleanup()
-    sys.exit(status)
+    #sys.exit(status)
