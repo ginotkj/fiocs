@@ -25,7 +25,7 @@
 *Analysis directives: 
 
 .STEP V_VIN LIST 0.5 0.99 1 1.01 1.5
-.TRAN  0 1u 0 10p 
+.TRAN  0 50n 0 10p 
 .PROBE V(*) I(*) 
 
 *.INC "..\TEST.net" 
