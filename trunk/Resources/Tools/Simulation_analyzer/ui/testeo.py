@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'testeo.ui'
 #
-# Created: Mon Apr 19 20:51:02 2010
+# Created: Wed Apr 21 19:57:05 2010
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!

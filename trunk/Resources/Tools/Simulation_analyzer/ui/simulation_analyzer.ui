@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>611</width>
+    <width>877</width>
     <height>510</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -28,6 +28,12 @@
       <width>561</width>
       <height>451</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="sizeIncrement">
      <size>
@@ -278,7 +284,23 @@
           <widget class="QLineEdit" name="lineEdit"/>
          </item>
          <item>
-          <widget class="QListWidget" name="listWidget"/>
+          <widget class="QTreeWidget" name="treeWidget">
+           <column>
+            <property name="text">
+             <string>Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Size</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Type</string>
+            </property>
+           </column>
+          </widget>
          </item>
         </layout>
        </item>
@@ -369,7 +391,7 @@
         </layout>
        </item>
        <item>
-        <widget class="QListWidget" name="listWidget_2"/>
+        <widget class="QListWidget" name="listWidget"/>
        </item>
       </layout>
      </widget>
@@ -390,13 +412,23 @@
      </attribute>
     </widget>
    </widget>
+   <widget class="QTreeView" name="treeView">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>140</y>
+      <width>271</width>
+      <height>321</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>611</width>
+     <width>877</width>
      <height>21</height>
     </rect>
    </property>
@@ -494,6 +526,31 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>radioButton_2</tabstop>
+  <tabstop>spinBox_4</tabstop>
+  <tabstop>spinBox_2</tabstop>
+  <tabstop>spinBox_5</tabstop>
+  <tabstop>spinBox_3</tabstop>
+  <tabstop>spinBox</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>spinBox_6</tabstop>
+  <tabstop>doubleSpinBox</tabstop>
+  <tabstop>doubleSpinBox_2</tabstop>
+  <tabstop>doubleSpinBox_3</tabstop>
+  <tabstop>doubleSpinBox_4</tabstop>
+  <tabstop>doubleSpinBox_5</tabstop>
+  <tabstop>doubleSpinBox_6</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>radioButton</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>listWidget</tabstop>
+  <tabstop>treeWidget</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -544,10 +601,46 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>add_one()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>288</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>add_all()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>288</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>show_about_dialog()</slot>
   <slot>update_status()</slot>
   <slot>list_dir()</slot>
+  <slot>add_one()</slot>
+  <slot>add_all()</slot>
+  <slot>remove_one()</slot>
+  <slot>remove_all()</slot>
  </slots>
 </ui>
