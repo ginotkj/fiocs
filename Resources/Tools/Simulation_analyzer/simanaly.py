@@ -53,6 +53,7 @@ from PyQt4 import QtCore, QtGui
 
 #UI imports
 from ui.about import Ui_AboutDialog
+from ui.info import Ui_InfoDialog
 from ui.simulation_analyzer import Ui_MainWindow
 
 
@@ -60,6 +61,14 @@ class AboutDialog(QtGui.QDialog, Ui_AboutDialog):
     def __init__(self, parent=None):
         QtGui.QWidget.__init__(self, parent)
         self.setupUi(self)
+
+class InfoDialog(QtGui.QDialog, Ui_InfoDialog):
+    def __init__(self, texto, parent=None):
+        QtGui.QWidget.__init__(self, parent)
+        self.setupUi(self)
+        texto = "como que no"
+        print "Y... %s " % dir(self.plainTextEdit)
+        self.plainTextEdit.plainText(texto)
 
 class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
@@ -98,14 +107,31 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.statusbar.showMessage("This function is not implemented")
 
     def remove_one(self):
+        self.statusbar.showMessage("This function is not implemented")
         algo = self.selectmodel.currentIndex()
         print "MULINDEX: %s" % algo
         algo = self.selectmodel.clear()
         print "MULSELECETED: %s" % algo
 
     def remove_all(self):
+        self.statusbar.showMessage("This function is not implemented")
         algo = self.treeView.currentIndex()
         print "MONO: %s" % algo
+
+    def _get_voltage_param_from_gui(self):
+        if self.digitalRadioButton.isChecked():
+            pass
+        elif self.analogRadioButton.isChecked():
+            pass
+        else:
+            pass
+
+    def analyze(self):
+        infodlg = InfoDialog(self)
+        infodlg.show()
+        allitems = self.listWidget.selectedItems()
+        print "INFO: %s" % str(allitems)
+        #self.statusbar.showMessage()
 
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
