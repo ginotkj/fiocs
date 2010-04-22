@@ -6,40 +6,64 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>877</width>
-    <height>510</height>
+    <width>580</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>580</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>100</width>
+    <height>50</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Simulation Analyzer</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>561</width>
-      <height>451</height>
+      <width>560</width>
+      <height>450</height>
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
-    <property name="sizeIncrement">
+    <property name="minimumSize">
      <size>
-      <width>0</width>
-      <height>0</height>
+      <width>560</width>
+      <height>450</height>
      </size>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -76,6 +100,9 @@
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMaximumSize</enum>
+        </property>
         <item row="1" column="0">
          <widget class="QRadioButton" name="radioButton">
           <property name="text">
@@ -281,25 +308,13 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QLineEdit" name="lineEdit"/>
-         </item>
-         <item>
-          <widget class="QTreeWidget" name="treeWidget">
-           <column>
-            <property name="text">
-             <string>Name</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Size</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Type</string>
-            </property>
-           </column>
+          <widget class="QTreeView" name="treeView">
+           <property name="dragDropMode">
+            <enum>QAbstractItemView::DragOnly</enum>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::ExtendedSelection</enum>
+           </property>
           </widget>
          </item>
         </layout>
@@ -391,7 +406,14 @@
         </layout>
        </item>
        <item>
-        <widget class="QListWidget" name="listWidget"/>
+        <widget class="QListWidget" name="listWidget">
+         <property name="dragDropMode">
+          <enum>QAbstractItemView::DropOnly</enum>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::ExtendedSelection</enum>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -412,25 +434,21 @@
      </attribute>
     </widget>
    </widget>
-   <widget class="QTreeView" name="treeView">
-    <property name="geometry">
-     <rect>
-      <x>580</x>
-      <y>140</y>
-      <width>271</width>
-      <height>321</height>
-     </rect>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>877</width>
+     <width>580</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
@@ -527,29 +545,27 @@
   </action>
  </widget>
  <tabstops>
-  <tabstop>lineEdit</tabstop>
-  <tabstop>radioButton_2</tabstop>
-  <tabstop>spinBox_4</tabstop>
-  <tabstop>spinBox_2</tabstop>
-  <tabstop>spinBox_5</tabstop>
-  <tabstop>spinBox_3</tabstop>
+  <tabstop>radioButton</tabstop>
   <tabstop>spinBox</tabstop>
-  <tabstop>tabWidget</tabstop>
+  <tabstop>spinBox_2</tabstop>
+  <tabstop>spinBox_3</tabstop>
+  <tabstop>spinBox_4</tabstop>
+  <tabstop>spinBox_5</tabstop>
   <tabstop>spinBox_6</tabstop>
+  <tabstop>radioButton_2</tabstop>
   <tabstop>doubleSpinBox</tabstop>
   <tabstop>doubleSpinBox_2</tabstop>
   <tabstop>doubleSpinBox_3</tabstop>
   <tabstop>doubleSpinBox_4</tabstop>
   <tabstop>doubleSpinBox_5</tabstop>
   <tabstop>doubleSpinBox_6</tabstop>
-  <tabstop>pushButton</tabstop>
-  <tabstop>radioButton</tabstop>
+  <tabstop>treeView</tabstop>
   <tabstop>pushButton_3</tabstop>
   <tabstop>pushButton_5</tabstop>
   <tabstop>pushButton_4</tabstop>
   <tabstop>pushButton_2</tabstop>
   <tabstop>listWidget</tabstop>
-  <tabstop>treeWidget</tabstop>
+  <tabstop>pushButton</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -586,22 +602,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>lineEdit</sender>
-   <signal>returnPressed()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>list_dir()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>141</x>
-     <y>194</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>305</x>
-     <y>254</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>pushButton_3</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
@@ -630,6 +630,54 @@
     <hint type="destinationlabel">
      <x>305</x>
      <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeView</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>add_one()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>141</x>
+     <y>327</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>289</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>remove_all()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>288</x>
+     <y>359</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>289</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>remove_one()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>288</x>
+     <y>426</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>289</x>
+     <y>249</y>
     </hint>
    </hints>
   </connection>

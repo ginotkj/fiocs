@@ -67,66 +67,45 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         #self.ui = Ui_MainWindow()
         self.setupUi(self)
         self.parser = ParserMain()
-        self.treeWidget
+        self.dirmodel = QtGui.QFileSystemModel()
+        self.dirmodel.setRootPath(QtCore.QDir.currentPath())
+        self.treeView.setModel(self.dirmodel)
+        self.selectmodel = QtGui.QItemSelectionModel(self.dirmodel)
 
     def update_status(self):
-        self.statusbar.showMessage("Analyze button pressed!")
+        indices = self.treeView.currentIndex()
+        self.statusbar.showMessage(str(indices))
 
     def show_about_dialog(self):
         dialog = AboutDialog(self)
         dialog.show()
 
     def add_one(self):
-        for item in self.treeWidget.selectedItems():
-            self.listWidget.addItem(item.text(0))
+        csdstr = QtCore.QString("csd File")
+        model = self.treeView.currentIndex()
+        namefile = self.dirmodel.fileName(model)
+        matchflag = QtCore.Qt.MatchFixedString
+        if csdstr == self.dirmodel.type(model):
+            if self.listWidget.findItems(namefile,matchflag) == []:
+                self.listWidget.addItem(namefile)
+                self.statusbar.showMessage("CSD file added!")
+            else:
+                self.statusbar.showMessage("Already added!")
+        else:
+            self.statusbar.showMessage("Not a CSD file!")
 
     def add_all(self):
-        for item in self.treeWidget.selectedItems():
-            print "EL TYPE ES: %s" % item.type()
-            if item.type() == 0:
-                self.listWidget.addItem(item.text(0))
+        self.statusbar.showMessage("This function is not implemented")
 
     def remove_one(self):
-        pass
+        algo = self.selectmodel.currentIndex()
+        print "MULINDEX: %s" % algo
+        algo = self.selectmodel.clear()
+        print "MULSELECETED: %s" % algo
 
     def remove_all(self):
-        pass
-
-    def list_dir(self):
-        dirmodel = QtGui.QFileSystemModel()
-        dirmodel.setRootPath(QtCore.QDir.currentPath())
-        self.treeView.setModel(dirmodel)
-
-    def list_dir2(self):
-        self.treeWidget.clear()
-        dirpath = self.lineEdit.text()
-        if dirpath:
-            dirdict = self.parser._readdir(str(dirpath))
-            print "EXITSTATUS: %s" % dirdict
-            if dirdict != 255:
-                for files in dirdict:
-                    # ADD TREE REAL VIEW
-                    #if dirdict[files] == "dir":
-                    #    temp = self.parser._readdir(dirpath + files)
-                    #    dirfile = QtGui.QTreeWidgetItem(QtCore.QStringList(files))
-                    #    for dir in temp:
-                    #        listfile = QtGui.QTreeWidgetItem(QtCore.QStringList(dir))
-                    #        dirfile.addChild(listfile)
-                    #else:
-                    #    dirfile = QtGui.QTreeWidgetItem(QtCore.QStringList(files))
-                    if dirdict[files] == "dir":
-                        item = QtGui.QTreeWidgetItem(QtCore.QStringList(files),1)
-                        item.setDisabled(True)
-                        print "DIRTYPE: %s" % item.type()
-                    item = QtGui.QTreeWidgetItem(QtCore.QStringList(files),0)
-                    print "FILETYPE: %s" % item.type()
-                    self.treeWidget.addTopLevelItem(item)
-            else:
-                item = QtGui.QTreeWidgetItem(QtCore.QStringList("Not a valid path"))
-                self.treeWidget.addTopLevelItem(item)
-        else:
-            item = QtGui.QTreeWidgetItem(QtCore.QStringList("Not a valid path"))
-            self.treeWidget.addTopLevelItem(item)
+        algo = self.treeView.currentIndex()
+        print "MONO: %s" % algo
 
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
