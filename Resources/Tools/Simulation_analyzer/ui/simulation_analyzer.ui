@@ -104,7 +104,7 @@
          <enum>QLayout::SetMaximumSize</enum>
         </property>
         <item row="1" column="0">
-         <widget class="QRadioButton" name="radioButton">
+         <widget class="QRadioButton" name="digitalRadioButton">
           <property name="text">
            <string>Digital</string>
           </property>
@@ -114,7 +114,7 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QRadioButton" name="radioButton_2">
+         <widget class="QRadioButton" name="analogRadioButton">
           <property name="text">
            <string>Analog</string>
           </property>
@@ -554,14 +554,14 @@
   </action>
  </widget>
  <tabstops>
-  <tabstop>radioButton</tabstop>
+  <tabstop>digitalRadioButton</tabstop>
   <tabstop>spinBox_6</tabstop>
   <tabstop>spinBox_5</tabstop>
   <tabstop>spinBox_4</tabstop>
   <tabstop>spinBox_3</tabstop>
   <tabstop>spinBox_2</tabstop>
   <tabstop>spinBox_1</tabstop>
-  <tabstop>radioButton_2</tabstop>
+  <tabstop>analogRadioButton</tabstop>
   <tabstop>doubleSpinBox_6</tabstop>
   <tabstop>doubleSpinBox_5</tabstop>
   <tabstop>doubleSpinBox_4</tabstop>

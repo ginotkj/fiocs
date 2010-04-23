@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'simulation_analyzer.ui'
 #
-# Created: Thu Apr 22 19:26:33 2010
+# Created: Thu Apr 22 23:34:40 2010
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -54,14 +54,14 @@ class Ui_MainWindow(object):
         self.gridLayout = QtGui.QGridLayout(self.gridLayoutWidget)
         self.gridLayout.setSizeConstraint(QtGui.QLayout.SetMaximumSize)
         self.gridLayout.setObjectName("gridLayout")
-        self.radioButton = QtGui.QRadioButton(self.gridLayoutWidget)
-        self.radioButton.setChecked(True)
-        self.radioButton.setObjectName("radioButton")
-        self.gridLayout.addWidget(self.radioButton, 1, 0, 1, 1)
-        self.radioButton_2 = QtGui.QRadioButton(self.gridLayoutWidget)
-        self.radioButton_2.setCheckable(True)
-        self.radioButton_2.setObjectName("radioButton_2")
-        self.gridLayout.addWidget(self.radioButton_2, 2, 0, 1, 1)
+        self.digitalRadioButton = QtGui.QRadioButton(self.gridLayoutWidget)
+        self.digitalRadioButton.setChecked(True)
+        self.digitalRadioButton.setObjectName("digitalRadioButton")
+        self.gridLayout.addWidget(self.digitalRadioButton, 1, 0, 1, 1)
+        self.analogRadioButton = QtGui.QRadioButton(self.gridLayoutWidget)
+        self.analogRadioButton.setCheckable(True)
+        self.analogRadioButton.setObjectName("analogRadioButton")
+        self.gridLayout.addWidget(self.analogRadioButton, 2, 0, 1, 1)
         self.spinBox_6 = QtGui.QSpinBox(self.gridLayoutWidget)
         self.spinBox_6.setMaximum(1)
         self.spinBox_6.setObjectName("spinBox_6")
@@ -261,14 +261,14 @@ class Ui_MainWindow(object):
         QtCore.QObject.connect(self.pushButton_4, QtCore.SIGNAL("clicked()"), MainWindow.remove_all)
         QtCore.QObject.connect(self.pushButton_2, QtCore.SIGNAL("clicked()"), MainWindow.remove_one)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        MainWindow.setTabOrder(self.radioButton, self.spinBox_6)
+        MainWindow.setTabOrder(self.digitalRadioButton, self.spinBox_6)
         MainWindow.setTabOrder(self.spinBox_6, self.spinBox_5)
         MainWindow.setTabOrder(self.spinBox_5, self.spinBox_4)
         MainWindow.setTabOrder(self.spinBox_4, self.spinBox_3)
         MainWindow.setTabOrder(self.spinBox_3, self.spinBox_2)
         MainWindow.setTabOrder(self.spinBox_2, self.spinBox_1)
-        MainWindow.setTabOrder(self.spinBox_1, self.radioButton_2)
-        MainWindow.setTabOrder(self.radioButton_2, self.doubleSpinBox_6)
+        MainWindow.setTabOrder(self.spinBox_1, self.analogRadioButton)
+        MainWindow.setTabOrder(self.analogRadioButton, self.doubleSpinBox_6)
         MainWindow.setTabOrder(self.doubleSpinBox_6, self.doubleSpinBox_5)
         MainWindow.setTabOrder(self.doubleSpinBox_5, self.doubleSpinBox_4)
         MainWindow.setTabOrder(self.doubleSpinBox_4, self.doubleSpinBox_3)
@@ -285,8 +285,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Simulation Analyzer", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox.setTitle(QtGui.QApplication.translate("MainWindow", "Output comparison variable", None, QtGui.QApplication.UnicodeUTF8))
-        self.radioButton.setText(QtGui.QApplication.translate("MainWindow", "Digital", None, QtGui.QApplication.UnicodeUTF8))
-        self.radioButton_2.setText(QtGui.QApplication.translate("MainWindow", "Analog", None, QtGui.QApplication.UnicodeUTF8))
+        self.digitalRadioButton.setText(QtGui.QApplication.translate("MainWindow", "Digital", None, QtGui.QApplication.UnicodeUTF8))
+        self.analogRadioButton.setText(QtGui.QApplication.translate("MainWindow", "Analog", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("MainWindow", "MSB", None, QtGui.QApplication.UnicodeUTF8))
         self.label_2.setText(QtGui.QApplication.translate("MainWindow", "5SB", None, QtGui.QApplication.UnicodeUTF8))
         self.label_3.setText(QtGui.QApplication.translate("MainWindow", "4SB", None, QtGui.QApplication.UnicodeUTF8))
