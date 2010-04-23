@@ -67,19 +67,18 @@ class InfoDialog(QtGui.QDialog, Ui_InfoDialog):
         QtGui.QWidget.__init__(self, parent)
         self.setupUi(self)
         texto = "como que no"
-        print "Y... %s " % dir(self.plainTextEdit)
-        self.plainTextEdit.plainText(texto)
+        self.plainTextEdit.setPlainText(texto)
 
 class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         QtGui.QMainWindow.__init__(self, parent=None)
-        #self.ui = Ui_MainWindow()
         self.setupUi(self)
         self.parser = ParserMain()
         self.dirmodel = QtGui.QFileSystemModel()
         self.dirmodel.setRootPath(QtCore.QDir.currentPath())
         self.treeView.setModel(self.dirmodel)
         self.selectmodel = QtGui.QItemSelectionModel(self.dirmodel)
+        self.voltages = []
 
     def update_status(self):
         indices = self.treeView.currentIndex()
@@ -120,17 +119,28 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 
     def _get_voltage_param_from_gui(self):
         if self.digitalRadioButton.isChecked():
-            pass
+            self.voltages = [self.spinBox_1.value(),self.spinBox_2.value(),
+                            self.spinBox_3.value(),self.spinBox_4.value(),
+                            self.spinBox_5.value(),self.spinBox_6.value()]
+            self.statusbar.showMessage(str(self.voltages))
         elif self.analogRadioButton.isChecked():
-            pass
+            self.voltages = [self.doubleSpinBox_1.value(),
+                             self.doubleSpinBox_2.value(),
+                             self.doubleSpinBox_3.value(),
+                             self.doubleSpinBox_4.value(),
+                             self.doubleSpinBox_5.value(),
+                             self.doubleSpinBox_6.value()]
+            self.statusbar.showMessage(str(self.voltages))
         else:
-            pass
+            self.statusbar.showMessage("SELECT ANALOG OR DIGITAL VOLTAGE")
 
     def analyze(self):
-        infodlg = InfoDialog(self)
-        infodlg.show()
-        allitems = self.listWidget.selectedItems()
-        print "INFO: %s" % str(allitems)
+        #infodlg = InfoDialog(self)
+        #print "INFO: %s" % infodlg
+        #infodlg.show()
+        self._get_voltage_param_from_gui()
+        #allitems = self.listWidget.selectedItems()
+        #print "INFO: %s" % str(allitems)
         #self.statusbar.showMessage()
 
 if __name__ == '__main__':
