@@ -76,13 +76,27 @@
          ".\i-comparador-01-pspicefiles\test\transient.sim"
         (DisplayName "TEST-transient")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-comparador-01-pspicefiles\test\bias.sim")
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-comparador-01-pspicefiles\test\bias.sim"
         (DisplayName "TEST-bias")
-        (Type "PSpice Profile"))))
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-comparador-01-pspicefiles\test\transient.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (NEG
+      (FullPartName "NEG.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
     (IPULSE
       (FullPartName "IPULSE.Normal")
       (LibraryName
@@ -127,14 +141,6 @@
       (LibraryName
          "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
       (DeviceIndex "0"))
-    (R
-      (FullPartName "R.Normal")
-      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
-      (DeviceIndex "0"))
-    (C
-      (FullPartName "C.Normal")
-      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
-      (DeviceIndex "0"))
     (L
       (FullPartName "L.Normal")
       (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
@@ -144,7 +150,7 @@
       (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
       (DeviceIndex "0")))
   (LastUsedLibraryBrowseDirectory
-     "C:\OrCAD\OrCAD_16.0\tools\capture\library\pspice")
+     "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD")
   (MPSSessionName "FABRICIO")
   (GlobalState
     (FileView
@@ -160,8 +166,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 2 3 -1 -1 -8 -30 50 1346 50 749")
-        (Scroll "209 255")
-        (Zoom "174")
+        (Scroll "0 0")
+        (Zoom "82")
         (Occurrence "/"))
       (Path
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-COMPARADOR-02\ORCAD\I-COMPARADOR-01.DSN")

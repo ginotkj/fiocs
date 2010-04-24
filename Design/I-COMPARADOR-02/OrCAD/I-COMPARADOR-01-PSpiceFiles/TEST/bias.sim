@@ -1,6 +1,6 @@
 @OrCAD Simulation Server Version: 1.0
 
-@Settings: 3 1
+@Settings: 0 1
 @General:
 ProfileName= "bias" 
 ProfileFile= "bias.sim" 
@@ -12,10 +12,10 @@ Notes=
 @#$BEGINNOTES
 @#$ENDNOTES
 @End General
-@Analysis: 0 0
+@Analysis: 0 1
 +0 0 0 0 
-+0 "1000ns" 
-+1 "" 
++0 "50n" 
++1 "10n" 
 +2 "0" 
 +3 "" 
 +4 "" 
@@ -42,14 +42,14 @@ Notes=
 +6 "" 
 +7 "" 
 @End Analysis
-@Analysis: 3 1
+@Analysis: 3 0
 +0 0 0
 +0 "" 
 +1 "" 
 +2 "" 
 @End Analysis
 @Analysis: 4 0
-+0 0 1 0 0 0 3 0 0 0
++0 0 1 0 0 0 0 0 0 0
 +0 "" 
 +1 "" 
 +2 "" 
@@ -113,7 +113,7 @@ SaveFile 0 ""
 + 0 0 0 0 0 0 0 0 0
 @End Analysis
 @Analysis: 12 0
-+2236960 0
++8946208 1
 @End Analysis
 @Analysis: 13 1
 +0 1 1 0
@@ -130,7 +130,7 @@ SaveFile 0 ""
 @End Analysis
 @Analysis: 17 0
 +0 "-1" 
-+1 "" 
++1 "-1" 
 +2 "-1" 
 +3 "-1" 
 +4 "1" 
