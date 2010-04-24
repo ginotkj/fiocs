@@ -1,4 +1,4 @@
-** Profile: "TEST-bias"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\I-COMPARADOR-01-PSpiceFiles\TEST\bias.sim ] 
+** Profile: "TEST-bias"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01-pspicefiles\test\bias.sim ] 
 
 ** Creating circuit file "bias.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -11,7 +11,8 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.TRAN 10n 50n 0 
+.PROBE V(alias(*)) I(alias(*)) 
 .INC "..\TEST.net" 
 
 

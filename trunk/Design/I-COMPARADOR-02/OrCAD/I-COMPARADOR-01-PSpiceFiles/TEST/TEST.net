@@ -12,7 +12,14 @@ M_M4         ND+ ND- N39211 N39211 CMOSP
 M_M5         NDBIAS VBIAS 0 0 CMOSN  
 + L=.2u  
 + W=.6u         
+C_C1         0 N749310  1n  
 V_VQ+         N398131 0 .2
+M_U2_M5         N75001 NOUT N39211 N39211 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U2_M6         N75001 NOUT 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
 M_M6         NOUT ND+ N39211 N39211 CMOSP  
 + L=.2u  
 + W=.8u         
@@ -22,6 +29,7 @@ M_M7         NOUT VBIAS 0 0 CMOSN
 + W=.4u         
 V_VQ-         N43113 0 .2
 V_VIN         IN- N43113 1.5
+R_R1         N75001 N749310  500k  
 M_M1         ND- IN- NDBIAS 0 CMOSN  
 + L=.2u  
 + W=.4u         

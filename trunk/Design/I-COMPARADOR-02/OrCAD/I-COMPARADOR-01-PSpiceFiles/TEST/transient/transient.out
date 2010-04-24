@@ -1,5 +1,5 @@
 
-**** 04/19/10 19:21:45 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/24/10 15:35:10 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
 
@@ -44,23 +44,27 @@ M_M4         ND+ ND- N39211 N39211 CMOSP
 M_M5         NDBIAS VBIAS 0 0 CMOSN  
 + L=.2u  
 + W=.6u         
-R_R1         NOUT N70310  500k  
+C_C1         0 N749310  1n  
 V_VQ+         N398131 0 .2
+M_U2_M5         N75001 NOUT N39211 N39211 CMOSP  
++ L=.18u  
++ W=.2u         
+M_U2_M6         N75001 NOUT 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
 M_M6         NOUT ND+ N39211 N39211 CMOSP  
 + L=.2u  
 + W=.8u         
 V_VBIAS         VBIAS 0 .33
-C_C1         0 N70310  4.7p  
 M_M7         NOUT VBIAS 0 0 CMOSN  
 + L=.2u  
 + W=.4u         
 V_VQ-         N43113 0 .2
-V_VIN         IN- N43113 0
+V_VIN         IN- N43113 1.5
+R_R1         N75001 N749310  500k  
 M_M1         ND- IN- NDBIAS 0 CMOSN  
 + L=.2u  
 + W=.4u         
-I_I1         ND- 0 DC 0Adc AC 0Aac
-+PULSE 0 4m 2n 50p 1.55p 100p 0
 V_VDD         N39211 0 3.3
 
 **** RESUMING transient.cir ****
@@ -72,13 +76,19 @@ WARNING -- Mosfet M_M2, model CMOSN: Ps = 0 is less than W
 Mosfet M_M5, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M5, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSN: Ps = 0 is less than W
+Mosfet M_U2_M6, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U2_M6, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U2_M6, model CMOSN: Ps = 0 is less than W
 Mosfet M_M3, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
+Mosfet M_U2_M5, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U2_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U2_M5, model CMOSP: Ps = 0 is less than W
 Mosfet M_M6, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
-**** 04/19/10 19:21:45 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/24/10 15:35:10 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
 
@@ -199,13 +209,19 @@ WARNING -- Mosfet M_M2, model CMOSN: Ps = 0 is less than W
 Mosfet M_M5, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M5, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSN: Ps = 0 is less than W
+Mosfet M_U2_M6, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U2_M6, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U2_M6, model CMOSN: Ps = 0 is less than W
 Mosfet M_M3, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
+Mosfet M_U2_M5, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U2_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U2_M5, model CMOSP: Ps = 0 is less than W
 Mosfet M_M6, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M6, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
-**** 04/19/10 19:21:45 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/24/10 15:35:10 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
 
@@ -220,11 +236,13 @@ WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(  IN+)    1.2000  (  IN-)     .2000  (  ND+)     .0217  (  ND-)    3.0523      
+(  IN+)    1.2000  (  IN-)    1.7000  (  ND+)    3.3000  (  ND-)    2.9205      
 
-( NOUT)    3.2989  (VBIAS)     .3300  (N39211)    3.3000 (N43113)     .2000     
+( NOUT) 11.95E-06  (VBIAS)     .3300  (N39211)    3.3000 (N43113)     .2000     
 
-(N70310)    3.2989 (NDBIAS)     .0217 (N398131)     .2000                   
+(N75001)    3.3000 (NDBIAS)    1.1928 (N398131)     .2000                       
+
+(N749310)    3.3000                   
 
 
 
@@ -237,15 +255,15 @@ WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
     V_VBIAS      0.000E+00
     V_VQ-        0.000E+00
     V_VIN        0.000E+00
-    V_VDD       -4.463E-07
+    V_VDD       -1.483E-07
 
-    TOTAL POWER DISSIPATION   1.47E-06  WATTS
+    TOTAL POWER DISSIPATION   4.89E-07  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 04/19/10 19:21:45 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 04/24/10 15:35:10 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "TEST-transient"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-02\OrCAD\i-comparador-01-pspicefiles\test\transient.sim
 
@@ -257,5 +275,5 @@ WARNING -- Mosfet M_M6, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =       46.94
+  Total job time (using Solver 1)   =       48.70
 
