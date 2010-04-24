@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'simulation_analyzer.ui'
 #
-# Created: Thu Apr 22 23:34:40 2010
+# Created: Sat Apr 24 14:58:14 2010
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -260,6 +260,9 @@ class Ui_MainWindow(object):
         QtCore.QObject.connect(self.treeView, QtCore.SIGNAL("doubleClicked(QModelIndex)"), MainWindow.add_one)
         QtCore.QObject.connect(self.pushButton_4, QtCore.SIGNAL("clicked()"), MainWindow.remove_all)
         QtCore.QObject.connect(self.pushButton_2, QtCore.SIGNAL("clicked()"), MainWindow.remove_one)
+        QtCore.QObject.connect(self.treeView, QtCore.SIGNAL("expanded(QModelIndex)"), MainWindow.auto_adjust)
+        QtCore.QObject.connect(self.actionExit, QtCore.SIGNAL("activated()"), MainWindow.close)
+        QtCore.QObject.connect(self.treeView, QtCore.SIGNAL("collapsed(QModelIndex)"), MainWindow.auto_adjust)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.digitalRadioButton, self.spinBox_6)
         MainWindow.setTabOrder(self.spinBox_6, self.spinBox_5)

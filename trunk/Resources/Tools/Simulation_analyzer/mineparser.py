@@ -169,6 +169,8 @@ class ParserMain():
             line = f.readline()
             line = f.readline()
             self.nodes = line.split(' ')
+            if self.nodes[len(self.nodes)-1] == '\n':
+                self.nodes.pop()
         except Exception, ex:
             print "WARNING: The file %s seems to be empty. Please check it." % file
             print "CRITICAL: %s" % ex
@@ -194,16 +196,18 @@ class ParserMain():
                 aux.pop()
                 nodesvalues = aux
                 self.nodes_values[timeseek[1]] = nodesvalues
+        return self.nodes_values,self.nodes
         #debug muestra la info del dict con los datos
         #for key in self.nodes_values:
-        #    print "%s -> %s" % (key, self.nodes_values[key])
+        #   print "%s -> %s" % (key, self.nodes_values[key])
 
-    def run (self):
+    def run (self,csdfile):
         """ Function doc """
-
         #print self._readdir(self.dir)
-        #print self._isfilecsdf(self.dir)
-        self._parsecsdf(self.dir)
+        if self._isfilecsdf(csdfile):
+            return self._parsecsdf(csdfile)
+        else:
+            print "ERROR: %s" % self._isfilecsdf(csdfile)
         #print "HOLA"
 
 

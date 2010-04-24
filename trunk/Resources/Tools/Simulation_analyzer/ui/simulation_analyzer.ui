@@ -690,6 +690,54 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>treeView</sender>
+   <signal>expanded(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>auto_adjust()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>141</x>
+     <y>327</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>289</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>289</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeView</sender>
+   <signal>collapsed(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>auto_adjust()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>141</x>
+     <y>327</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>289</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>show_about_dialog()</slot>
@@ -700,5 +748,6 @@
   <slot>remove_one()</slot>
   <slot>remove_all()</slot>
   <slot>analyze()</slot>
+  <slot>auto_adjust()</slot>
  </slots>
 </ui>
