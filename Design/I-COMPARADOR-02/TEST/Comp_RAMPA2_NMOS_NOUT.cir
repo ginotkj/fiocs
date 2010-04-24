@@ -72,8 +72,8 @@ M_M1         ND- IN- NDBIAS 0 CMOSN
 V_VDD         N39211 0 3.3
 
 I_I1         NOUT 0 DC 0Adc AC 0Aac
-+PULSE 0 4m 2n 30p 150p 0p 100n
++PULSE 0 4m 2n 30p 150p 0p 400n
 I_I2         NOUT 0 DC 0Adc AC 0Aac
-+PULSE 0 2m 2n 60p 2n 50p 100n
++PULSE 0 2m 2n 60p 2n 50p 400n
 
 .END
