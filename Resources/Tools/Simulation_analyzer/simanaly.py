@@ -47,6 +47,7 @@
 #Python imports
 import sys
 import decimal as dc
+import time
 from mineparser import ParserMain
 
 #PyQt imports
@@ -85,7 +86,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.vth_l = 1.0
         self.vth_h = 2.3
         # Global comparators for each digital voltage
-        selg.comps = []
+        self.comps = []
 
     def update_status(self):
         indices = self.treeView.currentIndex()
@@ -132,12 +133,12 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 
     def _get_voltage_param_from_gui(self):
         if self.digitalRadioButton.isChecked():
-            self.comps = [self.d2a(self.spinBox_1.value()),
-                          self.d2a(self.spinBox_2.value()),
-                          self.d2a(self.spinBox_3.value()),
-                          self.d2a(self.spinBox_4.value()),
-                          self.d2a(self.spinBox_5.value()),
-                          self.d2a(self.spinBox_6.value())]
+            self.comps = [self.spinBox_1.value(),
+                          self.spinBox_2.value(),
+                          self.spinBox_3.value(),
+                          self.spinBox_4.value(),
+                          self.spinBox_5.value(),
+                          self.spinBox_6.value()]
             voltages = [str(self.d2a(self.spinBox_1.value())),
                         str(self.d2a(self.spinBox_2.value())),
                         str(self.d2a(self.spinBox_3.value())),
@@ -163,94 +164,59 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
     def analyze(self):
         gui_voltages = self.int2dc(self._get_voltage_param_from_gui())
         items_ = self.listWidget.selectedItems()
-        model_ = None
-        voltages = {}
         print "INFO: %s" % str(items_)
 
         # This loop iterates over all list widget items
         for item_ in items_:
-
+            model_ = None
+            voltages = {}
+            nodes = {}
+            b1,b2,b3,b4,b5,b6 = None,None,None,None,None,None
             # This loop check the model index from the tree view for the item
             for key_ in self.global_indexes:
                 if key_ == item_.text():
                     model_ = self.global_indexes[key_]
+
             item_ = self.dirmodel.filePath(model_)
+            print "#####################################################"
+            print "FILE: %s" % item_
+            print "MODEL: %s" % model_
+            print "#####################################################"
+
             voltages,nodes = self.parser.run(str(item_))
 
-        b1,b2,b3,b4,b5,b6 = self.giveId(nodes)
+            b1,b2,b3,b4,b5,b6 = self.giveId(nodes)
 
-        print "la salida del give es: %s" % self.giveId(nodes)
+            print "La salida del give es: %s" % self.giveId(nodes)
 
-        # This loop iterates over all values
-        for time_ in voltages:
+            # This loop iterates over all values
             local_count = 0
-            tvolts = self.int2dc(voltages[time_])
+            for time_ in voltages:
+                tvolts = None
+                tvolts = self.int2dc(voltages[time_])
 
-            #This checks that the conditions for LSB is accomplished
-            if self.comps[0] == 1:
-                if gui_voltages[0].compare(tvolts[b1]) == dc.Decimal('1'):
+                #print "out b1: %s " % \
+                if self.compare_(self.comps[0],gui_voltages[0],tvolts[b1]):
                     local_count = 1
-            else:
-                if gui_voltages[0].compare(tvolts[b1]) == dc.Decimal('-1'):
+                #print "out b2: %s " % \
+                if self.compare_(self.comps[1],gui_voltages[1],tvolts[b2]):
                     local_count = 1
-
-            #This checks that the conditions for 2SB is accomplished
-            if self.comps[1] == 1:
-                if gui_voltages[1].compare(tvolts[b2]) == dc.Decimal('1'):
+                #print "out b3: %s " % \
+                if self.compare_(self.comps[2],gui_voltages[2],tvolts[b3]):
                     local_count = 1
-            else:
-                if gui_voltages[1].compare(tvolts[b2]) == dc.Decimal('-1'):
+                #print "out b4: %s " % \
+                if self.compare_(self.comps[3],gui_voltages[3],tvolts[b4]):
                     local_count = 1
-
-            #This checks that the conditions for 3SB is accomplished
-            if self.comps[2] == 1:
-                if gui_voltages[2].compare(tvolts[b3]) == dc.Decimal('1'):
+                #print "out b5: %s " % \
+                if self.compare_(self.comps[4],gui_voltages[4],tvolts[b5]):
                     local_count = 1
-            else:
-                if gui_voltages[2].compare(tvolts[b3]) == dc.Decimal('-1'):
+                #print "out b6: %s " % \
+                if self.compare_(self.comps[5],gui_voltages[5],tvolts[b6]):
                     local_count = 1
 
-            #This checks that the conditions for 4SB is accomplished
-            if self.comps[3] == 1:
-                if gui_voltages[3].compare(tvolts[b4]) == dc.Decimal('1'):
-                    local_count = 1
-            else:
-                if gui_voltages[3].compare(tvolts[b4]) == dc.Decimal('-1'):
-                    local_count = 1
-
-            #This checks that the conditions for 5SB is accomplished
-            if self.comps[4] == 1:
-                if gui_voltages[4].compare(tvolts[b5]) == dc.Decimal('1'):
-                    local_count = 1
-            else:
-                if gui_voltages[4].compare(tvolts[b5]) == dc.Decimal('-1'):
-                    local_count = 1
-
-            #This checks that the conditions for MSB is accomplished
-            if self.comps[5] == 1:
-                if gui_voltages[5].compare(tvolts[b6]) == dc.Decimal('1'):
-                    local_count = 1
-            else:
-                if gui_voltages[5].compare(tvolts[b6]) == dc.Decimal('-1'):
-                    local_count = 1
-
-            if local_count:
-                global_count = 1
-
-            # This loop iteratos over voltages definition
-#            for i in xrange(0,len(gui_voltages)):
-#                result = tvolts[i].compare(gui_voltages[i])
-#                if result == -1:
-#                    print "%s MENOR QUE %s" % (tvolts[i],gui_voltages[i])
-#                elif result == 1:
-#                    print "%s MAYOR QUE %s" % (tvolts[i],gui_voltages[i])
-#                elif result == 0:
-#                    print "%s IGUAL QUE %s" % (tvolts[i],gui_voltages[i])
-#                else:
-#                    print "ERROR: bad comparison. Values:"
-#                    print "1st arg: %s" % tvolts[i]
-#                    print "2nd arg: %s" % gui_voltages[i]
-#                    print "result: %s" % result
+                if local_count:
+                    global_count = 1
+                    print "FALLO EN EL TIEMPO: %s" % time_
 
     def auto_adjust(self):
         self.treeView.resizeColumnToContents(0)
@@ -281,6 +247,26 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             if "MSB" in l[i]:
                 b6 = i
         return [b1,b2,b3,b4,b5,b6]
+
+    def compare_(self,op,gvolt,pvolt):
+        local_count = 0
+        #This checks that the conditions for LSB is accomplished
+        if op == 1:
+            if gvolt.compare(pvolt) == dc.Decimal('1'):
+                local_count = 1
+                #print "Valor binario: %s" % op
+                #print "Threshold Value: %s" % gvolt
+                #print "Simulado: %s" % pvolt
+                #print "COMP(1 gui mayor que parsed): %s" % gvolt.compare(pvolt)
+        else:
+            if gvolt.compare(pvolt) == dc.Decimal('-1'):
+                local_count = 1
+                #print "Valor binario: %s" % op
+                #print "Threshold Value: %s" % gvolt
+                #print "Simulado: %s" % pvolt
+                #print "COMP(1 gui mayor que parsed): %s" % gvolt.compare(pvolt)
+        #print "=========================================================="
+        return local_count
 
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
