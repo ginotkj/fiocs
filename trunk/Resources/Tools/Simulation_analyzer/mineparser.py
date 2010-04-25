@@ -196,6 +196,7 @@ class ParserMain():
                 aux.pop()
                 nodesvalues = aux
                 self.nodes_values[timeseek[1]] = nodesvalues
+
         return self.nodes_values,self.nodes
         #debug muestra la info del dict con los datos
         #for key in self.nodes_values:
