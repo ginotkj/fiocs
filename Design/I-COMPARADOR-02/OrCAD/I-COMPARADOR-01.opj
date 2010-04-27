@@ -160,16 +160,5 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 360 0 816"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 1346 50 749")
-        (Scroll "0 0")
-        (Zoom "82")
-        (Occurrence "/"))
-      (Path
-         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-COMPARADOR-02\ORCAD\I-COMPARADOR-01.DSN")
-      (Schematic "TEST")
-      (Page "TEST"))))
+        (Placement "44 2 3 -1 -1 -8 -30 0 360 0 816"))
+      (Tab 0))))
