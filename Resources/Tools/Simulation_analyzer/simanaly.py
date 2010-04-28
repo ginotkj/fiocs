@@ -127,6 +127,10 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             self.statusbar.showMessage("Removed!",1000)
 
     def remove_all(self):
+        dialog = InfoDialog(self)
+        dialog.show()
+        for valor in xrange(100):
+            dialog.progressBar.setValue(valor)
         self.statusbar.showMessage("This function is not implemented",1200)
         algo = self.treeView.currentIndex()
         print "MONO: %s" % algo
@@ -162,12 +166,19 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             self.statusbar.showMessage("SELECT ANALOG OR DIGITAL VOLTAGE",1500)
 
     def analyze(self):
+        dialog = InfoDialog(self)
+        dialog.show()
         gui_voltages = self.int2dc(self._get_voltage_param_from_gui())
         items_ = self.listWidget.selectedItems()
         print "INFO: %s" % str(items_)
 
+        step = (100 / items_.__len__()).__trunc__()
+        valor = 0
+
         # This loop iterates over all list widget items
         for item_ in items_:
+            valor = valor + step
+            dialog.progressBar.setValue(valor)
             model_ = None
             voltages = {}
             nodes = {}
@@ -217,6 +228,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
                 if local_count:
                     global_count = 1
                     print "FALLO EN EL TIEMPO: %s" % time_
+        dialog.progressBar.setValue(100)
 
     def auto_adjust(self):
         self.treeView.resizeColumnToContents(0)

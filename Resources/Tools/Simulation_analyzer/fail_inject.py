@@ -63,6 +63,8 @@ class FailInject():
         self._fail = ''
         # This var holds the output dir
         self._outdir = ''
+        # This var holds the injection point
+        self._inject_point = ''
 
     def _transistor_count (self,file):
         """ This method count the transistors on the given file. """
@@ -96,14 +98,31 @@ class FailInject():
                                 'type': aux[5]}
                 self._trans[aux[0]] = self._nodes
 
-    def _inject_fail (self,ffail,nnode):
+    def _inject_fail (self,ffail,nnode,outdir,point):
         """ This method injects the code into the CIR file """
-        # open file cirfile
-        # add ffail code at bottom
-        # add probe cmd for ffail
-        # add probe cmd for pin nnodes involved
-        # close file
-        pass
+        # Opens a new cirfile
+        os.chdir(outdir)
+        file_ = point + '.cir'
+        try:
+            f = open(file_,'w')
+        except:
+            print "Could not create the file %s" % file_
+        print "point es %s" % point
+        print "nnode es %s" % nnode
+        print "ffail es %s" % ffail
+        print "outdir es %s" % outdir
+
+        # Add ffail code at bottom
+        f.write(ffail)
+
+        # Add probe cmd for ffail. Add \n for multiple lines
+        #f.write(".PROBE/CSDF I(%s) ") % ffail
+
+        # Add probe cmd for pin nnodes involved
+        #f.write(".PROBE/CSDF ID(%s) IB(%s) IS(%s) IG(%s)") % relatednodes
+
+        # Close file
+        f.close()
 
     def _get_related_transistors(self,drainmos=None):
         """ This method returns a list with all transistors related to a node"""
@@ -147,12 +166,27 @@ class FailInject():
             except Exception, ex:
                 print "Error getting current directory"
                 print "ERROR: %s" % ex
+            # Create the default output directory at self._outdir
+            self._outdir = self._outdir + "\OrCAD_Simulation_Files"
+            print "OUTDIR: %s" % self._outdir #DEBUG
+            try:
+                tmp = os.getcwd()
+                os.chdir(self._outdir) # Check if it is already created
+                os.chdir(tmp)
+            except WindowsError, ex:
+                try:
+                    os.mkdir(self._outdir)
+                except WindowsError, ex:
+                    print "Couldn't create %s" % self._outdir
+                    print "ERROR: %s" % ex
         else:
             try:
                 tmp = os.getcwd()
-                os.chdir(dir_) # expect NameError exceptio if dir_ doesn't exist
+                print "DIR: %s" % dir_
+                os.chdir(dir_) # NameError exception occur if dir_ doesn't exist
                 self._outdir = dir_
-            except NameError, ex:
+                os.chdir(tmp)
+            except WindowsError, ex:
                 print "Could not change to dir %s" % dir_
                 print "ERROR: %s" % ex
 
@@ -165,13 +199,13 @@ class FailInject():
 
         # Inject the fail into the new file
         for mos in self._trans:
-            drain_node = self._trans[mos]["drain"]
-            self._get_related_transistors(drain_node)
-            print "Transistor: %s" % mos
-            print "Drain: %s" % drain_node
-            print "Related transistors: %s" % self._related_transistors
-            print "==============================================================="
-            self._inject_fail(self._fail,self._related_transistors)
+            self._inject_point = self._trans[mos]["drain"]
+            self._get_related_transistors(self._inject_point)
+            #print "Transistor: %s" % mos
+            #print "Drain: %s" % self._inject_point
+            #print "Related transistors: %s" % self._related_transistors
+            #print "==============================================================="
+            self._inject_fail(self._fail,self._related_transistors,self._outdir,self._inject_point)
 
         # Print a specific transistor information
         print self._trans['M_C_F_D_U99_M4']
@@ -179,5 +213,5 @@ class FailInject():
 if __name__ == '__main__':
 
     A = FailInject()
-    A.run()
+    A.run(sys.argv[1],sys.argv[2],sys.argv[3])
 
