@@ -52,6 +52,8 @@
     (File ".\i-comparador-01-pspicefiles\test-neg\test-neg.net"
       (Type "Report"))
     (File ".\i-comparador-01-pspicefiles\memelink\memelink.net"
+      (Type "Report"))
+    (File ".\i-comparador-01-pspicefiles\doble-comp\doble-comp.net"
       (Type "Report")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
@@ -90,7 +92,11 @@
          ".\i-comparador-01-pspicefiles\memelink\dc sweep.sim"
         (DisplayName "MEMELINK-DC Sweep")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-comparador-01-pspicefiles\test-neg\transient.sim")))
+      (ActiveProfile ".\i-comparador-01-pspicefiles\doble-comp\prueba.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-comparador-01-pspicefiles\doble-comp\prueba.sim"
+        (DisplayName "DOBLE-COMP-PRUEBA")
+        (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (S-COMP
@@ -153,7 +159,24 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Outputs"))
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
+         "DOBLE-COMP")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
+         "MEMELINK")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
+         "TEST")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
+         "TEST-NEG")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
+         "TEST" "TEST"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -163,10 +186,11 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 75 1076 75 543")
+        (Placement "44 0 1 -1 -1 -8 -30 200 1848 200 899")
         (Scroll "0 0")
-        (Zoom "135"))
+        (Zoom "135")
+        (Occurrence "/"))
       (Path
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-COMPARADOR-01\ORCAD\I-COMPARADOR-01.DSN")
-      (Schematic "MEMELINK")
+      (Schematic "DOBLE-COMP")
       (Page "PAGE1"))))

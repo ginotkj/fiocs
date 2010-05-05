@@ -3,24 +3,24 @@ V_VDD         N42003 0 3.3
 V_VIN         INNEG 0 1
 V_VREF         INPOS 0 1
 M_M2         NDPOS INPOS NDBIAS 0 CMOSN  
-+ L=.2u  
-+ W=.8u         
++ L=5u  
++ W=8u         
 M_M4         NDPOS NDNEG N42003 N42003 CMOSP  
-+ L=.2u  
-+ W=1u         
++ L=5.6u  
++ W=8u         
 M_M1         NDNEG INNEG NDBIAS 0 CMOSN  
-+ L=.2u  
-+ W=.8u         
++ L=5u  
++ W=8u         
 M_M5         NDBIAS N41991 0 0 CMOSN  
-+ L=.2u  
-+ W=.8u         
-M_M9         NDNEG NDNEG N42003 N42003 CMOSP  
-+ L=.2u  
-+ W=1u         
++ L=5.6u  
++ W=8u         
+M_M3         NDNEG NDNEG N42003 N42003 CMOSP  
++ L=5.6u  
++ W=8u         
 M_M6         NOUT NDPOS N42003 N42003 CMOSP  
-+ L=.2u  
-+ W=1.2u         
++ L=6.6u  
++ W=20u         
 M_M7         NOUT NDPOS 0 0 CMOSN  
-+ L=.2u  
-+ W=.8u         
-V_VBIAS         N41991 0 .33
++ L=7.6u  
++ W=15u         
+V_VBIAS         N41991 0 .5

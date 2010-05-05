@@ -3,17 +3,6 @@
         ("VDC")
     )
     ("instances"
-        ("VREF"
-            ("device_name"	"VDC")
-            ("pspice_path"	"V_VREF")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0")
-                    ("pspice_param"	"DC")
-                )
-            )
-        )
         ("VQ+"
             ("device_name"	"VDC")
             ("pspice_path"	"V_VQ+")
@@ -31,7 +20,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	".33")
+                    ("value"	".55")
                     ("pspice_param"	"DC")
                 )
             )

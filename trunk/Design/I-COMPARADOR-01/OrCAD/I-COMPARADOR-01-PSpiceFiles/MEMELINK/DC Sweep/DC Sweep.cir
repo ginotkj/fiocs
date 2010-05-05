@@ -11,7 +11,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.DC LIN V_VNMOS 0 3.3 1m 
+.DC LIN V_VNMOS1 0 3.3 1m 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\MEMELINK.net" 
 

@@ -33,13 +33,13 @@ Notes=
 @End Analysis
 @Analysis: 2 1
 +0 0
-+0 "VNMOS1" 
++0 "VIN" 
 +1 "" 
 +2 "" 
 +3 "" 
-+4 "0" 
-+5 "3.3" 
-+6 "1m" 
++4 ".8" 
++5 "1.2" 
++6 "10u" 
 +7 "" 
 @End Analysis
 @Analysis: 3 0
