@@ -1,0 +1,73 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VDC")
+    )
+    ("instances"
+        ("VNMOS2"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_VNMOS2")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"3.3")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("VNMOS"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_VNMOS")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	".5")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("VNMOS1"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_VNMOS1")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	".5")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("VPMOS"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_VPMOS")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"2.8")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("VDD"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_VDD")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"1")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("VDD1"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_VDD1")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"3.3")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+    )
+)
