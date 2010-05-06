@@ -1,0 +1,6143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<!--META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css"-->
+<meta name="GENERATOR" content="Adobe FrameMaker 5.5/HTML Export Filter">
+<!--link REL="STYLESHEET" HREF="hspice_2001_2.css" CHARSET="ISO-8859-1" TYPE="text/css"-->
+<title>
+ LEVELs 49 and 53 BSIM3v3 MOS Models
+</title>
+
+<script charset="utf-8" id="injection_graph_func" src="HSPICE_2001_2-171_archivos/injection_graph_func.js"></script><script id="_nameHighlight_injection"></script><link class="skype_name_highlight_style" href="HSPICE_2001_2-171_archivos/injection_nh_graph.css" type="text/css" rel="stylesheet" charset="utf-8" id="_injection_graph_nh_css"><link href="HSPICE_2001_2-171_archivos/skypeplugin_dropdownmenu.css" type="text/css" rel="stylesheet" charset="utf-8" id="_skypeplugin_dropdownmenu_css"></head><body bgcolor="#ffffff">
+<div>
+<a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-169.html"><img src="HSPICE_2001_2-171_archivos/top.gif"></a>&nbsp;<a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-170.html"><img src="HSPICE_2001_2-171_archivos/prev.gif"></a>&nbsp;<a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-172.html"><img src="HSPICE_2001_2-171_archivos/next.gif"></a>&nbsp;<a href="http://www.ece.uci.edu/docs/hspice/index.html"><img src="HSPICE_2001_2-171_archivos/index.gif"></a>
+</div>
+<h2 class="head1">
+<a name="pgfId-123291"></a><div>
+<img src="HSPICE_2001_2-171_archivos/hspice_2001_2-1983.jpg">
+</div>
+<a name="34424"></a>LEVELs 49 and 53 <a name="marker-188954"></a><a name="marker-188955"></a><a name="marker-188956"></a>BSIM3v3 MOS Models</h2>
+<p class="body">
+<a name="pgfId-148921"></a>The BSIM3v3 MOS model from UC Berkeley is
+available in Star-Hspice as LEVEL 49 and LEVEL 53. LEVEL 49 is an
+Hspice-enhanced version of BSIM3v3 while LEVEL 53 (first released in
+Star-Hspice 98.2) maintains full compliance with the Berkeley release.
+This compliance includes numerically identical model equations,
+identical parameter default values, and identical parameter range
+limits. LEVEL 49 maintains compliance with the UC Berkeley release of
+BSIM3v3 with the following three exceptions:</p>
+<p class="step1">
+<a name="pgfId-155830"></a>1.	<em class="Emphasis">
+Default parameter values.</em>
+ Eliminate differences in default parameter values by explicit assignment of the parameters CAPMOD, XPART and by setting ACM=10.</p>
+<p class="step">
+<a name="pgfId-155832"></a>2.	<em class="Emphasis">
+Parameter range limits. </em>
+Provides parameter range limits that are identical to that of the
+Berkeley release. Differences occur only in the severity of warning for
+five parameters. LEVEL 49 issues a warning that the parameter range has
+been exceeded but continues with simulation, whereas, in the Berkeley
+release, a fatal error is issued and simulation is aborted. These five
+parameters include NGATE, DVT1W, DVT1, DSUB, DROUT. (See the Model
+Parameter Range Limits below for more details.)</p>
+<p class="step">
+<a name="pgfId-204988"></a>3.	<em class="Emphasis">
+Improvements in numerical stability. </em>
+Provides improvements in numerical stability. In most practical
+situations, these improvements will not affect compliance with the
+Berkeley release, but will improve convergence and simulation time.</p>
+<p class="body">
+<a name="pgfId-204989"></a>Both LEVELs 49 and 53 support a superset of
+model parameters that include Hspice-specific parameters. For LEVEL 53,
+in all cases, Hspice-specific parameters default to OFF. The single
+exception in LEVEL 49 is that ACM defaults to 0. LEVEL 49 compliance
+with Berkeley BSIM3v3 can be achieved by setting ACM=10.</p>
+<h3 class="head2">
+<a name="pgfId-155831"></a><a name="97251"></a>Selecting Model Versions</h3>
+<h4 class="head3">
+<a name="pgfId-169974"></a>Recommended BSIM3v3 Version</h4>
+<p class="body">
+<a name="pgfId-155842"></a>As of the Star-Hspice 99.2 release (June
+1999), the recommended BSIM3v3 model specification is LEVEL=49,
+VERSION=3.22. This version provides the most stable and up-to-date
+representation of the UCB BSIM3v3.2.2 model. However, do not change the
+VERSION specification in existing model cards without consulting the
+foundry or model extraction group that created the original model cards.</p>
+<p class="body">
+<a name="pgfId-169983"></a>There are, as of the 99.2 release, five
+official BSIM3v3 releases from Berkeley and several Star-Hspice LEVEL
+49 releases. (See the BSIM3 home page at
+http://www-device.EECS.Berkeley.EDU/~bsim3/ for additional release
+information from the UCB group.) To minimize confusion and maintain
+back compatibility, you can select the model parameters <a name="marker-165567"></a>VERSION
+and HSPVER. VERSION selects the Berkeley release version and HSPVER
+selects the Star-Hspice release version. For example, HSPVER=97.2 and
+VERSION=3.1 reproduce results from Hspice 97.2 using the BSIM3 Version
+3.1 model.</p>
+<p class="body">
+<a name="pgfId-148924"></a>HSPVER defaults to the current release being
+executed. The model parameter, VERSION, selects among the various
+Berkeley releases of BSIM3v3 as follows:</p>
+<ul>
+<li class="bullet1">
+<a name="pgfId-156166"></a>Version 3.0 Berkeley release (October 30,
+1995) default for HSPICE96.1,96.2,96.3. This version is invoked when
+VERSION=3.0 and HSPVER= 98.0 are specified. To invoke the Star-Hspice
+version that most accurately represents the Berkeley release of October
+1995, specify the parameters VERSION=3.0 and HSPVER=98.0</li>
+<li class="bullet1">
+<a name="pgfId-156185"></a>Version 3.1 Berkeley (December 9, 1997)
+default for HSPICE97.1,97.2. 97.4. This version is invoked when
+VERSION=3.1 or 3.11 and HSPVER= 98.0 are specified. To invoke the
+Star-Hspice version that most accurately represents the Berkeley
+release of December, 1996 specify the parameters VERSION=3.1 or 3.11
+and HSPVER = 98.0.</li>
+<li class="bullet1">
+<a name="pgfId-156189"></a>Berkeley Version 3.0, 3.1 bug fixes.
+Berkeley corrected several Version 3.0 and 3.1 bugs in the June, 1998
+release. These bug fixes are incorporated into Hspice98.2 and are
+represented when VERSION=3.0 and VERSION=3.1 are specified respectively
+with HSPVER=98.2. As a result of bug fixes, some differences between
+Version 3.0/3.1 in Hspice98.2 and previous Version 3.0/3.1 releases are
+expected. Most notably, differences will occur when perimeter factors
+PD,PS less than Weff are specified (PD,PS &lt; Weff are no longer
+clamped to Weff in Version 3.1) and when DLC and LINT are not identical
+(LeffCV calculation bug in Versions3.0, 3.1). You can find a complete
+list of bug fixes at the BSIM3 web site: </li>
+</ul>
+<blockquote class="indent1">
+<a name="pgfId-169494"></a>	http://www-device.eecs.berkeley.edu/~bsim3.</blockquote>
+<div>
+<hr><strong>NOTE:</strong>&nbsp;Version 3.11 was introduced in
+Hspice97.4. This version represented Berkeley Version 3.1 (Dec., 1996)
+with Hspice bug fixes. Back compatibility will be maintained for this
+model. Starting with Hspice98.2, Version 3.1 and 3.11 will be identical
+and represent Version 3.1 with Berkeley June, 1998 bug fixes.<hr>
+</div>
+<a name="pgfId-156191"></a><ul>
+<li class="bullet1">
+<a name="pgfId-156187"></a>Version 3.2 Berkeley release (June 16, 1998). This version is invoked when VERSION=3.2 and HSPVER=98.2 are specified.</li>
+<li class="bullet1">
+<a name="pgfId-170006"></a>Version 3.2.1 Berkeley release (April 20, 1999). <none class="UnBold">
+This version is invoked when VERSION=3.21 and HSPVER=99.2 are specified.</none>
+</li>
+<li class="bullet1">
+<a name="pgfId-170009"></a>Version 3.2.2 Berkeley release (April 20, 1999). <none class="UnBold">
+This version is invoked when VERSION=3.22 and HSPVER=99.2 are specified.</none>
+</li>
+</ul>
+<div>
+<hr><strong>NOTE:</strong>&nbsp;Versions 3.2.1 and 3.2.2 are identical
+except BSIM3v3.2.1 uses a bias-dependent Vfb and BSIM3v3.2.2 uses a
+bias-independent Vfb for the capacitance models capMod = 1 and 2.<hr>
+</div>
+<a name="pgfId-170077"></a><p class="body">
+<a name="pgfId-156201"></a>The table below summarizes the Star-Hspice parameter settings required to match Berkeley releases:</p>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-206415"></a>Berkeley Release</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-206417"></a>VERSION</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-206419"></a>HSPVER</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156290"></a>Version 3.0 (October 1995) </p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156292"></a>3.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156294"></a>98.0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-170041"></a>Version 3.0 with June 1998 bug fixes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-170043"></a>3.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-170045"></a>98.2</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156296"></a>Version 3.1 (December 1996) </p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156298"></a>3.1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156300"></a>98.0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156308"></a>Version 3.1 with June 1998 bug fixes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156310"></a>3.1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156312"></a>98.2</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156314"></a>Version 3.2 (June 16,1998)</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156316"></a>3.2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156318"></a>98.2</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156389"></a>Version 3.2.1 (April 20, 1999)</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-156383"></a>3.21</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-170068"></a>99.2</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-170059"></a>Version 3.2.2 (April 20, 1999)</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-170061"></a>3.22</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-170081"></a>99.2</p>
+</td>
+</tr>
+</tbody></table>
+<h3 class="head2">
+<a name="pgfId-156355"></a>Version 3.2 Features</h3>
+<p class="body">
+<a name="pgfId-156356"></a>In June, 1998 Berkeley released BSIM3 Version 3.2, which contains many new features. These features are summarized below. </p>
+<ul>
+<li class="bullet1">
+<a name="pgfId-165702"></a>A new intrinsic capacitance model, CAPMOD=3,
+includes finite charge layer thickness effects; CAPMOD now defaults to
+3 (new parameters: CAPMOD=3, ACDE, MOIN)</li>
+<li class="bullet1">
+<a name="pgfId-156359"></a>Improved modeling of C-V characteristics at the weak-to-strong inversion transition (new parameters: NOFF, VOFFCV)</li>
+<li class="bullet1">
+<a name="pgfId-156360"></a>Vth dependence on Tox (new parameter: TOXM)</li>
+<li class="bullet1">
+<a name="pgfId-156361"></a>Flatband voltage parameter more accurately models different gate materials (new parameter: VFB)</li>
+<li class="bullet1">
+<a name="pgfId-156362"></a>Improved substrate current scaleability with channel length, (new parameter: APLHA1)</li>
+<li class="bullet1">
+<a name="pgfId-156363"></a>Restructured nonquasi-static (NQS) model
+includes pole-zero analysis and bug fixes. Note that NQSMOD is now a
+BSIM3 element parameter. Hspice supports only the model parameter not
+the element parameter.</li>
+<li class="bullet1">
+<a name="pgfId-156364"></a>Junction diode model temperature dependence, (new parameters: TCJ, TCJSW, TCJSWG, TPB, TPBSW, TPBSWG)</li>
+<li class="bullet1">
+<a name="pgfId-156365"></a>Adjustable current limiting in the junction diode current model (new parameter: IJTH)</li>
+<li class="bullet1">
+<a name="pgfId-156366"></a>Option of using C-V inversion charge equations of CAPMOD=0,1,2,3 to calculate the thermal noise when NOIMOD=2 or 4</li>
+<li class="bullet1">
+<a name="pgfId-156367"></a>Elimination of small negative capacitance values (Cgs, Cgd) in the accumulation-depletion regions</li>
+<li class="bullet1">
+<a name="pgfId-156368"></a>A separate set of length/width dependence parameters for the CV model (New parameters: LLC, LWC, LWLC, WLC, WWC, WWLC)</li>
+<li class="bullet1">
+<a name="pgfId-156369"></a>Additional parameter checking</li>
+<li class="bullet1">
+<a name="pgfId-156370"></a>Bug fixes</li>
+</ul>
+<div>
+<hr><strong>NOTE:</strong>&nbsp;If all new Version 3.2 parameters are
+defaulted, Version 3.2 and Version 3.1 (with June, 1998 bug fixes) will
+give identical DC results. However, transient and AC results will
+differ, in general. This discrepancy arises only from differences in
+flatband voltage calculations used in the intrinsic charge/capacitance
+models. These differences occur in all CAPMOD models 1-3.<br>
+HSPVER &lt; 98.0 will be reset to 98.0 for LEVEL 53.<br>
+HSPVER &lt; 98.2 will be reset to 98.2 when VERSION &gt;=3.2 for LEVELs 49 and 53.<br>
+Version 3.0, 3.1, and 3.11 in Hspice do not support NQSMOD and CAPMOD=3. These are supported only by Version 3.2.<hr>
+</div>
+<a name="pgfId-170052"></a><p class="body">
+<a name="pgfId-156378"></a>You can obtain additional information about the Berkeley releases from the BSIM3 web site: </p>
+<blockquote class="indent1">
+<a name="pgfId-169497"></a>http://www-device.eecs.berkeley.edu/~bsim3.</blockquote>
+<h3 class="head2">
+<a name="pgfId-156395"></a><a name="marker-188957"></a><a name="marker-188958"></a><a name="marker-188959"></a>Nonquasi-Static (NQS) Model</h3>
+<p class="body">
+<a name="pgfId-156396"></a>The <a name="marker-188960"></a>Berkeley
+NonQuasi-Static (NQS) model is now available (as of the 98.2 release)
+in Star-Hspice for LEVELs 49 and 53. This model provides a first-order
+correction to the quasi-static charge models. See M.Chan, K.- Y. Hui,
+C. Hu, and P.-K. Ko, IEEE Trans. Electron Devices, vol. ED-45,
+pp.834-841, 1998. The Star-Hspice 98.2 release supports only the model
+parameter implementation. </p>
+<p class="body">
+<a name="pgfId-165706"></a>To invoke the NQS model, specify the
+parameter NQSMOD=1 in the model card. NQSMOD can be used with any of
+the CAPMOD LEVELs (0-3) but is restricted to use with Version 3.2. NQS
+is not supported in Version 3.0 and 3.1. In future releases, the NQS
+will be supported in Versions 3.0, 3.1. </p>
+<h3 class="head2">
+<a name="pgfId-156397"></a>Star-Hspice Enhancements</h3>
+<h4 class="head3">
+<a name="pgfId-156398"></a><a name="marker-188961"></a><a name="marker-188962"></a><a name="marker-188963"></a>Hspice Junction Diode Model and Area Calculation Method (ACM)</h4>
+<p class="body">
+<a name="pgfId-169360"></a>There are two junction diode models that can be used with both LEVELs 49 and 53: the Hspice junction model and the <a name="marker-188964"></a>Berkeley
+junction model. The Hspice junction model is invoked by specifying the
+model parameter value ACM=0,1,2, or 3. The Berkeley junction model is
+invoked by specifying ACM=10,11,12, or 13. The default ACM value is 0
+and 10 for LEVELs 49 and 53 respectively. The junction current,
+junction capacitance, and parasitic resistance equations corresponding
+to ACM=0,1,2,3 can be found in <a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-146.html#20854" class="XRef">Selecting MOSFET Diode Models</a>. <a name="marker-188965"></a><a name="marker-188966"></a></p>
+<p class="body">
+<a name="pgfId-169364"></a>The effect of setting ACM=10,11,12, or 13 is
+to enable the Berkeley junction diodes and to add parasitic resistors
+to the MOSFET. The parasitic resistor equations for ACM=10-13
+correspond to the ACM=0-3 parasitic resistor equations respectively.
+ACM=10-13 all use the Berkeley junction capacitance model equations:</p>
+<p class="code">
+<a name="pgfId-156400"></a><br>
+	(Bulk-source capacitance)<br>
+if (Ps &gt; Weff)<br>
+	Cbs = AS * Cjbs + (PS - Weff) * Cjbssw + Weff *<br>
+	Cjbsswg<br>
+else<br>
+	Cbs = AS * Cjbs + PS * Cjbsswg</p>
+<p class="body">
+<a name="pgfId-156405"></a>Area and perimeter factors AS, PS default to 0 if not specified on the element line.</p>
+<p class="code">
+<a name="pgfId-156406"></a>if (Vbs &lt; 0)<br>
+	Cjbs = Cj * (1 - (Vbs/Pb))-Mj<br>
+	Cjbssw = Cjsw * (1 - (Vbs/Pbsw))-Mjsw  <br>
+	Cjbsswg = Cjswg * (1 - (Vbs/Pbswg))-Mjswg</p>
+<p class="code">
+<a name="pgfId-156410"></a>else</p>
+<p class="code">
+<a name="pgfId-156411"></a>	Cjbs = Cj * (1 + Mj * (Vbs/Pb))<br>
+	Cjbssw = Cjsw * (1 + Mjsw * (Vbs/Pbsw))<br>
+	Cjbsswg = Cjswg * (1 + Mjswg * (Vbs/Pbswg))</p>
+<p class="body">
+<a name="pgfId-156414"></a>Bulk-drain equations are analogous. Note
+that the Hspice equations for AS,PS,AD,PD are not used with
+ACM=10,11,12,13 and, in accordance with the BSIM3v3 model, the default
+values for these area and perimeter factors are zero. However, starting
+with Star-Hspice version 98.2, it is possible to invoke the Hspice
+calculations for AS,PS,AD,PD by specifying the model parameter
+CALCACM=1.</p>
+<blockquote class="indent1">
+<a name="pgfId-156415"></a><em class="Emphasis">
+Important: CALCACM is only invoked when used with ACM=12.The
+calculations used in ACM=10, 11, 13 are not consistent with the
+Berkeley diode calculations.</em>
+</blockquote>
+<p class="body">
+<a name="pgfId-193332"></a>With CALCACM = 1 and ACM = 12 the following area and perimeter calculations are invoked:</p>
+<p class="body">
+<a name="pgfId-193333"></a>if AD is not specified on the element line:</p>
+<p class="body">
+<a name="pgfId-193334"></a>    AD = 2 * HDIFeff * Weff</p>
+<p class="body">
+<a name="pgfId-156420"></a>else:</p>
+<p class="body">
+<a name="pgfId-156421"></a>    AD = AD * WMLT^2</p>
+<p class="body">
+<a name="pgfId-156422"></a> if AS is not specified on the element line:</p>
+<p class="body">
+<a name="pgfId-156423"></a>    AS = 2 * HDIFeff * Weff</p>
+<p class="body">
+<a name="pgfId-156424"></a>else:</p>
+<p class="body">
+<a name="pgfId-156425"></a>    AS = AS * WMLT^2</p>
+<p class="body">
+<a name="pgfId-156426"></a> if PS is not specified on the element line:</p>
+<p class="body">
+<a name="pgfId-156427"></a>    PS = 4 * HDIFeff + 2 * Weff</p>
+<p class="body">
+<a name="pgfId-156428"></a>else:</p>
+<p class="body">
+<a name="pgfId-156429"></a>    PS = PS * WMLT</p>
+<p class="body">
+<a name="pgfId-156430"></a> if PD is not specified on the element line:</p>
+<p class="code">
+<a name="pgfId-156431"></a>	PD = 4 * HDIFeff + 2 * Weff</p>
+<p class="body">
+<a name="pgfId-156432"></a>else:</p>
+<p class="code">
+<a name="pgfId-156433"></a>	PD = PD * WMLT</p>
+<div>
+<hr><strong>NOTE:</strong>&nbsp;Weff is not the same Weff used in the BSIM3v3, and LEVELs 49 and 53 I-V, C-V model equations! <hr>
+</div>
+<a name="pgfId-156434"></a><p class="body">
+<a name="pgfId-165603"></a>In the preceding equations the following simple form is used.</p>
+<p class="code">
+<a name="pgfId-156436"></a>	Weff = W * WMLT + XW</p>
+<p class="body">
+<a name="pgfId-156438"></a>where:</p>
+<p class="code">
+<a name="pgfId-156439"></a>	HDIFeff = HDIF * WMLT</p>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-165536"></a>W</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-165538"></a>is the width specified on the element line</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-165540"></a>HDIF</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-165542"></a>is a heavy diffusion length specified in the model card</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-165544"></a>WMLT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-165546"></a> is a shrink factor specified in the model card</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-165548"></a>XW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-165550"></a>is an etch/mask effect factor specified in the model card</p>
+</td>
+</tr>
+</tbody></table>
+<div>
+<hr><strong>NOTE:</strong>&nbsp;SCALM, SCALE, and M factor effects have been ignored in these equations. Please see <a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-146.html#76815" class="XRef">Using a MOSFET Diode Model</a> (ACM=2) for further details.<hr>
+</div>
+<a name="pgfId-189135"></a><h4 class="head3">
+<a name="pgfId-156448"></a>Parameter Differences </h4>
+<p class="body">
+<a name="pgfId-165729"></a>There are some differences in parameter
+names between the Star-Hspice and the Berkeley junction models. The
+Star-Hspice models (ACM=0-3) do not recognize the following BSIM3v3
+parameters:</p>
+<ul>
+<li class="bullet1">
+<a name="pgfId-165730"></a>NJ (ignored, instead use N)</li>
+<li class="bullet1">
+<a name="pgfId-156451"></a>CJSWG (ignored, instead use CJGATE)</li>
+<li class="bullet1">
+<a name="pgfId-156452"></a>MJSWG (ignored, there is no equivalent HSPICE parameter, the gate sidewall grading coefficient will be set = MJSW)</li>
+<li class="bullet1">
+<a name="pgfId-156453"></a>PBSW (ignored, instead use PHP)</li>
+<li class="bullet1">
+<a name="pgfId-156454"></a>PBSWG (ignored, there is no equivalent HSPICE parameter, the gate sidewall contact potential will be set = PHP)</li>
+</ul>
+<p class="body">
+<a name="pgfId-156455"></a>The Berkeley model (ACM=10,11,12,13) will not recognize the following Star-Hspice parameters:</p>
+<ul>
+<li class="bullet1">
+<a name="pgfId-156456"></a>CJGATE (ignored, instead use CJSWG)</li>
+<li class="bullet1">
+<a name="pgfId-156457"></a>PHP (ignored, instead use PBSW) </li>
+</ul>
+<h4 class="head3">
+<a name="pgfId-156458"></a>Star-Hspice Noise Model</h4>
+<p class="body">
+<a name="pgfId-156459"></a>The Hspice-specific parameter NLEV overrides
+the BSIM3v3 parameter NOIMOD. Specifying NLEV will invoke the Hspice
+noise model. See <a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-151.html#27580" class="XRef">Using Noise Models</a> for further information. If NLEV is not specified, the Berkeley noise equations are invoked.</p>
+<h4 class="head3">
+<a name="pgfId-156460"></a>Performance Improvements</h4>
+<p class="body">
+<a name="pgfId-166042"></a>The performance of LEVELs 49 and 53 has been
+improved by reducing model equation complexity, replacing some
+calculations with spline functions, and compiler optimization. For
+LEVEL 49, the result is a reduction in simulation time of up to 40%
+compared to releases prior to 97.4 while maintaining accuracy to 5
+digits or better. The use of spline functions can be enabled by setting
+the model parameter to SFVTFLAG=1 in the model card. SFVTFLAG=0, the
+default value, disables the spline functions. For LEVEL 53, all BSIM3v3
+non-compliant features default to off. There is a significant reduction
+in simulation time compared to pre-97.4 releases remains.</p>
+<h4 class="head3">
+<a name="pgfId-166046"></a>Reduced Parameter Set BSIM3v3 Model (BSIM3-lite)</h4>
+<p class="body">
+<a name="pgfId-166043"></a>Setting the LEVEL 49 model parameter LITE=1
+will invoke the BSIM3v3-lite model. This is a BSIM3v3 reduced parameter
+set model that is intended to be used with model binning. Without
+binning, the full BSIM3v3 model accounts for geometry effects through
+the specification of many model parameters. However, it is often
+difficult to extract a "global" BSIM3v3 model that is accurate over the
+entire geometry range. To improve accuracy over a range of geometries,
+Star-Hspice allows the user to bin model parameters. That is, the
+entire length-width geometry range is divided into rectangular regions
+or bins. A different set of parameters is extracted for each bin. The
+Hspice built-in bilinear parameter interpolation scheme maintains
+continuity (over length-width) at the boundaries between bins. Since
+many BSIM3 model parameters account for MOSFET geometry effects, these
+geometry-effect parameters are redundant and can be eliminated when
+binning is used.</p>
+<p class="body">
+<a name="pgfId-166062"></a>The BSIM3-lite model parameter set was
+created in response to the question: What BSIM3 parameters should be
+excluded when using a binned model? The BSIM3-lite model is invoked by
+specifying the model parameter LITE=1 in the model card. Star-Hspice
+will check the model card to determine if it conforms to the BSIM3-lite
+parameter set. BSIM3-lite takes advantage of the smaller number of
+calculations and will reduce simulation times by up to 10% compared to
+the full parameter set BSIM3 model. LITE=1 is supported only by LEVEL
+49. </p>
+<p class="body">
+<a name="pgfId-166069"></a>The following table lists model parameters
+(total 49) that are excluded from the BSIM3-lite model. All parameters
+in this list should either be excluded from the model card or
+explicitly set to the default value specified in the list. In some
+cases, as noted, the BSIM3-lite default value differs from the standard
+BSIM3v3 default value. Also, exclusion of WR,ALPHA0, CIT is only
+recommended but not required in the BSIM3-lite model card.</p>
+<p class="body">
+<a name="pgfId-166070"></a>Parameters Excluded from BSIM3-Lite Model</p>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-215876"></a>Parameter</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-215878"></a>Comments</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168305"></a>mobmod</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168307"></a>Recommended default or set = 1</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168310"></a>nqsmod</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168312"></a>Recommended default or set = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166250"></a>toxm</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166252"></a>default = tox</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166077"></a>ll</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166079"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166081"></a>lln</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166083"></a>default = 1</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166085"></a>lw</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166087"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166089"></a>lwn</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166091"></a>default = 1</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166093"></a>lwl</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166095"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166097"></a>wl</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166099"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166101"></a>wln</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166103"></a>default = 1</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166105"></a>ww</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166107"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166109"></a>wwn</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166111"></a>default = 1</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166113"></a>wwl</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166115"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166117"></a>dwg</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166119"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166121"></a>dwb</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166123"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166125"></a>llc</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166127"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166129"></a>lwc</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166131"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166133"></a>lwlc</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166135"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166137"></a>wlc</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166139"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166141"></a>wwc</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166143"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166145"></a>wwlc</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166147"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166149"></a>b0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166151"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166153"></a>b1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166155"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166157"></a>vbx</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166159"></a>do not define</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166161"></a>vbm</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166163"></a>do not define</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166165"></a>xt</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166167"></a>do not define</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166169"></a>nsub</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166171"></a>do not define</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166173"></a>nlx</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166175"></a>default = 0, std default=1.74e-7</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166177"></a>gamma1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166179"></a>do not define </p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166181"></a>gamma2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166367"></a>do not define</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168287"></a>ngate</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168289"></a>Recommended default or set = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166185"></a>k3</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166187"></a>default = 0, std default=80</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166189"></a>k3b</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166191"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166193"></a>w0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166195"></a>no effect</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166197"></a>dvt0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166199"></a>default = 0, std default=2.2</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166201"></a>dvt1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166203"></a>default = 0, std default=0.53</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166205"></a>dvt2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166207"></a>default = 0, std default=-0.032</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166209"></a>dvt0w</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166211"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166213"></a>dvt1w</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166215"></a>default = 0, std default=5.3e6</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166217"></a>dvt2w</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166219"></a>default = 0, std default=-0.032</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166221"></a>dsub</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166223"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166225"></a>prwg</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166227"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166229"></a>prwb</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166231"></a>default = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166233"></a>wr</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166235"></a>Recommended default or set = 1</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166273"></a>drout</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166275"></a>default = 0, std default=0.56</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166269"></a>pdiblc1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166271"></a>default = 0, std default=0.39</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166265"></a>cit</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166267"></a>Recommended default or set = 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166257"></a>alpha0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166259"></a>Recommended default or set = 0 for Version 3.2</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166277"></a>kt1l</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-166279"></a>default = 0</p>
+</td>
+</tr>
+</tbody></table>
+<h4 class="head3">
+<a name="pgfId-166052"></a>Parameter Binning</h4>
+<p class="body">
+<a name="pgfId-166053"></a>Parameter binning is supported in the
+Berkeley BSIM3v3 release through the specification of LWP parameters.
+That is, a subset of model parameters can be bilinearly interpolated
+over <kbd class="courier">
+1/Leff</kbd>
+ and <kbd class="courier">
+1/Weff </kbd>
+by specifying four terms: the parameter Xo, a length term Xl, a width
+term Xw, and a product term Xp. The parameter value at a given L,W is
+then interpolated as:</p>
+<p class="Code">
+<a name="pgfId-205255"></a>X = Xo + Xl/Leff + Xw/Weff + Xp/Leff/Weff </p>
+<p class="body">
+<a name="pgfId-205263"></a>See <a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-171.html#32941" class="XRef">Model Parameter Range Limit</a>
+to determine whether a parameter can be binned. Star-Hspice adds
+parameters LMIN, LMAX, WMIN, WMAX and LREF, WREF to allow multiple cell
+binning. LMIN, LMAX, WMIN, WMAX define the cell boundary. LREF, WREF
+are offset values that provide a convenient interpolation scheme.
+LREF,WREF offsets are used when both values are defined and the model
+parameter BINFLAG &gt; 0.9 is specified. The parameter value at a given
+L,W is then interpolated as:</p>
+<p class="code">
+<a name="pgfId-205264"></a>	X = Xo + Xl*(1/Leff - 1/LREF) + Xw*(1/Weff - 1/WREF) + Xp/(1/Leff -<br>
+	1/LREF)/(1/Weff - 1/WREF) </p>
+<p class="body">
+<a name="pgfId-166061"></a>The units for the lwp geometry parameters
+can be selected to be in microns by setting the model parameter BINUNIT
+= 1. For other choices of BINUNIT, the lengths are in units of meters.
+The Hspice parameters XL, XLREF, XW, and XWREF are handled in a manner
+consistent with other Hspice models, and they produce shifts in
+parameter values without disrupting the continuity across bin
+boundaries. </p>
+<h4 class="head3">
+<a name="pgfId-166044"></a>Charge Models</h4>
+<p class="body">
+<a name="pgfId-168669"></a>In the December, 1996 release of BSIM3v3,
+Berkeley offers the BSIM1 capacitance model as CAPMOD=0. This is
+replaced with a modified BSIM1 capacitance model based on the Hspice
+CAPOP=13 model in LEVEL 49. LEVEL 53 uses the Berkeley BSIM1
+capacitance model for CAPMOD=0. The following table lists CAPMOD
+defaults for the Berkeley BSIM3v3 model and for LEVELs 49 and 53.</p>
+<p class="anchorpara">
+<a name="pgfId-168769"></a>&nbsp;</p>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-168725"></a>VERSION</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-168727"></a>BSIM3v3</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-168729"></a>LEVEL 49</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-168731"></a>LEVEL 53</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-168733"></a>3.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-168735"></a>1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-168737"></a>1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-168739"></a>1</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-168741"></a>3.1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-168743"></a>2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-168745"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-168747"></a>2</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-168749"></a>3.2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-168751"></a>3</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-168753"></a>3</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="CellBody">
+<a name="pgfId-168755"></a>3</p>
+</td>
+</tr>
+</tbody></table>
+<h4 class="head3">
+<a name="pgfId-156464"></a>Hspice VFBFLAG</h4>
+<p class="body">
+<a name="pgfId-156465"></a>The capacitance model CAPMOD=0 normally
+calculates the threshold voltage as Vth = vfbc + phi + k1 * sqrt(phi -
+vbs), where vfbc is the model parameter VFBCV. This has the effect of
+eliminating any dependence on the parameter VTH0. To allow capacitance
+dependence on VTH0, set the model parameter VFBFLAG=1. The capacitance
+model CAPMOD=0 will calculate the threshold voltage as Vth = vth0 + k1
+* sqrt(phi - vbs) - k1 * sqrt(phi). The VFBFLAG default value is 0.</p>
+<h4 class="head3">
+<a name="pgfId-156471"></a>Printback</h4>
+<p class="body">
+<a name="pgfId-156472"></a>Printback of all model parameters with units
+is now enabled. The printback also indicates whether Berkeley or
+Star-Hspice junction diodes and noise models are invoked and which
+parameters are not used (e.g. CJGATE is not used when ACM=0-3).</p>
+<h3 class="head2">
+<a name="pgfId-156508"></a>Using <a name="marker-188967"></a>BSIM3v3 in Star-Hspice</h3>
+<p class="body">
+<a name="pgfId-156509"></a>The following are points to note when using BSIM3v3 in Star-Hspice:</p>
+<p class="step1">
+<a name="pgfId-156510"></a>1. Use either the LEVEL 49 or LEVEL 53
+model. LEVEL 53 maintains full compliance with the Berkeley BSIM3v3
+release. However, in most cases LEVEL 49, in comparison to LEVEL 53,
+will give identical results, run as fast or faster, show better
+convergence, and allow a wider range of parameter specifications.</p>
+<p class="step">
+<a name="pgfId-156511"></a>2. Explicitly set all Berkeley-specific
+BSIM3 model parameters in the model card. This will minimize problems
+resulting from version changes and compatibility with other simulators.
+Explicitly setting all lwp binning parameters is not necessary.</p>
+<p class="step">
+<a name="pgfId-156512"></a>3. To obtain matching results with
+simulations from previous Hspice versions use the model parameter
+HSPVER=YY.N, e.g., HSPVER=97.4. Do not use the full year specification
+(e.g., do not use 1997.4). Patch version numbers are implemented as
+HSPVER=YY.NN (e.g., HSPVER=98.21 for Hspice release 98.2.1).</p>
+<p class="step">
+<a name="pgfId-156513"></a>4. LEVELs 49 and 53 support the model
+parameter name TNOM as an alias for TREF. The conventional terminology
+in Hspice is TREF, which is supported as a model parameter in all
+Star-Hspice MOS levels. The alternative name TNOM is supported in both
+LEVELs 49 and 53, for compatibility with SPICE3.<br>
+<br>
+The default room temperature is 25oC in Star-Hspice, but is 27oC in
+SPICE3. If the BSIM3 model parameters are specified at 27oC, TNOM=27
+should be added to the model, so that the model parameters are
+interpreted correctly. It is a matter of choice whether or not to set
+the nominal simulation temperature to 27, by adding .OPTION TNOM=27 to
+the netlist. Add this option when testing Star-Hspice versus SPICE3.<br>
+<br>
+DELVTO and DTEMP on the element line can be used with LEVELs 49 and 53.
+The conversion of temperature setup between Star-Hspice and SPICE3 is
+as follows:</p>
+<pre class="CourierFirst"><a name="pgfId-156514"></a>	SPICE3:		.OPTIONS TEMP=125
+			.MODEL NCH NMOS LEVEL=8 
+			+  TNOM =27 ...</pre>
+<pre class="CourierFirst"><a name="pgfId-156515"></a>	Star-Hspice:		.TEMP 125
+			.MODEL NCH NMOS LEVEL=49 
+			+  TNOM =27 ...</pre>
+<p class="step">
+<a name="pgfId-156516"></a>5. To invoke automatic calculation of drain
+and source area and perimeter factors with the Berkeley junction diode
+models use ACM=12 with CALCACM=1. Normally, ACM=10-13 will default area
+and perimeter factors to 0. This can only be overridden for ACM=12 by
+specifying CALCACM=1. Make sure that the Hspice-specific parameter HDIF
+is defined in the model card. If you do not want to have parasitic Rs
+and Rd in addition to the BSIM3v3 internal Rsd, then make sure that the
+Hspice-specific parameters RSH, RSC, RDC,RS, RD are either not
+specified (default will be 0) or explicitly set to 0.</p>
+<p class="step">
+<a name="pgfId-192987"></a>6. Star-Hspice will either warn or abort
+with a fatal error when certain model parameter values are out of a
+normal range. To view all the warnings, the .OPTION WARNLIMIT value may
+have to be increased (default=1). To turn full parameter range
+checking, set the model parameter PARAMCHK=1 (default is 0). With
+PARAMCHK=0 a smaller set of parameters is checked. (See <a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-171.html#32941" class="XRef">Model Parameter Range Limit</a>
+for more details regarding parameter limits.) Use the model parameter
+APWARN=1 (default=0) to turn off PS,PD &lt; Weff warnings.</p>
+<p class="step">
+<a name="pgfId-156518"></a>7.	NQSMOD can only be used with Version 3.2 and can only be specified in the model card as of release Hspice 98.2.</p>
+<h3 class="head2">
+<a name="pgfId-156519"></a><a name="marker-192295"></a><a name="marker-192983"></a><a name="basic model parameters"></a>LEVEL 49, 53 Model Parameters</h3>
+<p class="body">
+<a name="pgfId-167335"></a>The following tables describe all LEVEL 49
+and LEVEL 53 model parameters including parameter name, units, default
+value, whether the parameter can be binned, and a description. Note
+that these tables are a superset of the BSIM3v3 model parameter set and
+include Hspice-specific parameters. These Hspice-specific parameters
+are noted in the description column and always default (for LEVEL 53)
+so that compliance with the BSIM3v3 standard is maintained. These
+parameters also apply to LEVEL 49 with the following exceptions: ACM
+default value = 0, XPART default value = 1, CAPMOD default value = 0.</p>
+<h4 class="head3">
+<a name="pgfId-167506"></a>Model Flags<a name="marker-167336"></a></h4>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-167339"></a>Name</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-167341"></a> Unit</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-167343"></a>Default</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-167345"></a>Bin</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-167347"></a>Description</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167350"></a>VERSION</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167352"></a><none class="Superscript">
+-</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167354"></a>3.2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167356"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167358"></a>Selects from BSIM3 Versions 3.0, 3.1, 3.2. Warning is issued if not explicitly set.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167361"></a>HSPVER</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167363"></a><none class="Superscript">
+-</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167365"></a>98.2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167367"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167369"></a>Selects from Hspice Versions:<br>
+98.2, 97.4, 97.2, 96.4, 96.3, 96.1</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167372"></a>PARAMCHK</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167374"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167376"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167378"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167380"></a>PARAMCHK=1 will check model parameters for range compliance</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167383"></a>APWARN</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167385"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167387"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167389"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167391"></a>When &gt; 0 turns off warning message for PS,PD &lt; Weff (Hspice specific)</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167394"></a>BINFLAG</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167396"></a><none class="Superscript">
+-</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167398"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167400"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167402"></a>Uses wref, lref when set &gt; 0.9 (Hspice specific)</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167405"></a>MOBMOD</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167407"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167409"></a>1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167411"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167413"></a>Mobility model selector</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167416"></a>CAPMOD</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167418"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167420"></a>3</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167422"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167424"></a>Selects from charge models 0,1,2,3<br>
+LEVEL 49 CAPMOD defaults to 0.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167427"></a>CAPOP</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167429"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167431"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167433"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167435"></a>Obsolete for LEVELs 49, 53. Ignored by Hspice (Hspice specific) in all versions.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167438"></a>NOIMOD</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167440"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167442"></a>1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167444"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167446"></a>Berkeley noise model flag</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167449"></a>NLEV</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167451"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167453"></a>-(off)</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167455"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167457"></a>Star-Hspice noise model flag (non-zero overrides NOIMOD) (Hspice specific). See <a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-151.html#27580" class="XRef">Using Noise Models</a><none class="color">
+ </none>
+<none class="colorless">
+for more information.</none>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167463"></a>NQSMOD</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167465"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167467"></a>0 (off)</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167469"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167471"></a>NQS Model flag</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167474"></a>SFVTFLAG</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167476"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167478"></a>0 (off)</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167480"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167482"></a>Spline function for Vth (Hspice specific)</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167485"></a>VFBFLAG</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167487"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167489"></a>0 (off)</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167491"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167493"></a>VFB selector for CAPMOD=0 (Hspice specific)</p>
+</td>
+</tr>
+</tbody></table>
+<h4 class="head3">
+<a name="pgfId-168135"></a>Basic Model Parameters</h4>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-167509"></a>Name</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-167511"></a> Unit</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-167513"></a>Default</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-167515"></a>Bin</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-167517"></a>Description</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168271"></a>VGSLIM</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168273"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168275"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168277"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168279"></a>Asymptotic Vgs value, Min value is 5V.</p>
+<p class="cellbody">
+<a name="pgfId-168280"></a>0-value indicates an asymptote of infinity. (Hspice and LEVEL 49 specific)</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167520"></a>TOX</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167522"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167524"></a>150e-10</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167526"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167528"></a>Gate oxide thickness</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167531"></a>XJ</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167533"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167535"></a>0.15e-6</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167537"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167539"></a>Junction depth</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167542"></a>NGATE </p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167544"></a>cm<none class="Superscript">
+-3</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167546"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167548"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167550"></a>Poly gate doping concentration</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167554"></a>VTH0<br>
+(VTHO)</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167556"></a>V<br>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167558"></a>0.7 NMOS<br>
+-0.7 PMOS</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167560"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167562"></a><none class="Superscript">
+Threshold voltage of long channel device at </none>
+<em class="Emphasis">
+Vbs</em>
+<none class="Superscript">
+ = 0 and small </none>
+<em class="Emphasis">
+Vds</em>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167565"></a>NSUB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167567"></a>cm<none class="Superscript">
+-3</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167569"></a>6.0e16</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167571"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167573"></a>Substrate doping concentration</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167576"></a>NCH</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167578"></a>cm<none class="Superscript">
+-3 </none>
+See Note6</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167580"></a>1.7e17</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167582"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167584"></a>Peak doping concentration near interface</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167587"></a>NLX</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167589"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167591"></a>1.74e-7</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167593"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167595"></a>Lateral nonuniform doping along channel</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167598"></a>K1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167600"></a>V<none class="Superscript">
+1/2</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167602"></a>0.50</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167604"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167606"></a>First-order body effect coefficient</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167609"></a>K2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167611"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167613"></a>-0.0186</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167615"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167617"></a>Second-order body effect coefficient</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167620"></a>K3</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167622"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167624"></a>80.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167626"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167628"></a>Narrow width effect coefficient</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167631"></a>K3B</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167633"></a>1/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167635"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167637"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167639"></a>Body width coefficient of narrow width effect</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167642"></a>W0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167644"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167646"></a>2.5e-6</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167648"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167650"></a>Narrow width effect coefficient</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167653"></a>DVT0W</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167655"></a> 1/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167657"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167659"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167661"></a>Narrow width coefficient 0, for Vth, at small L</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167664"></a>DVT1W</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167666"></a> 1/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167668"></a>5.3e6</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167670"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167672"></a>Narrow width coefficient 1, for Vth, at small L</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167675"></a>DVT2W</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167677"></a>1/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167679"></a>-0.032</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167681"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167683"></a>Narrow width coefficient 2, for Vth, at small L</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167686"></a>DVT0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167688"></a> -</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167690"></a>2.2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167692"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167694"></a>Short channel effect coefficient 0, for V<none class="Subscript">
+th</none>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167697"></a>DVT1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167699"></a> -</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167701"></a>0.53</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167703"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167705"></a>Short channel effect coefficient 1, for V<none class="Subscript">
+th</none>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167708"></a>DVT2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167710"></a>1/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167712"></a>-0.032</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167714"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167716"></a>Short channel effect coefficient 2, for V<none class="Subscript">
+th</none>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167719"></a>ETA0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167721"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167723"></a>0.08</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167725"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167727"></a>Subthreshold region DIBL (drain induced barrier lowering) coefficient</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167730"></a>ETAB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167732"></a>1/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167734"></a>-0.07</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167736"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167738"></a>Subthreshold region DIBL coefficient</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167741"></a>DSUB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167743"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167745"></a>DROUT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167747"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167749"></a>DIBL coefficient exponent in subthreshold region</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167752"></a>VBM</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167754"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167756"></a>-3.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167758"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167760"></a>Maximum substrate bias, for V<none class="Subscript">
+th</none>
+ calculation</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167763"></a>U0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167765"></a>cm<none class="Superscript">
+2</none>
+/V/sec </p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167767"></a>670 nmos<br>
+250 pmos</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167769"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167771"></a>Low field mobility at T = TREF = TNOM </p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167774"></a>UA</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167776"></a> m/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167778"></a>2.25e-9</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167780"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167782"></a>First-order mobility degradation coefficient</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167785"></a>UB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167787"></a> m<none class="Superscript">
+2</none>
+/V<none class="Superscript">
+2</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167789"></a>5.87e-19</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167791"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167793"></a>Second-order mobility degradation coefficient</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167796"></a>UC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167798"></a>1/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167800"></a>-4.65e-11 or <br>
+-0.0465</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167802"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167804"></a>Body bias sensitivity coefficient of mobility<br>
+-4.65e-11 for MOBMOD=1,2 or,<br>
+-0.0465 for MOBMOD = 3</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167807"></a>A0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167809"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167811"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167813"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167815"></a>Bulk charge effect coefficient for channel length</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167818"></a>AGS</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167820"></a>1/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167822"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167824"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167826"></a>Gate bias coefficient of Abulk</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167829"></a>B0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167831"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167833"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167835"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167837"></a>Bulk charge effect coefficient for channel width</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167840"></a>B1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167842"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167844"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167846"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167848"></a>Bulk charge effect width offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167851"></a>KETA</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167853"></a>1/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167855"></a>-0.047</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167857"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167859"></a>Body-bias coefficient of bulk charge effect</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167862"></a>VOFF</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167864"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167866"></a>-0.08</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167868"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167870"></a>Offset voltage in subthreshold region</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167873"></a>VSAT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167875"></a> m/sec</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167877"></a>8e4</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167879"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167881"></a>Saturation velocity of carrier at T = TREF = TNOM</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167884"></a>A1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167886"></a>1/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167888"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167890"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167892"></a>First nonsaturation factor</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167895"></a>A2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167897"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167899"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167901"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167903"></a>Second nonsaturation factor</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167906"></a>RDSW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167908"></a>ohm <samp class="Symbol">
+·</samp>
+ <samp class="Symbol">
+µ</samp>
+m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167910"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167912"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167914"></a>Parasitic source drain resistance per unit width</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167917"></a>PRWG </p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167919"></a>1/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167921"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167923"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167925"></a>Gate bias effect coefficient of RDSW</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167928"></a>PRWB </p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167930"></a>1/V<none class="Superscript">
+1/2</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167932"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167934"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167936"></a>Body effect coefficient of RDSW</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167939"></a>WR</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167941"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167943"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167945"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167947"></a>Width offset from Weff for Rds calculation</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167950"></a>NFACTOR</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167952"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167954"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167956"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167958"></a>Subthreshold region swing</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167961"></a>CIT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167963"></a>F/m<none class="Superscript">
+2</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167965"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167967"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167969"></a>Interface state capacitance</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167972"></a>CDSC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167974"></a>F/m<none class="Superscript">
+2</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167976"></a>2.4e-4</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167978"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167980"></a>Drain/source and channel coupling capacitance</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167983"></a>CDSCD</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167985"></a>F/Vm<none class="Superscript">
+2</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167987"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167989"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167991"></a>Drain bias sensitivity of CDSC</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167994"></a>CDSCB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167996"></a>F/Vm<none class="Superscript">
+2</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-167998"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168000"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168002"></a>Body coefficient for CDSC</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168005"></a>PCLM</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168007"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168009"></a>1.3</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168011"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168013"></a>Coefficient of channel length modulation values <samp class="Symbol">
+&lt;=</samp>
+  0 will result in an error message and program exit.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168016"></a>PDIBLC1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168018"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168020"></a>0.39</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168022"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168024"></a>DIBL (drain induced barrier lowering) effect coefficient 1</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168027"></a>PDIBLC2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168029"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168031"></a>0.0086</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168033"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168035"></a>DIBL effect coefficient 2</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168038"></a>PDIBLCB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168040"></a>1/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168042"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168044"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168046"></a>Body effect coefficient of DIBL effect coefficients</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168049"></a>DROUT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168051"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168053"></a>0.56</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168055"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168057"></a>Length dependence coefficient of the DIBL correction parameter in R<none class="Subscript">
+out</none>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168060"></a>PSCBE1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168062"></a>V/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168064"></a>4.24e8</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168066"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168068"></a>substrate current induced body effect exponent 1</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168071"></a>PSCBE2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168073"></a>V/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168075"></a>1.0e-5</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168077"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168079"></a>Substrate current induced body effect coefficient 2</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168082"></a>PVAG</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168084"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168086"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168088"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168090"></a>Gate dependence of Early voltage</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168093"></a>DELTA</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168095"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168097"></a>0.01</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168099"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168101"></a>Effective Vds parameter</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168104"></a>ALPHA0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168106"></a>m/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168108"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168110"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168112"></a>First parameter of impact ionization current</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168115"></a>BETA0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168117"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168119"></a>30</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168121"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168123"></a>Second parameter of impact ionization current</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168126"></a>RSH</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168128"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168130"></a>ohm/square</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168132"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168134"></a>Source/drain sheet resistance in ohm per square</p>
+</td>
+</tr>
+</tbody></table>
+<h4 class="head3">
+<a name="pgfId-168268"></a>AC and <a name="marker-188968"></a>Capacitance Parameters</h4>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-168138"></a>Name</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-168140"></a> Unit</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-168142"></a>Default</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-168144"></a>Bin</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-168146"></a>Description</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168149"></a>XPART</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168151"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168153"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168155"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168157"></a>Charge partitioning rate flag<br>
+(default deviates from BSIM3V3=0)<br>
+LEVEL 49 XPART defaults to 1</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168160"></a>CGSO</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168162"></a>F/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168164"></a>p1<br>
+(see Note1)</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168166"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168168"></a>Non-LDD region source-gate overlap capacitance per unit channel length</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168171"></a>CGDO</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168173"></a>F/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168175"></a>p2<br>
+(see Note2)</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168177"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168179"></a>Non-LDD region source-gate overlap capacitance per unit channel length</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168182"></a>CGBO</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168184"></a>F/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168186"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168188"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168190"></a>Gate-bulk overlap capacitance per unit channel length</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168193"></a>CGS1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168195"></a>F/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168197"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168199"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168201"></a>Lightly doped source-gate overlap region capacitance</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168204"></a>CGD1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168206"></a>F/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168208"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168210"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168212"></a>Lightly doped drain-gate overlap region capacitance</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168215"></a>CKAPPA</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168217"></a>F/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168219"></a>0.6</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168221"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168223"></a>Coefficient for lightly doped region overlap capacitance fringing field capacitance </p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168226"></a>CF</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168228"></a>F/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168230"></a>(see Note3)</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168232"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168234"></a>Fringing field capacitance</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168237"></a>CLC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168239"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168241"></a>0.1e-6</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168243"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168245"></a>Constant term for the short channel model</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168248"></a>CLE</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168250"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168252"></a>0.6</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168254"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168256"></a>Exponential term for the short channel model</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168259"></a>VFBCV</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168261"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168263"></a>-1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168265"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-168267"></a>Flat band voltage used only in CAPMOD=0 C-V calculations</p>
+</td>
+</tr>
+</tbody></table>
+<h4 class="head3">
+<a name="pgfId-162814"></a>Length and Width Parameters</h4>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-162818"></a>Name</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-162820"></a> Unit</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-162822"></a>Default</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-162824"></a>Bin</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-162826"></a>Description</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163006"></a>WINT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163008"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163010"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163012"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163014"></a>Width offset fitting parameter from I-V without bias</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163017"></a>WLN</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163019"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163021"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163023"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163025"></a>Power of length dependence of width offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163028"></a>WW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163030"></a>m<none class="Superscript">
+WWN</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163032"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163034"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163036"></a>Coefficient of width dependence for width offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163039"></a>WWN</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163041"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163043"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163045"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163047"></a>Power of width dependence of width offset.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163050"></a>WWL</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163052"></a>m<none class="Superscript">
+WWN<br>
+</none>
+*m<none class="Superscript">
+WLN</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163054"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163056"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163058"></a>Coefficient of length and width cross term for width offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163061"></a>DWG</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163063"></a>m/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163065"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163067"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163069"></a>Coefficient of Weff's gate dependence</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163072"></a>DWB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163074"></a>m/V<none class="Superscript">
+1/2</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163076"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163078"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163080"></a>Coefficient of Weff's substrate body bias dependence</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163083"></a>LINT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163085"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163087"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163089"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163091"></a>Length offset fitting parameter from I-V without bias</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163094"></a>LL</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163096"></a>m<none class="Superscript">
+LLN</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163098"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163100"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163102"></a>Coefficient of length dependence for length offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163105"></a>LLN</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163107"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163109"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163111"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163113"></a>Power of length dependence of length offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163116"></a>LW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163118"></a>m<none class="Superscript">
+LWN</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163120"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163122"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163124"></a>Coefficient of width dependence for length offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163127"></a>LWN</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163129"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163131"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163133"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163135"></a>Power of width dependence of length offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163138"></a>LWL</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163140"></a>m<none class="Superscript">
+LWN<br>
+</none>
+*m<none class="Superscript">
+LLN</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163143"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163145"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163147"></a>Coefficient of length and width cross term for length offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163150"></a>DLC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163152"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163154"></a>LINT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163156"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163158"></a>Length offset fitting parameter from CV</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163161"></a>DWC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163163"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163165"></a>WINT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163167"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-163169"></a>Width offset fitting parameter from CV</p>
+</td>
+</tr>
+</tbody></table>
+<h4 class="head3">
+<a name="pgfId-163188"></a><a name="marker-188969"></a>Temperature Parameters</h4>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-206562"></a>Name</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-206564"></a> Unit</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-206566"></a>Default</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-206568"></a>Bin</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-206570"></a>Description</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206572"></a>KT1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206574"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206576"></a>-0.11</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206578"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206580"></a>Temperature coefficient for Vth</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206582"></a>KT1L</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206584"></a>m-V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206586"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206588"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206590"></a>Temperature coefficient for channel length dependence of Vth</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206592"></a>KT2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206594"></a><none class="Superscript">
+-</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206596"></a>0.022</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206598"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206600"></a>Body bias coefficient of Vth temperature effect</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206602"></a>UTE</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206604"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206606"></a>-1.5</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206608"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206610"></a>Mobility temperature exponent</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206612"></a>UA1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206614"></a>m/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206616"></a>4.31e-9</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206618"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206620"></a>Temperature coefficient for UA</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206622"></a>UB1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206624"></a>(m/V)<none class="Superscript">
+2</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206626"></a>-7.61e-18</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206628"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206630"></a>Temperature coefficient for UB</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206632"></a>UC1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206634"></a>m/V<none class="Superscript">
+2</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206636"></a>-5.69e-11</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206638"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206640"></a>Temperature coefficient for UC</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206642"></a>AT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206644"></a>m/sec</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206646"></a>3.3e4</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206648"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206650"></a>Temperature coefficient for saturation velocity</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206652"></a>PRT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206654"></a>ohm-um</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206656"></a>0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206658"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206660"></a>Temperature coefficient for RDSW</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206662"></a>XTI</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206664"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206666"></a>3.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206668"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-206670"></a>Junction current temperature exponent</p>
+</td>
+</tr>
+</tbody></table>
+<h4 class="head3">
+<a name="pgfId-163349"></a>Bin Description Parameters</h4>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-169795"></a>Name</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-169797"></a> Unit</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-169799"></a>Default</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-169801"></a>Bin</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-169803"></a>Description</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169806"></a>LMIN</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169808"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169810"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169812"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169814"></a>Maximum channel length</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169817"></a>LMAX</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169819"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169821"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169823"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169825"></a>Maximum channel length</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169828"></a>WMIN</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169830"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169832"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169834"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169836"></a>Minimum channel width</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169904"></a>WMAX</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169906"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169908"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169910"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169912"></a>Maximum channel width</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169914"></a>BINUNIT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169916"></a>&nbsp;</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169918"></a>&nbsp;</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169920"></a>&nbsp;</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-169945"></a>Assumes weff, leff, wref, lref units are in microns when BINUNIT=1 or meters otherwise</p>
+</td>
+</tr>
+</tbody></table>
+<h4 class="head3">
+<a name="pgfId-163510"></a>Process Parameters</h4>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-163514"></a>Name</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-163516"></a> Unit</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-163518"></a>Default</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-163520"></a>Bin</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-163522"></a>Description</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164033"></a>GAMMA1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164035"></a>V<none class="Superscript">
+1/2</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164037"></a>see Note 8</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164039"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164041"></a>Body effect coefficient near the surface</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164044"></a>GAMMA2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164046"></a>V<none class="Superscript">
+1/2</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164048"></a>see Note 9</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164050"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164052"></a>Body effect coefficient in the bulk</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164055"></a>VBX</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164057"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164059"></a>see Note 10</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164061"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164063"></a>VBX at which the depletion region width equals XT</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164066"></a>XT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164068"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164070"></a>1.55e-7</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164072"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164074"></a>Doping depth</p>
+</td>
+</tr>
+</tbody></table>
+<h4 class="head3">
+<a name="pgfId-163671"></a><a name="marker-188970"></a><a name="marker-188971"></a>Noise Parameters</h4>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-163675"></a>Name</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-163677"></a> Unit</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-163679"></a>Default</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-163681"></a>Bin</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-163683"></a>Description</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164087"></a>NIOA</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164089"></a><none class="Superscript">
+-</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164091"></a>1.0e20 nmos<br>
+<br>
+9.9e18 pmos</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164094"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164096"></a>Body effect coefficient near the surface</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164099"></a>NOIB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164101"></a><none class="Superscript">
+-</none>
+</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164103"></a>5.0e4 nmos<br>
+2.4e3 pmos</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164106"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164108"></a>Body effect coefficient in the bulk</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164110"></a>NOIC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164112"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164114"></a>-1.4e-12<br>
+    nmos<br>
+<br>
+1.4e-12<br>
+   pmos</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164117"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164119"></a>VBX at which the depletion region width equals XT</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164122"></a>EM</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164124"></a>V/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164126"></a>4.1e7</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164128"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164130"></a>Flicker noise parameter</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164133"></a>AF</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164135"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164137"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164139"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164141"></a>Flicker noise exponent</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164143"></a>KF</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164145"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164147"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164149"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164151"></a>Flicker noise coefficient</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164153"></a>EF</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164155"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164157"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164159"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164161"></a>Flicker noise frequency exponent</p>
+</td>
+</tr>
+</tbody></table>
+<div>
+<hr><strong>NOTE:</strong>&nbsp;See also <a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-151.html#27580" class="XRef">Using Noise Models</a>, for Hspice noise model usage (Hspice parameter NLEV overrides Berkeley NOIMOD).<hr>
+</div>
+<a name="pgfId-157946"></a><h4 class="head3">
+<a name="pgfId-165482"></a><a name="marker-188972"></a>Junction Parameters</h4>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-165296"></a>Name</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-165298"></a> Unit</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-165300"></a>Default</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-165302"></a>Bin</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-165304"></a>Description</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165307"></a>ACM</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165309"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165311"></a>10</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165313"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165315"></a>Area calculation method selector (Hspice specific)<br>
+ACM=0-3 uses Hspice junction models<br>
+ACM=10-13 uses Berkeley junction models<br>
+LEVEL 49 ACM defaults to 0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165318"></a>JS</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165320"></a>A/m2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165322"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165324"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165326"></a>Bulk junction saturation current<br>
+(Default deviates from BSIM3v3 = 1.0e-4)</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165329"></a>JSW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165331"></a>A/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165333"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165335"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165337"></a>Sidewall bulk junction saturation current</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165340"></a>NJ</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165342"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165344"></a>1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165346"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165348"></a>Emission coefficient (used only with Berkeley junction model, i.e.,ACM=10-13)</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165351"></a>N</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165353"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165355"></a>1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165357"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165359"></a>Emission coefficient (Hspice-specific), (used only with Hspice junction model, i.e., ACM=0-3)</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165362"></a>CJ</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165364"></a>F/m2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165366"></a>5.79e-4</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165368"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165370"></a>Zero-bias bulk junction capacitance<br>
+(Default deviates from BSIM3v3 = 5.0e-4)</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165373"></a>CJSW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165375"></a>F/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165377"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165379"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165381"></a>Zero-bias sidewall bulk junction capacitance<br>
+(Default deviates from BSIM3v3 = 5.0e-10)</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165384"></a>CJSWG</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165386"></a>F/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165388"></a>CJSW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165390"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165392"></a>Zero-bias gate-edge sidewall bulk junction capacitance (only used with Berkeley junction model, i.e., ACM=10-13)</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165395"></a>CJGATE</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165397"></a>F/m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165399"></a>CJSW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165401"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165403"></a>Zero-bias gate-edge sidewall bulk junction capacitance (Hspice-specific) (only used with ACM=3!)</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165407"></a>PB, PHIB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165409"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165411"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165413"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165415"></a>Bulk junction contact potential</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165418"></a>PBSW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165420"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165422"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165424"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165426"></a>Sidewall bulk junction contact potential</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165429"></a>PHP</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165431"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165433"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165435"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165437"></a>Sidewall bulk junction contact potential (Hspice-specific) (only used with Hspice junction model, i.e., ACM=0-3)</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165440"></a>PBSWG</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165442"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165444"></a>PBSW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165446"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165448"></a>Gate-edge sidewall bulk junction contact
+potential (only used with Berkeley junction model, i.e., ACM=10-13).
+Note: there is no equivalent Hspice parameter. Gate-edge contact
+potential is always set to PHP for Hspice junction model.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165451"></a>MJ</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165453"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165455"></a>0.5</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165457"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165459"></a>Bulk junction grading coefficient</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165462"></a>MJSW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165464"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165466"></a>0.33</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165468"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165470"></a>Sidewall bulk junction grading coefficient</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165473"></a>MJSWG</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165475"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165477"></a>MJSW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165479"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165481"></a>Gate-edge sidewall bulk junction grading coefficient   (only used with Berkeley junction model, i.e., ACM=10-13)<br>
+<bold class="Bold">
+Note:</bold>
+ there is no equivalent Hspice parameter. Gate-edge grading coefficient is always set to MJSW for Hspice junction model.</p>
+</td>
+</tr>
+</tbody></table>
+<div>
+<hr><strong>NOTE:</strong>&nbsp;See <a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-146.html#76815" class="XRef">Using a MOSFET Diode Model</a> for Hspice junction diode model usage.<hr>
+</div>
+<a name="pgfId-165483"></a><h4 class="head3">
+<a name="pgfId-164715"></a><a name="marker-188973"></a>NonQuasi-Static (NQS) Parameters</h4>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-164721"></a>Name</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-164723"></a> Unit</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-164725"></a>Default</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-164727"></a>Bin</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-164729"></a>Description</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164731"></a>ELM</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164733"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164735"></a>5.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164737"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164739"></a>Elmore constant </p>
+</td>
+</tr>
+</tbody></table>
+<h4 class="head3">
+<a name="pgfId-164229"></a>Version 3.2 Parameters</h4>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-164293"></a>Name</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-164295"></a> Unit</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-164297"></a>Default</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-164299"></a>Bin</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-164301"></a>Description</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164960"></a>TOXM</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164962"></a>m</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164964"></a>TOX</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164966"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164968"></a>Reference gate oxide thickness </p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164971"></a>VFB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164973"></a>V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164975"></a>See <br>
+Note 11</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164978"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164980"></a>DC flatband voltage</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164982"></a>NOFF</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164984"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164986"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164988"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164990"></a>I-V parameter for weak to strong inversion transition</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164992"></a>VOFFCV</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164994"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164996"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-164998"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165000"></a>C-V parameter for weak to strong inversion transition</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165002"></a>JTH</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165004"></a>A</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165006"></a>0.1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165008"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165010"></a>Diode limiting current</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165013"></a>ALPHA1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165015"></a>V-1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165017"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165019"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165021"></a>Substrate current parameter</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165023"></a>ACDE</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165025"></a>m/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165027"></a>1.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165029"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165031"></a>Exponential coefficient for charge thickness in the accumulation and depletion regions</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165033"></a>MOIN</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165035"></a>m/V</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165037"></a>15.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165039"></a>Yes</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165041"></a>Coefficient for gate-bias dependent surface potential</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165043"></a>TPB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165045"></a>V/K</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165047"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165049"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165051"></a>Temperature coefficient of PB</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165053"></a>TPBSW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165055"></a>V/K</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165057"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165059"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165061"></a>Temperature coefficient of PBSW</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165063"></a>TPBSWG</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165065"></a>V/K</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165067"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165069"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165071"></a>Temperature coefficient of PBSWG</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165073"></a>TCJ</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165075"></a>V/K</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165077"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165079"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165081"></a>Temperature coefficient of CJ</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165083"></a>TCJSW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165085"></a>V/K</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165087"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165089"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165091"></a>Temperature coefficient of CJSW</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165093"></a>TCJSWG</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165095"></a>V/K</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165097"></a>0.0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165099"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165101"></a>Temperature coefficient of CJSWG</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165103"></a>LLC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165105"></a>mlln</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165107"></a>LL</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165109"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165111"></a>Coefficient of length dependence for C-V channel length offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165113"></a>LWC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165115"></a>mlwn</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165117"></a>LW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165119"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165121"></a>Coefficient of width dependence for C-V channel length offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165123"></a>LWLC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165125"></a>mlln+lwn</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165127"></a>LWL</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165129"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165131"></a>Coefficient of length and width for C-V channel length offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165133"></a>WLC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165135"></a>mwln</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165137"></a>WL</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165139"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165141"></a>Coefficient of length dependence for C-V channel width offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165143"></a>WWC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165145"></a>mwwn</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165147"></a>WW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165149"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165151"></a>Coefficient of width dependence for C-V channel width offset</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165153"></a>WWLC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165155"></a>mwln+</p>
+<p class="cellbody">
+<a name="pgfId-165156"></a>wwn</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165158"></a>WWL</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165160"></a>No</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165162"></a>Coefficient of length and width cross terms for C-V channel width offset</p>
+</td>
+</tr>
+</tbody></table>
+<p class="body">
+<a name="pgfId-165282"></a><em class="Emphasis">
+Notes:</em>
+</p>
+<p class="Step1First">
+<a name="pgfId-165285"></a>1.	If <none class="EquationVariables">
+C</none>
+<none class="Subscript">
+gso   </none>
+is not given, it is calculated as follows:<br>
+If (<none class="EquationVariables">
+dlc</none>
+<none class="Subscript">
+ </none>
+is given and is greater than <none class="EquationVariables">
+0.0), </none>
+then,<br>
+<none class="EquationVariables">
+<br>
+cgso = p1 = max(0,dlc*cox - cgs1)</none>
+</p>
+<p class="Step1Cont">
+<a name="pgfId-158376"></a>Otherwise, <none class="EquationVariables">
+cgso = 0.6*xj*cox</none>
+</p>
+<p class="Step1">
+<a name="pgfId-158377"></a>2.	If <none class="EquationVariables">
+C</none>
+<none class="Subscript">
+gdo   </none>
+is not given, it is calculated as follows:</p>
+<p class="Step1Cont">
+<a name="pgfId-158378"></a>if (<none class="EquationVariables">
+dlc</none>
+<none class="Subscript">
+   </none>
+is given and is greater than <none class="EquationVariables">
+0.0), </none>
+then,</p>
+<blockquote class="Indent">
+<a name="pgfId-158379"></a><none class="EquationVariables">
+cgdo = p2 = max(0,dlc*cox - cgd1)</none>
+</blockquote>
+<p class="Step1Cont">
+<a name="pgfId-158380"></a>Otherwise <none class="EquationVariables">
+cgdo = 0.6*xj*cox</none>
+</p>
+<p class="Step1">
+<a name="pgfId-158381"></a>3.	If <none class="EquationVariables">
+C</none>
+<none class="Subscript">
+f  </none>
+ is not given, it is calculated using:</p>
+<p class="Eqa">
+<a name="pgfId-158385"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2062.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Step1">
+<a name="pgfId-158386"></a>4.	If <none class="EquationVariables">
+Vth0</none>
+ is not specified in the .MODEL statement, it is calculated with Vfb = -1, using:</p>
+<p class="Eqa">
+<a name="pgfId-158390"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2063.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Step1">
+<a name="pgfId-158391"></a>5.	If <none class="EquationVariables">
+K1 and K2 are not given, they are calculated using:</none>
+</p>
+<p class="Eqa">
+<a name="pgfId-158395"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2064.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Eqa">
+<a name="pgfId-158399"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2065.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Step1">
+<a name="pgfId-158400"></a>6.	If <none class="EquationVariables">
+nch is not given, and GAMMA</none>
+<none class="Subscript">
+1</none>
+<none class="EquationVariables">
+ is given, nch is calculated from:</none>
+</p>
+<p class="Eqa">
+<a name="pgfId-158404"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2066.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Step1Cont">
+<a name="pgfId-158405"></a>If <none class="EquationVariables">
+both nch and GAMMA</none>
+<none class="Subscript">
+1</none>
+<none class="EquationVariables">
+ are not given, nch defaults to 1.7e17 per cubic meter and GAMMA</none>
+<none class="Subscript">
+1</none>
+<none class="EquationVariables">
+ is calculated from nch.</none>
+</p>
+<p class="Step1">
+<a name="pgfId-158406"></a>7.	If <none class="EquationVariables">
+PHI</none>
+ is not given, it is calculated using:</p>
+<p class="Eqa">
+<a name="pgfId-158410"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2067.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Eqa">
+<a name="pgfId-158414"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2068.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Eqa">
+<a name="pgfId-158418"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2069.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Step1">
+<a name="pgfId-158419"></a>8.	If <none class="EquationVariables">
+GAMMA</none>
+<none class="Subscript">
+1   </none>
+is not given, it is calculated using:</p>
+<p class="Eqa">
+<a name="pgfId-158423"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2070.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Step1">
+<a name="pgfId-158424"></a>9.	If <none class="EquationVariables">
+GAMMA</none>
+<none class="Subscript">
+2   </none>
+is not given, it is calculated using:</p>
+<p class="Eqa">
+<a name="pgfId-158428"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2071.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Step1">
+<a name="pgfId-158429"></a>10.	If <none class="EquationVariables">
+V</none>
+<none class="Subscript">
+bx   </none>
+is not given, it is calculated using:</p>
+<p class="Eqa">
+<a name="pgfId-158433"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2072.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Body">
+<a name="pgfId-158434"></a>11. There are three ways for the BSIM3 model to calculate Vth:</p>
+<ul>
+<li class="bullet1">
+<a name="pgfId-158435"></a>Using K1 and K2 values that are user specified </li>
+<li class="bullet1">
+<a name="pgfId-158436"></a>Using GAMMA1, GAMMA2, VBM, and VBX values entered in the .MODEL statement</li>
+<li class="bullet1">
+<a name="pgfId-158437"></a>Using NPEAK, NSUB, XT, and VBM values that are user specified </li>
+</ul>
+<p class="body">
+<a name="pgfId-158438"></a>The model parameter U0 can be entered in
+meters or centimeters. U0 is converted to m2/Vsec as follows: if U0 is
+greater than 1, it is multiplied by 1e-4. The parameter NSUB must be
+entered in cm-3 units.</p>
+<p class="body">
+<a name="pgfId-158439"></a>Specify a negative value of VTH0 for p-channel in the .MODEL statement.</p>
+<p class="body">
+<a name="pgfId-158440"></a>The impact ionization current determined by the model parameters PSCBE1 and PSCBE2 contributes to the bulk current.</p>
+<h3 class="head2">
+<a name="pgfId-158444"></a>Parameter Range Limits<a name="marker-158442"></a><a name="marker-158443"></a></h3>
+<p class="body">
+<a name="pgfId-158445"></a>Star-Hspice will report either warning or
+fatal error when BSIM3v3 parameters fall outside predefined ranges.
+These range limitations prevent or at least warn of potential numerical
+problems. LEVEL 53 follows exactly the BSIM3v3 range limit reporting
+scheme. LEVEL 49 deviates from the BSIM3v3 scheme as noted in the
+comments column of <a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-171.html#32941" class="XRef">Model Parameter Range Limit</a>. </p>
+<p class="body">
+<a name="pgfId-158446"></a>To control the maximum number of Star-Hspice warning messages printing to the output file use:</p>
+<p class="body">
+<a name="pgfId-165674"></a>	.OPTION WARNLIMIT=# </p>
+<p class="body">
+<a name="pgfId-165679"></a>where # is the maximum number of warning
+messages Star-Hspice will report. The default WARNLIMIT value is 1. In
+some cases (as noted in the following table) parameters are checked
+only when the model parameter PARMAMCHK=1 is set.</p>
+<h4 class="head3">
+<a name="pgfId-158723"></a><a name="32941"></a><a name="marker-188974"></a>Model Parameter Range Limit<a name="marker-158722"></a></h4>
+<table border="1">
+<tbody><tr>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-158449"></a>Name</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-158451"></a> Limits</p>
+</th>
+<th rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-158453"></a>Comments</p>
+</th>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158456"></a>TOX</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158458"></a>&lt;= 0 Fatal<br>
+&lt; 10-9 Warn if parmchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158461"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158464"></a>TOXM</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158466"></a>&lt;= 0 Fatal<br>
+&lt; 10-9 Warn if parmchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158469"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158472"></a>XJ</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158474"></a>&lt;= 0 Fatal</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158476"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158480"></a>NGATE</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158482"></a>&lt; 0 Fatal<br>
+&gt; 1025 Fatal<br>
+&lt;= 1018 Fatal if parmchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158486"></a>if &gt; 1023    NGATE is multiplied by 10-6. This is done prior to the other limit checks.<br>
+LEVEL 49 gives<br>
+&lt; 0 Fatal<br>
+&gt; 1025 Warn<br>
+&lt;= 1018 Warn if paramchk==1</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158493"></a>NSUB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158495"></a><none class="Superscript">
+&lt;= 0 Fatal<br>
+</none>
+&lt;= 1014 Warn if parmchk=1<br>
+&gt;= 1021 Warn if parmchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158499"></a>NSUB is ignored if k1,k2 are defined</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158502"></a>NCH</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158504"></a><none class="Superscript">
+&lt;= 0 Fatal<br>
+</none>
+&lt;= 1015 Warn if parmchk=1<br>
+&gt;= 1021 Warn if parmchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158508"></a>if &gt; 1020 NCH is multiplied by 10-6. This is done prior to the other limit checks. </p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158511"></a>NLX</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158513"></a><none class="Superscript">
+&lt; -Leff Fatal<br>
+</none>
+&lt; 0 Warn if parmchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158516"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158519"></a>W0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158521"></a>= -Weff Fatal<br>
+w0 + Weff &lt; 10-7 Warn if paramchk==1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158524"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158527"></a>DVT1W</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158529"></a>&lt; 0 Fatal</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158531"></a>&lt; 0 LEVEL 49 gives Warn</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158534"></a>DVT0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158536"></a>&lt; 0 Warn if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158538"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158541"></a>DVT1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158543"></a>&lt; 0 Fatal</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158545"></a>&lt; 0 LEVEL 49 gives Warn</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158548"></a>ETA0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158550"></a>&lt;= 0 Warn if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158552"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158555"></a>DSUB</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158557"></a>&lt; 0 Fatal</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158559"></a>&lt; 0 LEVEL 49 gives Warn</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158562"></a>VBM</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158564"></a>&nbsp;</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158566"></a>Ignored if K1,K2 are defined</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158569"></a>U0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158571"></a>&lt;= 0 Fatal</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158573"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158576"></a>B1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158578"></a>= -Weff Fatal<br>
+B1 + Weff &lt; 10-7 Warn if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158581"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158584"></a>VSAT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158586"></a>&lt;= 0 Fatal<br>
+&lt; 103 Warn if paramchk==1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158589"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158592"></a>A1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158594"></a>-</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158596"></a>See a2 conditions</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158599"></a>A2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158601"></a>&lt; 0.01 Warn and reset a2=0.01 if paramchk=1 <br>
+&gt; 1 Warn and reset a2=1,a1=0 if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158604"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158606"></a>DELTA</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158608"></a>&lt; 0 Fatal</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158610"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158613"></a>RDSW</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-165647"></a>&lt; 0.001 Warn if paramchk=1 and reset rdsw=0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158619"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158622"></a>NFACTOR</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158624"></a>&lt; 0 Warn if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158626"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158629"></a>CDSC</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158631"></a>&lt; 0 Warn if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158633"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158636"></a>CDSCD</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158638"></a>&lt; 0 Warn if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158640"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158643"></a>PCLM</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158645"></a>&lt;= 0 Fatal</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158647"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158650"></a>PDIBLC1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158652"></a>&lt; 0 Warn if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158654"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158657"></a>PDIBLC2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158659"></a>&lt; 0 Warn if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158661"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158663"></a>PS</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158665"></a>&lt; Weff Warn</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158667"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158669"></a>DROUT</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158671"></a>&lt; 0 Fatal if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158673"></a>LEVEL 49 gives Warn</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158675"></a>PSCBE2</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158677"></a>&lt;= 0 warn if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158679"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158681"></a>CGS0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158683"></a>&lt; 0 Warn and reset to 0 if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158685"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158687"></a>CGD0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158689"></a>&lt; 0 Warn and reset to 0 if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158691"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158693"></a>CGB0</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158695"></a>&lt; 0 Warn and reset to 0 if paramchk=1</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158697"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158699"></a>ACDE</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158701"></a>&lt; 0.4, &gt; 1.6 Warn</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158703"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158705"></a>MOIN</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158707"></a>&lt; 5.0, &gt; 25 Warn</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158709"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158711"></a>IJTH</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158713"></a>&lt; 0 Fatal</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158715"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158717"></a>NOFF</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158719"></a>&lt; 0.1, &gt; 4.0 Warn</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158721"></a>&nbsp;</p>
+</td>
+</tr>
+</tbody></table>
+<h4 class="head3">
+<a name="pgfId-158769"></a><a name="marker-188975"></a>Element Parameters Range Limits</h4>
+<table border="1">
+<tbody><tr>
+<td rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-158728"></a>Name</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-158730"></a> Limits</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellheading">
+<a name="pgfId-158732"></a>Comments</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158734"></a>PD</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158736"></a>&lt; Weff, Warn</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158738"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158740"></a>PS</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158742"></a>&lt; Weff, Warn</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158744"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158746"></a>Leff</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158748"></a>&lt; 5.0 x 10-8 Fatal</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158750"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158752"></a>Weff</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158754"></a>&lt; 1.0 x 10-7 Fatal</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158756"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158758"></a>LeffCV</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158760"></a>&lt; 5.0 x 10-8 Fatal</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158762"></a>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158764"></a>WeffCV</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158766"></a>&lt; 1.0 x 10-7 Fatal</p>
+</td>
+<td rowspan="1" colspan="1">
+<p class="cellbody">
+<a name="pgfId-158768"></a>&nbsp;</p>
+</td>
+</tr>
+</tbody></table>
+<h3 class="head2">
+<a name="pgfId-158861"></a>LEVEL 49, 53 <a name="marker-188976"></a><a name="marker-188977"></a><a name="marker-188978"></a>Equations<a name="marker-158859"></a><a name="marker-158860"></a></h3>
+<p class="body">
+<a name="pgfId-158862"></a>The effective channel length and width used in all model equations are:</p>
+<p class="Eqa">
+<a name="pgfId-158866"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2073.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Eqa">
+<a name="pgfId-158870"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2074.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Eqa">
+<a name="pgfId-158871"></a>&nbsp;</p>
+<p class="Eqa">
+<a name="pgfId-158875"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2075.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Eqa">
+<a name="pgfId-158876"></a>&nbsp;</p>
+<p class="Eqa">
+<a name="pgfId-158877"></a>Wdrawn = W * WMULT + XW</p>
+<p class="Eqa">
+<a name="pgfId-158878"></a>&nbsp;</p>
+<p class="Eqa">
+<a name="pgfId-158879"></a>Ldrawn = L * LMULT + XL</p>
+<p class="Eqa">
+<a name="pgfId-158880"></a>&nbsp;</p>
+<p class="body">
+<a name="pgfId-158881"></a>where the unprimed <none class="EquationVariables">
+W</none>
+<none class="Subscript">
+eff</none>
+ is bias-dependent, and the primed quantity is bias-independent.</p>
+<p class="Eqa">
+<a name="pgfId-158885"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2076.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Eqa">
+<a name="pgfId-158889"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2077.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="Eqa">
+<a name="pgfId-158893"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2078.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="body">
+<a name="pgfId-158895"></a>For C-V calculations dW' is replaced with</p>
+<p class="Eqa">
+<a name="pgfId-158899"></a><img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2079.jpg" align="BASELINE">
+&nbsp;</p>
+<p class="body">
+<a name="pgfId-215921"></a>and dL' is replaced with</p>
+<div>
+<img src="HSPICE_2001_2-171_archivos/hspice_2001_2-2080.jpg">
+</div>
+<div>
+<hr><strong>NOTE:</strong>&nbsp;A detailed discussion of the BSIM3
+Version 3 equations is available from the BSIM3 site:
+http://www-device.eecs.berkeley.edu/~bsim3/get.html<hr>
+</div>
+<a name="pgfId-215922"></a><h3 class="head2">
+<a name="pgfId-156186"></a><a name="marker-188979"></a><a name="marker-188980"></a><a name="marker-188981"></a>.MODEL CARDS NMOS Model</h3>
+<pre class="Courier"><a name="pgfId-150343"></a>.model nch nmos LEVEL=49</pre>
+<pre class="Courier"><a name="pgfId-150344"></a>+ Tnom=27.0</pre>
+<pre class="Courier"><a name="pgfId-150345"></a>+ nch=1.024685E+17 tox=1.00000E-08 xj=1.00000E-07</pre>
+<pre class="Courier"><a name="pgfId-150346"></a>+ lint=3.75860E-08 wint=-2.02101528644562E-07</pre>
+<pre class="Courier"><a name="pgfId-150347"></a>+ vth0=.6094574 k1=.5341038 k2=1.703463E-03 k3=-17.24589</pre>
+<pre class="Courier"><a name="pgfId-150348"></a>+ dvt0=.1767506 dvt1=.5109418 dvt2=-0.05</pre>
+<pre class="Courier"><a name="pgfId-150349"></a>+ nlx=9.979638E-08 w0=1e-6</pre>
+<pre class="Courier"><a name="pgfId-150350"></a>+ k3b=4.139039</pre>
+<pre class="Courier"><a name="pgfId-150351"></a>+ vsat=97662.05 ua=-1.748481E-09 ub=3.178541E-18 uc=1.3623e-10</pre>
+<pre class="Courier"><a name="pgfId-150352"></a>+ rdsw=298.873 u0=307.2991 prwb=-2.24e-4</pre>
+<pre class="Courier"><a name="pgfId-150353"></a>+ a0=.4976366</pre>
+<pre class="Courier"><a name="pgfId-150354"></a>+ keta=-2.195445E-02 a1=.0332883 a2=.9</pre>
+<pre class="Courier"><a name="pgfId-150355"></a>+ voff=-9.623903E-02 nFactor=.8408191 cit=3.994609E-04</pre>
+<pre class="Courier"><a name="pgfId-150356"></a>+ cdsc=1.130797E-04</pre>
+<pre class="Courier"><a name="pgfId-150357"></a>+ cdscb=2.4e-5</pre>
+<pre class="Courier"><a name="pgfId-150358"></a>+ eta0=.0145072 etab=-3.870303E-03</pre>
+<pre class="Courier"><a name="pgfId-150359"></a>+ dsub=.4116711</pre>
+<pre class="Courier"><a name="pgfId-150360"></a>+ pclm=1.813153 pdiblc1=2.003703E-02 pdiblc2=.00129051
++ pdiblcb=-1.034e-3</pre>
+<pre class="Courier"><a name="pgfId-150361"></a>+ drout=.4380235 pscbe1=5.752058E+08 pscbe2=7.510319E-05</pre>
+<pre class="Courier"><a name="pgfId-150362"></a>+ pvag=.6370527 prt=68.7 ngate=1.e20 alpha0=1.e-7 beta0=28.4</pre>
+<pre class="Courier"><a name="pgfId-150363"></a>+ prwg=-0.001 ags=1.2</pre>
+<pre class="Courier"><a name="pgfId-150364"></a>+ dvt0w=0.58 dvt1w=5.3e6 dvt2w=-0.0032</pre>
+<pre class="Courier"><a name="pgfId-150365"></a>+ kt1=-.3 kt2=-.03</pre>
+<pre class="Courier"><a name="pgfId-150366"></a>+ at=33000</pre>
+<pre class="Courier"><a name="pgfId-150367"></a>+ ute=-1.5</pre>
+<pre class="Courier"><a name="pgfId-150368"></a>+ ua1=4.31E-09 ub1=7.61E-18 uc1=-2.378e-10</pre>
+<pre class="Courier"><a name="pgfId-150369"></a>+ kt1l=1e-8</pre>
+<pre class="Courier"><a name="pgfId-150370"></a>+ wr=1 b0=1e-7 b1=1e-7 dwg=5e-8 dwb=2e-8 delta=0.015</pre>
+<pre class="Courier"><a name="pgfId-150371"></a>+ cgdl=1e-10 cgsl=1e-10 cgbo=1e-10 xpart=0.0</pre>
+<pre class="Courier"><a name="pgfId-150372"></a>+ cgdo=0.4e-9 cgso=0.4e-9</pre>
+<pre class="Courier"><a name="pgfId-150373"></a>+ clc=0.1e-6</pre>
+<pre class="Courier"><a name="pgfId-150374"></a>+ cle=0.6</pre>
+<pre class="Courier"><a name="pgfId-150375"></a>+ ckappa=0.6</pre>
+<h3 class="head2">
+<a name="pgfId-150376"></a><a name="marker-188982"></a><a name="marker-188983"></a><a name="marker-188984"></a>PMOS Model</h3>
+<p class="body">
+<a name="pgfId-150377"></a>This is an example of a PMOS model. Note that VTH0 is negative.</p>
+<pre class="Courier"><a name="pgfId-150378"></a>.model pch PMOS LEVEL=49</pre>
+<pre class="Courier"><a name="pgfId-150379"></a>+ Tnom=27.0</pre>
+<pre class="Courier"><a name="pgfId-150380"></a>+ nch=5.73068E+16 tox=1.00000E-08 xj=1.00000E-07</pre>
+<pre class="Courier"><a name="pgfId-150381"></a>+ lint=8.195860E-08 wint=-1.821562E-07</pre>
+<pre class="Courier"><a name="pgfId-150382"></a>+ vth0=-.86094574 k1=.341038 k2=2.703463E-02 k3=12.24589</pre>
+<pre class="Courier"><a name="pgfId-150383"></a>+ dvt0=.767506 dvt1=.65109418 dvt2=-0.145</pre>
+<pre class="Courier"><a name="pgfId-150384"></a>+ nlx=1.979638E-07 w0=1.1e-6</pre>
+<pre class="Courier"><a name="pgfId-150385"></a>+ k3b=-2.4139039</pre>
+<pre class="Courier"><a name="pgfId-150386"></a>+ vsat=60362.05 ua=1.348481E-09 ub=3.178541E-19 uc=1.1623e-10</pre>
+<pre class="Courier"><a name="pgfId-150387"></a>+ rdsw=498.873 u0=137.2991 prwb=-1.2e-5</pre>
+<pre class="Courier"><a name="pgfId-150388"></a>+ a0=.3276366</pre>
+<pre class="Courier"><a name="pgfId-150389"></a>+ keta=-1.8195445E-02 a1=.0232883 a2=.9</pre>
+<pre class="Courier"><a name="pgfId-150390"></a>+ voff=-6.623903E-02 nFactor=1.0408191 cit=4.994609E-04</pre>
+<pre class="Courier"><a name="pgfId-150391"></a>+ cdsc=1.030797E-3</pre>
+<pre class="Courier"><a name="pgfId-150392"></a>+ cdscb=2.84e-4</pre>
+<pre class="Courier"><a name="pgfId-150393"></a>+ eta0=.0245072 etab=-1.570303E-03</pre>
+<pre class="Courier"><a name="pgfId-150394"></a>+ dsub=.24116711</pre>
+<pre class="Courier"><a name="pgfId-150395"></a>+ pclm=2.6813153 pdiblc1=4.003703E-02 pdiblc2=.00329051 
++ pdiblcb=-2.e-4</pre>
+<pre class="Courier"><a name="pgfId-150396"></a>+ drout=.1380235 pscbe1=0 pscbe2=1.e-28</pre>
+<pre class="Courier"><a name="pgfId-150397"></a>+ pvag=-.16370527</pre>
+<pre class="Courier"><a name="pgfId-150398"></a>+ prwg=-0.001 ags=1.2</pre>
+<pre class="Courier"><a name="pgfId-150399"></a>+ dvt0w=0.58 dvt1w=5.3e6 dvt2w=-0.0032</pre>
+<pre class="Courier"><a name="pgfId-150400"></a>+ kt1=-.3 kt2=-.03 prt=76.4</pre>
+<pre class="Courier"><a name="pgfId-150401"></a>+ at=33000</pre>
+<pre class="Courier"><a name="pgfId-150402"></a>+ ute=-1.5</pre>
+<pre class="Courier"><a name="pgfId-150403"></a>+ ua1=4.31E-09 ub1=7.61E-18 uc1=-2.378e-10</pre>
+<pre class="Courier"><a name="pgfId-150404"></a>+ kt1l=0</pre>
+<pre class="Courier"><a name="pgfId-150405"></a>+ wr=1 b0=1e-7 b1=1e-7 dwg=5e-8 dwb=2e-8 delta=0.015</pre>
+<pre class="Courier"><a name="pgfId-150406"></a>+ cgdl=1e-10 cgsl=1e-10 cgbo=1e-10 xpart=0.0</pre>
+<pre class="Courier"><a name="pgfId-150407"></a>+ cgdo=0.4e-9 cgso=0.4e-9</pre>
+<pre class="Courier"><a name="pgfId-150408"></a>+ clc=0.1e-6</pre>
+<pre class="Courier"><a name="pgfId-150409"></a>+ cle=0.6</pre>
+<pre class="Courier"><a name="pgfId-150410"></a>+ ckappa=0.6</pre>
+<i>Star-Hspice Manual - Release 2001.2 - June 2001</i><p><i></i></p><hr><br><a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-169.html"><img src="HSPICE_2001_2-171_archivos/top.gif"></a>&nbsp;<a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-170.html"><img src="HSPICE_2001_2-171_archivos/prev.gif"></a>&nbsp;<a href="http://www.ece.uci.edu/docs/hspice/hspice_2001_2-172.html"><img src="HSPICE_2001_2-171_archivos/next.gif"></a>&nbsp;<a href="http://www.ece.uci.edu/docs/hspice/index.html"><img src="HSPICE_2001_2-171_archivos/index.gif"></a>
+</body></html>
