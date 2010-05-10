@@ -5,6 +5,9 @@
 .LIB "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\i-comparador-01.lib" 
 .lib "nom.lib" 
 
+*Analysis directives: 
+.TRAN  0 15n 0 50p 
+.OPTIONS NODE
 
 **** INCLUDING DOBLE-COMP.net ****
 * source I-COMPARADOR-01
@@ -48,6 +51,3 @@ M_M2         N48205 IN+ N44303 0 CMOSN
 + W=458u         
 
 **** RESUMING PRUEBA.cir ****
-
-
-.END
