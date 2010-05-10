@@ -1,4 +1,4 @@
-** Profile: "DOBLE-COMP-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-comp\prueba.sim ] 
+** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\I-COMPARADOR-01-PSpiceFiles\DOBLE-NEG\PRUEBA.sim ] 
 
 ** Creating circuit file "PRUEBA.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -11,9 +11,9 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.DC LIN V_VQ- 1.45 1.55 10u 
+.DC LIN V_VQ- .9 1.1 10u 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
-.INC "..\DOBLE-COMP.net" 
+.INC "..\DOBLE-NEG.net" 
 
 
 .END
