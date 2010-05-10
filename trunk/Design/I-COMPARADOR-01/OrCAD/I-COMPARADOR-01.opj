@@ -54,6 +54,8 @@
     (File ".\i-comparador-01-pspicefiles\memelink\memelink.net"
       (Type "Report"))
     (File ".\i-comparador-01-pspicefiles\doble-comp\doble-comp.net"
+      (Type "Report"))
+    (File ".\i-comparador-01-pspicefiles\doble-neg\doble-neg.net"
       (Type "Report")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
@@ -92,11 +94,15 @@
          ".\i-comparador-01-pspicefiles\memelink\dc sweep.sim"
         (DisplayName "MEMELINK-DC Sweep")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-comparador-01-pspicefiles\doble-comp\prueba.sim")
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-comparador-01-pspicefiles\doble-comp\prueba.sim"
         (DisplayName "DOBLE-COMP-PRUEBA")
-        (Type "PSpice Profile"))))
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-comparador-01-pspicefiles\doble-neg\prueba.sim"
+        (DisplayName "DOBLE-NEG-PRUEBA")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-comparador-01-pspicefiles\doble-comp\prueba.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (S-COMP
@@ -159,24 +165,7 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
-         "DOBLE-COMP")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
-         "MEMELINK")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
-         "TEST")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
-         "TEST-NEG")
-      (Path "Outputs")
-      (Select "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
-         "TEST" "TEST"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -186,7 +175,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 200 1848 200 899")
+        (Placement "44 2 3 -1 -1 -8 -30 100 1748 100 799")
         (Scroll "0 0")
         (Zoom "135")
         (Occurrence "/"))

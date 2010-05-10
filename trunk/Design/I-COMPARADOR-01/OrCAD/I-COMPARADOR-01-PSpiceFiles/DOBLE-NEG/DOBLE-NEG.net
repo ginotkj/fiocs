@@ -1,0 +1,32 @@
+* source I-COMPARADOR-01
+M_M1         N64838 IN- N65068 0 CMOSN  
++ L=1u  
++ W=458u         
+M_M2         N65362 IN+ N65068 0 CMOSN  
++ L=1u  
++ W=458u         
+V_VDD         N64870 0 3.3
+M_M10         N65498 N65362 N64870 N64870 CMOSP  
++ L=1u  
++ W=4.306u         
+M_M3         N64838 N64838 N64870 N64870 CMOSP  
++ L=2u  
++ W=2u         
+V_VBIAS         N65118 0 .45
+M_M8         N65498 N65362 0 0 CMOSN  
++ L=2u  
++ W=2u         
+M_M4         N65362 N64838 N64870 N64870 CMOSP  
++ L=2u  
++ W=2u         
+V_VQ+         IN+ 0 1
+M_M11         N66527 N65498 N64870 N64870 CMOSP  
++ L=1u  
++ W=4.306u         
+M_M5         N65068 N65118 0 0 CMOSN  
++ L=2u  
++ W=2u         
+V_VQ-         IN- 0 1
+M_M9         N66527 N65498 0 0 CMOSN  
++ L=2u  
++ W=2u         
