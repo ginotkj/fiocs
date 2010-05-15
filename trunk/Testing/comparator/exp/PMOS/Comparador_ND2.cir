@@ -1,0 +1,60 @@
+**** 05/12/10 18:10:37 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
+
+ ****     CIRCUIT DESCRIPTION
+******************************************************************************
+
+* Local Libraries :
+.LIB "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\i-comparador-01.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.STEP V_VIN LIST 0.5 0.99 1 1.01 1.5
+.TRAN  0 150n 0 10p 
+.PROBE V(*) I(*) 
+
+**** INCLUDING DOBLE-NEG.net ****
+* source I-COMPARADOR-01
+
+M_M1         NDNEG IN- NDBIAS 0 CMOSN  
++ L=2u  
++ W=884u         
+M_M2         NDPOS IN+ NDBIAS 0 CMOSN  
++ L=2u  
++ W=884u         
+V_VDD         N64870 0 3.3
+M_M10         ND2 ND1 N64870 N64870 CMOSP  
++ L=1u  
++ W=4.306u         
+M_M3         NDNEG NDNEG N64870 N64870 CMOSP  
++ L=1u  
++ W=1.45u         
+V_VBIAS         VBIAS 0 .33
+M_M8         ND2 ND1 0 0 CMOSN  
++ L=2u  
++ W=2u         
+M_M12         ND1 NDPOS N64870 N64870 CMOSP  
++ L=1u  
++ W=73.3u         
+M_M4         NDPOS NDNEG N64870 N64870 CMOSP  
++ L=1u  
++ W=1.45u         
+V_VREF         IN+ 0 1
+M_M11         NDOUT ND2 N64870 N64870 CMOSP  
++ L=1u  
++ W=4.306u         
+M_M13         ND1 VBIAS 0 0 CMOSN  
++ L=1u  
++ W=25u         
+M_M5         NDBIAS VBIAS 0 0 CMOSN  
++ L=.2u  
++ W=.2u         
+V_VIN         IN- 0 1
+M_M9         NDOUT ND2 0 0 CMOSN  
++ L=2u  
++ W=2u          
+
+I_INYECCION         ND2 0 DC 0Adc AC 0Aac
++EXP 4m 0 2n 30p 2.2n 500p
+.END

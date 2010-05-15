@@ -35,15 +35,39 @@
     (File "d:\documents\tesis\fiocs\design\componentes orcad\compuertas.olb"
       (Type "Schematic Library"))
     (File ".\i-nand.olb"
-      (Type "Schematic Library")))
+      (Type "Schematic Library"))
+    (File ".\i-nand-pspicefiles\neg\neg.net"
+      (Type "Report"))
+    (File ".\i-nand-pspicefiles\nand-2\nand-2.net"
+      (Type "Report")))
   (Folder "PSpice Resources"
     (Folder "Model Libraries"
-      (Sort User))
+      (Sort User)
+      (File ".\i-nand-pspicefiles\i-nand.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\i-nand-pspicefiles\i-nand.lib")))
     (Folder "Stimulus Files")
     (Folder "Include Files")
-    (Folder "Simulation Profiles"))
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-nand-pspicefiles\neg\prueba-vdc.sim"
+        (DisplayName "NEG-Prueba-VDC")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-nand-pspicefiles\nand-2\prueba-vdc.sim"
+        (DisplayName "NAND-2-Prueba-VDC")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-nand-pspicefiles\nand-2\prueba-vdc.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (0
+      (LibraryName "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
     (PORTRIGHT-L
       (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
@@ -65,11 +89,6 @@
       (LibraryName
          "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
       (DeviceIndex "0"))
-    (VDC
-      (FullPartName "VDC.Normal")
-      (LibraryName
-         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
     (VSIN
       (FullPartName "VSIN.Normal")
       (LibraryName
@@ -79,9 +98,6 @@
       (FullPartName "R.Normal")
       (LibraryName
          "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
-      (DeviceIndex "0"))
-    (0
-      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (C
       (FullPartName "C.Normal")
@@ -101,23 +117,22 @@
     (FileView
       (Path "Design Resources")
       (Path "Outputs")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NAND-2")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NAND-3")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NAND-4")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NAND-5")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NAND-7")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NAND-8")
-      (Path "PSpice Resources"))
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 19 837 -11 801"))
-      (Tab 0))))
+        (Placement "44 0 1 -1 -1 -8 -30 19 837 -11 801"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 100 1819 100 755")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/"))
+      (Path "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.DSN")
+      (Schematic "NAND-2")
+      (Page "NAND-2"))))
