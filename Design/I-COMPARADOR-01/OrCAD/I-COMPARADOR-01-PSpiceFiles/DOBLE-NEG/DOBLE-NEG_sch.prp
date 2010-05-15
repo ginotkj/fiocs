@@ -20,14 +20,14 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	".45")
+                    ("value"	".33")
                     ("pspice_param"	"DC")
                 )
             )
         )
-        ("VQ+"
+        ("VREF"
             ("device_name"	"VDC")
-            ("pspice_path"	"V_VQ+")
+            ("pspice_path"	"V_VREF")
             ("level"	"0")
             ("model_params"
                 ("DC"
@@ -36,9 +36,9 @@
                 )
             )
         )
-        ("VQ-"
+        ("VIN"
             ("device_name"	"VDC")
-            ("pspice_path"	"V_VQ-")
+            ("pspice_path"	"V_VIN")
             ("level"	"0")
             ("model_params"
                 ("DC"

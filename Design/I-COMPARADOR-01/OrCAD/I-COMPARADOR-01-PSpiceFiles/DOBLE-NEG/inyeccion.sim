@@ -2,12 +2,12 @@
 
 @Settings: 1 1
 @General:
-ProfileName= "PRUEBA" 
-ProfileFile= "prueba.sim" 
+ProfileName= "inyeccion" 
+ProfileFile= "inyeccion.sim" 
 Connectivity= "DOBLE-NEG.net" 
-NetlistFile= "PRUEBA.cir" 
-DataFile= "PRUEBA.dat" 
-OutFile= "PRUEBA.out" 
+NetlistFile= "inyeccion.cir" 
+DataFile= "inyeccion.dat" 
+OutFile= "inyeccion.out" 
 Notes=
 @#$BEGINNOTES
 @#$ENDNOTES
@@ -33,12 +33,12 @@ Notes=
 @End Analysis
 @Analysis: 2 1
 +0 0
-+0 "VQ-" 
++0 "VIN" 
 +1 "" 
 +2 "" 
 +3 "" 
-+4 ".99999" 
-+5 "1.001" 
++4 ".99" 
++5 "1.01" 
 +6 "1u" 
 +7 "" 
 @End Analysis
