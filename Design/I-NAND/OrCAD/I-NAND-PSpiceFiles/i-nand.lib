@@ -1,5 +1,7 @@
 * PSpice Model Editor - Version 16.0.0
 *$
+.model Mbreakn NMOS
+*$
 .MODEL CMOSP PMOS (                                LEVEL   = 7
 +VERSION = 3.1            TNOM    = 27             TOX     = 4.5E-9
 +XJ      = 1E-7           NCH     = 4.1589E17      VTH0    = -0.4130913

@@ -1,11 +1,9 @@
 * source I-NAND
-.EXTERNAL INPUT IN
-.EXTERNAL INPUT VDD
-.EXTERNAL INPUT OUT
-.EXTERNAL INPUT GND
-M_M5         OUT IN VDD VDD CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_M6         OUT IN GND GND CMOSN  
-+ L=.18u  
-+ W=.18u         
+V_V1         N29931 0 3.3
+M_M5         N29915 N29941 N29931 N29931 CMOSP  
++ L=.25u  
++ W=.93u         
+V_V2         N29941 0 0Vdc
+M_M6         N29915 N29941 0 0 CMOSN  
++ L=.43u  
++ W=.43u         

@@ -1,16 +1,15 @@
 * source I-NAND
-V_VDD         N39971 0 3.3
-M_M5         OUT IN1 N39971 N39971 CMOSP  
-+ L=.18u  
-+ W=.2u         
+M_M5         OUT IN1 VDD VDD CMOSP  
++ L=.2u  
++ W=.18u         
 M_M6         OUT IN1 N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.2u  
++ W=.19u         
 M_M2         N39991 IN1 0 0 CMOSN  
-+ L=.18u  
++ L=.2u  
++ W=.19u         
+M_M4         OUT IN1 VDD VDD CMOSP  
++ L=.2u  
 + W=.18u         
-M_M4         OUT IN1 N39971 N39971 CMOSP  
-+ L=.18u  
-+ W=.2u         
-V_VIN         IN1 0  
-+PULSE 0 3.3 10p 0 0 100p 150p
+V_V1         VDD 0 3.3
+V_V2         IN1 0 0Vdc
