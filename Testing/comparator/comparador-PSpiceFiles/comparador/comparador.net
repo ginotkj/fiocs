@@ -1,0 +1,27 @@
+* source COMPARADOR
+M_M1         N14473 N14405 N00155 0 CMOSN  
++ L=15u  
++ W=30u         
+M_M2         N15666 N17944 N00155 0 CMOSN  
++ L=15u  
++ W=30u         
+M_M3         N00155 N14299 0 0 CMOSN  
++ L=3u  
++ W=11.5u         
+M_M4         N14473 N14473 N14416 N14416 CMOSP  
++ L=15u  
++ W=17u         
+M_M5         N15666 N14473 N14416 N14416 CMOSP  
++ L=15u  
++ W=17u         
+V_V1         N14405 0 1Vdc
+V_V3         N14299 0 0.7Vdc
+V_V4         N14416 0 3.3Vdc
+V_V2         N17944 0 1Vdc
+M_M6         N20369 N15666 N14416 N14416 CMOSP  
++ L=25u  
++ W=1500u         
+M_M7         N20369 N20575 0 0 CMOSN  
++ L=25u  
++ W=500u         
+V_V5         N20575 0 1Vdc

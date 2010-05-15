@@ -1,0 +1,21 @@
+** Profile: "comparador-gain"  [ D:\Documents\TESIS\fiocs\Testing\comparator\comparador-PSpiceFiles\comparador\gain.sim ] 
+
+** Creating circuit file "gain.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../comparador-pspicefiles/comparador.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.3_Demo\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0.9 1.1 0.000001 
+.OPTIONS LIST
+.OPTIONS NODE
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\comparador.net" 
+
+
+.END

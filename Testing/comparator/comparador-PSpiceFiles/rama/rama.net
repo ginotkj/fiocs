@@ -1,0 +1,5 @@
+* source COMPARADOR
+M_M2         N14558 N14658 0 0 CMOSN           
+M_M1         N14558 N14603 N14603 N14603 CMOSP           
+V_V1         N14658 0 3Vdc
+V_V2         N14603 0 5Vdc
