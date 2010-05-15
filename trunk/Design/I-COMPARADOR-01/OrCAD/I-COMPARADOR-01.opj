@@ -102,9 +102,23 @@
          ".\i-comparador-01-pspicefiles\doble-neg\prueba.sim"
         (DisplayName "DOBLE-NEG-PRUEBA")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-comparador-01-pspicefiles\doble-comp\prueba.sim")))
+      (ActiveProfile ".\i-comparador-01-pspicefiles\doble-neg\inyeccion.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-comparador-01-pspicefiles\doble-neg\inyeccion.sim"
+        (DisplayName "DOBLE-NEG-inyeccion")
+        (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (IPULSE
+      (FullPartName "IPULSE.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
     (S-COMP
       (FullPartName "S-COMP.Normal")
       (LibraryName
@@ -144,10 +158,6 @@
       (LibraryName
          "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
       (DeviceIndex "0"))
-    (R
-      (FullPartName "R.Normal")
-      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
-      (DeviceIndex "0"))
     (C
       (FullPartName "C.Normal")
       (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
@@ -160,7 +170,8 @@
       (FullPartName "VSTIM.Normal")
       (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
       (DeviceIndex "0")))
-  (LastUsedLibraryBrowseDirectory "LIBRARY\PSPICE")
+  (LastUsedLibraryBrowseDirectory
+     "C:\OrCAD\OrCAD_16.0\tools\capture\library\pspice")
   (MPSSessionName "FABRICIO")
   (GlobalState
     (FileView
@@ -175,11 +186,11 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 100 1748 100 799")
+        (Placement "44 2 3 -1 -1 -8 -30 100 1396 100 799")
         (Scroll "0 0")
         (Zoom "135")
         (Occurrence "/"))
       (Path
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-COMPARADOR-01\ORCAD\I-COMPARADOR-01.DSN")
-      (Schematic "DOBLE-COMP")
+      (Schematic "DOBLE-NEG")
       (Page "PAGE1"))))
