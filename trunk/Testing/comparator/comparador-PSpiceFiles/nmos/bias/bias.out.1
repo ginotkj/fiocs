@@ -1,0 +1,43 @@
+
+**** 05/04/10 22:45:09 ******** PSpice Lite (June 2009) ******* ID# 10813 ****
+
+ ** Profile: "nmos-bias"  [ D:\Documents\TESIS\fiocs\Testing\comparator\comparador-PSpiceFiles\nmos\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../comparador-pspicefiles/comparador.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.3_Demo\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\nmos.net" 
+
+
+
+**** INCLUDING nmos.net ****
+* source COMPARADOR
+M_M1         N14478 N14469 0 0 CMOSN  
++ L=1  
+----$
+ERROR -- Length must be less than 0.01 meter
++ W=1         
+V_VGS         N14469 0 2Vdc
+V_VDS         N14478 0 2Vdc
+
+**** RESUMING bias.cir ****
+.END
+
