@@ -1,0 +1,19 @@
+** Profile: "DOBLE-NEG-inyeccion"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\inyeccion.sim ] 
+
+** Creating circuit file "inyeccion.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-comparador-01-pspicefiles/i-comparador-01.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_VIN .99 1.01 1u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\DOBLE-NEG.net" 
+
+
+.END
