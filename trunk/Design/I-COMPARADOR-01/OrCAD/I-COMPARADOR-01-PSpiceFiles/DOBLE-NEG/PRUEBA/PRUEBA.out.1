@@ -1,5 +1,5 @@
 
-**** 05/12/10 19:08:27 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 05/12/10 18:10:37 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -23,7 +23,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.DC LIN V_VQ- .99999 1.001 1u 
+.DC LIN V_VQ- .9 1.1 10u 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\DOBLE-NEG.net" 
 
@@ -31,6 +31,8 @@
 
 **** INCLUDING DOBLE-NEG.net ****
 * source I-COMPARADOR-01
+I_INYECCION         NDNEG 0 DC 0Adc AC 0Aac
++PULSE 0 0 0 0 0 0 0
 M_M1         NDNEG IN- NDBIAS 0 CMOSN  
 + L=2u  
 + W=884u         
@@ -64,7 +66,7 @@ M_M13         ND1 VBIAS 0 0 CMOSN
 M_M5         NDBIAS VBIAS 0 0 CMOSN  
 + L=.2u  
 + W=.2u         
-V_VQ-         IN- 0 1.00001
+V_VQ-         IN- 0 1
 M_M9         NDOUT ND2 0 0 CMOSN  
 + L=2u  
 + W=2u         
@@ -93,7 +95,7 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_M12, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M12, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
-**** 05/12/10 19:08:27 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 05/12/10 18:10:37 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -253,7 +255,7 @@ WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
 
           JOB CONCLUDED
 
-**** 05/12/10 19:08:27 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 05/12/10 18:10:37 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -265,5 +267,5 @@ WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =         .17
+  Total job time (using Solver 1)   =        2.01
 
