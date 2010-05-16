@@ -1,6 +1,6 @@
-** Profile: "PRUEBA-transient"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-pspicefiles\prueba\transient.sim ] 
+** Profile: "PRUEBA-Analisi Final"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-PSpiceFiles\PRUEBA\Analisi Final.sim ] 
 
-** Creating circuit file "transient.cir" 
+** Creating circuit file "Analisi Final.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
 
 *Libraries: 
@@ -11,10 +11,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 15n 0 10p 
-.OPTIONS NODE
-.OPTIONS ITL1= 300
-.OPTIONS ITL2= 100
+.TRAN  0 20n 0 50p 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\PRUEBA.net" 
 

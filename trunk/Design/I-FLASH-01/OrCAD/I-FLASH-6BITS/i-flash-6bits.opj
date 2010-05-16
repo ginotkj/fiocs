@@ -54,7 +54,11 @@
          ".\i-flash-6bits-pspicefiles\prueba\dc sweep.sim"
         (DisplayName "PRUEBA-dc sweep")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-flash-6bits-pspicefiles\prueba\transient.sim")))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-flash-6bits-pspicefiles\prueba\analisis final.sim"
+        (DisplayName "PRUEBA-Analisis Final")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-flash-6bits-pspicefiles\prueba\analisis final.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (S-COMP
@@ -163,28 +167,16 @@
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
          "PRUEBA")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
-         "FLASH")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
-         "PERTURBACIONES")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
-         "R-DIV")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
-         "S-FLASH-64")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
-         "Design Cache")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
-      (Path "PSpice Resources" "Simulation Profiles"))
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
+         "PRUEBA" "PRUEBA"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 800 614 -8 -30 0 815 0 812"))
+        (Placement "44 0 1 0 953 -8 -30 0 815 0 812"))
       (Tab 0))))
