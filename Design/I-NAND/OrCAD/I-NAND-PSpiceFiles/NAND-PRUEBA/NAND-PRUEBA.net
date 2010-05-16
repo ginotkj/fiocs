@@ -1,0 +1,190 @@
+* source I-NAND
+M_U5_M1         N002598 N00403 U5_ND2 0 CMOSN  
++ L=.18u  
++ W=1.92u         
+M_U5_M14         U5_ND7 N01593 0 0 CMOSN  
++ L=.18u  
++ W=1.92u         
+M_U5_M8         N002598 N01593 N00403 N00403 CMOSP  
++ L=.58u  
++ W=.58u         
+M_U5_M2         U5_ND2 N01593 U5_ND3 0 CMOSN  
++ L=.18u  
++ W=1.92u         
+M_U5_M3         N002598 N01593 N00403 N00403 CMOSP  
++ L=.58u  
++ W=.58u         
+M_U5_M4         N002598 N01593 N00403 N00403 CMOSP  
++ L=.58u  
++ W=.58u         
+M_U5_M11         N002598 N00403 N00403 N00403 CMOSP  
++ L=.58u  
++ W=.58u         
+M_U5_M7         U5_ND4 N01593 U5_ND5 0 CMOSN  
++ L=.18u  
++ W=1.92u         
+M_U5_M9         N002598 N01593 N00403 N00403 CMOSP  
++ L=.58u  
++ W=.58u         
+M_U5_M6         U5_ND3 N01593 U5_ND4 0 CMOSN  
++ L=.18u  
++ W=1.92u         
+M_U5_M12         N002598 N01593 N00403 N00403 CMOSP  
++ L=.58u  
++ W=.58u         
+M_U5_M5         N002598 N01593 N00403 N00403 CMOSP  
++ L=.58u  
++ W=.58u         
+M_U5_M10         U5_ND5 N01593 U5_ND6 0 CMOSN  
++ L=.18u  
++ W=1.92u         
+M_U5_M13         U5_ND6 N01593 U5_ND7 0 CMOSN  
++ L=.18u  
++ W=1.92u         
+M_U7_M5         N005232 N01593 N00403 N00403 CMOSP  
++ L=.25u  
++ W=.93u         
+M_U7_M6         N005232 N01593 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+R_R7         N005232 N00403  1Meg  
+M_U1_M5         N000482 N00403 N00403 N00403 CMOSP  
++ L=.186u  
++ W=.25u         
+M_U1_M6         N000482 N00403 U1_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U1_M2         U1_ND2 N01593 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U1_M4         N000482 N01593 N00403 N00403 CMOSP  
++ L=.186u  
++ W=.25u         
+R_R2         N000894 N00403  1Meg  
+M_U6_M16         N003209 N01593 N00403 N00403 CMOSP  
++ L=.67u  
++ W=.68u         
+M_U6_M5         N003209 N01593 N00403 N00403 CMOSP  
++ L=.67u  
++ W=.68u         
+M_U6_M11         N003209 N00403 N00403 N00403 CMOSP  
++ L=.67u  
++ W=.68u         
+M_U6_M9         N003209 N01593 N00403 N00403 CMOSP  
++ L=.67u  
++ W=.68u         
+M_U6_M1         N003209 N00403 U6_ND2 0 CMOSN  
++ L=.18u  
++ W=2.55u         
+M_U6_M6         U6_ND3 N01593 U6_ND4 0 CMOSN  
++ L=.18u  
++ W=2.55u         
+M_U6_M7         U6_ND4 N01593 U6_ND5 0 CMOSN  
++ L=.18u  
++ W=2.55u         
+M_U6_M12         N003209 N01593 N00403 N00403 CMOSP  
++ L=.67u  
++ W=.68u         
+M_U6_M2         U6_ND2 N01593 U6_ND3 0 CMOSN  
++ L=.18u  
++ W=2.55u         
+M_U6_M13         U6_ND6 N01593 U6_ND7 0 CMOSN  
++ L=.18u  
++ W=2.55u         
+M_U6_M10         U6_ND5 N01593 U6_ND6 0 CMOSN  
++ L=.18u  
++ W=2.55u         
+M_U6_M3         N003209 N01593 N00403 N00403 CMOSP  
++ L=.67u  
++ W=.68u         
+M_U6_M14         U6_ND7 N01593 U6_ND8 0 CMOSN  
++ L=.18u  
++ W=2.55u         
+M_U6_M8         N003209 N01593 N00403 N00403 CMOSP  
++ L=.67u  
++ W=.68u         
+M_U6_M4         N003209 N01593 N00403 N00403 CMOSP  
++ L=.67u  
++ W=.68u         
+M_U6_M15         U6_ND8 N01593 0 0 CMOSN  
++ L=.18u  
++ W=2.55u         
+M_U2_M2         U2_ND2 N01593 U2_ND3 0 CMOSN  
++ L=.18u  
++ W=.37u         
+M_U2_M3         N000894 N00403 N00403 N00403 CMOSP  
++ L=.25u  
++ W=.26u         
+M_U2_M6         U2_ND3 N01593 0 0 CMOSN  
++ L=.18u  
++ W=.37u         
+M_U2_M4         N000894 N01593 N00403 N00403 CMOSP  
++ L=.25u  
++ W=.26u         
+M_U2_M1         N000894 N00403 U2_ND2 0 CMOSN  
++ L=.18u  
++ W=.37u         
+M_U2_M5         N000894 N01593 N00403 N00403 CMOSP  
++ L=.25u  
++ W=.26u         
+R_R3         N001535 N00403  1Meg  
+V_V1         N00403 0 3.3
+R_R4         N002026 N00403  1Meg  
+V_V2         N01593 0 0Vdc
+M_U3_M7         N001535 N00403 N00403 N00403 CMOSP  
++ L=.33u  
++ W=.25u         
+M_U3_M8         N001535 N01593 N00403 N00403 CMOSP  
++ L=.33u  
++ W=.25u         
+M_U3_M12         N001535 N01593 N00403 N00403 CMOSP  
++ L=.33u  
++ W=.25u         
+M_U3_M9         N001535 N01593 N00403 N00403 CMOSP  
++ L=.33u  
++ W=.25u         
+M_U3_M1         N001535 N00403 U3_ND2 0 CMOSN  
++ L=.18u  
++ W=.47u         
+M_U3_M10         U3_ND3 N01593 U3_ND4 0 CMOSN  
++ L=.18u  
++ W=.47u         
+M_U3_M3         U3_ND2 N01593 U3_ND3 0 CMOSN  
++ L=.18u  
++ W=.47u         
+M_U3_M11         U3_ND4 N01593 0 0 CMOSN  
++ L=.18u  
++ W=.47u         
+R_R1         N000482 N00403  1Meg  
+R_R5         N002598 N00403  1Meg  
+M_U4_M4         N002026 N01593 N00403 N00403 CMOSP  
++ L=.41u  
++ W=.44u         
+M_U4_M9         N002026 N01593 N00403 N00403 CMOSP  
++ L=.41u  
++ W=.44u         
+M_U4_M7         U4_ND4 N01593 U4_ND5 0 CMOSN  
++ L=.18u  
++ W=1.042u         
+M_U4_M10         U4_ND5 N01593 0 0 CMOSN  
++ L=.18u  
++ W=1.042u         
+M_U4_M5         N002026 N01593 N00403 N00403 CMOSP  
++ L=.41u  
++ W=.44u         
+M_U4_M8         N002026 N01593 N00403 N00403 CMOSP  
++ L=.41u  
++ W=.44u         
+M_U4_M1         N002026 N00403 U4_ND2 0 CMOSN  
++ L=.18u  
++ W=1.042u         
+M_U4_M6         U4_ND3 N01593 U4_ND4 0 CMOSN  
++ L=.18u  
++ W=1.042u         
+M_U4_M2         U4_ND2 N01593 U4_ND3 0 CMOSN  
++ L=.18u  
++ W=1.042u         
+M_U4_M3         N002026 N00403 N00403 N00403 CMOSP  
++ L=.41u  
++ W=.44u         
+R_R6         N003209 N00403  1Meg  
