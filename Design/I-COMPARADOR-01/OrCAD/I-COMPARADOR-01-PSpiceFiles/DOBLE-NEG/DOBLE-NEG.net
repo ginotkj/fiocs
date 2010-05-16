@@ -1,8 +1,8 @@
 * source I-COMPARADOR-01
-M_M1         NDNEG IN- NDBIAS 0 CMOSN  
+M_M1         NDNEG VINNEG NDBIAS 0 CMOSN  
 + L=20u  
 + W=89u         
-M_M2         NDPOS IN+ NDBIAS 0 CMOSN  
+M_M2         NDPOS VINPOS NDBIAS 0 CMOSN  
 + L=20u  
 + W=89u         
 V_VDD         N64870 0 3.3
@@ -13,7 +13,7 @@ V_VBIAS         VBIAS 0 .52
 M_M12         N73445 NDPOS N64870 N64870 CMOSP  
 + L=15u  
 + W=1097u         
-V_VREF         IN+ 0 1
+V_VREF         VINPOS 0 1
 M_M4         NDPOS NDNEG N64870 N64870 CMOSP  
 + L=25u  
 + W=37u         
@@ -23,4 +23,4 @@ M_M13         N73445 VBIAS 0 0 CMOSN
 M_M5         NDBIAS VBIAS 0 0 CMOSN  
 + L=20u  
 + W=20u         
-V_VIN         IN- 0 1
+V_VIN         VINNEG 0 1
