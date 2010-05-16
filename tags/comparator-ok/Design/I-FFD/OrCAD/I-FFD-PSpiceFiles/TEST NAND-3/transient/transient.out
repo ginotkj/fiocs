@@ -1,0 +1,235 @@
+
+**** 11/05/09 21:38:00 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "TEST NAND-3-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\TEST NAND-3\transient.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-ffd-pspicefiles/i-ffd.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 50u 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\TEST NAND-3.net" 
+
+
+
+**** INCLUDING "TEST NAND-3.net" ****
+* source I-FFD
+V_IN2         N27481 0  
++PULSE 0 3 10u 1.5u 1.5u 2u 15u
+M_M1         OUT N27521 N27469 N27469 CMOSN  
++ L=.2u  
++ W=.2u         
+M_M5         OUT N27297 N27449 N27449 CMOSP  
++ L=.2u  
++ W=.4u         
+M_M2         N27469 N27481 N27495 N27495 CMOSN  
++ L=.2u  
++ W=.2u         
+V_VDD         N27449 0 3.3
+V_IN3         N27297 0  
++PULSE 3 0 20u 1.5u 1.5u 2u 25u
+M_M3         OUT N27521 N27449 N27449 CMOSP  
++ L=.2u  
++ W=.4u         
+M_M6         N27495 N27297 0 0 CMOSN  
++ L=.2u  
++ W=.2u         
+M_M4         OUT N27481 N27449 N27449 CMOSP  
++ L=.2u  
++ W=.4u         
+V_IN1         N27521 0  
++PULSE 0 3 5u 1.5u 1.5u 2u 10u
+
+**** RESUMING transient.cir ****
+.END
+
+WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
+**** 11/05/09 21:38:00 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "TEST NAND-3-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\TEST NAND-3\transient.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               CMOSN           CMOSP           
+               NMOS            PMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               7            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .299302        -.401632     
+          KP  470.883200E-06  470.883200E-06 
+       GAMMA    0               0            
+      LAMBDA    0               0            
+         RSH    6               6.4          
+          IS    1.000000E-15    1.000000E-15 
+          JS  100.000000E-06  100.000000E-06 
+          PB     .980128         .821464     
+        PBSW     .8              .8008       
+          CJ  815.376400E-06    1.165977E-03 
+        CJSW  166.520200E-12  122.005600E-12 
+          MJ     .606194         .425655     
+        MJSW     .169221         .1001       
+        CGSO  500.000000E-12  500.000000E-12 
+        CGDO  500.000000E-12  500.000000E-12 
+        CGBO    1.000000E-12    1.000000E-12 
+         TOX    4.400000E-09    4.400000E-09 
+          XJ  100.000000E-09  100.000000E-09 
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .01             .01         
+      DIOMOD    2               2            
+          K1     .542117         .598774     
+          K2    -.035133     -630.087300E-09 
+        LETA    0               0            
+        WETA    0               0            
+          U0  268.8192        120.6045       
+       XPART     .5              .5          
+        VTH0     .299302        -.401632     
+          K3    1.000000E-03     .081248     
+          W0  100.000000E-09    1.000000E-06 
+         NLX  228.107500E-09   42.193340E-09 
+        DVT0     .882304         .948505     
+        DVT1     .324768         .682461     
+          UA   -1.551592E-09    1.640708E-09 
+          UB    2.710709E-18    1.272651E-21 
+          UC   46.128640E-12 -100.000000E-12 
+        VSAT  116.006100E+03  182.237700E+03 
+        RDSW  150             726.9944       
+        VOFF    -.091862        -.15         
+     NFACTOR    1.807002         .921842     
+        PCLM    2.027608         .151904     
+      PDIBL1     .784214         .056431     
+      PDIBL2    -.042689         .012341     
+       DROUT    1                .470272     
+      PSCBE1    2.314588E+09    4.022317E+09 
+      PSCBE2  500.000000E-12    7.751373E-09 
+          A0    1.525088         .904176     
+          A1    6.962179E-03    8.069322E-03 
+          A2     .524367         .560796     
+       NPEAK  235.490000E+15  415.890000E+15 
+         LDD    0               0            
+        LITL   36.331810E-09   36.331810E-09 
+         UC1  -56.000000E-12  -56.000000E-12 
+        PVAG                     .124556     
+        KETA    -.015366         .020751     
+        ETA0    5.535422E-03    1.016564E-03 
+        ETAB -671.692500E-06   -1.910199E-03 
+         K3B    5.015682       19.7189       
+        DVT2    -.056267        -.3          
+        DSUB    3.692569E-03     .014544     
+         AGS     .400988         .131884     
+       DVT1W    0               0            
+       DVT2W    0               0            
+        PRWG     .340675        -.049475     
+        PRWB    -.183865        -.420982     
+     PDIBLCB    -.1            -1.000000E-03 
+         DWG    5.852475E-09  -30.588980E-09 
+         DWB   11.572970E-09  -11.142310E-09 
+          B0  -44.157810E-09    1.909663E-06 
+          B1                    5.000000E-06 
+        LINT   20.701890E-09   26.472300E-09 
+        WINT   12.149120E-09                 
+         DLC   20.701890E-09   26.472300E-09 
+         DWC   12.149120E-09    0            
+          CF    0               0            
+        NOIA  100.000000E+18    9.900001E+18 
+        NOIB   50.000000E+03    2.400000E+03 
+        NOIC   -1.400000E-12    1.400000E-12 
+       LKETA   -1.853360E-03   -8.835292E-03 
+       WKETA    3.404068E-03     .030613     
+       PVSAT    1.045662E+03   50            
+       PKETA    -.0116         -5.087778E-03 
+       PVTH0   -3.570294E-03  633.898700E-06 
+         PUA  -25.147800E-12  364.727200E-12 
+         PUB   21.902820E-24                 
+         PU0   -2.447231        7.159787     
+       PRDSW   -1.670209       -5            
+       PETA0 -100.000000E-06  100.000000E-06 
+         PK2    3.193075E-03   31.405140E-06 
+         VTM     .025864         .025864     
+       PBSWG     .8              .8008       
+       MJSWG     .169221         .1001       
+       CJSWG  330.000000E-12  422.000000E-12 
+
+
+WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
+**** 11/05/09 21:38:00 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "TEST NAND-3-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\TEST NAND-3\transient.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)    3.3000  (N27297)    3.0000 (N27449)    3.3000 (N27469)     .0628     
+
+(N27481)    0.0000 (N27495) 60.13E-09 (N27521)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_IN2        0.000E+00
+    V_VDD       -1.968E-11
+    V_IN3        0.000E+00
+    V_IN1        0.000E+00
+
+    TOTAL POWER DISSIPATION   6.50E-11  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/05/09 21:38:00 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "TEST NAND-3-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\TEST NAND-3\transient.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .13
+

@@ -1,0 +1,19 @@
+** Profile: "TEST NAND-2-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\TEST NAND-2\transient.sim ] 
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-ffd-pspicefiles/i-ffd.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 40u 0 .01u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\TEST NAND-2.net" 
+
+
+.END

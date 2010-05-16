@@ -1,0 +1,144 @@
+(ExpressProject "I-FFD-01"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "C:\Program Files\OrCAD 16\tools\capture\library\pspice\analog.olb"
+        (DisplayName
+           "C:\Program Files\OrCAD 16\tools\capture\library\pspice\analog.olb")
+        (Type "Schematic Library"))
+      (File "C:\Program Files\OrCAD 16\tools\capture\library\pspice\source.olb"
+        (DisplayName
+           "C:\Program Files\OrCAD 16\tools\capture\library\pspice\source.olb")
+        (Type "Schematic Library"))
+      (File
+         "C:\Program Files\OrCAD 16\tools\capture\library\pspice\sourcstm.olb"
+        (DisplayName
+           "C:\Program Files\OrCAD 16\tools\capture\library\pspice\sourcstm.olb")
+        (Type "Schematic Library"))
+      (File
+         "C:\Program Files\OrCAD 16\tools\capture\library\pspice\special.olb"
+        (DisplayName
+           "C:\Program Files\OrCAD 16\tools\capture\library\pspice\special.olb")
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "i-ffd-01.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "TRUE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}")
+    (RootChangedForceReNetlist "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\i-ffd-01-pspicefiles\prueba\prueba.net"
+      (Type "Report"))
+    (File ".\i-ffd-01-pspicefiles\ffd\ffd.net"
+      (Type "Report"))
+    (File ".\i-ffd-01-pspicefiles\compuertas\compuertas.net"
+      (Type "Report"))
+    (File ".\i-ffd-01-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (File ".\i-ffd-01-pspicefiles\s-nand-3\s-nand-3.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Model Libraries")
+    (Folder "Stimulus Files")
+    (Folder "Include Files")
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-01-pspicefiles\s-nand-3\bias.sim"
+        (DisplayName "S-NAND-3-bias")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-01-pspicefiles\s-nand-3\bias1.sim"
+        (DisplayName "S-NAND-3-bias1")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-01-pspicefiles\ffd\transitorio.sim"
+        (DisplayName "FFD-transitorio")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-01-pspicefiles\ffd\bias.sim"
+        (DisplayName "FFD-bias")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-01-pspicefiles\s-nand-3\bias s-nand-3.sim"
+        (DisplayName "S-NAND-3-bias S-NAND-3")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-ffd-01-pspicefiles\ffd\bias.sim")))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (PORTRIGHT-R
+      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-L
+      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (DigClock
+      (FullPartName "DigClock.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (MbreakP
+      (FullPartName "MbreakP.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (MbreakN
+      (FullPartName "MbreakN.Normal")
+      (LibraryName
+         "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSTIM
+      (FullPartName "VSTIM.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice")
+  (MPSSessionName "FABRICIO")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd-01.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd-01.dsn" "Design Cache")
+      (Path "Outputs")
+      (Select "Design Resources" "Library"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 692 0 994"))
+      (Tab 0))))

@@ -1,0 +1,266 @@
+
+**** 11/25/09 20:46:28 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-SUMADOR\i-sumador-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OP
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source I-SUMADOR
+R_R4         N12085 N11979  1k  
+R_R5         N12085 N11992  1k  
+X_U1A         0 N12085 N11946 0 N12284 LM158
+V_V1         N11946 0 2
+R_R1         N11979 N11946  10k  
+R_R2         N11992 N11979  10k  
+R_R7         N12284 N12085  1k  
+R_R3         0 N11992  10k  
+
+**** RESUMING bias.cir ****
+.END
+
+**** 11/25/09 20:46:28 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-SUMADOR\i-sumador-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_lm158.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U1A.x_lm158.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 11/25/09 20:46:28 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-SUMADOR\i-sumador-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_lm158.qx 
+               PNP             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 11/25/09 20:46:28 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-SUMADOR\i-sumador-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N11946)    2.0000 (N11979)     .1800 (N11992)     .0261 (N12085)     .0133     
+
+(N12284)    -.1661 (X_U1A.x_lm158.6)     .2497                                  
+
+(X_U1A.x_lm158.7)   -2.1926           (X_U1A.x_lm158.8)   -2.1926               
+
+(X_U1A.x_lm158.9)    0.0000           (X_U1A.x_lm158.10)     .6142              
+
+(X_U1A.x_lm158.11)     .0332          (X_U1A.x_lm158.12)     .0465              
+
+(X_U1A.x_lm158.13)     .6025          (X_U1A.x_lm158.14)     .5979              
+
+(X_U1A.x_lm158.53)     .5000          (X_U1A.x_lm158.54)     .6500              
+
+(X_U1A.x_lm158.90)  -40.5300          (X_U1A.x_lm158.91)   40.0000              
+
+(X_U1A.x_lm158.92)  -40.0000          (X_U1A.x_lm158.99)    1.0000          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.173E-04
+    X_U1A.x_lm158.vb   2.497E-06
+    X_U1A.x_lm158.vc   6.669E-13
+    X_U1A.x_lm158.ve  -4.035E-02
+    X_U1A.x_lm158.vlim  -4.053E-02
+    X_U1A.x_lm158.vlp  -8.053E-11
+    X_U1A.x_lm158.vln   6.232E-07
+
+    TOTAL POWER DISSIPATION   2.70E-02  WATTS
+
+
+**** 11/25/09 20:46:28 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-SUMADOR\i-sumador-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1A.x_lm158.ga        X_U1A.x_lm158.gcm     
+I-SOURCE    -2.501E-06              -4.090E-09            
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1A.x_lm158.egnd    
+V-SOURCE     1.000E+00            
+I-SOURCE     4.053E-02            
+
+
+**** CURRENT-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1A.x_lm158.fb      
+I-SOURCE     1.682E-01            
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1A.x_lm158.hlim    
+V-SOURCE    -4.053E+01            
+I-SOURCE     6.233E-07            
+
+
+**** DIODES
+
+
+NAME         X_U1A.x_lm158.dc        X_U1A.x_lm158.de      
+MODEL        X_U1A.x_lm158.dy        X_U1A.x_lm158.dy      
+ID          -6.67E-13                4.04E-02             
+VD          -6.66E-01                8.16E-01             
+REQ          1.00E+12                6.41E-01             
+CAP          7.75E-12                1.86E-11             
+
+NAME         X_U1A.x_lm158.dlp       X_U1A.x_lm158.dln     
+MODEL        X_U1A.x_lm158.dx        X_U1A.x_lm158.dx      
+ID          -8.05E-11                6.23E-07             
+VD          -8.05E+01                5.30E-01             
+REQ          1.00E+12                4.15E+04             
+CAP          0.00E+00                0.00E+00             
+
+NAME         X_U1A.x_lm158.dp      
+MODEL        X_U1A.x_lm158.dx      
+ID          -2.00E-12             
+VD          -2.00E+00             
+REQ          1.00E+12             
+CAP          0.00E+00             
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         X_U1A.x_lm158.q1        X_U1A.x_lm158.q2      
+MODEL        X_U1A.x_lm158.qx        X_U1A.x_lm158.qx      
+IB          -3.76E-08               -5.26E-08             
+IC          -6.26E-06               -8.77E-06             
+VBE         -5.89E-01               -5.98E-01             
+VBC         -1.99E-02               -4.65E-02             
+VCE         -5.69E-01               -5.51E-01             
+BETADC       1.67E+02                1.67E+02             
+GM           2.42E-04                3.39E-04             
+RPI          6.88E+05                4.92E+05             
+RX           0.00E+00                0.00E+00             
+RO           9.37E+11                8.43E+11             
+CBE          0.00E+00                0.00E+00             
+CBC          0.00E+00                0.00E+00             
+CJS          0.00E+00                0.00E+00             
+BETAAC       1.67E+02                1.67E+02             
+CBX/CBX2     0.00E+00                0.00E+00             
+FT/FT2       3.85E+15                5.39E+15             
+
+
+
+          JOB CONCLUDED
+
+**** 11/25/09 20:46:28 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-SUMADOR\i-sumador-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

@@ -1,0 +1,23 @@
+* source I-FFD
+V_V3         N09649 0 5
+M_NAND_M2         NAND_N05674 N09649 NAND_N05700 NAND_N05700 CMOSN  
++ L=.18u  
++ W=.6u         
+M_NAND_M3         N09729 N09649 N09649 N09649 CMOSP  
++ L=.18u  
++ W=1.2u         
+M_NAND_M5         N09729 N09600 N09649 N09649 CMOSP  
++ L=.18u  
++ W=1.2u         
+M_NAND_M4         N09729 N09649 N09649 N09649 CMOSP  
++ L=.18u  
++ W=1.2u         
+M_NAND_M6         NAND_N05700 N09600 0 0 CMOSN  
++ L=.18u  
++ W=.6u         
+M_NAND_M1         N09729 N09649 NAND_N05674 NAND_N05674 CMOSN  
++ L=.18u  
++ W=.6u         
+R_R1         N09729 0  100k  
+V_V2         N09600 0  
++PULSE 0 5 9m 1m 1m 9m 20m

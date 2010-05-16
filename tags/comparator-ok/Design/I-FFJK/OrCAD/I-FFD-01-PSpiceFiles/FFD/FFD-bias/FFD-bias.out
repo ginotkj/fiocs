@@ -1,0 +1,210 @@
+
+**** 10/08/09 20:29:56 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "FFD-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd-01-pspicefiles\ffd\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\FFD.net" 
+
+
+
+**** INCLUDING FFD.net ****
+* source I-FFD-01
+V_V4         N05159 0  
++PULSE 0 5 9m 1m 1m 9m 20m
+M_FFD_NOR_M4         N00157 FFD_N00859 FFD_NOR_N00319 N00676 MbreakP           
+M_FFD_NOR_M1         N00157 FFD_N00859 0 0 MbreakN           
+M_FFD_NOR_M2         N00157 FFD_N00807 0 0 MbreakN           
+M_FFD_NOR_M3         FFD_NOR_N00319 FFD_N00807 N00676 N00676 MbreakP           
+M_FFD_NAND_M1         FFD_N00565 N00676 FFD_NAND_N45225 FFD_NAND_N45225 MbreakN
++            
+M_FFD_NAND_M2         FFD_NAND_N45225 N05159 FFD_NAND_N45964 FFD_NAND_N45964
++  MbreakN           
+M_FFD_NAND_M3         FFD_N00565 N00676 N00676 N00676 MbreakP           
+M_FFD_NAND_M5         FFD_NAND_N45964 N00163 0 0 MbreakN           
+M_FFD_NAND_M4         FFD_N00565 N05159 N00676 N00676 MbreakP           
+M_FFD_NAND_M6         FFD_N00565 N00163 N00676 N00676 MbreakP           
+M_FFD_NAND1_M1         FFD_N00591 N00157 FFD_NAND1_N45225 FFD_NAND1_N45225
++  MbreakN           
+M_FFD_NAND1_M2         FFD_NAND1_N45225 N05159 FFD_NAND1_N45964
++  FFD_NAND1_N45964 MbreakN           
+M_FFD_NAND1_M3         FFD_N00591 N00157 N00676 N00676 MbreakP           
+M_FFD_NAND1_M5         FFD_NAND1_N45964 0 0 0 MbreakN           
+M_FFD_NAND1_M4         FFD_N00591 N05159 N00676 N00676 MbreakP           
+M_FFD_NAND1_M6         FFD_N00591 0 N00676 N00676 MbreakP           
+M_FFD_AND1_M6         FFD_N00859 FFD_AND1_N47705 N00676 N00676 MbreakP         
++   
+M_FFD_AND1_M1         FFD_AND1_N47705 N00163 FFD_AND1_N47695 FFD_AND1_N47695
++  MbreakN           
+M_FFD_AND1_M2         FFD_AND1_N47695 FFD_N00565 0 0 MbreakN           
+M_FFD_AND1_M5         FFD_N00859 FFD_AND1_N47705 0 0 MbreakN           
+M_FFD_AND1_M3         FFD_AND1_N47705 N00163 N00676 N00676 MbreakP           
+M_FFD_AND1_M4         FFD_AND1_N47705 FFD_N00565 N00676 N00676 MbreakP         
++   
+M_FFD_AND_M6         FFD_N00807 FFD_AND_N47705 N00676 N00676 MbreakP           
+M_FFD_AND_M1         FFD_AND_N47705 N05159 FFD_AND_N47695 FFD_AND_N47695
++  MbreakN           
+M_FFD_AND_M2         FFD_AND_N47695 N00163 0 0 MbreakN           
+M_FFD_AND_M5         FFD_N00807 FFD_AND_N47705 0 0 MbreakN           
+M_FFD_AND_M3         FFD_AND_N47705 N05159 N00676 N00676 MbreakP           
+M_FFD_AND_M4         FFD_AND_N47705 N00163 N00676 N00676 MbreakP           
+M_FFD_AND2_M6         FFD_N00657 FFD_AND2_N47705 N00676 N00676 MbreakP         
++   
+M_FFD_AND2_M1         FFD_AND2_N47705 FFD_N00591 FFD_AND2_N47695
++  FFD_AND2_N47695 MbreakN           
+M_FFD_AND2_M2         FFD_AND2_N47695 N00157 0 0 MbreakN           
+M_FFD_AND2_M5         FFD_N00657 FFD_AND2_N47705 0 0 MbreakN           
+M_FFD_AND2_M3         FFD_AND2_N47705 FFD_N00591 N00676 N00676 MbreakP         
++   
+M_FFD_AND2_M4         FFD_AND2_N47705 N00157 N00676 N00676 MbreakP           
+M_FFD_AND3_M6         FFD_N00711 FFD_AND3_N47705 N00676 N00676 MbreakP         
++   
+M_FFD_AND3_M1         FFD_AND3_N47705 N00157 FFD_AND3_N47695 FFD_AND3_N47695
++  MbreakN           
+M_FFD_AND3_M2         FFD_AND3_N47695 N05159 0 0 MbreakN           
+M_FFD_AND3_M5         FFD_N00711 FFD_AND3_N47705 0 0 MbreakN           
+M_FFD_AND3_M3         FFD_AND3_N47705 N00157 N00676 N00676 MbreakP           
+M_FFD_AND3_M4         FFD_AND3_N47705 N05159 N00676 N00676 MbreakP           
+M_FFD_NOR1_M4         N00163 FFD_N00711 FFD_NOR1_N00319 N00676 MbreakP         
++   
+M_FFD_NOR1_M1         N00163 FFD_N00711 0 0 MbreakN           
+M_FFD_NOR1_M2         N00163 FFD_N00657 0 0 MbreakN           
+M_FFD_NOR1_M3         FFD_NOR1_N00319 FFD_N00657 N00676 N00676 MbreakP         
++   
+R_R1         N00157 0  100k  
+R_R2         N00163 0  100k  
+V_V3         N00676 0 5
+
+**** RESUMING bias.cir ****
+.END
+
+**** 10/08/09 20:29:56 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "FFD-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd-01-pspicefiles\ffd\bias.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MbreakP         MbreakN         
+               PMOS            NMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    0               0            
+          KP   20.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    0               0            
+       XPART    0               0            
+
+
+**** 10/08/09 20:29:56 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "FFD-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd-01-pspicefiles\ffd\bias.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00157)    4.0990 (N00163) 1.256E-06 (N00676)    5.0000 (N05159)    0.0000     
+
+(FFD_N00565)    5.0000                (FFD_N00591)    5.0000                    
+
+(FFD_N00657)    4.9965                (FFD_N00711) 50.10E-09                    
+
+(FFD_N00807) 50.10E-09                (FFD_N00859) 50.10E-09                    
+
+(FFD_AND_N47695)    2.5000            (FFD_AND_N47705)    5.0000                
+
+(FFD_NOR_N00319)    4.5718            (FFD_AND1_N47695) 50.10E-09               
+
+(FFD_AND1_N47705)    5.0000           (FFD_AND2_N47695)     .1002               
+
+(FFD_AND2_N47705)     .1838           (FFD_AND3_N47695)    4.0985               
+
+(FFD_AND3_N47705)    5.0000           (FFD_NAND_N45225)    4.9995               
+
+(FFD_NAND_N45964)    2.4997           (FFD_NOR1_N00319)     .0036               
+
+(FFD_NAND1_N45225)    4.0987          (FFD_NAND1_N45964)    2.0493          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4         0.000E+00
+    V_V3        -4.945E-05
+
+    TOTAL POWER DISSIPATION   2.47E-04  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/08/09 20:29:56 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "FFD-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\i-ffd-01-pspicefiles\ffd\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .08
+

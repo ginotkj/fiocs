@@ -1,0 +1,6 @@
+* source I-FFD-01
+V_VDD         VDD 0 5
+M_M1         N41218 VDD N41234 0 MbreakN           
+M_M2         N41218 VDD VDD VDD MbreakP           
+M_M3         N41218 0 VDD VDD MbreakP           
+M_M4         N41234 0 0 0 MbreakN           

@@ -1,0 +1,19 @@
+** Profile: "FFD-transitorio"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\ffd\transitorio.sim ] 
+
+** Creating circuit file "transitorio.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-ffd-pspicefiles/i-ffd.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100n 0 .1n 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\FFD.net" 
+
+
+.END

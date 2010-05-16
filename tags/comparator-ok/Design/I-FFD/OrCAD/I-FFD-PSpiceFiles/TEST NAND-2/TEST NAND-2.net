@@ -1,0 +1,18 @@
+* source I-FFD
+V_VDD         N28045 0 3.3
+M_M3         OUT N28105 N28045 N28045 CMOSP  
++ L=.2u  
++ W=.4u         
+M_M4         OUT N28077 N28045 N28045 CMOSP  
++ L=.2u  
++ W=.4u         
+V_IN2         N28105 0  
++PULSE 0 3 5u 1.5u 1.5u 3u 10u
+V_IN1         N28077 0  
++PULSE 0 3 15u 1.5u 1.5u 3u 20u
+M_M1         OUT N28105 N28065 N28065 CMOSN  
++ L=.2u  
++ W=.2u         
+M_M2         N28065 N28077 0 0 CMOSN  
++ L=.2u  
++ W=.2u         

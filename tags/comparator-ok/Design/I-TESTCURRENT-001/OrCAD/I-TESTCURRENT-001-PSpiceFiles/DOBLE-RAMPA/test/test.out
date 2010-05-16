@@ -1,0 +1,87 @@
+
+**** 04/19/10 11:30:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "DOBLE-RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\doble-rampa\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-testcurrent-001-pspicefiles/i-testcurrent-001.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5n 1.5n 0.001u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\DOBLE-RAMPA.net" 
+
+
+
+**** INCLUDING DOBLE-RAMPA.net ****
+* source I-TESTCURRENT-001
+I_I2         N20046 0 DC 0Adc AC 0Aac
++PULSE 0 4m 2n 30p 150p 0p 10n
+I_I3         N20046 0 DC 0Adc AC 0Aac
++PULSE 0 2m 2n 60p 2n 50p 10n
+R_R2         0 ITEST  1k TC=0,0 
+R_R1         N20046 ITEST  1k TC=0,0 
+
+**** RESUMING test.cir ****
+.END
+
+**** 04/19/10 11:30:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "DOBLE-RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\doble-rampa\
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(ITEST)    0.0000  (N20046)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/19/10 11:30:21 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "DOBLE-RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\doble-rampa\
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

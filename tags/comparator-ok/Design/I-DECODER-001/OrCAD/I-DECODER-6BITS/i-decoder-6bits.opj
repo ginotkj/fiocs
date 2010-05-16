@@ -1,0 +1,183 @@
+(ExpressProject "i-decoder-6bits"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\analog.olb"
+        (Type "Schematic Library"))
+      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\source.olb"
+        (Type "Schematic Library"))
+      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\special.olb"
+        (Type "Schematic Library"))
+      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\breakout.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\i-decoder-6bits.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "TRUE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}")
+    (RootChangedForceReNetlist "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\i-decoder-6bits.olb"
+      (Type "Schematic Library"))
+    (File ".\i-decoder-6bits-pspicefiles\test\test.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Stimulus Files")
+    (Folder "Include Files")
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-decoder-6bits-pspicefiles\s-decoder\bias.sim"
+        (DisplayName "S-DECODER-bias")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-decoder-6bits-pspicefiles\test\bias.sim"
+        (DisplayName "TEST-bias")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-decoder-6bits-pspicefiles\test\transient.sim"
+        (DisplayName "TEST-transient")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-decoder-6bits-pspicefiles\test\transient.sim"))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\i-decoder-6bits-pspicefiles\i-decoder-6bits.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\i-decoder-6bits-pspicefiles\i-decoder-6bits.lib"))
+      (File "C:\OrCAD\OrCAD_16.0\tools\capture\library\pspice\BREAKOUT.OLB"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           "C:\OrCAD\OrCAD_16.0\tools\capture\library\pspice\BREAKOUT.OLB"))))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (MbreakN
+      (FullPartName "MbreakN.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (MbreakP
+      (FullPartName "MbreakP.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (S-DECODER
+      (FullPartName "S-DECODER.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-DECODER-001\ORCAD\I-DECODER-6BITS\I-DECODER-6BITS.OLB")
+      (DeviceIndex "0"))
+    (NAND-4
+      (FullPartName "NAND-4.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NEG
+      (FullPartName "NEG.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-8
+      (FullPartName "NAND-8.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-2
+      (FullPartName "NAND-2.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (DECODIFICADOR
+      (FullPartName "DECODIFICADOR.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\COMPONENTES ORCAD\COMPUERTAS.OLB")
+      (DeviceIndex "0"))
+    (N-DECODER-64
+      (FullPartName "N-DECODER-64.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\COMPONENTES ORCAD\COMPUERTAS.OLB")
+      (DeviceIndex "0"))
+    (S-DECODER-64
+      (FullPartName "S-DECODER-64.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\COMPONENTES ORCAD\COMPUERTAS.OLB")
+      (DeviceIndex "0"))
+    (S2-DECODER-64
+      (FullPartName "S2-DECODER-64.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\COMPONENTES ORCAD\COMPUERTAS.OLB")
+      (DeviceIndex "0"))
+    (VCC_CIRCLE
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (7-NAND-1
+      (FullPartName "7-NAND-1.Normal")
+      (LibraryName
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\COMPONENTES ORCAD\COMPUERTAS.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-L
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSTIM
+      (FullPartName "VSTIM.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "D:\Documents\TESIS\fiocs\Design\COMPONENTES OrCAD")
+  (MPSSessionName "FABRICIO")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
+         "TEST")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
+         "S-DECODER")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
+         "SENALES")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
+         "Design Cache")
+      (Path "Design Resources" "Library")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
+         "S-DECODER"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 3 3 160 601 -8 -30 -2 530 -2 658"))
+      (Tab 0))))

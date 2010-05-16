@@ -1,0 +1,19 @@
+** Profile: "SCHEMATIC2-transient"  [ D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-COMPARADOR-01\I-COMPARADOR-01-PSpiceFiles\SCHEMATIC2\transient.sim ] 
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-comparador-01-pspicefiles/i-comparador-01.lib" 
+* From [PSPICE NETLIST] section of C:\Program Files\OrCAD 16\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100u 0 1u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+.END

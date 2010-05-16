@@ -1,0 +1,81 @@
+
+**** 08/06/09 18:46:14 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-OPAMPB-01\i-opampb-01-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-opampb-01-pspicefiles/i-opampb-01.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.2\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source I-OPAMPB-01
+V_V1         N16153 0 5
+M_M12         N14949 N15060 0 0 NMOS  
++ L=9.6u  
++ W=24.8u         
+M_M4         N35384 0 N48394 N16153 PMOS  
++ L=4.8u  
++ W=420u         
+V_V3         0 VIN-  
++SIN -5 0 10 0 0 0
+M_M5         N15242 N15242 N16153 N16153 PMOS  
++ L=9.6u  
++ W=77.6u         
+M_M6         N15060 N15060 N15242 N16153 PMOS  
++ L=9.6u  
++ W=101.6u         
+M_M7         N15060 N15060 0 0 NMOS  
++ L=9.6u  
++ W=24.8u         
+M_M8         N35384 N15242 N14804 0 NMOS  
++ L=1.6u  
++ W=91.2u         
+M_M3         N48394 N15828 N16153 N16153 PMOS  
++ L=4.8u  
++ W=420u         
+V_V2         VIN+ 0  
++SIN 5 0 10 0 0 0
+M_M9         N14804 VIN+ N14949 0 NMOS  
++ L=1.6u  
++ W=91.2u         
+M_M10         N45844 N15242 N52017 0 NMOS  
++ L=1.6u  
++ W=91.2u         
+M_M1         N14786 N15932 N16153 N16153 PMOS  
++ L=4.8u  
++ W=420u         
+M_M11         N52017 VIN- N14949 0 NMOS  
++ L=1.6u  
++ W=91.2u         
+M_M2         N45844 0 N14786 N16153 PMOS  
++ L=4.8u  
++ W=420u         
+
+**** RESUMING bias.cir ****
+.END
+
+ERROR -- Less than 2 connections at node N15828
+ERROR -- Less than 2 connections at node N15932
+ERROR -- Node N15828 is floating
+ERROR -- Node N15932 is floating

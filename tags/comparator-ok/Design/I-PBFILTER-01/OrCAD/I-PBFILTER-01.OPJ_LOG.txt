@@ -1,0 +1,1082 @@
+***** START ******
+Thu Aug 06 11:56:18 2009
+SchematicFrame_Create
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\I-PBFILTER-01.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\I-PBFILTER-01.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\I-PBFILTER-01.DSN|SCHEMATIC1|PAGE1
+. Type: WIRE_SCALAR. It is an Alias. Name: Vout
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\I-PBFILTER-01.DSN|SCHEMATIC1|PAGE1
+. Type: WIRE_SCALAR. It is an Alias. Name: Vin
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\I-PBFILTER-01.DSN|SCHEMATIC1|PAGE1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicFrame_OnClose
+PMFrame_Close
+ DM FileSave 
+ Design Name: D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-PBFILTER-01\I-PBFILTER-01.DSN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DMDoc_CloseDocument
+DMDoc_CloseDocument
+DMDoc_CloseDocument
+DMDoc_CloseDocument
+DMDoc_CloseDocument
+DMDoc_CloseDocument
+PMFrame_Create
+SchematicFrame_Create
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 61. I14112
+Object Type: 20. 
+Object Type: 37. GND_0
+Object Type: 37. 0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: PLACED_INSTANCE. Name: INS14288. Source Part Name: MbreakN.Normal. Library Name: C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: PLACED_INSTANCE. Name: INS14309. Source Part Name: MbreakN.Normal. Library Name: C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: PLACED_INSTANCE. Name: INS14343. Source Part Name: MbreakP.Normal. Library Name: C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14288
+Object Type: 13. INS14309
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14343
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: Part Reference. Value: M4
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MIRROR
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14381
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MIRROR
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14381
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MIRROR
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14381
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MIRROR
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14381
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MIRROR
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14343
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: PLACED_INSTANCE. Name: INS14558. Source Part Name: MbreakN.Normal. Library Name: C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: PLACED_INSTANCE. Name: INS14579. Source Part Name: MbreakN.Normal. Library Name: C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: PLACED_INSTANCE. Name: INS14600. Source Part Name: MbreakN.Normal. Library Name: C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: PLACED_INSTANCE. Name: INS14621. Source Part Name: MbreakN.Normal. Library Name: C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MIRROR
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14621
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 20. 
+Object Type: 37. GND_0
+Object Type: 13. INS14343
+Object Type: 13. INS14381
+Object Type: 13. INS14419
+Object Type: 13. INS14454
+Object Type: 13. INS14489
+Object Type: 13. INS14524
+Object Type: 13. INS14558
+Object Type: 13. INS14579
+Object Type: 13. INS14600
+Object Type: 13. INS14621
+Object Type: 13. INS14658
+Object Type: 13. INS14693
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 37. GND_0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ROTATE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 37. GND_0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ROTATE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 37. GND_0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ROTATE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 37. GND_0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ROTATE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 37. GND_0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 1.20 Pos End: 4.00, 1.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.70, 1.80 Pos End: 5.70, 1.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 2.20 Pos End: 4.00, 2.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 3.20 Pos End: 4.00, 4.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.50, 3.30 Pos End: 5.60, 3.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.50, 3.30 Pos End: 5.60, 3.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14621
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.70, 2.20 Pos End: 5.70, 2.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.70, 3.20 Pos End: 5.70, 3.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.70, 3.20 Pos End: 5.70, 3.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal Yes.  .IsBus No.  Pos Begin: 4.80, 3.30 Pos End: 4.10, 3.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal Yes.  .IsBus No.  Pos Begin: 4.10, 4.60 Pos End: 4.80, 4.60
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal Yes.  .IsBus No.  Pos Begin: 4.80, 4.60 Pos End: 5.50, 4.60
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 4.50 Pos End: 4.00, 4.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 4.90 Pos End: 4.80, 4.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 4.90 Pos End: 4.80, 4.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.60, 4.50 Pos End: 5.60, 4.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.60, 4.50 Pos End: 5.60, 4.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.90, 1.20 Pos End: 2.00, 1.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.90, 1.20 Pos End: 2.00, 1.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.90, 2.60 Pos End: 1.90, 3.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14489
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14558
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14524
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14489
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.90, 2.30 Pos End: 1.90, 1.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.60, 1.00 Pos End: 1.40, 1.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.40, 1.00 Pos End: 1.40, 1.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.40, 1.00 Pos End: 1.40, 1.40
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.60, 2.50 Pos End: 1.40, 2.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.40, 2.50 Pos End: 1.40, 4.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 1.40, 2.50 Pos End: 1.40, 4.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14343
+Object Type: 13. INS14381
+Object Type: 13. INS14419
+Object Type: 13. INS14454
+Object Type: 13. INS14579
+Object Type: 13. INS14600
+Object Type: 13. INS14621
+Object Type: 13. INS14658
+Object Type: 13. INS14693
+Object Type: 37. GND_0
+Object Type: 37. GND_0
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14489
+Object Type: 13. INS14524
+Object Type: 13. INS14558
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14489
+Object Type: 13. INS14524
+Object Type: 13. INS14558
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14489
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.70, 2.50 Pos End: 2.40, 2.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 6.00, 2.50 Pos End: 6.30, 2.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 6.30, 2.50 Pos End: 6.30, 3.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 6.30, 3.10 Pos End: 3.40, 3.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 6.30, 3.10 Pos End: 3.40, 3.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.70, 0.50 Pos End: 3.50, 0.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.50, 0.50 Pos End: 3.50, 0.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.50, 0.50 Pos End: 3.50, 0.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 6.00, 0.50 Pos End: 6.30, 0.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 6.30, 0.50 Pos End: 6.30, 0.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 6.30, 0.50 Pos End: 6.30, 0.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.10, 1.20 Pos End: 5.60, 1.20
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.50, 4.90 Pos End: 2.40, 4.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.40, 4.90 Pos End: 1.90, 4.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+COrSchematicOleTracker::Finalize(BOOL bCreateDBObj)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal Yes.  .IsBus No.  Pos Begin: 3.50, 1.70 Pos End: 3.50, 1.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal Yes.  .IsBus No.  Pos Begin: 3.50, 1.70 Pos End: 3.50, 1.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal Yes.  .IsBus No.  Pos Begin: 6.20, 1.70 Pos End: 6.20, 1.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal Yes.  .IsBus No.  Pos Begin: 6.20, 1.70 Pos End: 6.20, 1.50
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.50, 0.50 Pos End: 2.50, 0.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.50, 0.10 Pos End: 4.10, 0.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.50, 0.10 Pos End: 4.10, 0.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.10, 0.10 Pos End: 5.60, 0.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.10, 0.10 Pos End: 5.60, 0.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.60, 0.10 Pos End: 5.70, 0.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.60, 0.10 Pos End: 5.70, 0.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.00, 0.30 Pos End: 4.00, 0.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.80, 1.20 Pos End: 4.80, 0.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 37. GND_0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 37. GND_0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal Yes.  .IsBus No.  Pos Begin: 2.40, 5.50 Pos End: 2.40, 5.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.50, 5.60 Pos End: 2.50, 5.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.50, 5.60 Pos End: 2.50, 5.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal Yes.  .IsBus No.  Pos Begin: 4.80, 5.10 Pos End: 4.80, 5.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.90, 5.20 Pos End: 4.90, 5.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 4.90, 5.20 Pos End: 4.90, 5.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14489
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 20. 
+Object Type: 20. 
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 13. INS14489
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.50, 3.20 Pos End: 2.50, 0.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.50, 0.90 Pos End: 2.60, 0.90
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.60, 0.90 Pos End: 2.60, 0.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.40, 0.50 Pos End: 2.40, 0.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 2.40, 0.50 Pos End: 2.40, 0.10
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 3.70, 3.80 Pos End: 3.40, 3.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+ WIRE. Name:  . IsGlobal No.  .IsBus No.  Pos Begin: 5.90, 3.80 Pos End: 6.30, 3.80
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+. Type: WIRE_SCALAR. It is an Alias. Name: Vin+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_ADD
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+. Type: WIRE_SCALAR. It is an Alias. Name: Vin-
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_RESIZE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 20. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SchematicView_EditProperties PAGE1
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: Implementation. Value: MbreakN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: Implementation. Value: MbreakN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: Implementation. Value: MbreakN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: Implementation. Value: MbreakN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: Implementation. Value: MbreakN
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: Implementation. Value: MbreakP
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: Implementation. Value: MbreakP
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: Implementation. Value: MbreakP
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: Implementation. Value: PSMO
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: Implementation. Value: MbreakP
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_EDITPROPS
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: Implementation. Value: MbreakP
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+SchematicView_EditProperties PAGE1
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 420u
+Object Type: 39. Display Property Name: L. Value: 4.8u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 4.8u
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 4.8u
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 420u
+Object Type: 39. Display Property Name: L. Value: 4.8u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 4.8u
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 4.8u
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 4.8u
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 4.8u
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 4.8u
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 4.8u
+Object Type: 39. Display Property Name: W. Value: 420u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 91.2u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 91.2u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 91.2u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 91.2u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 1.6u
+Object Type: 39. Display Property Name: W. Value: 91.2u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 1.6u
+Object Type: 39. Display Property Name: W. Value: 91.2u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 1.6u
+Object Type: 39. Display Property Name: W. Value: 91.2u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 1.6u
+Object Type: 39. Display Property Name: W. Value: 91.2u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 77.6u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 9.6u
+Object Type: 39. Display Property Name: W. Value: 77.6u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 9.6u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 101.6u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 9.6u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 24.8u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PropertyEditorFrame_Create
+PropertyEditorFrame_Close
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: L. Value: 9.6u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CMD_MOVE
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+Object Type: 39. Display Property Name: W. Value: 24.8u
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Schematic::SavePage
+D:\DOCUMENTS\TESIS\TRUNK\DESIGN\I-OPAMPB-01\I-OPAMPB-01.DSN|SCHEMATIC1|PAGE1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+

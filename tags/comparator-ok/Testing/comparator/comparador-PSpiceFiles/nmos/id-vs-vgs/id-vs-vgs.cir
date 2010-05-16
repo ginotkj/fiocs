@@ -1,0 +1,19 @@
+** Profile: "nmos-id-vs-vgs"  [ D:\Documents\TESIS\fiocs\Testing\comparator\comparador-PSpiceFiles\nmos\id-vs-vgs.sim ] 
+
+** Creating circuit file "id-vs-vgs.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../comparador-pspicefiles/comparador.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.3_Demo\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_VGS 0 3 0.01 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\nmos.net" 
+
+
+.END

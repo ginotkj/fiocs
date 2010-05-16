@@ -1,0 +1,27 @@
+* source I-COMPARADOR-01
+M_M7         VOUT N22704 0 0 CMOSN  
++ L=.3u  
++ W=4u         
+V_V2         N22910 0 1
+V_Vbias         N22974 0 .5
+M_M1         N22708 N22916 N22730 0 CMOSN  
++ L=.2u  
++ W=4u         
+V_Vdd         N22786 0 3
+M_M2         N22704 N22910 N22730 0 CMOSN  
++ L=.2u  
++ W=4u         
+M_M4         N22704 N22708 N22786 N22786 CMOSP  
++ L=.2u  
++ W=5u         
+V_V5         N22916 0  
++SIN 1 .1 100k 0 0 0
+M_M5         N22730 N22974 0 0 CMOSN  
++ L=.5u  
++ W=5u         
+M_M9         N22708 N22708 N22786 N22786 CMOSP  
++ L=.2u  
++ W=5u         
+M_M6         VOUT N22704 N22786 N22786 CMOSP  
++ L=.5u  
++ W=5u         

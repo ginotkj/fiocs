@@ -1,0 +1,202 @@
+(ExpressProject "I-FFD"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\analog.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\analog.olb")
+        (Type "Schematic Library"))
+      (File "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\breakout.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\breakout.olb")
+        (Type "Schematic Library"))
+      (File "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\source.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\source.olb")
+        (Type "Schematic Library"))
+      (File "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\sourcstm.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\sourcstm.olb")
+        (Type "Schematic Library"))
+      (File "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\special.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_10.5\tools\capture\library\pspice\special.olb")
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "i-ffd.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "TRUE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x"))
+  (Folder "Outputs"
+    (File ".\i-ffd-pspicefiles\s-nand-2\s-nand-2.net"
+      (Type "Report"))
+    (File ".\i-ffd-pspicefiles\ffd\ffd.net"
+      (Type "Report"))
+    (File ".\i-ffd-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (File "..\componentes orcad\compuertas.olb"
+      (Type "Schematic Library"))
+    (File ".\i-ffd-pspicefiles\test\test.net"
+      (Type "Report"))
+    (File ".\i-ffd-pspicefiles\test nand-2\test nand-2.net"
+      (Type "Report"))
+    (File ".\i-ffd-pspicefiles\test nand-3\test nand-3.net"
+      (Type "Report"))
+    (File ".\i-ffd-pspicefiles\test ffd\test ffd.net"
+      (Type "Report"))
+    (File ".\i-ffd-pspicefiles\test ffd sin c\test ffd sin c.net"
+      (Type "Report"))
+    (File
+       ".\i-ffd-pspicefiles\test ffd con c en loop\test ffd con c en loop.net"
+      (Type "Report"))
+    (File ".\i-ffd.olb"
+      (Type "Schematic Library")))
+  (Folder "PSpice Resources"
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\i-ffd-pspicefiles\i-ffd.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\i-ffd-pspicefiles\i-ffd.lib")))
+    (Folder "Stimulus Files")
+    (Folder "Include Files")
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\s-nand-2\bias.sim"
+        (DisplayName "S-NAND-2-bias")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\ffd\bias.sim"
+        (DisplayName "FFD-bias")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\ffd\transitorio.sim"
+        (DisplayName "FFD-transitorio")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\s-nand-2\bias-schematic.sim"
+        (DisplayName "S-NAND-2-bias-schematic")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\s-ffd\prueba.sim"
+        (DisplayName "S-FFD-prueba")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\ffd\transient.sim"
+        (DisplayName "FFD-transient")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\test nand-2\transient.sim"
+        (DisplayName "TEST NAND-2-transient")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\test nand-3\transient.sim"
+        (DisplayName "TEST NAND-3-transient")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\test ffd\transient.sim"
+        (DisplayName "TEST FFD-transient")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\test ffd sin c\transient.sim"
+        (DisplayName "TEST FFD sin C-transient")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-ffd-pspicefiles\test ffd con c en loop\transient.sim"
+        (DisplayName "TEST FFD con C en LOOP-transient")
+        (Type "PSpice Profile"))))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (NAND-2
+      (FullPartName "NAND-2.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-3
+      (FullPartName "NAND-3.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VCC_CIRCLE
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (IPULSE
+      (FullPartName "IPULSE.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-L
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (MbreakP
+      (FullPartName "MbreakP.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (MbreakN
+      (FullPartName "MbreakN.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSTIM
+      (FullPartName "VSTIM.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory "LIBRARY\PSPICE")
+  (MPSSessionName "FABRICIO")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn")
+      (Path "Design Resources" "Library")
+      (Path "Outputs")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.olb")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-FFD\OrCAD\i-ffd.dsn" "Design Cache"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 0 996 -8 -30 0 453 0 816"))
+      (Tab 0))))

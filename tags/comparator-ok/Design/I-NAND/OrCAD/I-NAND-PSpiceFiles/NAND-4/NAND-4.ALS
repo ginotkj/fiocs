@@ -1,0 +1,17 @@
+.ALIASES
+M_M7            M7(d=OUT g=IN1 s=N88382 b=N88382 ) CN @I-NAND.NAND-4(sch_1):INS88680@BREAKOUT.MbreakP.Normal(chips)
+M_M8            M8(d=OUT g=IN1 s=N88382 b=N88382 ) CN @I-NAND.NAND-4(sch_1):INS88718@BREAKOUT.MbreakP.Normal(chips)
+M_M12           M12(d=OUT g=IN1 s=N88382 b=N88382 ) CN @I-NAND.NAND-4(sch_1):INS88964@BREAKOUT.MbreakP.Normal(chips)
+V_VIN           VIN(+=IN1 -=0 ) CN @I-NAND.NAND-4(sch_1):INS102699@SOURCE.VPULSE.Normal(chips)
+M_M9            M9(d=OUT g=IN1 s=N88382 b=N88382 ) CN @I-NAND.NAND-4(sch_1):INS88802@BREAKOUT.MbreakP.Normal(chips)
+V_VDD1          VDD1(+=N88382 -=0 ) CN @I-NAND.NAND-4(sch_1):INS88360@SOURCE.VDC.Normal(chips)
+M_M1            M1(d=OUT g=IN1 s=N88766 b=0 ) CN @I-NAND.NAND-4(sch_1):INS88612@BREAKOUT.MbreakN.Normal(chips)
+M_M10           M10(d=N88906 g=IN1 s=N88946 b=0 ) CN @I-NAND.NAND-4(sch_1):INS88856@BREAKOUT.MbreakN.Normal(chips)
+M_M3            M3(d=N88766 g=IN1 s=N88906 b=0 ) CN @I-NAND.NAND-4(sch_1):INS88646@BREAKOUT.MbreakN.Normal(chips)
+M_M11           M11(d=N88946 g=IN1 s=0 b=0 ) CN @I-NAND.NAND-4(sch_1):INS88910@BREAKOUT.MbreakN.Normal(chips)
+_    _(OUT=OUT)
+_    _(IN2=IN1)
+_    _(IN3=IN1)
+_    _(IN4=IN1)
+_    _(IN1=IN1)
+.ENDALIASES

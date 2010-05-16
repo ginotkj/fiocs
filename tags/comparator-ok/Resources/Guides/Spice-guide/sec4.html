@@ -1,0 +1,583 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    DO NOT EDIT THIS PAGE! See http://newton.ex.ac.uk/schooldocs/it/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<HEAD>
+<TITLE>SPICE 3 User&#039;s Manual - Section 4</TITLE>
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<link REL='SHORTCUT ICON' HREF='/favicon.ico'> 
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/screen2.css'> 
+<link media='print' rel='stylesheet' TYPE='text/css' href='/css/print.css'>
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/nosidebar.css'>
+</head>
+<body>
+
+<!--  START OF NEW HEADER -->
+<div id="x_wrapper">
+
+<!--
+<div class='maybemobile'>View this page on our
+<a href='http://m-newton.ex.ac.uk/teaching/resources/CDHW/Electronics2/userguide/sec4.html'>mobile-friendly site</a>
+</div>
+-->
+
+<table width='100%' id="x_header" cellpadding=0 cellspacing=0 border=0><tr>
+  <td valign=top id="x_logo">
+     <a href="http://www.ex.ac.uk/" title="University of Exeter"><img src="/furniture/logo.gif" alt="University of Exeter" class="logo" width="162" height="60"></a>
+
+  <td valign=top id="x_department" align=left>
+    <a href='/' class='verytop'>School of Physics</a>
+    
+      
+  <td id="x_topnav" align=right valign=top>
+      <div id="supernav">
+          <a href="http://newton.ex.ac.uk/contact.html">Contact Us</a>
+          | <a href="http://newton.ex.ac.uk/schooldocs/">Staff</a>
+          | <a href="http://newton.ex.ac.uk/teaching/">Students</a>
+          | <a href="http://www.ex.ac.uk/myexeter/">MyExeter</a>
+          | <a href="http://newton.ex.ac.uk/quick-links/">Site map</a>
+        </div>
+
+        <div id="search">
+	  <form method="get" action="/cgi-bin/htsearch" 
+name="htsearchform" id="searchbox">
+                        <input class="search" id="words" name ='words'
+type="text" size="23" maxlength="80" title="Search the site"
+onfocus='if(this.value==this.defaultValue)  this.value="";' 
+value='  Search Physics'>
+                       <input type=hidden name='config' value='htdig'>
+<input name="submit" class="button" value="Search"  type="submit">
+
+          </form>
+        </div>
+    </table>
+<!-- NB div "wrapper" remains open -->
+<!--  END OF NEW HEADER -->
+
+
+<table cellspacing=0 cellpadding=0 class='phy-toptable'>
+
+<tr>
+
+<!-- SIDEBARROWSPAN = 2 -->
+
+
+
+
+<td valign='top'>
+      <div class="mainnav">
+        <ul>
+	<li><a 
+	href="/" title="School" 
+	class="studying">Home page</a>
+
+<li><a	href="/teaching/" title="Teaching" 
+	class="alumni">Our Teaching</a>
+
+<li><a 	href="/research/" title="Research" 
+	class="research">Our Research</a>
+
+<li><a 	href="/admissions/" title="Admissions" 
+	class="working">How to apply</a>
+
+<li><a 	href="/features/" title="News" 
+	class="business">News</a>
+
+<li><a 	href="/research/positions/" title="Jobs" 
+	class="jobs">Jobs</a>
+
+      </ul>
+    </div>
+
+
+<tr>
+<td class='phy-content' id='top' valign=top>
+<div class='e-topcrumbs'>  <a href='/'>Home</a>  <b>&rsaquo;</b> <a href='./../../../../'>Our Teaching</a> <b>&rsaquo;</b> <a href='./../../../'>Resources</a> <b>&rsaquo;</b> <a href='./../../'>CDHW</a> <b>&rsaquo;</b> <a href='./../'>Electronics2</a> <b>&rsaquo;</b> <a href='./'>Userguide</a> <b>&rsaquo;</b> <span class='crumbs_here'>sec4.html</span></div>
+
+
+<div class='phy-realcontent'>
+
+
+
+
+
+
+
+<h1>SPICE 3 User&#039;s Manual - Section&nbsp;4</h1>
+
+
+
+
+
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+
+
+<h2><a name="4">4 ANALYSES AND OUTPUT CONTROL</a></h2>
+
+<p>The following command lines are for specifying analyses or plots within the circuit description file.  Parallel commands exist in the interactive command interpreter (detailed in  the  following  section).  Specifying analyses and plots (or tables) in the input file  is  useful  for  batch  runs. Batch  mode is entered when either the -b option is given or when the default input source is redirected from a file.  In batch  mode,  the analyses specified by the control lines in the input file (e.g. "<a href="sec4.html#4.3.1">.AC</a>", "<a href="sec4.html#4.3.9">.TRAN</a>", <i>etc.</i>)  are  immediately executed (unless "<a href="sec5.html#5.3.47">.CONTROL</a>" lines exists; see the section on the <a href="sec5.html#5">interactive command interpreter</a>).   If  the  -r  <u>rawfile</u> option  is  given  then  all  data generated is written to a Spice3 rawfile.  The rawfile  may  be  read  by  either  the interactive  mode  of  Spice3 or by nutmeg; see the previous section for details.  In this  case,  the  <a href="sec4.html#4.4.1">.SAVE</a>  line  (see below)  may  be  used to record the value of internal device variables (see <a href="secB.html">Appendix B</a>).</p>
+
+<p>If a rawfile is not specified, then  output  plots  (in "line-printer"  form) and tables can be printed according to the <a href="sec4.html#4.4.2">.PRINT</a>, <a href="sec4.html#4.4.3">.PLOT</a>, and <a href="sec4.html#4.4.4">.FOUR</a> control lines, described  next. .PLOT,  <a href="sec4.html#4.4.2">.PRINT</a>,  and <a href="sec4.html#4.4.4">.FOUR</a> lines are meant for compatibility with Spice2.</p>
+
+<h3><a name="4.1">4.1 SIMULATOR VARIABLES (.OPTIONS)</a></h3>
+
+<p>Various parameters  of  the  simulations  available  in Spice3  can  be  altered  to control the accuracy, speed, or default values for some devices.  These  parameters  may  be changed  <i>via</i>  the <a href="sec5.html#5.3.39">set</a> command (described later in the section on the interactive front-end)  or  via  the  ".OPTIONS" line:</p>
+
+<p>
+
+<strong>General form:</strong>
+<pre>
+     .OPTIONS <u>OPT1</u> <u>OPT2</u> ... (or OPT=<u>OPTVAL</u> ...)
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .OPTIONS RELTOL=.005 TRTOL=8
+</pre>
+
+
+<p>The options line allows the user to reset program  control  and  user  options  for  specific simulation purposes. Additional options for Nutmeg may be specified as  well  and take  effect  when  Nutmeg  reads  the  input file.  Options specified to Nutmeg via the '<a href="sec5.html#5.3.39">set</a>' command are also passed on to  SPICE3 as if specified on a .OPTIONS line.  See the following section on the interactive  command  interpreter  for the parameters which may be set with a .OPTIONS line and the format of the 'set' command.  Any combination of the following  options  may  be  included,  in any order.  'x' (below) represents some positive number.</p>
+
+<table summary="variables" align=center border=1>
+<tr><th>option<th>effect
+<tr><td>ABSTOL=x<td>resets the absolute current error tolerance of the program. The default value is 1 picoamp.
+<tr><td>BADMOS3<td>Use the older version of the MOS3 model with the "kappa" discontinuity.
+<tr><td>CHGTOL=x<td>resets the charge tolerance of the program.  The default value is 1.0e-14.
+<tr><td>DEFAD=x<td>resets the value for MOS drain diffusion area; the default is 0.0.
+<tr><td>DEFAS=x<td>resets the value for MOS source diffusion area; the default is 0.0.
+<tr><td>DEFL=x<td>resets the value for MOS channel length; the default is 100.0 micrometer.
+<tr><td>DEFW=x<td>resets the value for MOS channel width; the default is 100.0 micrometer.
+<tr><td>GMIN=x<td>resets the value of GMIN, the minimum conductance allowed by the program. The default value is 1.0e-12.
+<tr><td>GMINSTEPS=x<td>[*] sets number of Gmin steps to be attempted.
+<tr><td>ITL1=x<td>resets the dc iteration limit.  The default is 100.
+<tr><td>ITL2=x<td>resets the dc transfer curve iteration limit.  The default is 50.
+<tr><td>ITL3=x<td>resets the lower transient analysis iteration limit. the default value is 4.  (Note: not implemented in Spice3).
+<tr><td>ITL4=x<td>resets the transient analysis timepoint iteration limit. the default is 10.
+<tr><td>ITL5=x<td>resets the transient analysis total iteration limit. the default is 5000.  Set ITL5=0 to omit this test. (Note: not implemented in Spice3).
+<tr><td>ITL6=x<td>[*] synonym for SRCSTEPS.
+<tr><td><a name="KEEPOPINFO">KEEPOPINFO</a><td>Retain the operating point information when either an AC, Distortion, or Pole-Zero analysis is run. This is particularly useful if the circuit is large and you do not want to run a (redundant) "<a href="sec4.html#4.3.5">.OP</a>" analysis.
+<tr><td>METHOD=name<td>sets the numerical integration method used by SPICE. Possible names are "Gear" or "trapezoidal" (or just "trap"). The default is trapezoidal. [The 'trap' method is relatively fast and accurate, but tends to oscillate in switching circuits and/or long-time transient simulations. Gear
+tends to be more stable, but at the expense of speed. CDHW.]
+<tr><td>MAXORD=x<td>[*] specifies the maximum order for the numerical integration method used by SPICE. Possible values for the Gear method are from 2 (the default) to 6. Using the value 1 with the trapezoidal method specifies Euler integration.
+<tr><td>PIVREL=x<td>resets the relative ratio between the largest column entry and an acceptable pivot value. The default value is 1.0e-3. In the numerical pivoting algorithm the allowed minimum pivot value is determined by EPSREL=AMAX1(PIVREL*MAXVAL, PIVTOL) where MAXVAL is the maximum element in the column where a pivot is sought (partial pivoting).
+<tr><td>PIVTOL=x<td>resets the absolute minimum value for a matrix entry to be accepted as a pivot.  The default value is 1.0e-13.
+<tr><td>RELTOL=x<td>resets the relative error tolerance of the program. The default value is 0.001 (0.1%).
+<tr><td>SRCSTEPS=x<td>[*] a non-zero value causes SPICE to use a  source-stepping method to find the DC operating point. Its value specifies the number of steps.
+<tr><td>TEMP=x<td>Resets the operating temperature of the circuit.  The default value is 27&deg;C (300K).  TEMP can be overridden by a temperature specification on any temperature dependent instance.
+<tr><td>TNOM=x<td>resets the nominal temperature at which device parameters are measured.  The default value is 27&deg;C (300K). TNOM can be overridden by a specification on any temperature dependent device model.
+<tr><td>TRTOL=x<td>resets the transient error tolerance.  The default value is 7.0 .  This parameter is an estimate of the factor by which SPICE overestimates the actual truncation error.
+<tr><td>TRYTOCOMPACT<td>Applicable only to the LTRA model. When specified, the simulator tries to condense LTRA transmission lines' past history of input voltages and currents.
+<tr><td>VNTOL=x<td>resets the absolute voltage error tolerance of the program.  The default value is 1 microvolt.
+</table>
+<p>
+[Note: items marked with an asterisk '*' in the above table are in the source code but not listed in the original documentation and are therefore 'unsupported' in SPICE 3f5. CDHW]
+<p>
+In addition, the  following  options  have  the  listed effect when operating in spice2 emulation mode:</p>
+
+<table summary="options" align=center border=1>
+<tr><th>option<th>effect
+<tr><td>ACCT<td>causes accounting and run time statistics to be printed
+<tr><td>LIST<td>causes the summary listing of the input data to be printed
+<tr><td>NOMOD<td>suppresses the printout of the model parameters
+<tr><td>NOPAGE<td>suppresses page ejects
+<tr><td>NODE<td>causes the printing of the node table.
+<tr><td>OPTS<td>causes the option values to be printed.
+</table>
+
+<h3><a name="4.2">4.2 INITIAL CONDITIONS</a></h3>
+
+<h4><a name="4.2.1">4.2.1 .NODESET:  Specify Initial Node Voltage Guesses</a></h4>
+<strong>General form:</strong>
+<pre>
+     .NODESET V(<u>NODNUM</u>)=<u>VAL</u> V(<u>NODNUM</u>)=<u>VAL</u> ...
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .NODESET V(12)=4.5 V(4)=2.23
+</pre>
+
+<p>The Nodeset line helps the program find the dc or  initial  transient  solution  by making a preliminary pass with
+ the specified nodes held to the given  voltages.   The  restriction is then released and the iteration continues to the
+ true solution.  The .NODESET line may be necessary for  convergence on bistable or a-stable circuits.  In general, this
+ line should not be necessary.</p>
+
+
+<h4><a name="4.2.2">4.2.2 .IC:  Set Initial Conditions</a></h4>
+<strong>General form:</strong>
+<pre>
+     .IC V(<u>NODNUM</u>)=<u>VAL</u> V(<u>NODNUM</u>)=<u>VAL</u> ...
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .IC V(11)=5 V(4)=-5 V(2)=2.2
+</pre>
+
+The .IC line is for  setting  transient  initial  conditions.   It  has two different interpretations, depending on whether the UIC parameter is specified on the <a href="sec4.html#4.3.9">.TRAN</a>  control line.   Also,  one  should  not  confuse  this line with the <a href="sec4.html#4.2.1">.NODESET</a> line.  The <a href="sec4.html#4.2.1">.NODESET</a> line is only to help dc convergence,  and  does not affect final bias solution (except for multi-stable circuits).  The  two  interpretations  of  this line are as follows:
+<OL>
+<LI>When the UIC parameter is specified on the <a href="sec4.html#4.3.9">.TRAN</a>  line, then the node voltages specified on the .IC control line are used to compute the capacitor, diode, BJT, JFET, and  MOSFET initial  conditions.   This  is equivalent to specifying the IC=... parameter on each device line, but is much more  convenient.   The  IC=...  parameter can still be specified and takes precedence over the .IC values.   Since  no  dc  bias (initial  transient)  solution  is computed before the transient analysis, one should  take  care  to  specify  all  dc source  voltages  on  the .IC control line if they are to be used to compute device initial conditions.
+<LI>When the UIC parameter is not specified  on  the  <a href="sec4.html#4.3.9">.TRAN</a> control  line,  the  dc bias (initial transient) solution is computed before the transient analysis.  In this  case,  the node voltages specified on the .IC control line is forced to the desired initial values during the bias solution.  During transient analysis, the constraint on these node voltages is removed.  This is the preferred method since it allows SPICE to compute a consistent dc solution.
+</OL>
+
+
+
+<h3><a name="4.3">4.3 ANALYSES</a></h3>
+
+<h4><a name="4.3.1">4.3.1 .AC:  Small-Signal AC Analysis</a></h4>
+<strong>General form:</strong>
+<pre>
+     .AC DEC <u>ND</u> <u>FSTART</u> <u>FSTOP</u>
+     .AC OCT <u>NO</u> <u>FSTART</u> <u>FSTOP</u>
+     .AC LIN <u>NP</u> <u>FSTART</u> <u>FSTOP</u>
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .AC DEC 10 1 10K
+     .AC DEC 10 1K 100MEG
+     .AC LIN 100 1 100HZ
+</pre>
+
+DEC stands for decade variation, and <u>ND</u> is  the  number of  points per decade.  OCT stands for octave variation, and <u>NO</u> is the number of  points  per  octave.   LIN  stands  for linear variation, and <u>NP</u> is the number of points.  <u>FSTART</u> is the starting frequency, and <u>FSTOP</u> is  the  final  frequency. If  this  line is included in the input file, SPICE performs an <a href="sec1.html#1.1.2">AC analysis</a> of the circuit over the  specified  frequency range.   Note that in order for this analysis to be meaningful, at least one <a href="sec3.html#3.2.1">independent source</a> must have  been  specified with an ac value.
+
+
+<h4><a name="4.3.2">4.3.2 .DC:  DC Transfer Function</a></h4>
+<strong>General form:</strong>
+<pre>
+     .DC <u>SRCNAM</u> <u>VSTART</u> <u>VSTOP</u> <u>VINCR</u> [ <u>SRC2</u> <u>START2</u> <u>STOP2</u> <u>INCR2</u> ]
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .DC VIN 0.25 5.0 0.25
+     .DC VDS 0 10 .5 VGS 0 5 1
+     .DC VCE 0 10 .25 IB 0 10U 1U
+</pre>
+
+<p>The inclusion of this line in an input file directs SPICE to
+perform a <a href="sec1.html#1.1.1">dc analysis</a> of the circuit. The
+DC line defines the dc transfer curve source and sweep limits 
+(again with capacitors open and inductors shorted). <u>SRCNAM</u> is the
+name of an independent voltage or current source. <u>VSTART</u>, <u>VSTOP</u>, and
+<u>VINCR</u> are the starting, final, and incrementing values respectively. 
+The first example causes the value of the voltage source <u>VIN</u> to be
+swept from 0.25 volts to 5.0 volts in increments of 0.25 volts.  A 
+second source (<u>SRC2</u>) may optionally be specified with associated sweep
+parameters. In this case, the first source is swept over its range
+for each value of the second source. This option can be useful for
+obtaining semiconductor device output characteristics. See the <a
+href="secA.html#A.2">second example</a> circuit description in Appendix&nbsp;A.
+
+<p>[Note: when two sources are used the <a href="sec5.html#5.3.54">transpose</a> and <a href="sec5.html#5.3.32">reshape</a>
+commands are needed to convert the results into a form suitable
+for plotting.]
+
+
+<h4><a name="4.3.3">4.3.3 .DISTO:  Distortion Analysis</a></h4>
+<strong>General form:</strong>
+<pre>
+     .DISTO DEC <u>ND</u> <u>FSTART</u> <u>FSTOP</u> [ F2<u>OVERF1</u> ]
+     .DISTO OCT <u>NO</u> <u>FSTART</u> <u>FSTOP</u> [ F2<u>OVERF1</u> ]
+     .DISTO LIN <u>NP</u> <u>FSTART</u> <u>FSTOP</u> [ <u>F2OVERF1</u> ]
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .DISTO DEC 10 1kHz 100Mhz
+     .DISTO DEC 10 1kHz 100Mhz 0.9
+</pre>
+
+The Disto line does a <a href="sec1.html#1.1.5">small-signal distortion  analysis</a> of   the   circuit.   A  multi-dimensional  Volterra  series analysis is done using multi-dimensional  Taylor  series  to represent  the nonlinearities at the operating point.  Terms of up to third order are used in the series expansions.
+<p>
+If the optional parameter <u>F2OVERF1</u>  is  not  specified, .DISTO  does a harmonic analysis - <i>i.e.,</i> it analyses distortion in the circuit using only a single input frequency  <u>F1</u>, which  is swept as specified by arguments of the .DISTO command exactly as in the <a href="sec4.html#4.3.1">.AC</a> command.   Inputs  at  this  frequency  may  be  present  at more than one input source, and their magnitudes and phases are specified by  the  arguments of the <u>DISTOF1</u> keyword in the input file lines for the input sources (see the description for independent sources).  (The arguments  of  the  <u>DISTOF2</u> keyword are not relevant in this case).  The analysis produces  information  about  the  A.C. values  of all node voltages and branch currents at the harmonic frequencies 2F1 and 3F1, vs. the input frequency F1 as it is swept.  (A value of 1 (as a complex distortion output) signifies cos(2J(2F1)t) at 2F1  and  cos(2J(3F1)t)  at  3F1, using  the  convention  that 1 at the input fundamental frequency is equivalent to  cos(2JF1t).)  The  distortion  component  desired  (2F1 or 3F1) can be selected using commands in nutmeg, and then printed or plotted.  (Normally,  one  is interested  primarily  in the magnitude of the harmonic components, so the magnitude of  the  AC  distortion  value  is looked  at).   It  should  be  noted that these are the A.C. values of the actual harmonic components, and are not  equal to  HD2  and HD3.  To obtain HD2 and HD3, one must divide by the corresponding A.C. values at F1, obtained  from  an  <a href="sec4.html#4.3.1">.AC</a> line.  This division can be done using nutmeg commands.
+<p>
+If the optional <u>F2OVERF1</u>  parameter  is  specified,  it should  be  a real number between (and not equal to) 0.0 and 1.0; in this case, .DISTO does a spectral analysis.  It considers  the  circuit with sinusoidal inputs at two different frequencies F1 and F2.  F1 is swept according to the  .DISTO control line options exactly as in the <a href="sec4.html#4.3.1">.AC</a> control line.  F2 is kept fixed at a single frequency as F1 sweeps - the value at which it is kept fixed is equal to <u>F2OVERF1</u> times <u>FSTART</u>. Each independent source in the circuit may potentially  have two  (superimposed) sinusoidal inputs for distortion, at the frequencies F1 and F2.  The magnitude and phase  of  the  F1 component are specified by the arguments of the DISTOF1 keyword in the source's input  line  (see  the  description  of independent sources); the magnitude and phase of the F2 component are specified by the arguments of  the  DISTOF2  keyword.    The   analysis   produces   plots   of   all   node voltages/branch currents at the intermodulation product frequencies  F1  +  F2,  F1 - F2, and (2 F1) - F2, vs the swept frequency F1.  The IM product of interest  may  be  selected using  the setplot command, and displayed with the print and plot commands.  It  is  to  be  noted  as  in  the  harmonic analysis  case,  the  results are the actual AC voltages and currents at the intermodulation frequencies, and need to  be normalized  with  respect  to  <a href="sec4.html#4.3.1">.AC</a>  values  to obtain the IM parameters.
+
+<p>
+
+If the DISTOF1 or DISTOF2 keywords are missing from the description  of  an  independent source, then that source is assumed to have no input  at  the  corresponding  frequency. The  default  values  of the magnitude and phase are 1.0 and 0.0 respectively.  The phase should be specified in degrees.
+
+<p>
+
+It should be carefully noted that the  number  <u>F2OVERF1</u> should  ideally be an irrational number, and that since this is not possible in practice, efforts should be made to  keep the denominator in its fractional representation as large as possible, certainly above 3, for accurate results (<i>i.e.,</i>  if <u>F2OVERF1</u> is represented as a fraction A/B, where A and B are integers with no common factors, B should  be  as  large  as possible; note that A &lt; B because <u>F2OVERF1</u> is constrained to be &lt; 1).   To  illustrate  why,  consider  the  cases  where <u>F2OVERF1</u>  is  49/100  and  1/2.  In a spectral analysis, the outputs produced are at F1 + F2, F1 - F2 and 2 F1 - F2.   In the  latter  case,  F1 - F2 = F2, so the result at the F1-F2 component is erroneous because there is the strong fundamental  F2  component at the same frequency.  Also, F1 + F2 = 2 F1 - F2 in the latter case, and  each  result  is  erroneous individually.   This  problem is not there in the case where <u>F2OVERF1</u> = 49/100, because F1-F2 = 51/100 F1 &lt; &gt; 49/100 F1 = F2.   In  this  case, there are two very closely spaced frequency components at F2 and F1 - F2.  One of the  advantages of the Volterra series technique is that it computes distortions at mix frequencies expressed symbolically (<i>i.e.,</i> n F1 + m F2), therefore one is able to obtain the strengths of distortion components accurately even if the separation between them  is  very  small,  as opposed to transient analysis for example.  The disadvantage is of course that if two  of  the mix   frequencies  coincide,  the  results  are  not  merged together and presented (though this could presumably be done as  a  postprocessing step).  Currently, the interested user should keep track of the mix frequencies himself or  herself and  add  the  distortions  at  coinciding  mix  frequencies together should it be necessary.
+
+
+<h4><a name="4.3.4">4.3.4 .NOISE:  Noise Analysis</a></h4>
+<strong>General form:</strong>
+<pre>
+     .NOISE V(<u>OUTPUT</u> [ , <u>REF</u> ] ) <u>SRC</u> [ DEC | LIN | OCT ] <u>PTS</u> <u>FSTART</u> <u>FSTOP</u>
+     + [ <u>PTS_PER_SUMMARY</u> ]
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .NOISE V(5) VIN DEC 10 1kHZ 100Mhz
+     .NOISE V(5,3) V1 OCT 8 1.0 1.0e6 1
+</pre>
+
+The Noise line does a <a href="sec1.html#1.1.7">noise analysis</a>  of 
+the  circuit. <u>OUTPUT</u>  is  the  node  at  which  the  total output noise
+is desired;  if  <u>REF</u>  is  specified,  then  the  noise  voltage
+V(<u>OUTPUT</u>)  -  V(<u>REF</u>)  is  calculated.   By  default,  <u>REF</u> is assumed to
+be ground.  <u>SRC</u> is the  name  of  an  independent source  to  which 
+input noise is referred.  <u>PTS</u>, <u>FSTART</u> and <u>FSTOP</u> are <a
+href="sec4.html#4.3.1">.AC</a> type parameters  that  specify  the 
+frequency range  over  which plots are desired.  <u>PTS_PER_SUMMARY</u> is an
+optional integer; if specified, the noise  contributions  of each  noise
+generator is produced every <u>PTS_PER_SUMMARY</u> frequency points.
+
+<p>
+
+The <a href="sec4.html#4.3.4">.NOISE</a> control line produces two plots  -  one  for the  Noise  Spectral  Density  curves  and one for the total Integrated Noise over the specified  frequency  range.   All noise  voltages/currents  are  in  squared  units (V<sup>2</sup>/Hz and A<sup>2</sup>/Hz for spectral density, V<sup>2</sup> and A<sup>2</sup> for integrated noise).
+
+<h4><a name="4.3.5">4.3.5 .OP:  Operating Point Analysis</a></h4>
+<strong>General form:</strong>
+<pre>
+     .OP
+</pre>
+
+The inclusion of this line in  an  input  file  directs SPICE  to  determine  the  dc operating point of the circuit with inductors shorted and capacitors opened.  Note:   a  <a href="sec1.html#1.1.1">dc analysis</a>  is  automatically  performed  prior to a <a href="sec1.html#1.1.3">transient analysis</a> to determine the transient initial conditions,  and prior  to  an <a href="sec1.html#1.1.2">AC small-signal</a>, <a href="sec1.html#1.1.7">Noise</a>, and <a href="sec1.html#1.1.4">Pole-Zero analysis</a> to determine the linearized, small-signal  models  for  non- linear devices (see the  <a href="#KEEPOPINFO">KEEPOPINFO variable</a> above).
+
+<h4><a name="4.3.6">4.3.6 .PZ:  Pole-Zero Analysis</a></h4>
+<strong>General form:</strong>
+<pre>
+     .PZ <u>NODE1</u> <u>NODE2</u> <u>NODE3</u> <u>NODE4</u> { CUR | VOL } { POL | ZER | PZ }
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .PZ 1 0 3 0 CUR POL
+     .PZ 2 3 5 0 VOL ZER
+     .PZ 4 1 4 1 CUR PZ
+</pre>
+
+The inclusion of this line in  an  input  file  directs SPICE  to perform a <a href="sec1.html#1.1.4">pole-zero analysis</a>. CUR stands for a transfer function of the type  (output voltage)/(input  current)  while  VOL  stands for a transfer function of the type (output voltage)/(input voltage).   POL stands  for  pole  analysis only, ZER for zero analysis only and PZ for both.  This feature is provided mainly because if there  is  a nonconvergence in finding poles or zeros, then, at least the other can be found.  Finally, <u>NODE1</u>  and  <u>NODE2</u> are the two input nodes and <u>NODE3</u> and <u>NODE4</u> are the two output nodes.  Thus, there is complete  freedom  regarding  the output and input ports and the type of transfer function.
+
+<p>
+
+In interactive mode, the command  syntax  is  the  same except  that the first field is PZ instead of .PZ.  To print the results, one should use the command '<a href="sec5.html#5.3.28">print all</a>'.
+
+
+<h4><a name="4.3.7">4.3.7 .SENS:  DC or Small-Signal AC Sensitivity Analysis</a></h4>
+<strong>General form:</strong>
+<pre>
+     .SENS <u>OUTVAR</u>
+     .SENS <u>OUTVAR</u> AC DEC <u>ND</u> <u>FSTART</u> <u>FSTOP</u>
+     .SENS <u>OUTVAR</u> AC OCT <u>NO</u> <u>FSTART</u> <u>FSTOP</u>
+     .SENS <u>OUTVAR</u> AC LIN <u>NP</u> <u>FSTART</u> <u>FSTOP</u>
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .SENS V(1,OUT)
+     .SENS V(OUT) AC DEC 10 100 100k
+     .SENS I(VTEST)
+</pre>
+
+The <a href="sec1.html#1.1.6">sensitivity</a> of <u>OUTVAR</u> to all non-zero device parameters  is  calculated  when  the SENS analysis is specified. <u>OUTVAR</u> is a circuit variable (node voltage or voltage-source branch  current).   The first form calculates sensitivity of the DC operating-point value of  <u>OUTVAR</u>.   The  second  form calculates  sensitivity  of  the  AC  values of <u>OUTVAR</u>.  The parameters listed for AC sensitivity are the same as  in  an AC  analysis  (see  "<a href="sec4.html#4.3.1">.AC</a>"  above).  The output values are in dimensions of change in output per unit change of input  (as opposed to percent change in output or per percent change of input).
+
+
+<h4><a name="4.3.8">4.3.8 .TF:  Transfer Function Analysis</a></h4>
+<strong>General form:</strong>
+<pre>
+     .TF <u>OUTVAR</u> <u>INSRC</u>
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .TF V(5, 3) VIN
+     .TF I(VLOAD) VIN
+</pre>
+      The TF line defines the small-signal output  and  input
+ for  the  <a href="sec1.html#1.1.1">dc  small-signal  analysis</a>.   <u>OUTVAR</u> is the small-signal output variable and <u>INSRC</u> is the  small-signal  input
+ source.   If  this  line  is included, SPICE computes the dc
+ small-signal value of the transfer function  (output/input),
+ input  resistance,  and  output  resistance.   For the first
+ example, SPICE would compute the ratio of V(5, 3)  to  VIN,
+ the  small-signal  input  resistance  at VIN, and the small-signal output resistance measured across nodes 5 and 3.
+
+
+
+
+<h4><a name="4.3.9">4.3.9 .TRAN:  Transient Analysis</a></h4>
+<strong>General form:</strong>
+<pre>
+     .TRAN <u>TSTEP</u> <u>TSTOP</u> [ [ <u>TSTART</u> ] <u>TMAX</u> ]
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .TRAN 1NS 100NS
+     .TRAN 1NS 1000NS 500NS
+     .TRAN 10NS 1US
+</pre>
+
+The inclusion of this line in  an  input  file  directs SPICE  to perfom a <a href="sec1.html#1.1.3">transient analysis</a> of the circuit. <u>TSTEP</u> is the printing or plotting increment  for  line-printer  output.   For use with the post-processor, <u>TSTEP</u> is the suggested computing increment.  <u>TSTOP</u> is the final time, and <u>TSTART</u> is the initial time.  If <u>TSTART</u> is omitted, it is assumed to be zero.  The transient analysis always begins at time  zero.   In the interval &lt;zero, <u>TSTART</u>&gt;, the circuit is analyzed (to reach a  steady  state),  but  no  outputs  are stored.   In  the  interval  &lt;<u>TSTART</u>, <u>TSTOP</u>&gt;, the circuit is analyzed and outputs are stored.  <u>TMAX</u> is the maximum  step-size  that  SPICE  uses;  for  default,  the program chooses either <u>TSTEP</u> or (<u>TSTOP</u>-<u>TSTART</u>)/50.0, whichever  is  smaller. <u>TMAX</u>  is  useful  when  one  wishes to guarantee a computing interval which is smaller than the printer increment, <u>TSTEP</u>. (See also &sect;4.4.4 <a href="sec4.html#4.4.4">.FOUR</a>)
+<p>
+[Note: The original Berkeley code had a bug so it actually chooses the <em>larger</em> of either <u>TSTEP</u> or (<u>TSTOP</u>-<u>TSTART</u>)/50.0 so I suggest you set
+<u>TMAX</u> explicitly unless you have a patched version. Another reason for doing this is that certain circuits, particularly those involving sinusoidal oscillation, fool the integrator into increasing the timestep too much.
+For circuits which use short pulses, <u>TMAX</u> should be no more than about 50 times the shortest feature of interest. There is also an internal lower limit 1e-9*<u>TMAX</u> imposed on <u>TSTEP</u> and non-convergent circuits may give 'Timestep too short' messages indicating this limit has been hit. CDHW.]
+
+<p>UIC (use initial conditions)  is  an  optional  keyword which  indicates  that the user does not want SPICE to solve for the quiescent operating point before beginning the transient  analysis.   If  this keyword is specified, SPICE uses the values specified using IC=... on the various elements as the  initial  transient  condition  and  proceeds  with  the analysis.  If the <a href="sec4.html#4.2.2">.IC</a> control line has been specified,  then the  node  voltages  on the <a href="sec4.html#4.2.2">.IC</a> line are used to compute the initial conditions for the devices.  Look at the description on  the  <a href="sec4.html#4.2.2">.IC</a> control line for its interpretation when UIC is not specified.
+
+
+<h3><a name="4.4">4.4 BATCH OUTPUT</a></h3>
+
+
+<h4><a name="4.4.1">4.4.1 .SAVE Lines</a></h4>
+<strong>General form:</strong>
+<pre>
+     .SAVE [ <u>vector</u> ... ]
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .SAVE i(vin) input output
+     .SAVE @m1[id]
+</pre>
+
+The vectors listed on the <a href="sec4.html#4.4.1">.SAVE</a> line  are  recorded  in the  rawfile  for use later with spice3 or nutmeg (nutmeg is just the data-analysis half of spice3, without  the  ability to  simulate).   The standard vector names are accepted.  If no .SAVE line is given, then the default set of vectors  are saved  (node  voltages  and voltage source branch currents). If .SAVE lines are given, only those vectors  specified  are saved.   For  more  discussion  on internal device data, see <a href="secB.html#B">Appendix B</a>.  See also the section on the <a href="sec5.html#5">interactive command interpreter</a> for information on how to use the rawfile.
+
+<h4><a name="4.4.2">4.4.2 .PRINT Lines</a></h4>
+<strong>General form:</strong>
+<pre>
+     .PRINT <u>PRTYPE</u> <u>OV1</u> [ <u>OV2</u> ... <u>OV8</u> ]
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .PRINT TRAN V(4) I(VIN)
+     .PRINT DC V(2) I(VSRC) V(23, 17)
+     .PRINT AC VM(4, 2) VR(7) VP(8, 3)
+</pre>
+
+The PRINT line defines the contents of a tabular  listing of one to
+eight output variables.  <u>PRTYPE</u> is the type of the analysis (<a
+href="sec4.html#4.3.2">DC</a>, <a href="sec4.html#4.3.1">AC</a>, <a
+href="sec4.html#4.3.9">TRAN</a>, <a href="sec4.html#4.3.4">NOISE</a>, or
+<a href="sec4.html#4.3.3">DISTO</a>) for  which  the specified  outputs 
+are  desired.   The  form for voltage or current output variables is the
+same as given in the  previous section for the print command; Spice2
+restricts the output variable to the following forms (though this
+restriction is not enforced by Spice3):
+
+<dl>
+<dt>V(N1&lt;,N2&gt;)
+<dd> specifies the voltage difference between nodes  N1 and  N2.  If N2
+(and the preceding comma) is omitted, ground (0) is assumed.  See the
+print command in  the  previous  section  for more details.  For
+compatibility  with  spice2,  the  following  five additional  values 
+can  be  accessed  for the ac analysis by replacing the "V" in V(N1,N2)
+with: VR - real part; VI - imaginary part; VM - magnitude; VP - phase;
+VDB - 20*log<sub>10</sub>(magnitude).
+<dt>
+ I(<u>VXXXXXXX</u>)<dd>
+           specifies the current flowing in  the  independent
+           voltage  source  named <u>VXXXXXXX</u>.  Positive current
+           flows from the positive node, through the  source,
+           to  the  negative  node.  For the ac analysis, the
+           corresponding replacements for the letter I may be
+           made in the same way as described for voltage outputs.
+</dl>
+
+Output variables for the noise and distortion  analyses have  a  different  general form from that of the other analyses.
+
+<p>
+
+There is no limit on the number  of  .PRINT  lines  for each type of analysis.
+
+
+
+<h4><a name="4.4.3">4.4.3 .PLOT Lines</a></h4>
+<strong>General form:</strong>
+<pre>
+     .PLOT <u>PLTYPE</u> <u>OV1</u> [ (<u>PLO1</u>, <u>PHI1</u>) ] [ <u>OV2</u>  [ (<u>PLO2</u>, <u>PHI2</u>) ] ... <u>OV8</u> ]
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .PLOT DC V(4) V(5) V(1)
+     .PLOT TRAN V(17, 5) (2, 5) I(VIN) V(17) (1, 9)
+     .PLOT AC VM(5) VM(31, 24) VDB(5) VP(5)
+     .PLOT DISTO HD2 HD3(R) SIM2
+     .PLOT TRAN V(5, 3) V(4) (0, 5) V(7) (0, 10)
+</pre>
+
+The PLOT line defines the contents of one  plot  of from  one to eight
+output variables.  <u>PLTYPE</u> is the type of analysis (<a
+href="sec4.html#4.3.2">DC</a>, <a href="sec4.html#4.3.1">AC</a>, <a
+href="sec4.html#4.3.9">TRAN</a>, <a href="sec4.html#4.3.4">NOISE</a>, or
+<a href="sec4.html#4.3.3">DISTO</a>) for  which the  specified  outputs
+are desired.  The syntax for the <u>OVI</u> is identical to that for the <a
+href="sec4.html#4.4.2">.PRINT</a> line and for the plot command in the
+interactive mode.
+<p>
+      The overlap of two or more traces on any plot is  indicated by the letter X.
+<p>
+      When more than one output variable appears on the  same
+ plot,  the  first  variable  specified is printed as well as
+ plotted.  If a printout of all variables is desired, then  a
+ companion <a href="sec4.html#4.4.2">.PRINT</a> line should be included.
+<p>
+     There is no limit on the number of .PLOT  lines  specified for each type of analysis.
+
+<h4><a name="4.4.4">4.4.4 .FOUR:  Fourier Analysis of Transient Analysis Output</a></h4>
+<strong>General form:</strong>
+<pre>
+     .FOUR <u>FREQ</u> <u>OV1</u> [ <u>OV2</u> <u>OV3</u> ... ]
+</pre>
+<strong>Examples:</strong>
+<pre>
+     .FOUR 100K  V(5)
+</pre>
+
+The Four (or Fourier) line controls  whether  SPICE performs  a  Fourier analysis as a part of the <a href="sec1.html#1.1.3">transient analysis</a>.  <u>FREQ</u> is the fundamental frequency,  and  <u>OV1</u>, desired.  The Fourier analysis is performed over the interval  &lt;<u>TSTOP</u>-period,  <u>TSTOP</u>&gt;, where <u>TSTOP</u> is the final time specified for the transient analysis, and period is one  period  of  the fundamental frequency.  The dc component and the first nine harmonics are determined.  For maximum  accuracy,  <u>TMAX</u>  (see the <a href="sec4.html#4.3.9">.TRAN</a> line) should be set to period/100.0 (or less for very high-Q circuits).
+
+
+<DIV class=NOPRINT>
+&nbsp;
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+</DIV>
+
+
+
+
+
+</div>
+
+<div class='phy-forcewidth'>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+</div>
+</table> <!-- End of main layout table -->
+<hr id=xphy-bottom2>
+
+<div class=noprint>
+<table width='100%' border=0>
+<tr>
+<td valign=middle align=left>
+
+<a href='http://validator.w3.org/check?uri=referer'>Validate</a>
+ &nbsp;  
+<a href='http://validator.w3.org/checklink?uri=referer'>Link-check</a>
+
+
+<td valign=middle align=center>
+
+<a href='http://newton.ex.ac.uk/general/copyright.html'>&copy; Copyright &amp; disclaimer</a>
+
+<td valign=middle align='right'>
+
+<!-- AddThis Button BEGIN -->
+<a href="http://www.addthis.com/bookmark.php" target=sharethis><img class=addit src="/furniture/addthis.gif" width="125" height="16" border="0" alt="Share" title="Add this page to your favourite social networking sites"></a>
+<!-- AddThis Button END -->
+
+</table>
+
+</div>
+
+</div> <!-- wrapper -->
+
+</body>
+</html>

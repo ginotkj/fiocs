@@ -1,0 +1,537 @@
+
+**** 10/22/09 21:04:04 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "DECODER-8-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\I-DECODER-001-PSpiceFiles\DECODER-
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-decoder-001-pspicefiles/i-decoder-001.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\DECODER-8.net" 
+
+
+
+**** INCLUDING DECODER-8.net ****
+* source I-DECODER-001
+M_5-NAND_M10         5-NAND_N36965 MSB 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_5-NAND_M4         N29392 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_5-NAND_R1         MSB 0  10Meg  
+R_5-NAND_R2         MSB 0  10Meg  
+R_5-NAND_R3         MSB 0  10Meg  
+M_5-NAND_M7         5-NAND_N33879 MSB 5-NAND_N36965 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_5-NAND_M5         N29392 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_5-NAND_M1         N29392 MSB 5-NAND_N33539 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_5-NAND_M2         5-NAND_N33539 MSB 5-NAND_N33841 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_5-NAND_M6         5-NAND_N33841 MSB 5-NAND_N33879 0 CMOSN  
++ L=.5u  
++ W=.8u         
+R_5-NAND_R4         MSB 0  10Meg  
+R_5-NAND_R5         MSB 0  10Meg  
+M_5-NAND_M3         N29392 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_5-NAND_M8         N29392 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_5-NAND_M9         N29392 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_R3         LSB N36115  100k  
+V_V3         MSB 0 5
+R_R1         MSB N36115  100k  
+R_R2         2SB N36115  100k  
+V_V1         N29916 0 5
+R_7-NAND_R4         0 0  10Meg  
+M_7-NAND_M2         7-NAND_N38454 0 7-NAND_N38740 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND_M6         7-NAND_N38740 0 7-NAND_N38778 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND_M8         N29404 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND_M14         7-NAND_N43125 0 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND_M11         N29404 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND_R7         0 0  10Meg  
+M_7-NAND_M3         N29404 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND_R1         MSB 0  10Meg  
+M_7-NAND_M4         N29404 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND_R2         0 0  10Meg  
+R_7-NAND_R5         0 0  10Meg  
+R_7-NAND_R3         0 0  10Meg  
+M_7-NAND_M13         7-NAND_N43046 0 7-NAND_N43125 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND_M9         N29404 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND_R6         0 0  10Meg  
+M_7-NAND_M12         N29404 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND_M7         7-NAND_N38778 0 7-NAND_N39060 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND_M5         N29404 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND_M1         N29404 MSB 7-NAND_N38454 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND_M10         7-NAND_N39060 0 7-NAND_N43046 0 CMOSN  
++ L=.5u  
++ W=.8u         
+R_4-NAND_R3         N29428 0  10Meg  
+M_4-NAND_M1         LSB N29404 4-NAND_N28403 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_4-NAND_M5         LSB N29428 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_4-NAND_R4         N29440 0  10Meg  
+M_4-NAND_M2         4-NAND_N28403 N29416 4-NAND_N28818 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_4-NAND_M3         LSB N29404 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_4-NAND_M6         4-NAND_N28818 N29428 4-NAND_N29978 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_4-NAND_M7         4-NAND_N29978 N29440 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_4-NAND_M4         LSB N29416 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_4-NAND_M8         LSB N29440 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_4-NAND_R1         N29404 0  10Meg  
+R_4-NAND_R2         N29416 0  10Meg  
+M_2-NAND_M4         N29380 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_2-NAND_M5         N29380 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_2-NAND_R1         MSB 0  10Meg  
+M_2-NAND_M6         N29380 MSB 2-NAND_N23681 0 CMOSN  
++ L=.5u  
++ W=.8u         
+R_2-NAND_R2         0 0  10Meg  
+M_2-NAND_M2         2-NAND_N23681 0 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_2-NAND1_M4         2SB N29380 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_2-NAND1_M5         2SB N29392 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_2-NAND1_R1         N29392 0  10Meg  
+M_2-NAND1_M6         2SB N29392 2-NAND1_N23681 0 CMOSN  
++ L=.5u  
++ W=.8u         
+R_2-NAND1_R2         N29380 0  10Meg  
+M_2-NAND1_M2         2-NAND1_N23681 N29380 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+R_7-NAND1_R4         0 0  10Meg  
+M_7-NAND1_M2         7-NAND1_N38454 MSB 7-NAND1_N38740 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND1_M6         7-NAND1_N38740 MSB 7-NAND1_N38778 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND1_M8         N29416 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND1_M14         7-NAND1_N43125 0 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND1_M11         N29416 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND1_R7         0 0  10Meg  
+M_7-NAND1_M3         N29416 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND1_R1         MSB 0  10Meg  
+M_7-NAND1_M4         N29416 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND1_R2         MSB 0  10Meg  
+R_7-NAND1_R5         0 0  10Meg  
+R_7-NAND1_R3         MSB 0  10Meg  
+M_7-NAND1_M13         7-NAND1_N43046 0 7-NAND1_N43125 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND1_M9         N29416 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND1_R6         0 0  10Meg  
+M_7-NAND1_M12         N29416 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND1_M7         7-NAND1_N38778 0 7-NAND1_N39060 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND1_M5         N29416 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND1_M1         N29416 MSB 7-NAND1_N38454 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND1_M10         7-NAND1_N39060 0 7-NAND1_N43046 0 CMOSN  
++ L=.5u  
++ W=.8u         
+R_7-NAND2_R4         MSB 0  10Meg  
+M_7-NAND2_M2         7-NAND2_N38454 MSB 7-NAND2_N38740 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND2_M6         7-NAND2_N38740 MSB 7-NAND2_N38778 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND2_M8         N29428 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND2_M14         7-NAND2_N43125 0 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND2_M11         N29428 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND2_R7         0 0  10Meg  
+M_7-NAND2_M3         N29428 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND2_R1         MSB 0  10Meg  
+M_7-NAND2_M4         N29428 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND2_R2         MSB 0  10Meg  
+R_7-NAND2_R5         MSB 0  10Meg  
+R_7-NAND2_R3         MSB 0  10Meg  
+M_7-NAND2_M13         7-NAND2_N43046 0 7-NAND2_N43125 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND2_M9         N29428 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND2_R6         0 0  10Meg  
+M_7-NAND2_M12         N29428 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND2_M7         7-NAND2_N38778 MSB 7-NAND2_N39060 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND2_M5         N29428 0 N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND2_M1         N29428 MSB 7-NAND2_N38454 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND2_M10         7-NAND2_N39060 MSB 7-NAND2_N43046 0 CMOSN  
++ L=.5u  
++ W=.8u         
+R_7-NAND3_R4         MSB 0  10Meg  
+M_7-NAND3_M2         7-NAND3_N38454 MSB 7-NAND3_N38740 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND3_M6         7-NAND3_N38740 MSB 7-NAND3_N38778 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND3_M8         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND3_M14         7-NAND3_N43125 MSB 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND3_M11         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND3_R7         MSB 0  10Meg  
+M_7-NAND3_M3         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND3_R1         MSB 0  10Meg  
+M_7-NAND3_M4         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND3_R2         MSB 0  10Meg  
+R_7-NAND3_R5         MSB 0  10Meg  
+R_7-NAND3_R3         MSB 0  10Meg  
+M_7-NAND3_M13         7-NAND3_N43046 MSB 7-NAND3_N43125 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND3_M9         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+R_7-NAND3_R6         MSB 0  10Meg  
+M_7-NAND3_M12         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND3_M7         7-NAND3_N38778 MSB 7-NAND3_N39060 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND3_M5         N29440 MSB N29916 N29916 CMOSP  
++ L=.5u  
++ W=5u         
+M_7-NAND3_M1         N29440 MSB 7-NAND3_N38454 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_7-NAND3_M10         7-NAND3_N39060 MSB 7-NAND3_N43046 0 CMOSN  
++ L=.5u  
++ W=.8u         
+V_V2         N36115 0 5
+
+**** RESUMING bias.cir ****
+.END
+
+WARNING -- Mosfet M_5-NAND_M10, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_5-NAND_M10, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_5-NAND_M4, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_5-NAND_M4, model CMOSP: Ps = 0 is less than W
+**** 10/22/09 21:04:04 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "DECODER-8-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\I-DECODER-001-PSpiceFiles\DECODER-
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               CMOSN           CMOSP           
+               NMOS            PMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               7            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .299302        -.401632     
+          KP  470.883200E-06  470.883200E-06 
+       GAMMA    0               0            
+      LAMBDA    0               0            
+         RSH    6               6.4          
+          IS    1.000000E-15    1.000000E-15 
+          JS  100.000000E-06  100.000000E-06 
+          PB     .980128         .821464     
+        PBSW     .8              .8008       
+          CJ  815.376400E-06    1.165977E-03 
+        CJSW  166.520200E-12  122.005600E-12 
+          MJ     .606194         .425655     
+        MJSW     .169221         .1001       
+        CGSO  500.000000E-12  500.000000E-12 
+        CGDO  500.000000E-12  500.000000E-12 
+        CGBO    1.000000E-12    1.000000E-12 
+         TOX    4.400000E-09    4.400000E-09 
+          XJ  100.000000E-09  100.000000E-09 
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .01             .01         
+      DIOMOD    2               2            
+          K1     .542117         .598774     
+          K2    -.035133     -630.087300E-09 
+        LETA    0               0            
+        WETA    0               0            
+          U0  268.8192        120.6045       
+       XPART     .5              .5          
+        VTH0     .299302        -.401632     
+          K3    1.000000E-03     .081248     
+          W0  100.000000E-09    1.000000E-06 
+         NLX  228.107500E-09   42.193340E-09 
+        DVT0     .882304         .948505     
+        DVT1     .324768         .682461     
+          UA   -1.551592E-09    1.640708E-09 
+          UB    2.710709E-18    1.272651E-21 
+          UC   46.128640E-12 -100.000000E-12 
+        VSAT  116.006100E+03  182.237700E+03 
+        RDSW  150             726.9944       
+        VOFF    -.091862        -.15         
+     NFACTOR    1.807002         .921842     
+        PCLM    2.027608         .151904     
+      PDIBL1     .784214         .056431     
+      PDIBL2    -.042689         .012341     
+       DROUT    1                .470272     
+      PSCBE1    2.314588E+09    4.022317E+09 
+      PSCBE2  500.000000E-12    7.751373E-09 
+          A0    1.525088         .904176     
+          A1    6.962179E-03    8.069322E-03 
+          A2     .524367         .560796     
+       NPEAK  235.490000E+15  415.890000E+15 
+         LDD    0               0            
+        LITL   36.331810E-09   36.331810E-09 
+         UC1  -56.000000E-12  -56.000000E-12 
+        PVAG                     .124556     
+        KETA    -.015366         .020751     
+        ETA0    5.535422E-03    1.016564E-03 
+        ETAB -671.692500E-06   -1.910199E-03 
+         K3B    5.015682       19.7189       
+        DVT2    -.056267        -.3          
+        DSUB    3.692569E-03     .014544     
+         AGS     .400988         .131884     
+       DVT1W    0               0            
+       DVT2W    0               0            
+        PRWG     .340675        -.049475     
+        PRWB    -.183865        -.420982     
+     PDIBLCB    -.1            -1.000000E-03 
+         DWG    5.852475E-09  -30.588980E-09 
+         DWB   11.572970E-09  -11.142310E-09 
+          B0  -44.157810E-09    1.909663E-06 
+          B1                    5.000000E-06 
+        LINT   20.701890E-09   26.472300E-09 
+        WINT   12.149120E-09                 
+         DLC   20.701890E-09   26.472300E-09 
+         DWC   12.149120E-09    0            
+          CF    0               0            
+        NOIA  100.000000E+18    9.900001E+18 
+        NOIB   50.000000E+03    2.400000E+03 
+        NOIC   -1.400000E-12    1.400000E-12 
+       LKETA   -1.853360E-03   -8.835292E-03 
+       WKETA    3.404068E-03     .030613     
+       PVSAT    1.045662E+03   50            
+       PKETA    -.0116         -5.087778E-03 
+       PVTH0   -3.570294E-03  633.898700E-06 
+         PUA  -25.147800E-12  364.727200E-12 
+         PUB   21.902820E-24                 
+         PU0   -2.447231        7.159787     
+       PRDSW   -1.670209       -5            
+       PETA0 -100.000000E-06  100.000000E-06 
+         PK2    3.193075E-03   31.405140E-06 
+         VTM     .025864         .025864     
+       PBSWG     .8              .8008       
+       MJSWG     .169221         .1001       
+       CJSWG  330.000000E-12  422.000000E-12 
+
+
+WARNING -- Mosfet M_5-NAND_M10, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_5-NAND_M10, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_5-NAND_M4, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_5-NAND_M4, model CMOSP: Ps = 0 is less than W
+**** 10/22/09 21:04:04 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "DECODER-8-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\I-DECODER-001-PSpiceFiles\DECODER-
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  2SB)    5.0000  (  LSB)    5.0000  (  MSB)    5.0000  (N29380)    4.9996     
+
+(N29392) 3.282E-06 (N29404)    4.9999 (N29416)    4.9999 (N29428)    4.9998     
+
+(N29440) 6.429E-06 (N29916)    5.0000 (N36115)    5.0000                        
+
+(2-NAND_N23681)    4.4374             (4-NAND_N28403)    4.4318                 
+
+(4-NAND_N28818)    4.4052             (4-NAND_N29978)    4.3922                 
+
+(5-NAND_N33539) 2.626E-06             (5-NAND_N33841) 1.969E-06                 
+
+(5-NAND_N33879) 1.313E-06             (5-NAND_N36965) 656.4E-09                 
+
+(7-NAND_N38454)    4.4896             (7-NAND_N38740)     .0937                 
+
+(7-NAND_N38778)     .0388             (7-NAND_N39060)     .0228                 
+
+(7-NAND_N43046)     .0129             (7-NAND_N43125)     .0057                 
+
+(2-NAND1_N23681) 212.0E-09            (7-NAND1_N38454)    4.4624                
+
+(7-NAND1_N38740)    4.4400            (7-NAND1_N38778)    4.4317                
+
+(7-NAND1_N39060)     .0819            (7-NAND1_N43046)     .0266                
+
+(7-NAND1_N43125)     .0102            (7-NAND2_N38454)    4.4469                
+
+(7-NAND2_N38740)    4.4218            (7-NAND2_N38778)    4.4102                
+
+(7-NAND2_N39060)    4.4037            (7-NAND2_N43046)    4.4000                
+
+(7-NAND2_N43125)     .0560            (7-NAND3_N38454) 5.511E-06                
+
+(7-NAND3_N38740) 4.592E-06            (7-NAND3_N38778) 3.674E-06                
+
+(7-NAND3_N39060) 2.755E-06            (7-NAND3_N43046) 1.837E-06                
+
+(7-NAND3_N43125) 918.5E-09            
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -1.100E-05
+    V_V1        -2.001E-06
+    V_V2        -1.331E-12
+
+    TOTAL POWER DISSIPATION   6.50E-05  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/22/09 21:04:04 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "DECODER-8-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-001\I-DECODER-001-PSpiceFiles\DECODER-
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .08
+

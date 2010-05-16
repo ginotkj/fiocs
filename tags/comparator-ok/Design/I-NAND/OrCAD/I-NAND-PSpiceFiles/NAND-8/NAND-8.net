@@ -1,0 +1,52 @@
+* source I-NAND
+M_M16         OUT IN1 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M5         OUT IN1 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M11         OUT IN1 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M9         OUT IN1 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M12         OUT IN1 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M1         OUT IN1 N67495 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M6         N66385 IN1 N66425 0 CMOSN  
++ L=.18u  
++ W=.18u         
+V_VIN         IN1 0  
++PULSE 0 3.3 10p 0 0 100p 150p
+M_M7         N66425 IN1 N66937 0 CMOSN  
++ L=.18u  
++ W=.18u         
+V_VDD         N66465 0 3.3
+M_M2         N67495 IN1 N66385 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M13         N67207 IN1 N67213 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M10         N66937 IN1 N67207 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M3         OUT IN1 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M14         N67213 IN1 N66527 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M8         OUT IN1 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M4         OUT IN1 N66465 N66465 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M15         N66527 IN1 0 0 CMOSN  
++ L=.18u  
++ W=.18u         

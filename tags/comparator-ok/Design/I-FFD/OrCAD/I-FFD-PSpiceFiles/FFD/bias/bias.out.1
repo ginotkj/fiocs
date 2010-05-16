@@ -1,0 +1,167 @@
+
+**** 10/09/09 14:21:13 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "FFD-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\ffd\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\FFD.net" 
+
+
+
+**** INCLUDING FFD.net ****
+* source I-FFD
+M_FFD_NAND1_M1         FFD_N00861 FFD_N00191 FFD_NAND1_N00209 FFD_NAND1_N00209
++  MbreakN           
+M_FFD_NAND1_M2         FFD_NAND1_N00209 N00076 0 0 MbreakN           
+R_FFD_NAND1_R1         0 FFD_N00191  100M  
+M_FFD_NAND1_M3         FFD_N00861 FFD_N00191 N00076 N00076 MbreakP           
+M_FFD_NAND1_M4         FFD_N00861 N00076 N00076 N00076 MbreakP           
+R_FFD_NAND1_R2         0 N00076  100M  
+M_FFD_NAND2_M1         FFD_N00516 FFD_N00589 FFD_NAND2_N00209 FFD_NAND2_N00209
++  MbreakN           
+M_FFD_NAND2_M2         FFD_NAND2_N00209 N00418 0 0 MbreakN           
+R_FFD_NAND2_R1         0 FFD_N00589  100M  
+M_FFD_NAND2_M3         FFD_N00516 FFD_N00589 N00076 N00076 MbreakP           
+M_FFD_NAND2_M4         FFD_N00516 N00418 N00076 N00076 MbreakP           
+R_FFD_NAND2_R2         0 N00418  100M  
+M_FFD_NAND3_M1         N00649 FFD_N00516 FFD_NAND3_N00209 FFD_NAND3_N00209
++  MbreakN           
+M_FFD_NAND3_M2         FFD_NAND3_N00209 N00668 0 0 MbreakN           
+R_FFD_NAND3_R1         0 FFD_N00516  100M  
+M_FFD_NAND3_M3         N00649 FFD_N00516 N00076 N00076 MbreakP           
+M_FFD_NAND3_M4         N00649 N00668 N00076 N00076 MbreakP           
+R_FFD_NAND3_R2         0 N00668  100M  
+M_FFD_NAND4_M1         N00668 N00649 FFD_NAND4_N00209 FFD_NAND4_N00209 MbreakN 
++           
+M_FFD_NAND4_M2         FFD_NAND4_N00209 FFD_N00191 0 0 MbreakN           
+R_FFD_NAND4_R1         0 N00649  100M  
+M_FFD_NAND4_M3         N00668 N00649 N00076 N00076 MbreakP           
+M_FFD_NAND4_M4         N00668 FFD_N00191 N00076 N00076 MbreakP           
+R_FFD_NAND4_R2         0 FFD_N00191  100M  
+V_V1         N00076 N00144 5
+R_R1         N00668 0  100k  
+R_R2         N00649 0  100k  
+V_V2         N00418 N00144  
++PULSE 0 5 9m 1m 1m 9m 20m
+
+**** RESUMING bias.cir ****
+.END
+
+**** 10/09/09 14:21:13 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "FFD-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\ffd\bias.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MbreakN         MbreakP         
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    0               0            
+          KP   20.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    0               0            
+       XPART    0               0            
+
+
+**** 10/09/09 14:21:13 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "FFD-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\ffd\bias.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00076)    2.5000 (N00144)   -2.5000 (N00418)   -2.5000 (N00649) 12.50E-06     
+
+(N00668) 12.50E-06 (FFD_N00191)    0.0000                (FFD_N00516) 25.00E-06 
+
+(FFD_N00589)    0.0000                (FFD_N00861)    2.5000                    
+
+(FFD_NAND1_N00209) 50.20E-09          (FFD_NAND2_N00209) 12.50E-06              
+
+(FFD_NAND3_N00209) 7.914E-06          (FFD_NAND4_N00209) 11.22E-06          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.500E+01
+    V_V2         2.500E+01
+
+    TOTAL POWER DISSIPATION   1.25E+02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/09/09 14:21:13 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "FFD-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\i-ffd-pspicefiles\ffd\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

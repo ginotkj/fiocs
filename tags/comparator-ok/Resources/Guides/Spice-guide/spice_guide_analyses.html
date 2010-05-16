@@ -1,0 +1,938 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.01 [en] (WinNT; I) [Netscape]">
+   <TITLE>Analyses</TITLE>
+<!-- This document was produced by the maker2html (v1.1a) filter.  This filter is copyright by the University of California, and was written by Tom Burd -->
+<!--This file created 9/24/96 10:24 PM by Claris Home Page version 1.0b1-->
+<X-SAS-WINDOW TOP=69 BOTTOM=403 LEFT=249 RIGHT=779>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#CCCCCC" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<CENTER><B>- <A HREF="../">Parent Directory</A> -</B></CENTER>
+
+<CENTER>
+<H1>
+<A NAME="740"></A><B><FONT COLOR="#993366">ANALYSES AND OUTPUT CONTROL</FONT></B></H1></CENTER>
+The following command lines are for specifying analyses or plots within
+the circuit description file. Parallel commands exist in the interactive
+command interpreter (detailed in the following section). Specifying analyses
+and plots (or tables) in the input file is useful for batch runs. Batch
+mode is entered when either the <B>-b</B> option is given or when the default
+input source is redirected from a file. In batch mode, the analyses specified
+by the control lines in the input file (e.g. ".ac", ".tran", etc.) are
+immediately executed (unless ".control" lines exists; see the section on
+the interactive command interpretor). If the <B>-r</B> <I>rawfile</I> option
+is given then all data generated is written to a Spice3 <B>rawfile</B>.
+The rawfile may be read by either the interactive mode of Spice3 or by
+<B>nutmeg</B>; see the previous section for details. In this case, the
+.SAVE line (see below) may be used to record the value of internal device
+variables (see Appendix B).
+
+<P>If a rawfile is not specified, then output plots (in "line-printer"
+form) and tables can be printed according to the <B>.PRINT</B>, <B>.PLOT</B>,
+and <B>.FOUR</B> control lines, described next. <B>.PLOT</B>, <B>.PRINT</B>,
+and <B>.FOUR</B> lines are meant for compatibility with Spice2.
+<H2>
+<A NAME="746"></A>SIMULATOR VARIABLES (.OPTIONS)</H2>
+Various parameters of the simulations available in Spice3 can be altered
+to control the accuracy, speed, or default values for some devices. These
+parameters may be changed via the "set" command (described later in the
+section on the interactive front-end) or via the ".OPTIONS" line:
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.OPTIONS OPT1 OPT2 ... (or OPT=OPTVAL ...)</TT></DD>
+
+<BR><B></B>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.OPTIONS RELTOL=.005 TRTOL=8</TT></DD>
+</DL>
+The options line allows the user to reset program control and user options
+for specific simulation purposes. Additional options for Nutmeg may be
+specified as well and take effect when Nutmeg reads the input file. Options
+specified to Nutmeg via the 'set' command are also passed on to SPICE3
+as if specified on a .OPTIONS line. See the following section on the interactive
+command interpreter for the parameters which may be set with a .OPTIONS
+line and the format of the 'set' 'command. Any combination of the following
+options may be included, in any order. 'x' (below) represents some positive
+number.
+<TABLE BORDER WIDTH="100%" HEIGHT="82" >
+<TR>
+<TD><B><TT>option</TT></B>&nbsp;</TD>
+
+<TD><B><TT>effect</TT></B>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>ABSTOL=x&nbsp;</TT></TD>
+
+<TD><TT>resets the absolute current error tolerance of the program.</TT>&nbsp;
+<BR><TT>The default value is 1 picoamp.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>BADMOS3</TT>&nbsp;</TD>
+
+<TD><TT>Use the older version of the MOS3 model with the "kappa" discontinuity.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>CHGTOL=x</TT>&nbsp;</TD>
+
+<TD><TT>resets the charge tolerance of the program. The default value is
+1.0e-14.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>DEFAD=x</TT>&nbsp;</TD>
+
+<TD><TT>resets the charge tolerance of the program. The default value is
+1.0e-14.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>DEFAS=x</TT>&nbsp;</TD>
+
+<TD><TT>resets the value for MOS source diffusion area; the default is
+0.0.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>DEFL=x</TT>&nbsp;</TD>
+
+<TD><TT>resets the value for MOS source diffusion area; the default is
+0.0.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>DEFW=x&nbsp;</TT></TD>
+
+<TD><TT>resets the value for MOS channel width; the default is 100.0 micrometer</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>GMIN=x</TT>&nbsp;</TD>
+
+<TD><TT>resets the value of GMIN, the minimum conductance allowed by the
+program. The default value is 1.0e-12.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>ITL1=x</TT>&nbsp;</TD>
+
+<TD><TT>resets the dc iteration limit. The default is 100.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>ITL2=x&nbsp;</TT></TD>
+
+<TD><TT>resets the dc transfer curve iteration limit. The default is 50.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>ITL3=x</TT>&nbsp;</TD>
+
+<TD><TT>resets the lower transient analysis iteration limit. the default
+value is 4. (Note: not implemented in Spice3).</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>ITL4=x&nbsp;</TT></TD>
+
+<TD><TT>resets the transient analysis timepoint iteration limit. the default
+is 10.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>ITL5=x&nbsp;</TT></TD>
+
+<TD><TT>resets the transient analysis total iteration limit. the default
+is 5000. Set ITL5=0 to omit this test. (Note: not implemented in Spice3).</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>KEEPOPINFO</TT>&nbsp;</TD>
+
+<TD><TT>Retain the operating point information when either an</TT>&nbsp;
+<BR><TT>AC, Distortion, or Pole-Zero analysis is run.</TT>&nbsp;
+<BR><TT>This is particularly useful if the circuit is large</TT>&nbsp;
+<BR><TT>and you do not want to run a (redundant) ".OP" analysis.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>METHOD=name</TT>&nbsp;</TD>
+
+<TD><TT>ets the numerical integration method used by SPICE.</TT>&nbsp;
+<BR><TT>Possible names are "Gear" or "trapezoidal" (or just "trap").</TT>&nbsp;
+<BR><TT>The default is trapezoidal.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>PIVREL=x</TT>&nbsp;</TD>
+
+<TD><TT>resets the relative ratio between the largest column entry and
+an acceptable pivot value. The default value is 1.0e-3.</TT>&nbsp;
+<BR><TT>In the numerical pivoting algorithm the allowed minimum pivot value
+is determined by</TT>&nbsp;
+<BR><TT>EPSREL=AMAX1(PIVREL*MAXVAL, PIVTOL)</TT>&nbsp;
+<BR><TT>where MAXVAL is the maximum element in the column where a pivot
+is sought (partial pivoting).</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>PIVTOL=x</TT>&nbsp;</TD>
+
+<TD><TT>resets the absolute minimum value for a matrix entry to be accepted
+as a pivot. The default value is 1.0e-13.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>RELTOL=x</TT>&nbsp;</TD>
+
+<TD><TT>resets the relative error tolerance of the program. The default
+value is 0.001 (0.1%).</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>TEMP=x</TT>&nbsp;</TD>
+
+<TD><TT>Resets the operating temperature of the circuit. The default value
+is 27 deg C (300 deg K). TEMP can be overridden by a temperature specification
+on any temperature dependent instance.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>TNOM=x&nbsp;</TT></TD>
+
+<TD><TT>resets the nominal temperature at which device parameters are measured.
+The default value is 27 deg C (300 deg K). TNOM can be overridden by a
+specification on any temperature dependent device model.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>TRTOL=x</TT>&nbsp;</TD>
+
+<TD><TT>resets the transient error tolerance. The default value is 7.0.
+This parameter is an estimate of the factor by which SPICE overestimates
+the actual truncation error.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>TRYTOCOMPACT</TT>&nbsp;</TD>
+
+<TD><TT>Applicable only to the LTRA model. When specified, the simulator
+tries to condense LTRA transmission lines' past history of input voltages
+and currents.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>VNTOL=x&nbsp;</TT></TD>
+
+<TD><TT>resets the absolute voltage error tolerance of the program. The
+default value is 1 microvolt.</TT>&nbsp;</TD>
+</TR>
+</TABLE>
+In addition, the following options have the listed effect when operating
+in spice2 emulation mode:
+<DL>&nbsp;</DL>
+&nbsp;
+<TABLE BORDER WIDTH="100%" >
+<TR>
+<TD><B><TT>option</TT></B>&nbsp;</TD>
+
+<TD><B><TT>effect</TT></B>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>ACCT</TT>&nbsp;</TD>
+
+<TD><TT>causes accounting and run time statistics to be printed</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>LIST</TT>&nbsp;</TD>
+
+<TD><TT>causes the summary listing of the input data to be printed</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>NOMOD</TT>&nbsp;</TD>
+
+<TD><TT>suppresses the printout of the model parameters</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>NOPAGE</TT>&nbsp;</TD>
+
+<TD><TT>suppresses page ejects</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>NODE</TT>&nbsp;</TD>
+
+<TD><TT>causes the printing of the node table.</TT>&nbsp;</TD>
+</TR>
+
+<TR>
+<TD><TT>OPTS</TT>&nbsp;</TD>
+
+<TD><TT>causes the option values to be printed.</TT>&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<H2>
+<A NAME="766"></A>INITIAL CONDITIONS</H2>
+
+<H3>
+<A NAME="768"></A><FONT COLOR="#006600">.NODESET: Specify Initial Node
+Voltage Guesses</FONT></H3>
+<B>General form:</B>
+<DD>
+<TT>.NODESET V(NODNUM)=VAL V(NODNUM)=VAL ...</TT></DD>
+
+<DL>
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.NODESET V(12)=4.5 V(4)=2.23</TT></DD>
+
+<BR>&nbsp;
+<BR>The Nodeset line helps the program find the dc or initial transient
+solution by making a preliminary pass with the specified nodes held to
+the given voltages. The restriction is then released and the iteration
+continues to the true solution. The .NODESET line may be necessary for
+convergence on bistable or a-stable circuits. In general, this line should
+not be necessary.</DL>
+
+<H3>
+<A NAME="2429"></A><FONT COLOR="#006600">.IC: Set Initial Conditions</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.IC V(NODNUM)=VAL V(NODNUM)=VAL ...</TT></DD>
+
+<DD>
+<TT></TT></DD>
+
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.IC V(11)=5 V(4)=-5 V(2)=2.2</TT></DD>
+
+
+<P>The IC line is for setting transient initial conditions. It has two
+different interpretations, depending on whether the UIC parameter is specified
+on the .TRAN control line. Also, one should not confuse this line with
+the .NODESET line. The .NODESET line is only to help dc convergence, and
+does not affect final bias solution (except for multi-stable circuits).
+The two interpretations of this line are as follows:
+
+<P>1. When the UIC parameter is specified on the .TRAN line, then the node
+voltages specified on the .IC control line are used to compute the capacitor,
+diode, BJT, JFET, and MOSFET initial conditions. This is equivalent to
+specifying the IC=... parameter on each device line, but is much more convenient.
+The IC=... parameter can still be specified and takes precedence over the
+.IC values. Since no dc bias (initial transient) solution is computed before
+the transient analysis, one should take care to specify all dc source voltages
+on the .IC control line if they are to be used to compute device initial
+conditions.
+
+<P>2. When the UIC parameter is not specified on the .TRAN control line,
+the dc bias (initial transient) solution is computed before the transient
+analysis. In this case, the node voltages specified on the .IC control
+line is forced to the desired initial values during the bias solution.
+During transient analysis, the constraint on these node voltages is removed.
+This is the preferred method since it allows SPICE to compute a consistent
+dc solution.</DL>
+
+<H2>
+<A NAME="788"></A>ANALYSES</H2>
+
+<H3>
+<A NAME="790"></A><FONT COLOR="#006600">.AC: Small-Signal AC Analysis</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.AC DEC ND FSTART FSTOP</TT></DD>
+
+<DD>
+<TT>.AC OCT NO FSTART FSTOP</TT></DD>
+
+<DD>
+<TT>.AC LIN NP FSTART FSTOP</TT></DD>
+
+<BR>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.AC DEC 10 1 10K</TT></DD>
+
+<DD>
+<TT>.AC DEC 10 1K 100MEG</TT></DD>
+
+<DD>
+<TT>.AC LIN 100 1 100HZ</TT></DD>
+
+<BR>&nbsp;
+<BR>DEC stands for decade variation, and ND is the number of points per
+decade. OCT stands for octave variation, and NO is the number of points
+per octave. LIN stands for linear variation, and NP is the number of points.
+FSTART is the starting frequency, and FSTOP is the final frequency. If
+this line is included in the input file, SPICE performs an AC analysis
+of the circuit over the specified frequency range. Note that in order for
+this analysis to be meaningful, at least one independent source must have
+been specified with an ac value.</DL>
+
+<H3>
+<A NAME="800"></A><FONT COLOR="#006600">.DC: DC Transfer Function</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.DC SRCNAM VSTART VSTOP VINCR [SRC2 START2 STOP2 INCR2]</TT></DD>
+
+<BR><TT></TT>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.DC VIN 0.25 5.0 0.25</TT></DD>
+
+<DD>
+<TT>.DC VDS 0 10 .5 VGS 0 5 1</TT></DD>
+
+<DD>
+<TT>.DC VCE 0 10 .25 IB 0 10U 1U</TT></DD>
+
+<BR>&nbsp;
+
+<P>The DC line defines the dc transfer curve source and sweep limits (again
+with capacitors open and inductors shorted). SRCNAM is the name of an independent
+voltage or current source. VSTART, VSTOP, and VINCR are the starting, final,
+and incrementing values respectively. The first example causes the value
+of the voltage source VIN to be swept from 0.25 Volts to 5.0 Volts in increments
+of 0.25 Volts. A second source (SRC2) may optionally be specified with
+associated sweep parameters. In this case, the first source is swept over
+its range for each value of the second source. This option can be useful
+for obtaining semiconductor device output characteristics. See the second
+example circuit description in Appendix A.</DL>
+
+<H3>
+<A NAME="810"></A><FONT COLOR="#006600">.DISTO: Distortion Analysis</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.DISTO DEC ND FSTART FSTOP &amp;ltF2OVERF1;></TT></DD>
+
+<DD>
+<TT>.DISTO OCT NO FSTART FSTOP &amp;ltF2OVERF1;></TT></DD>
+
+<DD>
+<TT>.DISTO LIN NP FSTART FSTOP &amp;ltF2OVERF1;></TT></DD>
+
+<BR>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.DISTO DEC 10 1kHz 100Mhz</TT></DD>
+
+<DD>
+<TT>.DISTO DEC 10 1kHz 100Mhz 0.9</TT></DD>
+
+<BR>&nbsp;
+<BR>The Disto line does a small-signal distortion analysis of the circuit.
+A multi-dimensional Volterra series analysis is done using multi-dimensional
+Taylor series to represent the nonlinearities at the operating point. Terms
+of up to third order are used in the series expansions.
+
+<P>If the optional parameter F2OVERF1 is not specified, .DISTO does a harmonic
+analysis - i.e., it analyses distortion in the circuit using only a single
+input frequency F1, which is swept as specified by arguments of the .DISTO
+command exactly as in the .AC command. Inputs at this frequency may be
+present at more than one input source, and their magnitudes and phases
+are specified by the arguments of the DISTOF1 keyword in the input file
+lines for the input sources (see the description for independent sources).
+(The arguments of the DISTOF2 keyword are not relevant in this case). The
+analysis produces information about the A.C. values of all node voltages
+and branch currents at the harmonic frequencies 2 F1 and 3 F1, vs. the
+input frequency F1 as it is swept. (A value of 1 (as a complex distortion
+output) signifies cos( 2&nbsp;<IMG SRC="Pi.gif" HEIGHT=10 WIDTH=9> (2 F1)
+t) at 2 F1 and cos (2&nbsp;<IMG SRC="Pi.gif" HEIGHT=10 WIDTH=9> (3 F1)
+t ) at 3 F1, using the convention that 1 at the input fundamental frequency
+is equivalent to cos( 2&nbsp;<IMG SRC="Pi.gif" HEIGHT=10 WIDTH=9> F1 t
+).) The distortion component desired (2 F1 or 3 F1) can be selected using
+commands in nutmeg, and then printed or plotted. (Normally, one is interested
+primarily in the magnitude of the harmonic components, so the magnitude
+of the AC distortion value is looked at). It should be noted that these
+are the A.C. values of the actual harmonic components, and are not equal
+to HD2 and HD3. To obtain HD2 and HD3, one must divide by the corresponding
+A.C. values at F1, obtained from an .AC line. This division can be done
+using nutmeg commands.
+
+<P>If the optional F2OVERF1 parameter is specified, it should be a real
+number between (and not equal to) 0.0 and 1.0; in this case, .DISTO does
+a spectral analysis. It considers the circuit with sinusoidal inputs at
+two different frequencies F1 and F2. F1 is swept according to the .DISTO
+control line options exactly as in the .AC control line. F2 is kept fixed
+at a single frequency as F1 sweeps - the value at which it is kept fixed
+is equal to F2OVERF1 times FSTART. Each independent source in the circuit
+may potentially have two (superimposed) sinusoidal inputs for distortion,
+at the frequencies F1 and F2. The magnitude and phase of the F1 component
+are specified by the arguments of the DISTOF1 keyword in the source's input
+line (see the description of independent sources); the magnitude and phase
+of the F2 component are specified by the arguments of the DISTOF2 keyword.
+The analysis produces plots of all node voltages/branch currents at the
+intermodulation product frequencies F1 + F2, F1 - F2, and (2 F1) - F2,
+vs the swept frequency F1. The IM product of interest may be selected using
+the setplot command, and displayed with the print and plot commands. It
+is to be noted as in the harmonic analysis case, the results are the actual
+AC voltages and currents at the intermodulation frequencies, and need to
+be normalized with respect to .AC values to obtain the IM parameters.
+
+<P>If the DISTOF1 or DISTOF2 keywords are missing from the description
+of an independent source, then that source is assumed to have no input
+at the corresponding frequency. The default values of the magnitude and
+phase are 1.0 and 0.0 respectively. The phase should be specified in degrees.
+
+<P>It should be carefully noted that the number F2OVERF1 should ideally
+be an irrational number, and that since this is not possible in practice,
+efforts should be made to keep the denominator in its fractional representation
+as large as possible, certainly above 3, for accurate results (i.e., if
+F2OVERF1 is represented as a fraction A/B, where A and B are integers with
+no common factors, B should be as large as possible; note that A &lt; B
+because F2OVERF1 is constrained to be &lt; 1). To illustrate why, consider
+the cases where F2OVERF1 is 49/100 and 1/2. In a spectral analysis, the
+outputs produced are at F1 + F2, F1 - F2 and 2 F1 - F2. In the latter case,
+F1 - F2 = F2, so the result at the F1-F2 component is erroneous because
+there is the strong fundamental F2 component at the same frequency. Also,
+F1 + F2 = 2 F1 - F2 in the latter case, and each result is erroneous individually.
+This problem is not there in the case where F2OVERF1 = 49/100, because
+F1-F2 = 51/100 F1 &lt; > 49/100 F1 = F2. In this case, there are two very
+closely spaced frequency components at F2 and F1 - F2. One of the advantages
+of the Volterra series technique is that it computes distortions at mix
+frequencies expressed symbolically (i.e. n F1&nbsp;<IMG SRC="plusminus.gif" HEIGHT=14 WIDTH=13>
+m F2), therefore one is able to obtain the strengths of distortion components
+accurately even if the separation between them is very small, as opposed
+to transient analysis for example. The disadvantage is of course that if
+two of the mix frequencies coincide, the results are not merged together
+and presented (though this could presumably be done as a postprocessing
+step). Currently, the interested user should keep track of the mix frequencies
+himself or herself and add the distortions at coinciding mix frequencies
+together should it be necessary.</DL>
+
+<H3>
+<A NAME="828"></A><FONT COLOR="#006600">.NOISE: Noise Analysis</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.NOISE V(OUTPUT &lt;,REF>) SRC ( DEC | LIN | OCT ) PTS FSTART FSTOP</TT></DD>
+
+<BR><TT>+ &amp;ltPTS;_PER_SUMMARY></TT>
+<BR>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.NOISE V(5) VIN DEC 10 1kHZ 100Mhz</TT></DD>
+
+<DD>
+<TT>.NOISE V(5,3) V1 OCT 8 1.0 1.0e6 1</TT></DD>
+
+<BR>&nbsp;
+<BR>The Noise line does a noise analysis of the circuit. OUTPUT is the
+node at which the total output noise is desired; if REF is specified, then
+the noise voltage V(OUTPUT) - V(REF) is calculated. By default, REF is
+assumed to be ground. SRC is the name of an independent source to which
+input noise is referred. PTS, FSTART and FSTOP are .AC type parameters
+that specify the frequency range over which plots are desired. PTS_PER_SUMMARY
+is an optional integer; if specified, the noise contributions of each noise
+generator is produced every PTS_PER_SUMMARY frequency points.
+
+<P>The .NOISE control line produces two plots - one for the Noise Spectral
+Density curves and one for the total Integrated Noise over the specified
+frequency range. All noise voltages/currents are in squared units V<SUP>2</SUP>/Hz
+and A<SUP>2</SUP>/Hz for spectral density, V<SUP>2</SUP> and A<SUP>2</SUP>
+for integrated noise).</DL>
+
+<H3>
+<A NAME="2517"></A>.OP: Operating Point Analysis</H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.OP</TT></DD>
+
+<BR>&nbsp;
+<BR>The inclusion of this line in an input file directs SPICE to determine
+the dc operating point of the circuit with inductors shorted and capacitors
+opened. Note: a DC analysis is automatically performed prior to a transient
+analysis to determine the transient initial conditions, and prior to an
+AC small-signal, Noise, and Pole-Zero analysis to determine the linearized,
+small-signal models for nonlinear devices (see the KEEPOPINFO variable
+above).</DL>
+
+<H3>
+<A NAME="844"></A><FONT COLOR="#006600">.PZ: Pole-Zero Analysis</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.PZ NODE1 NODE2 NODE3 NODE4 CUR POL</TT></DD>
+
+<DD>
+<TT>.PZ NODE1 NODE2 NODE3 NODE4 CUR ZER</TT></DD>
+
+<DD>
+<TT>.PZ NODE1 NODE2 NODE3 NODE4 CUR PZ</TT></DD>
+
+<DD>
+<TT>.PZ NODE1 NODE2 NODE3 NODE4 VOL POL</TT></DD>
+
+<DD>
+<TT>.PZ NODE1 NODE2 NODE3 NODE4 VOL ZER</TT></DD>
+
+<DD>
+<TT>.PZ NODE1 NODE2 NODE3 NODE4 VOL PZ</TT></DD>
+
+<BR>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.PZ 1 0 3 0 CUR POL</TT></DD>
+
+<DD>
+<TT>.PZ 2 3 5 0 VOL ZER</TT></DD>
+
+<DD>
+<TT>.PZ 4 1 4 1 CUR PZ</TT></DD>
+
+<BR>&nbsp;
+<BR>CUR stands for a transfer function of the type (output voltage)/(input
+current) while VOL stands for a transfer function of the type (output voltage)/(input
+voltage). POL stands for pole analysis only, ZER for zero analysis only
+and PZ for both. This feature is provided mainly because if there is a
+nonconvergence in finding poles or zeros, then, at least the other can
+be found. Finally, NODE1 and NODE2 are the two input nodes and NODE3 and
+NODE4 are the two output nodes. Thus, there is complete freedom regarding
+the output and input ports and the type of transfer function.
+
+<P>In interactive mode, the command syntax is the same except that the
+first field is PZ instead of .PZ. To print the results, one should use
+the command 'print all'.</DL>
+
+<H3>
+<A NAME="856"></A><FONT COLOR="#006600">.SENS: DC or Small-Signal AC Sensitivity
+Analysis</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.SENS OUTVAR</TT></DD>
+
+<DD>
+<TT>.SENS OUTVAR AC DEC ND FSTART FSTOP</TT></DD>
+
+<DD>
+<TT>.SENS OUTVAR AC OCT NO FSTART FSTOP</TT></DD>
+
+<DD>
+<TT>.SENS OUTVAR AC LIN NP FSTART FSTOP</TT></DD>
+
+<BR>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.SENS V(1,OUT)</TT></DD>
+
+<DD>
+<TT>.SENS V(OUT) AC DEC 10 100 100k</TT></DD>
+
+<DD>
+<TT>.SENS I(VTEST)</TT></DD>
+
+<BR>&nbsp;
+<BR>The sensitivity of OUTVAR to all non-zero device parameters is calculated
+when the SENS analysis is specified. OUTVAR is a circuit variable (node
+voltage or voltage-source branch current). The first form calculates sensitivity
+of the DC operating-point value of OUTVAR. The second form calculates sensitivity
+of the AC values of OUTVAR. The parameters listed for AC sensitivity are
+the same as in an AC analysis (see ".AC" above). The output values are
+in dimensions of change in output per unit change of input (as opposed
+to percent change in output or per percent change of input).</DL>
+
+<H3>
+<A NAME="866"></A><FONT COLOR="#006600">.TF: Transfer Function Analysis</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.TF OUTVAR INSRC</TT></DD>
+
+<BR><TT></TT>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.TF V(5, 3) VIN</TT></DD>
+
+<DD>
+<TT>.TF I(VLOAD) VIN</TT></DD>
+
+<BR>&nbsp;
+<BR>The TF line defines the small-signal output and input for the dc small-signal
+analysis. OUTVAR is the small-signal output variable and INSRC is the small-signal
+input source. If this line is included, SPICE computes the dc small-signal
+value of the transfer function (output/input), input resistance, and output
+resistance. For the first example, SPICE would compute the ratio of V(5,
+3) to VIN, the small-signal input resistance at VIN, and the small-signal
+output resistance measured across nodes 5 and 3.</DL>
+
+<H3>
+<A NAME="876"></A><FONT COLOR="#006600">.TRAN: Transient Analysis</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.TRAN TSTEP TSTOP &amp;ltTSTART; &amp;ltTMAX;>></TT></DD>
+
+<BR><B></B>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.TRAN 1NS 100NS</TT></DD>
+
+<DD>
+<TT>.TRAN 1NS 1000NS 500NS</TT></DD>
+
+<DD>
+<TT>.TRAN 10NS 1US</TT></DD>
+
+<BR>&nbsp;
+<BR>TSTEP is the printing or plotting increment for line-printer output.
+For use with the post-processor, TSTEP is the suggested computing increment.
+TSTOP is the final time, and TSTART is the initial time. If TSTART is omitted,
+it is assumed to be zero. The transient analysis always begins at time
+zero. In the interval &amp;ltzero;, TSTART>, the circuit is analyzed (to
+reach a steady state), but no outputs are stored. In the interval &amp;ltTSTART;,
+TSTOP>, the circuit is analyzed and outputs are stored. TMAX is the maximum
+stepsize that SPICE uses; for default, the program chooses either TSTEP
+or (TSTOP-TSTART)/50.0, whichever is smaller. TMAX is useful when one wishes
+to guarantee a computing interval which is smaller than the printer increment,
+TSTEP.
+
+<P>UIC (use initial conditions) is an optional keyword which indicates
+that the user does not want SPICE to solve for the quiescent operating
+point before beginning the transient analysis. If this keyword is specified,
+SPICE uses the values specified using IC=... on the various elements as
+the initial transient condition and proceeds with the analysis. If the
+.IC control line has been specified, then the node voltages on the .IC
+line are used to compute the initial conditions for the devices. Look at
+the description on the .IC control line for its interpretation when UIC
+is not specified.</DL>
+
+<H2>
+<A NAME="888"></A>BATCH OUTPUT</H2>
+
+<H3>
+<A NAME="890"></A><FONT COLOR="#006600">.SAVE Lines</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.SAVE <I>vector vector vector ...</I></TT></DD>
+
+<BR><I><TT></TT></I>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.SAVE i(vin) input output</TT></DD>
+
+<DD>
+<TT>.SAVE @m1[id]</TT></DD>
+
+<BR>&nbsp;
+<BR>The vectors listed on the .SAVE line are recorded in the rawfile for
+use later with spice3 or nutmeg (nutmeg is just the data-analysis half
+of spice3, without the ability to simulate). The standard vector names
+are accepted. If no .SAVE line is given, then the default set of vectors
+are saved (node voltages and voltage source branch currents). If .SAVE
+lines are given, only those vectors specified are saved. For more discussion
+on internal device data, see Appendix B. See also the section on the interactive
+command interpretor for information on how to use the rawfile.</DL>
+
+<H3>
+<A NAME="2561"></A><FONT COLOR="#006600">.PRINT Lines</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.PRINT PRTYPE OV1 &amp;ltOV2; ... OV8></TT></DD>
+
+<BR><TT></TT>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.PRINT TRAN V(4) I(VIN)</TT></DD>
+
+<DD>
+<TT>.PRINT DC V(2) I(VSRC) V(23, 17)</TT></DD>
+
+<DD>
+<TT>.PRINT AC VM(4, 2) VR(7) VP(8, 3)</TT></DD>
+
+<BR>&nbsp;
+<BR>The Print line defines the contents of a tabular listing of one to
+eight output variables. PRTYPE is the type of the analysis (DC, AC, TRAN,
+NOISE, or DISTO) for which the specified outputs are desired. The form
+for voltage or current output variables is the same as given in the previous
+section for the <B>print</B> command; Spice2 restricts the output variable
+to the following forms (though this restriction is not enforced by Spice3):
+
+<P>V(N1&lt;,N2>)
+<DL>specifies the voltage difference between nodes N1 and N2. If N2 (and
+the preceding comma) is omitted, ground (0) is assumed. See the <B>print</B>
+command in the previous section for more details. For compatibility with
+spice2, the following five additional values can be accessed for the ac
+analysis by replacing the "V" in V(N1,N2) with:
+
+<P><TT>VR - real part</TT>
+<BR><TT>VI - imaginary part</TT>
+<BR><TT>VM - magnitude</TT>
+<BR><TT>VP - phase</TT>
+<BR><TT>VDB - 20 log10(magnitude)</TT></DL>
+I(VXXXXXXX)
+<DL>specifies the current flowing in the independent voltage source named
+VXXXXXXX. Positive current flows from the positive node, through the source,
+to the negative node. For the ac analysis, the corresponding replacements
+for the letter I may be made in the same way as described for voltage outputs.</DL>
+Output variables for the noise and distortion analyses have a different
+general form from that of the other analyses.
+
+<P>There is no limit on the number of .PRINT lines for each type of analysis.</DL>
+
+<H3>
+<A NAME="Anchor37420"></A><FONT COLOR="#006600">.PLOT Lines</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.PLOT PLTYPE OV1 &lt;(PLO1, PHI1)> &amp;ltOV2; &lt;(PLO2, PHI2)> ...
+OV8></TT></DD>
+
+<BR><TT></TT>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.PLOT DC V(4) V(5) V(1)</TT></DD>
+
+<DD>
+<TT>.PLOT TRAN V(17, 5) (2, 5) I(VIN) V(17) (1, 9)</TT></DD>
+
+<DD>
+<TT>.PLOT AC VM(5) VM(31, 24) VDB(5) VP(5)</TT></DD>
+
+<DD>
+<TT>.PLOT DISTO HD2 HD3(R) SIM2</TT></DD>
+
+<DD>
+<TT>.PLOT TRAN V(5, 3) V(4) (0, 5) V(7) (0, 10)</TT></DD>
+
+
+<P>The Plot line defines the contents of one plot of from one to eight
+output variables. PLTYPE is the type of analysis (DC, AC, TRAN, NOISE,
+or DISTO) for which the specified outputs are desired. The syntax for the
+OVI is identical to that for the .PRINT line and for the <B>plot</B> command
+in the interactive mode.
+
+<P>The overlap of two or more traces on any plot is indicated by the letter
+X.
+
+<P>When more than one output variable appears on the same plot, the first
+variable specified is printed as well as plotted. If a printout of all
+variables is desired, then a companion .PRINT line should be included.
+
+<P>There is no limit on the number of .PLOT lines specified for each type
+of analysis.</DL>
+
+<H3>
+<A NAME="936"></A><FONT COLOR="#006600">.FOUR: Fourier Analysis of Transient
+Analysis Output</FONT></H3>
+
+<DL>
+<DT>
+<B>General form:</B></DT>
+
+<DD>
+<TT>.FOUR FREQ OV1 &amp;ltOV2; OV3 ...></TT></DD>
+
+<BR><TT></TT>&nbsp;
+<DT>
+<B>Examples:</B></DT>
+
+<DD>
+<TT>.FOUR 100K V(5)</TT></DD>
+
+<BR>&nbsp;
+<BR>The Four (or Fourier) line controls whether SPICE performs a Fourier
+analysis as a part of the transient analysis. FREQ is the fundamental frequency,
+and OV1, ..., are the output variables for which the analysis is desired.
+The Fourier analysis is performed over the interval &amp;ltTSTOP-period;,
+TSTOP>, where TSTOP is the final time specified for the transient analysis,
+and period is one period of the fundamental frequency. The dc component
+and the first nine harmonics are determined. For maximum accuracy, TMAX
+(see the .TRAN line) should be set to period/100.0 (or less for very high-Q
+circuits).
+
+<P>
+<HR>
+<CENTER><B>- <A HREF="../">Parent Directory</A> -</B></CENTER>
+</DL>
+
+</BODY>
+</HTML>

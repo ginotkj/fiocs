@@ -1,0 +1,85 @@
+
+**** 04/18/10 18:23:36 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\rampa\test.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-testcurrent-001-pspicefiles/i-testcurrent-001.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 4n 1.5n 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\RAMPA.net" 
+
+
+
+**** INCLUDING RAMPA.net ****
+* source I-TESTCURRENT-001
+I_I2         N17580 0 DC 0Adc AC 0Aac
++PULSE 0 4m 2n 50p 1.5n 100p 10n
+R_R1         N17580 ITEST  1k TC=0,0 
+R_R2         0 ITEST  1k TC=0,0 
+
+**** RESUMING test.cir ****
+.END
+
+**** 04/18/10 18:23:36 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\rampa\test.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(ITEST)    0.0000  (N17580)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/18/10 18:23:36 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\rampa\test.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

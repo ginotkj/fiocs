@@ -1,0 +1,19 @@
+** Profile: "NAND-PRUEBA-Prueba-VDC"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-PRUEBA\Prueba-VDC.sim ] 
+
+** Creating circuit file "Prueba-VDC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-nand-pspicefiles/i-nand.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V2 0 3.3 1m 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\NAND-PRUEBA.net" 
+
+
+.END

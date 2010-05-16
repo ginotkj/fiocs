@@ -1,0 +1,8 @@
+* source I-FFD-01
+M_M1         N45231 N45251 N45225 N45225 MbreakN           
+M_M2         N45225 N45251 N45964 N45964 MbreakN           
+M_M3         N45231 N45251 N45251 N45251 MbreakP           
+M_M5         N45964 N45251 0 0 MbreakN           
+M_M4         N45231 N45251 N45251 N45251 MbreakP           
+V_V1         N45251 0 5
+M_M6         N45231 N45251 N45251 N45251 MbreakP           

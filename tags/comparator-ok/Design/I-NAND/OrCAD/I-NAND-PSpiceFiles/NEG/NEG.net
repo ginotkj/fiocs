@@ -1,0 +1,9 @@
+* source I-NAND
+V_V1         N29931 0 3.3
+M_M5         N29915 N29941 N29931 N29931 CMOSP  
++ L=.25u  
++ W=.93u         
+V_V2         N29941 0 0Vdc
+M_M6         N29915 N29941 0 0 CMOSN  
++ L=.43u  
++ W=.43u         

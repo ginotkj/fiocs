@@ -1,0 +1,100 @@
+* source I-FFD
+V_V3         C 0  
++PULSE 0 3.3 .9u .1u .1u .9u 2u
+M_FFD_NAND_M1         FFD_N00589 FFD_N00861 FFD_NAND_N00209 FFD_NAND_N00209
++  CMOSN  
++ L=.18u  
++ W=.18u         
+M_FFD_NAND_M2         FFD_NAND_N00209 FFD_X 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_FFD_NAND_M3         FFD_N00589 FFD_N00861 N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+M_FFD_NAND_M4         FFD_N00589 FFD_X N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+R_FFD_NAND_R1         FFD_N00861 0  10Meg  
+R_FFD_NAND_R2         FFD_X 0  10Meg  
+M_FFD_NAND-3_M2         FFD_NAND-3_N05674 C FFD_NAND-3_N05700 FFD_NAND-3_N05700
++  CMOSN  
++ L=.18u  
++ W=.18u         
+M_FFD_NAND-3_M3         FFD_Y FFD_X N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+M_FFD_NAND-3_M5         FFD_Y FFD_N00861 N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+M_FFD_NAND-3_M4         FFD_Y C N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+M_FFD_NAND-3_M6         FFD_NAND-3_N05700 FFD_N00861 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_FFD_NAND-3_M1         FFD_Y FFD_X FFD_NAND-3_N05674 FFD_NAND-3_N05674 CMOSN  
++ L=.18u  
++ W=.18u         
+M_FFD_NAND1_M1         FFD_N00861 FFD_Y FFD_NAND1_N00209 FFD_NAND1_N00209 CMOSN
++   
++ L=.18u  
++ W=.18u         
+M_FFD_NAND1_M2         FFD_NAND1_N00209 D 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_FFD_NAND1_M3         FFD_N00861 FFD_Y N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+M_FFD_NAND1_M4         FFD_N00861 D N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+R_FFD_NAND1_R1         FFD_Y 0  10Meg  
+R_FFD_NAND1_R2         D 0  10Meg  
+M_FFD_NAND3_M1         Q FFD_X FFD_NAND3_N00209 FFD_NAND3_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_FFD_NAND3_M2         FFD_NAND3_N00209 -Q 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_FFD_NAND3_M3         Q FFD_X N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+M_FFD_NAND3_M4         Q -Q N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+R_FFD_NAND3_R1         FFD_X 0  10Meg  
+R_FFD_NAND3_R2         -Q 0  10Meg  
+M_FFD_NAND2_M1         FFD_X FFD_N00589 FFD_NAND2_N00209 FFD_NAND2_N00209 CMOSN
++   
++ L=.18u  
++ W=.18u         
+M_FFD_NAND2_M2         FFD_NAND2_N00209 C 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_FFD_NAND2_M3         FFD_X FFD_N00589 N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+M_FFD_NAND2_M4         FFD_X C N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+R_FFD_NAND2_R1         FFD_N00589 0  10Meg  
+R_FFD_NAND2_R2         C 0  10Meg  
+M_FFD_NAND4_M1         -Q Q FFD_NAND4_N00209 FFD_NAND4_N00209 CMOSN  
++ L=.18u  
++ W=.18u         
+M_FFD_NAND4_M2         FFD_NAND4_N00209 FFD_Y 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_FFD_NAND4_M3         -Q Q N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+M_FFD_NAND4_M4         -Q FFD_Y N09541 N09541 CMOSP  
++ L=.18u  
++ W=.2u         
+R_FFD_NAND4_R1         Q 0  10Meg  
+R_FFD_NAND4_R2         FFD_Y 0  10Meg  
+V_V1         N09541 0 3.3
+V_V2         D 0  
++PULSE 0 3.3 .5u .1u .1u .8u 4u
+R_R1         -Q N09541  100k  
+R_R2         Q N09541  100k  

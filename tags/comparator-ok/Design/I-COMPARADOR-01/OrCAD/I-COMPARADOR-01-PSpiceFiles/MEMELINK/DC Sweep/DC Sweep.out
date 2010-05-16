@@ -1,0 +1,223 @@
+
+**** 05/04/10 20:03:06 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "MEMELINK-DC Sweep"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\memelink\dc swe
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "DC Sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-comparador-01-pspicefiles/i-comparador-01.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_VNMOS1 0 3.3 1m 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\MEMELINK.net" 
+
+
+
+**** INCLUDING MEMELINK.net ****
+* source I-COMPARADOR-01
+V_VNMOS2         N46564 0 3.3
+M_M5         N46696 N47946 N46564 N46564 CMOSP  
++ L=1u  
++ W=37.09u         
+V_VNMOS         N40482 0 .5
+M_M3         N46696 N47946 0 0 CMOSN  
++ L=1u  
++ W=8.003u         
+M_M2         N40219 N40482 0 0 CMOSN  
++ L=.18u  
++ W=20u         
+M_M4         0 N40501 N40242 N40242 CMOSP  
++ L=.18u  
++ W=20u         
+V_VNMOS1         N47946 0 .5
+V_VPMOS         N40501 0 2.8
+V_VDD         N40219 0 1
+V_VDD1         N40242 0 3.3
+
+**** RESUMING "DC Sweep.cir" ****
+.END
+
+Mosfet M_M5, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
+Mosfet M_M4, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M4, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M4, model CMOSP: Ps = 0 is less than W
+Mosfet M_M3, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M3, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M3, model CMOSN: Ps = 0 is less than W
+Mosfet M_M2, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M2, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M2, model CMOSN: Ps = 0 is less than W
+**** 05/04/10 20:03:06 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "MEMELINK-DC Sweep"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\memelink\dc swe
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               CMOSP           CMOSN           
+               PMOS            NMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               7            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    -.401632         .299302     
+          KP  470.883200E-06  470.883200E-06 
+       GAMMA    0               0            
+      LAMBDA    0               0            
+         RSH    6.4             6            
+          IS    1.000000E-15    1.000000E-15 
+          JS  100.000000E-06  100.000000E-06 
+          PB     .821464         .980128     
+        PBSW     .8008           .8          
+          CJ    1.165977E-03  815.376400E-06 
+        CJSW  122.005600E-12  166.520200E-12 
+          MJ     .425655         .606194     
+        MJSW     .1001           .169221     
+        CGSO  500.000000E-12  500.000000E-12 
+        CGDO  500.000000E-12  500.000000E-12 
+        CGBO    1.000000E-12    1.000000E-12 
+         TOX    4.400000E-09    4.400000E-09 
+          XJ  100.000000E-09  100.000000E-09 
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .01             .01         
+      DIOMOD    2               2            
+          K1     .598774         .542117     
+          K2 -630.087300E-09    -.035133     
+        LETA    0               0            
+        WETA    0               0            
+          U0  120.6045        268.8192       
+       XPART     .5              .5          
+        VTH0    -.401632         .299302     
+          K3     .081248        1.000000E-03 
+          W0    1.000000E-06  100.000000E-09 
+         NLX   42.193340E-09  228.107500E-09 
+        DVT0     .948505         .882304     
+        DVT1     .682461         .324768     
+          UA    1.640708E-09   -1.551592E-09 
+          UB    1.272651E-21    2.710709E-18 
+          UC -100.000000E-12   46.128640E-12 
+        VSAT  182.237700E+03  116.006100E+03 
+        RDSW  726.9944        150            
+        VOFF    -.15            -.091862     
+     NFACTOR     .921842        1.807002     
+        PCLM     .151904        2.027608     
+      PDIBL1     .056431         .784214     
+      PDIBL2     .012341        -.042689     
+       DROUT     .470272        1            
+      PSCBE1    4.022317E+09    2.314588E+09 
+      PSCBE2    7.751373E-09  500.000000E-12 
+          A0     .904176        1.525088     
+          A1    8.069322E-03    6.962179E-03 
+          A2     .560796         .524367     
+       NPEAK  415.890000E+15  235.490000E+15 
+         LDD    0               0            
+        LITL   36.331810E-09   36.331810E-09 
+         UC1  -56.000000E-12  -56.000000E-12 
+        PVAG     .124556                     
+        KETA     .020751        -.015366     
+        ETA0    1.016564E-03    5.535422E-03 
+        ETAB   -1.910199E-03 -671.692500E-06 
+         K3B   19.7189          5.015682     
+        DVT2    -.3             -.056267     
+        DSUB     .014544        3.692569E-03 
+         AGS     .131884         .400988     
+       DVT1W    0               0            
+       DVT2W    0               0            
+        PRWG    -.049475         .340675     
+        PRWB    -.420982        -.183865     
+     PDIBLCB   -1.000000E-03    -.1          
+         DWG  -30.588980E-09    5.852475E-09 
+         DWB  -11.142310E-09   11.572970E-09 
+          B0    1.909663E-06  -44.157810E-09 
+          B1    5.000000E-06                 
+        LINT   26.472300E-09   20.701890E-09 
+        WINT                   12.149120E-09 
+         DLC   26.472300E-09   20.701890E-09 
+         DWC    0              12.149120E-09 
+          CF    0               0            
+        NOIA    9.900001E+18  100.000000E+18 
+        NOIB    2.400000E+03   50.000000E+03 
+        NOIC    1.400000E-12   -1.400000E-12 
+       LKETA   -8.835292E-03   -1.853360E-03 
+       WKETA     .030613        3.404068E-03 
+       PVSAT   50               1.045662E+03 
+       PKETA   -5.087778E-03    -.0116       
+       PVTH0  633.898700E-06   -3.570294E-03 
+         PUA  364.727200E-12  -25.147800E-12 
+         PUB                   21.902820E-24 
+         PU0    7.159787       -2.447231     
+       PRDSW   -5              -1.670209     
+       PETA0  100.000000E-06 -100.000000E-06 
+         PK2   31.405140E-06    3.193075E-03 
+         VTM     .025864         .025864     
+       PBSWG     .8008           .8          
+       MJSWG     .1001           .169221     
+       CJSWG  422.000000E-12  330.000000E-12 
+
+
+Mosfet M_M5, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
+Mosfet M_M4, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M4, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M4, model CMOSP: Ps = 0 is less than W
+Mosfet M_M3, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M3, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M3, model CMOSN: Ps = 0 is less than W
+Mosfet M_M2, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M2, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M2, model CMOSN: Ps = 0 is less than W
+Mosfet M_M5, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M5, model CMOSP: Ps = 0 is less than W
+Mosfet M_M4, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M4, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M4, model CMOSP: Ps = 0 is less than W
+Mosfet M_M3, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M3, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M3, model CMOSN: Ps = 0 is less than W
+Mosfet M_M2, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_M2, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M2, model CMOSN: Ps = 0 is less than W
+
+          JOB CONCLUDED
+
+**** 05/04/10 20:03:06 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "MEMELINK-DC Sweep"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\memelink\dc swe
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .44
+

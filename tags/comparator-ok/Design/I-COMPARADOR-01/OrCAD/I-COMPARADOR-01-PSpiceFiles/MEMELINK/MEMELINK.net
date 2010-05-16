@@ -1,0 +1,19 @@
+* source I-COMPARADOR-01
+V_VNMOS2         N46564 0 3.3
+M_M5         N46696 N47946 N46564 N46564 CMOSP  
++ L=1u  
++ W=37.09u         
+V_VNMOS         N40482 0 .5
+M_M3         N46696 N47946 0 0 CMOSN  
++ L=1u  
++ W=8.003u         
+M_M2         N40219 N40482 0 0 CMOSN  
++ L=.18u  
++ W=20u         
+M_M4         0 N40501 N40242 N40242 CMOSP  
++ L=.18u  
++ W=20u         
+V_VNMOS1         N47946 0 .5
+V_VPMOS         N40501 0 2.8
+V_VDD         N40219 0 1
+V_VDD1         N40242 0 3.3

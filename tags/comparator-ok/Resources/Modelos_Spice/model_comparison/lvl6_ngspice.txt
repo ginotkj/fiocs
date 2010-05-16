@@ -1,0 +1,55 @@
+13.20 Mos6: Level 6 MOSfet model with Meyer capacitance model
+
+l Length |
+w Width |
+ad Drain area |
+as Source area |
+pd Drain perimeter |
+ps Source perimeter |
+nrd Drain squares |
+nrs Source squares |
+icvds Initial D-S voltage |
+icvgs Initial G-S voltage |
+icvbs Initial B-S voltage |
+temp Instance temperature |
+nmos N type MOSfet model |
+pmos P type MOSfet model |
+vto Threshold voltage |
+vt0 (null) |
+kv Saturation voltage factor |
+nv Saturation voltage coeff. |
+kc Saturation current factor |
+nc Saturation current coeff. |
+nvth Threshold voltage coeff. |
+ps Sat. current modification par. |
+gamma Bulk threshold parameter |
+gamma1 Bulk threshold parameter 1 |
+sigma Static feedback effect par. |
+phi Surface potential |
+lambda Channel length modulation param. |
+lambda0 Channel length modulation param. 0 |
+lambda1 Channel length modulation param. 1 |
+rd Drain ohmic resistance |
+rs Source ohmic resistance |
+cbd B-D junction capacitance |
+cbs B-S junction capacitance |
+is Bulk junction sat. current |
+pb Bulk junction potential |
+cgso Gate-source overlap cap. |
+cgdo Gate-drain overlap cap. |
+cgbo Gate-bulk overlap cap. |
+rsh Sheet resistance |
+cj Bottom junction cap per area |
+mj Bottom grading coefficient |
+cjsw Side junction cap per area |
+mjsw Side grading coefficient |
+js Bulk jct. sat. current density |
+ld Lateral diffusion |
+tox Oxide thickness |
+u0 Surface mobility |
+uo (null) |
+fc Forward bias jct. fit param. |
+tpg Gate type |
+nsub Substrate doping |
+nss Surface state density |
+tnom Parameter measurement temperature |

@@ -1,0 +1,64 @@
+
+**** 05/02/10 15:59:45 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "TEST-NEG-transient"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\test-neg\trans
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-comparador-01-pspicefiles/i-comparador-01.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_VIN .95 1.05 10u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\TEST-NEG.net" 
+
+
+
+**** INCLUDING TEST-NEG.net ****
+* source I-COMPARADOR-01
+V_VDD         N42003 0 3.3
+V_VIN         INNEG 0 1
+V_VREF         INPOS 0 1
+M_M2         NDPOS INPOS NDBIAS 0 CMOSN  
++ L=116u  
++ W=1u         
+M_M4         NDPOS NDNEG N42003 N42003 CMOSP  
++ L=8u  
++ W=1u         
+M_M1         NDNEG INNEG NDBIAS 0 CMOSN  
++ L=116  
+----$
+ERROR -- Length must be less than 0.01 meter
++ W=1u         
+M_M5         NDBIAS N41991 0 0 CMOSN  
++ L=20u  
++ W=20u         
+M_M9         NDNEG NDNEG N42003 N42003 CMOSP  
++ L=8u  
++ W=1u         
+M_M6         NOUT NDPOS N42003 N42003 CMOSP  
++ L=77u  
++ W=10u         
+M_M7         NOUT NDPOS 0 0 CMOSN  
++ L=600u  
++ W=10u         
+V_VBIAS         N41991 0 .5
+
+**** RESUMING transient.cir ****
+.END
+

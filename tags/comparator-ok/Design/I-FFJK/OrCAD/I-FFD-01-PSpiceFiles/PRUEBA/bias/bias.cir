@@ -1,0 +1,18 @@
+** Profile: "PRUEBA-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-01-PSpiceFiles\PRUEBA\bias.sim ] 
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\OrCAD 16\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 30u 0 .1u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\PRUEBA.net" 
+
+
+.END

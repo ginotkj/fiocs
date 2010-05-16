@@ -1,0 +1,10 @@
+
+Circuit: * qw-gnetlist -gspice-sdb -o mosfet.cir mosfet.sch
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+
+No. of Data Rows : 60006
+

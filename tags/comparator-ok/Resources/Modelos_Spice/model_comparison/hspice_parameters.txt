@@ -1,0 +1,237 @@
+LEVEL 49, 53 Model Parameters
+BSIM3v3
+Model Flags
+
+Name		Unit		Default		Bin		Description
+VERSION		-			3.2			No		Selects from BSIM3 Versions 3.0, 3.1, 3.2. Warning is issued if not explicitly set.
+HSPVER		-			98.2		No		Selects from Hspice Versions:98.2, 97.4, 97.2, 96.4, 96.3, 96.1
+PARAMCHK	-			0			No		PARAMCHK=1 will check model parameters for range compliance
+APWARN		-			0			No		When > 0 turns off warning message for PS,PD < Weff (Hspice specific)
+BINFLAG		-			0			No		Uses wref, lref when set > 0.9 (Hspice specific)
+MOBMOD		-			1			No		Mobility model selector
+CAPMOD		-			3			No		Selects from charge models 0,1,2,3 (LEVEL 49 CAPMOD defaults to 0.)
+CAPOP		-			-			No		Obsolete for LEVELs 49, 53. Ignored by Hspice (Hspice specific) in all versions.
+NOIMOD		-			1			No		Berkeley noise model flag
+NLEV		-			-(off)		No		Star-Hspice noise model flag (non-zero overrides NOIMOD) (Hspice specific). See Using Noise Models for more information.
+NQSMOD		-			0 (off)		No		NQS Model flag
+SFVTFLAG	-			0 (off)		No		Spline function for Vth (Hspice specific)
+VFBFLAG		-			0 (off)		No		VFB selector for CAPMOD=0 (Hspice specific)
+
+Basic Model Parameters
+
+Name		Unit		Default		Bin		Description
+VGSLIM		V			0			No		Asymptotic Vgs value, Min value is 5V. 0-value indicates an asymptote of infinity. (Hspice and LEVEL 49 specific)
+TOX			m			150e-10		No		Gate oxide thickness
+XJ			m			0.15e-6		Yes		Junction depth
+NGATE		cm -3		0			Yes		Poly gate doping concentration
+VTH0(VTHO)	V			0.7N -0.7P	Yes		Threshold voltage of long channel device at Vbs = 0 and small Vds
+NSUB		cm -3		6.0e16		Yes		Substrate doping concentration
+NCH			cm -3 Note6	1.7e17		Yes		Peak doping concentration near interface
+NLX			m			1.74e-7		Yes		Lateral nonuniform doping along channel
+K1			V 1/2		0.50		Yes		First-order body effect coefficient
+K2			-			-0.0186		Yes		Second-order body effect coefficient
+K3			-			80.0		Yes		Narrow width effect coefficient
+K3B			1/V			0			Yes		Body width coefficient of narrow width effect
+W0			m			2.5e-6		Yes		Narrow width effect coefficient
+DVT0W		1/m			0			Yes		Narrow width coefficient 0, for Vth, at small L
+DVT1W		1/m			5.3e6		Yes		Narrow width coefficient 1, for Vth, at small L
+DVT2W		1/V			-0.032		Yes		Narrow width coefficient 2, for Vth, at small L
+DVT0		-			2.2			Yes		Short channel effect coefficient 0, for V th
+DVT1		-			0.53		Yes		Short channel effect coefficient 1, for V th
+DVT2		1/V			-0.032		Yes		Short channel effect coefficient 2, for V th
+ETA0		-			0.08		Yes		Subthreshold region DIBL (drain induced barrier lowering) coefficient
+ETAB		1/V			-0.07		Yes		Subthreshold region DIBL coefficient
+DSUB		-			DROUT		Yes		DIBL coefficient exponent in subthreshold region
+VBM			V			-3.0		Yes		Maximum substrate bias, for V th calculation
+U0			cm 2/V/sec	670N 250P	Yes		Low field mobility at T = TREF = TNOM
+UA			m/V			2.25e-9		Yes		First-order mobility degradation coefficient
+UB			m 2 /V 2	5.87e-19	Yes		Second-order mobility degradation coefficient
+UC			1/V  -4.65e-11 -0.0465	Yes		Body bias sensitivity coefficient of mobility	-4.65e-11 for MOBMOD=1,2 or,	-0.0465 for MOBMOD = 3
+A0			-			1.0			Yes		Bulk charge effect coefficient for channel length
+AGS			1/V			0.0			Yes		Gate bias coefficient of Abulk
+B0			m			0.0			Yes		Bulk charge effect coefficient for channel width
+B1			m			0.0			Yes		Bulk charge effect width offset
+KETA		1/V			-0.047		Yes		Body-bias coefficient of bulk charge effect
+VOFF		V			-0.08		Yes		Offset voltage in subthreshold region
+VSAT		m/sec		8e4			Yes		Saturation velocity of carrier at T = TREF = TNOM
+A1			1/V			0			Yes		First nonsaturation factor
+A2			-			1.0			Yes		Second nonsaturation factor
+RDSW		ohm · µ m	0.0			Yes		Parasitic source drain resistance per unit width
+PRWG		1/V			0			Yes		Gate bias effect coefficient of RDSW
+PRWB		1/V 1/2		0			Yes		Body effect coefficient of RDSW
+WR			-			1.0			Yes		Width offset from Weff for Rds calculation
+NFACTOR		-			1.0			Yes		Subthreshold region swing
+CIT			F/m 2		0.0			Yes		Interface state capacitance
+CDSC		F/m 2		2.4e-4		Yes		Drain/source and channel coupling capacitance
+CDSCD		F/Vm 2		0			Yes		Drain bias sensitivity of CDSC
+CDSCB		F/Vm 2		0			Yes		Body coefficient for CDSC
+PCLM		-			1.3			Yes		Coefficient of channel length modulation values <= 0 will result in an error message and program exit.
+PDIBLC1		-			0.39		Yes		DIBL (drain induced barrier lowering) effect coefficient 1
+PDIBLC2		-			0.0086		Yes		DIBL effect coefficient 2
+PDIBLCB		1/V			0			Yes		Body effect coefficient of DIBL effect coefficients
+DROUT		-			0.56		Yes		Length dependence coefficient of the DIBL correction parameter in R out
+PSCBE1		V/m			4.24e8		Yes		substrate current induced body effect exponent 1
+PSCBE2		V/m			1.0e-5		Yes		Substrate current induced body effect coefficient 2
+PVAG		-			0			Yes		Gate dependence of Early voltage
+DELTA		V			0.01		Yes		Effective Vds parameter
+ALPHA0		m/V			0			Yes		First parameter of impact ionization current
+BETA0		V			30			Yes		Second parameter of impact ionization current
+RSH		0.0			ohm/square		No		Source/drain sheet resistance in ohm per square
+
+AC and Capacitance Parameters
+
+Name		Unit		Default		Bin		Description
+XPART		-			0			No		Charge partitioning rate flag (default deviates from BSIM3V3=0)LEVEL 49 XPART defaults to 1
+CGSO		F/m			p1(Note1)	No		Non-LDD region source-gate overlap capacitance per unit channel length
+CGDO		F/m			p2(Note2)	No		Non-LDD region source-gate overlap capacitance per unit channel length
+CGBO		F/m			0			No		Gate-bulk overlap capacitance per unit channel length
+CGS1		F/m			0.0			Yes		Lightly doped source-gate overlap region capacitance
+CGD1		F/m			0.0			Yes		Lightly doped drain-gate overlap region capacitance
+CKAPPA		F/m			0.6			Yes		Coefficient for lightly doped region overlap capacitance fringing field capacitance
+CF			F/m			(Note3)		Yes		Fringing field capacitance
+CLC			m			0.1e-6		Yes		Constant term for the short channel model
+CLE			-			0.6			Yes		Exponential term for the short channel model
+VFBCV		V			-1.0		Yes		Flat band voltage used only in CAPMOD=0 C-V calculations
+
+Length and Width Parameters
+
+Name		Unit		Default		Bin		Description
+WINT		m			0.0			No		Width offset fitting parameter from I-V without bias
+WLN			-			1.0			No		Power of length dependence of width offset
+WW			m WWN		0.0			No		Coefficient of width dependence for width offset
+WWN			-			1.0			No		Power of width dependence of width offset.
+WWL			m WWN		*m WLN		0.0	No	Coefficient of length and width cross term for width offset
+DWG			m/V			0.0			Yes		Coefficient of Weff's gate dependence
+DWB			m/V 1/2		0.0			Yes		Coefficient of Weff's substrate body bias dependence
+LINT		m			0.0			No		Length offset fitting parameter from I-V without bias
+LL			m LLN		0.0			No		Coefficient of length dependence for length offset
+LLN			-			1.0			No		Power of length dependence of length offset
+LW			m LWN		0.0			No		Coefficient of width dependence for length offset
+LWN			-			1.0			No		Power of width dependence of length offset
+LWL			mLWN m*LLN	0.0			No		Coefficient of length and width cross term for length offset
+DLC			m			LINT		No		Length offset fitting parameter from CV
+DWC			m			WINT		No		Width offset fitting parameter from CV
+
+Temperature Parameters
+
+Name		Unit		Default		Bin		Description
+KT1			V			-0.11		Yes		Temperature coefficient for Vth
+KT1L		m-V			0.0			Yes		Temperature coefficient for channel length dependence of Vth
+KT2			-			0.022		Yes		Body bias coefficient of Vth temperature effect
+UTE			-			-1.5		Yes		Mobility temperature exponent
+UA1			m/V			4.31e-9		Yes		Temperature coefficient for UA
+UB1			(m/V) 2		-7.61e-18	Yes		Temperature coefficient for UB
+UC1			m/V 2		-5.69e-11	Yes		Temperature coefficient for UC
+AT			m/sec		3.3e4		Yes		Temperature coefficient for saturation velocity
+PRT			ohm-um		0			Yes		Temperature coefficient for RDSW
+XTI			-			3.0			No		Junction current temperature exponent
+
+Bin Description Parameters
+
+Name		Unit		Default		Bin		Description
+LMIN		m			0.0			No		Maximum channel length
+LMAX		m			1.0			No		Maximum channel length
+WMIN		m			0.0			No		Minimum channel width
+WMAX		m			1.0			No		Maximum channel width
+BINUNIT		 			 			 		Assumes weff, leff, wref, lref units are in microns when BINUNIT=1 or meters otherwise
+
+Process Parameters
+
+Name		Unit		Default		Bin		Description
+GAMMA1		V 1/2		Note 8		Yes		Body effect coefficient near the surface
+GAMMA2		V 1/2		Note 9		Yes		Body effect coefficient in the bulk
+VBX			V			Note 10		Yes		VBX at which the depletion region width equals XT
+XT			m			1.55e-7		Yes		Doping depth
+
+Noise Parameters
+
+Name		Unit		Default		Bin		Description
+NIOA		-		1.0e20N 9.9e18P	No		Body effect coefficient near the surface
+NOIB		-		5.0e4N 2.4e3P	No		Body effect coefficient in the bulk
+NOIC		-	 -1.4e-12N 1.4e-12P	No		VBX at which the depletion region width equals XT
+EM			V/m			4.1e7		No		Flicker noise parameter
+AF			-			1.0			No		Flicker noise exponent
+KF			-			0.0			No		Flicker noise coefficient
+EF			-			1.0			No		Flicker noise frequency exponent
+NOTE: See also Using Noise Models, for Hspice noise model usage (Hspice parameter NLEV overrides Berkeley NOIMOD).
+
+Junction Parameters
+
+Name		Unit		Default		Bin		Description
+ACM			-			10			No		Area calculation method selector (Hspice specific)	ACM=0-3 uses Hspice junction models	ACM=10-13 uses Berkeley junction models	LEVEL 49 ACM defaults to 0
+JS			A/m2		0.0			No		Bulk junction saturation current	(Default deviates from BSIM3v3 = 1.0e-4)
+JSW			A/m			0.0			No		Sidewall bulk junction saturation current
+NJ			-			1			No		Emission coefficient (used only with Berkeley junction model, i.e.,ACM=10-13)
+N			-			1			No		Emission coefficient (Hspice-specific), (used only with Hspice junction model, i.e., ACM=0-3)
+CJ			F/m2		5.79e-4		No		Zero-bias bulk junction capacitance	(Default deviates from BSIM3v3 = 5.0e-4)
+CJSW		F/m			0.0			No		Zero-bias sidewall bulk junction capacitance	(Default deviates from BSIM3v3 = 5.0e-10)
+CJSWG		F/m			CJSW		No		Zero-bias gate-edge sidewall bulk junction capacitance (only used with Berkeley junction model, i.e., ACM=10-13)
+CJGATE		F/m			CJSW		No		Zero-bias gate-edge sidewall bulk junction capacitance (Hspice-specific) (only used with ACM=3!)
+PB, PHIB	V			1.0			No		Bulk junction contact potential
+PBSW		V			1.0			No		Sidewall bulk junction contact potential
+PHP			V			1.0			No		Sidewall bulk junction contact potential (Hspice-specific) (only used with Hspice junction model, i.e., ACM=0-3)
+PBSWG		V			PBSW		No		Gate-edge sidewall bulk junction contact potential (only used with Berkeley junction model, i.e., ACM=10-13). Note: there is no equivalent Hspice parameter. Gate-edge contact potential is always set to PHP for Hspice junction model.
+MJ			-			0.5			No		Bulk junction grading coefficient
+MJSW		-			0.33		No		Sidewall bulk junction grading coefficient
+MJSWG		-			MJSW		No		Gate-edge sidewall bulk junction grading coefficient (only used with Berkeley junction model, i.e., ACM=10-13)
+Note: there is no equivalent Hspice parameter. Gate-edge grading coefficient is always set to MJSW for Hspice junction model.
+NOTE: See Using a MOSFET Diode Model for Hspice junction diode model usage.
+
+NonQuasi-Static (NQS) Parameters
+
+Name		Unit		Default		Bin		Description
+ELM			-			5.0			Yes		Elmore constant
+
+Version 3.2 Parameters
+
+Name		Unit		Default		Bin		Description
+TOXM		m			TOX			No		Reference gate oxide thickness
+VFB		V			Note 11			Yes		DC flatband voltage
+NOFF		-			1.0			Yes		I-V parameter for weak to strong inversion transition
+VOFFCV		-			0.0			Yes		C-V parameter for weak to strong inversion transition
+JTH		A			0.1			No		Diode limiting current
+ALPHA1		V-1			0.0			Yes		Substrate current parameter
+ACDE		m/V			1.0			Yes		Exponential coefficient for charge thickness in the accumulation and depletion regions
+MOIN		m/V			15.0			Yes		Coefficient for gate-bias dependent surface potential
+TPB		V/K			0.0			No		Temperature coefficient of PB
+TPBSW		V/K			0.0			No		Temperature coefficient of PBSW
+TPBSWG		V/K			0.0			No		Temperature coefficient of PBSWG
+TCJ		V/K			0.0			No		Temperature coefficient of CJ
+TCJSW		V/K			0.0			No		Temperature coefficient of CJSW
+TCJSWG		V/K			0.0			No		Temperature coefficient of CJSWG
+LLC		mlln			LL			No		Coefficient of length dependence for C-V channel length offset
+LWC		mlwn			LW			No		Coefficient of width dependence for C-V channel length offset
+LWLC		mlln+lwn			LWL			No		Coefficient of length and width for C-V channel length offset
+WLC		mwln			WL			No		Coefficient of length dependence for C-V channel width offset
+WWC		mwwn			WW			No		Coefficient of width dependence for C-V channel width offset
+WWLC	mwln+	wwn		WWL			No		Coefficient of length and width cross terms for C-V channel width offset
+
+Notes:
+1. If C gso is not given, it is calculated as follows:
+If ( dlc is given and is greater than 0.0), then,
+cgso = p1 = max(0,dlc*cox - cgs1)
+Otherwise, cgso = 0.6*xj*cox
+2. If C gdo is not given, it is calculated as follows:
+if ( dlc is given and is greater than 0.0), then,
+cgdo = p2 = max(0,dlc*cox - cgd1) 
+Otherwise cgdo = 0.6*xj*cox
+3. If C f is not given, it is calculated using:
+4. If Vth0 is not specified in the .MODEL statement, it is calculated with Vfb = -1, using:
+5. If K1 and K2 are not given, they are calculated using:
+6. If nch is not given, and GAMMA 1 is given, nch is calculated from:
+If both nch and GAMMA 1 are not given, nch defaults to 1.7e17 per cubic meter and GAMMA 1 is calculated from nch.
+7. If PHI is not given, it is calculated using:
+8. If GAMMA 1 is not given, it is calculated using:
+9. If GAMMA 2 is not given, it is calculated using:
+10. If V bx is not given, it is calculated using:
+11. There are three ways for the BSIM3 model to calculate Vth:
+    * Using K1 and K2 values that are user specified
+    * Using GAMMA1, GAMMA2, VBM, and VBX values entered in the .MODEL statement
+    * Using NPEAK, NSUB, XT, and VBM values that are user specified
+
+The model parameter U0 can be entered in meters or centimeters.
+U0 is converted to m2/Vsec as follows: if U0 is greater than 1, it is multiplied by 1e-4.
+The parameter NSUB must be entered in cm-3 units.
+Specify a negative value of VTH0 for p-channel in the .MODEL statement.
+The impact ionization current determined by the model parameters PSCBE1 and PSCBE2
+contributes to the bulk current.

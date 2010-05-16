@@ -1,0 +1,7 @@
+* source I-NAND
+M_NAND_A1_M1         N00219 N00079 NAND_A1_N14393 0 MbreakN           
+M_NAND_A1_M2         NAND_A1_N14393 N00079 0 0 MbreakN           
+M_NAND_A1_M3         N00219 N00079 N00079 N00079 MbreakP           
+M_NAND_A1_M4         N00219 N00079 N00079 N00079 MbreakP           
+V_V1         N00079 0 5v
+R_R1         0 N00219  1k TC=0,0 

@@ -1,0 +1,147 @@
+(ExpressProject "Caracterizacion"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "C:\OrCAD\OrCAD_16.0\tools\Capture\library\pspice\analog.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_16.0\tools\Capture\library\pspice\analog.olb")
+        (Type "Schematic Library"))
+      (File "C:\OrCAD\OrCAD_16.0\tools\Capture\library\pspice\breakout.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_16.0\tools\Capture\library\pspice\breakout.olb")
+        (Type "Schematic Library"))
+      (File "C:\OrCAD\OrCAD_16.0\tools\Capture\library\pspice\source.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_16.0\tools\Capture\library\pspice\source.olb")
+        (Type "Schematic Library"))
+      (File "C:\OrCAD\OrCAD_16.0\tools\Capture\library\pspice\sourcstm.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_16.0\tools\Capture\library\pspice\sourcstm.olb")
+        (Type "Schematic Library"))
+      (File "C:\OrCAD\OrCAD_16.0\tools\Capture\library\pspice\special.olb"
+        (DisplayName
+           "C:\OrCAD\OrCAD_16.0\tools\Capture\library\pspice\special.olb")
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "caracterizacion.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "TRUE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}")
+    (RootChangedForceReNetlist "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\caracterizacion-pspicefiles\nands\nands.net"
+      (Type "Report"))
+    (File ".\caracterizacion-pspicefiles\nand8\nand8.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\caracterizacion-pspicefiles\caracterizacion.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\caracterizacion-pspicefiles\caracterizacion.lib")))
+    (Folder "Stimulus Files")
+    (Folder "Include Files")
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\caracterizacion-pspicefiles\nand8\bias.sim"
+        (DisplayName "NAND8-bias")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\caracterizacion-pspicefiles\nands\test.sim"
+        (DisplayName "NANDS-test")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\caracterizacion-pspicefiles\nand8\bias.sim")))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (NAND-7
+      (FullPartName "NAND-7.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-5
+      (FullPartName "NAND-5.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-4
+      (FullPartName "NAND-4.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-3
+      (FullPartName "NAND-3.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (NEG
+      (FullPartName "NEG.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-2
+      (FullPartName "NAND-2.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-8
+      (FullPartName "NAND-8.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSTIM
+      (FullPartName "VSTIM.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD")
+  (MPSSessionName "FABRICIO")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion.dsn"
+         "NANDS")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion.dsn"
+         "NANDS" "NANDS"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 671 0 816"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 75 1723 75 774")
+        (Scroll "0 0")
+        (Zoom "135"))
+      (Path
+         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\CARACTERIZACION\CARACTERIZACION.DSN")
+      (Schematic "NANDS")
+      (Page "NANDS"))))

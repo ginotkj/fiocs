@@ -1,0 +1,26 @@
+* source I-FFD
+V_IN2         N27481 0  
++PULSE 0 3 10u 1.5u 1.5u 2u 15u
+M_M1         OUT N27521 N27469 N27469 CMOSN  
++ L=.2u  
++ W=.2u         
+M_M5         OUT N27297 N27449 N27449 CMOSP  
++ L=.2u  
++ W=.4u         
+M_M2         N27469 N27481 N27495 N27495 CMOSN  
++ L=.2u  
++ W=.2u         
+V_VDD         N27449 0 3.3
+V_IN3         N27297 0  
++PULSE 3 0 20u 1.5u 1.5u 2u 25u
+M_M3         OUT N27521 N27449 N27449 CMOSP  
++ L=.2u  
++ W=.4u         
+M_M6         N27495 N27297 0 0 CMOSN  
++ L=.2u  
++ W=.2u         
+M_M4         OUT N27481 N27449 N27449 CMOSP  
++ L=.2u  
++ W=.4u         
+V_IN1         N27521 0  
++PULSE 0 3 5u 1.5u 1.5u 2u 10u

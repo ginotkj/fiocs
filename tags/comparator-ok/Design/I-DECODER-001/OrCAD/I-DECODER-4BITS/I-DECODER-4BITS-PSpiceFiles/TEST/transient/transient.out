@@ -1,0 +1,610 @@
+
+**** 01/28/10 21:29:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits-pspicefiles\test
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 15u 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\TEST.net" 
+
+
+
+**** INCLUDING TEST.net ****
+* source I-DECODER-4BITS
+R_R4         LSB N13369  10Meg  
+R_R1         MSB N13369  10Meg  
+V_VDD         N13369 0 3.3
+R_DECODER_R2         DECODER_N10574 MSB  1  
+M_DECODER_NAND_M2         DECODER_NAND_N27813 Q15 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND_M4         DECODER_N00277 Q15 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND_R1         0 N13020  10Meg  
+R_DECODER_NAND_R2         0 Q15  10Meg  
+M_DECODER_NAND_M5         DECODER_N00277 N13020 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND_M6         DECODER_N00277 N13020 DECODER_NAND_N27813 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND7_M2         DECODER_NAND7_N27813 Q6 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND7_M4         DECODER_N05416 Q6 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND7_R1         0 N12600  10Meg  
+R_DECODER_NAND7_R2         0 Q6  10Meg  
+M_DECODER_NAND7_M5         DECODER_N05416 N12600 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND7_M6         DECODER_N05416 N12600 DECODER_NAND7_N27813 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND10_M2         DECODER_NAND10_N27813 Q12 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND10_M4         DECODER_N05842 Q12 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND10_R1         0 N12714  10Meg  
+R_DECODER_NAND10_R2         0 Q12  10Meg  
+M_DECODER_NAND10_M5         DECODER_N05842 N12714 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND10_M6         DECODER_N05842 N12714 DECODER_NAND10_N27813 0 CMOSN
++   
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND4_M2         DECODER_NAND4_N27813 Q7 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND4_M4         DECODER_N00437 Q7 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND4_R1         0 N12648  10Meg  
+R_DECODER_NAND4_R2         0 Q7  10Meg  
+M_DECODER_NAND4_M5         DECODER_N00437 N12648 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND4_M6         DECODER_N00437 N12648 DECODER_NAND4_N27813 0 CMOSN  
++ L=.18u  
++ W=.18u         
+R_DECODER_R3         0 DECODER_N10574  10Meg  
+M_DECODER_NAND1_M2         DECODER_NAND1_N27813 Q13 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND1_M4         DECODER_N00293 Q13 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND1_R1         0 N12900  10Meg  
+R_DECODER_NAND1_R2         0 Q13  10Meg  
+M_DECODER_NAND1_M5         DECODER_N00293 N12900 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND1_M6         DECODER_N00293 N12900 DECODER_NAND1_N27813 0 CMOSN  
++ L=.18u  
++ W=.18u         
+R_DECODER_INVERSOR2_R1         0 Q4  10Meg  
+M_DECODER_INVERSOR2_M5         DECODER_N21342 Q4 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_INVERSOR2_M6         DECODER_N21342 Q4 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND8_M2         DECODER_NAND8_N27813 Q10 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND8_M4         DECODER_N05692 Q10 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND8_R1         0 N12714  10Meg  
+R_DECODER_NAND8_R2         0 Q10  10Meg  
+M_DECODER_NAND8_M5         DECODER_N05692 N12714 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND8_M6         DECODER_N05692 N12714 DECODER_NAND8_N27813 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND11_M2         DECODER_NAND11_N27813 DECODER_N05842 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND11_M4         3SB DECODER_N05842 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND11_R1         0 DECODER_N21342  10Meg  
+R_DECODER_NAND11_R2         0 DECODER_N05842  10Meg  
+M_DECODER_NAND11_M5         3SB DECODER_N21342 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND11_M6         3SB DECODER_N21342 DECODER_NAND11_N27813 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND5_M2         DECODER_NAND5_N27813 Q5 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND5_M4         DECODER_N00389 Q5 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND5_R1         0 N12600  10Meg  
+R_DECODER_NAND5_R2         0 Q5  10Meg  
+M_DECODER_NAND5_M5         DECODER_N00389 N12600 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND5_M6         DECODER_N00389 N12600 DECODER_NAND5_N27813 0 CMOSN  
++ L=.18u  
++ W=.18u         
+R_DECODER_INVERSOR1_R1         0 Q2  10Meg  
+M_DECODER_INVERSOR1_M5         DECODER_N05351 Q2 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_INVERSOR1_M6         DECODER_N05351 Q2 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+R_DECODER_INVERSOR_R1         0 Q1  10Meg  
+M_DECODER_INVERSOR_M5         DECODER_N00653 Q1 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_INVERSOR_M6         DECODER_N00653 Q1 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+R_DECODER_R1         Q8 DECODER_N10574  1  
+M_DECODER_NAND2_M2         DECODER_NAND2_N27813 Q11 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND2_M4         DECODER_N00317 Q11 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND2_R1         0 N12798  10Meg  
+R_DECODER_NAND2_R2         0 Q11  10Meg  
+M_DECODER_NAND2_M5         DECODER_N00317 N12798 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND2_M6         DECODER_N00317 N12798 DECODER_NAND2_N27813 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND-4_M7         DECODER_NAND-4_N35977 DECODER_N05550 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND-4_M5         2SB DECODER_N05692 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND-4_M1         2SB DECODER_N05351 DECODER_NAND-4_N35641 0 CMOSN  
++ L=.18u  
++ W=.18u         
+R_DECODER_NAND-4_R4         DECODER_N05550 0  10Meg  
+M_DECODER_NAND-4_M6         DECODER_NAND-4_N35937 DECODER_N05692
++  DECODER_NAND-4_N35977 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND-4_M2         DECODER_NAND-4_N35641 DECODER_N05416
++  DECODER_NAND-4_N35937 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND-4_M8         2SB DECODER_N05550 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND-4_M3         2SB DECODER_N05351 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND-4_R1         DECODER_N05351 0  10Meg  
+M_DECODER_NAND-4_M4         2SB DECODER_N05416 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND-4_R2         DECODER_N05416 0  10Meg  
+R_DECODER_NAND-4_R3         DECODER_N05692 0  10Meg  
+M_DECODER_NAND6_M2         DECODER_NAND6_N27813 Q3 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND6_M4         DECODER_N00349 Q3 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND6_R1         0 N12562  10Meg  
+R_DECODER_NAND6_R2         0 Q3  10Meg  
+M_DECODER_NAND6_M5         DECODER_N00349 N12562 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND6_M6         DECODER_N00349 N12562 DECODER_NAND6_N27813 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND9_M2         DECODER_NAND9_N27813 Q14 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND9_M4         DECODER_N05550 Q14 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND9_R1         0 N12900  10Meg  
+R_DECODER_NAND9_R2         0 Q14  10Meg  
+M_DECODER_NAND9_M5         DECODER_N05550 N12900 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND9_M6         DECODER_N05550 N12900 DECODER_NAND9_N27813 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND3_M2         DECODER_NAND3_N27813 Q9 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND3_M4         DECODER_N00265 Q9 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND3_R1         0 N12714  10Meg  
+R_DECODER_NAND3_R2         0 Q9  10Meg  
+M_DECODER_NAND3_M5         DECODER_N00265 N12714 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND3_M6         DECODER_N00265 N12714 DECODER_NAND3_N27813 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND-8_M1         LSB DECODER_N00653 DECODER_NAND-8_N53888 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND-8_M14         DECODER_NAND-8_N53542 DECODER_N00293
++  DECODER_NAND-8_N56639 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND-8_M6         DECODER_NAND-8_N54114 DECODER_N00389
++  DECODER_NAND-8_N54154 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND-8_M8         LSB DECODER_N00293 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND-8_M16         LSB DECODER_N00437 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND-8_R6         DECODER_N00317 0  10Meg  
+M_DECODER_NAND-8_M2         DECODER_NAND-8_N53888 DECODER_N00349
++  DECODER_NAND-8_N54114 0 CMOSN  
++ L=.18u  
++ W=.18u         
+R_DECODER_NAND-8_R8         DECODER_N00277 0  10Meg  
+R_DECODER_NAND-8_R7         DECODER_N00293 0  10Meg  
+M_DECODER_NAND-8_M3         LSB DECODER_N00349 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND-8_R1         DECODER_N00653 0  10Meg  
+R_DECODER_NAND-8_R2         DECODER_N00349 0  10Meg  
+R_DECODER_NAND-8_R5         DECODER_N00265 0  10Meg  
+M_DECODER_NAND-8_M15         DECODER_NAND-8_N56639 DECODER_N00277 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND-8_M4         LSB DECODER_N00389 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND-8_R3         DECODER_N00389 0  10Meg  
+M_DECODER_NAND-8_M11         LSB DECODER_N00653 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND-8_M7         DECODER_NAND-8_N54154 DECODER_N00437
++  DECODER_NAND-8_N53250 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND-8_M9         LSB DECODER_N00317 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND-8_M12         LSB DECODER_N00265 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+R_DECODER_NAND-8_R4         DECODER_N00437 0  10Meg  
+M_DECODER_NAND-8_M5         LSB DECODER_N00277 N13369 N13369 CMOSP  
++ L=.18u  
++ W=.2u         
+M_DECODER_NAND-8_M10         DECODER_NAND-8_N53250 DECODER_N00265
++  DECODER_NAND-8_N53536 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_DECODER_NAND-8_M13         DECODER_NAND-8_N53536 DECODER_N00317
++  DECODER_NAND-8_N53542 0 CMOSN  
++ L=.18u  
++ W=.18u         
+R_R2         3SB N13369  10Meg  
+V_SEALES_-V2         N12562 0  
++PULSE 0 3 1.9u .1u 0 13u 15u
+V_SEALES_V13         Q13 0  
++PULSE 3 0 12.9u .1u 0 2u 15u
+V_SEALES_V3         Q3 0  
++PULSE 3 0 2.9u .1u 0 12u 15u
+V_SEALES_V14         Q14 0  
++PULSE 3 0 13.9u .1u 0 1u 15u
+V_SEALES_V15         Q15 0  
++PULSE 3 0 14.9u .1u 0u 0u 15u
+V_SEALES_V1         Q1 0  
++PULSE 3 0 0.9u .1u 0 14u 15u
+V_SEALES_V9         Q9 0  
++PULSE 3 0 8.9u .1u 0 6u 15u
+V_SEALES_V8         Q8 0  
++PULSE 3 0 7.9u .1u 0 7u 15u
+V_SEALES_V4         Q4 0  
++PULSE 3 0 3.9u .1u 0 11u 15u
+V_SEALES_-V8         N12714 0  
++PULSE 0 3 7.9u .1u 0 7u 15u
+V_SEALES_-V14         N13020 0  
++PULSE 0 3 13.9u .1u 0 1u 15u
+V_SEALES_V6         Q6 0  
++PULSE 3 0 5.9u .1u 0 9u 15u
+V_SEALES_V10         Q10 0  
++PULSE 3 0 9.9u .1u 0 5u 15u
+V_SEALES_-V10         N12798 0  
++PULSE 0 3 9.9u .1u 0 5u 15u
+V_SEALES_V11         Q11 0  
++PULSE 3 0 10.9u .1u 0 4u 15u
+V_SEALES_-V4         N12600 0  
++PULSE 0 3 3.9u .1u 0 11u 15u
+V_SEALES_-V6         N12648 0  
++PULSE 0 3 5.9u .1u 0 9u 15u
+V_SEALES_V12         Q12 0  
++PULSE 3 0 11.9u .1u 0 3u 15u
+V_SEALES_V2         Q2 0  
++PULSE 3 0 1.9u .1u 0 13u 15u
+V_SEALES_-V12         N12900 0  
++PULSE 0 3 11.9u .1u 0 3u 15u
+V_SEALES_V5         Q5 0  
++PULSE 3 0 4.9u .1u 0 10u 15u
+V_SEALES_V7         Q7 0  
++PULSE 3 0 6.9u .1u 0 8u 15u
+R_R3         2SB N13369  10Meg  
+
+**** RESUMING transient.cir ****
+.END
+
+WARNING -- Mosfet M_DECODER_NAND_M2, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_DECODER_NAND_M2, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_DECODER_NAND_M4, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_DECODER_NAND_M4, model CMOSP: Ps = 0 is less than W
+**** 01/28/10 21:29:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits-pspicefiles\test
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               CMOSN           CMOSP           
+               NMOS            PMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               7            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .294194        -.413091     
+          KP  460.419200E-06  460.419200E-06 
+       GAMMA    0               0            
+      LAMBDA    0               0            
+         RSH    6.2             5.9          
+          IS    1.000000E-15    1.000000E-15 
+          JS  100.000000E-06  100.000000E-06 
+          PB     .99             .821464     
+        PBSW     .8              .8008       
+          CJ  815.244000E-06    1.165977E-03 
+        CJSW  165.796200E-12  122.005600E-12 
+          MJ     .610228         .425655     
+        MJSW     .163262         .1001       
+        CGSO  500.000000E-12  500.000000E-12 
+        CGDO  500.000000E-12  500.000000E-12 
+        CGBO    1.000000E-12    1.000000E-12 
+         TOX    4.500000E-09    4.500000E-09 
+          XJ  100.000000E-09  100.000000E-09 
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .01             .01         
+      DIOMOD    2               2            
+          K1     .541355         .59909      
+          K2    -.032332     -669.794000E-09 
+        LETA    0               0            
+        WETA    0               0            
+          U0  269.8792        118.3014       
+       XPART     .5              .5          
+        VTH0     .294194        -.413091     
+          K3    1.000406E-03     .080859     
+          W0  100.000000E-09    1.000000E-06 
+         NLX  206.491900E-09   25.530790E-09 
+        DVT0     .565214         .819884     
+        DVT1     .260305         .744212     
+          UA   -1.619209E-09    1.535614E-09 
+          UB    2.953688E-18    1.000000E-21 
+          UC   57.637850E-12 -100.000000E-12 
+        VSAT  106.504000E+03  173.454300E+03 
+        RDSW  150             677.8533       
+        VOFF    -.09299         -.142681     
+     NFACTOR    2.044734         .94145      
+        PCLM    1.968647         .334199     
+      PDIBL1    1                .132793     
+      PDIBL2    -.072042        9.825629E-03 
+       DROUT    1                .81589      
+      PSCBE1    2.350722E+09    3.057881E+09 
+      PSCBE2  508.313600E-12    5.892816E-09 
+          A0    1.425322         .926787     
+          A1     .023731         .01033      
+          A2     .550469         .752154     
+       NPEAK  235.490000E+15  415.890000E+15 
+         LDD    0               0            
+        LITL   36.742350E-09   36.742350E-09 
+         UC1  -56.000000E-12  -56.000000E-12 
+        PVAG                     .122566     
+        KETA    -.016685         .022875     
+        ETA0    6.051176E-03    1.263659E-03 
+        ETAB -858.512600E-06   -2.195822E-03 
+         K3B    5.01511        19.71403      
+        DVT2    -.067374        -.3          
+        DSUB    3.642935E-03    4.891602E-03 
+         AGS     .37123          .166834     
+       DVT1W    0               0            
+       DVT2W    0               0            
+        PRWG     .34061         -.054897     
+        PRWB    -.183689        -.5          
+     PDIBLCB    -.1            -1.000000E-03 
+         DWG    5.313945E-09  -25.031010E-09 
+         DWB   13.440770E-09  -12.379610E-09 
+          B0  -23.699750E-09    1.874426E-06 
+          B1                    5.000000E-06 
+        LINT   20.673220E-09   27.788770E-09 
+        WINT   12.447730E-09                 
+         DLC   20.673220E-09   27.788770E-09 
+         DWC   12.447730E-09    0            
+          CF    0               0            
+        NOIA  100.000000E+18    9.900001E+18 
+        NOIB   50.000000E+03    2.400000E+03 
+        NOIC   -1.400000E-12    1.400000E-12 
+       LKETA  399.601500E-06    -.010867     
+       WKETA    3.401938E-03     .03239      
+       PVSAT  790.3922         50            
+       PKETA    -.014873       -6.167985E-03 
+       PVTH0   -4.814415E-03    1.001339E-03 
+         PUA  -31.414400E-12  362.786900E-12 
+         PU0   -4.028575        7.380991     
+       PRDSW   -2.504635       -5            
+       PETA0  -67.588480E-06  100.000000E-06 
+         PK2    3.159047E-03   30.964830E-06 
+         VTM     .025864         .025864     
+       PBSWG     .8              .8008       
+       MJSWG     .163262         .1001       
+       CJSWG  330.000000E-12  422.000000E-12 
+
+
+WARNING -- Mosfet M_DECODER_NAND_M2, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_DECODER_NAND_M2, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_DECODER_NAND_M4, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_DECODER_NAND_M4, model CMOSP: Ps = 0 is less than W
+WARNING -- Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_SEALES_V15
+**** 01/28/10 21:29:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits-pspicefiles\test
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   Q1)    3.0000  (   Q2)    3.0000  (   Q3)    3.0000  (   Q4)    3.0000      
+
+(   Q5)    3.0000  (   Q6)    3.0000  (   Q7)    3.0000  (   Q8)    3.0000      
+
+(   Q9)    3.0000  (  2SB)    3.3000  (  3SB)    3.3000  (  LSB)    3.3000      
+
+(  MSB)    3.0000  (  Q10)    3.0000  (  Q11)    3.0000  (  Q12)    3.0000      
+
+(  Q13)    3.0000  (  Q14)    3.0000  (  Q15)    3.0000  (N12562)    0.0000     
+
+(N12600)    0.0000 (N12648)    0.0000 (N12714)    0.0000 (N12798)    0.0000     
+
+(N12900)    0.0000 (N13020)    0.0000 (N13369)    3.3000                        
+
+(DECODER_N00265)    3.2975            (DECODER_N00277)    3.2975                
+
+(DECODER_N00293)    3.2975            (DECODER_N00317)    3.2975                
+
+(DECODER_N00349)    3.2975            (DECODER_N00389)    3.2975                
+
+(DECODER_N00437)    3.2975            (DECODER_N00653) 447.8E-06                
+
+(DECODER_N05351) 447.8E-06            (DECODER_N05416)    3.2975                
+
+(DECODER_N05550)    3.2975            (DECODER_N05692)    3.2975                
+
+(DECODER_N05842)    3.2975            (DECODER_N10574)    3.0000                
+
+(DECODER_N21342) 447.8E-06            (DECODER_NAND_N27813) 1.919E-06           
+
+(DECODER_NAND1_N27813) 1.919E-06      (DECODER_NAND2_N27813) 1.919E-06          
+
+(DECODER_NAND3_N27813) 1.919E-06      (DECODER_NAND4_N27813) 1.919E-06          
+
+(DECODER_NAND5_N27813) 1.919E-06      (DECODER_NAND6_N27813) 1.919E-06          
+
+(DECODER_NAND7_N27813) 1.919E-06      (DECODER_NAND8_N27813) 1.919E-06          
+
+(DECODER_NAND9_N27813) 1.919E-06      (DECODER_NAND-4_N35641) 6.792E-06         
+
+(DECODER_NAND-4_N35937) 4.528E-06     (DECODER_NAND-4_N35977) 2.264E-06         
+
+(DECODER_NAND-8_N53250) 9.053E-06     (DECODER_NAND-8_N53536) 6.790E-06         
+
+(DECODER_NAND-8_N53542) 4.527E-06     (DECODER_NAND-8_N53888) 15.84E-06         
+
+(DECODER_NAND-8_N54114) 13.58E-06     (DECODER_NAND-8_N54154) 11.32E-06         
+
+(DECODER_NAND-8_N56639) 2.263E-06     (DECODER_NAND10_N27813) 1.919E-06         
+
+(DECODER_NAND11_N27813) 2.264E-06     
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -4.212E-06
+    V_SEALES_-V2   0.000E+00
+    V_SEALES_V13  -3.000E-07
+    V_SEALES_V3  -3.000E-07
+    V_SEALES_V14  -3.000E-07
+    V_SEALES_V15  -3.000E-07
+    V_SEALES_V1  -3.000E-07
+    V_SEALES_V9  -3.000E-07
+    V_SEALES_V8  -2.700E-07
+    V_SEALES_V4  -3.000E-07
+    V_SEALES_-V8   0.000E+00
+    V_SEALES_-V14   0.000E+00
+    V_SEALES_V6  -3.000E-07
+    V_SEALES_V10  -3.000E-07
+    V_SEALES_-V10   0.000E+00
+    V_SEALES_V11  -3.000E-07
+    V_SEALES_-V4   0.000E+00
+    V_SEALES_-V6   0.000E+00
+    V_SEALES_V12  -3.000E-07
+    V_SEALES_V2  -3.000E-07
+    V_SEALES_-V12   0.000E+00
+    V_SEALES_V5  -3.000E-07
+    V_SEALES_V7  -3.000E-07
+
+    TOTAL POWER DISSIPATION   2.73E-05  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/28/10 21:29:49 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "TEST-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-DECODER-001\OrCAD\I-DECODER-4BITS\i-decoder-4bits-pspicefiles\test
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        2.67
+

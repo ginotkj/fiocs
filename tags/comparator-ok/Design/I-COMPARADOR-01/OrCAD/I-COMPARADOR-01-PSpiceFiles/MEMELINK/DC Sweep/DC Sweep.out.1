@@ -1,0 +1,54 @@
+
+**** 05/02/10 18:38:00 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "MEMELINK-DC Sweep"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\memelink\dc swe
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "DC Sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-comparador-01-pspicefiles/i-comparador-01.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN VIN 0.8 1.20 10u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\MEMELINK.net" 
+
+
+
+**** INCLUDING MEMELINK.net ****
+* source I-COMPARADOR-01
+V_VDD2         N42165 0 2
+M_M3         N42165 N42102 N42165 N42165 CMOSN  
++ L=.2u  
++ W=.2u         
+V_VNMOS         N40482 0 2
+V_VNMOS1         N42102 0 3
+M_M2         N40219 N40482 0 0 CMOSN  
++ L=.2u  
++ W=.2u         
+M_M4         0 N40501 N40242 N40242 CMOSP  
++ L=.2u  
++ W=.2u         
+V_VPMOS         N40501 0 0
+V_VDD         N40219 0 1
+V_VDD1         N40242 0 3.3
+
+**** RESUMING "DC Sweep.cir" ****
+.END
+
+
+ERROR -- DC device VIN is undefined

@@ -1,0 +1,11 @@
+(component-library "../sym2")
+(component-library-search "../sym2")
+
+(define gedasources "/home/facundo/tesis/fiocs/Design/I-FLASH-01/gEDA/6BITS/schem2/sources2")
+(source-library (build-path gedasources "deco"))
+(source-library (build-path gedasources "comp"))
+(source-library (build-path gedasources "gates"))
+(source-library (build-path gedasources "register"))
+
+(source-library "/home/facundo/tesis/fiocs/Design/I-FLASH-01/gEDA/6BITS/sym2")
+(model-library "/home/facundo/tesis/fiocs/Design/I-FLASH-01/gEDA/6BITS/sym2")

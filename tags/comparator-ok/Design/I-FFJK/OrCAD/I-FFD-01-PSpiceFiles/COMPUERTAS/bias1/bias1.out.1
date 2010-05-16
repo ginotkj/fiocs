@@ -1,0 +1,77 @@
+
+**** 10/02/09 19:27:57 ******** PSpice Lite (Oct 2008) ******** ID# 10813 ****
+
+ ** Profile: "COMPUERTAS-bias1"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-01-PSpiceFiles\COMPUERTAS\bias1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\OrCAD 16\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\COMPUERTAS.net" 
+
+
+
+**** INCLUDING COMPUERTAS.net ****
+* source I-FFD-01
+.EXTERNAL INPUT INV-IN
+.EXTERNAL INPUT OR-OUT
+.EXTERNAL INPUT NAND-OUT
+.EXTERNAL INPUT INV-OUT
+.EXTERNAL INPUT OR-IN1
+.EXTERNAL INPUT OR-IN2
+.EXTERNAL INPUT NAND-IN1
+.EXTERNAL INPUT NAND-IN2
+M_M17         N28576 OR-IN1 0 0 MbreakN           
+M_M10         N22695 N22781 0 0 MbreakN           
+M_M18         N28802 OR-IN1 VDD VDD MbreakP           
+M_M5         INV-OUT INV-IN 0 0 MbreakN           
+M_M27         N32837 N34118 0 0 MbreakN           
+V_VDD         VDD 0 5
+M_M19         N28576 OR-IN2 N28802 VDD MbreakP           
+M_M13         N24721 N27834 0 0 MbreakN           
+M_M6         INV-OUT INV-IN VDD VDD MbreakP           
+M_M20         N28576 OR-IN2 0 0 MbreakN           
+M_M14         N25608 N27834 VDD VDD MbreakP           
+M_M1         NAND-OUT NAND-IN1 N14495 0 MbreakN           
+M_M23         N32211 N33763 N32227 0 MbreakN           
+M_M21         OR-OUT N28576 0 0 MbreakN           
+M_M15         N24721 N27522 N25608 VDD MbreakP           
+M_M24         N32211 N32301 VDD VDD MbreakP           
+M_M22         OR-OUT N28576 VDD VDD MbreakP           
+M_M2         NAND-OUT NAND-IN1 VDD VDD MbreakP           
+M_M16         N24721 N27522 0 0 MbreakN           
+M_M25         N32211 N33763 VDD VDD MbreakP           
+M_M26         N32227 N32301 N32837 0 MbreakN           
+M_M11         N23575 N22679 0 0 MbreakN           
+M_M12         N23575 N22679 VDD VDD MbreakP           
+M_M7         N22679 N22769 N22695 0 MbreakN           
+M_M28         N32211 N34118 VDD VDD MbreakP           
+M_M3         NAND-OUT NAND-IN2 VDD VDD MbreakP           
+M_M8         N22679 N22769 VDD VDD MbreakP           
+M_M9         N22679 N22781 VDD VDD MbreakP           
+M_M4         N14495 NAND-IN2 0 0 MbreakN           
+
+**** RESUMING bias1.cir ****
+.END
+
+ERROR -- Circuit Too Large!
+EVALUATION VERSION Limit Exceeded for "Q" Devices!
+
+
+

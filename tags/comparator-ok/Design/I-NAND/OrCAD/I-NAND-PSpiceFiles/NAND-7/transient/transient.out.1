@@ -1,0 +1,241 @@
+
+**** 02/15/10 15:38:59 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "NAND-7-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-7\transient.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_VIN 0 3.3 0.01 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\NAND-7.net" 
+
+
+
+**** INCLUDING NAND-7.net ****
+* source I-NAND
+M_M1         VOUT IN1 N53888 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M14         N53542 IN1 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M6         N54114 IN1 N54154 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M8         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M2         N53888 IN1 N54114 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M3         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M4         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M11         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M7         N54154 IN1 N53250 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M9         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+V_VIN         IN1 0 3.3
+V_VDD         N53056 0 3.3
+M_M12         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M5         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M10         N53250 IN1 N53536 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M13         N53536 IN1 N53542 0 CMOSN  
++ L=.18u  
++ W=.18u         
+
+**** RESUMING transient.cir ****
+.END
+
+WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_M8, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M8, model CMOSP: Ps = 0 is less than W
+**** 02/15/10 15:38:59 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "NAND-7-transient"  [ D:\Documents\TESIS\TRUNK\Design\I-NAND\OrCAD\i-nand-pspicefiles\nand-7\transient.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               CMOSN           CMOSP           
+               NMOS            PMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               7            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .294194        -.413091     
+          KP  460.419200E-06  460.419200E-06 
+       GAMMA    0               0            
+      LAMBDA    0               0            
+         RSH    6.2             5.9          
+          IS    1.000000E-15    1.000000E-15 
+          JS  100.000000E-06  100.000000E-06 
+          PB     .99             .821464     
+        PBSW     .8              .8008       
+          CJ  815.244000E-06    1.165977E-03 
+        CJSW  165.796200E-12  122.005600E-12 
+          MJ     .610228         .425655     
+        MJSW     .163262         .1001       
+        CGSO  500.000000E-12  500.000000E-12 
+        CGDO  500.000000E-12  500.000000E-12 
+        CGBO    1.000000E-12    1.000000E-12 
+         TOX    4.500000E-09    4.500000E-09 
+          XJ  100.000000E-09  100.000000E-09 
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .01             .01         
+      DIOMOD    2               2            
+          K1     .541355         .59909      
+          K2    -.032332     -669.794000E-09 
+        LETA    0               0            
+        WETA    0               0            
+          U0  269.8792        118.3014       
+       XPART     .5              .5          
+        VTH0     .294194        -.413091     
+          K3    1.000406E-03     .080859     
+          W0  100.000000E-09    1.000000E-06 
+         NLX  206.491900E-09   25.530790E-09 
+        DVT0     .565214         .819884     
+        DVT1     .260305         .744212     
+          UA   -1.619209E-09    1.535614E-09 
+          UB    2.953688E-18    1.000000E-21 
+          UC   57.637850E-12 -100.000000E-12 
+        VSAT  106.504000E+03  173.454300E+03 
+        RDSW  150             677.8533       
+        VOFF    -.09299         -.142681     
+     NFACTOR    2.044734         .94145      
+        PCLM    1.968647         .334199     
+      PDIBL1    1                .132793     
+      PDIBL2    -.072042        9.825629E-03 
+       DROUT    1                .81589      
+      PSCBE1    2.350722E+09    3.057881E+09 
+      PSCBE2  508.313600E-12    5.892816E-09 
+          A0    1.425322         .926787     
+          A1     .023731         .01033      
+          A2     .550469         .752154     
+       NPEAK  235.490000E+15  415.890000E+15 
+         LDD    0               0            
+        LITL   36.742350E-09   36.742350E-09 
+         UC1  -56.000000E-12  -56.000000E-12 
+        PVAG                     .122566     
+        KETA    -.016685         .022875     
+        ETA0    6.051176E-03    1.263659E-03 
+        ETAB -858.512600E-06   -2.195822E-03 
+         K3B    5.01511        19.71403      
+        DVT2    -.067374        -.3          
+        DSUB    3.642935E-03    4.891602E-03 
+         AGS     .37123          .166834     
+       DVT1W    0               0            
+       DVT2W    0               0            
+        PRWG     .34061         -.054897     
+        PRWB    -.183689        -.5          
+     PDIBLCB    -.1            -1.000000E-03 
+         DWG    5.313945E-09  -25.031010E-09 
+         DWB   13.440770E-09  -12.379610E-09 
+          B0  -23.699750E-09    1.874426E-06 
+          B1                    5.000000E-06 
+        LINT   20.673220E-09   27.788770E-09 
+        WINT   12.447730E-09                 
+         DLC   20.673220E-09   27.788770E-09 
+         DWC   12.447730E-09    0            
+          CF    0               0            
+        NOIA  100.000000E+18    9.900001E+18 
+        NOIB   50.000000E+03    2.400000E+03 
+        NOIC   -1.400000E-12    1.400000E-12 
+       LKETA  399.601500E-06    -.010867     
+       WKETA    3.401938E-03     .03239      
+       PVSAT  790.3922         50            
+       PKETA    -.014873       -6.167985E-03 
+       PVTH0   -4.814415E-03    1.001339E-03 
+         PUA  -31.414400E-12  362.786900E-12 
+         PU0   -4.028575        7.380991     
+       PRDSW   -2.504635       -5            
+       PETA0  -67.588480E-06  100.000000E-06 
+         PK2    3.159047E-03   30.964830E-06 
+         VTM     .025864         .025864     
+       PBSWG     .8              .8008       
+       MJSWG     .163262         .1001       
+       CJSWG  330.000000E-12  422.000000E-12 
+
+
+WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_M8, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M8, model CMOSP: Ps = 0 is less than W
+WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
+WARNING -- Mosfet M_M8, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_M8, model CMOSP: Ps = 0 is less than W
+ERROR -- Convergence problem in DC sweep
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN1)    0.0000  ( VOUT)     .2462  (N53056) 33.00E-06 (N53250)    -.0665     
+
+(N53536)    4.8308 (N53542)  142.0800 (N53888)-358.9E+03 (N54114)-21.04E+03     
+
+(N54154)    -.4182 
+
+
+  These voltages failed to converge:
+
+    V(VOUT)                   =  -463.80KV  \   246.15mV
+    V(N53888)                 =   -61.33KV  \  -358.95KV
+    V(N53542)                 =   630.69mV  \    142.08V
+    V(N54114)                 =  -429.97mV  \   -21.04KV
+    V(N54154)                 =    -31.39V  \  -418.24mV
+    V(N53250)                 =   -523.99V  \   -66.46mV
+    V(N53536)                 =   -37.65KV  \     4.831V
+
+  These supply currents failed to converge:
+
+    I(V_VDD)                  =    -2.133A  \   -1.683uA
+
+  These devices failed to converge:
+    M_M1      M_M14     M_M6      M_M8      M_M2      M_M3      M_M4      
+    M_M11     M_M7      M_M9      M_M12     M_M5      M_M10     M_M13     
+
+ERROR -- Discontinuing simulation due to convergence problem
+**** Interrupt ****

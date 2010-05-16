@@ -1,0 +1,61 @@
+
+**** 10/13/09 11:50:51 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 0 ********
+
+ ** Profile: "S-NAND-2-bias-schematic"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD\I-FFD-PSpiceFiles\S-NAND-2\bias-schematic.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias-schematic.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-ffd-pspicefiles/i-ffd.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\S-NAND-2.net" 
+
+
+
+**** INCLUDING S-NAND-2.net ****
+* source I-FFD
+.EXTERNAL INPUT IN1
+.EXTERNAL INPUT IN2
+.EXTERNAL INPUT VDD
+.EXTERNAL INPUT OUT
+.EXTERNAL INPUT GND
+M_M1         OUT IN1 N00209 N00209 CMOSN  
++ L=.18u  
++ W=.6u         
+M_M2         N00209 IN2 GND GND CMOSN  
++ L=.18u  
++ W=.6u         
+R_R1         GND IN1  100M  
+M_M3         OUT IN1 VDD VDD CMOSP  
++ L=.18u  
++ W=1.2u         
+M_M4         OUT IN2 VDD VDD CMOSP  
++ L=.18u  
++ W=1.2u         
+R_R2         GND IN2  100M  
+
+**** RESUMING bias-schematic.cir ****
+.END
+
+ERROR -- Node OUT is floating
+ERROR -- Node IN1 is floating
+ERROR -- Node N00209 is floating
+ERROR -- Node IN2 is floating
+ERROR -- Node GND is floating
+ERROR -- Node VDD is floating

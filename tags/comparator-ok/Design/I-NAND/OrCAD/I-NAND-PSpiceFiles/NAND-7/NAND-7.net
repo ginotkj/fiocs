@@ -1,0 +1,45 @@
+* source I-NAND
+M_M1         VOUT IN1 N53888 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M14         N53542 IN1 0 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M6         N54114 IN1 N54154 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M8         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M2         N53888 IN1 N54114 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M3         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M4         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M11         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M7         N54154 IN1 N53250 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M9         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+V_VIN         IN1 0 3.3
+V_VDD         N53056 0 3.3
+M_M12         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M5         VOUT IN1 N53056 N53056 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M10         N53250 IN1 N53536 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M13         N53536 IN1 N53542 0 CMOSN  
++ L=.18u  
++ W=.18u         

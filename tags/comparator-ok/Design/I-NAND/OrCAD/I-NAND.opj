@@ -1,0 +1,209 @@
+(ExpressProject "I-NAND"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\analog.olb"
+        (Type "Schematic Library"))
+      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\source.olb"
+        (Type "Schematic Library"))
+      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\sourcstm.olb"
+        (Type "Schematic Library"))
+      (File "c:\orcad\orcad_16.0\tools\capture\library\pspice\special.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "i-nand.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "0")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "TRUE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x")
+    (Annotate_Page_Order "0")
+    (ANNOTATE_IncludeNonPrimitive "TRUE")
+    (ANNOTATE_Refdes_Control_Required "FALSE")
+    (Annotate_type "Default")
+    (width_pages "100")
+    (width_start "80")
+    (width_End "80"))
+  (Folder "Outputs"
+    (File "d:\documents\tesis\fiocs\design\componentes orcad\compuertas.olb"
+      (Type "Schematic Library"))
+    (File ".\i-nand.olb"
+      (Type "Schematic Library"))
+    (File ".\i-nand-pspicefiles\neg\neg.net"
+      (Type "Report"))
+    (File ".\i-nand-pspicefiles\nand-2\nand-2.net"
+      (Type "Report"))
+    (File ".\i-nand-pspicefiles\nand-3\nand-3.net"
+      (Type "Report"))
+    (File ".\i-nand-pspicefiles\nand-4\nand-4.net"
+      (Type "Report"))
+    (File ".\i-nand-pspicefiles\nand-5\nand-5.net"
+      (Type "Report"))
+    (File ".\i-nand-pspicefiles\nand-7\nand-7.net"
+      (Type "Report"))
+    (File ".\i-nand-pspicefiles\nand-8\nand-8.net"
+      (Type "Report"))
+    (File ".\i-nand-pspicefiles\nand-prueba\nand-prueba.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\i-nand-pspicefiles\i-nand.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\i-nand-pspicefiles\i-nand.lib")))
+    (Folder "Stimulus Files")
+    (Folder "Include Files")
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-nand-pspicefiles\neg\prueba-vdc.sim"
+        (DisplayName "NEG-Prueba-VDC")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-nand-pspicefiles\nand-2\prueba-vdc.sim"
+        (DisplayName "NAND-2-Prueba-VDC")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-nand-pspicefiles\nand-3\prueba-vdc.sim"
+        (DisplayName "NAND-3-Prueba-VDC")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-nand-pspicefiles\nand-4\prueba-vdc.sim"
+        (DisplayName "NAND-4-Prueba-VDC")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-nand-pspicefiles\nand-5\prueba-vdc.sim"
+        (DisplayName "NAND-5-Prueba-VDC")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-nand-pspicefiles\nand-7\prueba-vdc.sim"
+        (DisplayName "NAND-7-Prueba-VDC")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-nand-pspicefiles\nand-8\prueba-vdc.sim"
+        (DisplayName "NAND-8-Prueba-VDC")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-nand-pspicefiles\nand-prueba\prueba-vdc.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-nand-pspicefiles\nand-prueba\prueba-vdc.sim"
+        (DisplayName "NAND-PRUEBA-Prueba-VDC")
+        (Type "PSpice Profile"))))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (NEG
+      (FullPartName "NEG.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-8
+      (FullPartName "NAND-8.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-7
+      (FullPartName "NAND-7.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-5
+      (FullPartName "NAND-5.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-4
+      (FullPartName "NAND-4.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-3
+      (FullPartName "NAND-3.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (NAND-2
+      (FullPartName "NAND-2.Normal")
+      (LibraryName "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-L
+      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\PROGRAM FILES\ORCAD 16\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (MbreakP
+      (FullPartName "MbreakP.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (MbreakN
+      (FullPartName "MbreakN.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VSTIM
+      (FullPartName "VSTIM.Normal")
+      (LibraryName "..\..\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory "LIBRARY\PSPICE")
+  (MPSSessionName "FABRICIO")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-PRUEBA")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-PRUEBA"
+         "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 19 837 -11 801"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 175 1894 175 830")
+        (Scroll "0 0")
+        (Zoom "129")
+        (Occurrence "/"))
+      (Path "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-NAND\ORCAD\I-NAND.DSN")
+      (Schematic "NAND-PRUEBA")
+      (Page "PAGE1"))))

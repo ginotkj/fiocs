@@ -1,0 +1,17 @@
+** Profile: "FFD-FFD-bias"  [ D:\Documents\TESIS\TRUNK\Design\I-FFD-01\I-FFD-01-PSpiceFiles\FFD\FFD-bias.sim ] 
+
+** Creating circuit file "FFD-bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\FFD.net" 
+
+
+.END

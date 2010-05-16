@@ -1,0 +1,28 @@
+* source I-NAND
+M_M7         OUT IN1 N88382 N88382 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M8         OUT IN1 N88382 N88382 CMOSP  
++ L=.18u  
++ W=.2u         
+M_M12         OUT IN1 N88382 N88382 CMOSP  
++ L=.18u  
++ W=.2u         
+V_VIN         IN1 0  
++PULSE 0 3.3 10p 0 0 100p 150p
+M_M9         OUT IN1 N88382 N88382 CMOSP  
++ L=.18u  
++ W=.2u         
+V_VDD1         N88382 0 3.3
+M_M1         OUT IN1 N88766 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M10         N88906 IN1 N88946 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M3         N88766 IN1 N88906 0 CMOSN  
++ L=.18u  
++ W=.18u         
+M_M11         N88946 IN1 0 0 CMOSN  
++ L=.18u  
++ W=.18u         

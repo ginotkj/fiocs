@@ -1,0 +1,6 @@
+* source COMPARADOR
+M_M1         N14478 N14469 0 0 CMOSN  
++ L=20u  
++ W=219.68u         
+V_VGS         N14469 0 0.5Vdc
+V_VDS         N14478 0 0.210Vdc

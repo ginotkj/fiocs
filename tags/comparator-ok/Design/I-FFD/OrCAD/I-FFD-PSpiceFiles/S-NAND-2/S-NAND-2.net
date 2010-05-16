@@ -1,0 +1,20 @@
+* source I-FFD
+.EXTERNAL INPUT IN1
+.EXTERNAL INPUT IN2
+.EXTERNAL INPUT VDD
+.EXTERNAL INPUT OUT
+.EXTERNAL INPUT GND
+M_M1         OUT IN1 N00209 N00209 CMOSN  
++ L=.18u  
++ W=.6u         
+M_M2         N00209 IN2 GND GND CMOSN  
++ L=.18u  
++ W=.6u         
+R_R1         GND IN1  100M  
+M_M3         OUT IN1 VDD VDD CMOSP  
++ L=.18u  
++ W=1.2u         
+M_M4         OUT IN2 VDD VDD CMOSP  
++ L=.18u  
++ W=1.2u         
+R_R2         GND IN2  100M  

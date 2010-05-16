@@ -1,0 +1,1240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    DO NOT EDIT THIS PAGE! See http://newton.ex.ac.uk/schooldocs/it/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<HEAD>
+<TITLE>SPICE 3 User&#039;s Manual - Section 3</TITLE>
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<link REL='SHORTCUT ICON' HREF='/favicon.ico'> 
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/screen2.css'> 
+<link media='print' rel='stylesheet' TYPE='text/css' href='/css/print.css'>
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/nosidebar.css'>
+</head>
+<body>
+
+<!--  START OF NEW HEADER -->
+<div id="x_wrapper">
+
+<!--
+<div class='maybemobile'>View this page on our
+<a href='http://m-newton.ex.ac.uk/teaching/resources/CDHW/Electronics2/userguide/sec3.html'>mobile-friendly site</a>
+</div>
+-->
+
+<table width='100%' id="x_header" cellpadding=0 cellspacing=0 border=0><tr>
+  <td valign=top id="x_logo">
+     <a href="http://www.ex.ac.uk/" title="University of Exeter"><img src="/furniture/logo.gif" alt="University of Exeter" class="logo" width="162" height="60"></a>
+
+  <td valign=top id="x_department" align=left>
+    <a href='/' class='verytop'>School of Physics</a>
+    
+      
+  <td id="x_topnav" align=right valign=top>
+      <div id="supernav">
+          <a href="http://newton.ex.ac.uk/contact.html">Contact Us</a>
+          | <a href="http://newton.ex.ac.uk/schooldocs/">Staff</a>
+          | <a href="http://newton.ex.ac.uk/teaching/">Students</a>
+          | <a href="http://www.ex.ac.uk/myexeter/">MyExeter</a>
+          | <a href="http://newton.ex.ac.uk/quick-links/">Site map</a>
+        </div>
+
+        <div id="search">
+	  <form method="get" action="/cgi-bin/htsearch" 
+name="htsearchform" id="searchbox">
+                        <input class="search" id="words" name ='words'
+type="text" size="23" maxlength="80" title="Search the site"
+onfocus='if(this.value==this.defaultValue)  this.value="";' 
+value='  Search Physics'>
+                       <input type=hidden name='config' value='htdig'>
+<input name="submit" class="button" value="Search"  type="submit">
+
+          </form>
+        </div>
+    </table>
+<!-- NB div "wrapper" remains open -->
+<!--  END OF NEW HEADER -->
+
+
+<table cellspacing=0 cellpadding=0 class='phy-toptable'>
+
+<tr>
+
+<!-- SIDEBARROWSPAN = 2 -->
+
+
+
+
+<td valign='top'>
+      <div class="mainnav">
+        <ul>
+	<li><a 
+	href="/" title="School" 
+	class="studying">Home page</a>
+
+<li><a	href="/teaching/" title="Teaching" 
+	class="alumni">Our Teaching</a>
+
+<li><a 	href="/research/" title="Research" 
+	class="research">Our Research</a>
+
+<li><a 	href="/admissions/" title="Admissions" 
+	class="working">How to apply</a>
+
+<li><a 	href="/features/" title="News" 
+	class="business">News</a>
+
+<li><a 	href="/research/positions/" title="Jobs" 
+	class="jobs">Jobs</a>
+
+      </ul>
+    </div>
+
+
+<tr>
+<td class='phy-content' id='top' valign=top>
+<div class='e-topcrumbs'>  <a href='/'>Home</a>  <b>&rsaquo;</b> <a href='./../../../../'>Our Teaching</a> <b>&rsaquo;</b> <a href='./../../../'>Resources</a> <b>&rsaquo;</b> <a href='./../../'>CDHW</a> <b>&rsaquo;</b> <a href='./../'>Electronics2</a> <b>&rsaquo;</b> <a href='./'>Userguide</a> <b>&rsaquo;</b> <span class='crumbs_here'>sec3.html</span></div>
+
+
+<div class='phy-realcontent'>
+
+
+
+
+
+
+
+<h1>SPICE 3 User&#039;s Manual - Section&nbsp;3</h1>
+
+
+
+
+
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+
+
+<h2><a name="3">3 CIRCUIT ELEMENTS AND MODELS</a></h2>
+
+Data  fields  that  are  enclosed  in   less-than   and greater-than  signs  ('&lt;  &gt;')  are  optional. All indicated punctuation (parentheses, equal signs, etc.) is optional but indicate  the  presence  of  any delimiter. Further, future implementations may require the punctuation  as  stated.  A consistent  style  adhering  to  the  punctuation shown here makes the input  easier  to  understand.  With  respect  to branch voltages and currents, SPICE uniformly uses the associated reference convention (current flows in the  direction of voltage drop).
+
+<h3><a name="3.1">3.1 ELEMENTARY DEVICES</a></h3>
+
+<h4><a name="3.1.1">3.1.1 Resistors</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     RXXXXXXX N1 N2 VALUE
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     R1 1 2 100
+     RC1 12 17 1K
+</code></pre>
+
+N1 and N2 are the two  element  nodes.  VALUE  is  the resistance (in ohms) and may be positive or negative but not zero.
+
+<h4><a name="3.1.2">3.1.2 Semiconductor Resistors</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     RXXXXXXX N1 N2 &lt;VALUE&gt; &lt;MNAME&gt; &lt;L=LENGTH&gt; &lt;W=WIDTH&gt; &lt;TEMP=T&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     RLOAD 2 10 10K
+     RMOD 3 7 RMODEL L=10u W=1u
+</code></pre>
+
+This is the more general form of the resistor presented in  section  6.1,  and  allows  the  modeling of temperature effects and for the calculation  of  the  actual  resistance value from strictly geometric information and the specifications of the process. If VALUE is specified,  it  overrides the  geometric  information  and defines the resistance. If MNAME is specified, then the resistance  may  be  calculated from  the  process  information  in  the model MNAME and the given LENGTH and WIDTH. If VALUE  is  not  specified,  then MNAME  and LENGTH must be specified. If WIDTH is not specified, then it is taken from the default width given  in  the model.  The  (optional)  TEMP  value  is the temperature at which this device is to operate, and overrides the  temperature specification on the <a href="sec4.html#4.1">.OPTION</a> control line.
+
+<h4><a name="3.1.3">3.1.3 Semiconductor Resistor Model (R)</a></h4>
+
+The resistor model consists of  process-related  device data  that  allow  the  resistance  to  be  calculated  from geometric information and to be corrected  for  temperature. The parameters available are:
+<table summary="layout" align=center border=1>
+<tr><th>name<th>parameter<th>units<th>default<th>example
+<tr><td>TC1<td>first order temperature coeff.<td>Z&deg;C<sup>-1</sup><td>0.0<td>-
+<tr><td>TC2<td>second order temperature coeff.<td>Z&deg;C<sup>-2</sup><td>0.0<td>-
+<tr><td>RSH<td>sheet resistance<td>ohm/[]<td>-<td>50
+<tr><td>DEFW<td>default width<td>m<td>1e-6<td>2e-6
+<tr><td>NARROW<td>narrowing due to side etching<td>m<td>0.0<td>1e-7
+<tr><td>TNOM<td>parameter measurement temperature<td>&deg;C<td>27<td>50
+</table>
+<p>
+The sheet resistance is used with the narrowing parameter  and  <i>L</i>  and <i>W</i> from the resistor device to determine the nominal resistance by the formula
+
+<pre>
+                              L - NARROW
+                      R = RSH ----------
+                              W - NARROW
+</pre>
+
+
+DEFW is used to supply a default value for W if one  is  not specified  for the device. If either RSH or L is not specified, then the standard default resistance value of 1k Z  is used. TNOM is used to override the circuit-wide value given on the <a href="sec4.html#4.1">.OPTIONS</a> control line where the  parameters  of  this model  have been measured at a different temperature. After the nominal resistance is calculated,  it  is  adjusted  for temperature by the formula:
+
+<pre>
+                                                   2
+        R(T) = R(T ) [1 + TC1 (T - T ) + TC2 (T-T ) ]
+                  0                 0            0
+</pre>
+
+
+<h4><a name="3.1.4">3.1.4 Capacitors</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     CXXXXXXX N+ N- VALUE &lt;IC=INCOND&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     CBYP 13 0 1UF
+     COSC 17 23 10U IC=3V
+</code></pre>
+
+N+ and N- are the positive and negative element nodes, respectively. VALUE is the capacitance in Farads.
+
+<p>
+
+The (optional) initial condition is the initial (time-zero) value of capacitor voltage (in Volts). Note that the initial conditions (if any) apply 'only' if the UIC option is specified on the <a href="sec4.html#4.3.9">.TRAN</a> control line.
+
+<h4><a name="3.1.5">3.1.5 Semiconductor Capacitors</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     CXXXXXXX N1 N2 &lt;VALUE&gt; &lt;MNAME&gt; &lt;L=LENGTH&gt; &lt;W=WIDTH&gt; &lt;IC=VAL&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     CLOAD 2 10 10P
+     CMOD 3 7 CMODEL L=10u W=1u
+</code></pre>
+
+This  is  the  more  general  form  of the Capacitor presented  in section 6.2, and allows for the calculation of the actual capacitance value from strictly geometric  information  and  the specifications of the process. If VALUE is specified, it defines the capacitance. If MNAME  is  specified,  then  the  capacitance is calculated from the process information in the model MNAME  and  the  given  LENGTH  and WIDTH.  If  VALUE  is  not specified, then MNAME and LENGTH must be specified. If WIDTH is not specified,  then  it  is taken  from  the  default  width given in the model. Either VALUE or MNAME, LENGTH, and WIDTH may be specified, but  not both sets.
+
+<h4><a name="3.1.6">3.1.6 Semiconductor Capacitor Model (C)</a></h4>
+
+The capacitor model contains process  information  that may  be  used  to  compute  the  capacitance  from  strictly geometric information.
+<table summary="layout" align=center border=1>
+<tr><th>name<th>parameter<th>units<th>default<th>example
+<tr><td>CJ<td>junction bottom capacitance<td>F m<sup>-2</sup><td>-<td>5e-5
+<tr><td>CJSW<td>junction sidewall capacitance<td>F m<sup>-1</sup><td>-<td>2e-11
+<tr><td>DEFW<td>default device width<td>m<td>1e-6<td>2e-6
+<tr><td>NARROW<td>narrowing due to side etching<td>m<td>0.0<td>1e-7
+</table>
+<p>
+The capacitor has a capacitance computed as
+
+<pre>
+ CAP = CJ (LENGTH - NARROW) (WIDTH - NARROW) + 2 CJSW (LENGTH + WIDTH - 2 NARROW)
+</pre>
+
+<h4><a name="3.1.7">3.1.7 Inductors</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     LYYYYYYY N+ N- VALUE &lt;IC=INCOND&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     LLINK 42 69 1UH
+     LSHUNT 23 51 10U IC=15.7MA
+</code></pre>
+
+<p>N+ and N- are the  positive  and  negative  element nodes,  respectively.  VALUE  is the inductance in henries.
+
+<p>The (optional) initial condition is the initial  (time-zero)  value  of  inductor current (in amps) that flows from N+, through the inductor, to N-. Note that the initial conditions  (if  any) apply only if the UIC option is specified on the <a href="sec4.html#4.3.9">.TRAN</a> analysis line.
+
+<h4><a name="3.1.8">3.1.8 Coupled (Mutual) Inductors</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     KXXXXXXX LYYYYYYY LZZZZZZZ VALUE
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     K43 LAA LBB 0.999
+     KXFRMR L1 L2 0.87
+</code></pre>
+
+<p>
+	L<i>YYYYYYY</i> and L<i>ZZZZZZZ</i> are the names of the two coupled inductors,  and  
+	<i>VALUE</i>  is the coefficient of coupling, <i>K</i>, which must be in the range
+	&minus;1&nbsp;&le;&nbsp;<i>K</i>&nbsp;&le;&nbsp;+1. Using the 'dot' convention, place a 
+	'dot' on the first node of each inductor.
+
+<h4><a name="3.1.9">3.1.9 Switches</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     SXXXXXXX N+ N- NC+ NC- MODEL &lt;ON&gt;&lt;OFF&gt;
+     WYYYYYYY N+ N- VNAM MODEL &lt;ON&gt;&lt;OFF&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     s1 1 2 3 4 switch1 ON
+     s2 5 6 3 0 sm2 off
+     Switch1 1 2 10 0 smodel1
+     w1 1 2 vclock switchmod1
+     W2 3 0 vramp sm1 ON
+     wreset 5 6 vclck lossyswitch OFF
+</code></pre>
+
+
+Nodes 1 and 2  are  the  nodes  between  which  the switch  terminals are connected. The model name is mandatory while the initial conditions are  optional.  For the voltage controlled switch, nodes 3 and 4 are the positive and negative controlling nodes respectively. For the  current  controlled switch, the controlling current is that  through  the  specified  voltage  source.  The direction  of  positive controlling current flow is from the positive node, through the source, to  the  negative node.
+
+<h4><a name="3.1.10">3.1.10 Switch Model (SW/CSW)</a></h4>
+
+<p>The switch model allows an almost ideal  switch  to  be described  in SPICE. The switch is not quite ideal, in that the resistance can not change from 0 to infinity,  but  must always have a finite positive value. By proper selection of the on and off resistances, they can be effectively zero and infinity  in  comparison  to  other  circuit  elements. The parameters available are:</p>
+
+<table summary="layout" align=center border=1>
+<tr><th>name<th>parameter<th>units<th>default<th>switch
+<tr><td>VT<td>threshold voltage<td>Volts<td>0.0<td>S
+<tr><td>IT<td>threshold current<td>Amps<td>0.0<td>W
+<tr><td>VH<td>hysteresis voltage<td>Volts<td>0.0<td>S
+<tr><td>IH<td>hysteresis current<td>Amps<td>0.0<td>W
+<tr><td>RON<td>on resistance<td>Z<td>1.0<td>both
+<tr><td>ROFF<td>off resistance<td>Z<td>1/GMIN*<td>both
+</table>
+<p>
+*(See the <a href="sec4.html#4.1">.OPTIONS</a> control line for  a  description  of
+ GMIN,  its  default  value  results  in an off-resistance of
+ 1.0e+12 ohms.)
+
+<p>
+
+The use of an ideal element that  is  highly  nonlinear such as a switch can cause large discontinuities to occur in the circuit node voltages. A  rapid  change  such  as  that associated  with a switch changing state can cause numerical roundoff or tolerance problems leading to erroneous  results or  timestep difficulties. The user of switches can improve the situation by taking the following steps:
+
+<p> First, it is wise to set ideal switch  impedances  just high  or  low  enough to be negligible with respect to other circuit elements. Using switch impedances that are close to "ideal"  in all cases aggravates the problem of discontinuities mentioned above. Of course, when modeling real devices such  as  MOSFETS, the on resistance should be adjusted to a realistic level depending on the size of  the  device  being modeled. <p>
+
+If a wide range of ON to OFF resistance must be used in the switches (ROFF/RON &gt;1e+12), then the tolerance on errors allowed during transient analysis  should  be  decreased  by using  the  <a href="sec4.html#4.1">.OPTIONS</a> control line and specifying TRTOL to be less than the default  value  of  7.0.  When  switches  are placed around capacitors, then the option CHGTOL should also be reduced. Suggested values for these two options are  1.0 and  1e-16  respectively. These changes inform SPICE3 to be more careful around the switch points so that no errors  are made due to the rapid change in the circuit.
+
+<h3><a name="3.2">3.2 VOLTAGE AND CURRENT SOURCES</a></h3>
+
+<h4><a name="3.2.1">3.2.1 Independent Sources</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     VXXXXXXX N+ N- &lt;&lt;DC&gt; DC/TRAN VALUE&gt; &lt;AC &lt;ACMAG &lt;ACPHASE&gt;&gt;&gt;
+     +       &lt;DISTOF1 &lt;F1MAG &lt;F1PHASE&gt;&gt;&gt; &lt;DISTOF2 &lt;F2MAG &lt;F2PHASE&gt;&gt;&gt;
+     IYYYYYYY N+ N- &lt;&lt;DC&gt; DC/TRAN VALUE&gt; &lt;AC &lt;ACMAG &lt;ACPHASE&gt;&gt;&gt;
+     +       &lt;DISTOF1 &lt;F1MAG &lt;F1PHASE&gt;&gt;&gt; &lt;DISTOF2 &lt;F2MAG &lt;F2PHASE&gt;&gt;&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     VCC 10 0 DC 6
+     VIN 13 2 0.001 AC 1 SIN(0 1 1MEG)
+     ISRC 23 21 AC 0.333 45.0 SFFM(0 1 10K 5 1K)
+     VMEAS 12 9
+     VCARRIER 1 0 DISTOF1 0.1 -90.0
+     VMODULATOR 2 0 DISTOF2 0.01
+     IIN1 1 5 AC 1 DISTOF1 DISTOF2 0.001
+</code></pre>
+
+
+N+ and N- are the positive and negative nodes,  respectively.  Note  that  voltage  sources need not be grounded. Positive current is assumed to flow from the positive  node, through  the source, to the negative node. A current source of positive value forces current to flow out of the N+ node, through  the source, and into the N- node. Voltage sources, in addition to being used for circuit  excitation,  are  the 'ammeters'  for  SPICE, that is, zero valued voltage sources may be inserted into the circuit for the purpose of  measuring  current.  They  of  course  have  no effect on circuit operation since they represent short-circuits.
+
+<p>
+
+DC/TRAN is the dc and transient analysis value  of  the source.  If  the source value is zero both for dc and transient analyses, this value may be omitted.  If  the  source value  is  time-invariant  (<i>e.g.</i>,  a power supply), then the value may optionally be preceded by the letters DC.
+
+<p>
+
+ACMAG is the ac magnitude and ACPHASE is the ac  phase. The  source  is  set  to  this value in the <a href="sec1.html#1.1.2">ac analysis</a>. If ACMAG is omitted following the keyword AC, a value of  unity is  assumed.  If  ACPHASE  is  omitted,  a value of zero is assumed. If the source is not an ac small-signal input, the keyword AC and the ac values are omitted.
+
+<p>
+
+DISTOF1 and DISTOF2 are the keywords that specify  that the independent source has distortion inputs at the frequencies F1 and F2 respectively  (see  the  description  of  the <a href="sec4.html#4.3.3">.DISTO</a>  control  line).  The keywords may be followed by an optional magnitude and phase. The  default  values  of  the magnitude and phase are 1.0 and 0.0 respectively.
+
+<p>
+
+Any independent source can be assigned a time-dependent value  for  <a href="sec1.html#1.1.3">transient  analysis</a>.  If a source is assigned a time-dependent value, the time-zero value  is  used  for  <a href="sec1.html#1.1.1">dc analysis</a>.  There  are  five  independent  source functions: pulse,  exponential,  sinusoidal,  piece-wise  linear,   and single-frequency FM. If parameters other than source values are omitted or set to zero, the  default  values  shown  are assumed.  (TSTEP is the printing increment and TSTOP is the final time (see the <a href="sec4.html#4.3.9">.TRAN</a> control line for explanation)).
+
+
+<h5><a name="3.2.1.1">3.2.1.1. Pulse</a></h5>
+<strong>General form:</strong>
+<pre><code>
+     PULSE(V1 V2 TD TR TF PW PER)
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     VIN 3 0 PULSE(-1 1 2NS 2NS 2NS 50NS 100NS)
+</code></pre>
+
+
+<table summary="layout" align=center border=1>
+<tr><th>parameter<th>default value<th>units
+<tr><td>V1 (initial value)<td>&nbsp;<td>V or A
+<tr><td>V2 (pulsed value)<td>&nbsp;<td>V or A
+<tr><td>TD (delay time)<td>0.0<td>s
+<tr><td>TR (rise time)<td>TSTEP<td>s
+<tr><td>TF (fall time)<td>TSTEP<td>s
+<tr><td>PW (pulse width)<td>TSTOP<td>s
+<tr><td>PER (period)<td>TSTOP<td>seconds
+</table>
+<p>
+A single pulse so specified is described by the following table:
+<p>
+
+<table summary="layout" align=center border=1>
+<tr><th>time<th>value
+<tr><td>0              <td>V1
+<tr><td>TD             <td>V1
+<tr><td>TD+TR          <td>V2
+<tr><td>TD+TR+PW       <td>V2
+<tr><td>TD+TR+PW+TF    <td>V1
+<tr><td>TSTOP          <td>V1
+</table>
+<p>
+
+Intermediate points are determined by linear interpolation.
+
+
+<h5><a name="3.2.1.2">3.2.1.2 Sinusoidal</a></h5>
+<strong>General form:</strong>
+<pre><code>
+     SIN(VO VA FREQ TD THETA)
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     VIN 3 0 SIN(0 1 100MEG 1NS 1E10)
+</code></pre>
+<table summary="layout" align=center border=1>
+<tr><th>parameters<th>default value<th>units
+<tr><td>VO (offset)<td>&nbsp;<td>V or A
+<tr><td>VA (amplitude)<td>&nbsp;<td>V or A
+<tr><td>FREQ (frequency)<td>1/TSTOP<td>Hz
+<tr><td>TD (delay)<td>0.0<td>s
+<tr><td>THETA (damping factor)<td>0.0<td>s<sup>-1</sup>
+</table>
+<p>
+The shape of the waveform is described by the following table:</p>
+<table summary="layout" align=center border=1>
+<tr><th>time, t</th><th>value</th></tr>
+<tr><td align="center">0 to TD</td><td align="center">VO</td></tr>
+<tr><td align="center">TD to TSTOP</td><td align="center">VO+VA.exp[-(t-TD)/THETA].sin[2&pi;.FREQ.(t+TD)]</td></tr>
+</table>
+
+<h5><a name="3.2.1.3">3.2.1.3 Exponential</a></h5>
+<strong>General form:</strong>
+<pre><code>
+     EXP(V1 V2 TD1 TAU1 TD2 TAU2)
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     VIN 3 0 EXP(-4 -1 2NS 30NS 60NS 40NS)
+</code></pre>
+
+<table summary="layout" align=center border=1>
+<tr><th>parameters<th>default value<th>units
+<tr><td>V1 (initial value)<td>&nbsp;<td>V or A
+<tr><td>V2 (pulsed value)<td>&nbsp;<td>V or A
+<tr><td>TD1 (rise delay time)<td>0.0<td>s
+<tr><td>TAU1 (rise time constant)<td>TSTEP<td>s
+<tr><td>TD2 (fall delay time)<td>TD1+TSTEP<td>s
+<tr><td>TAU2 (fall time constant)<td>TSTEP<td>s
+</table>
+
+<p>The shape of the waveform is described by the following
+ table:</p>
+<table summary="layout" align=center border=1>
+<tr><th>time, t</th><th>value</th></tr>
+<tr><td align=center>0 to TD1</td><td align="center">V1</td></tr>
+<tr><td align="center">TD1 to TD2</td><td align="center">V1+(V2-V1).[1-exp(-(t-TD1)/TAU1)]</td></tr>
+<tr><td align="center">TD2 to TSTOP</td><td align="center">1+(V2-V1).[1-exp(-(t-TD1)/TAU1)]+(V1-V2).[1-exp(-(t-TD2)/TAU2)]</td></tr>
+</table>
+
+<h5><a name="3.2.1.4">3.2.1.4 Piece-Wise Linear</a></h5>
+<strong>General form:</strong>
+<pre><code>
+     PWL(T1 V1 &lt;T2 V2 T3 V3 T4 V4 ...&gt;)
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     VCLOCK 7 5 PWL(0 -7 10NS -7 11NS -3 17NS -3 18NS -7 50NS -7)
+</code></pre>
+
+<p>Each pair of values (<i>T</i><sub>i</sub>, <i>V</i><sub>i</sub>) specifies that  the  value
+ of  the  source  is <i>V</i><sub>i</sub>  (in Volts or Amps) at time=<i>T</i><sub>i</sub>. The
+ value of the source at intermediate values of time is determined by using linear interpolation on the input values.
+</p>
+
+
+<h5><a name="3.2.1.5">3.2.1.5 Single-Frequency FM</a></h5>
+<strong>General form:</strong>
+<pre><code>
+     SFFM(VO VA FC MDI FS)
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     V1 12 0 SFFM(0 1M 20K 5 1K)
+</code></pre>
+
+<table summary="layout" border=1 align="center">
+<tr><th>parameter</th><th>default value</th><th>units</th></tr>
+<tr><td>VO  (offset)</td><td align="center">-</td><td align="center">volts or amps</td></tr>
+<tr><td>VA  (amplitude)</td><td align="center">-</td><td align="center">volts or amps</td></tr>
+<tr><td>FC  (carrier frequency)</td><td align="center">1/TSTOP</td><td align="center">Hz</td></tr>
+<tr><td>MDI (modulation index)</td><td align="center">-</td><td align="center">-</td></tr>
+<tr><td>FS  (signal frequency)</td><td align="center">1/TSTOP</td><td align="center">Hz</td></tr>
+</table>
+
+<p>The shape of the waveform is described by the following equation:</p>
+
+<p align="center">V(t)=VO+VA.sin(2&pi;FC.t+MDI.sin[2&pi;FS.t])</p>
+
+
+<h4><a name="3.2.2">3.2.2 Linear Dependent Sources</a></h4>
+
+<p>SPICE  allows  circuits  to  contain  linear  dependent
+ sources characterized by any of the four equations:</p>
+<table summary="layout" width="85%" align="center">
+<tr><td><i>i = g.v</i></td>
+    <td><i>v = e.v</i></td>
+    <td><i>i = f.i</i></td>
+    <td><i>v = h.i</i></td></tr>
+</table>
+<p>where <i>g</i>, <i>e</i>, <i>f</i>, and <i>h</i> are constants representing
+transconductance,  voltage  gain,  current  gain,  and transresistance, respectively.
+</p>
+
+
+<h5><a name="3.2.2.1">3.2.2.1 Linear Voltage-Controlled Current Sources</a></h5>
+<strong>General form:</strong>
+<pre><code>
+     GXXXXXXX N+ N- NC+ NC- VALUE
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     G1 2 0 5 0 0.1MMHO
+</code></pre>
+
+<p>N+ and N- are  the  positive  and  negative  nodes, respectively.  Current  flow is from the positive node, through the source, to the negative node. NC+  and  NC- are the positive and negative controlling nodes, respectively. VALUE is the transconductance (in mhos).</p>
+
+
+<h5><a name="3.2.2.2">3.2.2.2 Linear Voltage-Controlled Voltage Sources</a></h5>
+<strong>General form:</strong>
+<pre><code>
+     EXXXXXXX N+ N- NC+ NC- VALUE
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     E1 2 3 14 1 2.0
+</code></pre>
+
+<p>N+ is the positive node, and  N-  is  the  negative node.  NC+  and  NC- are the positive and negative controlling nodes,  respectively.  VALUE  is  the  voltage gain.</p>
+
+
+<h5><a name="3.2.2.3">3.2.2.3 Linear Current-Controlled Current Sources</a></h5>
+<strong>General form:</strong>
+<pre><code>
+     FXXXXXXX N+ N- VNAM VALUE
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     F1 13 5 VSENS 5
+</code></pre>
+
+
+<p>N+ and N- are  the  positive  and  negative  nodes, respectively.  Current  flow is from the positive node, through the source, to the negative node. VNAM  is  the name  of  a voltage source through which the controlling current flows. The direction  of  positive  controlling current  flow  is  from  the  positive node, through the source, to the negative node  of  VNAM.  VALUE  is  the current gain.</p>
+
+
+<h5><a name="3.2.2.4">3.2.2.4 Linear Current-Controlled Voltage Sources</a></h5>
+<strong>General form:</strong>
+<pre><code>
+     HXXXXXXX N+ N- VNAM VALUE
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     HX 5 17 VZ 0.5K
+</code></pre>
+
+N+ and N- are  the  positive  and  negative  nodes, respectively.  VNAM  is  the  name  of a voltage source through which the controlling current flows. The direction  of  positive  controlling current flow is from the positive node, through the source, to the negative  node of VNAM. VALUE is the transresistance (in ohms).
+
+<h4><a name="3.2.3">3.2.3 Non-linear Dependent Sources</a></h4>
+
+<strong>General form:</strong>
+<pre><code>
+     BXXXXXXX N+ N- &lt;I=EXPR&gt; &lt;V=EXPR&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     B1 0 1 I=cos(v(1))+sin(v(2))
+     B1 0 1 V=ln(cos(log(v(1,2)^2)))-v(3)^4+v(2)^v(1)
+     B1 3 4 I=17
+     B1 3 4 V=exp(pi^i(vdd))
+</code></pre>
+
+<p>N+ is the positive node, and N- is the  negative  node. The  values of the V and I parameters determine the voltages and currents across and through  the  device,  respectively. If  I is given then the device is a current source, and if V is given the device is a voltage source. One and  only  one of these parameters must be given.</p>
+<p>
+[Note: The SPICE3 non-linear sources are not compatible with the poly() syntax used in SPICE2. <a href="secC.html#C">Appendix C</a> is included to facilitate conversion of old source. <a href="/staff/CDHW/">CDHW</a>.]</p>
+<p>
+[Note: <a href="secD.html#D">Appendix D</a> describes several bugs affecting these devices. <a href="/staff/CDHW/">CDHW</a>.]</p>
+<p>
+The small-signal AC behavior of the nonlinear source is a  linear dependent source (or sources) with a proportionality constant equal to the derivative (or derivatives) of the source at the DC operating point.
+<p>
+The expressions given for V and I may be  any function of voltages and currents through voltage sources in the system. The following functions of real variables are defined:
+<table summary="layout" align=center border=0>
+<tr><td>abs<td>asinh<td>cosh<td>sin
+<tr><td>acos<td>atan<td>exp<td>sinh
+<tr><td>acosh<td>atanh<td>ln<td>sqrt
+<tr><td>asin<td>cos<td>log<td>tan
+</table>
+
+<p>The function "u()" is the  unit  step  function,  with  a value  of  one for arguments greater than zero and a value of zero for arguments less than or equal to zero. The function uramp(<i>x</i>)  is the  integral of the unit step: for an input <i>x</i>, the value is zero if <i>x</i> is less than zero, or if <i>x</i> is  greater  than or equal to zero the value is <i>x</i>. These two functions are useful in sythesizing piece-wise non-linear functions, though convergence  may be adversely affected.
+</p>
+<p>
+The following standard operators are defined:
+</p>
+<table summary="layout" align=center border=0>
+<tr><td>&nbsp;+&nbsp;<td>&nbsp;-&nbsp;<td>&nbsp;*&nbsp;<td>&nbsp;/&nbsp;<td>&nbsp;^&nbsp;<td>&nbsp;unary&nbsp;<td>&nbsp;-
+</table>
+<p>
+If the argument of log(), ln(), or sqrt() becomes  less  than zero,  the  absolute  value  of  the argument is used. If a divisor becomes zero or the argument of log()  or  ln()  becomes zero,  an  error will result. Other problems may occur when the argument for a function in a partial derivative enters a region where that function is undefined.
+
+<p>
+To get time into the expression you can  integrate  the current  from a constant current source with a capacitor and use the resulting voltage (don't forget to set  the  initial voltage  across the capacitor). Nonlinear resistors, capacitors, and inductors may be synthesized with the  nonlinear dependent  source.  Nonlinear resistors are obvious. Nonlinear capacitors and inductors are implemented  with  their linear  counterparts  by  a  change of variables implemented with the nonlinear dependent source. The following  subcircuit will implement a nonlinear capacitor:
+
+<pre><code>
+     .Subckt nlcap   pos neg
+     * Bx: calculate f(input voltage)
+     Bx   1    0    v = f(v(pos,neg))
+     * Cx: linear capacitance
+     Cx   2    0    1
+     * Vx: Ammeter to measure current into the capacitor
+     Vx   2    1    DC 0Volts
+     * Drive the current through Cx back into the circuit
+     Fx   pos  neg  Vx 1
+     .ends
+</code></pre>
+
+Non-linear inductors are similar.
+
+
+<h3><a name="3.3">3.3 TRANSMISSION LINES</a></h3>
+
+<p>[Note: The transmission line elements are not easy to use in non-trivial cases. The significance of the statement "this element models only one propagating mode" is that a length of coaxial cable has two modes (inner-shield and shield-ground), but even a simple pair of wires also has two modes (differential and common). The example file '<a href="ltra_3.cir">ltra_3.cir</a>' shows what is required to simulate a pair of wires, and refer to <a href="sec6.html#6.8">[8]</a> for the details of the calculations required. It seems that <strong>only</strong> the transmission of the voltage and current between N1 and N3 is represented by these elements, N2 and N4 are merely these nodes' respective current mirrors. <a href="/staff/CDHW/">CDHW</a>.]</p>
+
+<h4><a name="3.3.1">3.3.1 Lossless Transmission Lines</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     TXXXXXXX N1 N2 N3 N4 Z0=VALUE &lt;TD=VALUE&gt; &lt;F=FREQ &lt;NL=NRMLEN&gt;&gt;
+     +                    &lt;IC=V1, I1, V2, I2&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     T1 1 0 2 0 Z0=50 TD=10NS
+</code></pre>
+
+N1 and N2 are the nodes at port 1;  N3 and N4  are  the nodes  at  port 2. Z0 is the characteristic impedance. The length of the line may be expressed in either of two  forms. The  transmission  delay,  TD, may be specified directly (as TD=10ns, for example). Alternatively, a frequency F may  be given, together with NL, the normalized electrical length of the transmission line with respect to the wavelength in  the line at the frequency F. If a frequency is specified but NL is omitted, 0.25 is  assumed  (that  is,  the  frequency  is assumed  to  be  the  quarter-wave  frequency).  Note  that although both forms for expressing the line length are indicated as optional, one of the two must be specified.</p>
+
+<p>Note that this  element  models  only  one  propagating mode. If all four nodes are distinct in the actual circuit, then two modes may be excited. To simulate  such  a  situation, two transmission-line elements are required. (see the <a href="secA.html#A.5">example in Appendix A</a> for further clarification.)</p>
+
+<p>The (optional) initial condition specification consists of  the voltage and current at each of the transmission line ports. Note that the  initial  conditions  (if  any)  apply 'only'  if  the UIC option is specified on the <a href="sec4.html#4.3.9">.TRAN</a> control line.</p>
+
+<p>Note that a lossy transmission line  (<a href="sec3.html#3.3.2">see  below</a>)  with zero  loss  may  be  more  accurate  than  than the lossless transmission line due to implementation details.</p>
+
+
+<h4><a name="3.3.2">3.3.2 Lossy Transmission Lines</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     OXXXXXXX N1 N2 N3 N4 MNAME
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     O23 1 0 2 0 LOSSYMOD
+     OCONNECT 10 5 20 5 INTERCONNECT
+</code></pre>
+
+This  is  a  two-port  convolution  model  for  single-conductor lossy transmission lines. N1 and N2 are the nodes
+ at port 1;  N3 and N4 are the nodes at port 2. Note that  a
+ lossy  transmission line with zero loss may be more accurate
+ than than the lossless transmission line due to  implementation details.
+
+
+<h4><a name="3.3.3">3.3.3 Lossy Transmission Line Model (LTRA)</a></h4>
+
+<p>[Note: Consider using the TXL and CPL device models distributed with <a href="http://buffy.eecs.berkeley.edu/IRO/Software/Catalog/Description/kspice.html">KSPICE</a> which are for modeling a single lossy transmission line and a coupled multiconductor line system, respectively. These device models can effectively replace the LTRA model of SPICE3. <a href="/staff/CDHW/">CDHW</a>.]</p>
+
+
+<p>The uniform RLC/RC/LC/RG transmission line  model  (referred  to  as  the LTRA model henceforth) models a uniform
+ constant-parameter distributed transmission  line.  The  RC
+ and  LC  cases  may  also  be  modeled using the URC and TRA
+ models; however, the newer LTRA model is usually faster  and
+ more  accurate  than  the others. The operation of the LTRA
+ model is based on the convolution of the transmission line's
+ impulse responses with its inputs (<a href="sec6.html#6.8">see [8]</a>).
+
+<p>
+The LTRA model takes a number of  parameters,  some  of
+which must be given and some of which are optional.
+
+<p>
+[Note: Running an <a href="sec4.html#4.3.1">.AC</a> analysis on
+the LTRA model only seems to give the correct results in cases
+when LEN=1.0 . This is always possible provided L, C, <i>etc.</i>
+are entered as the inductance of the whole line. <a href="/staff/CDHW/">CDHW</a>.]
+
+<p>
+ 
+<table summary="layout" align=center border=1>
+<tr><th>name<th>parameter<th>units/type<th>default<th>example
+
+<tr><td>R<td>resistance/length<td>ohms/unit<td>0.0<td>0.2
+<tr><td>L<td>inductance/length<td>henrys/unit<td>0.0<td>9.13e-9
+<tr><td>G<td>conductance/length<td>mhos/unit<td>0.0<td>0.0
+<tr><td>C<td>capacitance/length<td>farads/unit<td>0.0<td>3.65e-12
+<tr><td>LEN<td>length of line<td>&nbsp;<td>no default<td>1.0
+<tr><td>REL<td>breakpoint control<td>arbitrary unit<td>1<td>0.5
+<tr><td>ABS<td>breakpoint control<td>&nbsp;<td>1<td>5
+<tr><td>NOSTEPLIMIT<td>don't limit timestep to less than line delay<td>flag<td>not set<td>set
+<tr><td>NOCONTROL<td>don't do complex timestep control<td>flag<td>not set<td>set
+<tr><td>LININTERP<td>use linear interpolation<td>flag<td>not set<td>set
+<tr><td>MIXEDINTERP<td>use linear when quadratic seems bad<td>flag<td>not set<td>set
+<tr><td>COMPACTREL<td>special reltol for history compaction<td>&nbsp;<td>RELTOL<td>1.0e-3
+<tr><td>COMPACTABS<td>special abstol for history compaction<td>&nbsp;<td>ABSTOL<td>1.0e-9
+<tr><td>TRUNCNR<td>use Newton-Raphson method for timestep control<td>flag<td>not set<td>set
+<tr><td>TRUNCDONTCUT<td>don't limit timestep to keep impulse-response errors low<td>flag<td>not set<td>set
+               
+</table>
+
+<p>The following types of lines have been implemented so far: RLC (uniform transmission line with series loss only), RC (uniform RC line), LC (lossless transmission line), and RG (distributed series resistance and parallel conductance only). Any other combination will yield erroneous results and should not be tried. The length LEN of the line must be specified.
+
+<p>NOSTEPLIMIT is a flag that will remove the default restriction of limiting time-steps to less than the line delay in the RLC case. NOCONTROL is a flag that prevents the default limiting of the time-step based on convolution error criteria in the RLC and RC cases. This speeds up simulation but may in some cases reduce the accuracy of results. LININTERP is a flag that, when specified, will use linear interpolation instead of the default quadratic interpolation for calculating delayed signals. MIXEDINTERP is a flag that, when specified, uses a metric for judging whether quadratic interpolation is not applicable and if so uses linear interpolation; otherwise it uses the default quadratic interpolation. TRUNCDONTCUT is a flag that removes the default cutting of the time-step to limit errors in the actual calculation of impulse-response related quantities. COMPACTREL and COMPACTABS are quantities that control the compaction of the past history of values stored for convolution. Larger values of these lower accuracy but usually increase simulation speed. These are to be used with the TRYTOCOMPACT option, described in the <a href="sec4.html#4.1">.OPTIONS</a> section. TRUNCNR is a flag that turns on the use of Newton-Raphson iterations to determine an appropriate timestep in the timestep control routines. The default is a trial and error procedure by cutting the previous timestep in half. REL and ABS are quantities that control the setting of breakpoints.
+
+<p>The option most worth experimenting with for increasing the speed of simulation is REL. The default value of 1 is usually safe from the point of view of accuracy but occasionally increases computation time. A value greater than 2 eliminates all breakpoints and may be worth trying depending on the nature of the rest of the circuit, keeping in mind that it might not be safe from the viewpoint of accuracy. Breakpoints may usually be entirely eliminated if it is expected the circuit will not display sharp discontinuities. Values between 0 and 1 are usually not required but may be used for setting many breakpoints.
+
+<p>COMPACTREL may also be experimented with when the option TRYTOCOMPACT is specified in a <a href="sec4.html#4.1">.OPTIONS</a> card. The legal range is between 0 and 1. Larger values usually decrease the accuracy of the simulation but in some cases improve speed. If TRYTOCOMPACT is not specified on a <a href="sec4.html#4.1">.OPTIONS</a> card, history compaction is not attempted and accuracy is high. NOCONTROL, TRUNCDONTCUT and NOSTEPLIMIT also tend to increase speed at the expense of accuracy.
+
+
+<h4><a name="3.3.4">3.3.4 Uniform Distributed RC Lines (Lossy)</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     UXXXXXXX N1 N2 N3 MNAME L=LEN &lt;N=LUMPS&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     U1 1 2 0 URCMOD L=50U
+     URC2 1 12 2 UMODL l=1MIL N=6
+</code></pre>
+
+N1 and N2 are the two element nodes the  RC  line  connects,  while  N3  is the node to which the capacitances are
+ connected. MNAME is the model name, LEN is  the  length  of
+ the  RC  line in meters. LUMPS, if specified, is the number
+ of lumped segments to use in modeling the RC line  (see  the
+ model  description for the action taken if this parameter is
+ omitted).
+
+
+<h4><a name="3.3.5">3.3.5 Uniform Distributed RC Model (URC)</a></h4>
+
+      The URC model is derived from a model  proposed  by  L.&nbsp;Gertzberrg  in 1974. The model is accomplished by a subcicuit type expansion of the URC line into a network of lumped
+RC  segments  with  internally generated nodes. The RC segments are in a geometric progression, increasing toward  the
+ middle  of  the  URC  line, with K as a proportionality constant. The number of lumped segments used, if not specified
+ for the URC line device, is determined by the following formula:
+ 
+<pre>
+                                             2
+                     |     R C        |(K-1)|  |
+                           _ _      2
+                  log|F        2 J L  |-----|  |
+                       max
+                     |     L L        |  K  |  |
+              N =  ------------------------------
+                              log K
+</pre>
+
+
+      The URC line is made up strictly of resistor and  capacitor  segments  unless the ISPERL parameter is given a non-zero value, in which case the capacitors are  replaced  with
+ reverse  biased diodes with a zero-bias junction capacitance
+ equivalent to the capacitance replaced, and with  a  saturation  current  of ISPERL amps per meter of transmission line
+ and an optional series resistance equivalent to RSPERL  ohms
+ per meter.
+<table summary="layout" align=center border=1>
+<tr><th>#<th>name<th>parameter<th>units<th>default<th>example<th>area
+<tr><td>1<td>K<td>Propagation Constant<td>-<td>2.0<td>1.2<td>-
+<tr><td>2<td>FMAX<td>Maximum Frequency of interest<td>Hz<td>1.0 G<td>6.5 Meg<td>-
+<tr><td>3<td>RPERL<td>Resistance per unit length<td>Z m<sup>-1</sup><td>1000<td>10<td>-
+<tr><td>4<td>CPERL<td>Capacitance per unit length<td>F m<sup>-1</sup><td>10<sup>-15</sup><td>1 pF<td>-
+<tr><td>5<td>ISPERL<td>Saturation Current per unit length<td>A m<sup>-1</sup><td>0<td>-<td>-
+<tr><td>6<td>RSPERL<td>Diode Resistance per unit length<td>Z m<sup>-1</sup><td>0<td>-<td>-
+</table>
+
+<h3><a name="3.4">3.4 TRANSISTORS AND DIODES</a></h3>
+      The area factor used on the diode, BJT, JFET, and  MESFET  devices  determines  the  number of equivalent parallel
+ devices of a specified model. The affected  parameters  are
+ marked  with  an  asterisk  under  the heading 'area' in the
+ model descriptions below. Several geometric factors associated  with  the  channel and the drain and source diffusions
+ can be specified on the MOSFET device line.
+<p>
+     Two different forms of initial conditions may be specified  for  some  devices.  The  first  form  is included to
+ improve the dc convergence for circuits  that  contain  more
+ than one stable state. If a device is specified OFF, the dc
+ operating point is determined with the terminal voltages for
+ that device set to zero. After convergence is obtained, the
+ program continues to iterate to obtain the exact  value  for
+ the  terminal  voltages.  If a circuit has more than one dc
+ stable state, the OFF option can be used to force the  solution  to  correspond  to  a  desired  state. If a device is
+ specified OFF when in reality the device is conducting,  the
+ program  still  obtains  the  correct solution (assuming the
+ solutions converge) but more iterations are  required  since
+ the  program  must  independently  converge  to two separate
+ solutions. The <a href="sec4.html#4.2.1">.NODESET</a> control line serves a similar  purpose  as  the  OFF option. The <a href="sec4.html#4.2.1">.NODESET</a> option is easier to
+ apply and is the preferred means to aid convergence.
+<p>
+      The second form of initial conditions are specified for
+ use  with  the  transient analysis. These are true 'initial
+ conditions' as opposed to the convergence aids  above.  See
+ the  description  of the <a href="sec4.html#4.2.2">.IC</a> control line and the <a href="sec4.html#4.3.9">.TRAN</a> con-
+ trol line for a detailed explanation of initial conditions.
+
+
+
+<h4><a name="3.4.1">3.4.1 Junction Diodes</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     DXXXXXXX N+ N- MNAME &lt;AREA&gt; &lt;OFF&gt; &lt;IC=VD&gt; &lt;TEMP=T&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     DBRIDGE 2 10 DIODE1
+     DCLMP 3 7 DMOD 3.0 IC=0.2
+</code></pre>
+
+N+ and N- are the positive and negative nodes,  respectively.  MNAME  is the model name, AREA is the area factor,
+ and OFF indicates an (optional) starting  condition  on  the
+ device  for  dc  analysis. If the area factor is omitted, a
+ value of 1.0 is assumed. The (optional)  initial  condition
+ specification  using  IC=VD is intended for use with the UIC
+ option on the <a href="sec4.html#4.3.9">.TRAN</a> control line, when a transient  analysis
+ is  desired starting from other than the quiescent operating
+ point. The (optional) TEMP  value  is  the  temperature  at
+ which  this device is to operate, and overrides the temperature specification on the <a href="sec4.html#4.1">.OPTION</a> control line.
+
+
+
+<h4><a name="3.4.2">3.4.2 Diode Model (D)</a></h4>
+ The dc characteristics of the diode are  determined  by
+ the  parameters  IS  and N. An ohmic resistance, RS, is included. Charge storage effects are  modeled  by  a  transit
+ time,  TT, and a nonlinear depletion layer capacitance which
+ is determined by the parameters CJO, VJ, and  M.  The  temperature  dependence of the saturation current is defined by
+ the parameters  EG,  the  energy  and  XTI,  the  saturation
+ current  temperature  exponent.  The nominal temperature at
+ which these parameters were measured is TNOM, which defaults
+ to  the circuit-wide value specified on the <a href="sec4.html#4.1">.OPTIONS</a> control
+ line. Reverse breakdown is modeled by  an  exponential  increase in the reverse diode current and is determined by the
+ parameters BV and IBV (both of which are positive numbers).
+<table summary="layout" align=center border=1>
+<tr><th>#<th>name<th>parameter<th>units<th>default<th>example<th>area
+<tr><td>1<td>IS<td>saturation current<td>A<td>1.0e-14<td>1.0e-14<td>*
+<tr><td>2<td>RS<td>ohmic resistance<td>Z<td>0<td>10<td>*
+<tr><td>3<td>N<td>emission coefficient<td>-<td>1<td>1.0<td>&nbsp;
+<tr><td>4<td>TT<td>transit-time<td>sec<td>0<td>0.1ns<td>&nbsp;
+<tr><td>5<td>CJO<td>zero-bias junction capacitance<td>F<td>0<td>2pF<td>*
+<tr><td>6<td>VJ<td>junction potential<td>V<td>1<td>0.6<td>&nbsp;
+<tr><td>7<td>M<td>grading coefficient<td>-<td>0.5<td>0.5<td>&nbsp;
+<tr><td>8<td>EG<td>activation energy<td>eV<td>1.11<td>1.11 Si<br>0.69 Sbd<br>0.67 Ge<td>&nbsp;
+<tr><td>9<td>XTI<td>saturation-current temp. exp<td>-<td>3.0<td>3.0 jn<br>2.0 Sbd<td>&nbsp;
+<tr><td>10<td>KF<td>flicker noise coefficient<td>-<td>0<td>&nbsp;<td>&nbsp;
+<tr><td>11<td>AF<td>flicker noise exponent<td>-<td>1<td>&nbsp;<td>&nbsp;
+<tr><td>12<td>FC<td>coefficient for forward-bias depletion capacitance formula<td>-<td>0.5<td>&nbsp;<td>&nbsp;
+<tr><td>13<td>BV<td>reverse breakdown voltage<td>V<td>infinite<td>40.0<td>&nbsp;
+<tr><td>14<td>IBV<td>current at breakdown voltage<td>A<td>1.0e-3<td>&nbsp;<td>&nbsp;
+<tr><td>15<td>TNOM<td>parameter measurement temperature<td>&deg;C<td>27<td>50<td>&nbsp;
+</table>
+
+
+<h4><a name="3.4.3">3.4.3 Bipolar Junction Transistors (BJTs)</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     QXXXXXXX NC NB NE &lt;NS&gt; MNAME &lt;AREA&gt; &lt;OFF&gt; &lt;IC=VBE, VCE&gt; &lt;TEMP=T&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     Q23 10 24 13 QMOD IC=0.6, 5.0
+     Q50A 11 26 4 20 MOD1
+</code></pre>
+
+<p>NC, NB, and NE are the  collector,  base,  and  emitter
+ nodes,  respectively.  NS is the (optional) substrate node.
+ If unspecified, ground is used. MNAME is  the  model  name,
+ AREA  is  the  area  factor, and OFF indicates an (optional)
+ initial condition on the device for the <a href="sec1.html#1.1.1">dc analysis</a>. If the
+ area  factor  is  omitted,  a  value of 1.0 is assumed. The
+ (optional) initial condition specification using IC=VBE, VCE
+ is intended for use with the UIC option on the <a href="sec4.html#4.3.9">.TRAN</a> control
+ line, when a transient analysis  is  desired  starting  from
+ other  than the quiescent operating point. See the <a href="sec4.html#4.2.2">.IC</a> control line description for a better way to set transient initial  conditions. The (optional) TEMP value is the temperature at which this device is to operate, and  overrides  the
+temperature specification on the <a href="sec4.html#4.1">.OPTION</a> control line.
+</p>
+
+<h4><a name="3.4.4">3.4.4 BJT Models (NPN/PNP)</a></h4>
+The bipolar junction transistor model in  SPICE  is  an adaptation  of  the  integral charge control model of Gummel and Poon. This modified Gummel-Poon model extends the  original  model to include several effects at high bias levels. The model automatically simplifies to the simpler Ebers-Moll model when certain parameters are not specified. The parameter names used in the modified Gummel-Poon model have  been chosen to be more easily understood by the program user, and to reflect better both physical and circuit design thinking.
+<p>
+The dc model is defined by the parameters IS,  BF,  NF, ISE,  IKF,  and  NE which determine the forward current gain characteristics, IS, BR, NR, ISC, IKR, and NC  which  determine  the  reverse current gain characteristics, and VAF and VAR which determine the output conductance for  forward  and reverse regions. Three ohmic resistances RB, RC, and RE are included, where RB can  be  high  current  dependent.  Base charge  storage  is  modeled  by forward and reverse transit times, TF and TR, the forward transit  time  TF  being  bias dependent  if desired, and nonlinear depletion layer capacitances which are determined by CJE, VJE, and MJE for the B-E junction,  CJC, VJC, and MJC for the B-C junction and CJS, VJS, and MJS for  the  C-S  (Collector-Substrate)  junction. The temperature dependence of the saturation current, IS, is determined by the energy-gap, EG, and the saturation current temperature  exponent,  XTI. Additionally base current temperature dependence  is  modeled  by  the  beta  temperature exponent  XTB  in  the  new model. The values specified are assumed to have been measured at the temperature TNOM, which can  be specified on the <a href="sec4.html#4.1">.OPTIONS</a> control line or overridden by a specification on the .MODEL line.
+<p>
+The  BJT parameters used in  the  modified  Gummel-Poon model are listed below. The parameter names used in earlier versions of SPICE2 are still accepted.
+<p>
+Modified Gummel-Poon BJT Parameters.
+<table summary="layout" align=center border=1>
+<tr><th>#<th>name<th>parameter<th>units<th>default<th>example<th>area
+<tr><td>1<td>IS<td>transport saturation current<td>A<td>1.0e-16<td>1.0e-15<td>*
+<tr><td>2<td>BF<td>ideal maximum forward beta<td>-<td>100<td>100<td>&nbsp;
+<tr><td>3<td>NF<td>forward current emission coefficient<td>-<td>1.0<td>1<td>&nbsp;
+<tr><td>4<td>VAF<td>forward Early voltage<td>V<td>infinite<td>200<td>&nbsp;
+<tr><td>5<td>IKF<td>corner for forward beta high current roll-off<td>A<td>infinite<td>0.01<td>*
+<tr><td>6<td>ISE<td>B-E leakage saturation current<td>A<td>0<td>1.0e-13<td>*
+<tr><td>7<td>NE<td>B-E leakage emission coefficient<td>-<td>1.5<td>2<td>&nbsp;
+<tr><td>8<td>BR<td>ideal maximum reverse beta<td>-<td>1<td>0.1<td>&nbsp;
+<tr><td>9<td>NR<td>reverse current emission coefficient<td>-<td>1<td>1<td>&nbsp;
+<tr><td>10<td>VAR<td>reverse Early voltage<td>V<td>infinite<td>200<td>&nbsp;
+<tr><td>11<td>IKR<td>corner for reverse beta high current roll-off<td>A<td>infinite<td>0.01<td>*
+<tr><td>12<td>ISC<td>B-C leakage saturation current<td>A<td>0<td>1.0e-13<td>*
+<tr><td>13<td>NC<td>B-C leakage emission coefficient<td>-<td>2<td>1.5<td>&nbsp;
+<tr><td>14<td>RB<td>zero bias base resistance<td>ohm<td>0<td>100<td>*
+<tr><td>15<td>IRB<td>current where base resistance falls halfway to its min value<td>A<td>infinite<td>0.1<td>*
+<tr><td>16<td>RBM<td>minimum base resistance at high currents<td>ohm<td>RB<td>10<td>*
+<tr><td>17<td>RE<td>emitter resistance<td>ohm<td>0<td>1<td>*
+<tr><td>18<td>RC<td>collector resistance<td>ohm<td>0<td>10<td>*
+<tr><td>19<td>CJE<td>B-E zero-bias depletion capacitance<td>F<td>0<td>2pF<td>*
+<tr><td>20<td>VJE<td>B-E built-in potential<td>V<td>0.75<td>0.6<td>&nbsp;
+<tr><td>21<td>MJE<td>B-E junction exponential factor<td>-<td>0.33<td>0.33<td>&nbsp;
+<tr><td>22<td>TF<td>ideal forward transit time<td>sec<td>0<td>0.1ns<td>&nbsp;
+<tr><td>23<td>XTF<td>coefficient for bias dependence of TF<td>-<td>0<td>&nbsp;<td>&nbsp;
+<tr><td>24<td>VTF<td>voltage describing VBC dependence of TF<td>V<td>infinite<td>&nbsp;<td>&nbsp;
+<tr><td>25<td>ITF<td>high-current parameter for effect on TF A<td>0<td>&nbsp;<td>&nbsp;<td>*
+<tr><td>26<td>PTF<td>excess phase at freq=1.0/(TF*2PI) Hz<td>deg<td>0<td>&nbsp;<td>&nbsp;
+<tr><td>27<td>CJC<td>B-C zero-bias depletion capacitance<td>F<td>0<td>2pF<td>*
+<tr><td>28<td>VJC<td>B-C built-in potential<td>V<td>0.75<td>0.5<td>&nbsp;
+<tr><td>29<td>MJC<td>B-C junction exponential factor<td>-<td>0.33<td>0.5<td>&nbsp;
+<tr><td>30<td>XCJC<td>fraction of B-C depletion capacitance connected to internal base node<td>-<td>1<td>&nbsp;<td>&nbsp;
+<tr><td>31<td>TR<td>ideal reverse transit time<td>sec<td>0<td>10ns<td>&nbsp;
+<tr><td>32<td>CJS<td>zero-bias collector-substrate capacitance<td>F<td>0<td>2pF<td>*
+<tr><td>33<td>VJS<td>substrate junction built-in potential<td>V<td>0.75<td>&nbsp;<td>&nbsp;
+<tr><td>34<td>MJS<td>substrate junction exponential factor<td>-<td>0<td>0.5<td>&nbsp;
+<tr><td>35<td>XTB<td>forward and reverse beta temperature exponent<td>-<td>0<td>&nbsp;<td>&nbsp;
+<tr><td>36<td>EG<td>energy gap for temperature effect on IS<td>eV<td>1.11<td>&nbsp;<td>&nbsp;
+<tr><td>37<td>XTI<td>temperature exponent for effect on IS<td>-<td>3<td>&nbsp;<td>&nbsp;
+<tr><td>38<td>KF<td>flicker-noise coefficient<td>-<td>0<td>&nbsp;<td>&nbsp;
+<tr><td>39<td>AF<td>flicker-noise exponent<td>-<td>1<td>&nbsp;<td>&nbsp;
+<tr><td>40<td>FC<td>coefficient for forward-bias depletion capacitance formula<td>-<td>0.5<td>&nbsp;<td>&nbsp;
+<tr><td>41<td>TNOM<td>Parameter measurement temperature<td>&deg;C<td>27<td>50<td>&nbsp;
+</table>
+
+<h4><a name="3.4.5">3.4.5 Junction Field-Effect Transistors (JFETs)</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     JXXXXXXX ND NG NS MNAME &lt;AREA&gt; &lt;OFF&gt; &lt;IC=VDS, VGS&gt; &lt;TEMP=T&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     J1 7 2 3 JM1 OFF
+</code></pre>
+
+ND, NG, and NS are the drain, gate, and  source  nodes, respectively.  MNAME  is  the  model name, AREA is the area factor, and OFF indicates an (optional) initial condition on the  device for <a href="sec1.html#1.1.1">dc analysis</a>. If the area factor is omitted, a value of 1.0 is assumed. The (optional) initial condition specification,  using  IC=VDS,  VGS is intended for use with the UIC option on the <a href="sec4.html#4.3.9">.TRAN</a> control line, when  a  transient analysis  is  desired starting from other than the quiescent operating point. See the <a href="sec4.html#4.2.2">.IC</a> control line for a better  way to set initial conditions. The (optional) TEMP value is the temperature at which this device is to  operate,  and  overrides  the  temperature specification on the <a href="sec4.html#4.1">.OPTION</a> control line.
+
+
+<h4><a name="3.4.6">3.4.6 JFET Models (NJF/PJF)</a></h4>
+
+
+The JFET model is derived from the FET model of  Shichman  and  Hodges. The dc characteristics are defined by the parameters VTO and BETA, which determine  the  variation  of drain  current  with  gate voltage, LAMBDA, which determines the output conductance, and IS, the  saturation  current  of the  two  gate junctions. Two ohmic resistances, RD and RS, are included. Charge storage is modeled by nonlinear depletion  layer  capacitances for both gate junctions which vary as the -1/2 power of junction voltage and are defined by the parameters CGS, CGD, and PB.
+<p>
+      Note that in Spice3f and later, a fitting  parameter  B
+ has been added. For details, see <a href="sec6.html#6.9">[9]</a>.
+ <p>
+ 
+<table summary="layout" align=center border=1>
+<tr><th>#<th>name<th>parameter<th>units<th>default<th>example<th>area
+<tr><td> 1<td>VTO<td>threshold voltage (V<sub>TO</sub><td>V<td>-2.0<td>-2.0<td>&nbsp;<td>
+<tr><td> 2<td>BETA<td>transconductance parameter (B)<td>A V<sup>-2</sup><td>1.0e-4<td>1.0e-3<td>*
+<tr><td> 3<td>LAMBDA<td>channel-length modulation parameter (L)<td>V<sup>-1</sup><td>0<td>1.0e-4<td>&nbsp;
+<tr><td> 4<td>RD<td>drain ohmic resistance<td>ohm<td>0<td>100<td>*
+<tr><td> 5<td>RS<td>source ohmic resistance<td>ohm<td>0<td>100<td>*
+<tr><td> 6<td>CGS<td>zero-bias G-S junction capacitance (C<sub>gd</sub>)<td>F<td>0<td>5pF<td>*
+<tr><td> 7<td>CGD<td>zero-bias G-D junction capacitance (C<sub>gd</sub>)<td>F<td>0<td>1pF<td>*
+<tr><td> 8<td>PB<td>gate junction potential<td>V<td>1<td>0.6<td>&nbsp;
+<tr><td> 9<td>IS<td>gate junction saturation current (I<sub>S</SUB> )<td>A<td>1.0e-14<td>1.0e-14<td>*
+<tr><td>10<td>B<td>doping tail parameter<td>-<td>1<td>1.1<td>&nbsp;
+<tr><td>11<td>KF<td>flicker noise coefficient<td>-<td>0<td>&nbsp;<td>&nbsp;
+<tr><td>12<td>AF<td>flicker noise exponent<td>-<td>1<td>&nbsp;<td>&nbsp;
+<tr><td>13<td>FC<td>coefficient for forward-bias depletion capacitance formula<td>-<td>0.5<td>&nbsp;<td>&nbsp;
+<tr><td>14<td>TNOM<td>parameter measurement temperature<td>&deg;C<td>27<td>50<td>&nbsp;
+</table>
+
+
+<h4><a name="3.4.7">3.4.7 MOSFETs</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     MXXXXXXX ND NG NS NB MNAME &lt;L=VAL&gt; &lt;W=VAL&gt; &lt;AD=VAL&gt; &lt;AS=VAL&gt;
+     + &lt;PD=VAL&gt; &lt;PS=VAL&gt; &lt;NRD=VAL&gt; &lt;NRS=VAL&gt; &lt;OFF&gt;
+     + &lt;IC=VDS, VGS, VBS&gt; &lt;TEMP=T&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     M1 24 2 0 20 TYPE1
+     M31 2 17 6 10 MODM L=5U W=2U
+     M1 2 9 3 0 MOD1 L=10U W=5U AD=100P AS=100P PD=40U PS=40U
+</code></pre>
+
+ND, NG, NS, and NB are the drain,  gate,  source,  and  bulk (substrate)  nodes,  respectively. MNAME is the model name. L and W are the channel length and width, in meters. AD and AS  are  the  areas  of  the drain and source diffusions, in meter<sup>2</sup> . Note that the suffix U specifies microns (1e-6  m) and  P  sq-microns (1e-12 m<sup>2</sup>). If any of L, W, AD, or AS are not specified, default values are used. The use of defaults simplifies  input  file  preparation, as well as the editing required if device geometries are to be changed. PD and  PS are  the  perimeters  of  the drain and source junctions, in meters. NRD and NRS  designate  the  equivalent  number  of squares  of  the  drain  and source diffusions; these values multiply the sheet resistance RSH specified  on  the  <a href="sec2.html#2.3">.MODEL</a> control line for an accurate representation of the parasitic series drain and source resistance of each  transistor.  PD and  PS  default to 0.0 while NRD and NRS to 1.0. OFF indicates an (optional) initial condition on the device  for  dc analysis.  The  (optional)  initial condition specification using IC=VDS, VGS, VBS is intended  for  use  with  the  UIC option  on the <a href="sec4.html#4.3.9">.TRAN</a> control line, when a transient analysis is desired starting from other than the quiescent  operating point.  See the <a href="sec4.html#4.2.2">.IC</a> control line for a better and more convenient way to specify transient  initial  conditions.  The (optional)  TEMP value is the temperature at which this device is to operate, and overrides the temperature  specification  on the <a href="sec4.html#4.1">.OPTION</a> control line. The temperature specification is ONLY valid for level 1, 2, 3, and 6  MOSFETs,  not for level 4 or 5 (BSIM) devices.
+
+<h4><a name="3.4.8">3.4.8 MOSFET Models (NMOS/PMOS)</a></h4>
+
+
+SPICE provides four MOSFET device models, which  differ in  the formulation of the I-V characteristic. The variable LEVEL specifies the model to be used:
+<table summary="layout" align=center border=0>
+<tr><td>LEVEL=1<td>Shichman-Hodges
+<tr><td>LEVEL=2<td>MOS2 (as described in <a href="sec6.html#6.1">[1]</a>)
+<tr><td>LEVEL=3<td>MOS3, a semi-empirical model (<a href="sec6.html#6.1">see [1]</a>)
+<tr><td>LEVEL=4<td>BSIM (as described in <a href="sec6.html#6.3">[3]</a>)
+<tr><td>LEVEL=5<td>new BSIM (BSIM2; as described in <a href="sec6.html#6.5">[5]</a>)
+<tr><td>LEVEL=6<td>MOS6 (as described in <a href="sec6.html#6.2">[2]</a>)
+</table>
+<p>
+The dc characteristics of the level 1 through level  3  MOSFETs  are  defined by the device parameters VTO, KP, LAMBDA, PHI and GAMMA. These parameters are computed  by  SPICE  if process  parameters  (NSUB,  TOX,  ...) are given, but user-specified values always override. VTO  is  positive  (negative)  for  enhancement  mode  and  negative  (positive) for depletion  mode  N-channel  (P-channel)   devices.   Charge storage is modeled by three constant capacitors, CGSO, CGDO, and CGBO which represent overlap capacitances, by  the  nonlinear thin-oxide capacitance which is distributed among the gate, source, drain, and bulk regions, and by the  nonlinear depletion-layer  capacitances  for  both substrate junctions divided into bottom and periphery, which vary as the MJ  and MJSW  power of junction voltage respectively, and are determined by the parameters CBD, CBS, CJ, CJSW, MJ, MJSW and PB. Charge  storage  effects are modeled by the piecewise linear voltages-dependent capacitance model proposed by Meyer. The thin-oxide  charge-storage effects are treated slightly different for the LEVEL=1 model. These voltage-dependent capacitances  are included only if TOX is specified in the input description and they are represented using Meyer's  formulation.
+<p>
+There is some overlap among the  parameters  describing the  junctions, e.g. the reverse current can be input either as IS (in A) or as JS (in A/m<sup>2</sup>). Whereas  the  first  is  an absolute value the second is multiplied by AD and AS to give the reverse  current  of  the  drain  and  source  junctions respectively.  This methodology has been chosen since there is no sense in relating always junction characteristics with AD  and  AS  entered  on  the  device line; the areas can be defaulted. The same idea  applies  also  to  the  zero-bias junction capacitances CBD and CBS (in F) on one hand, and CJ (in F/m<sup>2</sup>) on the other.  The  parasitic  drain  and  source series  resistance  can be expressed as either RD and RS (in ohms) or RSH (in ohms/sq.), the latter being  multiplied  by the number of squares NRD and NRS input on the device line.
+<p>
+A discontinuity in the MOS level 3 model  with  respect to  the  KAPPA  parameter has been detected (see <a name="sec6.html#6.10">[10]</a>). The supplied fix has been implemented  in  Spice3f2  and  later. Since  this  fix  may  affect  parameter fitting, the option "BADMOS3" may be set to use the old implementation (see  the section  on  simulation  variables and the "<a href="sec4.html#4.1">.OPTIONS</a>" line). SPICE level 1, 2,  3 and 6 parameters:
+<table summary="layout" align=center border=1>
+<tr><th>#<th>name<th>parameter<th>units<th>default<th>example
+<tr><td> 1<td>LEVEL<td>model index<td>-<td>1<td>&nbsp;
+<tr><td> 2<td>VTO<td>zero-bias threshold voltage (V<sub>TO)</sub><td>V<td>0.0<td>1.0
+<tr><td> 3<td>KP<td>transconductance parameter<td>A V<sup>-2</sup><td>2.0e-5<td>3.1e-5
+<tr><td> 4<td>GAMMA<td>bulk threshold parameter<td>V<sup>1/2</sup><td>0.0<td>0.37
+<tr><td> 5<td>PHI<td>surface potential (U)<td>V<td>0.6<td>0.65
+<tr><td> 6<td>LAMBDA<td>channel-length modulation (MOS1 and MOS2 only) (L)<td>V<sup>-1</sup><td>0.0<td>0.02
+<tr><td> 7<td>RD<td>drain ohmic resistance<td>ohm<td>0.0<td>1.0
+<tr><td> 8<td>RS<td>source ohmic resistance<td>ohm<td>0.0<td>1.0
+<tr><td> 9<td>CBD<td>zero-bias B-D junction capacitance<td>F<td>0.0<td>20fF
+<tr><td> 10<td>CBS<td>zero-bias B-S junction capacitance<td>F<td>0.0<td>20fF
+<tr><td> 11<td>IS<td>bulk junction saturation current (I<sub>S</SUB>)<td>A<td>1.0e-14<td>1.0e-15
+<tr><td> 12<td>PB<td>bulk junction potential<td>V<td>0.8<td>0.87
+<tr><td> 13<td>CGSO<td>gate-source overlap capacitance per meter channel width<td>F m<sup>-1</sup><td>0.0<td>4.0e-11
+<tr><td> 14<td>CGDO<td>gate-drain overlap capacitance per meter channel width<td>F m<sup>-1</sup><td>0.0<td>4.0e-11
+<tr><td> 15<td>CGBO<td>gate-bulk overlap capacitance per meter channel length<td>F m<sup>-1</sup><td>0.0<td>2.0e-10
+<tr><td> 16<td>RSH<td>drain and source diffusion sheet resistance<td>ohm/[]<td>0.0<td>10.0
+<tr><td> 17<td>CJ<td>zero-bias bulk junction bottom cap. per sq-meter of junction area<td>F m-2<td>0.0<td>2.0e-4
+<tr><td> 18<td>MJ<td>bulk junction bottom grading coeff.<td>-<td>0.5<td>0.5
+<tr><td> 19<td>CJSW<td>zero-bias bulk junction sidewall cap. per meter of junction perimeter<td>F m<sup>-1</sup><td>0.0<td>1.0e-9
+<tr><td> 20<td>MJSW<td>bulk junction sidewall grading coeff.<td>-<td>0.50 (level1)<br>0.33 (level2,3)<td>&nbsp;
+<tr><td> 21<td>JS<td>bulk junction saturation current<td>&nbsp;<td>&nbsp;<td>&nbsp;
+<tr><td> 22<td>TOX<td>oxide thickness<td>m<td>1.0e-7<td>1.0e-7
+<tr><td> 23<td>NSUB<td>substrate doping<td>cm<sup>-3</sup><td>0.0<td>4.0e15
+<tr><td> 24<td>NSS<td>surface state density<td>cm<sup>-2</sup><td>0.0<td>1.0e10
+<tr><td> 25<td>NFS<td>fast surface state density<td>cm<sup>-2</sup><td>0.0<td>1.0e10
+<tr><td> 26<td>TPG<td>type of gate material:<br>+1 opp. to substrate<br>-1 same as substrate<br>&nbsp;0 Al gate<td>-<td>1.0<td>&nbsp;
+<tr><td> 27<td>XJ<td>metallurgical junction depth<td>m<td>0.0<td>1M
+<tr><td> 28<td>LD<td>lateral diffusion<td>m<td>0.0<td>0.8M
+<tr><td> 29<td>UO<td>surface mobility<td>cm<sup>2</sup> V<sup>-1</sup> s<sup>-1</sup><td>600<td>700
+<tr><td> 30<td>UCRIT<td>critical field for mobility degradation (MOS2 only)<td>V cm<sup>-1</sup><td>1.0e4<td>1.0e4
+<tr><td> 31<td>UEXP<td>critical field exponent in mobility degradation (MOS2 only)<td>-<td>0.0<td>0.1
+<tr><td> 32<td>UTRA<td>transverse field coeff. (mobility) (deleted for MOS2)<td>-<td>0.0<td>0.3
+<tr><td> 33<td>VMAX<td>maximum drift velocity of carriers<td>m s<sup>-1</sup><td>0.0<td>5.0e4
+<tr><td> 34<td>NEFF<td>total channel-charge (fixed and mobile) coefficient (MOS2 only)<td>-<td>1.0<td>5.0
+<tr><td> 35<td>KF<td>flicker noise coefficient<td>-<td>0.0<td>1.0e-26
+<tr><td> 36<td>AF<td>flicker noise exponent<td>-<td>1.0<td>1.2
+<tr><td> 37<td>FC<td>coefficient for forward-bias depletion capacitance formula<td>-<td>0.5<td>&nbsp;
+<tr><td> 38<td>DELTA<td>width effect on threshold voltage (MOS2 and MOS3)<td>-<td>0.0<td>1.0
+<tr><td> 39<td>THETA<td>mobility modulation (MOS3 only)<td>V<sup>-1</sup><td>0.0<td>0.1
+<tr><td> 40<td>ETA<td>static feedback (MOS3 only)<td>-<td>0.0<td>1.0
+<tr><td> 41<td>KAPPA<td>saturation field factor (MOS3 only)<td>-<td>0.2<td>0.5
+<tr><td> 42<td>TNOM<td>parameter measurement temperature<td>&deg;C<td>27<td>50
+</table>
+<p>
+The level 4 and level 5 (BSIM1  and  BSIM2)  parameters are  all  values obtained from process characterization, and can be generated automatically. J. Pierret <a href="sec6.html#6.4">[4]</a> describes  a means  of  generating  a  'process'  file,  and  the program Proc2Mod provided with SPICE3 converts this file into a  sequence  of BSIM1 ".MODEL" lines suitable for inclusion in a SPICE input file. Parameters marked below with an * in  the l/w  column also have corresponding parameters with a length and width dependency. For example, VFB is the basic parameter with  units  of volts, and LVFB and WVFB also exist and have units of volt-meter The formula
+
+<pre>
+                            P            P
+                             L            W
+               P = P  + ---------- + ----------
+                    0
+                        L            W
+                         effective    effective
+</pre>
+
+is used to evaluate the  parameter  for  the  actual  device specified with
+
+<pre>
+                   L          = L      - DL
+                    effective    input
+
+</pre>
+and
+<pre>
+                   W          = W      - DW
+                    effective    input
+</pre>
+
+Note that unlike the other models in  SPICE,  the  BSIM model  is  designed  for use with a process characterization system that provides all the parameters, thus there  are  no defaults  for  the  parameters,  and leaving one out is considered an error. For an example set of parameters and  the format  of  a  process  file,  see the SPICE2 implementation notes <a href="sec6.html#6.3">[3]</a>.
+For more information on BSIM2, see reference <a href="sec6.html#6.5">[5]</a>.
+
+<p>
+SPICE BSIM (level 4) parameters:
+<table summary="layout" align=center border=1>
+<tr><th>name<th>parameter<th>units<th>l/w<td>
+<tr><td>VFB<td>flat-band voltage<td>V<td>*
+<tr><td>PHI<td>surface inversion potential<td>V<td>*
+<tr><td>K1<td>body effect coefficient<td>V<sup>1/2</sup><td>*
+<tr><td>K2<td>drain/source depletion charge-sharing coefficient<td>-<td>*
+<tr><td>ETA<td>zero-bias drain-induced barrier-lowering coefficient<td>-<td>*
+<tr><td>MUZ<td>zero-bias mobility<td>cm<sup>2</sup> V<sup>-1</sup> s<sup>-1</sup><td>&nbsp;
+<tr><td>DL<td>shortening of channel<td>&micro;m<td>&nbsp;
+<tr><td>DW<td>narrowing of channel<td>&micro;m<td>&nbsp;
+<tr><td>U0<td>zero-bias transverse-field mobility degradation coefficient<td>V<sup>-1</sup><td>*
+<tr><td>U1<td>zero-bias velocity saturation coefficient<td>&micro;m V<sup>-1</sup><td>*
+<tr><td>X2MZ<td>sens. of mobility to substrate bias at v=0<td>cm<sup>2</sup> V<sup>-2</sup> s<sup>-1</sup><td>*
+<tr><td>X2E<td>sens. of drain-induced barrier lowering effect to substrate bias<td>V<sup>-1</sup><td>*
+<tr><td>X3E<td>sens. of drain-induced barrier lowering effect to drain bias at V<sub>ds</sub>=V<sub>dd</sub><td>V<sup>-1</sup><td>*
+<tr><td>X2U0<td>sens. of transverse field mobility degradation effect to substrate bias<td>V<sup>-2</sup><td>*
+<tr><td>X2U1<td>sens. of velocity saturation effect to substrate bias<td>&micro;m V<sup>-2</sup><td>*
+<tr><td>MUS<td>mobility at zero substrate bias and at V<sub>ds</sub>=V<sub>dd</sub><td>cm<sup>2</sup> V<sup>-2</sup> s<sup>-1</sup><td>&nbsp;
+<tr><td>X2MS<td>sens. of mobility to substrate bias at V<sub>ds</sub>=V<sub>dd</sub><td>cm<sup>2</sup> V<sup>-2</sup> s<sup>-1</sup><td>*
+<tr><td>X3MS<td>sens. of mobility to drain bias at V<sub>ds</sub>=V<sub>dd</sub><td>cm<sup>2</sup> V<sup>-2</sup> s<sup>-1</sup><td>*
+<tr><td>X3U1<td>sens. of velocity saturation effect on drain bias at V<sub>ds</sub>=V<sub>dd</sub><td>&micro;m V<sup>-2</sup><td>*
+<tr><td>TOX<td>gate oxide thickness<td>&micro;m<td>&nbsp;
+<tr><td>TEMP<td>temperature at which parameters were measured<td>&deg;C<td>&nbsp;
+<tr><td>VDD<td>measurement bias range<td>V<td>&nbsp;
+<tr><td>CGDO<td>gate-drain overlap capacitance per meter channel width<td>F m<sup>-1</sup><td>&nbsp;
+<tr><td>CGSO<td>gate-source overlap capacitance per meter channel width<td>F m<sup>-1</sup><td>&nbsp;
+<tr><td>CGBO<td>gate-bulk overlap capacitance per meter channel length<td>F m<sup>-1</sup><td>&nbsp;
+<tr><td>XPART<td>gate-oxide capacitance-charge model flag<td>-<td>&nbsp;
+<tr><td>N0<td>zero-bias subthreshold slope coefficient<td>-<td>*
+<tr><td>NB<td>sens. of subthreshold slope to substrate bias<td>-<td>*
+<tr><td>ND<td>sens. of subthreshold slope to drain bias<td>-<td>*
+<tr><td>RSH<td>drain and source diffusion sheet resistance<td>Z/[]<td>&nbsp;
+<tr><td>JS<td>source drain junction current density<td>A m<sup>-2</sup><td>&nbsp;
+<tr><td>PB<td>built in potential of source drain junction<td>V<td>&nbsp;
+<tr><td>MJ<td>Grading coefficient of source drain junction<td>-<td>&nbsp;
+<tr><td>PBSW<td>built in potential of source, drain junction sidewall<td>V<td>&nbsp;
+<tr><td>MJSW<td>grading coefficient of source drain junction sidewall<td>-<td>&nbsp;
+<tr><td>CJ<td>Source drain junction capacitance per unit area<td>F m<sup>-2</sup><td>&nbsp;
+<tr><td>CJSW<td>source drain junction sidewall capacitance per unit length<td>F m<sup>-1</sup><td>&nbsp;
+<tr><td>WDF<td>source drain junction default width<td>m<td>&nbsp;
+<tr><td>DELL<td>Source drain junction length reduction<td>m<td>&nbsp;
+</table>
+
+<p>
+
+XPART = 0 selects a 40/60 drain/source charge partition in  saturation,  while  XPART=1 selects a 0/100 drain/source charge partition.
+
+<p>
+[Note: Al Davis reported 'In the BSIM1 model, the parameter "xpart" behaves randomly.  To fix, .. in the file "b1mpar.c" line 290, change "iValue" to "rValue".' <a href="/staff/CDHW/">CDHW</a>.]
+
+
+<p>
+
+ND, NG, and NS are the drain, gate, and  source  nodes, respectively.  MNAME  is  the  model name, AREA is the area factor, and OFF indicates an (optional) initial condition on the  device for <a href="sec1.html#1.1.1">dc analysis</a>. If the area factor is omitted, a value of 1.0 is assumed.  The (optional) initial condition specification,  using  IC=VDS,  VGS is intended for use with the UIC option on the <a href="sec4.html#4.3.9">.TRAN</a> control line, when  a  transient analysis  is  desired starting from other than the quiescent operating point.  See the <a href="sec4.html#4.2.2">.IC</a> control line for a better  way to set initial conditions.
+
+
+<h4><a name="3.4.9">3.4.9 MESFETs</a></h4>
+<strong>General form:</strong>
+<pre><code>
+     ZXXXXXXX ND NG NS MNAME &lt;AREA&gt; &lt;OFF&gt; &lt;IC=VDS, VGS&gt;
+</code></pre>
+<strong>Examples:</strong>
+<pre><code>
+     Z1 7 2 3 ZM1 OFF
+</code></pre>
+
+
+<h4><a name="3.4.10">3.4.10 MESFET Models (NMF/PMF)</a></h4>
+      The MESFET model is derived from the GaAs FET model  of
+ Statz  et al.  as described in <a name="sec6.html#6.11">[11]</a>.  The dc characteristics
+ are defined by the parameters VTO, B, and BETA, which determine  the  variation of drain current with gate voltage, ALPHA, which determines saturation voltage, and LAMBDA,  which
+ determines  the  output  conductance.  The formula are given
+ by:
+
+<pre>
+                                   3
+                  2
+        B (V  -V )    |    |   V  |  |                             3
+            gs  T               ds                                 _
+ I  = --------------- |1 - |1-A---|  |(1 + L V  )   for  0 &lt; V   &lt;
+  d                                           ds              ds
+      1 + b(V   - V ) |    |    3 |  |                             A
+             gs    T
+                          2
+                B (V  -V )                                     3
+                    gs  T                                      _
+         I  = ---------------(1 + L V  )            for  V   &gt;
+          d                          ds                   ds
+              1 + b(V   - V )                                  A
+                     gs    T
+</pre>
+
+      Two ohmic resistances, RD and RS, are included.  Charge
+ storage  is  modeled  by  total gate charge as a function of
+ gate-drain and gate-source voltages and is  defined  by  the
+ parameters CGS, CGD, and PB.
+
+<table summary="layout" align=center border=1>
+<tr><th>#<th>name<th>parameter<th>units<th>default<th>example<th>area
+
+<tr><td>1<td>VTO<td>pinch-off voltage<td>V<td>-2.0<td>-2.0<td>&nbsp;
+<tr><td>2<td>BETA<td>transconductance parameter<td>A V<sup>-2</sup><td>1.0e-4<td>1.0e-3<td>*
+<tr><td>3<td>B<td>doping tail extending parameter<td>V<sup>-1</sup><td>0.3<td>0.3<td>*
+<tr><td>4<td>ALPHA<td>saturation voltage parameter<td>V<sup>-1</sup><td>2<td>2<td>*
+<tr><td>5<td>LAMBDA<td>channel-length modulation parameter<td>V<sup>-1</sup><td>0<td>1.0e-4<td>&nbsp;
+<tr><td>6<td>RD<td>drain ohmic resistance<td>Z<td>0<td>100<td>*
+<tr><td>7<td>RS<td>source ohmic resistance<td>Z<td>0<td>100<td>*
+<tr><td>8<td>CGS<td>zero-bias G-S junction capacitance<td>F<td>0<td>5pF<td>*
+<tr><td>9<td>CGD<td>zero-bias G-D junction capacitance<td>F<td>0<td>1pF<td>*
+<tr><td>10<td>PB<td>gate junction potential<td>V<td>1<td>0.6<td>&nbsp;
+<tr><td>11<td>KF<td>flicker noise coefficient<td>-<td>0<td>&nbsp;<td>&nbsp;
+<tr><td>12<td>AF<td>flicker noise exponent<td>-<td>1<td>&nbsp;<td>&nbsp;
+<tr><td>13<td>FC<td>coefficient for forward-bias depletion capacitance formula<td>-<td>0.5<td>&nbsp;<td>&nbsp;
+</table>
+
+
+
+<DIV class=NOPRINT>
+&nbsp;
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+</DIV>
+
+
+
+
+
+</div>
+
+<div class='phy-forcewidth'>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+</div>
+</table> <!-- End of main layout table -->
+<hr id=xphy-bottom2>
+
+<div class=noprint>
+<table width='100%' border=0>
+<tr>
+<td valign=middle align=left>
+
+<a href='http://validator.w3.org/check?uri=referer'>Validate</a>
+ &nbsp;  
+<a href='http://validator.w3.org/checklink?uri=referer'>Link-check</a>
+
+
+<td valign=middle align=center>
+
+<a href='http://newton.ex.ac.uk/general/copyright.html'>&copy; Copyright &amp; disclaimer</a>
+
+<td valign=middle align='right'>
+
+<!-- AddThis Button BEGIN -->
+<a href="http://www.addthis.com/bookmark.php" target=sharethis><img class=addit src="/furniture/addthis.gif" width="125" height="16" border="0" alt="Share" title="Add this page to your favourite social networking sites"></a>
+<!-- AddThis Button END -->
+
+</table>
+
+</div>
+
+</div> <!-- wrapper -->
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+**** 05/14/10 19:29:49 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "NEG-Prueba-VDC"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NEG\Prueba-VDC.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Prueba-VDC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-nand-pspicefiles/i-nand.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V2 0 3.3 1m 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\NEG.net" 
+
+
+
+**** INCLUDING NEG.net ****
+* source I-NAND
+.EXTERNAL INPUT IN
+.EXTERNAL INPUT VDD
+.EXTERNAL INPUT OUT
+.EXTERNAL INPUT GND
+V_V1         VDD GND 3.3
+M_M5         OUT IN VDD VDD CMOSP  
++ L=.18u  
++ W=.2u         
+V_V2         IN GND 0Vdc
+M_M6         OUT IN GND GND CMOSN  
++ L=.18u  
++ W=.18u         
+
+**** RESUMING Prueba-VDC.cir ****
+.END
+
+WARNING -- Library file D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand-pspicefiles\i-nand.lib has changed since index file i-nand.ind was created.
+WARNING -- The timestamp changed from Tue Mar 16 18:22:41 2010 to Fri May 14 19:29:34 2010.
+Making new index file i-nand.ind for library file i-nand.lib
+Index has 3 entries from 1 file(s).
+
+ERROR -- Node VDD is floating
+ERROR -- Node GND is floating
+ERROR -- Node OUT is floating
+ERROR -- Node IN is floating

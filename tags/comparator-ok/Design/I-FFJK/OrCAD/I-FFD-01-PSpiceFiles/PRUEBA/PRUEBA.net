@@ -1,0 +1,11 @@
+* source I-FFD-01
+V_V1         N35803 0  
++PULSE 0v 5v 5u 5u 5u 5u 50u
+V_V2         N35820 0 5v
+U_DSTM1         STIM(1,1) $G_DPWR $G_DGND N35611 IO_STM IO_LEVEL=0 
++ 0 0
++ +1u 1
++REPEAT FOREVER
++ +.5uS 0
++  +.5uS 1
++ ENDREPEAT

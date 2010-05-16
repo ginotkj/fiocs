@@ -1,0 +1,20 @@
+.ALIASES
+M_M2            M2(d=VDIFERENCIAL g=IN+ s=VEQUILIBRIO b=0 ) CN @I-COMPARADOR-01.TEST(sch_1):INS39289@BREAKOUT.MbreakN.Normal(chips)
+M_M3            M3(d=N39461 g=N39461 s=N39211 b=N39211 ) CN @I-COMPARADOR-01.TEST(sch_1):INS39323@BREAKOUT.MbreakP.Normal(chips)
+M_M4            M4(d=VDIFERENCIAL g=N39461 s=N39211 b=N39211 ) CN
++@I-COMPARADOR-01.TEST(sch_1):INS39357@BREAKOUT.MbreakP.Normal(chips)
+M_M5            M5(d=VEQUILIBRIO g=VBIAS s=0 b=0 ) CN @I-COMPARADOR-01.TEST(sch_1):INS39391@BREAKOUT.MbreakN.Normal(chips)
+V_VQ+           VQ+(+=IN+ -=0 ) CN @I-COMPARADOR-01.TEST(sch_1):INS42064@SOURCE.VDC.Normal(chips)
+M_M6            M6(d=OUT g=VDIFERENCIAL s=N39211 b=N39211 ) CN @I-COMPARADOR-01.TEST(sch_1):INS39425@BREAKOUT.MbreakP.Normal(chips)
+V_VBIAS          VBIAS(+=VBIAS -=0 ) CN @I-COMPARADOR-01.TEST(sch_1):INS41369@SOURCE.VDC.Normal(chips)
+M_M7            M7(d=OUT g=VBIAS s=0 b=0 ) CN @I-COMPARADOR-01.TEST(sch_1):INS39465@BREAKOUT.MbreakN.Normal(chips)
+V_VQ-           VQ-(+=IN- -=0 ) CN @I-COMPARADOR-01.TEST(sch_1):INS42616@SOURCE.VDC.Normal(chips)
+M_M1            M1(d=N39461 g=IN- s=VEQUILIBRIO b=0 ) CN @I-COMPARADOR-01.TEST(sch_1):INS39255@BREAKOUT.MbreakN.Normal(chips)
+V_VDD           VDD(+=N39211 -=0 ) CN @I-COMPARADOR-01.TEST(sch_1):INS39746@SOURCE.VDC.Normal(chips)
+_    _(IN+=IN+)
+_    _(VBIAS=VBIAS)
+_    _(OUT=OUT)
+_    _(Vdiferencial=VDIFERENCIAL)
+_    _(IN-=IN-)
+_    _(Vequilibrio=VEQUILIBRIO)
+.ENDALIASES

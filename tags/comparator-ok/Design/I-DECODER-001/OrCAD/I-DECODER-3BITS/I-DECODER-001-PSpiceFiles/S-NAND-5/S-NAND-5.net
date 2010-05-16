@@ -1,0 +1,37 @@
+* source I-DECODER-001
+M_M10         N36965 N33383 0 0 CMOSN  
++ L=.5u  
++ W=.8u         
+M_M4         N33489 N33383 N33383 N33383 CMOSP  
++ L=.5u  
++ W=5u         
+R_R1         N33383 0  10Meg  
+R_R2         N33383 0  10Meg  
+R_R3         N33383 0  10Meg  
+M_M7         N33879 N33383 N36965 N36965 CMOSN  
++ L=.5u  
++ W=.8u         
+V_V1         N33383 0 5
+M_M5         N33489 N33383 N33383 N33383 CMOSP  
++ L=.5u  
++ W=5u         
+M_M1         N33489 N33383 N33539 N33539 CMOSN  
++ L=.5u  
++ W=.8u         
+M_M2         N33539 N33383 N33557 N33557 CMOSN  
++ L=.5u  
++ W=.8u         
+M_M6         N33557 N33383 N33879 N33879 CMOSN  
++ L=.5u  
++ W=.8u         
+R_R4         N33383 0  10Meg  
+R_R5         N33383 0  10Meg  
+M_M3         N33489 N33383 N33383 N33383 CMOSP  
++ L=.5u  
++ W=5u         
+M_M8         N33489 N33383 N33383 N33383 CMOSP  
++ L=.5u  
++ W=5u         
+M_M9         N33489 N33383 N33383 N33383 CMOSP  
++ L=.5u  
++ W=5u         

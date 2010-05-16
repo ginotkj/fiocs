@@ -1,0 +1,40 @@
+ PARAM	|			DESCRIPTION			|   UNITS	| DEFAULT
+-------------------------------------------------------------
+ABSTOL1	| best accuracy of currents		| amp		| 1.0 pA
+-------------------------------------------------------------
+CHGTOL	| best accuracy of charges		| coulomb	| 0.01 pC
+-------------------------------------------------------------
+GMIN	| minimum conductance used for	| ohm-1	 	| 1.0E-12
+		| any branch 					|			|
+-------------------------------------------------------------
+ITL1	| DC and bias point blind 		|  			| 150.0
+		| repeating limit				|			|
+-------------------------------------------------------------
+ITL2	| DC and bias point educated 	|			| 20.0 
+		| guess repeating limit  		|			|
+-------------------------------------------------------------
+ITL4	| the limit at any repeating 	|			| 10.0
+		| point in transient analysis	|			|
+-------------------------------------------------------------
+ITL5	| total repeating limit for all	|			| 0.0
+		| points for transient analysis	|			|
+		|(ITL5=0 means ITL5=infinity)	| 			|
+-------------------------------------------------------------
+LIMPTS	| maximum points allowed for 	|			| 0.0
+		| any print table or plot		|			|
+		|(LIMPTS=0 means LIMPTS=infinity)			|
+-------------------------------------------------------------
+RELTOL	| relative accuracy of V and I 	| 			| 0.001
+-------------------------------------------------------------
+SOLVER	| performance package solution 	|			|
+		| algorithm 					|			|
+		| Solver=0 selects the original |(In PSpice	| 0
+		| solution algorithm;			|A/D Basics)|
+		|								|			|
+		| Solver=1 selects the advanced |(In others | 1
+		| solution algorithm)			|PSpice prod|
+-------------------------------------------------------------
+VNTOL	| best accuracy of voltages 	| volt		| 1.0 uV
+-------------------------------------------------------------
+.OPTIONS <Parameter Name>={SCHEDULE(<time-value>, <parameter
+value>, <time-value>, <parameter value>, …)}

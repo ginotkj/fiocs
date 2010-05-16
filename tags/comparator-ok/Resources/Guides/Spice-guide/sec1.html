@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    DO NOT EDIT THIS PAGE! See http://newton.ex.ac.uk/schooldocs/it/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<HEAD>
+<TITLE>SPICE 3 User&#039;s Manual - Section 1</TITLE>
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<link REL='SHORTCUT ICON' HREF='/favicon.ico'> 
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/screen2.css'> 
+<link media='print' rel='stylesheet' TYPE='text/css' href='/css/print.css'>
+<link media='screen' rel='stylesheet' TYPE='text/css' href='/css/nosidebar.css'>
+</head>
+<body>
+
+<!--  START OF NEW HEADER -->
+<div id="x_wrapper">
+
+<!--
+<div class='maybemobile'>View this page on our
+<a href='http://m-newton.ex.ac.uk/teaching/resources/CDHW/Electronics2/userguide/sec1.html'>mobile-friendly site</a>
+</div>
+-->
+
+<table width='100%' id="x_header" cellpadding=0 cellspacing=0 border=0><tr>
+  <td valign=top id="x_logo">
+     <a href="http://www.ex.ac.uk/" title="University of Exeter"><img src="/furniture/logo.gif" alt="University of Exeter" class="logo" width="162" height="60"></a>
+
+  <td valign=top id="x_department" align=left>
+    <a href='/' class='verytop'>School of Physics</a>
+    
+      
+  <td id="x_topnav" align=right valign=top>
+      <div id="supernav">
+          <a href="http://newton.ex.ac.uk/contact.html">Contact Us</a>
+          | <a href="http://newton.ex.ac.uk/schooldocs/">Staff</a>
+          | <a href="http://newton.ex.ac.uk/teaching/">Students</a>
+          | <a href="http://www.ex.ac.uk/myexeter/">MyExeter</a>
+          | <a href="http://newton.ex.ac.uk/quick-links/">Site map</a>
+        </div>
+
+        <div id="search">
+	  <form method="get" action="/cgi-bin/htsearch" 
+name="htsearchform" id="searchbox">
+                        <input class="search" id="words" name ='words'
+type="text" size="23" maxlength="80" title="Search the site"
+onfocus='if(this.value==this.defaultValue)  this.value="";' 
+value='  Search Physics'>
+                       <input type=hidden name='config' value='htdig'>
+<input name="submit" class="button" value="Search"  type="submit">
+
+          </form>
+        </div>
+    </table>
+<!-- NB div "wrapper" remains open -->
+<!--  END OF NEW HEADER -->
+
+
+<table cellspacing=0 cellpadding=0 class='phy-toptable'>
+
+<tr>
+
+<!-- SIDEBARROWSPAN = 2 -->
+
+
+
+
+<td valign='top'>
+      <div class="mainnav">
+        <ul>
+	<li><a 
+	href="/" title="School" 
+	class="studying">Home page</a>
+
+<li><a	href="/teaching/" title="Teaching" 
+	class="alumni">Our Teaching</a>
+
+<li><a 	href="/research/" title="Research" 
+	class="research">Our Research</a>
+
+<li><a 	href="/admissions/" title="Admissions" 
+	class="working">How to apply</a>
+
+<li><a 	href="/features/" title="News" 
+	class="business">News</a>
+
+<li><a 	href="/research/positions/" title="Jobs" 
+	class="jobs">Jobs</a>
+
+      </ul>
+    </div>
+
+
+<tr>
+<td class='phy-content' id='top' valign=top>
+<div class='e-topcrumbs'>  <a href='/'>Home</a>  <b>&rsaquo;</b> <a href='./../../../../'>Our Teaching</a> <b>&rsaquo;</b> <a href='./../../../'>Resources</a> <b>&rsaquo;</b> <a href='./../../'>CDHW</a> <b>&rsaquo;</b> <a href='./../'>Electronics2</a> <b>&rsaquo;</b> <a href='./'>Userguide</a> <b>&rsaquo;</b> <span class='crumbs_here'>sec1.html</span></div>
+
+
+<div class='phy-realcontent'>
+
+
+
+
+
+
+
+<h1>SPICE 3 User&#039;s Manual - Section&nbsp;1</h1>
+
+
+
+
+
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+
+<h2><a name="1">1. INTRODUCTION</a></h2>
+
+SPICE is a general-purpose circuit  simulation  program for  nonlinear  dc,  nonlinear transient, and linear ac analyses.  Circuits may contain resistors,  capacitors,  inductors,  mutual  inductors,  independent  voltage  and current sources, four types of dependent sources, lossless and lossy transmission lines (two separate implementations), switches, uniform distributed RC lines, and the five most common  semiconductor  devices:  diodes, BJTs, JFETs, MESFETs, and MOSFETs.
+
+<p>
+The SPICE3 version is based  directly  on  SPICE 2G6. While  SPICE3 is being developed to include new features, it continues to support those  capabilities  and  models  which remain in extensive use in the SPICE2 program.
+
+<p>
+SPICE has built-in models for  the  semiconductor  devices,  and  the  user  need specify only the pertinent model parameter values.  The model for the BJT  is  based  on  the integral-charge  model  of Gummel and Poon;  however, if the Gummel-Poon parameters are not specified, the model reduces to  the  simpler  Ebers-Moll model.  In either case, charge-storage effects, ohmic resistances, and a  current-dependent output  conductance may be included.  The diode model can be used for either junction diodes or Schottky barrier  diodes. The  JFET  model  is  based on the FET model of Shichman and Hodges.   Six  MOSFET  models  are  implemented:   MOS1   is described by a square-law I-V characteristic, MOS2 <a href="sec6.html#6.1">[1]</a> is an analytical model, while MOS3 <a href="sec6.html#6.1">[1]</a> is a semi-empirical  model; MOS6  <a href="sec6.html#6.2">[2]</a>  is a simple analytic model accurate in the short-channel region; MOS4 <a href="sec6.html#6.2">[3,  4]</a>  and  MOS5  <a href="sec6.html#6.5">[5]</a>  are  the  BSIM (Berkeley Short-channel IGFET Model) and BSIM2.  MOS2, MOS3, and MOS4 include second-order effects such as channel-length modulation,   subthreshold   conduction,  scattering-limited velocity  saturation,  small-size   effects,   and   charge-controlled capacitances.
+
+<h3><a name="1.1">1.1 TYPES OF ANALYSIS</a></h3>
+
+<h4><a name="1.1.1">1.1.1 DC Analysis</a></h4>
+
+The dc analysis portion  of  SPICE (<a href="sec4.html#4.3.2">.DC</a>) determines  the  dc operating  point  of  the circuit with inductors shorted and capacitors opened.  The dc analysis options are specified on the  <a href="sec4.html#4.3.2">.DC</a>,  <a href="sec4.html#4.3.8">.TF</a>,  and  <a href="sec4.html#4.3.5">.OP</a>  control  lines.  A dc analysis is automatically performed prior to  a  transient  analysis  to determine  the transient initial conditions, and prior to an ac  small-signal  analysis  to  determine  the   linearized, small-signal  models  for  nonlinear devices.  If requested, the dc small-signal value of a transfer function  (ratio  of output variable to input source), input resistance, and output resistance is also computed as a part of  the  dc  solution.   The  dc  analysis  can  also  be used to generate dc transfer curves:  a specified independent voltage or current source  is  stepped  over  a user-specified range and the dc output variables  are  stored  for  each  sequential  source value.
+
+<h4><a name="1.1.2">1.1.2 AC Small-Signal Analysis</a></h4>
+The ac small-signal portion of SPICE (<a href="sec4.html#4.3.1">.AC</a>) computes  the  ac output variables  as  a function of frequency.  The program first computes the  <a href="sec4.html#4.3.5">dc operating point</a>  of  the  circuit  and determines  linearized,  small-signal  models for all of the nonlinear devices in the circuit.  The resultant linear circuit  is  then  analyzed over a user-specified range of frequencies.   The  desired  output  of  an  ac  small-  signal analysis is usually a transfer function (voltage gain, transimpedance, etc).  If the circuit has only one ac input,  it is  convenient to set that input to unity and zero phase, so that output variables have the same value  as  the  transfer function of the output variable with respect to the input.
+
+<h4><a name="1.1.3">1.1.3 Transient Analysis</a></h4>
+The transient analysis portion of  SPICE (<a href="sec4.html#4.3.9">.TRAN</a>) computes  the transient  output  variables  as  a  function of time over a user-specified time interval.  The  initial  conditions  are automatically  determined  by  a  dc  analysis.  All sources which are not time dependent (for example,  power  supplies) are  set  to their dc value.  The transient time interval is specified on a <a href="sec4.html#4.3.9">.TRAN</a> control line. (See also &sect;4.4.4 <a href="sec4.html#4.4.4">.FOUR</a>)
+
+<h4><a name="1.1.4">1.1.4 Pole-Zero Analysis</a></h4>
+The pole-zero analysis portion of  SPICE (<a href="sec4.html#4.3.6">.PZ</a>) computes  the poles and/or zeros in the small-signal ac transfer function. The program first computes the dc operating point  and  then determines  the  linearized, small-signal models for all the nonlinear devices in the circuit.  This circuit is then used to find the poles and zeros of the transfer function.
+<p>
+Two types of transfer functions are allowed  :  one  of the  form  (output voltage)/(input voltage) and the other of the form (output voltage)/(input current).  These two  types of  transfer  functions cover all the cases and one can find the poles/zeros of functions like input/output impedance and voltage  gain.   The input and output ports are specified as two pairs of nodes.
+<p>
+The pole-zero analysis works  with  resistors,  capacitors,   inductors,  linear-controlled  sources,  independent sources, BJTs,  MOSFETs,  JFETs  and  diodes.   Transmission lines are not supported.
+<p>
+The method used in the analysis is a sub-optimal numerical  search.  For large circuits it may take a considerable time or fail to find all poles and  zeros.   For  some  circuits,  the  method  becomes  "lost"  and finds an excessive number of poles or zeros.
+
+<h4><a name="1.1.5">1.1.5 Small-Signal Distortion Analysis</a></h4>
+The  distortion  analysis  portion  of  SPICE (<a href="sec4.html#4.3.3">.DISTO</a>) computes steady-state harmonic and intermodulation products for small input signal magnitudes.  If signals of a  single  frequency are  specified  as  the  input  to  the circuit, the complex values of the second and third harmonics are  determined  at every  point  in  the  circuit.  If there are signals of two frequencies input to the circuit, the analysis finds out the complex  values  of  the  circuit  variables  at the sum and difference of the input frequencies, and at  the  difference of  the  smaller  frequency  from the second harmonic of the larger frequency.
+<p>
+Distortion analysis is supported for the following nonlinear  devices: diodes (DIO), BJT, JFET, MOSFETs (levels 1, 2, 3, 4/BSIM1, 5/BSIM2, and 6) and MESFETS.  All linear devices are automatically supported by distortion analysis.  If there are switches present in the circuit, the analysis continues  to  be  accurate provided the switches do not change state under the small excitations used for distortion calculations.
+
+<h4><a name="1.1.6">1.1.6 Sensitivity Analysis</a></h4>
+Spice3 will calculate (<a href="sec4.html#4.3.7">.SENS</a>)  either  the  DC  operating-point sensitivity  or the AC small-signal sensitivity of an output variable with respect to all  circuit  variables,  including model  parameters.   Spice  calculates  the difference in an output variable (either a node voltage or a branch  current) by  perturbing  each parameter of each device independently. Since the method is a numerical approximation,  the  results may  demonstrate  second  order  affects in highly sensitive parameters, or may fail to show very low but non-zero sensitivity.   Further, since each variable is perturb by a small fraction of its value, zero-valued parameters are not analyized  (this  has  the  benefit of reducing what is usually a very large amount of data).
+
+<h4><a name="1.1.7">1.1.7 Noise Analysis</a></h4>
+The noise  analysis  portion  of  SPICE (<a href="sec4.html#4.3.4">.NOISE</a>)  does  analysis device-generated noise for the given circuit.  When provided with an input source and an output port, the analysis calculates the noise contributions of each device (and each noise generator within the device) to the output port voltage.  It also  calculates  the input noise to the circuit, equivalent to the output noise referred to the specified input  source. This  is done for every frequency point in a specified range - the calculated value of the noise corresponds to the spectral  density of the circuit variable viewed as a stationary gaussian stochastic process.
+<p>
+After  calculating  the   spectral   densities,   noise analysis  integrates  these  values  over the specified frequency range to arrive at the  total  noise  voltage/current (over   this   frequency   range).   This  calculated  value corresponds to the variance of the circuit  variable  viewed as a stationary gaussian process.
+
+<h3><a name="1.2">1.2 ANALYSIS AT DIFFERENT TEMPERATURES</a></h3>
+All input data for SPICE is assumed to have been  measured  at a nominal temperature of 27&deg;C, which can be changed by use of the TNOM parameter on the  <a href="sec4.html#4.1">.OPTIONS</a>  control  line. This  value  can  further be overridden for any device which models temperature effects by specifying the TNOM  parameter on the model itself.  The circuit simulation is performed at a temperature of 27&deg;C, unless overridden by a TEMP parameter on  the  <a href="sec4.html#4.1">.OPTIONS</a>  control  line.   Individual  instances may further override the circuit temperature through the specification of a TEMP parameter on the instance.
+<p>
+Temperature dependent support is  provided  for  resistors,  diodes,  JFETs,  BJTs, and level 1, 2, and 3 MOSFETs. BSIM (levels 4 and 5) MOSFETs have an alternate  temperature dependency  scheme which adjusts all of the model parameters before input to SPICE.  For details of the BSIM  temperature adjustment, see <a href="sec6.html#6.6">[6]</a> and <a href="sec6.html#6.7">[7]</a>.
+<p>
+Temperature appears explicitly in the exponential terms of  the BJT and diode model equations.  In addition, saturation currents have a built-in temperature  dependence.   The temperature  dependence of the saturation current in the BJT models is determined by:
+
+<pre>
+                              XTI
+                          |T |        | E q(T  T )|
+                            1            g   1  0
+          I (T ) = I (T ) |--|     exp|-----------|
+           S  1     S  0
+                          |T |        |k (T  - T )|
+                            0              1    0
+</pre>
+
+
+where <i>k</i> is Boltzmann's constant,  <i>q</i>  is  the  electronic charge, <i>E</i><sub>g</sub>  is the energy gap which is a model parameter, and XTI is the saturation current  temperature  exponent (also a model parameter, and usually equal to 3).
+<p>
+
+The temperature dependence of forward and reverse  beta is according to the formula:
+
+<pre>
+                                      XTB
+                                  |T |
+                                    1
+                    B(T ) = B(T ) |--|
+                       1       0
+                                  |T |
+                                    0
+</pre>
+
+where <i>T</i><sub>1</sub>  and T<i>T</i><sub>0</sub>  are in kelvin,  and  XTB  is  a user-supplied  model  parameter.  Temperature effects on beta are carried out by appropriate  adjustment  to  the values  of   <i>B</i><sub>F</sub>, <i>I</i><sub>SE</sub>, <i>B</i><sub>R</sub> , and <i>I</i><sub>SC</sub> (spice model parameters BF, ISE, BR, and ISC, respectively).
+<p>
+Temperature dependence of the saturation current in the junction diode model is determined by:
+
+<pre>
+                             XTI
+                             ---
+                              N
+                         |T |        |  E q(T  T ) |
+                           1             g   1  0
+         I (T ) = I (T ) |--|     exp|-------------|
+          S  1     S  0
+                         |T |        |N k (T  - T )|
+                           0                1    0
+</pre>
+
+where <i>N</i> is the emission coefficient, which  is  a  model parameter,  and  the other symbols have the same meaning as above.  Note that for Schottky  barrier  diodes,  the value  of  the  saturation current temperature exponent, XTI, is usually 2.
+<p>
+Temperature appears explicitly in the value of junction potential, <i>U</i> (in spice PHI), for all the device models.  The temperature dependence is determined by:
+
+<pre>
+                                   | N N   |
+                                      a d
+                          kT       |------ |
+                   U(T) = --  log        2
+                           q     e |N (T)  |
+                                     i
+</pre>
+
+where <i>k</i> is Boltzmann's constant,  <i>q</i>  is  the  electronic charge,  <i>N</i><sub>a</sub>   is the acceptor impurity density, <i>N</i><sub>d</sub>  is the donor impurity density, <i>N</i><sub>i</sub> is the intrinsic carrier concentration, and <i>E</i><sub>g</sub>  is the energy gap.
+<p>
+Temperature appears explicitly in the value of  surface mobility, M<sub>0</sub>  (or UO), for the MOSFET model.  The temperature dependence is determined by:
+
+<pre>
+                                M (T )
+                                 0  0
+                       M (T) = -------
+                        0          1.5
+                               | T|
+                               |--|
+                               |T |
+                                 0
+</pre>
+
+
+The effects of temperature on resistors is  modeled  by the formula:
+
+<p align=center>
+       R(T) = R(T<sub>0</sub> ) [1 + TC<sub>1</sub>  (T - T<sub>0</sub> ) + TC<sub>2</sub>  (T - T<sub>0</sub>)<sup>2</sup> ]
+<p>
+ where <i>T</i> is the circuit temperature, T<sub>0</sub>   is  the  nominal
+ temperature,  and TC<sub>1</sub>  and TC<sub>2</sub>  are the first- and second-order temperature coefficients.
+
+<h3><a name="1.3">1.3 CONVERGENCE</a></h3>
+Both dc and transient  solutions  are  obtained  by  an iterative  process which is terminated when both of the following conditions hold:
+<p>
+<OL>
+<LI>The nonlinear branch  currents  converge  to  within  a tolerance of 0.1% or 1 picoamp (1.0<sup>-12</sup>A), whichever is larger.
+<LI>The node voltages converge to  within  a  tolerance  of 0.1% or 1 microvolt (1.0<sup>-6</sup>V), whichever is larger.
+</OL>
+Although the algorithm used in SPICE has been found  to be  very  reliable,  in some cases it fails to converge to a solution.  When this failure occurs, the program  terminates the job.
+<p>
+Failure to converge in <a href="sec1.html#1.1.1">dc analysis</a> is usually due to an error  in specifying circuit connections, element values, or model parameter values.  Regenerative switching circuits  or circuits  with  positive feedback probably will not converge in the <a href="sec1.html#1.1.1">dc analysis</a> unless the OFF option is used for some of the  devices  in  the feedback path, or the <a href="sec4.html#4.2.1">.NODESET</a> control line is used to force the circuit to converge to the desired state.
+
+
+<DIV class=NOPRINT>
+&nbsp;
+
+<!-- NavBar.SPICE.html START --><hr><div class=NOPRINT><table  width="100%" border=0 cellpadding=5 cellspacing=0 summary="Navigation Aid"><tr><th align=left ><font face='arial,helvetica' size=2><a href="index.html#toc">0. CONTENTS</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec1.html">1. INTRODUCTION</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec2.html">2. SYNTAX</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec3.html">3. COMPONENTS</a></font></th></tr><tr><th align=left ><font face='arial,helvetica' size=2><a href="sec4.html">4. ANALYSES</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec5.html">5. INTERPRETER</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="sec6.html">6. BIBLIOGRAPHY</a></font></th><th align=left ><font face='arial,helvetica' size=2><a href="index.html#app">APPENDICES</a></font></th></tr></table><hr></div><!-- NavBar.SPICE.html FINISH -->
+
+</DIV>
+
+
+
+
+
+</div>
+
+<div class='phy-forcewidth'>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+</div>
+</table> <!-- End of main layout table -->
+<hr id=xphy-bottom2>
+
+<div class=noprint>
+<table width='100%' border=0>
+<tr>
+<td valign=middle align=left>
+
+<a href='http://validator.w3.org/check?uri=referer'>Validate</a>
+ &nbsp;  
+<a href='http://validator.w3.org/checklink?uri=referer'>Link-check</a>
+
+
+<td valign=middle align=center>
+
+<a href='http://newton.ex.ac.uk/general/copyright.html'>&copy; Copyright &amp; disclaimer</a>
+
+<td valign=middle align='right'>
+
+<!-- AddThis Button BEGIN -->
+<a href="http://www.addthis.com/bookmark.php" target=sharethis><img class=addit src="/furniture/addthis.gif" width="125" height="16" border="0" alt="Share" title="Add this page to your favourite social networking sites"></a>
+<!-- AddThis Button END -->
+
+</table>
+
+</div>
+
+</div> <!-- wrapper -->
+
+</body>
+</html>
