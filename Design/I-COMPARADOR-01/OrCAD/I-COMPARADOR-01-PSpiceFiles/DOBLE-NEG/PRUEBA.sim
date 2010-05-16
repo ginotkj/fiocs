@@ -33,13 +33,13 @@ Notes=
 @End Analysis
 @Analysis: 2 1
 +0 0
-+0 "VQ-" 
++0 "VIN" 
 +1 "" 
 +2 "" 
 +3 "" 
-+4 ".99999" 
-+5 "1.001" 
-+6 "1u" 
++4 "0.9" 
++5 "1.1" 
++6 ".001m" 
 +7 "" 
 @End Analysis
 @Analysis: 3 0

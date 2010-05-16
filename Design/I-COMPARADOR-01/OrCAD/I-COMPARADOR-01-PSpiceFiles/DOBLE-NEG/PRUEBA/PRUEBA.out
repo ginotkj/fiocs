@@ -1,5 +1,5 @@
 
-**** 05/12/10 19:08:27 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 05/15/10 21:00:24 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -23,7 +23,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.DC LIN V_VQ- .99999 1.001 1u 
+.DC LIN V_VIN 0.9 1.1 .001m 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\DOBLE-NEG.net" 
 
@@ -32,42 +32,30 @@
 **** INCLUDING DOBLE-NEG.net ****
 * source I-COMPARADOR-01
 M_M1         NDNEG IN- NDBIAS 0 CMOSN  
-+ L=2u  
-+ W=884u         
++ L=20u  
++ W=89u         
 M_M2         NDPOS IN+ NDBIAS 0 CMOSN  
-+ L=2u  
-+ W=884u         
++ L=20u  
++ W=89u         
 V_VDD         N64870 0 3.3
-M_M10         ND2 ND1 N64870 N64870 CMOSP  
-+ L=1u  
-+ W=4.306u         
 M_M3         NDNEG NDNEG N64870 N64870 CMOSP  
-+ L=1u  
-+ W=1.45u         
-V_VBIAS         VBIAS 0 .33
-M_M8         ND2 ND1 0 0 CMOSN  
-+ L=2u  
-+ W=2u         
-M_M12         ND1 NDPOS N64870 N64870 CMOSP  
-+ L=1u  
-+ W=73.3u         
++ L=25u  
++ W=37u         
+V_VBIAS         VBIAS 0 .52
+M_M12         N73445 NDPOS N64870 N64870 CMOSP  
++ L=15u  
++ W=1097u         
+V_VREF         IN+ 0 1
 M_M4         NDPOS NDNEG N64870 N64870 CMOSP  
-+ L=1u  
-+ W=1.45u         
-V_VQ+         IN+ 0 1
-M_M11         NDOUT ND2 N64870 N64870 CMOSP  
-+ L=1u  
-+ W=4.306u         
-M_M13         ND1 VBIAS 0 0 CMOSN  
-+ L=1u  
-+ W=25u         
++ L=25u  
++ W=37u         
+M_M13         N73445 VBIAS 0 0 CMOSN  
++ L=15u  
++ W=375u         
 M_M5         NDBIAS VBIAS 0 0 CMOSN  
-+ L=.2u  
-+ W=.2u         
-V_VQ-         IN- 0 1.00001
-M_M9         NDOUT ND2 0 0 CMOSN  
-+ L=2u  
-+ W=2u         
++ L=20u  
++ W=20u         
+V_VIN         IN- 0 1
 
 **** RESUMING PRUEBA.cir ****
 .END
@@ -75,25 +63,19 @@ M_M9         NDOUT ND2 0 0 CMOSN
 Mosfet M_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
-Mosfet M_M8, model CMOSN: Using BSIM VERSION 3.1 or lower
-WARNING -- Mosfet M_M8, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_M8, model CMOSN: Ps = 0 is less than W
 Mosfet M_M13, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M13, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M13, model CMOSN: Ps = 0 is less than W
 Mosfet M_M5, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M5, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSN: Ps = 0 is less than W
-Mosfet M_M10, model CMOSP: Using BSIM VERSION 3.1 or lower
-WARNING -- Mosfet M_M10, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_M10, model CMOSP: Ps = 0 is less than W
 Mosfet M_M3, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_M12, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M12, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
-**** 05/12/10 19:08:27 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 05/15/10 21:00:24 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -211,18 +193,12 @@ WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
 Mosfet M_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
-Mosfet M_M8, model CMOSN: Using BSIM VERSION 3.1 or lower
-WARNING -- Mosfet M_M8, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_M8, model CMOSN: Ps = 0 is less than W
 Mosfet M_M13, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M13, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M13, model CMOSN: Ps = 0 is less than W
 Mosfet M_M5, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M5, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSN: Ps = 0 is less than W
-Mosfet M_M10, model CMOSP: Using BSIM VERSION 3.1 or lower
-WARNING -- Mosfet M_M10, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_M10, model CMOSP: Ps = 0 is less than W
 Mosfet M_M3, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
@@ -232,18 +208,12 @@ WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
 Mosfet M_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M1, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M1, model CMOSN: Ps = 0 is less than W
-Mosfet M_M8, model CMOSN: Using BSIM VERSION 3.1 or lower
-WARNING -- Mosfet M_M8, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_M8, model CMOSN: Ps = 0 is less than W
 Mosfet M_M13, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M13, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M13, model CMOSN: Ps = 0 is less than W
 Mosfet M_M5, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M5, model CMOSN: Pd = 0 is less than W
 WARNING -- Mosfet M_M5, model CMOSN: Ps = 0 is less than W
-Mosfet M_M10, model CMOSP: Using BSIM VERSION 3.1 or lower
-WARNING -- Mosfet M_M10, model CMOSP: Pd = 0 is less than W
-WARNING -- Mosfet M_M10, model CMOSP: Ps = 0 is less than W
 Mosfet M_M3, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M3, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
@@ -253,7 +223,7 @@ WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
 
           JOB CONCLUDED
 
-**** 05/12/10 19:08:27 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 05/15/10 21:00:24 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -265,5 +235,5 @@ WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =         .17
+  Total job time (using Solver 1)   =       17.21
 
