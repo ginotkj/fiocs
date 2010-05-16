@@ -119,6 +119,17 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS (FFD luego del deco)\i-decoder.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS (FFD luego del deco)\i-decoder.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS (FFD luego del deco)\i-decoder.dsn"
+         "SENALES")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS (FFD luego del deco)\i-decoder.dsn"
+         "Design Cache")
       (Path "Design Resources" "Library")
       (Path "Outputs"))
     (HierarchyView)
