@@ -43,6 +43,8 @@
 
 """ This module is the main program """
 
+#Mine imports
+import fail_inject
 
 #Python imports
 import sys
@@ -172,7 +174,11 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         items_ = self.listWidget.selectedItems()
         print "INFO: %s" % str(items_)
 
-        step = (100 / items_.__len__()).__trunc__()
+        items_qty = items_.__len__()
+        if items_qty == 0:
+            step = 0
+        else:
+            step = (100 / items_qty).__trunc__()
         valor = 0
 
         # This loop iterates over all list widget items
