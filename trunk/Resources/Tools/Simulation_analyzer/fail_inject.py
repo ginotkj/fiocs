@@ -47,6 +47,10 @@ import sys
 import re
 import os
 
+class FailInjectError(Exception):
+    """ Module main exception """
+    pass
+
 class FailInject():
     """ This class is to manage fail injections in CIR files. """
     def __init__ (self):
@@ -136,20 +140,13 @@ class FailInject():
             if drainmos in nodes:
                 self._related_transistors.append(str(mos))
 
-    def run (self,dir_=None,file_=None,fail_=None):
+    def run (self,file_=None,dir_=None,fail_=None,nodes_=None):
         """ Main method """
         # Check if a file was received in the calling of the function
         if file_ == None:
-            try:
-                self._file = sys.argv[1]
-                try:
-                    f = open(self._file)
-                    f = None
-                except IOError, ex:
-                    print "The file could not be open."
-                    print "ERROR: %s" % ex
-            except IndexError, ex:
-                sys.exit("Please insert a CIR file!")
+            ex = "Please insert a CIR file!"
+            sys.exit(ex)
+            raise FailInjectError(ex)
         else:
             try:
                 f = open(file_)
@@ -157,55 +154,59 @@ class FailInject():
                 f = None
             except IOError, ex:
                 print "Could not open file: %s" % file_
-                print "ERROR: %s" % ex
+                raise FailInjectError(ex)
 
         # Checks if an output dir was passed in the calling
         if dir_ == None:
-            try:
-                self._outdir = os.getcwd()
-            except Exception, ex:
-                print "Error getting current directory"
-                print "ERROR: %s" % ex
-            # Create the default output directory at self._outdir
-            self._outdir = self._outdir + "\OrCAD_Simulation_Files"
-            print "OUTDIR: %s" % self._outdir #DEBUG
-            try:
-                tmp = os.getcwd()
-                os.chdir(self._outdir) # Check if it is already created
-                os.chdir(tmp)
-            except WindowsError, ex:
-                try:
-                    os.mkdir(self._outdir)
-                except WindowsError, ex:
-                    print "Couldn't create %s" % self._outdir
-                    print "ERROR: %s" % ex
+            ex = "Please enter an output directory"
+            sys.exit(ex)
+            raise FailInjectError(ex)
         else:
             try:
                 tmp = os.getcwd()
-                print "DIR: %s" % dir_
+                #print "DIR: %s" % dir_
                 os.chdir(dir_) # NameError exception occur if dir_ doesn't exist
                 self._outdir = dir_
                 os.chdir(tmp)
             except WindowsError, ex:
                 print "Could not change to dir %s" % dir_
-                print "ERROR: %s" % ex
+                raise FailInjectError(ex)
 
+        # Checks if a fail was entered
+        if fail_ == None:
+            ex = "Please enter a fail to inject"
+            sys.exit(ex)
+            raise FailInjectError(ex)
+
+        # Checks if a node/s was entered
+        if nodes_ == None:
+            ex = "Please specify the nodes to inject the fail"
+            sys.exit(ex)
+            raise FailInjectError(ex)
 
         # Read the transistors to parse
         print "Transistors: %s" % self._transistor_count(self._file)
         print "Fail: %s" % fail_
+
         # Parse file to allow fail injection and sets: self._trans
         self._get_nodes(self._file)
 
         # Inject the fail into the new file
         for mos in self._trans:
-            self._inject_point = self._trans[mos]["drain"]
+            # Retrieve the 'nodes_' of the 'mos' to inject the fail
+            self._inject_point = self._trans[mos][nodes_]
+
+            # Parse file and sets: self._related_transistors
             self._get_related_transistors(self._inject_point)
+
             #print "Transistor: %s" % mos
             #print "Drain: %s" % self._inject_point
             #print "Related transistors: %s" % self._related_transistors
             #print "==============================================================="
-            self._inject_fail(self._fail,self._related_transistors,self._outdir,self._inject_point)
+
+            # Generate all the files with the fail inside
+            self._inject_fail(self._fail,self._related_transistors,
+                                self._outdir,self._inject_point)
 
         # Print a specific transistor information
         print self._trans['M_C_F_D_U99_M4']
@@ -213,5 +214,13 @@ class FailInject():
 if __name__ == '__main__':
 
     A = FailInject()
-    A.run(sys.argv[1],sys.argv[2],sys.argv[3])
+    A.run(sys.argv[1],sys.argv[2],sys.argv[3],sys.argv[4])
+#    FILE = sys.argv[1]
+#   try:
+#        f = open(FILE)
+#        f = None
+#    except IOError, ex:
+#        print "The file could not be open."
+#        print "ERROR: %s" % ex
+#    A.run(FILE,sys.argv[2],sys.argv[3])
 
