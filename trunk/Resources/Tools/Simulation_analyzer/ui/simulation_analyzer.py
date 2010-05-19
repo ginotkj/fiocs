@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'simulation_analyzer.ui'
 #
-# Created: Tue May 18 20:59:13 2010
+# Created: Tue May 18 23:30:38 2010
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
