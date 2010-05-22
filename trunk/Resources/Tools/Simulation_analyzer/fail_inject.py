@@ -61,6 +61,8 @@ class FailInject():
         self._nodes = {}
         # This var stores the source circuit file
         self._cirfile = ''
+        # This var stores the content of the source circuit file
+        self._cirfilecont = ''
         # This var has all nodes involved in a fail injection point
         self._related_transistors = []
         # This var contains the string expresion of the fail
@@ -69,6 +71,8 @@ class FailInject():
         self._outdir = ''
         # This var holds the injection point
         self._inject_point = ''
+        # This var holds the type of transistor in wich the fail'll be injected
+        self._trantype = ''
 
     def _transistor_count (self,file):
         """ This method count the transistors on the given file. """
@@ -102,28 +106,63 @@ class FailInject():
                                 'type': aux[5]}
                 self._trans[aux[0]] = self._nodes
 
-    def _inject_fail (self,ffail,nnode,outdir,point):
+    def _inject_fail (self,ffail,nnode,ooutdir,ppoint,ttype,ttran):
         """ This method injects the code into the CIR file """
         # Opens a new cirfile
-        os.chdir(outdir)
-        file_ = point + '.cir'
+        os.chdir(ooutdir)
+        file_ = ppoint + '.cir'
         try:
             f = open(file_,'w')
         except:
             print "Could not create the file %s" % file_
-        print "point es %s" % point
-        print "nnode es %s" % nnode
-        print "ffail es %s" % ffail
-        print "outdir es %s" % outdir
+
+        # Add the source file
+        for line in self._cirfilecont:
+            f.write(line)
+
+        # Injection information
+        f.write("\n*************************************************\n")
+        f.write("* Transistor: %s\n" % ttran)
+        f.write("* Transistor type: %s\n" % ttype)
+        f.write("* Punto de inyeccion: %s\n" % ppoint)
+        f.write("* Related nodes: %s\n" % nnode)
+        f.write("* Falla: %s\n" % ffail)
+        f.write("* Directorio: %s\n" % ooutdir)
+        f.write("*************************************************\n\n")
 
         # Add ffail code at bottom
-        f.write(ffail)
+        if ttype == 'CMOSP':
+            f.write("* P CMOS type injection\n")
+            f.write("I_INY1         0 %s DC 0Adc AC 0Aac\n" % ppoint)
+        elif ttype == 'CMOSN':
+            f.write("* N CMOS type injection\n")
+            f.write("I_INY1         %s 0 DC 0Adc AC 0Aac\n" % ppoint)
+        else:
+            f.write("* CMOS type could not be identified. Setting default config:\n")
+            f.write("I_INY1         0 %s DC 0Adc AC 0Aac\n" % ppoint)
+        f.write("%s\n\n" % ffail)
 
         # Add probe cmd for ffail. Add \n for multiple lines
-        #f.write(".PROBE/CSDF I(%s) ") % ffail
+        f.write("* Out voltages\n")
+        f.write(".PROBE/CSDF V([C_F_D_LSB])\n")
+        f.write(".PROBE/CSDF V([C_F_D_2SB])\n")
+        f.write(".PROBE/CSDF V([C_F_D_3SB])\n")
+        f.write(".PROBE/CSDF V([C_F_D_4SB])\n")
+        f.write(".PROBE/CSDF V([C_F_D_5SB])\n")
+        f.write(".PROBE/CSDF V([C_F_D_MSB])\n\n")
+
+        # Add probe cmd for ppoint.
+        f.write("* Voltage at the injection point\n")
+        f.write(".PROBE/CSDF V([%s])\n\n" % ppoint)
 
         # Add probe cmd for pin nnodes involved
-        #f.write(".PROBE/CSDF ID(%s) IB(%s) IS(%s) IG(%s)") % relatednodes
+        f.write("* Related nodes values\n")
+        for _tran in nnode:
+            f.write(".PROBE/CSDF ID(%s) IB(%s) IS(%s) IG(%s)\n" % \
+                    (_tran,_tran,_tran,_tran))
+
+        # Add .END cmd.
+        f.write("\n.END\n")
 
         # Close file
         f.close()
@@ -132,6 +171,7 @@ class FailInject():
         """ This method returns a list with all transistors related to a node"""
         # Clean the list
         self._related_transistors = []
+        nodes = ''
         if drainmos == None:
             return None
         for mos in self._trans:
@@ -177,6 +217,8 @@ class FailInject():
             ex = "Please enter a fail to inject"
             sys.exit(ex)
             raise FailInjectError(ex)
+        else:
+            self._fail = fail_
 
         # Checks if a node/s was entered
         if nodes_ == None:
@@ -185,11 +227,23 @@ class FailInject():
             raise FailInjectError(ex)
 
         # Read the transistors to parse
+        print "############################################"
         print "Transistors: %s" % self._transistor_count(self._file)
-        print "Fail: %s" % fail_
+        print "Source file: %s" % self._file
+        print "Fail: %s" % self._fail
+        print "Outdir: %s" % self._outdir
+        print "Nodes to inject: %s" % nodes_
+        print "############################################"
 
         # Parse file to allow fail injection and sets: self._trans
         self._get_nodes(self._file)
+
+        try:
+            f = open(self._file,'r')
+        except:
+            print "Could not open the file %s" % self._file
+        self._cirfilecont = f.readlines()
+        f.close()
 
         # Inject the fail into the new file
         for mos in self._trans:
@@ -199,17 +253,15 @@ class FailInject():
             # Parse file and sets: self._related_transistors
             self._get_related_transistors(self._inject_point)
 
-            #print "Transistor: %s" % mos
-            #print "Drain: %s" % self._inject_point
-            #print "Related transistors: %s" % self._related_transistors
-            #print "==============================================================="
+            # Get the mos type
+            self._trantype = self._trans[mos]["type"]
 
             # Generate all the files with the fail inside
             self._inject_fail(self._fail,self._related_transistors,
-                                self._outdir,self._inject_point)
+                                self._outdir,self._inject_point,self._trantype,mos)
 
         # Print a specific transistor information
-        print self._trans['M_C_F_D_U99_M4']
+        print self._trans
 
 if __name__ == '__main__':
 
