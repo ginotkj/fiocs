@@ -11,7 +11,6 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.DC LIN V_VIN 0.9 1.1 .001m 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\DOBLE-NEG.net" 
 
