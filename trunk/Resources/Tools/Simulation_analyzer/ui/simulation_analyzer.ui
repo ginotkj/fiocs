@@ -866,8 +866,6 @@ p, li { white-space: pre-wrap; }
              </item>
             </layout>
            </widget>
-           <zorder>groupBox_2</zorder>
-           <zorder>verticalLayoutWidget_3</zorder>
           </widget>
          </item>
          <item>
