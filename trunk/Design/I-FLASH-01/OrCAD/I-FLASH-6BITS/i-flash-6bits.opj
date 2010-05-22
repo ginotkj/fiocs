@@ -61,6 +61,22 @@
       (ActiveProfile ".\i-flash-6bits-pspicefiles\prueba\analisis final.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (IEXP
+      (FullPartName "IEXP.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VCC
+      (LibraryName "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VCC_BAR
+      (LibraryName "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (IPULSE
+      (FullPartName "IPULSE.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
     (S-COMP
       (FullPartName "S-COMP.Normal")
       (LibraryName
@@ -75,9 +91,6 @@
       (FullPartName "S-COMP_0.Normal")
       (LibraryName
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
-      (DeviceIndex "0"))
-    (VCC
-      (LibraryName "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (PORTRIGHT-R
       (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
@@ -162,11 +175,6 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits.dsn"
-         "PRUEBA")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
@@ -175,16 +183,5 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 0 953 -8 -30 0 815 0 812"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 1 0 957 -8 -30 150 1844 150 809")
-        (Scroll "0 0")
-        (Zoom "129")
-        (Occurrence "/C/1R_DIV"))
-      (Path
-         "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-FLASH-01\ORCAD\I-FLASH-6BITS\I-FLASH-6BITS.DSN")
-      (Schematic "R-DIV")
-      (Page "R-DIV"))))
+        (Placement "44 0 1 0 953 -8 -30 0 418 0 812"))
+      (Tab 0))))

@@ -3,6 +3,17 @@
         ("VDC")
     )
     ("instances"
+        ("VIN"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_VIN")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"63m")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
         ("VDD"
             ("device_name"	"VDC")
             ("pspice_path"	"V_VDD")
@@ -25,9 +36,9 @@
                 )
             )
         )
-        ("VREF"
+        ("VQ2"
             ("device_name"	"VDC")
-            ("pspice_path"	"V_VREF")
+            ("pspice_path"	"V_VQ2")
             ("level"	"0")
             ("model_params"
                 ("DC"
@@ -36,13 +47,24 @@
                 )
             )
         )
-        ("VIN"
+        ("VQ1"
             ("device_name"	"VDC")
-            ("pspice_path"	"V_VIN")
+            ("pspice_path"	"V_VQ1")
             ("level"	"0")
             ("model_params"
                 ("DC"
                     ("value"	"1")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("VREF"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_VREF")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"63m")
                     ("pspice_param"	"DC")
                 )
             )
