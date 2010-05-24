@@ -11,6 +11,10 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
+.TRAN  0 30n 0 
+.OPTIONS STEPGMIN
+.OPTIONS PIVREL= 1.0E-13
+.OPTIONS PIVTOL= 1.0E-23
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\DOBLE-NEG.net" 
 

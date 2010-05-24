@@ -11,7 +11,7 @@
 
 *Analysis directives: 
 .STEP V_VIN LIST 1.062 1.0625 1.0635 1.064
-.TRAN  0 50n 0 .5p 
+.TRAN  0 10n 0 1p 
 .PROBE V(*) I(*) 
 
 **** INCLUDING DOBLE-NEG.net ****

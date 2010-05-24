@@ -1,6 +1,7 @@
 ("FILE_TYPE"	"PMAP File"
     ("devices"
         ("VDC")
+        ("IPULSE")
     )
     ("instances"
         ("VIN"
@@ -9,8 +10,23 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"63m")
+                    ("value"	"62m")
                     ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("I1"
+            ("device_name"	"IPULSE")
+            ("pspice_path"	"I_I1")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"0Adc")
+                    ("pspice_param"	"DC")
+                )
+                ("AC"
+                    ("value"	"0Aac")
+                    ("pspice_param"	"AC")
                 )
             )
         )
