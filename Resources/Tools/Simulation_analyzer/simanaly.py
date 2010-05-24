@@ -89,6 +89,12 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.vth_h = 2.3
         # Global comparators for each digital voltage
         self.comps = []
+        # Set default output CIR source file and output dir to generated files
+        self.lineEdit_5.setText("D:\\OrCAD_files\\flash.cir")
+        self.lineEdit_6.setText("D:\\OrCAD_files")
+        # This dict holds the vars and contents of the CIR file
+        self.cirFileTab = {'cirsrc':'','outdir':'','injfail':[],'injpins':[],
+                            'injtypes':[]}
 
     def update_status(self):
         indices = self.treeView.currentIndex()
@@ -285,6 +291,91 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
                 #print "COMP(1 gui mayor que parsed): %s" % gvolt.compare(pvolt)
         #print "=========================================================="
         return local_count
+
+    def _get_cirfiletab_vars(self):
+        """ This method returns a dict with the vars from the CIRFILES tab."""
+        sourceFile = ''
+        outputDir = ''
+        failToInject = []
+        pinsToInject = []
+        typesToInject = []
+
+        # Gets sourcefile and output dir fields from GUI
+        sourceFile = self.lineEdit_5.text()
+        outputDir = self.lineEdit_6.text()
+
+        # Check all checkboxes to set the fails to inject
+        if self.checkBox.isChecked():
+            failToInject.append(self.lineEdit.text())
+        if self.checkBox_2.isChecked():
+            failToInject.append(self.lineEdit_2.text())
+        if self.checkBox_3.isChecked():
+            failToInject.append(self.textEdit.toPlainText())
+        if self.checkBox_4.isChecked():
+            failToInject.append(self.textEdit_2.toPlainText())
+
+
+        # Check pin checkboxes to set the nodes to inject
+        if self.checkBox_5.isChecked():
+            pinsToInject.append(self.checkBox_5.text.lower())
+        if self.checkBox_6.isChecked():
+            pinsToInject.append(self.checkBox_6.text.lower())
+        if self.checkBox_7.isChecked():
+            pinsToInject.append(self.checkBox_7.text.lower())
+
+        # Check MOSTYPE checkboxes to set the nodes to inject
+        if self.radioButton_3.isChecked():
+            typesToInject.append(self.radioButton_3.text())
+        if self.radioButton_2.isChecked():
+            typesToInject.append(self.radioButton_2.text())
+        if self.radioButton.isChecked():
+            typesToInject.append(self.radioButton_3.text())
+            typesToInject.append(self.radioButton_2.text())
+
+        # Add custom point
+        if self.checkBox_8.isChecked():
+            self.textEdit_3.toPlainText()
+
+        # Check if all required vars were set
+        if not sourceFile:
+            self.statusbar.showMessage("Please set a CIR source file!",
+                                        1200)
+        if not outputDir:
+            self.statusbar.showMessage("Please set the output dir for generated files",
+                                        1200)
+        if not failToInject:
+            self.statusbar.showMessage("Please set at least one fail to inject",
+                                        1200)
+        if not pinsToInject:
+            self.statusbar.showMessage("Please set at least one pin to inject",
+                                        1200)
+        if not typesToInject:
+            self.statusbar.showMessage("Please set at least one type to inject",
+                                        1200)
+        #self.statusbar.showMessage(sourceFile,1200)
+        #time.sleep(1)
+        #self.statusbar.showMessage(outputDir,1200)
+        #time.sleep(1)
+        #self.statusbar.showMessage(str(failToInject),1200)
+        #time.sleep(1)
+        #self.statusbar.showMessage(str(nodesToInject),1200)
+
+        self.cirFileTab = {'cirsrc':sourceFile, 'outdir':outputDir,
+                           'injfail':failToInject, 'injpins':pinsToInject
+                            'injtypes':typesToInject}
+
+        return self.cirFileTab
+
+    def generate_files(self):
+        """ This method is in charge of retrieve all params to call
+            fail_inject.py and generate the simulations files.
+        """
+        self._get_cirfiletab_vars()
+        injectFail = fail_inject.FailInject()
+        injectFail.run(dir falla nodes)
+        injectFail.run(self.cirFileTab['cirsrc'],self.cirFileTab['outdir'],
+                        self.cirFileTab['injfail'],self.cirFileTab['injpins'],
+                        self.cirFileTab['injtypes'])
 
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)

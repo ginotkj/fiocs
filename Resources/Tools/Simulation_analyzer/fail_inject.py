@@ -69,10 +69,16 @@ class FailInject():
         self._fail = ''
         # This var holds the output dir
         self._outdir = ''
+        # This var holds the base of the output dir
+        self._basedir = ''
+        # This var holds the fail dir
+        self._faildir = ''
         # This var holds the injection point
         self._inject_point = ''
         # This var holds the type of transistor in wich the fail'll be injected
-        self._trantype = ''
+        self._trantype = []
+        # This var holds the pin in which the fail will be injected
+        self._pintype = []
 
     def _transistor_count (self,file):
         """ This method count the transistors on the given file. """
@@ -180,7 +186,7 @@ class FailInject():
             if drainmos in nodes:
                 self._related_transistors.append(str(mos))
 
-    def run (self,file_=None,dir_=None,fail_=None,nodes_=None):
+    def run (self,file_=None,dir_=None,fail_=None,pins_=None,mostype_=None):
         """ Main method """
         # Check if a file was received in the calling of the function
         if file_ == None:
@@ -207,6 +213,7 @@ class FailInject():
                 #print "DIR: %s" % dir_
                 os.chdir(dir_) # NameError exception occur if dir_ doesn't exist
                 self._outdir = dir_
+                self._basedir = self._outdir
                 os.chdir(tmp)
             except WindowsError, ex:
                 print "Could not change to dir %s" % dir_
@@ -221,10 +228,12 @@ class FailInject():
             self._fail = fail_
 
         # Checks if a node/s was entered
-        if nodes_ == None:
+        if pins_ == None:
             ex = "Please specify the nodes to inject the fail"
             sys.exit(ex)
             raise FailInjectError(ex)
+        else:
+            self._pintype = pins_
 
         # Read the transistors to parse
         print "############################################"
@@ -232,7 +241,7 @@ class FailInject():
         print "Source file: %s" % self._file
         print "Fail: %s" % self._fail
         print "Outdir: %s" % self._outdir
-        print "Nodes to inject: %s" % nodes_
+        print "Nodes to inject: %s" % pins_
         print "############################################"
 
         # Parse file to allow fail injection and sets: self._trans
@@ -245,20 +254,47 @@ class FailInject():
         self._cirfilecont = f.readlines()
         f.close()
 
-        # Inject the fail into the new file
-        for mos in self._trans:
-            # Retrieve the 'nodes_' of the 'mos' to inject the fail
-            self._inject_point = self._trans[mos][nodes_]
+        counter = 0
+        for cfail in self._fail:
+            # Create a dir for each new fail
+            counter = counter + 1
+            self._faildir = "%s\\fail_%s" % (self._basedir,counter)
+            try:
+                os.mkdir(self._faildir)
+            except WindowsError, ex:
+                if 183 == ex.winerror:
+                    print "Directory %s already created. Skipping..." % \
+                            self._faildir
+                else:
+                    raise FailInjectError(ex)
 
-            # Parse file and sets: self._related_transistors
-            self._get_related_transistors(self._inject_point)
+            for eachmostype in mostype_:
+                self._outdir = "%s\\%s" % (self._faildir,eachmostype)
+                try:
+                    os.mkdir(self._outdir)
+                except WindowsError, ex:
+                    if 183 == ex.winerror:
+                        print "Directory %s already created. Skipping..." % \
+                                self._outdir
+                    else:
+                        raise FailInjectError(ex)
 
-            # Get the mos type
-            self._trantype = self._trans[mos]["type"]
+                # Inject the fail into the new file
+                for mos in self._trans:
+                    # Detect where to inject the fail
+                    # Get the mos type
+                    self._trantype = self._trans[mos]["type"]
+                    if self._trantype == eachmostype:
+                        for eachpin in self._pintype:
+                            self._inject_point = self._trans[mos][eachpin]
 
-            # Generate all the files with the fail inside
-            self._inject_fail(self._fail,self._related_transistors,
-                                self._outdir,self._inject_point,self._trantype,mos)
+                            # Parse file and sets: self._related_transistors
+                            self._get_related_transistors(self._inject_point)
+
+                            # Generate all the files with the fail inside
+                            self._inject_fail(cfail,self._related_transistors,
+                                            self._outdir,self._inject_point,
+                                            self._trantype,mos)
 
         # Print a specific transistor information
         print self._trans
@@ -266,7 +302,13 @@ class FailInject():
 if __name__ == '__main__':
 
     A = FailInject()
-    A.run(sys.argv[1],sys.argv[2],sys.argv[3],sys.argv[4])
+    CIRFILE = sys.argv[1]
+    OUTDIR = sys.argv[2]
+    FALLAS = [sys.argv[3],sys.argv[4]]
+    NODOS = [sys.argv[5],sys.argv[6]]
+    MOSTYPE = ['CMOSP','CMOSN']
+    #NODOS = sys.argv[5]
+    A.run(CIRFILE,OUTDIR,FALLAS,NODOS,MOSTYPE)
 #    FILE = sys.argv[1]
 #   try:
 #        f = open(FILE)
