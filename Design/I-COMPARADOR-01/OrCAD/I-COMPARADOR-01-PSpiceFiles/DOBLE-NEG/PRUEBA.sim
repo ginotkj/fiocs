@@ -1,6 +1,6 @@
 @OrCAD Simulation Server Version: 1.0
 
-@Settings: 3 1
+@Settings: 0 1
 @General:
 ProfileName= "PRUEBA" 
 ProfileFile= "prueba.sim" 
@@ -12,9 +12,9 @@ Notes=
 @#$BEGINNOTES
 @#$ENDNOTES
 @End General
-@Analysis: 0 0
+@Analysis: 0 1
 +0 0 0 0 
-+0 "1000ns" 
++0 "30n" 
 +1 "" 
 +2 "0" 
 +3 "" 
@@ -42,14 +42,14 @@ Notes=
 +6 ".001m" 
 +7 "" 
 @End Analysis
-@Analysis: 3 1
+@Analysis: 3 0
 +0 0 0
 +0 "" 
 +1 "" 
 +2 "" 
 @End Analysis
 @Analysis: 4 0
-+0 0 1 0 0 0 3 0 0 0
++0 0 1 0 0 0 0 0 0 0
 +0 "" 
 +1 "" 
 +2 "" 
@@ -109,7 +109,9 @@ SaveFile 0 ""
 +7 "" 
 @End Analysis
 @Analysis: 11 1
-+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
++ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
++ PIVREL "1.0E-13"
++ PIVTOL "1.0E-23"
 + 0 0 0 0 0 0 0 0 0
 @End Analysis
 @Analysis: 12 0
