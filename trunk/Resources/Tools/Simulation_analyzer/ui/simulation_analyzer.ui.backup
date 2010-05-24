@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>670</width>
-    <height>500</height>
+    <height>590</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -66,7 +66,7 @@
      <enum>QTabWidget::North</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -652,9 +652,6 @@
                <property name="dragEnabled">
                 <bool>true</bool>
                </property>
-               <property name="readOnly">
-                <bool>true</bool>
-               </property>
               </widget>
              </item>
              <item row="1" column="1">
@@ -675,9 +672,6 @@
                 <string>+PULSE 0 4m 2n 50p 1.55n 100p 0</string>
                </property>
                <property name="dragEnabled">
-                <bool>true</bool>
-               </property>
-               <property name="readOnly">
                 <bool>true</bool>
                </property>
               </widget>
@@ -742,7 +736,7 @@ p, li { white-space: pre-wrap; }
              <rect>
               <x>0</x>
               <y>10</y>
-              <width>295</width>
+              <width>291</width>
               <height>111</height>
              </rect>
             </property>
@@ -762,19 +756,19 @@ p, li { white-space: pre-wrap; }
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_3">
                <property name="rightMargin">
-                <number>75</number>
+                <number>0</number>
                </property>
                <item>
                 <widget class="QCheckBox" name="checkBox_5">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>100</width>
+                   <width>80</width>
                    <height>15</height>
                   </size>
                  </property>
@@ -785,21 +779,24 @@ p, li { white-space: pre-wrap; }
                   </size>
                  </property>
                  <property name="text">
-                  <string>NMOS Drain</string>
+                  <string>Drain</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QCheckBox" name="checkBox_6">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>100</width>
+                   <width>80</width>
                    <height>15</height>
                   </size>
                  </property>
@@ -810,7 +807,114 @@ p, li { white-space: pre-wrap; }
                   </size>
                  </property>
                  <property name="text">
-                  <string>PMOS Drain</string>
+                  <string> Source</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBox_7">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>80</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Gate</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <widget class="QRadioButton" name="radioButton_3">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>CMOSN</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButton_2">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>CMOSP</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="radioButton">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Both</string>
                  </property>
                 </widget>
                </item>
@@ -822,7 +926,7 @@ p, li { white-space: pre-wrap; }
                 <number>180</number>
                </property>
                <item>
-                <widget class="QCheckBox" name="checkBox_7">
+                <widget class="QCheckBox" name="checkBox_8">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                    <horstretch>0</horstretch>
@@ -853,7 +957,7 @@ p, li { white-space: pre-wrap; }
                <property name="minimumSize">
                 <size>
                  <width>280</width>
-                 <height>40</height>
+                 <height>30</height>
                 </size>
                </property>
                <property name="maximumSize">
@@ -866,8 +970,6 @@ p, li { white-space: pre-wrap; }
              </item>
             </layout>
            </widget>
-           <zorder>groupBox_2</zorder>
-           <zorder>verticalLayoutWidget_3</zorder>
           </widget>
          </item>
          <item>
@@ -1024,7 +1126,7 @@ p, li { white-space: pre-wrap; }
              <rect>
               <x>9</x>
               <y>19</y>
-              <width>301</width>
+              <width>281</width>
               <height>91</height>
              </rect>
             </property>
@@ -1038,22 +1140,36 @@ p, li { white-space: pre-wrap; }
              <item>
               <widget class="QLabel" name="label_7">
                <property name="text">
+                <string>Circuit source file (.cir):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_5">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="text">
                 <string>Output directory:</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_5"/>
-             </item>
-             <item>
-              <widget class="QLabel" name="label_8">
-               <property name="text">
-                <string>Base circuit file:</string>
+              <widget class="QLineEdit" name="lineEdit_6">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>20</height>
+                </size>
                </property>
               </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEdit_6"/>
              </item>
             </layout>
            </widget>
@@ -1363,6 +1479,22 @@ p, li { white-space: pre-wrap; }
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>generate_files()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>434</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>show_about_dialog()</slot>
@@ -1374,5 +1506,6 @@ p, li { white-space: pre-wrap; }
   <slot>remove_all()</slot>
   <slot>analyze()</slot>
   <slot>auto_adjust()</slot>
+  <slot>generate_files()</slot>
  </slots>
 </ui>
