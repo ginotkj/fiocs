@@ -62,7 +62,7 @@
          ".\i-testcurrent-001-pspicefiles\exponencial\test.sim"
         (DisplayName "EXPONENCIAL-test")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\i-testcurrent-001-pspicefiles\rampa\test.sim")))
+      (ActiveProfile ".\i-testcurrent-001-pspicefiles\exponencial\test.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (IEXP
@@ -130,17 +130,17 @@
          "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
-         "RAMPA")
+         "EXPONENCIAL")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
-         "EXPONENCIAL")
+         "RAMPA")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Simulation Profiles")
       (Select "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001.dsn"
-         "RAMPA" "RAMPA"))
+         "EXPONENCIAL" "EXPONENCIAL"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -150,11 +150,11 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 100 1823 100 759")
+        (Placement "44 2 3 -1 -1 -8 -30 125 1848 125 784")
         (Scroll "0 0")
         (Zoom "129")
         (Occurrence "/"))
       (Path
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\I-TESTCURRENT-001\ORCAD\I-TESTCURRENT-001.DSN")
-      (Schematic "RAMPA")
-      (Page "RAMPA"))))
+      (Schematic "EXPONENCIAL")
+      (Page "EXPONENCIAL"))))
