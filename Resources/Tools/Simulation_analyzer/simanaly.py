@@ -50,6 +50,8 @@ import fail_inject
 import sys
 import decimal as dc
 import time
+import os
+import subprocess
 from mineparser import ParserMain
 
 #PyQt imports
@@ -90,7 +92,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         # Global comparators for each digital voltage
         self.comps = []
         # Set default output CIR source file and output dir to generated files
-        self.lineEdit_5.setText("D:\\OrCAD_files\\flash.cir")
+        self.lineEdit_5.setText("D:\\OrCAD_files\\comparador.cir")
         self.lineEdit_6.setText("D:\\OrCAD_files")
         # This dict holds the vars and contents of the CIR file
         self.cirFileTab = {'cirsrc':'','outdir':'','injfail':[],'injpins':[],
@@ -302,7 +304,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 
         # Gets sourcefile and output dir fields from GUI
         sourceFile = self.lineEdit_5.text()
-        outputDir = self.lineEdit_6.text()
+        outputDir = str(self.lineEdit_6.text())
 
         # Check all checkboxes to set the fails to inject
         if self.checkBox.isChecked():
@@ -314,14 +316,16 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         if self.checkBox_4.isChecked():
             failToInject.append(self.textEdit_2.toPlainText())
 
-
         # Check pin checkboxes to set the nodes to inject
         if self.checkBox_5.isChecked():
-            pinsToInject.append(self.checkBox_5.text.lower())
+            aux5 = self.checkBox_5.text()
+            pinsToInject.append(aux5.toLower())
         if self.checkBox_6.isChecked():
-            pinsToInject.append(self.checkBox_6.text.lower())
+            aux6 = self.checkBox_6.text()
+            pinsToInject.append(aux6.toLower())
         if self.checkBox_7.isChecked():
-            pinsToInject.append(self.checkBox_7.text.lower())
+            aux7 = self.checkBox_7.text()
+            pinsToInject.append(aux7.toLower())
 
         # Check MOSTYPE checkboxes to set the nodes to inject
         if self.radioButton_3.isChecked():
@@ -332,9 +336,9 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             typesToInject.append(self.radioButton_3.text())
             typesToInject.append(self.radioButton_2.text())
 
-        # Add custom point
-        if self.checkBox_8.isChecked():
-            self.textEdit_3.toPlainText()
+        # Add custom point - NOT WORKING. NOW EXCLUDING THE textEdit POINTS!
+        #if self.checkBox_8.isChecked():
+        #    self.textEdit_3.toPlainText()
 
         # Check if all required vars were set
         if not sourceFile:
@@ -361,8 +365,8 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         #self.statusbar.showMessage(str(nodesToInject),1200)
 
         self.cirFileTab = {'cirsrc':sourceFile, 'outdir':outputDir,
-                           'injfail':failToInject, 'injpins':pinsToInject
-                            'injtypes':typesToInject}
+                           'injfail':failToInject, 'injpins':pinsToInject,
+                           'injtypes':typesToInject}
 
         return self.cirFileTab
 
@@ -371,18 +375,31 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             fail_inject.py and generate the simulations files.
         """
         self._get_cirfiletab_vars()
-        injectFail = fail_inject.FailInject()
-        injectFail.run(dir falla nodes)
+        injectFail = fail_inject.FailInject(self)
         injectFail.run(self.cirFileTab['cirsrc'],self.cirFileTab['outdir'],
                         self.cirFileTab['injfail'],self.cirFileTab['injpins'],
                         self.cirFileTab['injtypes'])
+
+    def open_cir_files(self):
+        """ This method open the selected cir file."""
+
+        selectedItem = self.treeWidget_2.currentItem()
+        cirFile = []
+        cirPath = ''
+        while selectedItem != None:
+            cirFile.append(str(selectedItem.text(0)))
+            selectedItem = selectedItem.parent()
+        for fp in cirFile:
+            cirPath = fp + '\\' + cirPath
+        cirPath = cirPath.rstrip('\\')
+        args = 'notepad++ %s.cir' % cirPath
+        proc = subprocess.Popen(args)
 
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
     app.allWidgets()
     win = MainWindow()
     win.show()
-    sys.exit(app.exec_())
-    #status = app.exec_()
-    #win.exit_cleanup()
-    #sys.exit(status)
+    status = app.exec_()
+    app.closeAllWindows()
+    sys.exit(status)

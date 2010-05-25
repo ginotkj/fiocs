@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>670</width>
-    <height>590</height>
+    <height>500</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -64,6 +64,9 @@
     </property>
     <property name="tabPosition">
      <enum>QTabWidget::North</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
      <number>3</number>
@@ -302,6 +305,9 @@
       </property>
       <property name="text">
        <string>Analyze</string>
+      </property>
+      <property name="default">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QWidget" name="horizontalLayoutWidget">
@@ -807,7 +813,7 @@ p, li { white-space: pre-wrap; }
                   </size>
                  </property>
                  <property name="text">
-                  <string> Source</string>
+                  <string>Source</string>
                  </property>
                 </widget>
                </item>
@@ -923,12 +929,12 @@ p, li { white-space: pre-wrap; }
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_4">
                <property name="rightMargin">
-                <number>180</number>
+                <number>100</number>
                </property>
                <item>
                 <widget class="QCheckBox" name="checkBox_8">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -941,12 +947,15 @@ p, li { white-space: pre-wrap; }
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>100</width>
+                   <width>200</width>
                    <height>15</height>
                   </size>
                  </property>
                  <property name="text">
-                  <string>Custom:</string>
+                  <string>Exclude the following points:</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -965,6 +974,13 @@ p, li { white-space: pre-wrap; }
                  <width>280</width>
                  <height>60</height>
                 </size>
+               </property>
+               <property name="html">
+                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;M_C_F_D_&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
@@ -999,6 +1015,9 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="text">
               <string>Generate files</string>
+             </property>
+             <property name="default">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -1176,7 +1195,13 @@ p, li { white-space: pre-wrap; }
           </widget>
          </item>
          <item>
-          <widget class="QTreeView" name="treeView_2"/>
+          <widget class="QTreeWidget" name="treeWidget_2">
+           <column>
+            <property name="text">
+             <string>Files</string>
+            </property>
+           </column>
+          </widget>
          </item>
         </layout>
        </item>
@@ -1246,8 +1271,17 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionExit">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Exit</string>
+   </property>
+   <property name="statusTip">
+    <string>Exit the application</string>
    </property>
   </action>
   <action name="actionPrint">
@@ -1257,7 +1291,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionIndex">
    <property name="text">
-    <string>Usage          Ctrl+H</string>
+    <string>Usage</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+H</string>
@@ -1268,7 +1302,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionAbout">
    <property name="text">
-    <string>About          Ctrl+A</string>
+    <string>About</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+A</string>
@@ -1279,7 +1313,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionDirectory">
    <property name="text">
-    <string>directory     Ctrl+D</string>
+    <string>directory</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+D</string>
@@ -1287,7 +1321,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionFile">
    <property name="text">
-    <string>file     Ctrl+F</string>
+    <string>file</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+F</string>
@@ -1295,7 +1329,6 @@ p, li { white-space: pre-wrap; }
   </action>
  </widget>
  <tabstops>
-  <tabstop>digitalRadioButton</tabstop>
   <tabstop>spinBox_6</tabstop>
   <tabstop>spinBox_5</tabstop>
   <tabstop>spinBox_4</tabstop>
@@ -1316,6 +1349,34 @@ p, li { white-space: pre-wrap; }
   <tabstop>pushButton_2</tabstop>
   <tabstop>listWidget</tabstop>
   <tabstop>pushButton</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>graphicsView</tabstop>
+  <tabstop>horizontalSlider</tabstop>
+  <tabstop>verticalSlider</tabstop>
+  <tabstop>dial</tabstop>
+  <tabstop>digitalRadioButton</tabstop>
+  <tabstop>pushButton_6</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>checkBox_2</tabstop>
+  <tabstop>checkBox_3</tabstop>
+  <tabstop>checkBox_4</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+  <tabstop>textEdit</tabstop>
+  <tabstop>textEdit_2</tabstop>
+  <tabstop>checkBox_5</tabstop>
+  <tabstop>checkBox_6</tabstop>
+  <tabstop>checkBox_7</tabstop>
+  <tabstop>radioButton_3</tabstop>
+  <tabstop>radioButton_2</tabstop>
+  <tabstop>radioButton</tabstop>
+  <tabstop>checkBox_8</tabstop>
+  <tabstop>textEdit_3</tabstop>
+  <tabstop>lineEdit_5</tabstop>
+  <tabstop>lineEdit_6</tabstop>
+  <tabstop>treeWidget_2</tabstop>
+  <tabstop>pushButton_8</tabstop>
+  <tabstop>pushButton_7</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -1342,8 +1403,8 @@ p, li { white-space: pre-wrap; }
    <slot>analyze()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>488</x>
-     <y>135</y>
+     <x>552</x>
+     <y>163</y>
     </hint>
     <hint type="destinationlabel">
      <x>305</x>
@@ -1358,8 +1419,8 @@ p, li { white-space: pre-wrap; }
    <slot>add_one()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>288</x>
-     <y>225</y>
+     <x>367</x>
+     <y>245</y>
     </hint>
     <hint type="destinationlabel">
      <x>305</x>
@@ -1374,8 +1435,8 @@ p, li { white-space: pre-wrap; }
    <slot>add_all()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>288</x>
-     <y>292</y>
+     <x>367</x>
+     <y>312</y>
     </hint>
     <hint type="destinationlabel">
      <x>305</x>
@@ -1406,8 +1467,8 @@ p, li { white-space: pre-wrap; }
    <slot>remove_all()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>288</x>
-     <y>359</y>
+     <x>367</x>
+     <y>379</y>
     </hint>
     <hint type="destinationlabel">
      <x>289</x>
@@ -1422,8 +1483,8 @@ p, li { white-space: pre-wrap; }
    <slot>remove_one()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>288</x>
-     <y>426</y>
+     <x>367</x>
+     <y>446</y>
     </hint>
     <hint type="destinationlabel">
      <x>289</x>
@@ -1495,6 +1556,22 @@ p, li { white-space: pre-wrap; }
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>treeWidget_2</sender>
+   <signal>itemDoubleClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_cir_files()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>496</x>
+     <y>325</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>show_about_dialog()</slot>
@@ -1507,5 +1584,6 @@ p, li { white-space: pre-wrap; }
   <slot>analyze()</slot>
   <slot>auto_adjust()</slot>
   <slot>generate_files()</slot>
+  <slot>open_cir_files()</slot>
  </slots>
 </ui>
