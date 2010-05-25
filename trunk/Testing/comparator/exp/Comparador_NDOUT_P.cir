@@ -11,7 +11,7 @@
 
 *Analysis directives: 
 .STEP V_VIN LIST 1.062 1.0625 1.0635 1.064
-.TRAN  0 30n 0 1p 
+.TRAN  0 100n 0 0 
 .PROBE V(*) I(*) 
 
 **** INCLUDING DOBLE-NEG.net ****
@@ -45,6 +45,6 @@ V_VREF         VINPOS 0 1.063
         
 
 I_INYECCION	0 NDOUT DC 0Adc AC 0Aac
-+EXP		0 4m 2n 30p 2.2n 500p
++EXP 0 2m 2n 80p 5.5n 1n
 
 .END

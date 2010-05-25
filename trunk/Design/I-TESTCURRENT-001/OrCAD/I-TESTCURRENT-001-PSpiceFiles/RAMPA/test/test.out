@@ -1,5 +1,5 @@
-
-**** 04/18/10 18:23:36 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+**** 05/24/10 20:39:13 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\rampa\test.sim ] 
 
@@ -23,7 +23,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 4n 1.5n 
+.TRAN  0 10n 1.5n 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\RAMPA.net" 
 
@@ -32,14 +32,14 @@
 **** INCLUDING RAMPA.net ****
 * source I-TESTCURRENT-001
 I_I2         N17580 0 DC 0Adc AC 0Aac
-+PULSE 0 4m 2n 50p 1.5n 100p 10n
++PULSE 0 2m 2n 250p 250p 5n 0
 R_R1         N17580 ITEST  1k TC=0,0 
 R_R2         0 ITEST  1k TC=0,0 
 
 **** RESUMING test.cir ****
 .END
 
-**** 04/18/10 18:23:36 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 05/24/10 20:39:13 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\rampa\test.sim ] 
 
@@ -69,7 +69,7 @@ R_R2         0 ITEST  1k TC=0,0
 
           JOB CONCLUDED
 
-**** 04/18/10 18:23:36 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 05/24/10 20:39:13 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "RAMPA-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\rampa\test.sim ] 
 
@@ -81,5 +81,5 @@ R_R2         0 ITEST  1k TC=0,0
 
 
 
-  Total job time (using Solver 1)   =         .06
+  Total job time (using Solver 1)   =         .02
 
