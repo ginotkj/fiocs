@@ -46,6 +46,13 @@
 import sys
 import re
 import os
+import time
+
+#PyQt imports
+from PyQt4 import QtCore, QtGui
+
+#UI imports
+#from ui.simulation_analyzer import Ui_MainWindow
 
 class FailInjectError(Exception):
     """ Module main exception """
@@ -53,7 +60,7 @@ class FailInjectError(Exception):
 
 class FailInject():
     """ This class is to manage fail injections in CIR files. """
-    def __init__ (self):
+    def __init__ (self,gui=None):
         """ Initializer """
         # Dict containing all transistors in the cir and all nodes information
         self._trans = {}
@@ -79,6 +86,10 @@ class FailInject():
         self._trantype = []
         # This var holds the pin in which the fail will be injected
         self._pintype = []
+        # This var holds the address of the MainWindow GUI
+        self._gui = gui
+        # This var holds the parent TreeWidgetItem for all othres
+        self._topdir = None
 
     def _transistor_count (self,file):
         """ This method count the transistors on the given file. """
@@ -247,6 +258,16 @@ class FailInject():
         # Parse file to allow fail injection and sets: self._trans
         self._get_nodes(self._file)
 
+        ptrans = 0
+        ntrans = 0
+        for mos in self._trans:
+            if self._trans[mos]["type"] == 'CMOSP':
+                ptrans = ptrans + 1
+            elif self._trans[mos]["type"] == 'CMOSN':
+                ntrans = ntrans + 1
+        print "CMOS P type transistors: %s" % ptrans
+        print "CMOS N type transistors: %s" % ntrans
+
         try:
             f = open(self._file,'r')
         except:
@@ -254,11 +275,35 @@ class FailInject():
         self._cirfilecont = f.readlines()
         f.close()
 
+        # This block calculates the total files to generate
+        if mostype_.__len__() == 2:
+            totalPercentage = self._fail.__len__() * self._transistor_count(self._file)
+        if (mostype_.__len__() == 1):
+            totalPercentage = self._fail.__len__() * self._transistor_count(self._file)
+        #if (mostype_.__len__() == 1) and ('CMOSP' in mostype_):
+        #    totalPercentage = self._fail.__len__() * ptrans
+        #if (mostype_.__len__() == 1) and ('CMOSN' in mostype_):
+        #    totalPercentage = self._fail.__len__() * ntrans
+        items_qty = totalPercentage
+        if items_qty == 0:
+            step = 0
+        else:
+            step = (100.00 / items_qty)
+        currentProgress = 0
+        ####################################################################
+
+        # Set the TreeView
+        self._gui.treeWidget_2.clear()
+        self._topdir = QtGui.QTreeWidgetItem(QtGui.QTreeWidgetItem.Type)
+        self._topdir.setText(0,self._basedir)
+        self._gui.treeWidget_2.addTopLevelItem(self._topdir)
+
         counter = 0
         for cfail in self._fail:
             # Create a dir for each new fail
             counter = counter + 1
-            self._faildir = "%s\\fail_%s" % (self._basedir,counter)
+            failname = "fail_%s" % counter
+            self._faildir = "%s\\%s" % (self._basedir,failname)
             try:
                 os.mkdir(self._faildir)
             except WindowsError, ex:
@@ -267,6 +312,10 @@ class FailInject():
                             self._faildir
                 else:
                     raise FailInjectError(ex)
+
+            faildir = QtGui.QTreeWidgetItem(self._topdir)
+            faildir.setText(0,failname)
+            self._gui.treeWidget_2.addTopLevelItem(faildir)
 
             for eachmostype in mostype_:
                 self._outdir = "%s\\%s" % (self._faildir,eachmostype)
@@ -279,42 +328,58 @@ class FailInject():
                     else:
                         raise FailInjectError(ex)
 
+                mostypedir = QtGui.QTreeWidgetItem(faildir)
+                mostypedir.setText(0,eachmostype)
+                self._gui.treeWidget_2.addTopLevelItem(mostypedir)
+
+                # This avoid the app to crash due a lot of disk writing
+                time.sleep(1)
+
                 # Inject the fail into the new file
                 for mos in self._trans:
                     # Detect where to inject the fail
-                    # Get the mos type
-                    self._trantype = self._trans[mos]["type"]
-                    if self._trantype == eachmostype:
-                        for eachpin in self._pintype:
-                            self._inject_point = self._trans[mos][eachpin]
 
-                            # Parse file and sets: self._related_transistors
-                            self._get_related_transistors(self._inject_point)
+                    excluded = self._gui.checkBox_8.isChecked() and \
+                                (str(self._gui.textEdit_3.toPlainText()) in \
+                                mos)
+                    if not excluded:
+                        # Get the mos type
+                        self._trantype = self._trans[mos]["type"]
+                        if self._trantype == eachmostype:
+                            for eachpin in self._pintype:
+                                # Select the pin to inject the fail
+                                self._inject_point = self._trans[mos][str(eachpin)]
 
-                            # Generate all the files with the fail inside
-                            self._inject_fail(cfail,self._related_transistors,
-                                            self._outdir,self._inject_point,
-                                            self._trantype,mos)
+                                # Parse file and sets: self._related_transistors
+                                self._get_related_transistors(self._inject_point)
 
+                                cirfileitm = QtGui.QTreeWidgetItem(mostypedir)
+                                cirfileitm.setText(0,self._inject_point)
+                                self._gui.treeWidget_2.addTopLevelItem(cirfileitm)
+
+                                # Generate all the files with the fail inside
+                                self._inject_fail(cfail,self._related_transistors,
+                                                self._outdir,self._inject_point,
+                                                self._trantype,mos)
+                    currentProgress = currentProgress + step
+                    self._gui.progressBar2.setValue(currentProgress.__trunc__())
+
+
+        # Avoid the progress bar be setted to 0 until 1 second pass
+        self._gui.progressBar2.setValue(100)
+        time.sleep(1)
+        self._gui.progressBar2.setValue(0)
+        self._gui.statusbar.showMessage("DONE!",1200)
         # Print a specific transistor information
-        print self._trans
+        #print self._trans
 
 if __name__ == '__main__':
-
     A = FailInject()
     CIRFILE = sys.argv[1]
     OUTDIR = sys.argv[2]
     FALLAS = [sys.argv[3],sys.argv[4]]
     NODOS = [sys.argv[5],sys.argv[6]]
     MOSTYPE = ['CMOSP','CMOSN']
-    #NODOS = sys.argv[5]
     A.run(CIRFILE,OUTDIR,FALLAS,NODOS,MOSTYPE)
-#    FILE = sys.argv[1]
-#   try:
-#        f = open(FILE)
-#        f = None
-#    except IOError, ex:
-#        print "The file could not be open."
-#        print "ERROR: %s" % ex
-#    A.run(FILE,sys.argv[2],sys.argv[3])
+
 
