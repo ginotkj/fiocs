@@ -2,9 +2,14 @@
 from distutils.core import setup
 import os
 import py2exe
+import sys
 
 mfcdir = ''
+base_dir = 'D:\\Documents/TESIS/fiocs/Resources/Tools/Simulation_analyzer/'
+dist_dir = 'D:\\Documents/TESIS/fiocs/Resources/Tools/Simulation_analyzer/dist'
 icons_dir = 'D:\\Documents/TESIS/fiocs/Resources/Tools/Simulation_analyzer/icons/'
+
+sys.path.append(base_dir)
 
 #mfcfiles = [os.path.join(mfcdir, i) for i in ["mfc90.dll"  "mfc90u.dll"  "mfcm90.dll"  "mfcm90u.dll"  "Microsoft.VC90.MFC.manifest"]]
 #
@@ -20,13 +25,20 @@ for files in os.listdir(icons_dir):
 		f2 = 'icons', [f1]
 		my_data_files.append(f2)
 
-setup(
-	name = 'Fail-Injector',
-	version = '1.0',
-	description = 'Fail Injection for CMOS/SPICE',
-	author = 'Facundo J Ferrer - Fabricio N Altamiranda',
-	author_email = 'facundo.j.ferrer@gmail.com - fabricio.n.altamiranda@gmail.com',
-	license = """
+# for files in os.listdir(dist_dir):
+	# f1 = dist_dir + files
+	# if os.path.isfile(f1): # skip directories
+		# f2 = '', [f1]
+		# my_data_files.append(f2)
+
+extraArguments = {
+	'long_description': """
+		  Fail Injector 0.4 BETA
+
+	This program is intend to allow users to automate the 
+	process of inserting specific fails into a lot of points.""",
+	'license':"""
+
 	Copyright (C) 2010 Facundo J Ferrer
 	
 	This program is free software: you can redistribute it and/or modify
@@ -42,6 +54,19 @@ setup(
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/
 	""",
+	'platforms': ['Win32'],
+}
+		
+setup(
+	name = 'Fail-Injector',
+	version = '0.4',
+	description = 'Fail Injection for CMOS/SPICE',
+	author = """
+	- Facundo J Ferrer
+	- Fabricio N Altamiranda""",
+	author_email = """
+	- facundo.j.ferrer@gmail.com
+	- fabricio.n.altamiranda@gmail.com""",
 	#zipfile = 'Fail-Injector' + '-' + '1.0' + '_pkg.zip',
 	windows = [
 		{
@@ -56,5 +81,6 @@ setup(
 						"optimize": 2,
 						"excludes": ["email"]
 				}
-			}
+			},
+	**extraArguments
   )
