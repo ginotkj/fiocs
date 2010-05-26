@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'simulation_analyzer.ui'
 #
-# Created: Tue May 25 18:28:26 2010
+# Created: Wed May 26 16:46:07 2010
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -20,6 +20,11 @@ class Ui_MainWindow(object):
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMinimumSize(QtCore.QSize(670, 500))
         MainWindow.setSizeIncrement(QtCore.QSize(100, 50))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../icons/labview-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
+        MainWindow.setIconSize(QtCore.QSize(48, 48))
+        MainWindow.setToolButtonStyle(QtCore.Qt.ToolButtonIconOnly)
         self.centralwidget = QtGui.QWidget(MainWindow)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -552,7 +557,7 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuHelp.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(3)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QObject.connect(self.actionAbout, QtCore.SIGNAL("activated()"), MainWindow.show_about_dialog)
         QtCore.QObject.connect(self.pushButton, QtCore.SIGNAL("clicked()"), MainWindow.analyze)
         QtCore.QObject.connect(self.pushButton_3, QtCore.SIGNAL("clicked()"), MainWindow.add_one)
