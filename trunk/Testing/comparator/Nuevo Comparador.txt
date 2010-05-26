@@ -1,4 +1,3 @@
-* source I-COMPARADOR-01
 V_VIN         N186518 N652820 0
 M_M1         NDNEG VINNEG NDBIAS 0 CMOSN  
 + L=10u  

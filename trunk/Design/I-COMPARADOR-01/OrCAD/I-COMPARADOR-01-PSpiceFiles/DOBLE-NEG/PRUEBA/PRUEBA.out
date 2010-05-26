@@ -1,5 +1,5 @@
-
-**** 05/24/10 13:05:17 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+**** 05/25/10 21:29:40 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -23,7 +23,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 30n 0 
+.TRAN  0 50u 0 
 .OPTIONS STEPGMIN
 .OPTIONS PIVREL= 1.0E-13
 .OPTIONS PIVTOL= 1.0E-23
@@ -34,35 +34,35 @@
 
 **** INCLUDING DOBLE-NEG.net ****
 * source I-COMPARADOR-01
-V_VIN         VINNEG N652820 62m
-I_I1         N151409 0 DC 0Adc AC 0Aac
-+PULSE 0 4m 2n 1n 1n 5n 0
+V_VIN         N186518 N652820 0
 M_M1         NDNEG VINNEG NDBIAS 0 CMOSN  
-+ L=20u  
-+ W=89u         
++ L=10u  
++ W=265u         
+V_V1         VINNEG N186518  
++PULSE -5m 5m 1u 1p 1p 20u 
 M_M2         NDPOS VINPOS NDBIAS 0 CMOSN  
-+ L=20u  
-+ W=89u         
++ L=10u  
++ W=265u         
 V_VDD         N64870 0 3.3
 M_M3         NDNEG NDNEG N64870 N64870 CMOSP  
-+ L=25u  
-+ W=37u         
-V_VBIAS         VBIAS 0 .52
-M_M12         N151409 NDPOS N64870 N64870 CMOSP  
-+ L=15u  
-+ W=1097u         
-V_VQ2         N1312720 0 1
++ L=10u  
++ W=200u         
+V_VBIAS         VBIAS 0 1
+M_M12         NDOUT NDPOS N64870 N64870 CMOSP  
++ L=10u  
++ W=1120u         
+V_VQ2         N1312720 0 1.640
 M_M4         NDPOS NDNEG N64870 N64870 CMOSP  
-+ L=25u  
-+ W=37u         
-M_M13         N151409 VBIAS 0 0 CMOSN  
++ L=10u  
++ W=200u         
+M_M13         NDOUT VBIAS 0 0 CMOSN  
 + L=15u  
-+ W=375u         
++ W=220u         
 M_M5         NDBIAS VBIAS 0 0 CMOSN  
-+ L=20u  
-+ W=20u         
-V_VQ1         N652820 0 1
-V_VREF         VINPOS N1312720 63m
++ L=12.5u  
++ W=65u         
+V_VQ1         N652820 0 1.640
+V_VREF         VINPOS N1312720 0
 
 **** RESUMING PRUEBA.cir ****
 .END
@@ -82,7 +82,7 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_M12, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M12, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
-**** 05/24/10 13:05:17 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 05/25/10 21:29:40 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -212,7 +212,7 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_M12, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M12, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
-**** 05/24/10 13:05:17 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 05/25/10 21:29:40 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -227,11 +227,13 @@ WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(NDNEG)    2.6645  (NDPOS)    2.3282  (VBIAS)     .5200  (N64870)    3.3000     
+(NDNEG)    2.3956  (NDOUT)    3.1735  (NDPOS)    1.7644  (VBIAS)    1.0000      
 
-(NDBIAS)     .5869 (VINNEG)    1.0620 (VINPOS)    1.0630 (N151409)    3.2397    
+(N64870)    3.3000 (NDBIAS)     .9484 (VINNEG)    1.6350 (VINPOS)    1.6400     
 
-(N652820)    1.0000                   (N1312720)    1.0000                  
+(N186518)    1.6400                   (N652820)    1.6400                       
+
+(N1312720)    1.6400                  
 
 
 
@@ -240,19 +242,20 @@ WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
     NAME         CURRENT
 
     V_VIN        0.000E+00
-    V_VDD       -1.499E-04
+    V_V1         0.000E+00
+    V_VDD       -1.096E-03
     V_VBIAS      0.000E+00
     V_VQ2        0.000E+00
     V_VQ1        0.000E+00
     V_VREF       0.000E+00
 
-    TOTAL POWER DISSIPATION   4.95E-04  WATTS
+    TOTAL POWER DISSIPATION   3.62E-03  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 05/24/10 13:05:17 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 05/25/10 21:29:40 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 

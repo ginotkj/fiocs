@@ -14,7 +14,7 @@ Notes=
 @End General
 @Analysis: 0 1
 +0 0 0 0 
-+0 "30n" 
++0 "50u" 
 +1 "" 
 +2 "0" 
 +3 "" 
@@ -37,9 +37,9 @@ Notes=
 +1 "" 
 +2 "" 
 +3 "" 
-+4 "0.9" 
-+5 "1.1" 
-+6 ".001m" 
++4 "-2m" 
++5 "2m" 
++6 ".1u" 
 +7 "" 
 @End Analysis
 @Analysis: 3 0
@@ -98,14 +98,14 @@ SaveFile 0 ""
 +0 "" 
 @End Analysis
 @Analysis: 10 0
-+0 0
++0 3
 +0 "" 
-+1 "" 
-+2 "" 
-+3 "" 
-+4 "" 
-+5 "" 
-+6 "" 
++1 "L" 
++2 "CMOSN" 
++3 "NMOS" 
++4 "10u" 
++5 "20u" 
++6 ".5u" 
 +7 "" 
 @End Analysis
 @Analysis: 11 1
@@ -118,7 +118,7 @@ SaveFile 0 ""
 +2236960 0
 @End Analysis
 @Analysis: 13 1
-+0 1 1 0
++0 1 1 1
 @End Analysis
 @Analysis: 14 1
 +1 1 1 "*" 

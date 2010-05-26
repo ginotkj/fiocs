@@ -109,6 +109,11 @@
       (ActiveProfile ".\i-comparador-01-pspicefiles\doble-neg\prueba.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
     (IDC
       (FullPartName "IDC.Normal")
       (LibraryName
@@ -200,7 +205,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 2 3 -1 -1 -8 -30 -842 454 57 716")
-        (Scroll "0 52")
+        (Scroll "0 0")
         (Zoom "129")
         (Occurrence "/"))
       (Path
