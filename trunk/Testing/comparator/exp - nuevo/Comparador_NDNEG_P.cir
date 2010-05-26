@@ -46,6 +46,6 @@ V_VQ1         N652820 0 1.320
 V_VREF         VINPOS N1312720 0 
 
 I_INYECCION	0 NDNEG DC 0Adc AC 0Aac
-+EXP 0 2m 2n 80p 5.5n 1n
++EXP 0 4m 2n 80p 5.5n 1n
 
 .END
