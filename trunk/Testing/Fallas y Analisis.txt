@@ -1,7 +1,7 @@
 TIPO DE ANALISIS
 
 .STEP V_VIN LIST 0.5 0.99 1 1.01 1.5
-.TRAN  0 150n 0 10p 
+.TRAN  0 150n 0 0 
 .PROBE V(*) I(*) 
 
 
@@ -15,13 +15,7 @@ FALLA EXPONENCIAL
 
 FALLA RAMPA
 
-+PULSE 0 4m 2n 50p 1.55n 100p 0
++PULSE 0 4m 2n 250p 250p 5n 0
 
 ---------------------------------------------------------
 
-FALLA DOBLE RAMPA
-
-
-+PULSE 0 4m 2n 30p 150p 0p 400n
-
-+PULSE 0 2m 2n 60p 2n 50p 400n

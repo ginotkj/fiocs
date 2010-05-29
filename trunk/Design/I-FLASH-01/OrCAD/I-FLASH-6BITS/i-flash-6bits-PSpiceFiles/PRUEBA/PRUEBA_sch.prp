@@ -53,7 +53,6 @@
                 ("device_max_ops")
             )
         )
-        ("IEXP")
         ("VDC")
     )
     ("instances"
@@ -106,951 +105,6 @@
                 ("POWER"	"0.25")
                 ("SLOPE"	"0.005")
                 ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("C.F.C38.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C38_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C5.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C5_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C25.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C25_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C31.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C31_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C8.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C8_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C19.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C19_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C2.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C2_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C46.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C46_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C47.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C47_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C60.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C60_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C45.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C45_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C54.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C54_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C34.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C34_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C26.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C26_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C48.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C48_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C44.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C44_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C7.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C7_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C18.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C18_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C4.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C4_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C49.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C49_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C43.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C43_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C37.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C37_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C27.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C27_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C32.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C32_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C58.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C58_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C17.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C17_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C42.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C42_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C50.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C50_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C55.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C55_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C3.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C3_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C28.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C28_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C63.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C63_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C41.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C41_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C33.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C33_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C51.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C51_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C36.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C36_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C61.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C61_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C29.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C29_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C40.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C40_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C56.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C56_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C52.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C52_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C59.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C59_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C13.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C13_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C14.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C14_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C12.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C12_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C30.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C30_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C35.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C35_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C39.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C39_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C15.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C15_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C11.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C11_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C6.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C6_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C16.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C16_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C10.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C10_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C53.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C53_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C22.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C22_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C23.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C23_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C21.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C21_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C1.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C1_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C9.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C9_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C24.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C24_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C20.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C20_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C62.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C62_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
-            )
-        )
-        ("C.F.C57.I1"
-            ("device_name"	"IEXP")
-            ("pspice_path"	"I_C_F_C57_I1")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Adc")
-                    ("pspice_param"	"DC")
-                )
-                ("AC"
-                    ("value"	"0Aac")
-                    ("pspice_param"	"AC")
-                )
             )
         )
         ("C.1R_DIV.R42"
@@ -1512,9 +566,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("C.1R_DIV.R3"
+        ("C.1R_DIV.R19"
             ("device_name"	"R")
-            ("pspice_path"	"R_C_1R_DIV_R3")
+            ("pspice_path"	"R_C_1R_DIV_R19")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -1529,9 +583,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("C.1R_DIV.R19"
+        ("C.1R_DIV.R3"
             ("device_name"	"R")
-            ("pspice_path"	"R_C_1R_DIV_R19")
+            ("pspice_path"	"R_C_1R_DIV_R3")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2056,9 +1110,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("C.1R_DIV.R61"
+        ("C.1R_DIV.R40"
             ("device_name"	"R")
-            ("pspice_path"	"R_C_1R_DIV_R61")
+            ("pspice_path"	"R_C_1R_DIV_R40")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2073,9 +1127,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("C.1R_DIV.R40"
+        ("C.1R_DIV.R61"
             ("device_name"	"R")
-            ("pspice_path"	"R_C_1R_DIV_R40")
+            ("pspice_path"	"R_C_1R_DIV_R61")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2135,6 +1189,23 @@
                 )
             )
         )
+        ("C.1R_DIV.R54"
+            ("device_name"	"R")
+            ("pspice_path"	"R_C_1R_DIV_R54")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10k")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
         ("C.1R_DIV.R12"
             ("device_name"	"R")
             ("pspice_path"	"R_C_1R_DIV_R12")
@@ -2155,23 +1226,6 @@
         ("C.1R_DIV.R41"
             ("device_name"	"R")
             ("pspice_path"	"R_C_1R_DIV_R41")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10k")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("C.1R_DIV.R54"
-            ("device_name"	"R")
-            ("pspice_path"	"R_C_1R_DIV_R54")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2713,9 +1767,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("C.2R_DIV.R3"
+        ("C.2R_DIV.R19"
             ("device_name"	"R")
-            ("pspice_path"	"R_C_2R_DIV_R3")
+            ("pspice_path"	"R_C_2R_DIV_R19")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -2730,9 +1784,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("C.2R_DIV.R19"
+        ("C.2R_DIV.R3"
             ("device_name"	"R")
-            ("pspice_path"	"R_C_2R_DIV_R19")
+            ("pspice_path"	"R_C_2R_DIV_R3")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -3257,9 +2311,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("C.2R_DIV.R61"
+        ("C.2R_DIV.R40"
             ("device_name"	"R")
-            ("pspice_path"	"R_C_2R_DIV_R61")
+            ("pspice_path"	"R_C_2R_DIV_R40")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -3274,9 +2328,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("C.2R_DIV.R40"
+        ("C.2R_DIV.R61"
             ("device_name"	"R")
-            ("pspice_path"	"R_C_2R_DIV_R40")
+            ("pspice_path"	"R_C_2R_DIV_R61")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -3336,6 +2390,23 @@
                 )
             )
         )
+        ("C.2R_DIV.R54"
+            ("device_name"	"R")
+            ("pspice_path"	"R_C_2R_DIV_R54")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10k")
+                    ("pspice_param"	"VALUE")
+                    ("distrib"	"FLAT")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
         ("C.2R_DIV.R12"
             ("device_name"	"R")
             ("pspice_path"	"R_C_2R_DIV_R12")
@@ -3356,23 +2427,6 @@
         ("C.2R_DIV.R41"
             ("device_name"	"R")
             ("pspice_path"	"R_C_2R_DIV_R41")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"10k")
-                    ("pspice_param"	"VALUE")
-                    ("distrib"	"FLAT")
-                )
-            )
-            ("smoke_vars"
-                ("POWER"	"0.25")
-                ("SLOPE"	"0.005")
-                ("MAX_TEMP"	"200.0")
-            )
-        )
-        ("C.2R_DIV.R54"
-            ("device_name"	"R")
-            ("pspice_path"	"R_C_2R_DIV_R54")
             ("level"	"0")
             ("model_params"
                 ("VALUE"
@@ -3478,7 +2532,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	".52")
+                    ("value"	"1")
                     ("pspice_param"	"DC")
                 )
             )
@@ -3534,7 +2588,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"1.128")
+                    ("value"	"1.640")
                     ("pspice_param"	"DC")
                 )
             )
@@ -3562,7 +2616,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"1.063")
+                    ("value"	"1.635")
                     ("pspice_param"	"DC")
                 )
             )
