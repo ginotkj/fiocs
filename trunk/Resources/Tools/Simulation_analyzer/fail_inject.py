@@ -47,6 +47,7 @@ import sys
 import re
 import os
 import time
+import datetime
 
 #PyQt imports
 from PyQt4 import QtCore, QtGui
@@ -128,6 +129,22 @@ class FailInject():
         # Opens a new cirfile
         os.chdir(ooutdir)
         file_ = ppoint + '.cir'
+        file__ = ppoint + '.cmd'
+
+        # Generate a command file to automate the graph of the curves in PSPICE
+        try:
+            f2 = open(file__,'w')
+        except:
+            print "Could not create the file %s" % file__
+
+        createdate = datetime.datetime.today()
+        f2.write("""*Command file created by Fail Injector for \
+PSpice version 16.0.0\n""")
+        f2.write("*Creation date: %s\n" % createdate)
+        self._generate_cmd(f2,ppoint)
+        f2.close()
+
+        # Generate the cir file
         try:
             f = open(file_,'w')
         except:
@@ -169,8 +186,9 @@ class FailInject():
         f.write(".PROBE/CSDF V([C_F_D_MSB])\n\n")
 
         # Add probe cmd for ppoint.
-        f.write("* Voltage at the injection point\n")
-        f.write(".PROBE/CSDF V([%s])\n\n" % ppoint)
+        f.write("* Voltage and current at the injection point\n")
+        f.write(".PROBE/CSDF V([%s])\n" % ppoint)
+        f.write(".PROBE/CSDF I(I_INY1)\n\n")
 
         # Add probe cmd for pin nnodes involved
         f.write("* Related nodes values\n")
@@ -196,6 +214,105 @@ class FailInject():
                     self._trans[mos]["source"] + self._trans[mos]["bulk"]
             if drainmos in nodes:
                 self._related_transistors.append(str(mos))
+
+    def _generate_cmd (self,fg,point):
+        """ Genereta the cmd file for PSPICE 16.0 """
+        fg.write("File Open\n")
+        fg.write("""D:\\Documents\\TESIS\\fiocs\\Testing\\Flash\\\
+Simulation Flash\\fail_1\\CMOSN\\%s.csd\n""" % point)
+        fg.write("OK\n")
+        fg.write("Plot Add_Plot\n")
+        fg.write("Plot Add_Plot\n")
+        fg.write("Plot Add_Plot\n")
+        fg.write("Plot Add_Plot\n")
+        fg.write("Plot Add_Plot\n")
+        fg.write("Plot Add_Plot\n")
+        fg.write("Trace Add\n")
+        fg.write("V(C_F_D_MSB)\n")
+        fg.write("OK\n")
+        fg.write("Plot Select\n")
+        fg.write("6\n")
+        fg.write("Trace Add\n")
+        fg.write("V(C_F_D_5SB)\n")
+        fg.write("OK\n")
+        fg.write("Plot Select\n")
+        fg.write("5\n")
+        fg.write("Trace Add\n")
+        fg.write("V(C_F_D_4SB)\n")
+        fg.write("OK\n")
+        fg.write("Plot Select\n")
+        fg.write("4\n")
+        fg.write("Trace Add\n")
+        fg.write("V(C_F_D_3SB)\n")
+        fg.write("OK\n")
+        fg.write("Plot Select\n")
+        fg.write("3\n")
+        fg.write("Trace Add\n")
+        fg.write("V(C_F_D_2SB)\n")
+        fg.write("OK\n")
+        fg.write("Plot Select\n")
+        fg.write("2\n")
+        fg.write("Trace Add\n")
+        fg.write("V(C_F_D_LSB)\n")
+        fg.write("OK\n")
+        fg.write("Plot Select\n")
+        fg.write("1\n")
+        fg.write("Trace Add\n")
+        fg.write("V(%s)\n" % point)
+        fg.write("OK\n")
+        fg.write("Plot Select\n")
+        fg.write("2\n")
+        fg.write("Plot Axis_Settings\n")
+        fg.write("Y Axis\n")
+        fg.write("Set Range\n")
+        fg.write("0V 4V\n")
+        fg.write("OK\n")
+        fg.write("Plot Select\n")
+        fg.write("3\n")
+        fg.write("Plot Axis_Settings\n")
+        fg.write("Save As Defaults\n")
+        fg.write("Plot Axis_Settings\n")
+        fg.write("Y Axis\n")
+        fg.write("Set Range\n")
+        fg.write("0  4 \n")
+        fg.write("OK\n")
+        fg.write("Plot Select\n")
+        fg.write("4\n")
+        fg.write("Plot Axis_Settings\n")
+        fg.write("Save As Defaults\n")
+        fg.write("Plot Axis_Settings\n")
+        fg.write("Y Axis\n")
+        fg.write("Set Range\n")
+        fg.write("0  4 \n")
+        fg.write("OK\n")
+        fg.write("Plot Select\n")
+        fg.write("5\n")
+        fg.write("Plot Axis_Settings\n")
+        fg.write("Save As Defaults\n")
+        fg.write("Plot Axis_Settings\n")
+        fg.write("Y Axis\n")
+        fg.write("Set Range\n")
+        fg.write("0  4 \n")
+        fg.write("OK\n")
+        fg.write("Plot Select\n")
+        fg.write("6\n")
+        fg.write("Plot Axis_Settings\n")
+        fg.write("Save As Defaults\n")
+        fg.write("Plot Axis_Settings\n")
+        fg.write("Y Axis\n")
+        fg.write("Set Range\n")
+        fg.write("0  4 \n")
+        fg.write("OK\n")
+        fg.write("Plot Select\n")
+        fg.write("7\n")
+        fg.write("Plot Axis_Settings\n")
+        fg.write("Save As Defaults\n")
+        fg.write("Plot Axis_Settings\n")
+        fg.write("Y Axis\n")
+        fg.write("Set Range\n")
+        fg.write("0  4 \n")
+        fg.write("OK\n")
+        fg.write("\n")
 
     def run (self,file_=None,dir_=None,fail_=None,pins_=None,mostype_=None):
         """ Main method """
