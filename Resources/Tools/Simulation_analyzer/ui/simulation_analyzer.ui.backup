@@ -638,6 +638,9 @@
                <property name="text">
                 <string>Slope</string>
                </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
               </widget>
              </item>
              <item row="2" column="0">
@@ -666,7 +669,7 @@
                 </sizepolicy>
                </property>
                <property name="text">
-                <string>+EXP 4m 0 2n 30p 2.2n 500p</string>
+                <string>+EXP 0 4m 2n 30p 2.2n 500p</string>
                </property>
                <property name="dragEnabled">
                 <bool>true</bool>
@@ -688,7 +691,7 @@
                 </size>
                </property>
                <property name="text">
-                <string>+PULSE 0 4m 2n 50p 1.55n 100p 0</string>
+                <string>+PULSE 0 4m 2n 250p 250p 5n 0</string>
                </property>
                <property name="dragEnabled">
                 <bool>true</bool>
@@ -883,7 +886,7 @@ p, li { white-space: pre-wrap; }
                   <string>CMOSN</string>
                  </property>
                  <property name="checked">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                 </widget>
                </item>
@@ -934,6 +937,9 @@ p, li { white-space: pre-wrap; }
                  </property>
                  <property name="text">
                   <string>Both</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>

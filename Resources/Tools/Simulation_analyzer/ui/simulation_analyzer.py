@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'simulation_analyzer.ui'
 #
-# Created: Wed May 26 16:46:07 2010
+# Created: Sun May 30 20:19:39 2010
 #      by: PyQt4 UI code generator 4.7.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -269,6 +269,7 @@ class Ui_MainWindow(object):
         self.checkBox.setObjectName("checkBox")
         self.formLayout.setWidget(0, QtGui.QFormLayout.LabelRole, self.checkBox)
         self.checkBox_2 = QtGui.QCheckBox(self.formLayoutWidget)
+        self.checkBox_2.setChecked(True)
         self.checkBox_2.setObjectName("checkBox_2")
         self.formLayout.setWidget(1, QtGui.QFormLayout.LabelRole, self.checkBox_2)
         self.checkBox_3 = QtGui.QCheckBox(self.formLayoutWidget)
@@ -367,7 +368,7 @@ class Ui_MainWindow(object):
         self.radioButton_3.setSizePolicy(sizePolicy)
         self.radioButton_3.setMinimumSize(QtCore.QSize(70, 15))
         self.radioButton_3.setMaximumSize(QtCore.QSize(100, 20))
-        self.radioButton_3.setChecked(True)
+        self.radioButton_3.setChecked(False)
         self.radioButton_3.setObjectName("radioButton_3")
         self.horizontalLayout_5.addWidget(self.radioButton_3)
         self.radioButton_2 = QtGui.QRadioButton(self.verticalLayoutWidget_3)
@@ -388,6 +389,7 @@ class Ui_MainWindow(object):
         self.radioButton.setSizePolicy(sizePolicy)
         self.radioButton.setMinimumSize(QtCore.QSize(70, 15))
         self.radioButton.setMaximumSize(QtCore.QSize(100, 20))
+        self.radioButton.setChecked(True)
         self.radioButton.setObjectName("radioButton")
         self.horizontalLayout_5.addWidget(self.radioButton)
         self.verticalLayout_6.addLayout(self.horizontalLayout_5)
@@ -644,8 +646,8 @@ class Ui_MainWindow(object):
         self.checkBox_2.setText(QtGui.QApplication.translate("MainWindow", "Slope", None, QtGui.QApplication.UnicodeUTF8))
         self.checkBox_3.setText(QtGui.QApplication.translate("MainWindow", "DoubleSlope", None, QtGui.QApplication.UnicodeUTF8))
         self.checkBox_4.setText(QtGui.QApplication.translate("MainWindow", "Other", None, QtGui.QApplication.UnicodeUTF8))
-        self.lineEdit.setText(QtGui.QApplication.translate("MainWindow", "+EXP 4m 0 2n 30p 2.2n 500p", None, QtGui.QApplication.UnicodeUTF8))
-        self.lineEdit_2.setText(QtGui.QApplication.translate("MainWindow", "+PULSE 0 4m 2n 50p 1.55n 100p 0", None, QtGui.QApplication.UnicodeUTF8))
+        self.lineEdit.setText(QtGui.QApplication.translate("MainWindow", "+EXP 0 4m 2n 30p 2.2n 500p", None, QtGui.QApplication.UnicodeUTF8))
+        self.lineEdit_2.setText(QtGui.QApplication.translate("MainWindow", "+PULSE 0 4m 2n 250p 250p 5n 0", None, QtGui.QApplication.UnicodeUTF8))
         self.textEdit.setHtml(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
