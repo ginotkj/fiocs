@@ -92,8 +92,8 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         # Global comparators for each digital voltage
         self.comps = []
         # Set default output CIR source file and output dir to generated files
-        self.lineEdit_5.setText("D:\\OrCAD_files\\comparador.cir")
-        self.lineEdit_6.setText("D:\\OrCAD_files")
+        self.lineEdit_5.setText("D:\\Documents\\TESIS\\fiocs\\Testing\\Flash\\flash.cir")
+        self.lineEdit_6.setText("D:\\Documents\\TESIS\\fiocs\\Testing\\Flash\\Simulation Flash\\")
         # This dict holds the vars and contents of the CIR file
         self.cirFileTab = {'cirsrc':'','outdir':'','injfail':[],'injpins':[],
                             'injtypes':[]}
