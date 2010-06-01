@@ -10,7 +10,7 @@
 .lib "nom.lib" 
  
 *Analysis directives: 
-.TRAN  0 50n 0 0 
+.TRAN  0 500n 0 0 
 
 **** INCLUDING PRUEBA.net ****
 * source I-FLASH-6BITS
@@ -3493,13 +3493,13 @@ V_Clock         N116976 0
 * Transistor type: CMOSN
 * Punto de inyeccion: C_F_C5_NDNEG
 * Related nodes: ['M_C_F_C5_M4', 'M_C_F_C5_M3', 'M_C_F_C5_M1']
-* Falla: +EXP 4m 0 2n 30p 2.2n 500p
+* Falla: +EXP 0 4m 2n 30p 2.2n 500p
 * Directorio: D:\Documents\TESIS\fiocs\Testing\Flash\Simulation Flash\\fail_1\CMOSN
 *************************************************
 
 * N CMOS type injection
 I_INY1         C_F_C5_NDNEG 0 DC 0Adc AC 0Aac
-+EXP 4m 0 2n 30p 2.2n 500p
++EXP 0 4m 2n 30p 2.2n 500p
 
 * Out voltages
 .PROBE/CSDF V([C_F_D_LSB])
@@ -3509,8 +3509,9 @@ I_INY1         C_F_C5_NDNEG 0 DC 0Adc AC 0Aac
 .PROBE/CSDF V([C_F_D_5SB])
 .PROBE/CSDF V([C_F_D_MSB])
 
-* Voltage at the injection point
+* Voltage and current at the injection point
 .PROBE/CSDF V([C_F_C5_NDNEG])
+.PROBE/CSDF I(I_INY1)
 
 * Related nodes values
 .PROBE/CSDF ID(M_C_F_C5_M4) IB(M_C_F_C5_M4) IS(M_C_F_C5_M4) IG(M_C_F_C5_M4)

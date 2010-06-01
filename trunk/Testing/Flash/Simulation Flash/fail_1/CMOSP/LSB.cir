@@ -10,7 +10,7 @@
 .lib "nom.lib" 
  
 *Analysis directives: 
-.TRAN  0 50n 0 0 
+.TRAN  0 500n 0 0 
 
 **** INCLUDING PRUEBA.net ****
 * source I-FLASH-6BITS
@@ -3493,13 +3493,13 @@ V_Clock         N116976 0
 * Transistor type: CMOSP
 * Punto de inyeccion: LSB
 * Related nodes: ['M_C_F_D_U129_M4', 'M_C_F_D_U120_M6', 'M_C_F_R1_NAND5_M4', 'M_C_F_R1_NAND5_M5', 'M_C_F_R1_NAND5_M6', 'M_C_F_D_U130_M4', 'M_C_F_D_U124_M6', 'M_C_F_D_U124_M5', 'M_C_F_D_U124_M4', 'M_C_F_D_U130_M5', 'M_C_F_D_U139_M5', 'M_C_F_D_U127_M4', 'M_C_F_D_U139_M6', 'M_C_F_D_U129_M5', 'M_C_F_R1_NAND4_M6', 'M_C_F_R1_NAND4_M5', 'M_C_F_R1_NAND4_M4', 'M_C_F_R1_NAND4_M2', 'M_C_F_D_U134_M2', 'M_C_F_D_U134_M3', 'M_C_F_D_U95_M6', 'M_C_F_D_U95_M4', 'M_C_F_D_U125_M4', 'M_C_F_D_U140_M9', 'M_C_F_D_U138_M5', 'M_C_F_D_U140_M8', 'M_C_F_D_U100_M9', 'M_C_F_D_U100_M8', 'M_C_F_D_U100_M3', 'M_C_F_D_U100_M2', 'M_C_F_D_U100_M4', 'M_C_F_D_U100_M13', 'M_C_F_D_U92_M6', 'M_C_F_D_U92_M4', 'M_C_F_D_U92_M5', 'M_C_F_D_U130_M6', 'M_C_F_D_U97_M4', 'M_C_F_D_U95_M5', 'M_C_F_D_U138_M6', 'M_C_F_D_U97_M6', 'M_C_F_D_U123_M6', 'M_C_F_D_U123_M4', 'M_C_F_D_U123_M5', 'M_C_F_D_U131_M5', 'M_C_F_D_U131_M6', 'M_C_F_D_U99_M12', 'M_C_F_D_U122_M5', 'M_C_F_D_U122_M6', 'M_C_F_D_U127_M5', 'M_C_F_D_U93_M4', 'M_C_F_D_U94_M4', 'M_C_F_D_U94_M5', 'M_C_F_D_U94_M6', 'M_C_F_D_U134_M9', 'M_C_F_D_U134_M6', 'M_C_F_D_U134_M7', 'M_C_F_D_U134_M4', 'M_C_F_D_U134_M1', 'M_C_F_D_U122_M4', 'M_C_F_D_U89_M4', 'M_C_F_D_U89_M5', 'M_C_F_D_U88_M5', 'M_C_F_D_U88_M4', 'M_C_F_D_U132_M5', 'M_C_F_D_U132_M4', 'M_C_F_D_U132_M6', 'M_C_F_D_U100_M15', 'M_C_F_D_U135_M9', 'M_C_F_D_U135_M8', 'M_C_F_D_U135_M1', 'M_C_F_D_U135_M3', 'M_C_F_D_U135_M2', 'M_C_F_D_U100_M10', 'M_C_F_D_U125_M5', 'M_C_F_D_U140_M7', 'M_C_F_D_U140_M1', 'M_C_F_D_U140_M3', 'M_C_F_D_U133_M6', 'M_C_F_D_U133_M5', 'M_C_F_D_U99_M13', 'M_C_F_D_U100_M14', 'M_C_F_D_U99_M11', 'M_C_F_D_U133_M4', 'M_C_F_D_U99_M16', 'M_C_F_D_U99_M15', 'M_C_F_D_U99_M14', 'M_C_F_D_U121_M6', 'M_C_F_D_U121_M4', 'M_C_F_D_U100_M16', 'M_C_F_D_U96_M6', 'M_C_F_D_U96_M4', 'M_C_F_D_U96_M5', 'M_C_F_D_U91_M5', 'M_C_F_D_U91_M4', 'M_C_F_D_U99_M9', 'M_C_F_D_U99_M8', 'M_C_F_D_U86_M6', 'M_C_F_D_U86_M5', 'M_C_F_D_U86_M4', 'M_C_F_D_U99_M3', 'M_C_F_D_U99_M5', 'M_C_F_D_U93_M6', 'M_C_F_D_U118_M4', 'M_C_F_D_U118_M5', 'M_C_F_D_U118_M6', 'M_C_F_D_U99_M2', 'M_C_F_D_U98_M4', 'M_C_F_D_U98_M5', 'M_C_F_D_U98_M6', 'M_C_F_D_U90_M4', 'M_C_F_D_U90_M5', 'M_C_F_D_U90_M6', 'M_C_F_D_U99_M4', 'M_C_F_D_U134_M11', 'M_C_F_D_U127_M6', 'M_C_F_D_U85_M4', 'M_C_F_D_U85_M5', 'M_C_F_D_U97_M5', 'M_C_F_D_U134_M5', 'M_C_F_D_U125_M6', 'M_C_F_D_U135_M4', 'M_C_F_D_U91_M6', 'M_C_F_D_U129_M6', 'M_C_F_D_U68_M5', 'M_C_F_D_U131_M4', 'M_C_F_D_U100_M11', 'M_C_F_D_U68_M6', 'M_C_F_D_U134_M12', 'M_C_F_D_U134_M15', 'M_C_F_D_U134_M16', 'M_C_F_D_U134_M10', 'M_C_F_D_U89_M6', 'M_C_F_D_U120_M5', 'M_C_F_D_U88_M6', 'M_C_F_D_U100_M5', 'M_C_F_D_U87_M4', 'M_C_F_D_U120_M4', 'M_C_F_D_U84_M5', 'M_C_F_D_U84_M4', 'M_C_F_D_U87_M5', 'M_C_F_D_U93_M5', 'M_C_F_R1_NAND6_M4', 'M_C_F_R1_NAND6_M2', 'M_C_F_D_U135_M7', 'M_C_F_D_U100_M1', 'M_C_F_D_U140_M11', 'M_C_F_D_U140_M10', 'M_C_F_D_U140_M12', 'M_C_F_D_U134_M13', 'M_C_F_D_U134_M14', 'M_C_F_D_U99_M10', 'M_C_F_D_U135_M5', 'M_C_F_D_U135_M6', 'M_C_F_D_U100_M7', 'M_C_F_D_U135_M15', 'M_C_F_D_U135_M14', 'M_C_F_D_U135_M16', 'M_C_F_D_U135_M11', 'M_C_F_D_U135_M10', 'M_C_F_D_U135_M13', 'M_C_F_D_U135_M12', 'M_C_F_D_U119_M6', 'M_C_F_D_U119_M5', 'M_C_F_D_U119_M4', 'M_C_F_D_U99_M1', 'M_C_F_D_U99_M7', 'M_C_F_D_U99_M6', 'M_C_F_D_U87_M6', 'M_C_F_D_U100_M6', 'M_C_F_D_U136_M5', 'M_C_F_D_U136_M6', 'M_C_F_D_U100_M12', 'M_C_F_D_U121_M5', 'M_C_F_D_U126_M5', 'M_C_F_D_U126_M4', 'M_C_F_D_U126_M6', 'M_C_F_D_U117_M5', 'M_C_F_D_U117_M4', 'M_C_F_D_U117_M6', 'M_C_F_D_U84_M6', 'M_C_F_D_U134_M8', 'M_C_F_D_U85_M6', 'M_C_F_D_U137_M6', 'M_C_F_D_U137_M5']
-* Falla: +EXP 4m 0 2n 30p 2.2n 500p
+* Falla: +EXP 0 4m 2n 30p 2.2n 500p
 * Directorio: D:\Documents\TESIS\fiocs\Testing\Flash\Simulation Flash\\fail_1\CMOSP
 *************************************************
 
 * P CMOS type injection
 I_INY1         0 LSB DC 0Adc AC 0Aac
-+EXP 4m 0 2n 30p 2.2n 500p
++EXP 0 4m 2n 30p 2.2n 500p
 
 * Out voltages
 .PROBE/CSDF V([C_F_D_LSB])
@@ -3509,8 +3509,9 @@ I_INY1         0 LSB DC 0Adc AC 0Aac
 .PROBE/CSDF V([C_F_D_5SB])
 .PROBE/CSDF V([C_F_D_MSB])
 
-* Voltage at the injection point
+* Voltage and current at the injection point
 .PROBE/CSDF V([LSB])
+.PROBE/CSDF I(I_INY1)
 
 * Related nodes values
 .PROBE/CSDF ID(M_C_F_D_U129_M4) IB(M_C_F_D_U129_M4) IS(M_C_F_D_U129_M4) IG(M_C_F_D_U129_M4)

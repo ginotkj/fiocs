@@ -135,17 +135,6 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("V2"
-            ("device_name"	"VDC")
-            ("pspice_path"	"V_V2")
-            ("level"	"0")
-            ("model_params"
-                ("DC"
-                    ("value"	"0Vdc")
-                    ("pspice_param"	"DC")
-                )
-            )
-        )
         ("R1"
             ("device_name"	"R")
             ("pspice_path"	"R_R1")
@@ -161,6 +150,17 @@
                 ("POWER"	"0.25")
                 ("SLOPE"	"0.005")
                 ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("V2"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_V2")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"0Vdc")
+                    ("pspice_param"	"DC")
+                )
             )
         )
         ("R5"

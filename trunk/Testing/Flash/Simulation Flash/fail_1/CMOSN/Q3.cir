@@ -10,7 +10,7 @@
 .lib "nom.lib" 
  
 *Analysis directives: 
-.TRAN  0 50n 0 0 
+.TRAN  0 500n 0 0 
 
 **** INCLUDING PRUEBA.net ****
 * source I-FLASH-6BITS
@@ -3493,13 +3493,13 @@ V_Clock         N116976 0
 * Transistor type: CMOSN
 * Punto de inyeccion: Q3
 * Related nodes: ['M_C_F_D_U84_M2', 'M_C_F_D_U120_M2', 'M_C_F_D_U76_M5', 'M_C_F_D_U53_M2', 'M_C_F_D_U53_M4', 'M_C_F_C38_M12', 'M_C_F_D_U102_M6', 'M_C_F_D_U102_M5', 'M_C_F_D_U103_M6', 'M_C_F_C37_M12', 'M_C_F_C37_M13', 'M_C_F_C35_M12', 'M_C_F_C35_M13', 'M_C_F_D_U103_M5', 'M_C_F_D_U91_M4', 'M_C_F_D_U104_M5', 'M_C_F_D_U104_M6', 'M_C_F_D_U118_M4', 'M_C_F_D_U27_M4', 'M_C_F_D_U91_M2', 'M_C_F_D_U119_M2', 'M_C_F_C3_M12', 'M_C_F_C3_M13', 'M_C_F_C31_M12', 'M_C_F_C31_M13', 'M_C_F_C39_M12', 'M_C_F_C39_M13', 'M_C_F_C30_M13', 'M_C_F_C30_M12', 'M_C_F_C33_M12', 'M_C_F_C33_M13', 'M_C_F_D_U45_M6', 'M_C_F_D_U120_M4', 'M_C_F_D_U84_M4', 'M_C_F_C36_M12', 'M_C_F_C38_M13', 'M_C_F_D_U76_M6', 'M_C_F_D_U55_M2', 'M_C_F_D_U55_M4', 'M_C_F_D_U118_M2', 'M_C_F_D_U54_M4', 'M_C_F_D_U54_M2', 'M_C_F_D_U119_M4', 'M_C_F_C36_M13', 'M_C_F_D_U27_M2', 'M_C_F_D_U45_M5', 'M_C_F_C34_M13', 'M_C_F_C34_M12', 'M_C_F_D_U117_M2', 'M_C_F_D_U117_M4']
-* Falla: +EXP 4m 0 2n 30p 2.2n 500p
+* Falla: +EXP 0 4m 2n 30p 2.2n 500p
 * Directorio: D:\Documents\TESIS\fiocs\Testing\Flash\Simulation Flash\\fail_1\CMOSN
 *************************************************
 
 * N CMOS type injection
 I_INY1         Q3 0 DC 0Adc AC 0Aac
-+EXP 4m 0 2n 30p 2.2n 500p
++EXP 0 4m 2n 30p 2.2n 500p
 
 * Out voltages
 .PROBE/CSDF V([C_F_D_LSB])
@@ -3509,8 +3509,9 @@ I_INY1         Q3 0 DC 0Adc AC 0Aac
 .PROBE/CSDF V([C_F_D_5SB])
 .PROBE/CSDF V([C_F_D_MSB])
 
-* Voltage at the injection point
+* Voltage and current at the injection point
 .PROBE/CSDF V([Q3])
+.PROBE/CSDF I(I_INY1)
 
 * Related nodes values
 .PROBE/CSDF ID(M_C_F_D_U84_M2) IB(M_C_F_D_U84_M2) IS(M_C_F_D_U84_M2) IG(M_C_F_D_U84_M2)

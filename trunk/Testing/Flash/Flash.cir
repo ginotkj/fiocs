@@ -10,7 +10,7 @@
 .lib "nom.lib" 
  
 *Analysis directives: 
-.TRAN  0 50n 0 0 
+.TRAN  0 500n 0 0 
 
 **** INCLUDING PRUEBA.net ****
 * source I-FLASH-6BITS

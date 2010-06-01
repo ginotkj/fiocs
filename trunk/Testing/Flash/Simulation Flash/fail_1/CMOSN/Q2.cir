@@ -10,7 +10,7 @@
 .lib "nom.lib" 
  
 *Analysis directives: 
-.TRAN  0 50n 0 0 
+.TRAN  0 500n 0 0 
 
 **** INCLUDING PRUEBA.net ****
 * source I-FLASH-6BITS
@@ -3493,13 +3493,13 @@ V_Clock         N116976 0
 * Transistor type: CMOSN
 * Punto de inyeccion: Q2
 * Related nodes: ['M_C_F_D_U95_M4', 'M_C_F_D_U81_M5', 'M_C_F_D_U92_M4', 'M_C_F_D_U92_M2', 'M_C_F_D_U77_M6', 'M_C_F_D_U77_M5', 'M_C_F_D_U8_M2', 'M_C_F_D_U93_M4', 'M_C_F_D_U80_M5', 'M_C_F_D_U94_M2', 'M_C_F_D_U94_M4', 'M_C_F_D_U80_M6', 'M_C_F_C24_M12', 'M_C_F_C24_M13', 'M_C_F_C26_M12', 'M_C_F_C26_M13', 'M_C_F_C27_M13', 'M_C_F_C27_M12', 'M_C_F_D_U31_M5', 'M_C_F_D_U31_M6', 'M_C_F_D_U17_M5', 'M_C_F_C22_M12', 'M_C_F_D_U51_M4', 'M_C_F_D_U78_M6', 'M_C_F_D_U78_M5', 'M_C_F_D_U81_M6', 'M_C_F_D_U26_M4', 'M_C_F_D_U95_M2', 'M_C_F_D_U96_M2', 'M_C_F_D_U96_M4', 'M_C_F_D_U79_M5', 'M_C_F_D_U79_M6', 'M_C_F_D_U25_M4', 'M_C_F_D_U93_M2', 'M_C_F_D_U8_M4', 'M_C_F_D_U25_M2', 'M_C_F_C25_M13', 'M_C_F_C25_M12', 'M_C_F_D_U36_M6', 'M_C_F_C22_M13', 'M_C_F_D_U37_M6', 'M_C_F_D_U37_M5', 'M_C_F_C28_M12', 'M_C_F_C28_M13', 'M_C_F_D_U38_M6', 'M_C_F_D_U38_M5', 'M_C_F_D_U69_M5', 'M_C_F_D_U69_M6', 'M_C_F_D_U26_M2', 'M_C_F_C20_M12', 'M_C_F_C20_M13', 'M_C_F_D_U17_M6', 'M_C_F_D_U52_M2', 'M_C_F_C2_M13', 'M_C_F_C21_M13', 'M_C_F_C21_M12', 'M_C_F_C29_M13', 'M_C_F_C29_M12', 'M_C_F_D_U52_M4', 'M_C_F_C2_M12', 'M_C_F_D_U51_M2', 'M_C_F_D_U36_M5', 'M_C_F_C23_M13', 'M_C_F_C23_M12']
-* Falla: +EXP 4m 0 2n 30p 2.2n 500p
+* Falla: +EXP 0 4m 2n 30p 2.2n 500p
 * Directorio: D:\Documents\TESIS\fiocs\Testing\Flash\Simulation Flash\\fail_1\CMOSN
 *************************************************
 
 * N CMOS type injection
 I_INY1         Q2 0 DC 0Adc AC 0Aac
-+EXP 4m 0 2n 30p 2.2n 500p
++EXP 0 4m 2n 30p 2.2n 500p
 
 * Out voltages
 .PROBE/CSDF V([C_F_D_LSB])
@@ -3509,8 +3509,9 @@ I_INY1         Q2 0 DC 0Adc AC 0Aac
 .PROBE/CSDF V([C_F_D_5SB])
 .PROBE/CSDF V([C_F_D_MSB])
 
-* Voltage at the injection point
+* Voltage and current at the injection point
 .PROBE/CSDF V([Q2])
+.PROBE/CSDF I(I_INY1)
 
 * Related nodes values
 .PROBE/CSDF ID(M_C_F_D_U95_M4) IB(M_C_F_D_U95_M4) IS(M_C_F_D_U95_M4) IG(M_C_F_D_U95_M4)
