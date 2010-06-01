@@ -10,7 +10,7 @@
 .lib "nom.lib" 
  
 *Analysis directives: 
-.TRAN  0 50n 0 0 
+.TRAN  0 500n 0 0 
 
 **** INCLUDING PRUEBA.net ****
 * source I-FLASH-6BITS
@@ -3493,13 +3493,13 @@ V_Clock         N116976 0
 * Transistor type: CMOSP
 * Punto de inyeccion: Q4
 * Related nodes: ['M_C_F_C40_M12', 'M_C_F_C40_M13', 'M_C_F_D_U44_M6', 'M_C_F_D_U124_M2', 'M_C_F_D_U124_M4', 'M_C_F_C44_M12', 'M_C_F_C44_M13', 'M_C_F_C42_M12', 'M_C_F_C42_M13', 'M_C_F_D_U32_M6', 'M_C_F_D_U56_M2', 'M_C_F_C47_M13', 'M_C_F_D_U28_M2', 'M_C_F_D_U107_M5', 'M_C_F_D_U107_M6', 'M_C_F_D_U123_M2', 'M_C_F_D_U123_M4', 'M_C_F_D_U106_M6', 'M_C_F_D_U106_M5', 'M_C_F_D_U42_M5', 'M_C_F_D_U109_M6', 'M_C_F_D_U109_M5', 'M_C_F_C41_M13', 'M_C_F_C41_M12', 'M_C_F_D_U122_M4', 'M_C_F_D_U43_M5', 'M_C_F_D_U43_M6', 'M_C_F_D_U7_M4', 'M_C_F_D_U7_M2', 'M_C_F_D_U9_M2', 'M_C_F_C43_M13', 'M_C_F_C43_M12', 'M_C_F_D_U19_M5', 'M_C_F_D_U9_M4', 'M_C_F_D_U44_M5', 'M_C_F_D_U105_M5', 'M_C_F_D_U70_M6', 'M_C_F_D_U32_M5', 'M_C_F_D_U133_M2', 'M_C_F_C47_M12', 'M_C_F_C45_M13', 'M_C_F_C45_M12', 'M_C_F_D_U133_M4', 'M_C_F_D_U121_M4', 'M_C_F_C49_M13', 'M_C_F_C49_M12', 'M_C_F_D_U42_M6', 'M_C_F_D_U5_M6', 'M_C_F_D_U56_M4', 'M_C_F_C4_M13', 'M_C_F_C4_M12', 'M_C_F_D_U20_M6', 'M_C_F_D_U20_M5', 'M_C_F_D_U57_M4', 'M_C_F_D_U57_M2', 'M_C_F_D_U122_M2', 'M_C_F_D_U28_M4', 'M_C_F_D_U19_M6', 'M_C_F_D_U105_M6', 'M_C_F_C46_M12', 'M_C_F_C46_M13', 'M_C_F_D_U5_M5', 'M_C_F_D_U108_M5', 'M_C_F_D_U108_M6', 'M_C_F_D_U14_M5', 'M_C_F_D_U14_M6', 'M_C_F_D_U121_M2', 'M_C_F_D_U70_M5', 'M_C_F_C48_M12', 'M_C_F_C48_M13']
-* Falla: +EXP 4m 0 2n 30p 2.2n 500p
+* Falla: +EXP 0 4m 2n 30p 2.2n 500p
 * Directorio: D:\Documents\TESIS\fiocs\Testing\Flash\Simulation Flash\\fail_1\CMOSP
 *************************************************
 
 * P CMOS type injection
 I_INY1         0 Q4 DC 0Adc AC 0Aac
-+EXP 4m 0 2n 30p 2.2n 500p
++EXP 0 4m 2n 30p 2.2n 500p
 
 * Out voltages
 .PROBE/CSDF V([C_F_D_LSB])
@@ -3509,8 +3509,9 @@ I_INY1         0 Q4 DC 0Adc AC 0Aac
 .PROBE/CSDF V([C_F_D_5SB])
 .PROBE/CSDF V([C_F_D_MSB])
 
-* Voltage at the injection point
+* Voltage and current at the injection point
 .PROBE/CSDF V([Q4])
+.PROBE/CSDF I(I_INY1)
 
 * Related nodes values
 .PROBE/CSDF ID(M_C_F_C40_M12) IB(M_C_F_C40_M12) IS(M_C_F_C40_M12) IG(M_C_F_C40_M12)
