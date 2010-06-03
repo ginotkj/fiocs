@@ -1,1550 +1,1567 @@
 * source I-DECODER-6BITS
+R_R12         N223789 0  1k  
 R_R5         MSB 2SB  100k  
-M_U3_U31_M5         U3_N568171 N22510 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U31_M6         U3_N568171 N22510 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
+R_R19         N223781 0  1k  
+R_R10         N2237811 0  1k  
+R_R16         N223785 0  1k  
+R_R14         N223787 0  1k  
+R_R18         N223783 0  1k  
+R_R8         N2237813 0  1k  
+R_R20         N30773 0  1k  
+M_U3_U31_M5         U3_ND2SB1 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U31_M6         U3_ND2SB1 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
 M_U3_U16_M5         U3_N565094 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U16_M6         U3_N565094 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U91_M5         U3_N577856 U3_N578578 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U91_M6         U3_N577856 U3_N578578 U3_U91_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U91_M2         U3_U91_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U91_M4         U3_N577856 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U65_M5         U3_N568485 U3_N7604009 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U65_M6         U3_N568485 U3_N7604009 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
+M_U3_U91_M5         U3_NDLSB16 U3_N578578 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U91_M6         U3_NDLSB16 U3_N578578 U3_U91_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U91_M2         U3_U91_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U91_M4         U3_NDLSB16 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U65_M5         U3_N568485 U3_N941987 MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U65_M6         U3_N568485 U3_N941987 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
 M_U3_U2_M5         U3_N259339 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U2_M6         U3_N259339 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U96_M5         U3_N577828 U3_N578514 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U96_M6         U3_N577828 U3_N578514 U3_U96_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U96_M2         U3_U96_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U96_M4         U3_N577828 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U96_M5         U3_NDLSB11 U3_N578514 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U96_M6         U3_NDLSB11 U3_N578514 U3_U96_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U96_M2         U3_U96_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U96_M4         U3_NDLSB11 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U109_M5         U3_N573020 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U109_M6         U3_N573020 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U57_M5         U3_N567883 U3_N567821 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U57_M6         U3_N567883 U3_N567821 U3_U57_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U57_M2         U3_U57_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U57_M4         U3_N567883 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U28_M5         U3_N565380 U3_N565120 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U28_M6         U3_N565380 U3_N565120 U3_U28_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U28_M2         U3_U28_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U28_M4         U3_N565380 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U139_M5         U3_N575374 X4 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U139_M6         U3_N575374 X4 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U74_M5         U3_N578674 N22490 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U74_M6         U3_N578674 N22490 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
+M_U3_U57_M5         U3_ND2SB12 U3_N567821 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U57_M6         U3_ND2SB12 U3_N567821 U3_U57_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U57_M2         U3_U57_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U57_M4         U3_ND2SB12 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U28_M5         U3_ND3SB6 U3_N565120 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U28_M6         U3_ND3SB6 U3_N565120 U3_U28_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U28_M2         U3_U28_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U28_M4         U3_ND3SB6 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U139_M5         U3_NDX4LSB X4 MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U139_M6         U3_NDX4LSB X4 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U74_M5         U3_N578674 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U74_M6         U3_N578674 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
 M_U3_U43_M5         U3_N567821 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U43_M6         U3_N567821 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U80_M5         U3_N578524 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U80_M6         U3_N578524 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U14_M5         U3_N565346 N22506 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U14_M6         U3_N565346 N22506 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U136_M5         U3_N575328 X1 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U136_M6         U3_N575328 X1 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
+M_U3_U14_M5         U3_ND3SB1 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U14_M6         U3_ND3SB1 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U136_M5         U3_NDX1LSB X1 MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U136_M6         U3_NDX1LSB X1 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U124_M5         U3_NDLSB24 U3_N572160 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U124_M6         U3_NDLSB24 U3_N572160 U3_U124_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U124_M2         U3_U124_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U124_M4         U3_NDLSB24 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U116_M5         U3_N573096 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U116_M6         U3_N573096 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U124_M5         U3_N572214 U3_N572160 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U124_M6         U3_N572214 U3_N572160 U3_U124_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U124_M2         U3_U124_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U124_M4         U3_N572214 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U69_M5         U3_N578608 N22510 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U69_M6         U3_N578608 N22510 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U86_M5         U3_N577748 U3_N578636 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U86_M6         U3_N577748 U3_N578636 U3_U86_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U86_M2         U3_U86_N39991 N22500 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U86_M4         U3_N577748 N22500 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U26_M5         U3_N564842 U3_N565104 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U26_M6         U3_N564842 U3_N565104 U3_U26_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U26_M2         U3_U26_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U26_M4         U3_N564842 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U69_M5         U3_N578608 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U69_M6         U3_N578608 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U86_M5         U3_NDLSB4 U3_N578636 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U86_M6         U3_NDLSB4 U3_N578636 U3_U86_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U86_M2         U3_U86_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U86_M4         U3_NDLSB4 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U26_M5         U3_ND3SB4 U3_N565104 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U26_M6         U3_ND3SB4 U3_N565104 U3_U26_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U26_M2         U3_U26_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U26_M4         U3_ND3SB4 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U103_M5         U3_N572104 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U103_M6         U3_N572104 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U37_M5         U3_N568555 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U37_M6         U3_N568555 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U61_M5         U3_ND2SB16 U3_N567861 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U61_M6         U3_ND2SB16 U3_N567861 U3_U61_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U61_M2         U3_U61_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U61_M4         U3_ND2SB16 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U119_M5         U3_NDLSB19 U3_N572104 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U119_M6         U3_NDLSB19 U3_N572104 U3_U119_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U119_M2         U3_U119_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U119_M4         U3_NDLSB19 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U48_M5         U3_ND2SB3 U3_N568511 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U48_M6         U3_ND2SB3 U3_N568511 U3_U48_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U48_M2         U3_U48_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U48_M4         U3_ND2SB3 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U64_M16         U3_N941987 U3_ND2SB12 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U64_M5         U3_N941987 U3_ND2SB16 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U64_M11         U3_N941987 U3_ND2SB9 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U64_M9         U3_N941987 U3_ND2SB14 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U64_M1         U3_N941987 U3_ND2SB9 U3_U64_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U61_M5         U3_N568303 U3_N567861 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U64_M6         U3_U64_ND3 U3_ND2SB11 U3_U64_ND4 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U61_M6         U3_N568303 U3_N567861 U3_U61_N39991 0 CMOSN  
++ W=2.55u         
+M_U3_U64_M7         U3_U64_ND4 U3_ND2SB12 U3_U64_ND5 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U61_M2         U3_U61_N39991 MSB 0 0 CMOSN  
++ W=2.55u         
+M_U3_U64_M12         U3_N941987 U3_ND2SB13 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U64_M2         U3_U64_ND2 U3_ND2SB10 U3_U64_ND3 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U61_M4         U3_N568303 MSB MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U64_M13         U3_U64_ND6 U3_ND2SB14 U3_U64_ND7 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U119_M5         U3_N572186 U3_N572104 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U64_M10         U3_U64_ND5 U3_ND2SB13 U3_U64_ND6 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U119_M6         U3_N572186 U3_N572104 U3_U119_N39991 0 CMOSN  
++ W=2.55u         
+M_U3_U64_M3         U3_N941987 U3_ND2SB10 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U64_M14         U3_U64_ND7 U3_ND2SB15 U3_U64_ND8 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U119_M2         U3_U119_N39991 MSB 0 0 CMOSN  
++ W=2.55u         
+M_U3_U64_M8         U3_N941987 U3_ND2SB15 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U64_M4         U3_N941987 U3_ND2SB11 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U64_M15         U3_U64_ND8 U3_ND2SB16 0 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U119_M4         U3_N572186 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U48_M5         U3_N568271 U3_N568511 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U48_M6         U3_N568271 U3_N568511 U3_U48_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U48_M2         U3_U48_N39991 N22494 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U48_M4         U3_N568271 N22494 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U64_M16         U3_N7604009 U3_N567883 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U64_M5         U3_N7604009 U3_N568303 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U64_M11         U3_N7604009 U3_N567441 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U64_M9         U3_N7604009 U3_N568069 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U64_M1         U3_N7604009 U3_N567441 U3_U64_N67495 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U64_M6         U3_U64_N66385 U3_N567879 U3_U64_N66425 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U64_M7         U3_U64_N66425 U3_N567883 U3_U64_N66937 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U64_M12         U3_N7604009 U3_N568995 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U64_M2         U3_U64_N67495 U3_N567415 U3_U64_N66385 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U64_M13         U3_U64_N67207 U3_N568069 U3_U64_N67213 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U64_M10         U3_U64_N66937 U3_N568995 U3_U64_N67207 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U64_M3         U3_N7604009 U3_N567415 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U64_M14         U3_U64_N67213 U3_N568185 U3_U64_N66527 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U64_M8         U3_N7604009 U3_N568185 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U64_M4         U3_N7604009 U3_N567879 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U64_M15         U3_U64_N66527 U3_N568303 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U52_M5         U3_N568231 U3_N568555 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U52_M6         U3_N568231 U3_N568555 U3_U52_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U52_M2         U3_U52_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U52_M4         U3_N568231 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ W=2.55u         
+M_U3_U52_M5         U3_ND2SB7 U3_N568555 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U52_M6         U3_ND2SB7 U3_N568555 U3_U52_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U52_M2         U3_U52_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U52_M4         U3_ND2SB7 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U108_M5         U3_N572160 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U108_M6         U3_N572160 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U35_M5         U3_N568535 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U35_M6         U3_N568535 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U24_M5         U3_ND3SB2 U3_N565082 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U24_M6         U3_ND3SB2 U3_N565082 U3_U24_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U24_M2         U3_U24_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U24_M4         U3_ND3SB2 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U135_M16         X4 U3_NDLSB28 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U135_M5         X4 U3_NDLSB32 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U135_M11         X4 U3_NDLSB25 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U135_M9         X4 U3_NDLSB30 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U135_M1         X4 U3_NDLSB25 U3_U135_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U24_M5         U3_N565404 U3_N565082 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U135_M6         U3_U135_ND3 U3_NDLSB27 U3_U135_ND4 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U24_M6         U3_N565404 U3_N565082 U3_U24_N39991 0 CMOSN  
++ W=2.55u         
+M_U3_U135_M7         U3_U135_ND4 U3_NDLSB28 U3_U135_ND5 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U24_M2         U3_U24_N39991 N22490 0 0 CMOSN  
++ W=2.55u         
+M_U3_U135_M12         X4 U3_NDLSB29 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U135_M2         U3_U135_ND2 U3_NDLSB26 U3_U135_ND3 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U24_M4         U3_N565404 N22490 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U135_M13         U3_U135_ND6 U3_NDLSB30 U3_U135_ND7 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U135_M16         X4 U3_N572634 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U135_M10         U3_U135_ND5 U3_NDLSB29 U3_U135_ND6 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U135_M5         X4 U3_N572658 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U135_M3         X4 U3_NDLSB26 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U135_M14         U3_U135_ND7 U3_NDLSB31 U3_U135_ND8 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U135_M11         X4 U3_N572622 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U135_M8         X4 U3_NDLSB31 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U135_M4         X4 U3_NDLSB27 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U135_M15         U3_U135_ND8 U3_NDLSB32 0 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U135_M9         X4 U3_N572642 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U135_M1         X4 U3_N572622 U3_U135_N67495 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U135_M6         U3_U135_N66385 U3_N572630 U3_U135_N66425 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U135_M7         U3_U135_N66425 U3_N572634 U3_U135_N66937 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U135_M12         X4 U3_N572580 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U135_M2         U3_U135_N67495 U3_N572626 U3_U135_N66385 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U135_M13         U3_U135_N67207 U3_N572642 U3_U135_N67213 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U135_M10         U3_U135_N66937 U3_N572580 U3_U135_N67207 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U135_M3         X4 U3_N572626 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U135_M14         U3_U135_N67213 U3_N572650 U3_U135_N66527 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U135_M8         X4 U3_N572650 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U135_M4         X4 U3_N572630 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U135_M15         U3_U135_N66527 U3_N572658 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ W=2.55u         
 M_U3_U115_M5         U3_N573086 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U115_M6         U3_N573086 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U90_M5         U3_N577760 U3_N578686 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U90_M6         U3_N577760 U3_N578686 U3_U90_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U90_M2         U3_U90_N39991 N22484 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U90_M4         U3_N577760 N22484 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U95_M5         U3_N577832 U3_N578524 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U95_M6         U3_N577832 U3_N578524 U3_U95_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U95_M2         U3_U95_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U95_M4         U3_N577832 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U133_M5         U3_N572622 U3_N573020 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U133_M6         U3_N572622 U3_N573020 U3_U133_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U133_M2         U3_U133_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U133_M4         U3_N572622 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U90_M5         U3_NDLSB8 U3_N578686 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U90_M6         U3_NDLSB8 U3_N578686 U3_U90_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U90_M2         U3_U90_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U90_M4         U3_NDLSB8 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U95_M5         U3_NDLSB12 U3_N578524 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U95_M6         U3_NDLSB12 U3_N578524 U3_U95_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U95_M2         U3_U95_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U95_M4         U3_NDLSB12 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U133_M5         U3_NDLSB25 U3_N573020 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U133_M6         U3_NDLSB25 U3_N573020 U3_U133_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U133_M2         U3_U133_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U133_M4         U3_NDLSB25 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U79_M5         U3_N578534 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U79_M6         U3_N578534 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U42_M5         U3_N567831 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U42_M6         U3_N567831 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U73_M5         U3_N578662 N22494 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U73_M6         U3_N578662 N22494 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U9_M5         U3_N259637 U3_N259543 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U9_M6         U3_N259637 U3_N259543 U3_U9_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U9_M2         U3_U9_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U9_M4         U3_N259637 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U56_M5         U3_N567879 U3_N567811 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U56_M6         U3_N567879 U3_N567811 U3_U56_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U56_M2         U3_U56_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U56_M4         U3_N567879 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U73_M5         U3_N578662 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U73_M6         U3_N578662 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U9_M5         U3_ND4SB3 U3_N259543 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U9_M6         U3_ND4SB3 U3_N259543 U3_U9_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U9_M2         U3_U9_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U9_M4         U3_ND4SB3 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U56_M5         U3_ND2SB11 U3_N567811 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U56_M6         U3_ND2SB11 U3_N567811 U3_U56_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U56_M2         U3_U56_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U56_M4         U3_ND2SB11 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U23_M5         3SB U3_N565340 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U23_M6         3SB U3_N565340 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U123_M5         U3_NDLSB23 U3_N572144 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U123_M6         U3_NDLSB23 U3_N572144 U3_U123_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U123_M2         U3_U123_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U123_M4         U3_NDLSB23 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U63_M16         U3_N567419 U3_ND2SB4 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U63_M5         U3_N567419 U3_ND2SB8 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U63_M11         U3_N567419 U3_ND2SB1 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U63_M9         U3_N567419 U3_ND2SB6 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U63_M1         U3_N567419 U3_ND2SB1 U3_U63_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U123_M5         U3_N572206 U3_N572144 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U63_M6         U3_U63_ND3 U3_ND2SB3 U3_U63_ND4 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U123_M6         U3_N572206 U3_N572144 U3_U123_N39991 0 CMOSN  
++ W=2.55u         
+M_U3_U63_M7         U3_U63_ND4 U3_ND2SB4 U3_U63_ND5 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U123_M2         U3_U123_N39991 MSB 0 0 CMOSN  
++ W=2.55u         
+M_U3_U63_M12         U3_N567419 U3_ND2SB5 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U63_M2         U3_U63_ND2 U3_ND2SB2 U3_U63_ND3 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U123_M4         U3_N572206 MSB MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U63_M13         U3_U63_ND6 U3_ND2SB6 U3_U63_ND7 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U63_M16         U3_N567419 U3_N568285 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U63_M10         U3_U63_ND5 U3_ND2SB5 U3_U63_ND6 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U63_M5         U3_N567419 U3_N568189 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U63_M3         U3_N567419 U3_ND2SB2 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U63_M14         U3_U63_ND7 U3_ND2SB7 U3_U63_ND8 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U63_M11         U3_N567419 U3_N568171 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U63_M8         U3_N567419 U3_ND2SB7 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U63_M4         U3_N567419 U3_ND2SB3 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U63_M15         U3_U63_ND8 U3_ND2SB8 0 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U63_M9         U3_N567419 U3_N568243 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U63_M1         U3_N567419 U3_N568171 U3_U63_N67495 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U63_M6         U3_U63_N66385 U3_N568271 U3_U63_N66425 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U63_M7         U3_U63_N66425 U3_N568285 U3_U63_N66937 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U63_M12         U3_N567419 U3_N568251 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U63_M2         U3_U63_N67495 U3_N568263 U3_U63_N66385 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U63_M13         U3_U63_N67207 U3_N568243 U3_U63_N67213 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U63_M10         U3_U63_N66937 U3_N568251 U3_U63_N67207 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U63_M3         U3_N567419 U3_N568263 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U63_M14         U3_U63_N67213 U3_N568231 U3_U63_N66527 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U63_M8         U3_N567419 U3_N568231 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U63_M4         U3_N567419 U3_N568271 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U63_M15         U3_U63_N66527 U3_N568189 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ W=2.55u         
 M_U3_U21_M5         U3_N564924 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U21_M6         U3_N564924 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U134_M16         X3 U3_NDLSB20 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U134_M5         X3 U3_NDLSB24 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U134_M11         X3 U3_NDLSB17 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U134_M9         X3 U3_NDLSB22 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U134_M1         X3 U3_NDLSB17 U3_U134_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U134_M16         X3 U3_N572190 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U134_M6         U3_U134_ND3 U3_NDLSB19 U3_U134_ND4 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U134_M5         X3 U3_N572214 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U134_M7         U3_U134_ND4 U3_NDLSB20 U3_U134_ND5 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U134_M11         X3 U3_N572170 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U134_M12         X3 U3_NDLSB21 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U134_M2         U3_U134_ND2 U3_NDLSB18 U3_U134_ND3 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U134_M9         X3 U3_N572198 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U134_M13         U3_U134_ND6 U3_NDLSB22 U3_U134_ND7 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U134_M1         X3 U3_N572170 U3_U134_N67495 0 CMOSN  
++ W=2.55u         
+M_U3_U134_M10         U3_U134_ND5 U3_NDLSB21 U3_U134_ND6 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U134_M6         U3_U134_N66385 U3_N572186 U3_U134_N66425 0 CMOSN  
++ W=2.55u         
+M_U3_U134_M3         X3 U3_NDLSB18 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U134_M14         U3_U134_ND7 U3_NDLSB23 U3_U134_ND8 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U134_M7         U3_U134_N66425 U3_N572190 U3_U134_N66937 0 CMOSN  
++ W=2.55u         
+M_U3_U134_M8         X3 U3_NDLSB23 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U134_M4         X3 U3_NDLSB19 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U134_M15         U3_U134_ND8 U3_NDLSB24 0 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U134_M12         X3 U3_N572512 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U134_M2         U3_U134_N67495 U3_N572182 U3_U134_N66385 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U134_M13         U3_U134_N67207 U3_N572198 U3_U134_N67213 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U134_M10         U3_U134_N66937 U3_N572512 U3_U134_N67207 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U134_M3         X3 U3_N572182 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U134_M14         U3_U134_N67213 U3_N572206 U3_U134_N66527 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U134_M8         X3 U3_N572206 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U134_M4         X3 U3_N572186 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U134_M15         U3_U134_N66527 U3_N572214 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ W=2.55u         
 M_U3_U3_M5         U3_N259565 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U3_M6         U3_N259565 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U114_M5         U3_N573076 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U114_M6         U3_N573076 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U6_M5         5SB U3_N259351 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U6_M6         5SB U3_N259351 U3_U6_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U6_M2         U3_U6_N39991 U3_N259199 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U6_M4         5SB U3_N259199 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U6_M5         5SB U3_ND5SB1 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U6_M6         5SB U3_ND5SB1 U3_U6_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U6_M2         U3_U6_ND2 U3_ND5SB2 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U6_M4         5SB U3_ND5SB2 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U102_M5         U3_N572074 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U102_M6         U3_N572074 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U36_M5         U3_N568545 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U36_M6         U3_N568545 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U68_M5         U3_N577720 N22512 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U68_M6         U3_N577720 N22512 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U85_M5         U3_N577736 U3_N578622 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U85_M6         U3_N577736 U3_N578622 U3_U85_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U85_M2         U3_U85_N39991 N22504 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U85_M4         U3_N577736 N22504 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U68_M5         U3_NDLSB1 RAMPA MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U68_M6         U3_NDLSB1 RAMPA 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U85_M5         U3_NDLSB3 U3_N578622 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U85_M6         U3_NDLSB3 U3_N578622 U3_U85_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U85_M2         U3_U85_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U85_M4         U3_NDLSB3 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U107_M5         U3_N572144 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U107_M6         U3_N572144 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U140_M7         LSB U3_NDX1LSB MSB MSB CMOSP  
++ L=.33u  
++ W=.25u         
+M_U3_U140_M8         LSB U3_NDX2LSB MSB MSB CMOSP  
++ L=.33u  
++ W=.25u         
+M_U3_U140_M12         LSB U3_NDX4LSB MSB MSB CMOSP  
++ L=.33u  
++ W=.25u         
+M_U3_U140_M9         LSB U3_NDX3LSB MSB MSB CMOSP  
++ L=.33u  
++ W=.25u         
+M_U3_U140_M1         LSB U3_NDX1LSB U3_U140_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U140_M7         LSB U3_N575328 MSB MSB CMOSP  
++ W=.47u         
+M_U3_U140_M10         U3_U140_ND3 U3_NDX3LSB U3_U140_ND4 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U140_M8         LSB U3_N575362 MSB MSB CMOSP  
++ W=.47u         
+M_U3_U140_M3         U3_U140_ND2 U3_NDX2LSB U3_U140_ND3 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U140_M12         LSB U3_N575374 MSB MSB CMOSP  
++ W=.47u         
+M_U3_U140_M11         U3_U140_ND4 U3_NDX4LSB 0 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U140_M9         LSB U3_N575382 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U140_M1         LSB U3_N575328 U3_U140_N88766 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U140_M10         U3_U140_N88906 U3_N575382 U3_U140_N88946 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U140_M3         U3_U140_N88766 U3_N575362 U3_U140_N88906 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U140_M11         U3_U140_N88946 U3_N575374 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ W=.47u         
 M_U3_U78_M5         U3_N578552 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U78_M6         U3_N578552 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U60_M5         U3_N568185 U3_N567851 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U60_M6         U3_N568185 U3_N567851 U3_U60_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U60_M2         U3_U60_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U60_M4         U3_N568185 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U120_M5         U3_N572190 U3_N793529 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U120_M6         U3_N572190 U3_N793529 U3_U120_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U120_M2         U3_U120_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U120_M4         U3_N572190 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U60_M5         U3_ND2SB15 U3_N567851 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U60_M6         U3_ND2SB15 U3_N567851 U3_U60_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U60_M2         U3_U60_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U60_M4         U3_ND2SB15 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U120_M5         U3_NDLSB20 U3_N793529 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U120_M6         U3_NDLSB20 U3_N793529 U3_U120_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U120_M2         U3_U120_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U120_M4         U3_NDLSB20 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U19_M5         U3_N565120 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U19_M6         U3_N565120 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U41_M5         U3_N567841 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U41_M6         U3_N567841 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U118_M5         U3_N572182 U3_N572074 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U118_M6         U3_N572182 U3_N572074 U3_U118_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U118_M2         U3_U118_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U118_M4         U3_N572182 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U132_M5         U3_N572626 U3_N573036 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U132_M6         U3_N572626 U3_N573036 U3_U132_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U132_M2         U3_U132_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U132_M4         U3_N572626 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U34_M5         U3_N568523 N22490 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U34_M6         U3_N568523 N22490 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U137_M5         U3_N575362 X2 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U137_M6         U3_N575362 X2 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U94_M5         U3_N579510 U3_N578534 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U94_M6         U3_N579510 U3_N578534 U3_U94_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U94_M2         U3_U94_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U94_M4         U3_N579510 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U51_M5         U3_N568243 U3_N568545 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U51_M6         U3_N568243 U3_N568545 U3_U51_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U51_M2         U3_U51_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U51_M4         U3_N568243 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U89_M5         U3_N577772 U3_N578674 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U89_M6         U3_N577772 U3_N578674 U3_U89_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U89_M2         U3_U89_N39991 N22488 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U89_M4         U3_N577772 N22488 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U47_M5         U3_N568263 U3_N568499 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U47_M6         U3_N568263 U3_N568499 U3_U47_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U47_M2         U3_U47_N39991 N22502 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U47_M4         U3_N568263 N22502 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U72_M5         U3_N578650 N22498 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U72_M6         U3_N578650 N22498 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
+M_U3_U118_M5         U3_NDLSB18 U3_N572074 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U118_M6         U3_NDLSB18 U3_N572074 U3_U118_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U118_M2         U3_U118_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U118_M4         U3_NDLSB18 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U132_M5         U3_NDLSB26 U3_N573036 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U132_M6         U3_NDLSB26 U3_N573036 U3_U132_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U132_M2         U3_U132_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U132_M4         U3_NDLSB26 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U34_M5         U3_N568523 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U34_M6         U3_N568523 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U137_M5         U3_NDX2LSB X2 MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U137_M6         U3_NDX2LSB X2 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U94_M5         U3_NDLSB13 U3_N578534 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U94_M6         U3_NDLSB13 U3_N578534 U3_U94_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U94_M2         U3_U94_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U94_M4         U3_NDLSB13 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U51_M5         U3_ND2SB6 U3_N568545 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U51_M6         U3_ND2SB6 U3_N568545 U3_U51_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U51_M2         U3_U51_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U51_M4         U3_ND2SB6 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U89_M5         U3_NDLSB7 U3_N578674 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U89_M6         U3_NDLSB7 U3_N578674 U3_U89_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U89_M2         U3_U89_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U89_M4         U3_NDLSB7 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U47_M5         U3_ND2SB2 U3_N568499 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U47_M6         U3_ND2SB2 U3_N568499 U3_U47_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U47_M2         U3_U47_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U47_M4         U3_ND2SB2 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U72_M5         U3_N578650 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U72_M6         U3_N578650 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
 M_U3_U17_M5         U3_N565104 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U17_M6         U3_N565104 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U113_M5         U3_N573066 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U113_M6         U3_N573066 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U100_M16         X2 U3_NDLSB12 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U100_M5         X2 U3_NDLSB16 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U100_M11         X2 U3_NDLSB9 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U100_M9         X2 U3_NDLSB14 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U100_M1         X2 U3_NDLSB9 U3_U100_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U100_M16         X2 U3_N577832 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U100_M6         U3_U100_ND3 U3_NDLSB11 U3_U100_ND4 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U100_M5         X2 U3_N577856 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U100_M7         U3_U100_ND4 U3_NDLSB12 U3_U100_ND5 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U100_M11         X2 U3_N577814 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U100_M12         X2 U3_NDLSB13 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U100_M2         U3_U100_ND2 U3_NDLSB10 U3_U100_ND3 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U100_M9         X2 U3_N577840 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U100_M13         U3_U100_ND6 U3_NDLSB14 U3_U100_ND7 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U100_M1         X2 U3_N577814 U3_U100_N67495 0 CMOSN  
++ W=2.55u         
+M_U3_U100_M10         U3_U100_ND5 U3_NDLSB13 U3_U100_ND6 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U100_M6         U3_U100_N66385 U3_N577828 U3_U100_N66425 0 CMOSN  
++ W=2.55u         
+M_U3_U100_M3         X2 U3_NDLSB10 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U100_M14         U3_U100_ND7 U3_NDLSB15 U3_U100_ND8 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U100_M7         U3_U100_N66425 U3_N577832 U3_U100_N66937 0 CMOSN  
++ W=2.55u         
+M_U3_U100_M8         X2 U3_NDLSB15 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U100_M4         X2 U3_NDLSB11 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U100_M15         U3_U100_ND8 U3_NDLSB16 0 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U100_M12         X2 U3_N579510 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U100_M2         U3_U100_N67495 U3_N577818 U3_U100_N66385 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U100_M13         U3_U100_N67207 U3_N577840 U3_U100_N67213 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U100_M10         U3_U100_N66937 U3_N579510 U3_U100_N67207 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U100_M3         X2 U3_N577818 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U100_M14         U3_U100_N67213 U3_N577848 U3_U100_N66527 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U100_M8         X2 U3_N577848 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U100_M4         X2 U3_N577828 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U100_M15         U3_U100_N66527 U3_N577856 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U55_M5         U3_N567415 U3_N567801 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U55_M6         U3_N567415 U3_N567801 U3_U55_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U55_M2         U3_U55_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U55_M4         U3_N567415 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U29_M5         U3_N565368 U3_N565130 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U29_M6         U3_N565368 U3_N565130 U3_U29_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U29_M2         U3_U29_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U29_M4         U3_N565368 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U127_M5         U3_N572642 U3_N573076 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U127_M6         U3_N572642 U3_N573076 U3_U127_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U127_M2         U3_U127_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U127_M4         U3_N572642 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U122_M5         U3_N572198 U3_N572134 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U122_M6         U3_N572198 U3_N572134 U3_U122_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U122_M2         U3_U122_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U122_M4         U3_N572198 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ W=2.55u         
+M_U3_U55_M5         U3_ND2SB10 U3_N567801 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U55_M6         U3_ND2SB10 U3_N567801 U3_U55_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U55_M2         U3_U55_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U55_M4         U3_ND2SB10 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U29_M5         U3_ND3SB7 U3_N565130 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U29_M6         U3_ND3SB7 U3_N565130 U3_U29_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U29_M2         U3_U29_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U29_M4         U3_ND3SB7 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U127_M5         U3_NDLSB30 U3_N573076 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U127_M6         U3_NDLSB30 U3_N573076 U3_U127_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U127_M2         U3_U127_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U127_M4         U3_NDLSB30 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U122_M5         U3_NDLSB22 U3_N572134 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U122_M6         U3_NDLSB22 U3_N572134 U3_U122_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U122_M2         U3_U122_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U122_M4         U3_NDLSB22 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U106_M5         U3_N572134 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U106_M6         U3_N572134 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U77_M5         U3_N578562 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U77_M6         U3_N578562 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U15_M5         U3_N565082 N22498 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U15_M6         U3_N565082 N22498 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U10_M5         U3_N259627 U3_N259605 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U10_M6         U3_N259627 U3_N259605 U3_U10_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U10_M2         U3_U10_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U10_M4         U3_N259627 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U15_M5         U3_N565082 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U15_M6         U3_N565082 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U10_M5         U3_ND4SB4 U3_N259605 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U10_M6         U3_ND4SB4 U3_N259605 U3_U10_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U10_M2         U3_U10_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U10_M4         U3_ND4SB4 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U40_M5         U3_N567851 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U40_M6         U3_N567851 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U131_M5         U3_N572630 U3_N573046 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U131_M6         U3_N572630 U3_N573046 U3_U131_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U131_M2         U3_U131_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U131_M4         U3_N572630 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U131_M5         U3_NDLSB27 U3_N573046 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U131_M6         U3_NDLSB27 U3_N573046 U3_U131_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U131_M2         U3_U131_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U131_M4         U3_NDLSB27 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U101_M5         U3_N572064 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U101_M6         U3_N572064 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U27_M5         U3_ND3SB5 U3_N564920 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U27_M6         U3_ND3SB5 U3_N564920 U3_U27_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U27_M2         U3_U27_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U27_M4         U3_ND3SB5 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U84_M5         U3_NDLSB2 U3_N578608 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U84_M6         U3_NDLSB2 U3_N578608 U3_U84_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U84_M2         U3_U84_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U84_M4         U3_NDLSB2 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U59_M5         U3_ND2SB14 U3_N567841 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U59_M6         U3_ND2SB14 U3_N567841 U3_U59_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U59_M2         U3_U59_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U59_M4         U3_ND2SB14 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U13_M16         U3_N565498 U3_ND3SB4 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U13_M5         U3_N565498 U3_ND3SB8 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U13_M11         U3_N565498 U3_ND3SB1 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U13_M9         U3_N565498 U3_ND3SB6 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U13_M1         U3_N565498 U3_ND3SB1 U3_U13_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U27_M5         U3_N565392 U3_N564920 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U13_M6         U3_U13_ND3 U3_ND3SB3 U3_U13_ND4 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U27_M6         U3_N565392 U3_N564920 U3_U27_N39991 0 CMOSN  
++ W=2.55u         
+M_U3_U13_M7         U3_U13_ND4 U3_ND3SB4 U3_U13_ND5 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U27_M2         U3_U27_N39991 MSB 0 0 CMOSN  
++ W=2.55u         
+M_U3_U13_M12         U3_N565498 U3_ND3SB5 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U13_M2         U3_U13_ND2 U3_ND3SB2 U3_U13_ND3 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U27_M4         U3_N565392 MSB MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U13_M13         U3_U13_ND6 U3_ND3SB6 U3_U13_ND7 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U84_M5         U3_N577728 U3_N578608 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U13_M10         U3_U13_ND5 U3_ND3SB5 U3_U13_ND6 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U84_M6         U3_N577728 U3_N578608 U3_U84_N39991 0 CMOSN  
++ W=2.55u         
+M_U3_U13_M3         U3_N565498 U3_ND3SB2 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U13_M14         U3_U13_ND7 U3_ND3SB7 U3_U13_ND8 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U84_M2         U3_U84_N39991 N22508 0 0 CMOSN  
++ W=2.55u         
+M_U3_U13_M8         U3_N565498 U3_ND3SB7 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U13_M4         U3_N565498 U3_ND3SB3 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U13_M15         U3_U13_ND8 U3_ND3SB8 0 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U84_M4         U3_N577728 N22508 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U59_M5         U3_N568069 U3_N567841 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U59_M6         U3_N568069 U3_N567841 U3_U59_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U59_M2         U3_U59_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U59_M4         U3_N568069 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U13_M16         U3_N565498 U3_N564842 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U13_M5         U3_N565498 U3_N565360 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U13_M11         U3_N565498 U3_N565346 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U13_M9         U3_N565498 U3_N565380 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U13_M1         U3_N565498 U3_N565346 U3_U13_N67495 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U13_M6         U3_U13_N66385 U3_N565416 U3_U13_N66425 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U13_M7         U3_U13_N66425 U3_N564842 U3_U13_N66937 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U13_M12         U3_N565498 U3_N565392 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U13_M2         U3_U13_N67495 U3_N565404 U3_U13_N66385 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U13_M13         U3_U13_N67207 U3_N565380 U3_U13_N67213 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U13_M10         U3_U13_N66937 U3_N565392 U3_U13_N67207 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U13_M3         U3_N565498 U3_N565404 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U13_M14         U3_U13_N67213 U3_N565368 U3_U13_N66527 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U13_M8         U3_N565498 U3_N565368 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U13_M4         U3_N565498 U3_N565416 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U13_M15         U3_U13_N66527 U3_N565360 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ W=2.55u         
 M_U3_U112_M5         U3_N573056 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U112_M6         U3_N573056 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U93_M5         U3_NDLSB14 U3_N578552 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U93_M6         U3_NDLSB14 U3_N578552 U3_U93_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U93_M2         U3_U93_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U93_M4         U3_NDLSB14 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U99_M16         X1 U3_NDLSB4 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U99_M5         X1 U3_NDLSB8 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U99_M11         X1 U3_NDLSB1 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U99_M9         X1 U3_NDLSB6 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U99_M1         X1 U3_NDLSB1 U3_U99_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U93_M5         U3_N577840 U3_N578552 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U99_M6         U3_U99_ND3 U3_NDLSB3 U3_U99_ND4 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U93_M6         U3_N577840 U3_N578552 U3_U93_N39991 0 CMOSN  
++ W=2.55u         
+M_U3_U99_M7         U3_U99_ND4 U3_NDLSB4 U3_U99_ND5 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U93_M2         U3_U93_N39991 MSB 0 0 CMOSN  
++ W=2.55u         
+M_U3_U99_M12         X1 U3_NDLSB5 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U99_M2         U3_U99_ND2 U3_NDLSB2 U3_U99_ND3 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U93_M4         U3_N577840 MSB MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U99_M13         U3_U99_ND6 U3_NDLSB6 U3_U99_ND7 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U99_M16         X1 U3_N577748 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U99_M10         U3_U99_ND5 U3_NDLSB5 U3_U99_ND6 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U99_M5         X1 U3_N577760 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U99_M3         X1 U3_NDLSB2 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U99_M14         U3_U99_ND7 U3_NDLSB7 U3_U99_ND8 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U99_M11         X1 U3_N577720 MSB MSB CMOSP  
++ W=2.55u         
+M_U3_U99_M8         X1 U3_NDLSB7 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U99_M4         X1 U3_NDLSB3 MSB MSB CMOSP  
++ L=.67u  
++ W=.68u         
+M_U3_U99_M15         U3_U99_ND8 U3_NDLSB8 0 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U99_M9         X1 U3_N577784 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U99_M1         X1 U3_N577720 U3_U99_N67495 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U99_M6         U3_U99_N66385 U3_N577736 U3_U99_N66425 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U99_M7         U3_U99_N66425 U3_N577748 U3_U99_N66937 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U99_M12         X1 U3_N577796 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U99_M2         U3_U99_N67495 U3_N577728 U3_U99_N66385 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U99_M13         U3_U99_N67207 U3_N577784 U3_U99_N67213 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U99_M10         U3_U99_N66937 U3_N577796 U3_U99_N67207 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U99_M3         X1 U3_N577728 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U99_M14         U3_U99_N67213 U3_N577772 U3_U99_N66527 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U99_M8         X1 U3_N577772 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U99_M4         X1 U3_N577736 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U99_M15         U3_U99_N66527 U3_N577760 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U117_M5         U3_N572170 U3_N572064 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U117_M6         U3_N572170 U3_N572064 U3_U117_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U117_M2         U3_U117_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U117_M4         U3_N572170 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U33_M5         U3_N568511 N22498 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U33_M6         U3_N568511 N22498 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U98_M5         U3_N577814 U3_N578480 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U98_M6         U3_N577814 U3_N578480 U3_U98_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U98_M2         U3_U98_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U98_M4         U3_N577814 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ W=2.55u         
+M_U3_U117_M5         U3_NDLSB17 U3_N572064 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U117_M6         U3_NDLSB17 U3_N572064 U3_U117_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U117_M2         U3_U117_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U117_M4         U3_NDLSB17 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U33_M5         U3_N568511 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U33_M6         U3_N568511 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U98_M5         U3_NDLSB9 U3_N578480 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U98_M6         U3_NDLSB9 U3_N578480 U3_U98_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U98_M2         U3_U98_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U98_M4         U3_NDLSB9 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U4_M5         U3_N259543 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U4_M6         U3_N259543 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U46_M5         U3_N569141 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U46_M6         U3_N569141 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U7_M5         U3_N259199 U3_N259339 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U7_M6         U3_N259199 U3_N259339 U3_U7_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U7_M2         U3_U7_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U7_M4         U3_N259199 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U88_M5         U3_N577784 U3_N578662 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U88_M6         U3_N577784 U3_N578662 U3_U88_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U88_M2         U3_U88_N39991 N22492 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U88_M4         U3_N577784 N22492 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U71_M5         U3_N578636 N22502 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U71_M6         U3_N578636 N22502 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U25_M5         U3_N565416 U3_N565094 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U25_M6         U3_N565416 U3_N565094 U3_U25_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U25_M2         U3_U25_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U25_M4         U3_N565416 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U50_M5         U3_N568251 U3_N568535 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U50_M6         U3_N568251 U3_N568535 U3_U50_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U50_M2         U3_U50_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U50_M4         U3_N568251 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U7_M5         U3_ND5SB2 U3_N259339 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U7_M6         U3_ND5SB2 U3_N259339 U3_U7_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U7_M2         U3_U7_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U7_M4         U3_ND5SB2 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U71_M5         U3_N578636 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U71_M6         U3_N578636 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U88_M5         U3_NDLSB6 U3_N578662 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U88_M6         U3_NDLSB6 U3_N578662 U3_U88_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U88_M2         U3_U88_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U88_M4         U3_NDLSB6 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U25_M5         U3_ND3SB3 U3_N565094 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U25_M6         U3_ND3SB3 U3_N565094 U3_U25_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U25_M2         U3_U25_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U25_M4         U3_ND3SB3 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U50_M5         U3_ND2SB5 U3_N568535 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U50_M6         U3_ND2SB5 U3_N568535 U3_U50_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U50_M2         U3_U50_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U50_M4         U3_ND2SB5 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U76_M5         U3_N578578 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U76_M6         U3_N578578 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U126_M5         U3_N572650 U3_N573086 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U126_M6         U3_N572650 U3_N573086 U3_U126_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U126_M2         U3_U126_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U126_M4         U3_N572650 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U1_M5         U3_N259351 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U1_M6         U3_N259351 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
+M_U3_U126_M5         U3_NDLSB31 U3_N573086 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U126_M6         U3_NDLSB31 U3_N573086 U3_U126_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U126_M2         U3_U126_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U126_M4         U3_NDLSB31 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U1_M5         U3_ND5SB1 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U1_M6         U3_ND5SB1 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
 M_U3_U105_M5         U3_N572124 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U105_M6         U3_N572124 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U83_M5         U3_N578480 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U83_M6         U3_N578480 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U54_M5         U3_ND2SB9 U3_N569141 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U54_M6         U3_ND2SB9 U3_N569141 U3_U54_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U54_M2         U3_U54_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U54_M4         U3_ND2SB9 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U12_M7         4SB U3_ND4SB1 MSB MSB CMOSP  
++ L=.33u  
++ W=.25u         
+M_U3_U12_M8         4SB U3_ND4SB2 MSB MSB CMOSP  
++ L=.33u  
++ W=.25u         
+M_U3_U12_M12         4SB U3_ND4SB4 MSB MSB CMOSP  
++ L=.33u  
++ W=.25u         
+M_U3_U12_M9         4SB U3_ND4SB3 MSB MSB CMOSP  
++ L=.33u  
++ W=.25u         
+M_U3_U12_M1         4SB U3_ND4SB1 U3_U12_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U54_M5         U3_N567441 U3_N569141 MSB MSB CMOSP  
++ W=.47u         
+M_U3_U12_M10         U3_U12_ND3 U3_ND4SB3 U3_U12_ND4 0 CMOSN  
 + L=.18u  
-+ W=.2u         
-M_U3_U54_M6         U3_N567441 U3_N569141 U3_U54_N39991 0 CMOSN  
++ W=.47u         
+M_U3_U12_M3         U3_U12_ND2 U3_ND4SB2 U3_U12_ND3 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U54_M2         U3_U54_N39991 MSB 0 0 CMOSN  
++ W=.47u         
+M_U3_U12_M11         U3_U12_ND4 U3_ND4SB4 0 0 CMOSN  
 + L=.18u  
-+ W=.18u         
-M_U3_U54_M4         U3_N567441 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U12_M7         4SB U3_N259645 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U12_M8         4SB U3_N259649 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U12_M12         4SB U3_N259627 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U12_M9         4SB U3_N259637 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U12_M1         4SB U3_N259645 U3_U12_N88766 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U12_M10         U3_U12_N88906 U3_N259637 U3_U12_N88946 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U12_M3         U3_U12_N88766 U3_N259649 U3_U12_N88906 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U12_M11         U3_U12_N88946 U3_N259627 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U138_M5         U3_N575382 X3 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U138_M6         U3_N575382 X3 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U121_M5         U3_N572512 U3_N572124 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U121_M6         U3_N572512 U3_N572124 U3_U121_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U121_M2         U3_U121_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U121_M4         U3_N572512 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ W=.47u         
+M_U3_U138_M5         U3_NDX3LSB X3 MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U138_M6         U3_NDX3LSB X3 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U121_M5         U3_NDLSB21 U3_N572124 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U121_M6         U3_NDLSB21 U3_N572124 U3_U121_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U121_M2         U3_U121_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U121_M4         U3_NDLSB21 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U111_M5         U3_N573046 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U111_M6         U3_N573046 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U130_M5         U3_N572634 U3_N573056 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U130_M6         U3_N572634 U3_N573056 U3_U130_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U130_M2         U3_U130_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U130_M4         U3_N572634 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U130_M5         U3_NDLSB28 U3_N573056 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U130_M6         U3_NDLSB28 U3_N573056 U3_U130_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U130_M2         U3_U130_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U130_M4         U3_NDLSB28 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U39_M5         U3_N567861 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U39_M6         U3_N567861 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
+M_U3_U30_M5         U3_ND3SB8 U3_N564924 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U30_M6         U3_ND3SB8 U3_N564924 U3_U30_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U30_M2         U3_U30_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U30_M4         U3_ND3SB8 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U45_M5         U3_N567801 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U45_M6         U3_N567801 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U22_M5         U3_N565340 U3_N565498 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U22_M6         U3_N565340 U3_N565498 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U92_M5         U3_N577848 U3_N578562 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U92_M6         U3_N577848 U3_N578562 U3_U92_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U92_M2         U3_U92_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U92_M4         U3_N577848 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U58_M5         U3_N568995 U3_N567831 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U58_M6         U3_N568995 U3_N567831 U3_U58_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U58_M2         U3_U58_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U58_M4         U3_N568995 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U97_M5         U3_N577818 U3_N578504 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U97_M6         U3_N577818 U3_N578504 U3_U97_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U97_M2         U3_U97_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U97_M4         U3_N577818 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U92_M5         U3_NDLSB15 U3_N578562 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U92_M6         U3_NDLSB15 U3_N578562 U3_U92_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U92_M2         U3_U92_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U92_M4         U3_NDLSB15 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U58_M5         U3_ND2SB13 U3_N567831 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U58_M6         U3_ND2SB13 U3_N567831 U3_U58_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U58_M2         U3_U58_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U58_M4         U3_ND2SB13 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U97_M5         U3_NDLSB10 U3_N578504 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U97_M6         U3_NDLSB10 U3_N578504 U3_U97_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U97_M2         U3_U97_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U97_M4         U3_NDLSB10 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U82_M5         U3_N578504 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U82_M6         U3_N578504 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U20_M5         U3_N565130 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U20_M6         U3_N565130 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U32_M5         U3_N568499 N22506 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U32_M6         U3_N568499 N22506 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U75_M5         U3_N578686 N22486 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U75_M6         U3_N578686 N22486 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U70_M5         U3_N578622 N22506 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U70_M6         U3_N578622 N22506 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U87_M5         U3_N577796 U3_N578650 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U87_M6         U3_N577796 U3_N578650 U3_U87_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U87_M2         U3_U87_N39991 N22496 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U87_M4         U3_N577796 N22496 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U32_M5         U3_N568499 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U32_M6         U3_N568499 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U75_M5         U3_N578686 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U75_M6         U3_N578686 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U70_M5         U3_N578622 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U70_M6         U3_N578622 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U87_M5         U3_NDLSB5 U3_N578650 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U87_M6         U3_NDLSB5 U3_N578650 U3_U87_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U87_M2         U3_U87_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U87_M4         U3_NDLSB5 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U110_M5         U3_N573036 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U110_M6         U3_N573036 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U125_M5         U3_N572658 U3_N573096 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U125_M6         U3_N572658 U3_N573096 U3_U125_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U125_M2         U3_U125_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U125_M4         U3_N572658 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U125_M5         U3_NDLSB32 U3_N573096 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U125_M6         U3_NDLSB32 U3_N573096 U3_U125_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U125_M2         U3_U125_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U125_M4         U3_NDLSB32 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U67_M5         U3_N567401 U3_N567419 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U67_M6         U3_N567401 U3_N567419 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U11_M5         U3_N259645 N22498 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U11_M6         U3_N259645 N22498 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U49_M5         U3_N568285 U3_N568523 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U49_M6         U3_N568285 U3_N568523 U3_U49_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U49_M2         U3_U49_N39991 N22486 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U49_M4         U3_N568285 N22486 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U11_M5         U3_ND4SB1 MSB MSB MSB CMOSP  
++ L=.25u  
++ W=.93u         
+M_U3_U11_M6         U3_ND4SB1 MSB 0 0 CMOSN  
++ L=.43u  
++ W=.43u         
+M_U3_U49_M5         U3_ND2SB4 U3_N568523 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U49_M6         U3_ND2SB4 U3_N568523 U3_U49_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U49_M2         U3_U49_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U49_M4         U3_ND2SB4 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U104_M5         U3_N793529 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U104_M6         U3_N793529 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U18_M5         U3_N564920 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U18_M6         U3_N564920 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U129_M5         U3_N572580 U3_N573066 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U129_M6         U3_N572580 U3_N573066 U3_U129_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U129_M2         U3_U129_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U129_M4         U3_N572580 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U129_M5         U3_NDLSB29 U3_N573066 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U129_M6         U3_NDLSB29 U3_N573066 U3_U129_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U129_M2         U3_U129_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U129_M4         U3_NDLSB29 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U44_M5         U3_N567811 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U44_M6         U3_N567811 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U38_M5         U3_N568565 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U38_M6         U3_N568565 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U53_M5         U3_N568189 U3_N568565 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U53_M6         U3_N568189 U3_N568565 U3_U53_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U53_M2         U3_U53_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U53_M4         U3_N568189 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U8_M5         U3_N259649 U3_N259565 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U8_M6         U3_N259649 U3_N259565 U3_U8_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U8_M2         U3_U8_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U8_M4         U3_N259649 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
+M_U3_U53_M5         U3_ND2SB8 U3_N568565 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U53_M6         U3_ND2SB8 U3_N568565 U3_U53_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U53_M2         U3_U53_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U53_M4         U3_ND2SB8 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U8_M5         U3_ND4SB2 U3_N259565 MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
+M_U3_U8_M6         U3_ND4SB2 U3_N259565 U3_U8_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U8_M2         U3_U8_ND2 MSB 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U8_M4         U3_ND4SB2 MSB MSB MSB CMOSP  
++ L=.186u  
++ W=.25u         
 M_U3_U62_M5         2SB U3_N568485 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U62_M6         2SB U3_N568485 U3_U62_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U62_M2         U3_U62_N39991 U3_N567401 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.186u  
++ W=.25u         
+M_U3_U62_M6         2SB U3_N568485 U3_U62_ND2 0 CMOSN  
++ L=.2u  
++ W=.232u         
+M_U3_U62_M2         U3_U62_ND2 U3_N567401 0 0 CMOSN  
++ L=.2u  
++ W=.232u         
 M_U3_U62_M4         2SB U3_N567401 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.186u  
++ W=.25u         
 M_U3_U5_M5         U3_N259605 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U5_M6         U3_N259605 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U3_U81_M5         U3_N578514 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_U81_M6         U3_N578514 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U30_M5         U3_N565360 U3_N564924 MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
-M_U3_U30_M6         U3_N565360 U3_N564924 U3_U30_N39991 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U30_M2         U3_U30_N39991 MSB 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
-M_U3_U30_M4         U3_N565360 MSB MSB MSB CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.43u  
++ W=.43u         
 R_R6         MSB LSB  100k  
+R_R7         N2237814 0  1k  
 R_R1         MSB MSB  100k  
 V_V1         MSB 0 3.3
+R_R11         N2237810 0  1k  
 R_R2         MSB 5SB  100k  
+V_V2         RAMPA 0  
++PULSE 0 3.3 2n 10p 10p 5n 
+R_R15         N223786 0  1k  
+R_R17         N223784 0  1k  
+R_R21         N223780 0  1k  
+R_R13         N223788 0  1k  
+R_R9         N2237812 0  1k  
 R_R3         MSB 4SB  100k  
-V_SENALES_V13         N22488 0  
+V_SENALES_V13         N2237812 0  
 +PULSE 3 0 12.9u .1u 0 2u 15u
-V_SENALES_V8         N22498 0  
+V_SENALES_V8         N223787 0  
 +PULSE 3 0 7.9u .1u 0 7u 15u
-V_SENALES_V6         N22502 0  
+V_SENALES_V6         N223785 0  
 +PULSE 3 0 5.9u .1u 0 9u 15u
-V_SENALES_V3         N22508 0  
+V_SENALES_V3         N30773 0  
 +PULSE 3 0 2.9u .1u 0 12u 15u
-V_SENALES_V14         N22486 0  
+V_SENALES_V14         N2237813 0  
 +PULSE 3 0 13.9u .1u 0 1u 15u
-V_SENALES_V11         N22492 0  
+V_SENALES_V11         N2237810 0  
 +PULSE 3 0 10.9u .1u 0 4u 15u
-V_SENALES_V4         N22506 0  
+V_SENALES_V4         N223783 0  
 +PULSE 3 0 3.9u .1u 0 11u 15u
-V_SENALES_V7         N22500 0  
+V_SENALES_V7         N223786 0  
 +PULSE 3 0 6.9u .1u 0 8u 15u
-V_SENALES_V12         N22490 0  
+V_SENALES_V12         N2237811 0  
 +PULSE 3 0 11.9u .1u 0 3u 15u
-V_SENALES_V9         N22496 0  
+V_SENALES_V9         N223788 0  
 +PULSE 3 0 8.9u .1u 0 6u 15u
-V_SENALES_V1         N22512 0  
+V_SENALES_V1         N223780 0  
 +PULSE 3 0 0.9u .1u 0 14u 15u
-V_SENALES_V5         N22504 0  
+V_SENALES_V5         N223784 0  
 +PULSE 3 0 4.9u .1u 0 10u 15u
-V_SENALES_V15         N22484 0  
+V_SENALES_V15         N2237814 0  
 +PULSE 3 0 14.9u .1u 0u 0u 15u
-V_SENALES_V2         N22510 0  
+V_SENALES_V2         N223781 0  
 +PULSE 3 0 1.9u .1u 0 13u 15u
-V_SENALES_V10         N22494 0  
+V_SENALES_V10         N223789 0  
 +PULSE 3 0 9.9u .1u 0 5u 15u
 R_R4         MSB 3SB  100k  

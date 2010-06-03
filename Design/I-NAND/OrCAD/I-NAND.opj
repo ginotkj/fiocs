@@ -61,38 +61,10 @@
     (Folder "Stimulus Files")
     (Folder "Include Files")
     (Folder "Simulation Profiles"
+      (ActiveProfile ".\i-nand-pspicefiles\nand-prueba\dc sweep.sim")
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\neg\prueba-vdc.sim"
-        (DisplayName "NEG-Prueba-VDC")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-2\prueba-vdc.sim"
-        (DisplayName "NAND-2-Prueba-VDC")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-3\prueba-vdc.sim"
-        (DisplayName "NAND-3-Prueba-VDC")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-4\prueba-vdc.sim"
-        (DisplayName "NAND-4-Prueba-VDC")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-5\prueba-vdc.sim"
-        (DisplayName "NAND-5-Prueba-VDC")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-7\prueba-vdc.sim"
-        (DisplayName "NAND-7-Prueba-VDC")
-        (Type "PSpice Profile"))
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-8\prueba-vdc.sim"
-        (DisplayName "NAND-8-Prueba-VDC")
-        (Type "PSpice Profile"))
-      (ActiveProfile ".\i-nand-pspicefiles\nand-prueba\prueba-vdc.sim")
-      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
-         ".\i-nand-pspicefiles\nand-prueba\prueba-vdc.sim"
-        (DisplayName "NAND-PRUEBA-Prueba-VDC")
+         ".\i-nand-pspicefiles\nand-prueba\dc sweep.sim"
+        (DisplayName "NAND-PRUEBA-DC Sweep")
         (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
@@ -182,19 +154,18 @@
       (Path "Design Resources")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-PRUEBA")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-2")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-8")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn"
-         "Design Cache")
       (Path "Outputs")
       (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb")
       (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
          "NAND-2")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
+         "NAND-3")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
+         "NAND-4")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
+         "NAND-5")
+      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
+         "NAND-7")
       (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
          "NAND-8")
       (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"

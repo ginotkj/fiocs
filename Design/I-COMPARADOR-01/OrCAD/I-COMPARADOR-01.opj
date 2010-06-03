@@ -194,21 +194,8 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
-         "DOBLE-NEG")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.dsn"
-         "Design Cache")
       (Path "Design Resources" "Library")
-      (Path "Outputs")
-      (Path "Outputs"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.olb")
-      (Path "Outputs"
-         "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01.olb"
-         "S-COMP"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
