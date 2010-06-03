@@ -11,7 +11,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 50u 0 
+.TRAN  0 25u 0 
 .OPTIONS STEPGMIN
 .OPTIONS PIVREL= 1.0E-13
 .OPTIONS PIVTOL= 1.0E-23

@@ -1,5 +1,5 @@
 
-**** 05/25/10 21:29:40 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 06/01/10 18:19:49 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -23,7 +23,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 50u 0 
+.TRAN  0 25u 0 
 .OPTIONS STEPGMIN
 .OPTIONS PIVREL= 1.0E-13
 .OPTIONS PIVTOL= 1.0E-23
@@ -39,7 +39,7 @@ M_M1         NDNEG VINNEG NDBIAS 0 CMOSN
 + L=10u  
 + W=265u         
 V_V1         VINNEG N186518  
-+PULSE -5m 5m 1u 1p 1p 20u 
++PULSE -10m 10m 2u 10p 10p 10u 
 M_M2         NDPOS VINPOS NDBIAS 0 CMOSN  
 + L=10u  
 + W=265u         
@@ -51,17 +51,17 @@ V_VBIAS         VBIAS 0 1
 M_M12         NDOUT NDPOS N64870 N64870 CMOSP  
 + L=10u  
 + W=1120u         
-V_VQ2         N1312720 0 1.640
+V_VQ2         N1312720 0 1.635
 M_M4         NDPOS NDNEG N64870 N64870 CMOSP  
 + L=10u  
 + W=200u         
 M_M13         NDOUT VBIAS 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_M5         NDBIAS VBIAS 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
-V_VQ1         N652820 0 1.640
+V_VQ1         N652820 0 1.635
 V_VREF         VINPOS N1312720 0
 
 **** RESUMING PRUEBA.cir ****
@@ -82,7 +82,7 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_M12, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M12, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
-**** 05/25/10 21:29:40 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 06/01/10 18:19:49 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -212,7 +212,7 @@ WARNING -- Mosfet M_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_M12, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_M12, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
-**** 05/25/10 21:29:40 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 06/01/10 18:19:49 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -227,13 +227,13 @@ WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(NDNEG)    2.3956  (NDOUT)    3.1735  (NDPOS)    1.7644  (VBIAS)    1.0000      
+(NDNEG)    2.3962  (NDOUT)    3.2155  (NDPOS)    1.2397  (VBIAS)    1.0000      
 
-(N64870)    3.3000 (NDBIAS)     .9484 (VINNEG)    1.6350 (VINPOS)    1.6400     
+(N64870)    3.3000 (NDBIAS)     .9399 (VINNEG)    1.6250 (VINPOS)    1.6350     
 
-(N186518)    1.6400                   (N652820)    1.6400                       
+(N186518)    1.6350                   (N652820)    1.6350                       
 
-(N1312720)    1.6400                  
+(N1312720)    1.6350                  
 
 
 
@@ -243,19 +243,19 @@ WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
 
     V_VIN        0.000E+00
     V_V1         0.000E+00
-    V_VDD       -1.096E-03
+    V_VDD       -1.026E-03
     V_VBIAS      0.000E+00
     V_VQ2        0.000E+00
     V_VQ1        0.000E+00
     V_VREF       0.000E+00
 
-    TOTAL POWER DISSIPATION   3.62E-03  WATTS
+    TOTAL POWER DISSIPATION   3.39E-03  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 05/25/10 21:29:40 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 06/01/10 18:19:49 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
 
@@ -267,5 +267,5 @@ WARNING -- Mosfet M_M12, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =         .03
+  Total job time (using Solver 1)   =         .12
 
