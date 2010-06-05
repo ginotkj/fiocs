@@ -11,7 +11,6 @@
 *Analysis directives: 
 .STEP V_VIN LIST 1.062 1.0625 1.0635 1.064
 .TRAN  0 150n 0 10p 
-.PROBE V(*) I(*) 
 
 **** INCLUDING DOBLE-NEG.net ****
 * source I-COMPARADOR-01
@@ -56,12 +55,6 @@ I_INY1         0 NDPOS DC 0Adc AC 0Aac
 +EXP 0 4m 2n 30p 2.2n 500p
 
 * Out voltages
-.PROBE/CSDF V([C_F_D_LSB])
-.PROBE/CSDF V([C_F_D_2SB])
-.PROBE/CSDF V([C_F_D_3SB])
-.PROBE/CSDF V([C_F_D_4SB])
-.PROBE/CSDF V([C_F_D_5SB])
-.PROBE/CSDF V([C_F_C32_MSB])
 
 * Voltage and current at the injection point
 .PROBE/CSDF V([NDPOS])
