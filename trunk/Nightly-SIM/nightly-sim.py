@@ -41,15 +41,23 @@
 #       MA 02110-1301, USA.
 
 import os
+import subprocess
+import time
 import pdb
 
 # C:\Program Files\TortoiseSVN\bin>TortoiseProc.exe
 #   /command:update /path:"D:\Documents\TESIS\fiocs\Nightly-SIM" /closeonend:1
 
-TORSVNBIN = 'C:\\Program Files\\TortoiseSVN\\bin\\TortoiseProc.exe'
+SVN_BIN = 'C:\\Program Files\\TortoiseSVN\\bin\\TortoiseProc.exe'
 PSPICEBIN = 'C:\\OrCAD\\OrCAD_16.3_Demo\\tools\\pspice\psp_cmd.exe'
 CIRFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CIR-files'
 CSDFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files'
+CLOSE_WIN = ' /closeonend:1'
+CMD_PATH = ' /path:'
+# Tortoise SVN commands
+CMD_UPDATE = ' /command:update'
+CMD_COMMIT = ' /command:commit'
+CMD_CLEANUP = ' /command:cleanup'
 
 def main():
 
@@ -58,10 +66,10 @@ def main():
     return 0
 
 
-def clean_folder():
+def clean_folder(ifolder):
     """ Cleans the CIRFOLDER """
     folder = [None]
-    wfolder = os.walk(CIRFOLDER)
+    wfolder = os.walk(ifolder)
     try:
         while True:
             folder = wfolder.next()
@@ -75,6 +83,9 @@ def clean_folder():
                         print ex
     except StopIteration:
         print "\n\nFinish removing files\n\n"
+
+    # Check if in WinXP python could remove .svn files
+    return 0
 
     edir = True
     while edir:
@@ -104,13 +115,32 @@ def clean_folder():
 
     return 0
 
-def svn_update():
+def svn_update(ipath):
     """ Make a SVN update into CIR FOLDER"""
+    # First we clean up the path to assure that all will work
+    cmd = SVN_BIN + CMD_CLEANUP + CLOSE_WIN + CMD_PATH + ipath
+    try:
+        p = subprocess.Popen(cmd)
+    except OSError, ex:
+        print "The file does not exist"
+        print ex
 
-    return 0
+    if not p.poll():
+        time.sleep(2)
+        p.terminate()
+
+    # Second we update the files into the path
+    cmd = SVN_BIN + CMD_UPDATE + CLOSE_WIN + CMD_PATH + ipath
+    try:
+        return_code = subprocess.call(cmd)
+    except OSError, ex:
+        print "The file does not exist"
+        print ex
+
+    return return_code
 
 def svn_commit():
-    """ Commite the ZIP file to be analyzed """
+    """ Commit the ZIP file to be analyzed """
     return 0
 
 def simulate():
@@ -125,6 +155,9 @@ def add2zip():
 
 if __name__ == '__main__':
 
-    clean_folder()
+    clean_folder(CIRFOLDER)
+    print "In 5 seconds the folder will be updated from SVN repo"
+    time.sleep(5)
+    svn_update(CIRFOLDER)
     #main()
 
