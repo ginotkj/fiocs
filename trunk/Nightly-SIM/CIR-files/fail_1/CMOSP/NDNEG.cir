@@ -1,0 +1,76 @@
+**** 05/12/10 18:10:37 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+ ** Profile: "DOBLE-NEG-PRUEBA"  [ D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\doble-neg\prueba
+
+ ****     CIRCUIT DESCRIPTION
+******************************************************************************
+
+* Local Libraries :
+.LIB "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\i-comparador-01.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.STEP V_VIN LIST 1.062 1.0625 1.0635 1.064
+.TRAN  0 150n 0 10p 
+.PROBE V(*) I(*) 
+
+**** INCLUDING DOBLE-NEG.net ****
+* source I-COMPARADOR-01
+
+M_M1         NDNEG VINNEG NDBIAS 0 CMOSN  
++ L=20u  
++ W=89u         
+M_M2         NDPOS VINPOS NDBIAS 0 CMOSN  
++ L=20u  
++ W=89u         
+V_VDD         N64870 0 3.3
+M_M3         NDNEG NDNEG N64870 N64870 CMOSP  
++ L=25u  
++ W=37u         
+V_VBIAS         VBIAS 0 .52
+M_M12         NDOUT NDPOS N64870 N64870 CMOSP  
++ L=15u  
++ W=1097u         
+M_M4         NDPOS NDNEG N64870 N64870 CMOSP  
++ L=25u  
++ W=37u         
+M_M13         NDOUT VBIAS 0 0 CMOSN  
++ L=15u  
++ W=375u         
+M_M5         NDBIAS VBIAS 0 0 CMOSN  
++ L=20u  
++ W=20u         
+V_VIN         VINNEG 0 1.063    
+V_VREF         VINPOS 0 1.063               
+
+
+*************************************************
+* Transistor: M_M3
+* Transistor type: CMOSP
+* Punto de inyeccion: NDNEG
+* Falla: +EXP 0 4m 2n 30p 2.2n 500p
+* Directorio: D:\Documents\TESIS\fiocs\Nightly-SIM\CIR-files\fail_1\CMOSP
+*************************************************
+
+* P CMOS type injection
+I_INY1         0 NDNEG DC 0Adc AC 0Aac
++EXP 0 4m 2n 30p 2.2n 500p
+
+* Out voltages
+.PROBE/CSDF V([C_F_D_LSB])
+.PROBE/CSDF V([C_F_D_2SB])
+.PROBE/CSDF V([C_F_D_3SB])
+.PROBE/CSDF V([C_F_D_4SB])
+.PROBE/CSDF V([C_F_D_5SB])
+.PROBE/CSDF V([C_F_C32_MSB])
+
+* Voltage and current at the injection point
+.PROBE/CSDF V([NDNEG])
+.PROBE/CSDF I(I_INY1)
+
+* Related nodes values
+.PROBE/CSDF ID(M_M3) IB(M_M3) IS(M_M3) IG(M_M3)
+.PROBE/CSDF ID(M_M1) IB(M_M1) IS(M_M1) IG(M_M1)
+.PROBE/CSDF ID(M_M4) IB(M_M4) IS(M_M4) IG(M_M4)
+
+.END
