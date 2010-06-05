@@ -7,7 +7,7 @@ import sys
 mfcdir = ''
 base_dir = 'D:\\Documents/TESIS/fiocs/Resources/Tools/Simulation_analyzer/'
 dist_dir = 'D:\\Documents/TESIS/fiocs/Resources/Tools/Simulation_analyzer/dist'
-icons_dir = 'D:\\Documents/TESIS/fiocs/Resources/Tools/Simulation_analyzer/icons/'
+icons_dir = '.\\icons'
 
 sys.path.append(base_dir)
 
