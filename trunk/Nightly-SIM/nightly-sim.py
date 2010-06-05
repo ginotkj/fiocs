@@ -48,13 +48,17 @@ import pdb
 # C:\Program Files\TortoiseSVN\bin>TortoiseProc.exe
 #   /command:update /path:"D:\Documents\TESIS\fiocs\Nightly-SIM" /closeonend:1
 
+# App bin
 SVN_BIN = 'C:\\Program Files\\TortoiseSVN\\bin\\TortoiseProc.exe'
-PSPICEBIN = 'C:\\OrCAD\\OrCAD_16.3_Demo\\tools\\pspice\psp_cmd.exe'
+PSPICE_BIN = 'C:\\OrCAD\\OrCAD_16.3_Demo\\tools\\pspice\psp_cmd.exe'
+
+# Paths
 CIRFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CIR-files'
 CSDFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files'
+
+# Tortoise SVN commands
 CLOSE_WIN = ' /closeonend:1'
 CMD_PATH = ' /path:'
-# Tortoise SVN commands
 CMD_UPDATE = ' /command:update'
 CMD_COMMIT = ' /command:commit'
 CMD_CLEANUP = ' /command:cleanup'
@@ -139,18 +143,25 @@ def svn_update(ipath):
 
     return return_code
 
-def svn_commit():
-    """ Commit the ZIP file to be analyzed """
-    return 0
+def simulate_all(ipath):
+    """ Read a path and simulate all .cir files """
 
-def simulate():
-    """ Call psp_cmd"""
-    return 0
+def simulate(ifile):
+    """ Call psp_cmd for a single file """
+    cmd = SVN_BIN + CMD_CLEANUP + CLOSE_WIN + CMD_PATH + ipath
+    cmd = PSPICE_BIN +
+    try:
 
-def read_files():
+    except:
+
     return 0
 
 def add2zip():
+    """ Add single file into a specified zip file """
+    return 0
+
+def svn_commit():
+    """ Commit the ZIP file to be analyzed """
     return 0
 
 if __name__ == '__main__':
@@ -159,5 +170,8 @@ if __name__ == '__main__':
     print "In 5 seconds the folder will be updated from SVN repo"
     time.sleep(5)
     svn_update(CIRFOLDER)
+    print "In 10 seconds the simulation will begin"
+    time.sleep(10)
+    simulate_all(CIRFOLDER)
     #main()
 
