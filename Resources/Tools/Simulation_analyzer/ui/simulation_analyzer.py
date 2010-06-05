@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(670, 500))
         MainWindow.setSizeIncrement(QtCore.QSize(100, 50))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../icons/labview-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("./icons/labview-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setIconSize(QtCore.QSize(48, 48))
         MainWindow.setToolButtonStyle(QtCore.Qt.ToolButtonIconOnly)

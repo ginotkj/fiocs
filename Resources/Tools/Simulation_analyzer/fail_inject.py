@@ -141,7 +141,7 @@ class FailInject():
         f2.write("""*Command file created by Fail Injector for \
 PSpice version 16.0.0\n""")
         f2.write("*Creation date: %s\n" % createdate)
-        self._generate_cmd(f2,ppoint)
+        self._generate_cmd(f2,ppoint,ooutdir)
         f2.close()
 
         # Generate the cir file
@@ -159,7 +159,7 @@ PSpice version 16.0.0\n""")
         f.write("* Transistor: %s\n" % ttran)
         f.write("* Transistor type: %s\n" % ttype)
         f.write("* Punto de inyeccion: %s\n" % ppoint)
-        f.write("* Related nodes: %s\n" % nnode)
+        #f.write("* Related nodes: %s\n" % nnode)
         f.write("* Falla: %s\n" % ffail)
         f.write("* Directorio: %s\n" % ooutdir)
         f.write("*************************************************\n\n")
@@ -183,7 +183,7 @@ PSpice version 16.0.0\n""")
         f.write(".PROBE/CSDF V([C_F_D_3SB])\n")
         f.write(".PROBE/CSDF V([C_F_D_4SB])\n")
         f.write(".PROBE/CSDF V([C_F_D_5SB])\n")
-        f.write(".PROBE/CSDF V([C_F_D_MSB])\n\n")
+        f.write(".PROBE/CSDF V([C_F_C32_MSB])\n\n")
 
         # Add probe cmd for ppoint.
         f.write("* Voltage and current at the injection point\n")
@@ -215,11 +215,10 @@ PSpice version 16.0.0\n""")
             if drainmos in nodes:
                 self._related_transistors.append(str(mos))
 
-    def _generate_cmd (self,fg,point):
+    def _generate_cmd (self,fg,point,outputdir):
         """ Genereta the cmd file for PSPICE 16.0 """
         fg.write("File Open\n")
-        fg.write("""D:\\Documents\\TESIS\\fiocs\\Testing\\Flash\\\
-Simulation Flash\\fail_1\\CMOSN\\%s.csd\n""" % point)
+        fg.write("""%s\\%s.csd\n""" % (outputdir,point))
         fg.write("OK\n")
         fg.write("Plot Add_Plot\n")
         fg.write("Plot Add_Plot\n")
@@ -228,7 +227,7 @@ Simulation Flash\\fail_1\\CMOSN\\%s.csd\n""" % point)
         fg.write("Plot Add_Plot\n")
         fg.write("Plot Add_Plot\n")
         fg.write("Trace Add\n")
-        fg.write("V(C_F_D_MSB)\n")
+        fg.write("V(C_F_C32_MSB)\n")
         fg.write("OK\n")
         fg.write("Plot Select\n")
         fg.write("6\n")
