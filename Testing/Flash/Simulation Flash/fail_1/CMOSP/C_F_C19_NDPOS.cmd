@@ -1,7 +1,7 @@
 *Command file created by Fail Injector for PSpice version 16.0.0
-*Creation date: 2010-05-30 20:22:14.653000
+*Creation date: 2010-06-04 20:38:05.306000
 File Open
-D:\Documents\TESIS\fiocs\Testing\Flash\Simulation Flash\fail_1\CMOSN\C_F_C19_NDPOS.csd
+D:\Documents\TESIS\fiocs\Testing\Flash\Simulation Flash\\fail_1\CMOSP\C_F_C19_NDPOS.csd
 OK
 Plot Add_Plot
 Plot Add_Plot
@@ -10,7 +10,7 @@ Plot Add_Plot
 Plot Add_Plot
 Plot Add_Plot
 Trace Add
-V(C_F_D_MSB)
+V(C_F_C32_MSB)
 OK
 Plot Select
 6
