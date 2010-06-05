@@ -148,11 +148,12 @@ def simulate_all(ipath):
 
 def simulate(ifile):
     """ Call psp_cmd for a single file """
-    cmd = SVN_BIN + CMD_CLEANUP + CLOSE_WIN + CMD_PATH + ipath
-    cmd = PSPICE_BIN +
+    cmd = PSPICE_BIN + " " + ifile
     try:
-
-    except:
+        p = subprocess.Popen(cmd)
+    except OSError, ex:
+        print "The file does not exist"
+        print ex
 
     return 0
 
