@@ -4,7 +4,7 @@
 
 #
 
-#       sin título.py
+#       sin titulo.py
 
 #
 
@@ -40,12 +40,16 @@
 
 #       MA 02110-1301, USA.
 
-
-
+import os
+import pdb
 
 # C:\Program Files\TortoiseSVN\bin>TortoiseProc.exe
 #   /command:update /path:"D:\Documents\TESIS\fiocs\Nightly-SIM" /closeonend:1
 
+TORSVNBIN = 'C:\\Program Files\\TortoiseSVN\\bin\\TortoiseProc.exe'
+PSPICEBIN = 'C:\\OrCAD\\OrCAD_16.3_Demo\\tools\\pspice\psp_cmd.exe'
+CIRFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CIR-files'
+CSDFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files'
 
 def main():
 
@@ -54,9 +58,73 @@ def main():
     return 0
 
 
-def
+def clean_folder():
+    """ Cleans the CIRFOLDER """
+    folder = [None]
+    wfolder = os.walk(CIRFOLDER)
+    try:
+        while True:
+            folder = wfolder.next()
+            if folder[2]:
+                for ufile in folder[2]:
+                    ufile = os.path.join(folder[0],ufile)
+                    print "Removing FILE: %s" % ufile
+                    try:
+                        os.remove(ufile)
+                    except WindowsError, ex:
+                        print ex
+    except StopIteration:
+        print "\n\nFinish removing files\n\n"
+
+    edir = True
+    while edir:
+        wfolder = os.walk(CIRFOLDER)
+        try:
+            while True:
+                folder = wfolder.next()
+                if (not folder[1]) and (not folder[2]):
+                    udir = folder[0]
+                    print "Removing DIR: %s" % udir
+                    try:
+                        os.removedirs(udir)
+                    except WindowsError, ex:
+                        print ex
+        except StopIteration:
+            try:
+                cond = os.listdir(CIRFOLDER)
+                cond.pop(cond.index('.svn'))
+                if cond:
+                    edir = True
+                else:
+                    edir = False
+            except WindowsError, ex:
+                print ex
+
+    print "\n\nFinish cleaning the folder.\n\n"
+
+    return 0
+
+def svn_update():
+    """ Make a SVN update into CIR FOLDER"""
+
+    return 0
+
+def svn_commit():
+    """ Commite the ZIP file to be analyzed """
+    return 0
+
+def simulate():
+    """ Call psp_cmd"""
+    return 0
+
+def read_files():
+    return 0
+
+def add2zip():
+    return 0
 
 if __name__ == '__main__':
 
-    main()
+    clean_folder()
+    #main()
 
