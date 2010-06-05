@@ -7,7 +7,6 @@
 
 * Local Libraries :
 .LIB "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\i-comparador-01.lib" 
-.lib "nom.lib" 
 
 *Analysis directives: 
 .STEP V_VIN LIST 1.062 1.0625 1.0635 1.064
