@@ -7,7 +7,7 @@
 *Libraries: 
 * Local Libraries :
 .LIB "D:\Documents\TESIS\fiocs\Design\I-COMPARADOR-01\OrCAD\i-comparador-01-pspicefiles\i-comparador-01.lib" 
-.lib "nom.lib" 
+*.lib "nom.lib" 
  
 *Analysis directives: 
 .TRAN  0 500n 0 0 
@@ -3490,5 +3490,5 @@ V_VREF         N117050 0 1.630
 
 V_VBIAS         N117027 0 1
 
-V_VA         N117007 0 1.125
+V_VA         N117007 0 1
   
