@@ -150,7 +150,7 @@ def simulate_all(ifolder):
             if folder[2] and not ('.svn' in folder[0]):
                 for ufile in folder[2]:
                     ufile = os.path.join(folder[0],ufile)
-                    print "####################################################"
+                    print "\n####################################################\n"
                     print "Circuit FILE: %s" % ufile
                     try:
                         return_code = simulate(ufile)
@@ -162,7 +162,7 @@ def simulate_all(ifolder):
 
 def simulate(ifile):
     """ Call psp_cmd for a single file """
-    cmd = PSPICE_BIN + " " + ifile
+    cmd = PSPICE_BIN + ' \"' + ifile + '\"'
     try:
         return_code = subprocess.call(cmd)
     except OSError, ex:
