@@ -50,7 +50,6 @@ import pdb
 
 # App bin
 SVN_BIN = 'C:\\Program Files\\TortoiseSVN\\bin\\TortoiseProc.exe'
-PSPICE_BIN = 'C:\\OrCAD\\OrCAD_16.3_Demo\\tools\\pspice\psp_cmd.exe'
 
 # Paths
 CIRFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CIR-files'
@@ -72,7 +71,6 @@ def main():
 
 def clean_folder(ifolder):
     """ Cleans the CIRFOLDER """
-    folder = [None]
     wfolder = os.walk(ifolder)
     try:
         while True:
@@ -143,19 +141,35 @@ def svn_update(ipath):
 
     return return_code
 
-def simulate_all(ipath):
+def simulate_all(ifolder):
     """ Read a path and simulate all .cir files """
+    wfolder = os.walk(ifolder)
+    try:
+        while True:
+            folder = wfolder.next()
+            if folder[2] and not ('.svn' in folder[0]):
+                for ufile in folder[2]:
+                    ufile = os.path.join(folder[0],ufile)
+                    print "####################################################"
+                    print "Circuit FILE: %s" % ufile
+                    try:
+                        return_code = simulate(ufile)
+                        print "Exit code: %s" % return_code
+                    except OSError, ex:
+                        print ex
+    except StopIteration:
+        print "\n\nFinish simulating circuit files\n\n"
 
 def simulate(ifile):
     """ Call psp_cmd for a single file """
     cmd = PSPICE_BIN + " " + ifile
     try:
-        p = subprocess.Popen(cmd)
+        return_code = subprocess.call(cmd)
     except OSError, ex:
         print "The file does not exist"
         print ex
 
-    return 0
+    return return_code
 
 def add2zip():
     """ Add single file into a specified zip file """
@@ -167,6 +181,8 @@ def svn_commit():
 
 if __name__ == '__main__':
 
+    ORCAD_TOOLS = os.getenv('ORCAD_TOOLS')
+    PSPICE_BIN = ORCAD_TOOLS + '\\pspice\psp_cmd.exe'
     clean_folder(CIRFOLDER)
     print "In 5 seconds the folder will be updated from SVN repo"
     time.sleep(5)
