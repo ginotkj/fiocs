@@ -2588,7 +2588,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"1.640")
+                    ("value"	"1.630")
                     ("pspice_param"	"DC")
                 )
             )
@@ -2616,7 +2616,7 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"1.635")
+                    ("value"	"1.620")
                     ("pspice_param"	"DC")
                 )
             )

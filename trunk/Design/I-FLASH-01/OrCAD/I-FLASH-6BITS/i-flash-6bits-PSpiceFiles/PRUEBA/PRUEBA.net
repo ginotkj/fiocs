@@ -20,8 +20,8 @@ M_C_F_C38_M4         C_F_C38_NDPOS C_F_C38_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C38_M13         Q38 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C38_M5         C_F_C38_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -41,8 +41,8 @@ M_C_F_C5_M4         C_F_C5_NDPOS C_F_C5_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C5_M13         Q5 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C5_M5         C_F_C5_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -62,8 +62,8 @@ M_C_F_C25_M4         C_F_C25_NDPOS C_F_C25_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C25_M13         Q25 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C25_M5         C_F_C25_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -83,8 +83,8 @@ M_C_F_C31_M4         C_F_C31_NDPOS C_F_C31_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C31_M13         Q31 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C31_M5         C_F_C31_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -104,8 +104,8 @@ M_C_F_C8_M4         C_F_C8_NDPOS C_F_C8_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C8_M13         Q8 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C8_M5         C_F_C8_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -125,8 +125,8 @@ M_C_F_C19_M4         C_F_C19_NDPOS C_F_C19_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C19_M13         Q19 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C19_M5         C_F_C19_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -146,8 +146,8 @@ M_C_F_C2_M4         C_F_C2_NDPOS C_F_C2_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C2_M13         Q2 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C2_M5         C_F_C2_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -167,30 +167,9 @@ M_C_F_C46_M4         C_F_C46_NDPOS C_F_C46_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C46_M13         Q46 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C46_M5         C_F_C46_NDBIAS N117027 0 0 CMOSN  
-+ L=12.5u  
-+ W=65u         
-M_C_F_C60_M1         C_F_C60_NDNEG N117007 C_F_C60_NDBIAS 0 CMOSN  
-+ L=10u  
-+ W=265u         
-M_C_F_C60_M2         C_F_C60_NDPOS C_N119887 C_F_C60_NDBIAS 0 CMOSN  
-+ L=10u  
-+ W=265u         
-M_C_F_C60_M3         C_F_C60_NDNEG C_F_C60_NDNEG N116990 N116990 CMOSP  
-+ L=10u  
-+ W=200u         
-M_C_F_C60_M12         Q60 C_F_C60_NDPOS N116990 N116990 CMOSP  
-+ L=10u  
-+ W=1120u         
-M_C_F_C60_M4         C_F_C60_NDPOS C_F_C60_NDNEG N116990 N116990 CMOSP  
-+ L=10u  
-+ W=200u         
-M_C_F_C60_M13         Q60 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
-M_C_F_C60_M5         C_F_C60_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
 M_C_F_C47_M1         C_F_C47_NDNEG N117007 C_F_C47_NDBIAS 0 CMOSN  
@@ -209,9 +188,30 @@ M_C_F_C47_M4         C_F_C47_NDPOS C_F_C47_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C47_M13         Q47 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C47_M5         C_F_C47_NDBIAS N117027 0 0 CMOSN  
++ L=12.5u  
++ W=65u         
+M_C_F_C60_M1         C_F_C60_NDNEG N117007 C_F_C60_NDBIAS 0 CMOSN  
++ L=10u  
++ W=265u         
+M_C_F_C60_M2         C_F_C60_NDPOS C_N119887 C_F_C60_NDBIAS 0 CMOSN  
++ L=10u  
++ W=265u         
+M_C_F_C60_M3         C_F_C60_NDNEG C_F_C60_NDNEG N116990 N116990 CMOSP  
++ L=10u  
++ W=200u         
+M_C_F_C60_M12         Q60 C_F_C60_NDPOS N116990 N116990 CMOSP  
++ L=10u  
++ W=1120u         
+M_C_F_C60_M4         C_F_C60_NDPOS C_F_C60_NDNEG N116990 N116990 CMOSP  
++ L=10u  
++ W=200u         
+M_C_F_C60_M13         Q60 N117027 0 0 CMOSN  
++ L=16u  
++ W=215u         
+M_C_F_C60_M5         C_F_C60_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
 M_C_F_C45_M1         C_F_C45_NDNEG N117007 C_F_C45_NDBIAS 0 CMOSN  
@@ -230,8 +230,8 @@ M_C_F_C45_M4         C_F_C45_NDPOS C_F_C45_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C45_M13         Q45 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C45_M5         C_F_C45_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -251,8 +251,8 @@ M_C_F_C54_M4         C_F_C54_NDPOS C_F_C54_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C54_M13         Q54 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C54_M5         C_F_C54_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -272,8 +272,8 @@ M_C_F_C34_M4         C_F_C34_NDPOS C_F_C34_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C34_M13         Q34 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C34_M5         C_F_C34_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -293,8 +293,8 @@ M_C_F_C26_M4         C_F_C26_NDPOS C_F_C26_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C26_M13         Q26 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C26_M5         C_F_C26_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -314,8 +314,8 @@ M_C_F_C48_M4         C_F_C48_NDPOS C_F_C48_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C48_M13         Q48 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C48_M5         C_F_C48_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -335,8 +335,8 @@ M_C_F_C44_M4         C_F_C44_NDPOS C_F_C44_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C44_M13         Q44 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C44_M5         C_F_C44_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -356,8 +356,8 @@ M_C_F_C7_M4         C_F_C7_NDPOS C_F_C7_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C7_M13         Q7 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C7_M5         C_F_C7_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -377,8 +377,8 @@ M_C_F_C18_M4         C_F_C18_NDPOS C_F_C18_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C18_M13         Q18 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C18_M5         C_F_C18_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -388,10 +388,10 @@ M_C_F_R6_NAND6_M5         C_F_R6_N62152 C_F_R6_Y N116990 N116990 CMOSP
 M_C_F_R6_NAND6_M6         C_F_R6_N62152 C_F_R6_Y C_F_R6_NAND6_ND2 0 CMOSN  
 + L=.2u  
 + W=.232u         
-M_C_F_R6_NAND6_M2         C_F_R6_NAND6_ND2 C_F_D_MSB 0 0 CMOSN  
+M_C_F_R6_NAND6_M2         C_F_R6_NAND6_ND2 C_F_C32_MSB 0 0 CMOSN  
 + L=.2u  
 + W=.232u         
-M_C_F_R6_NAND6_M4         C_F_R6_N62152 C_F_D_MSB N116990 N116990 CMOSP  
+M_C_F_R6_NAND6_M4         C_F_R6_N62152 C_F_C32_MSB N116990 N116990 CMOSP  
 + L=.186u  
 + W=.25u         
 M_C_F_R6_NAND1_M2         C_F_R6_NAND1_ND2 N116976 C_F_R6_NAND1_ND3 0 CMOSN  
@@ -477,30 +477,9 @@ M_C_F_C4_M4         C_F_C4_NDPOS C_F_C4_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C4_M13         Q4 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C4_M5         C_F_C4_NDBIAS N117027 0 0 CMOSN  
-+ L=12.5u  
-+ W=65u         
-M_C_F_C43_M1         C_F_C43_NDNEG N117007 C_F_C43_NDBIAS 0 CMOSN  
-+ L=10u  
-+ W=265u         
-M_C_F_C43_M2         C_F_C43_NDPOS C_N117488 C_F_C43_NDBIAS 0 CMOSN  
-+ L=10u  
-+ W=265u         
-M_C_F_C43_M3         C_F_C43_NDNEG C_F_C43_NDNEG N116990 N116990 CMOSP  
-+ L=10u  
-+ W=200u         
-M_C_F_C43_M12         Q43 C_F_C43_NDPOS N116990 N116990 CMOSP  
-+ L=10u  
-+ W=1120u         
-M_C_F_C43_M4         C_F_C43_NDPOS C_F_C43_NDNEG N116990 N116990 CMOSP  
-+ L=10u  
-+ W=200u         
-M_C_F_C43_M13         Q43 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
-M_C_F_C43_M5         C_F_C43_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
 M_C_F_C49_M1         C_F_C49_NDNEG N117007 C_F_C49_NDBIAS 0 CMOSN  
@@ -519,9 +498,30 @@ M_C_F_C49_M4         C_F_C49_NDPOS C_F_C49_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C49_M13         Q49 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C49_M5         C_F_C49_NDBIAS N117027 0 0 CMOSN  
++ L=12.5u  
++ W=65u         
+M_C_F_C43_M1         C_F_C43_NDNEG N117007 C_F_C43_NDBIAS 0 CMOSN  
++ L=10u  
++ W=265u         
+M_C_F_C43_M2         C_F_C43_NDPOS C_N117488 C_F_C43_NDBIAS 0 CMOSN  
++ L=10u  
++ W=265u         
+M_C_F_C43_M3         C_F_C43_NDNEG C_F_C43_NDNEG N116990 N116990 CMOSP  
++ L=10u  
++ W=200u         
+M_C_F_C43_M12         Q43 C_F_C43_NDPOS N116990 N116990 CMOSP  
++ L=10u  
++ W=1120u         
+M_C_F_C43_M4         C_F_C43_NDPOS C_F_C43_NDNEG N116990 N116990 CMOSP  
++ L=10u  
++ W=200u         
+M_C_F_C43_M13         Q43 N117027 0 0 CMOSN  
++ L=16u  
++ W=215u         
+M_C_F_C43_M5         C_F_C43_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
 M_C_F_C37_M1         C_F_C37_NDNEG N117007 C_F_C37_NDBIAS 0 CMOSN  
@@ -540,8 +540,8 @@ M_C_F_C37_M4         C_F_C37_NDPOS C_F_C37_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C37_M13         Q37 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C37_M5         C_F_C37_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -561,8 +561,8 @@ M_C_F_C27_M4         C_F_C27_NDPOS C_F_C27_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C27_M13         Q27 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C27_M5         C_F_C27_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -654,15 +654,15 @@ M_C_F_C32_M2         C_F_C32_NDPOS C_N117520 C_F_C32_NDBIAS 0 CMOSN
 M_C_F_C32_M3         C_F_C32_NDNEG C_F_C32_NDNEG N116990 N116990 CMOSP  
 + L=10u  
 + W=200u         
-M_C_F_C32_M12         C_F_D_MSB C_F_C32_NDPOS N116990 N116990 CMOSP  
+M_C_F_C32_M12         C_F_C32_MSB C_F_C32_NDPOS N116990 N116990 CMOSP  
 + L=10u  
 + W=1120u         
 M_C_F_C32_M4         C_F_C32_NDPOS C_F_C32_NDNEG N116990 N116990 CMOSP  
 + L=10u  
 + W=200u         
-M_C_F_C32_M13         C_F_D_MSB N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
+M_C_F_C32_M13         C_F_C32_MSB N117027 0 0 CMOSN  
++ L=16u  
++ W=215u         
 M_C_F_C32_M5         C_F_C32_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -682,8 +682,8 @@ M_C_F_C58_M4         C_F_C58_NDPOS C_F_C58_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C58_M13         Q58 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C58_M5         C_F_C58_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -703,8 +703,8 @@ M_C_F_C17_M4         C_F_C17_NDPOS C_F_C17_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C17_M13         Q17 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C17_M5         C_F_C17_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -724,8 +724,8 @@ M_C_F_C42_M4         C_F_C42_NDPOS C_F_C42_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C42_M13         Q42 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C42_M5         C_F_C42_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -745,8 +745,8 @@ M_C_F_C50_M4         C_F_C50_NDPOS C_F_C50_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C50_M13         Q50 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C50_M5         C_F_C50_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -766,8 +766,8 @@ M_C_F_C55_M4         C_F_C55_NDPOS C_F_C55_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C55_M13         Q55 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C55_M5         C_F_C55_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -787,8 +787,8 @@ M_C_F_C3_M4         C_F_C3_NDPOS C_F_C3_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C3_M13         Q3 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C3_M5         C_F_C3_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -808,8 +808,8 @@ M_C_F_C28_M4         C_F_C28_NDPOS C_F_C28_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C28_M13         Q28 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C28_M5         C_F_C28_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -829,8 +829,8 @@ M_C_F_C63_M4         C_F_C63_NDPOS C_F_C63_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C63_M13         Q63 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C63_M5         C_F_C63_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -850,8 +850,8 @@ M_C_F_C41_M4         C_F_C41_NDPOS C_F_C41_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C41_M13         Q41 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C41_M5         C_F_C41_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -871,8 +871,8 @@ M_C_F_C33_M4         C_F_C33_NDPOS C_F_C33_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C33_M13         Q33 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C33_M5         C_F_C33_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -892,8 +892,8 @@ M_C_F_C51_M4         C_F_C51_NDPOS C_F_C51_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C51_M13         Q51 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C51_M5         C_F_C51_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -913,8 +913,8 @@ M_C_F_C36_M4         C_F_C36_NDPOS C_F_C36_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C36_M13         Q36 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C36_M5         C_F_C36_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -934,8 +934,8 @@ M_C_F_C61_M4         C_F_C61_NDPOS C_F_C61_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C61_M13         Q61 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C61_M5         C_F_C61_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1034,8 +1034,8 @@ M_C_F_C29_M4         C_F_C29_NDPOS C_F_C29_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C29_M13         Q29 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C29_M5         C_F_C29_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1055,8 +1055,8 @@ M_C_F_C40_M4         C_F_C40_NDPOS C_F_C40_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C40_M13         Q40 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C40_M5         C_F_C40_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1155,8 +1155,8 @@ M_C_F_C56_M4         C_F_C56_NDPOS C_F_C56_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C56_M13         Q56 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C56_M5         C_F_C56_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1176,8 +1176,8 @@ M_C_F_C52_M4         C_F_C52_NDPOS C_F_C52_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C52_M13         Q52 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C52_M5         C_F_C52_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1197,8 +1197,8 @@ M_C_F_C59_M4         C_F_C59_NDPOS C_F_C59_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C59_M13         Q59 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C59_M5         C_F_C59_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1218,8 +1218,8 @@ M_C_F_C13_M4         C_F_C13_NDPOS C_F_C13_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C13_M13         Q13 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C13_M5         C_F_C13_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1239,8 +1239,8 @@ M_C_F_C14_M4         C_F_C14_NDPOS C_F_C14_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C14_M13         Q14 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C14_M5         C_F_C14_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1260,8 +1260,8 @@ M_C_F_C12_M4         C_F_C12_NDPOS C_F_C12_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C12_M13         Q12 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C12_M5         C_F_C12_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1281,30 +1281,9 @@ M_C_F_C30_M4         C_F_C30_NDPOS C_F_C30_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C30_M13         Q30 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C30_M5         C_F_C30_NDBIAS N117027 0 0 CMOSN  
-+ L=12.5u  
-+ W=65u         
-M_C_F_C39_M1         C_F_C39_NDNEG N117007 C_F_C39_NDBIAS 0 CMOSN  
-+ L=10u  
-+ W=265u         
-M_C_F_C39_M2         C_F_C39_NDPOS C_N117506 C_F_C39_NDBIAS 0 CMOSN  
-+ L=10u  
-+ W=265u         
-M_C_F_C39_M3         C_F_C39_NDNEG C_F_C39_NDNEG N116990 N116990 CMOSP  
-+ L=10u  
-+ W=200u         
-M_C_F_C39_M12         Q39 C_F_C39_NDPOS N116990 N116990 CMOSP  
-+ L=10u  
-+ W=1120u         
-M_C_F_C39_M4         C_F_C39_NDPOS C_F_C39_NDNEG N116990 N116990 CMOSP  
-+ L=10u  
-+ W=200u         
-M_C_F_C39_M13         Q39 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
-M_C_F_C39_M5         C_F_C39_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
 M_C_F_C35_M1         C_F_C35_NDNEG N117007 C_F_C35_NDBIAS 0 CMOSN  
@@ -1323,9 +1302,30 @@ M_C_F_C35_M4         C_F_C35_NDPOS C_F_C35_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C35_M13         Q35 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C35_M5         C_F_C35_NDBIAS N117027 0 0 CMOSN  
++ L=12.5u  
++ W=65u         
+M_C_F_C39_M1         C_F_C39_NDNEG N117007 C_F_C39_NDBIAS 0 CMOSN  
++ L=10u  
++ W=265u         
+M_C_F_C39_M2         C_F_C39_NDPOS C_N117506 C_F_C39_NDBIAS 0 CMOSN  
++ L=10u  
++ W=265u         
+M_C_F_C39_M3         C_F_C39_NDNEG C_F_C39_NDNEG N116990 N116990 CMOSP  
++ L=10u  
++ W=200u         
+M_C_F_C39_M12         Q39 C_F_C39_NDPOS N116990 N116990 CMOSP  
++ L=10u  
++ W=1120u         
+M_C_F_C39_M4         C_F_C39_NDPOS C_F_C39_NDNEG N116990 N116990 CMOSP  
++ L=10u  
++ W=200u         
+M_C_F_C39_M13         Q39 N117027 0 0 CMOSN  
++ L=16u  
++ W=215u         
+M_C_F_C39_M5         C_F_C39_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
 M_C_F_C15_M1         C_F_C15_NDNEG N117007 C_F_C15_NDBIAS 0 CMOSN  
@@ -1344,8 +1344,8 @@ M_C_F_C15_M4         C_F_C15_NDPOS C_F_C15_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C15_M13         Q15 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C15_M5         C_F_C15_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1365,8 +1365,8 @@ M_C_F_C11_M4         C_F_C11_NDPOS C_F_C11_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C11_M13         Q11 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C11_M5         C_F_C11_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1386,8 +1386,8 @@ M_C_F_C6_M4         C_F_C6_NDPOS C_F_C6_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C6_M13         Q6 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C6_M5         C_F_C6_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1407,8 +1407,8 @@ M_C_F_C16_M4         C_F_C16_NDPOS C_F_C16_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C16_M13         Q16 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C16_M5         C_F_C16_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1428,8 +1428,8 @@ M_C_F_C10_M4         C_F_C10_NDPOS C_F_C10_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C10_M13         Q10 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C10_M5         C_F_C10_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1449,8 +1449,8 @@ M_C_F_C53_M4         C_F_C53_NDPOS C_F_C53_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C53_M13         Q53 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C53_M5         C_F_C53_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1549,8 +1549,8 @@ M_C_F_C22_M4         C_F_C22_NDPOS C_F_C22_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C22_M13         Q22 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C22_M5         C_F_C22_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1570,8 +1570,8 @@ M_C_F_C23_M4         C_F_C23_NDPOS C_F_C23_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C23_M13         Q23 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C23_M5         C_F_C23_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1591,8 +1591,8 @@ M_C_F_C21_M4         C_F_C21_NDPOS C_F_C21_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C21_M13         Q21 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C21_M5         C_F_C21_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1612,8 +1612,8 @@ M_C_F_C1_M4         C_F_C1_NDPOS C_F_C1_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C1_M13         Q1 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C1_M5         C_F_C1_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1633,8 +1633,8 @@ M_C_F_C9_M4         C_F_C9_NDPOS C_F_C9_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C9_M13         Q9 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C9_M5         C_F_C9_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -1668,10 +1668,10 @@ M_C_F_D_U65_M5         C_F_D_N568485 C_F_D_N941987 N116990 N116990 CMOSP
 M_C_F_D_U65_M6         C_F_D_N568485 C_F_D_N941987 0 0 CMOSN  
 + L=.43u  
 + W=.43u         
-M_C_F_D_U2_M5         C_F_D_N259339 C_F_D_MSB N116990 N116990 CMOSP  
+M_C_F_D_U2_M5         C_F_D_N259339 C_F_C32_MSB N116990 N116990 CMOSP  
 + L=.25u  
 + W=.93u         
-M_C_F_D_U2_M6         C_F_D_N259339 C_F_D_MSB 0 0 CMOSN  
+M_C_F_D_U2_M6         C_F_D_N259339 C_F_C32_MSB 0 0 CMOSN  
 + L=.43u  
 + W=.43u         
 M_C_F_D_U96_M5         C_F_D_NDLSB11 C_F_D_N578514 N116990 N116990 CMOSP  
@@ -2556,10 +2556,10 @@ M_C_F_D_U131_M2         C_F_D_U131_ND2 Q53 0 0 CMOSN
 M_C_F_D_U131_M4         C_F_D_NDLSB27 Q53 N116990 N116990 CMOSP  
 + L=.186u  
 + W=.25u         
-M_C_F_D_U101_M5         C_F_D_N572064 C_F_D_MSB N116990 N116990 CMOSP  
+M_C_F_D_U101_M5         C_F_D_N572064 C_F_C32_MSB N116990 N116990 CMOSP  
 + L=.25u  
 + W=.93u         
-M_C_F_D_U101_M6         C_F_D_N572064 C_F_D_MSB 0 0 CMOSN  
+M_C_F_D_U101_M6         C_F_D_N572064 C_F_C32_MSB 0 0 CMOSN  
 + L=.43u  
 + W=.43u         
 M_C_F_D_U27_M5         C_F_D_ND3SB5 C_F_D_N564920 N116990 N116990 CMOSP  
@@ -2742,16 +2742,16 @@ M_C_F_D_U98_M2         C_F_D_U98_ND2 Q17 0 0 CMOSN
 M_C_F_D_U98_M4         C_F_D_NDLSB9 Q17 N116990 N116990 CMOSP  
 + L=.186u  
 + W=.25u         
-M_C_F_D_U4_M5         C_F_D_N259543 C_F_D_MSB N116990 N116990 CMOSP  
+M_C_F_D_U4_M5         C_F_D_N259543 C_F_C32_MSB N116990 N116990 CMOSP  
 + L=.25u  
 + W=.93u         
-M_C_F_D_U4_M6         C_F_D_N259543 C_F_D_MSB 0 0 CMOSN  
+M_C_F_D_U4_M6         C_F_D_N259543 C_F_C32_MSB 0 0 CMOSN  
 + L=.43u  
 + W=.43u         
-M_C_F_D_U46_M5         C_F_D_N569141 C_F_D_MSB N116990 N116990 CMOSP  
+M_C_F_D_U46_M5         C_F_D_N569141 C_F_C32_MSB N116990 N116990 CMOSP  
 + L=.25u  
 + W=.93u         
-M_C_F_D_U46_M6         C_F_D_N569141 C_F_D_MSB 0 0 CMOSN  
+M_C_F_D_U46_M6         C_F_D_N569141 C_F_C32_MSB 0 0 CMOSN  
 + L=.43u  
 + W=.43u         
 M_C_F_D_U7_M5         C_F_D_ND5SB2 C_F_D_N259339 N116990 N116990 CMOSP  
@@ -3072,10 +3072,10 @@ M_C_F_D_U104_M5         C_F_D_N793529 Q38 N116990 N116990 CMOSP
 M_C_F_D_U104_M6         C_F_D_N793529 Q38 0 0 CMOSN  
 + L=.43u  
 + W=.43u         
-M_C_F_D_U18_M5         C_F_D_N564920 C_F_D_MSB N116990 N116990 CMOSP  
+M_C_F_D_U18_M5         C_F_D_N564920 C_F_C32_MSB N116990 N116990 CMOSP  
 + L=.25u  
 + W=.93u         
-M_C_F_D_U18_M6         C_F_D_N564920 C_F_D_MSB 0 0 CMOSN  
+M_C_F_D_U18_M6         C_F_D_N564920 C_F_C32_MSB 0 0 CMOSN  
 + L=.43u  
 + W=.43u         
 M_C_F_D_U129_M5         C_F_D_NDLSB29 C_F_D_N573066 N116990 N116990 CMOSP  
@@ -3166,8 +3166,8 @@ M_C_F_C24_M4         C_F_C24_NDPOS C_F_C24_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C24_M13         Q24 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C24_M5         C_F_C24_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -3266,8 +3266,8 @@ M_C_F_C20_M4         C_F_C20_NDPOS C_F_C20_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C20_M13         Q20 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C20_M5         C_F_C20_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -3287,8 +3287,8 @@ M_C_F_C62_M4         C_F_C62_NDPOS C_F_C62_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C62_M13         Q62 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C62_M5         C_F_C62_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -3308,8 +3308,8 @@ M_C_F_C57_M4         C_F_C57_NDPOS C_F_C57_NDNEG N116990 N116990 CMOSP
 + L=10u  
 + W=200u         
 M_C_F_C57_M13         Q57 N117027 0 0 CMOSN  
-+ L=15u  
-+ W=220u         
++ L=16u  
++ W=215u         
 M_C_F_C57_M5         C_F_C57_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
@@ -3460,9 +3460,9 @@ V_VBIAS         N117027 0 1
 R_R10         N_3SB N116990  100k  
 R_R11         N_2SB N116990  100k  
 V_VDD         N116990 0 3.3
-V_VREF         N117050 0 1.640
+V_VREF         N117050 0 1.630
 R_R12         N_LSB N116990  100k  
-V_VA         N117007 0 1.635
+V_VA         N117007 0 1.620
 R_R1         MSB N116990  100k  
 R_R2         5SB N116990  100k  
 R_R3         4SB N116990  100k  
