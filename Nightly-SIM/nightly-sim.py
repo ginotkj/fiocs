@@ -46,7 +46,8 @@ import time
 import pdb
 
 # App bin
-SVN_BIN = 'C:\\Program Files\\TortoiseSVN\\bin\\TortoiseProc.exe'
+#SVN_BIN = 'C:\\Program Files\\TortoiseSVN\\bin\\TortoiseProc.exe'
+SVN_BIN = 'TortoiseProc.exe'
 ZIP_BIN = 'C:\\Archivos de programa\\7-Zip\\7z.exe'
 
 # 7z commands
@@ -61,10 +62,11 @@ CMD_CLEANUP = ' /command:cleanup'
 CMD_LOGMSG = ' /logmsg '
 
 # Paths
-CIRFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CIR-files'
-CSDFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files'
+CIRFOLDER = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CIR-files'
+CSDFOLDER = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files'
 ZIPNAME = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files\\VA-1v_SLOPE_CMOSN.7z'
 #ZIPNAME = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files\\VA-1v_SLOPE_CMOSP.7z'
+PATTERN = '^.LIB .D:\Doc'
 
 def main():
 
@@ -126,6 +128,7 @@ def svn_update(ipath):
     # First we clean up the path to assure that all will work
     cmd = SVN_BIN + CMD_CLEANUP + CLOSE_WIN + CMD_PATH + ipath
     try:
+        print cmd
         p = subprocess.Popen(cmd)
     except OSError, ex:
         print "The file does not exist"
@@ -178,6 +181,13 @@ def simulate_all(ifolder):
 
 def simulate(ifile):
     """ Call psp_cmd for a single file """
+    f = open(ifile, 'r')
+    lineas = f.readlines()
+	for line in lineas:
+        if 
+    f.close()
+    return 0
+	
     cmd = PSPICE_BIN + ' \"' + ifile + '\"'
     try:
         return_code = subprocess.call(cmd)
@@ -189,7 +199,7 @@ def simulate(ifile):
 
 def add2zip(izip,ifile):
     """ Add single file into a specified zip file """
-	cmd = ZIP_BIN + ADD_FILE + izip + ifile
+    cmd = ZIP_BIN + ADD_FILE + izip + " " + ifile
     try:
         return_code = subprocess.call(cmd)
     except OSError, ex:
@@ -200,7 +210,7 @@ def add2zip(izip,ifile):
 
 def svn_commit():
     """ Commit the ZIP file to be analyzed """
-	cmd = SVN_BIN + CMD_COMMIT + CLOSE_WIN + CMD_PATH + ifile
+    cmd = SVN_BIN + CMD_COMMIT + CLOSE_WIN + CMD_PATH + ifile
     try:
         return_code = subprocess.call(cmd)
     except OSError, ex:
@@ -214,11 +224,11 @@ if __name__ == '__main__':
     ORCAD_TOOLS = os.getenv('ORCAD_TOOLS')
     PSPICE_BIN = ORCAD_TOOLS + '\\pspice\psp_cmd.exe'
     #clean_folder(CIRFOLDER)
-    print "In 5 seconds the folder will be updated from SVN repo"
-    time.sleep(5)
+    print "In 2 seconds the folder will be updated from SVN repo"
+    time.sleep(2)
     svn_update(CIRFOLDER)
-    print "In 10 seconds the simulation will begin"
-    time.sleep(10)
+    print "In 2 seconds the simulation will begin"
+    time.sleep(2)
     simulate_all(CIRFOLDER)
     #main()
 
