@@ -45,15 +45,12 @@ import subprocess
 import time
 import pdb
 
-# C:\Program Files\TortoiseSVN\bin>TortoiseProc.exe
-#   /command:update /path:"D:\Documents\TESIS\fiocs\Nightly-SIM" /closeonend:1
-
 # App bin
 SVN_BIN = 'C:\\Program Files\\TortoiseSVN\\bin\\TortoiseProc.exe'
+ZIP_BIN = 'C:\\Archivos de programa\\7-Zip\\7z.exe'
 
-# Paths
-CIRFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CIR-files'
-CSDFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files'
+# 7z commands
+ADD_FILE = ' a -mx9 '
 
 # Tortoise SVN commands
 CLOSE_WIN = ' /closeonend:1'
@@ -61,10 +58,17 @@ CMD_PATH = ' /path:'
 CMD_UPDATE = ' /command:update'
 CMD_COMMIT = ' /command:commit'
 CMD_CLEANUP = ' /command:cleanup'
+CMD_LOGMSG = ' /logmsg '
+
+# Paths
+CIRFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CIR-files'
+CSDFOLDER = 'D:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files'
+ZIPNAME = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files\\VA-1v_SLOPE_CMOSN.7z'
+#ZIPNAME = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files\\VA-1v_SLOPE_CMOSP.7z'
 
 def main():
 
-
+# este metodo tendria q cambiar los valores de va cada vez q se va a simular y simular
 
     return 0
 
@@ -157,6 +161,18 @@ def simulate_all(ifolder):
                         print "Exit code: %s" % return_code
                     except OSError, ex:
                         print ex
+                    print "\nAdding to zip: %s" % ufile
+                    try:
+                        return_code = add2zip(ZIPNAME,ufile)
+                        print "Exit code: %s" % return_code
+                    except OSError, ex:
+                        print ex
+                    # print "\nCommitting: %s" % ufile
+                    # try:
+                        # return_code = svn_commit(ZIPNAME)
+                        # print "Exit code: %s" % return_code
+                    # except OSError, ex:
+                        # print ex
     except StopIteration:
         print "\n\nFinish simulating circuit files\n\n"
 
@@ -171,19 +187,33 @@ def simulate(ifile):
 
     return return_code
 
-def add2zip():
+def add2zip(izip,ifile):
     """ Add single file into a specified zip file """
-    return 0
+	cmd = ZIP_BIN + ADD_FILE + izip + ifile
+    try:
+        return_code = subprocess.call(cmd)
+    except OSError, ex:
+        print "The file does not exist"
+        print ex
+
+    return return_code
 
 def svn_commit():
     """ Commit the ZIP file to be analyzed """
-    return 0
+	cmd = SVN_BIN + CMD_COMMIT + CLOSE_WIN + CMD_PATH + ifile
+    try:
+        return_code = subprocess.call(cmd)
+    except OSError, ex:
+        print "The file does not exist"
+        print ex
+
+    return return_code
 
 if __name__ == '__main__':
 
     ORCAD_TOOLS = os.getenv('ORCAD_TOOLS')
     PSPICE_BIN = ORCAD_TOOLS + '\\pspice\psp_cmd.exe'
-    clean_folder(CIRFOLDER)
+    #clean_folder(CIRFOLDER)
     print "In 5 seconds the folder will be updated from SVN repo"
     time.sleep(5)
     svn_update(CIRFOLDER)
