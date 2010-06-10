@@ -154,25 +154,25 @@
       (Path "Design Resources")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-2")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-3")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-4")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-5")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-7")
+      (Path "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-8")
       (Path "Outputs")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NAND-2")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NAND-3")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NAND-4")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NAND-5")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NAND-7")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NAND-8")
-      (Path "Outputs" "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.olb"
-         "NEG")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
-      (Path "PSpice Resources" "Simulation Profiles"))
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-4"
+         "NAND-4"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
