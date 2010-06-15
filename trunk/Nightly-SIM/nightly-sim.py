@@ -49,6 +49,7 @@ import pdb
 #SVN_BIN = 'C:\\Program Files\\TortoiseSVN\\bin\\TortoiseProc.exe'
 SVN_BIN = 'TortoiseProc.exe'
 ZIP_BIN = 'C:\\Archivos de programa\\7-Zip\\7z.exe'
+ZIP_BIN = 'C:\\Program Files\\7-Zip\\7z.exe'
 
 # 7z commands
 ADD_FILE = ' a -mx9 '
