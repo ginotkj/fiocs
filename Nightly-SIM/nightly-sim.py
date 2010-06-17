@@ -160,6 +160,7 @@ def simulate_all(ifolder):
                     ufile = os.path.join(folder[0],ufile)
                     print "\n####################################################\n"
                     print "Circuit FILE: %s" % ufile
+                    ufile = change_path(ufile)
                     try:
                         return_code = simulate(ufile)
                         print "Exit code: %s" % return_code
@@ -180,15 +181,16 @@ def simulate_all(ifolder):
     except StopIteration:
         print "\n\nFinish simulating circuit files\n\n"
 
-def simulate(ifile):
-    """ Call psp_cmd for a single file """
+def change_path(ifile):
     f = open(ifile, 'r')
     lineas = f.readlines()
-	for line in lineas:
+    for line in lineas:
         if 
     f.close()
     return 0
-	
+
+def simulate(ifile):
+    """ Call psp_cmd for a single file """
     cmd = PSPICE_BIN + ' \"' + ifile + '\"'
     try:
         return_code = subprocess.call(cmd)
@@ -225,9 +227,9 @@ if __name__ == '__main__':
     ORCAD_TOOLS = os.getenv('ORCAD_TOOLS')
     PSPICE_BIN = ORCAD_TOOLS + '\\pspice\psp_cmd.exe'
     #clean_folder(CIRFOLDER)
-    print "In 2 seconds the folder will be updated from SVN repo"
-    time.sleep(2)
-    svn_update(CIRFOLDER)
+    #print "In 2 seconds the folder will be updated from SVN repo"
+    #time.sleep(2)
+    #svn_update(CIRFOLDER)
     print "In 2 seconds the simulation will begin"
     time.sleep(2)
     simulate_all(CIRFOLDER)
