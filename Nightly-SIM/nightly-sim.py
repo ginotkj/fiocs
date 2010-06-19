@@ -1,55 +1,39 @@
 #!/usr/bin/env python
 
 # -*- coding: utf-8 -*-
-
 #
-
 #       sin titulo.py
-
 #
-
 #       Copyright 2010 Facundo-std <Facundo-std@FACUNDO-XPS>
-
 #
-
 #       This program is free software; you can redistribute it and/or modify
-
 #       it under the terms of the GNU General Public License as published by
-
 #       the Free Software Foundation; either version 2 of the License, or
-
 #       (at your option) any later version.
-
 #
-
 #       This program is distributed in the hope that it will be useful,
-
 #       but WITHOUT ANY WARRANTY; without even the implied warranty of
-
 #       MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-
 #       GNU General Public License for more details.
-
 #
-
 #       You should have received a copy of the GNU General Public License
-
 #       along with this program; if not, write to the Free Software
-
 #       Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-
 #       MA 02110-1301, USA.
 
 import os
 import subprocess
 import time
 import pdb
+import sys
+from  fileinput import FileInput
 
 # App bin
 #SVN_BIN = 'C:\\Program Files\\TortoiseSVN\\bin\\TortoiseProc.exe'
 SVN_BIN = 'TortoiseProc.exe'
 ZIP_BIN = 'C:\\Archivos de programa\\7-Zip\\7z.exe'
-ZIP_BIN = 'C:\\Program Files\\7-Zip\\7z.exe'
+#ZIP_BIN = 'C:\\Program Files\\7-Zip\\7z.exe'
+ZIP_BIN = '7z.exe'
 
 # 7z commands
 ADD_FILE = ' a -mx9 '
@@ -65,16 +49,24 @@ CMD_LOGMSG = ' /logmsg '
 # Paths
 CIRFOLDER = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CIR-files'
 CSDFOLDER = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files'
-ZIPNAME = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files\\VA-1v_SLOPE_CMOSN.7z'
-#ZIPNAME = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files\\VA-1v_SLOPE_CMOSP.7z'
-PATTERN = '^.LIB .D:\Doc'
+ZIPFOLDER = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files\\'
+ZIPNAME = ''
+
+# VA information
+VA = 1
+ITERMAX = 63
+STEP = 0.01
 
 def main():
-
 # este metodo tendria q cambiar los valores de va cada vez q se va a simular y simular
-
+    #clean_folder(CIRFOLDER)
+    #print "In 2 seconds the folder will be updated from SVN repo"
+    #time.sleep(2)
+    #svn_update(CIRFOLDER)
+    print "In 2 seconds the simulation will begin"
+    time.sleep(2)
+    simulate_all(CIRFOLDER)
     return 0
-
 
 def clean_folder(ifolder):
     """ Cleans the CIRFOLDER """
@@ -157,19 +149,24 @@ def simulate_all(ifolder):
             folder = wfolder.next()
             if folder[2] and not ('.svn' in folder[0]):
                 for ufile in folder[2]:
+                    if '.cir' in folder[2]:
+                        print "SI SE DA CUENTA EL PUTO"
                     ufile = os.path.join(folder[0],ufile)
-                    print "\n####################################################\n"
+                    print "\n#####################################################################################################################\n"
                     print "Circuit FILE: %s" % ufile
-                    ufile = change_path(ufile)
+                    change_path(ufile)
+                    change_va(ufile)
+                    print "Simulating..."
                     try:
                         return_code = simulate(ufile)
                         print "Exit code: %s" % return_code
                     except OSError, ex:
                         print ex
+                    ufile = ufile.split('.')[0] + '.csd'
                     print "\nAdding to zip: %s" % ufile
                     try:
-                        return_code = add2zip(ZIPNAME,ufile)
-                        print "Exit code: %s" % return_code
+                        zipfile = ZIPNAME + folder[0].split('\\')[-1] + '.7z'
+                        return_code = add2zip(zipfile,ufile)
                     except OSError, ex:
                         print ex
                     # print "\nCommitting: %s" % ufile
@@ -182,36 +179,45 @@ def simulate_all(ifolder):
         print "\n\nFinish simulating circuit files\n\n"
 
 def change_path(ifile):
-    f = open(ifile, 'r')
-    lineas = f.readlines()
-    for line in lineas:
-        if 
-    f.close()
+    searchExpr = '.LIB "D:'
+    replaceExpr = '.LIB "C:'
+    print "Changing [%s] with [%s]" % (searchExpr,replaceExpr)
+    for line in FileInput(ifile, inplace = 1):
+        print line.replace(searchExpr, replaceExpr),
+    return 0
+
+def change_va(ifile):
+    searchExpr = 'V_VA         N117007 0 %s' % OLDVA
+    replaceExpr = 'V_VA         N117007 0 %s' % VA
+    print "Changing [%s] with [%s]" % (searchExpr,replaceExpr)
+    for line in FileInput(ifile, inplace = 1):
+        print line.replace(searchExpr, replaceExpr),
     return 0
 
 def simulate(ifile):
     """ Call psp_cmd for a single file """
+    return_code = 1
     cmd = PSPICE_BIN + ' \"' + ifile + '\"'
     try:
         return_code = subprocess.call(cmd)
     except OSError, ex:
         print "The file does not exist"
         print ex
-
     return return_code
 
 def add2zip(izip,ifile):
     """ Add single file into a specified zip file """
+    return_code = 1
     cmd = ZIP_BIN + ADD_FILE + izip + " " + ifile
+    print cmd
     try:
         return_code = subprocess.call(cmd)
     except OSError, ex:
         print "The file does not exist"
         print ex
-
     return return_code
 
-def svn_commit():
+def svn_commit(ifile):
     """ Commit the ZIP file to be analyzed """
     cmd = SVN_BIN + CMD_COMMIT + CLOSE_WIN + CMD_PATH + ifile
     try:
@@ -226,12 +232,9 @@ if __name__ == '__main__':
 
     ORCAD_TOOLS = os.getenv('ORCAD_TOOLS')
     PSPICE_BIN = ORCAD_TOOLS + '\\pspice\psp_cmd.exe'
-    #clean_folder(CIRFOLDER)
-    #print "In 2 seconds the folder will be updated from SVN repo"
-    #time.sleep(2)
-    #svn_update(CIRFOLDER)
-    print "In 2 seconds the simulation will begin"
-    time.sleep(2)
-    simulate_all(CIRFOLDER)
-    #main()
 
+    for VAV in xrange(0,ITERMAX,1):
+        ZIPNAME = ZIPFOLDER + 'VA-' + str(VA) + 'v_SLOPE_'
+        OLDVA = VA
+        main()
+        VA = VA + STEP
