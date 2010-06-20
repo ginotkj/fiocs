@@ -149,32 +149,58 @@ def simulate_all(ifolder):
             folder = wfolder.next()
             if folder[2] and not ('.svn' in folder[0]):
                 for ufile in folder[2]:
-                    if '.cir' in folder[2]:
-                        print "SI SE DA CUENTA EL PUTO"
-                    ufile = os.path.join(folder[0],ufile)
-                    print "\n#####################################################################################################################\n"
-                    print "Circuit FILE: %s" % ufile
-                    change_path(ufile)
-                    change_va(ufile)
-                    print "Simulating..."
-                    try:
-                        return_code = simulate(ufile)
-                        print "Exit code: %s" % return_code
-                    except OSError, ex:
-                        print ex
-                    ufile = ufile.split('.')[0] + '.csd'
-                    print "\nAdding to zip: %s" % ufile
-                    try:
-                        zipfile = ZIPNAME + folder[0].split('\\')[-1] + '.7z'
-                        return_code = add2zip(zipfile,ufile)
-                    except OSError, ex:
-                        print ex
-                    # print "\nCommitting: %s" % ufile
-                    # try:
-                        # return_code = svn_commit(ZIPNAME)
-                        # print "Exit code: %s" % return_code
-                    # except OSError, ex:
-                        # print ex
+                    #pdb.set_trace()
+                    if '.cir' in ufile:
+                        ufile = os.path.join(folder[0],ufile)
+                        time.sleep(1)
+                        print "\n#####################################################################################################################\n"
+                        print "Circuit FILE: %s" % ufile
+                        change_path(ufile)
+                        change_va(ufile)
+                        print "Simulating..."
+                        try:
+                            return_code = simulate(ufile)
+                            print "Exit code: %s" % return_code
+                        except OSError, ex:
+                            print ex
+                        basename = ufile.split('.')[0]
+                        ufile =  basename + '.csd'
+                        print "\nAdding to zip: %s" % ufile
+                        try:
+                            zipfile = ZIPNAME + folder[0].split('\\')[-1] + '.7z'
+                            return_code = add2zip(zipfile,ufile)
+                        except OSError, ex:
+                            print ex
+                        try:
+                            ufile = basename + '.dat'
+                            print "Removing %s ..." % ufile
+                            os.remove(ufile)
+                        except:
+                            print "Could not delete %s" % ufile
+                        try:
+                            ufile = basename + '.out'
+                            print "Removing %s ..." % ufile
+                            os.remove(ufile)
+                        except:
+                            print "Could not delete %s" % ufile
+                        try:
+                            ufile = basename + '.csd'
+                            print "Removing %s ..." % ufile
+                            os.remove(ufile)
+                        except:
+                            print "Could not delete %s" % ufile
+                        try:
+                            ufile = basename + '.mif'
+                            print "Removing %s ..." % ufile
+                            os.remove(ufile)
+                        except:
+                            print "Could not delete %s" % ufile
+                        # print "\nCommitting: %s" % ufile
+                        # try:
+                            # return_code = svn_commit(ZIPNAME)
+                            # print "Exit code: %s" % return_code
+                        # except OSError, ex:
+                            # print ex
     except StopIteration:
         print "\n\nFinish simulating circuit files\n\n"
 
@@ -238,3 +264,4 @@ if __name__ == '__main__':
         OLDVA = VA
         main()
         VA = VA + STEP
+        time.sleep(60)
