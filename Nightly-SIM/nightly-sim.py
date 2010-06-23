@@ -31,7 +31,7 @@ from  fileinput import FileInput
 # App bin
 #SVN_BIN = 'C:\\Program Files\\TortoiseSVN\\bin\\TortoiseProc.exe'
 SVN_BIN = 'TortoiseProc.exe'
-ZIP_BIN = 'C:\\Archivos de programa\\7-Zip\\7z.exe'
+#ZIP_BIN = 'C:\\Archivos de programa\\7-Zip\\7z.exe'
 #ZIP_BIN = 'C:\\Program Files\\7-Zip\\7z.exe'
 ZIP_BIN = '7z.exe'
 
@@ -50,6 +50,8 @@ CMD_LOGMSG = ' /logmsg '
 CIRFOLDER = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CIR-files'
 CSDFOLDER = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files'
 ZIPFOLDER = 'C:\\Documents\\TESIS\\fiocs\\Nightly-SIM\\CSD-files\\'
+ZIPNAME_S = ''
+ZIPNAME_E = ''
 ZIPNAME = ''
 
 # VA information
@@ -147,9 +149,15 @@ def simulate_all(ifolder):
     try:
         while True:
             folder = wfolder.next()
+            #pdb.set_trace()
             if folder[2] and not ('.svn' in folder[0]):
                 for ufile in folder[2]:
-                    #pdb.set_trace()
+                    ZIPNAME = folder[0].split('\\')[-2]
+                    ZIPNAME = ZIPNAME.split('_')[0]
+                    if ZIPNAME == '01':
+                        ZIPNAME = ZIPNAME_S
+                    elif ZIPNAME == '02':
+                        ZIPNAME = ZIPNAME_E
                     if '.cir' in ufile:
                         ufile = os.path.join(folder[0],ufile)
                         time.sleep(1)
@@ -260,8 +268,9 @@ if __name__ == '__main__':
     PSPICE_BIN = ORCAD_TOOLS + '\\pspice\psp_cmd.exe'
 
     for VAV in xrange(0,ITERMAX,1):
-        ZIPNAME = ZIPFOLDER + 'VA-' + str(VA) + 'v_SLOPE_'
+        ZIPNAME_S = ZIPFOLDER + 'VA-' + str(VA) + 'v_SLOPE_'
+        ZIPNAME_E = ZIPFOLDER + 'VA-' + str(VA) + 'v_EXP_'
         OLDVA = VA
-        main()
         VA = VA + STEP
+        main()
         time.sleep(60)
