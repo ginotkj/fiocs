@@ -11,6 +11,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
+.TRAN  0 500n 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\PRUEBA.net" 
 
