@@ -1,5 +1,5 @@
 
-**** 06/05/10 19:50:51 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 06/26/10 18:16:09 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "PRUEBA-bias"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-pspicefiles\prueba\bias.si
 
@@ -23,6 +23,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
+.TRAN  0 500n 0 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\PRUEBA.net" 
 
@@ -161,6 +162,8 @@ M_C_F_C19_M13         Q19 N117027 0 0 CMOSN
 M_C_F_C19_M5         C_F_C19_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
+I_C_F_I1         0 Q46 DC 0Adc AC 0Aac
++PULSE 0 4m 2n 250p 250p 5n 
 M_C_F_C2_M1         C_F_C2_NDNEG N117007 C_F_C2_NDBIAS 0 CMOSN  
 + L=10u  
 + W=265u         
@@ -534,27 +537,6 @@ M_C_F_C49_M13         Q49 N117027 0 0 CMOSN
 M_C_F_C49_M5         C_F_C49_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
-M_C_F_C43_M1         C_F_C43_NDNEG N117007 C_F_C43_NDBIAS 0 CMOSN  
-+ L=10u  
-+ W=265u         
-M_C_F_C43_M2         C_F_C43_NDPOS C_N117488 C_F_C43_NDBIAS 0 CMOSN  
-+ L=10u  
-+ W=265u         
-M_C_F_C43_M3         C_F_C43_NDNEG C_F_C43_NDNEG N116990 N116990 CMOSP  
-+ L=10u  
-+ W=200u         
-M_C_F_C43_M12         Q43 C_F_C43_NDPOS N116990 N116990 CMOSP  
-+ L=10u  
-+ W=1120u         
-M_C_F_C43_M4         C_F_C43_NDPOS C_F_C43_NDNEG N116990 N116990 CMOSP  
-+ L=10u  
-+ W=200u         
-M_C_F_C43_M13         Q43 N117027 0 0 CMOSN  
-+ L=16u  
-+ W=215u         
-M_C_F_C43_M5         C_F_C43_NDBIAS N117027 0 0 CMOSN  
-+ L=12.5u  
-+ W=65u         
 M_C_F_C37_M1         C_F_C37_NDNEG N117007 C_F_C37_NDBIAS 0 CMOSN  
 + L=10u  
 + W=265u         
@@ -574,6 +556,27 @@ M_C_F_C37_M13         Q37 N117027 0 0 CMOSN
 + L=16u  
 + W=215u         
 M_C_F_C37_M5         C_F_C37_NDBIAS N117027 0 0 CMOSN  
++ L=12.5u  
++ W=65u         
+M_C_F_C43_M1         C_F_C43_NDNEG N117007 C_F_C43_NDBIAS 0 CMOSN  
++ L=10u  
++ W=265u         
+M_C_F_C43_M2         C_F_C43_NDPOS C_N117488 C_F_C43_NDBIAS 0 CMOSN  
++ L=10u  
++ W=265u         
+M_C_F_C43_M3         C_F_C43_NDNEG C_F_C43_NDNEG N116990 N116990 CMOSP  
++ L=10u  
++ W=200u         
+M_C_F_C43_M12         Q43 C_F_C43_NDPOS N116990 N116990 CMOSP  
++ L=10u  
++ W=1120u         
+M_C_F_C43_M4         C_F_C43_NDPOS C_F_C43_NDNEG N116990 N116990 CMOSP  
++ L=10u  
++ W=200u         
+M_C_F_C43_M13         Q43 N117027 0 0 CMOSN  
++ L=16u  
++ W=215u         
+M_C_F_C43_M5         C_F_C43_NDBIAS N117027 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
 M_C_F_C27_M1         C_F_C27_NDNEG N117007 C_F_C27_NDBIAS 0 CMOSN  
@@ -3371,8 +3374,8 @@ R_C_1R_DIV_R32         C_N117516 C_N117514  10k
 R_C_1R_DIV_R66         C_N117574 C_N117566  10k  
 R_C_1R_DIV_R9         C_1R_DIV_R55 C_1R_DIV_R56  10k  
 R_C_1R_DIV_R46         C_N117542 C_N117540  10k  
-R_C_1R_DIV_R19         C_N117498 C_N117496  10k  
 R_C_1R_DIV_R3         C_1R_DIV_R61 C_1R_DIV_R62  10k  
+R_C_1R_DIV_R19         C_N117498 C_N117496  10k  
 R_C_1R_DIV_R33         C_N117518 C_N117516  10k  
 R_C_1R_DIV_R67         C_N117572 C_N117574  10k  
 R_C_1R_DIV_R47         C_N117544 C_N117542  10k  
@@ -3403,14 +3406,14 @@ R_C_1R_DIV_R52         C_N117552 C_N117550  10k
 R_C_1R_DIV_R60         C_N117576 C_N117570  10k  
 R_C_1R_DIV_R6         C_1R_DIV_R58 C_1R_DIV_R59  10k  
 R_C_1R_DIV_R27         C_N117506 C_N117504  10k  
-R_C_1R_DIV_R40         C_N117530 C_N117528  10k  
 R_C_1R_DIV_R61         C_N117578 C_N117576  10k  
+R_C_1R_DIV_R40         C_N117530 C_N117528  10k  
 R_C_1R_DIV_R53         C_N117554 C_N117552  10k  
 R_C_1R_DIV_R13         C_N117486 C_1R_DIV_N03082  5k  
 V_C_1R_DIV_V1         C_1R_DIV_N169051 0 1
-R_C_1R_DIV_R54         C_N117556 C_N117554  10k  
 R_C_1R_DIV_R12         C_1R_DIV_N03019 C_1R_DIV_R53  5k  
 R_C_1R_DIV_R41         C_N117532 C_N117530  10k  
+R_C_1R_DIV_R54         C_N117556 C_N117554  10k  
 R_C_1R_DIV_R14         C_N117488 C_N117486  10k  
 R_C_1R_DIV_R62         C_N117580 C_N117578  10k  
 R_C_1R_DIV_R28         C_N117508 C_N117506  10k  
@@ -3442,8 +3445,8 @@ R_C_2R_DIV_R32         C_2R_DIV_R34 C_2R_DIV_R35  10k
 R_C_2R_DIV_R66         C_2R_DIV_R5 C_2R_DIV_R4  10k  
 R_C_2R_DIV_R9         C_N119897 C_N119895  10k  
 R_C_2R_DIV_R46         C_2R_DIV_R29 C_2R_DIV_R28  10k  
-R_C_2R_DIV_R19         C_2R_DIV_R48 C_2R_DIV_R47  10k  
 R_C_2R_DIV_R3         C_N119885 C_N119883  10k  
+R_C_2R_DIV_R19         C_2R_DIV_R48 C_2R_DIV_R47  10k  
 R_C_2R_DIV_R33         C_2R_DIV_R33 C_2R_DIV_R34  10k  
 R_C_2R_DIV_R67         C_2R_DIV_R6 C_2R_DIV_R5  10k  
 R_C_2R_DIV_R47         C_2R_DIV_R30 C_2R_DIV_R29  10k  
@@ -3474,14 +3477,14 @@ R_C_2R_DIV_R52         C_2R_DIV_R16 C_2R_DIV_R17  10k
 R_C_2R_DIV_R60         C_2R_DIV_R8 C_2R_DIV_R7  10k  
 R_C_2R_DIV_R6         C_N119891 C_N119889  10k  
 R_C_2R_DIV_R27         C_2R_DIV_R39 C_2R_DIV_R40  10k  
-R_C_2R_DIV_R40         C_2R_DIV_R23 C_2R_DIV_R22  10k  
 R_C_2R_DIV_R61         C_2R_DIV_R9 C_2R_DIV_R8  10k  
+R_C_2R_DIV_R40         C_2R_DIV_R23 C_2R_DIV_R22  10k  
 R_C_2R_DIV_R53         C_2R_DIV_R15 C_2R_DIV_R16  10k  
 R_C_2R_DIV_R13         C_2R_DIV_R42 C_2R_DIV_N03082  5k  
 V_C_2R_DIV_V1         C_2R_DIV_N169051 0 1
-R_C_2R_DIV_R54         C_2R_DIV_R14 C_2R_DIV_R15  10k  
 R_C_2R_DIV_R12         C_2R_DIV_N03019 C_N119901  5k  
 R_C_2R_DIV_R41         C_2R_DIV_R24 C_2R_DIV_R23  10k  
+R_C_2R_DIV_R54         C_2R_DIV_R14 C_2R_DIV_R15  10k  
 R_C_2R_DIV_R14         C_2R_DIV_R43 C_2R_DIV_R42  10k  
 R_C_2R_DIV_R62         C_2R_DIV_R10 C_2R_DIV_R9  10k  
 R_C_2R_DIV_R28         C_2R_DIV_R38 C_2R_DIV_R39  10k  
@@ -3493,7 +3496,7 @@ R_R11         N_2SB N116990  100k
 V_VDD         N116990 0 3.3
 V_VREF         N117050 0 1.630
 R_R12         N_LSB N116990  100k  
-V_VA         N117007 0 1.620
+V_VA         N117007 0 1.460
 R_R1         MSB N116990  100k  
 R_R2         5SB N116990  100k  
 R_R3         4SB N116990  100k  
@@ -3548,7 +3551,7 @@ WARNING -- Mosfet M_C_F_D_U64_M16, model CMOSP: Ps = 0 is less than W
 Mosfet M_C_F_D_U140_M7, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
-**** 06/05/10 19:50:51 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 06/26/10 18:16:09 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "PRUEBA-bias"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-pspicefiles\prueba\bias.si
 
@@ -3707,12 +3710,12 @@ WARNING -- Mosfet M_C_F_D_U64_M16, model CMOSP: Ps = 0 is less than W
 Mosfet M_C_F_D_U140_M7, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
-**** 06/05/10 19:50:51 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 06/26/10 18:16:09 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "PRUEBA-bias"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-pspicefiles\prueba\bias.si
 
 
- ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
 
 
 ******************************************************************************
@@ -3722,47 +3725,47 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(   Q1) 104.3E-09  (   Q2) 104.3E-09  (   Q3) 104.3E-09  (   Q4) 104.3E-09      
+(   Q1) 104.6E-09  (   Q2) 104.7E-09  (   Q3) 104.9E-09  (   Q4) 105.1E-09      
 
-(   Q5) 104.3E-09  (   Q6) 104.3E-09  (   Q7) 104.3E-09  (   Q8) 104.3E-09      
+(   Q5) 105.3E-09  (   Q6) 105.6E-09  (   Q7) 106.1E-09  (   Q8) 106.6E-09      
 
-(   Q9) 104.3E-09  (   X1) 117.3E-09  (   X2) 117.3E-09  (   X3) 117.3E-09      
+(   Q9) 107.3E-09  (   X1) 117.3E-09  (   X2) 117.3E-09  (   X3)    3.3000      
 
-(   X4)    3.3000  (  2SB)     .1938  (  3SB)     .1938  (  4SB)     .1938      
+(   X4) 117.3E-09  (  2SB)     .1938  (  3SB)     .1938  (  4SB)     .1938      
 
-(  5SB)     .1938  (  LSB)     .1938  (  MSB)     .1938  (  Q10) 104.3E-09      
+(  5SB)    1.5795  (  LSB)     .1938  (  MSB)     .1938  (  Q10) 108.2E-09      
 
-(  Q11) 104.3E-09  (  Q12) 104.3E-09  (  Q13) 104.4E-09  (  Q14) 104.4E-09      
+(  Q11) 109.4E-09  (  Q12) 110.9E-09  (  Q13) 112.8E-09  (  Q14) 115.3E-09      
 
-(  Q15) 104.4E-09  (  Q16) 104.5E-09  (  Q17) 104.6E-09  (  Q18) 104.7E-09      
+(  Q15) 118.4E-09  (  Q16) 122.3E-09  (  Q17) 127.3E-09  (  Q18) 133.7E-09      
 
-(  Q19) 104.8E-09  (  Q20) 105.0E-09  (  Q21) 105.3E-09  (  Q22) 105.6E-09      
+(  Q19) 141.6E-09  (  Q20) 151.6E-09  (  Q21) 164.2E-09  (  Q22) 180.1E-09      
 
-(  Q23) 106.0E-09  (  Q24) 106.6E-09  (  Q25) 107.3E-09  (  Q26) 108.2E-09      
+(  Q23) 200.1E-09  (  Q24) 225.5E-09  (  Q25) 257.8E-09  (  Q26) 299.3E-09      
 
-(  Q27) 109.3E-09  (  Q28) 110.8E-09  (  Q29) 112.7E-09  (  Q30) 115.1E-09      
+(  Q27) 353.1E-09  (  Q28) 423.4E-09  (  Q29) 516.5E-09  (  Q30) 641.5E-09      
 
-(  Q31) 118.2E-09  (  Q33) 127.1E-09  (  Q34) 133.4E-09  (  Q35) 141.4E-09      
+(  Q31) 811.9E-09  (  Q33) 1.383E-06  (  Q34) 1.867E-06  (  Q35) 2.584E-06      
 
-(  Q36) 151.4E-09  (  Q37) 164.0E-09  (  Q38) 179.9E-09  (  Q39) 199.9E-09      
+(  Q36) 3.678E-06  (  Q37) 5.398E-06  (  Q38) 8.204E-06  (  Q39) 12.98E-06      
 
-(  Q40) 225.3E-09  (  Q41) 257.7E-09  (  Q42) 299.3E-09  (  Q43) 353.2E-09      
+(  Q40) 21.54E-06  (  Q41) 37.82E-06  (  Q42) 71.34E-06  (  Q43) 148.1E-06      
 
-(  Q44) 423.8E-09  (  Q45) 517.3E-09  (  Q46) 642.9E-09  (  Q47) 814.3E-09      
+(  Q44) 356.0E-06  (  Q45)     .0012  (  Q46)     .0149  (  Q47)    3.1769      
 
-(  Q48) 1.052E-06  (  Q49) 1.389E-06  (  Q50) 1.877E-06  (  Q51) 2.601E-06      
+(  Q48)    3.2213  (  Q49)    3.2231  (  Q50)    3.2238  (  Q51)    3.2242      
 
-(  Q52) 3.705E-06  (  Q53) 5.444E-06  (  Q54) 8.285E-06  (  Q55) 13.13E-06      
+(  Q52)    3.2245  (  Q53)    3.2247  (  Q54)    3.2249  (  Q55)    3.2250      
 
-(  Q56) 21.81E-06  (  Q57) 38.37E-06  (  Q58) 72.49E-06  (  Q59) 150.8E-06      
+(  Q56)    3.2252  (  Q57)    3.2253  (  Q58)    3.2254  (  Q59)    3.2255      
 
-(  Q60) 363.5E-06  (  Q61)     .0012  (  Q62)     .0157  (  Q63)    3.1757      
+(  Q60)    3.2256  (  Q61)    3.2256  (  Q62)    3.2257  (  Q63)    3.2258      
 
-(N_2SB)    3.2997  (N_3SB)    3.2997  (N_4SB)    3.2997  (N_5SB)    3.2997      
+(N_2SB)    3.2997  (N_3SB)    3.2997  (N_4SB)    3.2997  (N_5SB)    1.3762      
 
 (N_LSB)    3.2997  (N_MSB)    3.2997  (N116976)    0.0000                       
 
-(N116990)    3.3000                   (N117007)    1.6200                       
+(N116990)    3.3000                   (N117007)    1.4600                       
 
 (N117027)    1.0000                   (N117050)    1.6300                       
 
@@ -3780,7 +3783,7 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_F_D_2SB) 604.2E-09                 (C_F_D_3SB) 68.87E-09                     
 
-(C_F_D_4SB) 201.0E-09                 (C_F_D_5SB) 604.2E-09                     
+(C_F_D_4SB) 201.0E-09                 (C_F_D_5SB)    3.3000                     
 
 (C_F_D_LSB)    3.3000                 (C_N117486)    1.4150                     
 
@@ -3854,7 +3857,7 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_2R_DIV_R7)    1.0650               (C_2R_DIV_R8)    1.0750                   
 
-(C_2R_DIV_R9)    1.0850               (C_F_C32_MSB) 122.2E-09                   
+(C_2R_DIV_R9)    1.0850               (C_F_C32_MSB) 1.048E-06                   
 
 (C_1R_DIV_R50)    1.4950              (C_1R_DIV_R51)    1.5050                  
 
@@ -3910,23 +3913,23 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_2R_DIV_R48)    1.4750              (C_2R_DIV_R49)    1.4850                  
 
-(C_F_C1_NDNEG)    2.1389              (C_F_C1_NDPOS)    3.3000                  
+(C_F_C1_NDNEG)    2.1411              (C_F_C1_NDPOS)    3.2999                  
 
-(C_F_C2_NDNEG)    2.1389              (C_F_C2_NDPOS)    3.3000                  
+(C_F_C2_NDNEG)    2.1412              (C_F_C2_NDPOS)    3.2999                  
 
-(C_F_C3_NDNEG)    2.1389              (C_F_C3_NDPOS)    3.3000                  
+(C_F_C3_NDNEG)    2.1412              (C_F_C3_NDPOS)    3.2998                  
 
-(C_F_C4_NDNEG)    2.1389              (C_F_C4_NDPOS)    3.3000                  
+(C_F_C4_NDNEG)    2.1413              (C_F_C4_NDPOS)    3.2997                  
 
-(C_F_C5_NDNEG)    2.1389              (C_F_C5_NDPOS)    3.3000                  
+(C_F_C5_NDNEG)    2.1414              (C_F_C5_NDPOS)    3.2997                  
 
-(C_F_C6_NDNEG)    2.1389              (C_F_C6_NDPOS)    3.3000                  
+(C_F_C6_NDNEG)    2.1415              (C_F_C6_NDPOS)    3.2996                  
 
-(C_F_C7_NDNEG)    2.1389              (C_F_C7_NDPOS)    3.3000                  
+(C_F_C7_NDNEG)    2.1417              (C_F_C7_NDPOS)    3.2994                  
 
-(C_F_C8_NDNEG)    2.1389              (C_F_C8_NDPOS)    3.3000                  
+(C_F_C8_NDNEG)    2.1419              (C_F_C8_NDPOS)    3.2993                  
 
-(C_F_C9_NDNEG)    2.1389              (C_F_C9_NDPOS)    3.3000                  
+(C_F_C9_NDNEG)    2.1422              (C_F_C9_NDPOS)    3.2990                  
 
 (C_F_D_ND2SB1)    3.3000              (C_F_D_ND2SB2)    3.3000                  
 
@@ -3950,7 +3953,7 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_F_D_ND4SB4)    3.3000              (C_F_D_ND5SB1)    3.3000                  
 
-(C_F_D_ND5SB2)    3.3000              (C_F_D_NDLSB1)    3.3000                  
+(C_F_D_ND5SB2) 3.306E-06              (C_F_D_NDLSB1)    3.3000                  
 
 (C_F_D_NDLSB2)    3.3000              (C_F_D_NDLSB3)    3.3000                  
 
@@ -3960,137 +3963,137 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_F_D_NDLSB8)    3.3000              (C_F_D_NDLSB9)    3.3000                  
 
-(C_F_D_U6_ND2) 302.1E-09              (C_F_D_U7_ND2)    2.7916                  
+(C_F_D_U6_ND2)    2.7916              (C_F_D_U7_ND2) 1.636E-06                  
 
 (C_F_D_U8_ND2)    2.7916              (C_F_D_U9_ND2)    2.7916                  
 
-(C_F_C10_NDNEG)    2.1389             (C_F_C10_NDPOS)    3.3000                 
+(C_F_C10_NDNEG)    2.1425             (C_F_C10_NDPOS)    3.2988                 
 
-(C_F_C11_NDNEG)    2.1389             (C_F_C11_NDPOS)    3.3000                 
+(C_F_C11_NDNEG)    2.1430             (C_F_C11_NDPOS)    3.2984                 
 
-(C_F_C12_NDNEG)    2.1389             (C_F_C12_NDPOS)    3.3000                 
+(C_F_C12_NDNEG)    2.1436             (C_F_C12_NDPOS)    3.2980                 
 
-(C_F_C13_NDNEG)    2.1390             (C_F_C13_NDPOS)    3.3000                 
+(C_F_C13_NDNEG)    2.1443             (C_F_C13_NDPOS)    3.2974                 
 
-(C_F_C14_NDNEG)    2.1390             (C_F_C14_NDPOS)    3.3000                 
+(C_F_C14_NDNEG)    2.1452             (C_F_C14_NDPOS)    3.2967                 
 
-(C_F_C15_NDNEG)    2.1390             (C_F_C15_NDPOS)    3.2999                 
+(C_F_C15_NDNEG)    2.1463             (C_F_C15_NDPOS)    3.2958                 
 
-(C_F_C16_NDNEG)    2.1390             (C_F_C16_NDPOS)    3.2999                 
+(C_F_C16_NDNEG)    2.1476             (C_F_C16_NDPOS)    3.2948                 
 
-(C_F_C17_NDNEG)    2.1390             (C_F_C17_NDPOS)    3.2999                 
+(C_F_C17_NDNEG)    2.1493             (C_F_C17_NDPOS)    3.2934                 
 
-(C_F_C18_NDNEG)    2.1391             (C_F_C18_NDPOS)    3.2999                 
+(C_F_C18_NDNEG)    2.1512             (C_F_C18_NDPOS)    3.2919                 
 
-(C_F_C19_NDNEG)    2.1392             (C_F_C19_NDPOS)    3.2998                 
+(C_F_C19_NDNEG)    2.1536             (C_F_C19_NDPOS)    3.2900                 
 
-(C_F_C1_NDBIAS)     .8612             (C_F_C20_NDNEG)    2.1392                 
+(C_F_C1_NDBIAS)     .7248             (C_F_C20_NDNEG)    2.1563                 
 
-(C_F_C20_NDPOS)    3.2998             (C_F_C21_NDNEG)    2.1393                 
+(C_F_C20_NDPOS)    3.2877             (C_F_C21_NDNEG)    2.1595                 
 
-(C_F_C21_NDPOS)    3.2997             (C_F_C22_NDNEG)    2.1395                 
+(C_F_C21_NDPOS)    3.2851             (C_F_C22_NDNEG)    2.1631                 
 
-(C_F_C22_NDPOS)    3.2996             (C_F_C23_NDNEG)    2.1396                 
+(C_F_C22_NDPOS)    3.2821             (C_F_C23_NDNEG)    2.1673                 
 
-(C_F_C23_NDPOS)    3.2994             (C_F_C24_NDNEG)    2.1398                 
+(C_F_C23_NDPOS)    3.2787             (C_F_C24_NDNEG)    2.1719                 
 
-(C_F_C24_NDPOS)    3.2993             (C_F_C25_NDNEG)    2.1401                 
+(C_F_C24_NDPOS)    3.2748             (C_F_C25_NDNEG)    2.1770                 
 
-(C_F_C25_NDPOS)    3.2991             (C_F_C26_NDNEG)    2.1405                 
+(C_F_C25_NDPOS)    3.2704             (C_F_C26_NDNEG)    2.1826                 
 
-(C_F_C26_NDPOS)    3.2988             (C_F_C27_NDNEG)    2.1409                 
+(C_F_C26_NDPOS)    3.2655             (C_F_C27_NDNEG)    2.1886                 
 
-(C_F_C27_NDPOS)    3.2984             (C_F_C28_NDNEG)    2.1415                 
+(C_F_C27_NDPOS)    3.2601             (C_F_C28_NDNEG)    2.1952                 
 
-(C_F_C28_NDPOS)    3.2980             (C_F_C29_NDNEG)    2.1422                 
+(C_F_C28_NDPOS)    3.2542             (C_F_C29_NDNEG)    2.2022                 
 
-(C_F_C29_NDPOS)    3.2974             (C_F_C2_NDBIAS)     .8612                 
+(C_F_C29_NDPOS)    3.2477             (C_F_C2_NDBIAS)     .7248                 
 
-(C_F_C30_NDNEG)    2.1431             (C_F_C30_NDPOS)    3.2967                 
+(C_F_C30_NDNEG)    2.2096             (C_F_C30_NDPOS)    3.2406                 
 
-(C_F_C31_NDNEG)    2.1442             (C_F_C31_NDPOS)    3.2959                 
+(C_F_C31_NDNEG)    2.2175             (C_F_C31_NDPOS)    3.2328                 
 
-(C_F_C32_NDNEG)    2.1455             (C_F_C32_NDPOS)    3.2948                 
+(C_F_C32_NDNEG)    2.2258             (C_F_C32_NDPOS)    3.2244                 
 
-(C_F_C33_NDNEG)    2.1471             (C_F_C33_NDPOS)    3.2935                 
+(C_F_C33_NDNEG)    2.2345             (C_F_C33_NDPOS)    3.2153                 
 
-(C_F_C34_NDNEG)    2.1491             (C_F_C34_NDPOS)    3.2919                 
+(C_F_C34_NDNEG)    2.2436             (C_F_C34_NDPOS)    3.2053                 
 
-(C_F_C35_NDNEG)    2.1515             (C_F_C35_NDPOS)    3.2900                 
+(C_F_C35_NDNEG)    2.2530             (C_F_C35_NDPOS)    3.1945                 
 
-(C_F_C36_NDNEG)    2.1542             (C_F_C36_NDPOS)    3.2878                 
+(C_F_C36_NDNEG)    2.2628             (C_F_C36_NDPOS)    3.1827                 
 
-(C_F_C37_NDNEG)    2.1574             (C_F_C37_NDPOS)    3.2852                 
+(C_F_C37_NDNEG)    2.2730             (C_F_C37_NDPOS)    3.1698                 
 
-(C_F_C38_NDNEG)    2.1611             (C_F_C38_NDPOS)    3.2822                 
+(C_F_C38_NDNEG)    2.2834             (C_F_C38_NDPOS)    3.1555                 
 
-(C_F_C39_NDNEG)    2.1652             (C_F_C39_NDPOS)    3.2787                 
+(C_F_C39_NDNEG)    2.2942             (C_F_C39_NDPOS)    3.1397                 
 
-(C_F_C3_NDBIAS)     .8612             (C_F_C40_NDNEG)    2.1699                 
+(C_F_C3_NDBIAS)     .7249             (C_F_C40_NDNEG)    2.3053                 
 
-(C_F_C40_NDPOS)    3.2748             (C_F_C41_NDNEG)    2.1750                 
+(C_F_C40_NDPOS)    3.1219             (C_F_C41_NDNEG)    2.3167                 
 
-(C_F_C41_NDPOS)    3.2704             (C_F_C42_NDNEG)    2.1806                 
+(C_F_C41_NDPOS)    3.1016             (C_F_C42_NDNEG)    2.3283                 
 
-(C_F_C42_NDPOS)    3.2655             (C_F_C43_NDNEG)    2.1867                 
+(C_F_C42_NDPOS)    3.0779             (C_F_C43_NDNEG)    2.3402                 
 
-(C_F_C43_NDPOS)    3.2601             (C_F_C44_NDNEG)    2.1933                 
+(C_F_C43_NDPOS)    3.0494             (C_F_C44_NDNEG)    2.3523                 
 
-(C_F_C44_NDPOS)    3.2541             (C_F_C45_NDNEG)    2.2003                 
+(C_F_C44_NDPOS)    3.0130             (C_F_C45_NDNEG)    2.3645                 
 
-(C_F_C45_NDPOS)    3.2476             (C_F_C46_NDNEG)    2.2078                 
+(C_F_C45_NDPOS)    2.9598             (C_F_C46_NDNEG)    2.3761                 
 
-(C_F_C46_NDPOS)    3.2405             (C_F_C47_NDNEG)    2.2158                 
+(C_F_C46_NDPOS)    2.8192             (C_F_C47_NDNEG)    2.3789                 
 
-(C_F_C47_NDPOS)    3.2327             (C_F_C48_NDNEG)    2.2241                 
+(C_F_C47_NDPOS)    1.8134             (C_F_C48_NDNEG)    2.3799                 
 
-(C_F_C48_NDPOS)    3.2243             (C_F_C49_NDNEG)    2.2328                 
+(C_F_C48_NDPOS)    1.0254             (C_F_C49_NDNEG)    2.3800                 
 
-(C_F_C49_NDPOS)    3.2151             (C_F_C4_NDBIAS)     .8612                 
+(C_F_C49_NDPOS)     .9642             (C_F_C4_NDBIAS)     .7249                 
 
-(C_F_C50_NDNEG)    2.2420             (C_F_C50_NDPOS)    3.2052                 
+(C_F_C50_NDNEG)    2.3800             (C_F_C50_NDPOS)     .9411                 
 
-(C_F_C51_NDNEG)    2.2515             (C_F_C51_NDPOS)    3.1943                 
+(C_F_C51_NDNEG)    2.3801             (C_F_C51_NDPOS)     .9264                 
 
-(C_F_C52_NDNEG)    2.2613             (C_F_C52_NDPOS)    3.1825                 
+(C_F_C52_NDNEG)    2.3801             (C_F_C52_NDPOS)     .9155                 
 
-(C_F_C53_NDNEG)    2.2715             (C_F_C53_NDPOS)    3.1695                 
+(C_F_C53_NDNEG)    2.3801             (C_F_C53_NDPOS)     .9070                 
 
-(C_F_C54_NDNEG)    2.2821             (C_F_C54_NDPOS)    3.1552                 
+(C_F_C54_NDNEG)    2.3801             (C_F_C54_NDPOS)     .8999                 
 
-(C_F_C55_NDNEG)    2.2929             (C_F_C55_NDPOS)    3.1393                 
+(C_F_C55_NDNEG)    2.3801             (C_F_C55_NDPOS)     .8940                 
 
-(C_F_C56_NDNEG)    2.3041             (C_F_C56_NDPOS)    3.1214                 
+(C_F_C56_NDNEG)    2.3801             (C_F_C56_NDPOS)     .8888                 
 
-(C_F_C57_NDNEG)    2.3155             (C_F_C57_NDPOS)    3.1010                 
+(C_F_C57_NDNEG)    2.3801             (C_F_C57_NDPOS)     .8844                 
 
-(C_F_C58_NDNEG)    2.3272             (C_F_C58_NDPOS)    3.0773                 
+(C_F_C58_NDNEG)    2.3801             (C_F_C58_NDPOS)     .8804                 
 
-(C_F_C59_NDNEG)    2.3391             (C_F_C59_NDPOS)    3.0487                 
+(C_F_C59_NDNEG)    2.3801             (C_F_C59_NDPOS)     .8769                 
 
-(C_F_C5_NDBIAS)     .8612             (C_F_C60_NDNEG)    2.3513                 
+(C_F_C5_NDBIAS)     .7249             (C_F_C60_NDNEG)    2.3801                 
 
-(C_F_C60_NDPOS)    3.0121             (C_F_C61_NDNEG)    2.3635                 
+(C_F_C60_NDPOS)     .8737             (C_F_C61_NDNEG)    2.3801                 
 
-(C_F_C61_NDPOS)    2.9586             (C_F_C62_NDNEG)    2.3751                 
+(C_F_C61_NDPOS)     .8708             (C_F_C62_NDNEG)    2.3801                 
 
-(C_F_C62_NDPOS)    2.8155             (C_F_C63_NDNEG)    2.3778                 
+(C_F_C62_NDPOS)     .8681             (C_F_C63_NDNEG)    2.3801                 
 
-(C_F_C63_NDPOS)    1.8243             (C_F_C6_NDBIAS)     .8612                 
+(C_F_C63_NDPOS)     .8657             (C_F_C6_NDBIAS)     .7250                 
 
-(C_F_C7_NDBIAS)     .8612             (C_F_C8_NDBIAS)     .8612                 
+(C_F_C7_NDBIAS)     .7250             (C_F_C8_NDBIAS)     .7251                 
 
-(C_F_C9_NDBIAS)     .8612             (C_F_D_N259339)    3.3000                 
+(C_F_C9_NDBIAS)     .7252             (C_F_D_N259339)    3.3000                 
 
 (C_F_D_N259543)    3.3000             (C_F_D_N259565)    3.3000                 
 
-(C_F_D_N259605)    3.3000             (C_F_D_N564920)    3.3000                 
+(C_F_D_N259605) 644.9E-09             (C_F_D_N564920)    3.3000                 
 
-(C_F_D_N564924)    3.3000             (C_F_D_N565082)    3.3000                 
+(C_F_D_N564924) 575.5E-09             (C_F_D_N565082)    3.3000                 
 
 (C_F_D_N565094)    3.3000             (C_F_D_N565104)    3.3000                 
 
-(C_F_D_N565120)    3.3000             (C_F_D_N565130)    3.3000                 
+(C_F_D_N565120)    3.3000             (C_F_D_N565130) 644.9E-09                 
 
 (C_F_D_N565340)    3.3000             (C_F_D_N565498) 117.3E-09                 
 
@@ -4098,11 +4101,11 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_F_D_N567801)    3.3000             (C_F_D_N567811)    3.3000                 
 
-(C_F_D_N567821)    3.3000             (C_F_D_N567831)    3.3000                 
+(C_F_D_N567821)    3.3000             (C_F_D_N567831) 644.9E-09                 
 
-(C_F_D_N567841)    3.3000             (C_F_D_N567851)    3.3000                 
+(C_F_D_N567841) 587.7E-09             (C_F_D_N567851) 575.5E-09                 
 
-(C_F_D_N567861)    3.3000             (C_F_D_N568485)    3.3000                 
+(C_F_D_N567861) 568.9E-09             (C_F_D_N568485)    3.3000                 
 
 (C_F_D_N568499)    3.3000             (C_F_D_N568511)    3.3000                 
 
@@ -4118,15 +4121,15 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_F_D_N572134)    3.3000             (C_F_D_N572144)    3.3000                 
 
-(C_F_D_N572160)    3.3000             (C_F_D_N573020)    3.3000                 
+(C_F_D_N572160)    3.3000             (C_F_D_N573020) 644.9E-09                 
 
-(C_F_D_N573036)    3.3000             (C_F_D_N573046)    3.3000                 
+(C_F_D_N573036) 599.9E-09             (C_F_D_N573046) 587.7E-09                 
 
-(C_F_D_N573056)    3.3000             (C_F_D_N573066)    3.3000                 
+(C_F_D_N573056) 580.5E-09             (C_F_D_N573066) 575.5E-09                 
 
-(C_F_D_N573076)    3.3000             (C_F_D_N573086)    3.3000                 
+(C_F_D_N573076) 571.8E-09             (C_F_D_N573086) 568.9E-09                 
 
-(C_F_D_N573096)    3.3000             (C_F_D_N578480)    3.3000                 
+(C_F_D_N573096) 566.5E-09             (C_F_D_N578480)    3.3000                 
 
 (C_F_D_N578504)    3.3000             (C_F_D_N578514)    3.3000                 
 
@@ -4164,7 +4167,7 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_F_D_NDLSB21)    3.3000             (C_F_D_NDLSB22)    3.3000                 
 
-(C_F_D_NDLSB23)    3.3000             (C_F_D_NDLSB24)    3.3000                 
+(C_F_D_NDLSB23)    3.3000             (C_F_D_NDLSB24) 11.11E-06                 
 
 (C_F_D_NDLSB25)    3.3000             (C_F_D_NDLSB26)    3.3000                 
 
@@ -4172,13 +4175,13 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_F_D_NDLSB29)    3.3000             (C_F_D_NDLSB30)    3.3000                 
 
-(C_F_D_NDLSB31)    3.3000             (C_F_D_NDLSB32) 11.48E-06                 
+(C_F_D_NDLSB31)    3.3000             (C_F_D_NDLSB32)    3.3000                 
 
 (C_F_D_NDX1LSB)    3.3000             (C_F_D_NDX2LSB)    3.3000                 
 
-(C_F_D_NDX3LSB)    3.3000             (C_F_D_NDX4LSB) 68.88E-09                 
+(C_F_D_NDX3LSB) 68.88E-09             (C_F_D_NDX4LSB)    3.3000                 
 
-(C_F_D_U10_ND2)    2.7916             (C_F_D_U12_ND2) 150.7E-09                 
+(C_F_D_U10_ND2) 1.037E-06             (C_F_D_U12_ND2) 150.7E-09                 
 
 (C_F_D_U12_ND3) 100.5E-09             (C_F_D_U12_ND4) 50.24E-09                 
 
@@ -4192,9 +4195,9 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_F_D_U25_ND2)    2.7916             (C_F_D_U26_ND2)    2.7916                 
 
-(C_F_D_U27_ND2)    2.7916             (C_F_D_U28_ND2)    2.7916                 
+(C_F_D_U27_ND2)    2.7916             (C_F_D_U28_ND2)    2.7913                 
 
-(C_F_D_U29_ND2)    2.7916             (C_F_D_U30_ND2)    2.7913                 
+(C_F_D_U29_ND2) 1.036E-06             (C_F_D_U30_ND2) 1.037E-06                 
 
 (C_F_D_U47_ND2)    2.7916             (C_F_D_U48_ND2)    2.7916                 
 
@@ -4204,13 +4207,13 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_F_D_U53_ND2)    2.7916             (C_F_D_U54_ND2)    2.7916                 
 
-(C_F_D_U55_ND2)    2.7916             (C_F_D_U56_ND2)    2.7916                 
+(C_F_D_U55_ND2)    2.7916             (C_F_D_U56_ND2)    2.7915                 
 
-(C_F_D_U57_ND2)    2.7916             (C_F_D_U58_ND2)    2.7916                 
+(C_F_D_U57_ND2)    2.7808             (C_F_D_U58_ND2) 1.036E-06                 
 
-(C_F_D_U59_ND2)    2.7916             (C_F_D_U60_ND2)    2.7915                 
+(C_F_D_U59_ND2) 1.037E-06             (C_F_D_U60_ND2) 1.037E-06                 
 
-(C_F_D_U61_ND2)    2.7802             (C_F_D_U62_ND2) 302.1E-09                 
+(C_F_D_U61_ND2) 1.037E-06             (C_F_D_U62_ND2) 302.1E-09                 
 
 (C_F_D_U63_ND2) 102.7E-09             (C_F_D_U63_ND3) 87.99E-09                 
 
@@ -4256,63 +4259,63 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_F_R4_N62128) 604.2E-09             (C_F_R4_N62152)    3.3000                 
 
-(C_F_R5_N62128) 604.2E-09             (C_F_R5_N62152)    3.3000                 
+(C_F_R5_N62128)    3.3000             (C_F_R5_N62152) 604.2E-09                 
 
 (C_F_R6_N62128) 604.2E-09             (C_F_R6_N62152)    3.3000                 
 
-(C_F_C10_NDBIAS)     .8612            (C_F_C11_NDBIAS)     .8612                
+(C_F_C10_NDBIAS)     .7253            (C_F_C11_NDBIAS)     .7254                
 
-(C_F_C12_NDBIAS)     .8612            (C_F_C13_NDBIAS)     .8612                
+(C_F_C12_NDBIAS)     .7256            (C_F_C13_NDBIAS)     .7258                
 
-(C_F_C14_NDBIAS)     .8612            (C_F_C15_NDBIAS)     .8612                
+(C_F_C14_NDBIAS)     .7261            (C_F_C15_NDBIAS)     .7264                
 
-(C_F_C16_NDBIAS)     .8612            (C_F_C17_NDBIAS)     .8613                
+(C_F_C16_NDBIAS)     .7269            (C_F_C17_NDBIAS)     .7274                
 
-(C_F_C18_NDBIAS)     .8613            (C_F_C19_NDBIAS)     .8613                
+(C_F_C18_NDBIAS)     .7280            (C_F_C19_NDBIAS)     .7288                
 
-(C_F_C20_NDBIAS)     .8613            (C_F_C21_NDBIAS)     .8613                
+(C_F_C20_NDBIAS)     .7296            (C_F_C21_NDBIAS)     .7306                
 
-(C_F_C22_NDBIAS)     .8614            (C_F_C23_NDBIAS)     .8614                
+(C_F_C22_NDBIAS)     .7318            (C_F_C23_NDBIAS)     .7331                
 
-(C_F_C24_NDBIAS)     .8615            (C_F_C25_NDBIAS)     .8616                
+(C_F_C24_NDBIAS)     .7346            (C_F_C25_NDBIAS)     .7362                
 
-(C_F_C26_NDBIAS)     .8617            (C_F_C27_NDBIAS)     .8618                
+(C_F_C26_NDBIAS)     .7379            (C_F_C27_NDBIAS)     .7399                
 
-(C_F_C28_NDBIAS)     .8620            (C_F_C29_NDBIAS)     .8622                
+(C_F_C28_NDBIAS)     .7420            (C_F_C29_NDBIAS)     .7442                
 
-(C_F_C30_NDBIAS)     .8625            (C_F_C31_NDBIAS)     .8629                
+(C_F_C30_NDBIAS)     .7466            (C_F_C31_NDBIAS)     .7491                
 
-(C_F_C32_NDBIAS)     .8633            (C_F_C33_NDBIAS)     .8638                
+(C_F_C32_NDBIAS)     .7517            (C_F_C33_NDBIAS)     .7545                
 
-(C_F_C34_NDBIAS)     .8644            (C_F_C35_NDBIAS)     .8652                
+(C_F_C34_NDBIAS)     .7574            (C_F_C35_NDBIAS)     .7604                
 
-(C_F_C36_NDBIAS)     .8661            (C_F_C37_NDBIAS)     .8671                
+(C_F_C36_NDBIAS)     .7636            (C_F_C37_NDBIAS)     .7668                
 
-(C_F_C38_NDBIAS)     .8682            (C_F_C39_NDBIAS)     .8696                
+(C_F_C38_NDBIAS)     .7702            (C_F_C39_NDBIAS)     .7737                
 
-(C_F_C40_NDBIAS)     .8710            (C_F_C41_NDBIAS)     .8727                
+(C_F_C40_NDBIAS)     .7772            (C_F_C41_NDBIAS)     .7809                
 
-(C_F_C42_NDBIAS)     .8745            (C_F_C43_NDBIAS)     .8764                
+(C_F_C42_NDBIAS)     .7847            (C_F_C43_NDBIAS)     .7886                
 
-(C_F_C44_NDBIAS)     .8785            (C_F_C45_NDBIAS)     .8807                
+(C_F_C44_NDBIAS)     .7925            (C_F_C45_NDBIAS)     .7965                
 
-(C_F_C46_NDBIAS)     .8831            (C_F_C47_NDBIAS)     .8857                
+(C_F_C46_NDBIAS)     .8003            (C_F_C47_NDBIAS)     .8012                
 
-(C_F_C48_NDBIAS)     .8883            (C_F_C49_NDBIAS)     .8911                
+(C_F_C48_NDBIAS)     .8015            (C_F_C49_NDBIAS)     .8016                
 
-(C_F_C50_NDBIAS)     .8941            (C_F_C51_NDBIAS)     .8971                
+(C_F_C50_NDBIAS)     .8016            (C_F_C51_NDBIAS)     .8016                
 
-(C_F_C52_NDBIAS)     .9003            (C_F_C53_NDBIAS)     .9036                
+(C_F_C52_NDBIAS)     .8016            (C_F_C53_NDBIAS)     .8016                
 
-(C_F_C54_NDBIAS)     .9070            (C_F_C55_NDBIAS)     .9105                
+(C_F_C54_NDBIAS)     .8016            (C_F_C55_NDBIAS)     .8016                
 
-(C_F_C56_NDBIAS)     .9141            (C_F_C57_NDBIAS)     .9178                
+(C_F_C56_NDBIAS)     .8016            (C_F_C57_NDBIAS)     .8016                
 
-(C_F_C58_NDBIAS)     .9216            (C_F_C59_NDBIAS)     .9255                
+(C_F_C58_NDBIAS)     .8016            (C_F_C59_NDBIAS)     .8016                
 
-(C_F_C60_NDBIAS)     .9294            (C_F_C61_NDBIAS)     .9334                
+(C_F_C60_NDBIAS)     .8016            (C_F_C61_NDBIAS)     .8016                
 
-(C_F_C62_NDBIAS)     .9372            (C_F_C63_NDBIAS)     .9381                
+(C_F_C62_NDBIAS)     .8016            (C_F_C63_NDBIAS)     .8016                
 
 (C_F_D_U100_ND2) 102.7E-09            (C_F_D_U100_ND3) 87.99E-09                
 
@@ -4326,33 +4329,33 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_F_D_U120_ND2)    2.7916            (C_F_D_U121_ND2)    2.7916                
 
-(C_F_D_U122_ND2)    2.7916            (C_F_D_U123_ND2)    2.7916                
+(C_F_D_U122_ND2)    2.7915            (C_F_D_U123_ND2)    2.7908                
 
-(C_F_D_U124_ND2)    2.7916            (C_F_D_U125_ND2) 5.646E-06                
+(C_F_D_U124_ND2) 5.468E-06            (C_F_D_U125_ND2) 1.037E-06                
 
-(C_F_D_U126_ND2)    2.7907            (C_F_D_U127_ND2)    2.7915                
+(C_F_D_U126_ND2) 1.037E-06            (C_F_D_U127_ND2) 1.037E-06                
 
-(C_F_D_U129_ND2)    2.7916            (C_F_D_U130_ND2)    2.7916                
+(C_F_D_U129_ND2) 1.037E-06            (C_F_D_U130_ND2) 1.037E-06                
 
-(C_F_D_U131_ND2)    2.7916            (C_F_D_U132_ND2)    2.7916                
+(C_F_D_U131_ND2) 1.037E-06            (C_F_D_U132_ND2) 1.036E-06                
 
-(C_F_D_U133_ND2)    2.7916            (C_F_D_U134_ND2) 102.7E-09                
+(C_F_D_U133_ND2) 1.036E-06            (C_F_D_U134_ND2)    2.7990                
 
-(C_F_D_U134_ND3) 87.99E-09            (C_F_D_U134_ND4) 73.33E-09                
+(C_F_D_U134_ND3)    2.7640            (C_F_D_U134_ND4)    2.7480                
 
-(C_F_D_U134_ND5) 58.66E-09            (C_F_D_U134_ND6) 44.00E-09                
+(C_F_D_U134_ND5)    2.7375            (C_F_D_U134_ND6)    2.7298                
 
-(C_F_D_U134_ND7) 29.33E-09            (C_F_D_U134_ND8) 14.67E-09                
+(C_F_D_U134_ND7)    2.7238            (C_F_D_U134_ND8)    2.7188                
 
-(C_F_D_U135_ND2)    2.7990            (C_F_D_U135_ND3)    2.7640                
+(C_F_D_U135_ND2) 102.7E-09            (C_F_D_U135_ND3) 87.99E-09                
 
-(C_F_D_U135_ND4)    2.7480            (C_F_D_U135_ND5)    2.7375                
+(C_F_D_U135_ND4) 73.33E-09            (C_F_D_U135_ND5) 58.66E-09                
 
-(C_F_D_U135_ND6)    2.7298            (C_F_D_U135_ND7)    2.7238                
+(C_F_D_U135_ND6) 44.00E-09            (C_F_D_U135_ND7) 29.33E-09                
 
-(C_F_D_U135_ND8)    2.7188            (C_F_D_U140_ND2)    2.7918                
+(C_F_D_U135_ND8) 14.67E-09            (C_F_D_U140_ND2)    2.7923                
 
-(C_F_D_U140_ND3)    2.7553            (C_F_D_U140_ND4)    2.7382                
+(C_F_D_U140_ND3)    2.7557            (C_F_D_U140_ND4) 293.5E-09                
 
 (C_1R_DIV_N02264)    1.1000           (C_1R_DIV_N03019)    1.5200               
 
@@ -4396,13 +4399,13 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 (C_F_R4_NAND5_ND2) 145.5E-06          (C_F_R4_NAND6_ND2)    2.7916              
 
-(C_F_R5_NAND1_ND2)    2.7854          (C_F_R5_NAND1_ND3) 438.5E-09              
+(C_F_R5_NAND1_ND2)    2.8444          (C_F_R5_NAND1_ND3)     .0680              
 
-(C_F_R5_NAND2_ND2) 302.1E-09          (C_F_R5_NAND3_ND2)     .0560              
+(C_F_R5_NAND2_ND2) 1.057E-06          (C_F_R5_NAND3_ND2)    2.7916              
 
-(C_F_R5_NAND4_ND2)     .0973          (C_F_R5_NAND5_ND2) 145.5E-06              
+(C_F_R5_NAND4_ND2)    1.2318          (C_F_R5_NAND5_ND2)     .2633              
 
-(C_F_R5_NAND6_ND2)    2.7916          (C_F_R6_NAND1_ND2)    2.7854              
+(C_F_R5_NAND6_ND2) 302.1E-09          (C_F_R6_NAND1_ND2)    2.7854              
 
 (C_F_R6_NAND1_ND3) 438.5E-09          (C_F_R6_NAND2_ND2) 302.1E-09              
 
@@ -4420,17 +4423,17 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
     V_C_1R_DIV_V1   1.000E-06
     V_C_2R_DIV_V1   1.000E-06
     V_VBIAS      0.000E+00
-    V_VDD       -1.879E-02
+    V_VDD       -3.089E-02
     V_VREF      -2.000E-06
     V_VA         0.000E+00
 
-    TOTAL POWER DISSIPATION   6.20E-02  WATTS
+    TOTAL POWER DISSIPATION   1.02E-01  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 06/05/10 19:50:51 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 06/26/10 18:16:09 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "PRUEBA-bias"  [ D:\Documents\TESIS\fiocs\Design\I-FLASH-01\OrCAD\I-FLASH-6BITS\i-flash-6bits-pspicefiles\prueba\bias.si
 
@@ -4442,5 +4445,5 @@ WARNING -- Mosfet M_C_F_D_U140_M7, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =        4.10
+  Total job time (using Solver 1)   =       31.37
 
