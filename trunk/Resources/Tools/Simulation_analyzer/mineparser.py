@@ -43,7 +43,7 @@
 """ This module parses CSDF file format """
 
 #python imports
-import os, sys, string, re, time
+import os, sys, string, re, time, mmap
 from stat import *
 #from common import _isfile
 import common
@@ -62,6 +62,37 @@ class ParserMain():
         self.header = {}
         self.nodes = {}
         self.nodes_values = {}
+
+        # Data structure pf a CSD file
+        _header = {"SOURCE":None,
+                   "VERSION":None,
+                   "TITLE":None,
+                   "SUBTITLE":None,
+                   "TIME":None,
+                   "DATE":None,
+                   "TEMPERATURE":None,
+                   "ANALYSIS":None,
+                   "SERIALNO":None,
+                   "ALLVALUES":None,
+                   "COMPLEXVALUES":None,
+                   "NODES":None,
+                   "SWEEPVAR":None,
+                   "SWEEPMODE":None,
+                   "XBEGIN":None,
+                   "XEND":None,
+                   "FORMAT":None,
+                   "DGTLDATA":None}
+
+        _ntime = []
+        _nnodes = []
+        _voltages = {}
+
+        _body = {"ntime":_ntime,
+                 "nnodes":_nnodes,
+                 "voltages":_voltages}
+
+        self._csdfile = {"header":_header,
+                         "body":_body}
 
     def _filetype (self,file):
         """ Return file for a regular file and dir for a directory. """
@@ -202,11 +233,89 @@ class ParserMain():
         #for key in self.nodes_values:
         #   print "%s -> %s" % (key, self.nodes_values[key])
 
+    def _get_headers(self,map,_first,_second):
+        """ extract the headers values from the mapped file """
+
+        _value = map[map.find(_first):map.find(_second)]
+        _value = _value.rstrip()
+        _value = re.findall(r"(.*)'(.*)'",_value).pop()
+        _value = _value[0] + " " + _value[1]
+        return _value
+
+    def _parsecsdf2(self,file):
+        """ This is an improved way to parse CSD files """
+
+        f = open(file, "r+b")
+        map = mmap.mmap(f.fileno(),0)
+        f.close()
+
+        # PARSE HEADER OF THE FILE
+
+        self._csdfile["header"]["SOURCE"] = \
+                self._get_headers(map,"SOURCE","VERSION")
+        self._csdfile["header"]["VERSION"] = \
+                self._get_headers(map,"VERSION","TITLE")
+        self._csdfile["header"]["TITLE"] = \
+                self._get_headers(map,"TITLE","SUBTITLE")
+        self._csdfile["header"]["SUBTITLE"] = \
+                self._get_headers(map,"SUBTITLE","TIME")
+        self._csdfile["header"]["TIME"] = \
+                self._get_headers(map,"TIME","DATE")
+        self._csdfile["header"]["DATE"] = \
+                self._get_headers(map,"DATE","TEMPERATURE")
+        self._csdfile["header"]["TEMPERATURE"] = \
+                self._get_headers(map,"TEMPERATURE","ANALYSIS")
+        self._csdfile["header"]["ANALYSIS"] = \
+                self._get_headers(map,"ANALYSIS","SERIALNO")
+        self._csdfile["header"]["SERIALNO"] = \
+                self._get_headers(map,"SERIALNO","ALLVALUES")
+        self._csdfile["header"]["ALLVALUES"] = \
+                self._get_headers(map,"ALLVALUES","COMPLEXVALUES")
+        self._csdfile["header"]["COMPLEXVALUES"] = \
+                self._get_headers(map,"COMPLEXVALUES","NODES")
+        self._csdfile["header"]["NODES"] = \
+                self._get_headers(map,"NODES","SWEEPVAR")
+        self._csdfile["header"]["SWEEPVAR"] = \
+                self._get_headers(map,"SWEEPVAR","SWEEPMODE")
+        self._csdfile["header"]["SWEEPMODE"] = \
+                self._get_headers(map,"SWEEPMODE","XBEGIN")
+        self._csdfile["header"]["XBEGIN"] = \
+                self._get_headers(map,"XBEGIN","XEND")
+        self._csdfile["header"]["XEND"] = \
+                self._get_headers(map,"XEND","FORMAT")
+        self._csdfile["header"]["FORMAT"] = \
+                self._get_headers(map,"FORMAT","DGTLDATA")
+        self._csdfile["header"]["DGTLDATA"] = \
+                self._get_headers(map,"DGTLDATA","#N")
+
+        # PARSE THE BODY OF THE FILE
+
+        _body = map[map.find("#N")+2:map.find("#C")]
+        _body = _body.split(' ')
+
+        for each in _body:
+            each = each.strip()
+            if each != '':
+                self._csdfile["body"]["nnodes"].append(each)
+
+        if self._csdfile["header"]["NODES"].split(' ')[1] == \
+           str(self._csdfile["body"]["nnodes"].__len__()):
+            print "NODES var match NODES readed!!"
+        else:
+            print "NODES var  NOT match NODES readed!!"
+
+        _rawdata = map[map.find("#C"):]
+        _rawdata = _rawdata.split("#C ")
+
+        #extraer los primeros 0.0000000000E00 + nodes (744)
+
+        return True
+
     def run (self,csdfile):
         """ Function doc """
         #print self._readdir(self.dir)
         if self._isfilecsdf(csdfile):
-            return self._parsecsdf(csdfile)
+            return self._parsecsdf2(csdfile)
         else:
             print "ERROR: %s" % self._isfilecsdf(csdfile)
         #print "HOLA"
@@ -214,5 +323,8 @@ class ParserMain():
 
 if __name__ == '__main__':
     A = ParserMain()
-    A.run()
-
+    FILE = "D:\\test\\test-LSB.csd"
+    A.run(FILE)
+    print "DICTIONARY:\n"
+    print A._csdfile.keys()
+    #print A._csdfile["body"]
