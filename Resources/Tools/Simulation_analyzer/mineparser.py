@@ -47,6 +47,7 @@ import os, sys, string, re, time, mmap
 from stat import *
 #from common import _isfile
 import common
+import decimal as dc
 
 class ParserMain():
     """ Main class of the parser"""
@@ -293,10 +294,11 @@ class ParserMain():
         _body = map[map.find("#N")+2:map.find("#C")]
         _body = _body.split(' ')
 
-        for each in _body:
-            each = each.strip()
-            if each != '':
-                self._csdfile["body"]["nnodes"].append(each)
+        for _each in _body:
+            _each = _each.strip()
+            if _each != '':
+                self._csdfile["body"]["nnodes"].append(_each)
+                self._csdfile["body"]["voltages"][_each] = []
 
         if self._csdfile["header"]["NODES"].split(' ')[1] == \
            str(self._csdfile["body"]["nnodes"].__len__()):
@@ -306,10 +308,26 @@ class ParserMain():
 
         _rawdata = map[map.find("#C"):]
         _rawdata = _rawdata.split("#C ")
+        _rawdata.__delitem__(0)
+        print "el split tiene %s" % _rawdata.__len__()
 
-        #extraer los primeros 0.0000000000E00 + nodes (744)
+        for _tslot in _rawdata:
+            #print "%s : %s" % (counter,times.__getslice__(0,times.find("\r\n")))
+            (_time, _sep, _vals) = _tslot.partition("\r\n")
 
-        return True
+            self._csdfile["body"]["ntime"].append(_time)
+            _vals = _vals.split(' ')
+            _vals.pop()
+
+            for _each in _vals:
+                _each = _each.strip()
+                (_volt,_node) = _each.split(':')
+                _node = int(_node,16) - 1
+                _node = self._csdfile["body"]["nnodes"][_node]
+                if _each != '':
+                    self._csdfile["body"]["voltages"][_node].append(dc.Decimal(_volt))
+
+        return self._csdfile
 
     def run (self,csdfile):
         """ Function doc """
@@ -324,7 +342,14 @@ class ParserMain():
 if __name__ == '__main__':
     A = ParserMain()
     FILE = "D:\\test\\test-LSB.csd"
-    A.run(FILE)
-    print "DICTIONARY:\n"
-    print A._csdfile.keys()
+    pepo = A.run(FILE)
+    #print "DICTIONARY:\n"
+    #print A._csdfile.keys()
     #print A._csdfile["body"]
+    nodo = A._csdfile["body"]["nnodes"][0]
+    valor = A._csdfile["body"]["voltages"][nodo]
+    print "Values en el nodo %s = %s" % (nodo,valor)
+
+    nodo = pepo["body"]["nnodes"][0]
+    valor = pepo["body"]["voltages"][nodo]
+    print "Values en el nodo %s = %s" % (nodo,valor)

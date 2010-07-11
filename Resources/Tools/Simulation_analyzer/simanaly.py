@@ -208,6 +208,15 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             print "MODEL: %s" % model_
             print "#####################################################"
 
+            #################################################
+            # INTEGRACION!!!!!
+            #algo = self.parser.run(str(item_))
+            #print algo["header"]["TITLE"]
+            #print "\n\n"
+            #nodtt = algo["body"]["nnodes"][0]
+            #print algo["body"]["voltages"][nodtt]
+            ##################################################
+
             voltages,nodes = self.parser.run(str(item_))
 
             b1,b2,b3,b4,b5,b6 = self.giveId(nodes)
