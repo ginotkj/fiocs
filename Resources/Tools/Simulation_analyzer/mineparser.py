@@ -309,7 +309,7 @@ class ParserMain():
         _rawdata = map[map.find("#C"):]
         _rawdata = _rawdata.split("#C ")
         _rawdata.__delitem__(0)
-        print "el split tiene %s" % _rawdata.__len__()
+        #print "el split tiene %s" % _rawdata.__len__()
 
         for _tslot in _rawdata:
             #print "%s : %s" % (counter,times.__getslice__(0,times.find("\r\n")))

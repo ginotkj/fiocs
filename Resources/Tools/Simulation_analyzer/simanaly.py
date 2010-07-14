@@ -130,7 +130,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 
     def remove_one(self):
         self.statusbar.showMessage("This function is not implemented",1200)
-        print "INFO: %s" % self.listWidget.selectedItems()
+        print "INFO list: %s" % self.listWidget.selectedItems()
         for it2rem in self.listWidget.selectedItems():
             print "REMOVE: %s" % it2rem
             self.listWidget.removeItemWidget(it2rem)
@@ -159,7 +159,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
                         str(self.d2a(self.spinBox_4.value())),
                         str(self.d2a(self.spinBox_5.value())),
                         str(self.d2a(self.spinBox_6.value()))]
-            print "INFO: %s" % str(voltages)
+            print "INFO voltages: %s" % str(voltages)
             return voltages
         elif self.analogRadioButton.isChecked():
             # This should be readed from the gui
@@ -170,7 +170,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
                         str(self.doubleSpinBox_4.value()),
                         str(self.doubleSpinBox_5.value()),
                         str(self.doubleSpinBox_6.value())]
-            print "INFO: %s" % str(voltages)
+            print "INFO voltages analog: %s" % str(voltages)
             return voltages
         else:
             self.statusbar.showMessage("SELECT ANALOG OR DIGITAL VOLTAGE",1500)
@@ -179,8 +179,10 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         dialog = InfoDialog(self)
         dialog.show()
         gui_voltages = self.int2dc(self._get_voltage_param_from_gui())
+        binary_w = self.int2dc(gui_voltages)
+
         items_ = self.listWidget.selectedItems()
-        print "INFO: %s" % str(items_)
+        print "INFO ITEM: %s" % str(items_)
 
         items_qty = items_.__len__()
         if items_qty == 0:
@@ -194,64 +196,33 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             valor = valor + step
             dialog.progressBar.setValue(valor)
             model_ = None
-            voltages = {}
-            nodes = {}
-            b1,b2,b3,b4,b5,b6 = None,None,None,None,None,None
+
             # This loop check the model index from the tree view for the item
             for key_ in self.global_indexes:
                 if key_ == item_.text():
                     model_ = self.global_indexes[key_]
 
             item_ = self.dirmodel.filePath(model_)
+
             print "#####################################################"
             print "FILE: %s" % item_
             print "MODEL: %s" % model_
             print "#####################################################"
 
-            #################################################
-            # INTEGRACION!!!!!
-            #algo = self.parser.run(str(item_))
-            #print algo["header"]["TITLE"]
-            #print "\n\n"
-            #nodtt = algo["body"]["nnodes"][0]
-            #print algo["body"]["voltages"][nodtt]
-            ##################################################
-
-            voltages,nodes = self.parser.run(str(item_))
-
-            b1,b2,b3,b4,b5,b6 = self.giveId(nodes)
-
-            print "La salida del give es: %s" % self.giveId(nodes)
+            csdparsed = self.parser.run(str(item_))
 
             # This loop iterates over all values
-            local_count = 0
-            for time_ in voltages:
-                tvolts = None
-                tvolts = self.int2dc(voltages[time_])
+            for nodes_ in csdparsed["body"]["ntime"]:
+                    print min(csdparsed["body"]["voltages"]["'V(C_F_D_LSB)'"]).compare(binary_w[0])
+                    print min(csdparsed["body"]["voltages"]["'V(C_F_D_2SB)'"]).compare(binary_w[1])
+                    print min(csdparsed["body"]["voltages"]["'V(C_F_D_3SB)'"]).compare(binary_w[2])
+                    print min(csdparsed["body"]["voltages"]["'V(C_F_D_4SB)'"]).compare(binary_w[3])
+                    print min(csdparsed["body"]["voltages"]["'V(C_F_D_5SB)'"]).compare(binary_w[4])
+                    print min(csdparsed["body"]["voltages"]["'V(C_F_C32_MSB)'"]).compare(binary_w[5])
 
-                #print "out b1: %s " % \
-                if self.compare_(self.comps[0],gui_voltages[0],tvolts[b1]):
-                    local_count = 1
-                #print "out b2: %s " % \
-                if self.compare_(self.comps[1],gui_voltages[1],tvolts[b2]):
-                    local_count = 1
-                #print "out b3: %s " % \
-                if self.compare_(self.comps[2],gui_voltages[2],tvolts[b3]):
-                    local_count = 1
-                #print "out b4: %s " % \
-                if self.compare_(self.comps[3],gui_voltages[3],tvolts[b4]):
-                    local_count = 1
-                #print "out b5: %s " % \
-                if self.compare_(self.comps[4],gui_voltages[4],tvolts[b5]):
-                    local_count = 1
-                #print "out b6: %s " % \
-                if self.compare_(self.comps[5],gui_voltages[5],tvolts[b6]):
-                    local_count = 1
-
-                if local_count:
-                    global_count = 1
-                    print "FALLO EN EL TIEMPO: %s" % time_
         dialog.progressBar.setValue(100)
+        time.sleep(1)
+        dialog.progressBar.close()
 
     def auto_adjust(self):
         self.treeView.resizeColumnToContents(0)
