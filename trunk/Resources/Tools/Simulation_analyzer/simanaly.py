@@ -53,6 +53,7 @@ import time
 import os
 import subprocess
 from mineparser import ParserMain
+import re
 
 #PyQt imports
 from PyQt4 import QtCore, QtGui
@@ -76,7 +77,6 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         QtGui.QMainWindow.__init__(self, parent=None)
         self.setupUi(self)
-        self.parser = ParserMain()
         self.dirmodel = QtGui.QFileSystemModel()
         self.dirmodel.setRootPath(QtCore.QDir.currentPath())
         self.treeView.setModel(self.dirmodel)
@@ -97,6 +97,16 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         # This dict holds the vars and contents of the CIR file
         self.cirFileTab = {'cirsrc':'','outdir':'','injfail':[],'injpins':[],
                             'injtypes':[]}
+        # RE that matchs each one of the folders for CSD files
+        self.field_dir = re.compile("^.*/(.*)/(.*)/(.*)/(.*)$")
+        #This list contains the failing bits
+        self.failed_bits = [0,0,0,0,0,0]
+        # This vars stores the gui voltages
+        self.gui_voltages = []
+        # First and End times for fails
+        self.firsttime = []
+        self.endtime = []
+        self.first_t = []
 
     def update_status(self):
         indices = self.treeView.currentIndex()
@@ -109,7 +119,8 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
     def add_one(self,multiple=None):
         if multiple:
             model = multiple
-        model = self.treeView.currentIndex()
+        else:
+            model = self.treeView.currentIndex()
         csdstr = QtCore.QString("csd File")
         namefile = self.dirmodel.fileName(model)
         matchflag = QtCore.Qt.MatchFixedString
@@ -117,11 +128,11 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             if self.listWidget.findItems(namefile,matchflag) == []:
                 self.listWidget.addItem(namefile)
                 self.global_indexes[namefile] = model
-                self.statusbar.showMessage("CSD file added!",1000)
+                self.statusbar.showMessage("CSD file added!",500)
             else:
-                self.statusbar.showMessage("Already added!",1200)
+                self.statusbar.showMessage("Already added!",700)
         else:
-            self.statusbar.showMessage("Not a CSD file!",1500)
+            self.statusbar.showMessage("Not a CSD file!",1000)
 
     def add_all(self):
         for singleindex in self.treeView.selectedIndexes():
@@ -178,11 +189,10 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
     def analyze(self):
         dialog = InfoDialog(self)
         dialog.show()
-        gui_voltages = self.int2dc(self._get_voltage_param_from_gui())
-        binary_w = self.int2dc(gui_voltages)
+        self.gui_voltages = self.int2dc(self._get_voltage_param_from_gui())
 
         items_ = self.listWidget.selectedItems()
-        print "INFO ITEM: %s" % str(items_)
+        print "Total items added to analize: %s" % str(items_)
 
         items_qty = items_.__len__()
         if items_qty == 0:
@@ -191,8 +201,13 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             step = (100 / items_qty).__trunc__()
         valor = 0
 
+        file_row = ''
+        file_name = ''
+
         # This loop iterates over all list widget items
         for item_ in items_:
+            parser = ParserMain()
+            csdparsed = None
             valor = valor + step
             dialog.progressBar.setValue(valor)
             model_ = None
@@ -209,20 +224,130 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             print "MODEL: %s" % model_
             print "#####################################################"
 
-            csdparsed = self.parser.run(str(item_))
+            # e.g. of expressions that field_dir has to match:
+            # D:\test\exp\n\2sd
+            fields = self.field_dir.match(str(item_))
+            inode = fields.group(4).split(".")[0]
+            mostyp = fields.group(3)
+            vin = fields.group(2)
+            failtyp = fields.group(1)
 
+            file_name = 'D:\\atest\\' + mostyp + '_' + vin + '.csv'
+
+            csdparsed = parser.run(str(item_))
+
+            #file_row = tipodefalla + vin + tipodetransistor + nodo +
+            #           falladetected + bitsfallados + duracion + difdetension
+            file_row = file_row + failtyp + ";" + vin + ";" + mostyp + ";" + inode + ";"
+
+            #This list contains the failing bits
+            self.failed_bits = [0,0,0,0,0,0]
+
+            v_ranges = [0,0]
+            self.firsttime = [0,0,0,0,0,0]
+            self.endtime = [0,0,0,0,0,0]
+            global_detect = 0
+            global_started_t = False
+            self.first_t = [True,True,True,True,True,True]
+
+            time_points = csdparsed["body"]["ntime"].__len__()
+            #print "PUNTOS SIMULADOS: %s" % time_points
             # This loop iterates over all values
-            for nodes_ in csdparsed["body"]["ntime"]:
-                    print min(csdparsed["body"]["voltages"]["'V(C_F_D_LSB)'"]).compare(binary_w[0])
-                    print min(csdparsed["body"]["voltages"]["'V(C_F_D_2SB)'"]).compare(binary_w[1])
-                    print min(csdparsed["body"]["voltages"]["'V(C_F_D_3SB)'"]).compare(binary_w[2])
-                    print min(csdparsed["body"]["voltages"]["'V(C_F_D_4SB)'"]).compare(binary_w[3])
-                    print min(csdparsed["body"]["voltages"]["'V(C_F_D_5SB)'"]).compare(binary_w[4])
-                    print min(csdparsed["body"]["voltages"]["'V(C_F_C32_MSB)'"]).compare(binary_w[5])
+            for time_ in xrange(0,time_points-1):
+                sum_bit = 0
 
+                self.cmp_out(csdparsed,"'V(C_F_D_LSB)'",time_,0)
+                self.cmp_out(csdparsed,"'V(C_F_D_2SB)'",time_,1)
+                self.cmp_out(csdparsed,"'V(C_F_D_3SB)'",time_,2)
+                self.cmp_out(csdparsed,"'V(C_F_D_4SB)'",time_,3)
+                self.cmp_out(csdparsed,"'V(C_F_D_5SB)'",time_,4)
+                self.cmp_out(csdparsed,"'V(C_F_C32_MSB)'",time_,5)
+
+                #Check if one or more of the bits failed and save the file
+                for bit in self.failed_bits:
+                    sum_bit += bit
+                if sum_bit > 0:
+                    global_detect = 1
+
+            # Add fail condition
+            file_row += str(global_detect) + ";"
+            # Added failed_bits to the row. e.g. [0,0,1,0,0,1]
+            file_row += str(self.failed_bits) + ";"
+
+            # Calculate the v_ranges
+            v_ranges = self.calc_v_ranges(csdparsed)
+
+            # Add ranges for time and voltages
+            file_row += str(self.firsttime) + ";"
+            file_row += str(self.endtime) + ";"
+            file_row += str(v_ranges) +"\n"
+
+        # File in wicht results will be saved
+        #csv_file = open("D:\\atest\\prueba.csv","w")
+        csv_file = open(file_name,"w")
+        csv_file.write("Fail Type;Vin;MOS Type;Node;Fail?;Failed bits;Time_start;Time_end;Voltage\n")
+        # Write the values
+        csv_file.write(file_row)
+        csv_file.close()
         dialog.progressBar.setValue(100)
-        time.sleep(1)
         dialog.progressBar.close()
+        self.listWidget.clear()
+
+    def cmp_out(self,parsed,bit_,tim_,n):
+#        l_l = dc.Decimal('0.0')
+#        l_h = dc.Decimal('1.0')
+#        h_l = dc.Decimal('2.3')
+#        h_h = dc.Decimal('3.3')
+        l_l = dc.Decimal('-0.001')
+        l_h = dc.Decimal('1.001')
+        h_l = dc.Decimal('2.299')
+        h_h = dc.Decimal('3.301')
+        _time_ = parsed["body"]["ntime"][tim_].split(" ")[0]
+        m_val = parsed["body"]["voltages"][bit_][tim_]
+
+        if self.gui_voltages[n] == dc.Decimal(1):
+            if not (m_val >= l_l and m_val <= l_h):
+                self.failed_bits[n] = 1
+                self.endtime[n] = _time_
+                if self.first_t[n]:
+                    self.firsttime[n] = _time_
+                    self.first_t[n] = False
+        else:
+            if not (m_val >= h_l and m_val <= h_h):
+                self.failed_bits[n] = 1
+                self.endtime[n] = _time_
+                if self.first_t[n]:
+                    self.firsttime[n] = _time_
+                    self.first_t[n] = False
+
+    def calc_v_ranges(self,parsed):
+        ranges = [0,0,0,0,0,0]
+        volts = self.gui_voltages
+
+        nodes = [parsed["body"]["voltages"]["'V(C_F_D_LSB)'"],
+                 parsed["body"]["voltages"]["'V(C_F_D_2SB)'"],
+                 parsed["body"]["voltages"]["'V(C_F_D_3SB)'"],
+                 parsed["body"]["voltages"]["'V(C_F_D_4SB)'"],
+                 parsed["body"]["voltages"]["'V(C_F_D_5SB)'"],
+                 parsed["body"]["voltages"]["'V(C_F_C32_MSB)'"]]
+
+        c = 0
+        for enode in nodes:
+            a = min(enode)
+            b = max(enode)
+            if volts[c] == 1:
+                if a < dc.Decimal(0):
+                    ranges[c] = abs(float(dc.Decimal('1.0') - a))
+                if a > dc.Decimal(1):
+                    ranges[c] = abs(float(dc.Decimal('1.0') - a))
+            else:
+                if b < dc.Decimal('2.3'):
+                    ranges[c] = abs(float(dc.Decimal('2.3') - b))
+                if b > dc.Decimal('3.3'):
+                    ranges[c] = abs(float(dc.Decimal('2.3') - b))
+            c += 1
+
+        return ranges
 
     def auto_adjust(self):
         self.treeView.resizeColumnToContents(0)

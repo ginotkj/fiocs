@@ -302,9 +302,9 @@ class ParserMain():
 
         if self._csdfile["header"]["NODES"].split(' ')[1] == \
            str(self._csdfile["body"]["nnodes"].__len__()):
-            print "NODES var match NODES readed!!"
+            print "Var nodes match nodes readed!!"
         else:
-            print "NODES var  NOT match NODES readed!!"
+            print "Var nodes NOT match nodes readed!!"
 
         _rawdata = map[map.find("#C"):]
         _rawdata = _rawdata.split("#C ")
