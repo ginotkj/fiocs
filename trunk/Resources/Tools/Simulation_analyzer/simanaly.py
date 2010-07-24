@@ -140,21 +140,12 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             self.add_one(singleindex)
 
     def remove_one(self):
-        self.statusbar.showMessage("This function is not implemented",1200)
-        print "INFO list: %s" % self.listWidget.selectedItems()
-        for it2rem in self.listWidget.selectedItems():
-            print "REMOVE: %s" % it2rem
-            self.listWidget.removeItemWidget(it2rem)
+            #self.listWidget.removeItemWidget(self.listWidget.selectedItems())
+            self.listWidget.takeItem(self.listWidget.currentRow())
             self.statusbar.showMessage("Removed!",1000)
 
     def remove_all(self):
-        dialog = InfoDialog(self)
-        dialog.show()
-        for valor in xrange(100):
-            dialog.progressBar.setValue(valor)
-        self.statusbar.showMessage("This function is not implemented",1200)
-        algo = self.treeView.currentIndex()
-        print "MONO: %s" % algo
+        self.listWidget.clear()
 
     def _get_voltage_param_from_gui(self):
         if self.digitalRadioButton.isChecked():
@@ -219,11 +210,6 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 
             item_ = self.dirmodel.filePath(model_)
 
-            print "#####################################################"
-            print "FILE: %s" % item_
-            print "MODEL: %s" % model_
-            print "#####################################################"
-
             # e.g. of expressions that field_dir has to match:
             # D:\test\exp\n\2sd
             fields = self.field_dir.match(str(item_))
@@ -236,8 +222,8 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 
             csdparsed = parser.run(str(item_))
 
-            #file_row = tipodefalla + vin + tipodetransistor + nodo +
-            #           falladetected + bitsfallados + duracion + difdetension
+            self.gui_voltages = self.autodetectlevels(csdparsed)
+
             file_row = file_row + failtyp + ";" + vin + ";" + mostyp + ";" + inode + ";"
 
             #This list contains the failing bits
@@ -247,11 +233,9 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             self.firsttime = [0,0,0,0,0,0]
             self.endtime = [0,0,0,0,0,0]
             global_detect = 0
-            global_started_t = False
             self.first_t = [True,True,True,True,True,True]
 
             time_points = csdparsed["body"]["ntime"].__len__()
-            #print "PUNTOS SIMULADOS: %s" % time_points
             # This loop iterates over all values
             for time_ in xrange(0,time_points-1):
                 sum_bit = 0
@@ -283,7 +267,6 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             file_row += str(v_ranges) +"\n"
 
         # File in wicht results will be saved
-        #csv_file = open("D:\\atest\\prueba.csv","w")
         csv_file = open(file_name,"w")
         csv_file.write("Fail Type;Vin;MOS Type;Node;Fail?;Failed bits;Time_start;Time_end;Voltage\n")
         # Write the values
@@ -294,10 +277,6 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.listWidget.clear()
 
     def cmp_out(self,parsed,bit_,tim_,n):
-#        l_l = dc.Decimal('0.0')
-#        l_h = dc.Decimal('1.0')
-#        h_l = dc.Decimal('2.3')
-#        h_h = dc.Decimal('3.3')
         l_l = dc.Decimal('-0.001')
         l_h = dc.Decimal('1.001')
         h_l = dc.Decimal('2.299')
@@ -305,7 +284,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         _time_ = parsed["body"]["ntime"][tim_].split(" ")[0]
         m_val = parsed["body"]["voltages"][bit_][tim_]
 
-        if self.gui_voltages[n] == dc.Decimal(1):
+        if self.gui_voltages[n] == dc.Decimal("1.0"):
             if not (m_val >= l_l and m_val <= l_h):
                 self.failed_bits[n] = 1
                 self.endtime[n] = _time_
@@ -319,6 +298,48 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
                 if self.first_t[n]:
                     self.firsttime[n] = _time_
                     self.first_t[n] = False
+
+    def autodetectlevels(self,parsed):
+        l_l = dc.Decimal('0.0')
+        l_h = dc.Decimal('1.0')
+        h_l = dc.Decimal('2.3')
+        h_h = dc.Decimal('3.3')
+
+        voltage = [-1,-1,-1,-1,-1,-1]
+
+        m_val = parsed["body"]["voltages"]["'V(C_F_D_LSB)'"][0]
+        if (m_val >= l_l and m_val <= l_h):
+            voltage[0] = dc.Decimal("1.0")
+        if (m_val >= h_l and m_val <= h_h):
+            voltage[0] = dc.Decimal("2.3")
+        m_val = parsed["body"]["voltages"]["'V(C_F_D_2SB)'"][1]
+        if (m_val >= l_l and m_val <= l_h):
+            voltage[1] = dc.Decimal("1.0")
+        if (m_val >= h_l and m_val <= h_h):
+            voltage[1] = dc.Decimal("2.3")
+        m_val = parsed["body"]["voltages"]["'V(C_F_D_3SB)'"][2]
+        if (m_val >= l_l and m_val <= l_h):
+            voltage[2] = dc.Decimal("1.0")
+        if (m_val >= h_l and m_val <= h_h):
+            voltage[2] = dc.Decimal("2.3")
+        m_val = parsed["body"]["voltages"]["'V(C_F_D_4SB)'"][3]
+        if (m_val >= l_l and m_val <= l_h):
+            voltage[3] = dc.Decimal("1.0")
+        if (m_val >= h_l and m_val <= h_h):
+            voltage[3] = dc.Decimal("2.3")
+        m_val = parsed["body"]["voltages"]["'V(C_F_D_5SB)'"][4]
+        if (m_val >= l_l and m_val <= l_h):
+            voltage[4] = dc.Decimal("1.0")
+        if (m_val >= h_l and m_val <= h_h):
+            voltage[4] = dc.Decimal("2.3")
+        m_val = parsed["body"]["voltages"]["'V(C_F_C32_MSB)'"][5]
+        if (m_val >= l_l and m_val <= l_h):
+            voltage[5] = dc.Decimal("1.0")
+        if (m_val >= h_l and m_val <= h_h):
+            voltage[5] = dc.Decimal("2.3")
+
+        return voltage
+
 
     def calc_v_ranges(self,parsed):
         ranges = [0,0,0,0,0,0]
