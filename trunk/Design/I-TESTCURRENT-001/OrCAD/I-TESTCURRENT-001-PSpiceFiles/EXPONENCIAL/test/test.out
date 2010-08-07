@@ -1,5 +1,5 @@
 
-**** 05/24/10 20:48:10 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 08/07/10 18:11:22 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "EXPONENCIAL-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\exponencial\
 
@@ -23,7 +23,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 10n 1.5n 
+.TRAN  0 6n 1.5n 
 .PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\EXPONENCIAL.net" 
 
@@ -31,15 +31,15 @@
 
 **** INCLUDING EXPONENCIAL.net ****
 * source I-TESTCURRENT-001
-I_I1         N17870 0 DC 0Adc AC 0Aac
-+EXP 0 2m 2n 80p 5.5n 1n
+I_EXPONENCIAL         N17870 0 DC 0Adc AC 0Aac
++EXP 0 4m 2n 30p 2.2n 500p
 R_R1         N17870 ITEST  1k TC=0,0 
 R_R2         0 ITEST  1k TC=0,0 
 
 **** RESUMING test.cir ****
 .END
 
-**** 05/24/10 20:48:10 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 08/07/10 18:11:22 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "EXPONENCIAL-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\exponencial\
 
@@ -69,7 +69,7 @@ R_R2         0 ITEST  1k TC=0,0
 
           JOB CONCLUDED
 
-**** 05/24/10 20:48:10 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 08/07/10 18:11:22 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "EXPONENCIAL-test"  [ D:\Documents\TESIS\fiocs\Design\I-TESTCURRENT-001\OrCAD\i-testcurrent-001-pspicefiles\exponencial\
 
@@ -81,5 +81,5 @@ R_R2         0 ITEST  1k TC=0,0
 
 
 
-  Total job time (using Solver 1)   =         .03
+  Total job time (using Solver 1)   =         .02
 

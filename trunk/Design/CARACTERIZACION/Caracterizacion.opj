@@ -58,7 +58,7 @@
          ".\caracterizacion-pspicefiles\nands\test.sim"
         (DisplayName "NANDS-test")
         (Type "PSpice Profile"))
-      (ActiveProfile ".\caracterizacion-pspicefiles\nand8\bias.sim")))
+      (ActiveProfile ".\caracterizacion-pspicefiles\nands\test.sim")))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
     (R
@@ -138,9 +138,10 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 75 1723 75 774")
+        (Placement "44 2 3 -1 -1 -8 -30 300 2023 300 959")
         (Scroll "0 0")
-        (Zoom "135"))
+        (Zoom "129")
+        (Occurrence "/"))
       (Path
          "D:\DOCUMENTS\TESIS\FIOCS\DESIGN\CARACTERIZACION\CARACTERIZACION.DSN")
       (Schematic "NANDS")

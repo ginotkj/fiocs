@@ -260,9 +260,9 @@
                 ("MAX_TEMP"	"200.0")
             )
         )
-        ("V1"
+        ("VDD"
             ("device_name"	"VDC")
-            ("pspice_path"	"V_V1")
+            ("pspice_path"	"V_VDD")
             ("level"	"0")
             ("model_params"
                 ("DC"

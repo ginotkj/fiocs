@@ -1,5 +1,5 @@
-
-**** 04/17/10 18:28:15 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+
+**** 08/06/10 18:53:19 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "NANDS-test"  [ D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion-pspicefiles\nands\test.sim ] 
 
@@ -37,189 +37,189 @@ V_V1         ENTRADA 0
 +PULSE 0 3.3 0 100n 100n 50n 250n
 R_R7         NAND8 N00173  1Meg  
 M_U1_M16         NAND8 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.67u  
++ W=.68u         
 M_U1_M5         NAND8 ENTRADA N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.67u  
++ W=.68u         
 M_U1_M11         NAND8 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.67u  
++ W=.68u         
 M_U1_M9         NAND8 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.67u  
++ W=.68u         
 M_U1_M1         NAND8 N00173 U1_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=2.55u         
 M_U1_M6         U1_ND3 N00173 U1_ND4 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=2.55u         
 M_U1_M7         U1_ND4 N00173 U1_ND5 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=2.55u         
 M_U1_M12         NAND8 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.67u  
++ W=.68u         
 M_U1_M2         U1_ND2 N00173 U1_ND3 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=2.55u         
 M_U1_M13         U1_ND6 N00173 U1_ND7 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=2.55u         
 M_U1_M10         U1_ND5 N00173 U1_ND6 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=2.55u         
 M_U1_M3         NAND8 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.67u  
++ W=.68u         
 M_U1_M14         U1_ND7 N00173 U1_ND8 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=2.55u         
 M_U1_M8         NAND8 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.67u  
++ W=.68u         
 M_U1_M4         NAND8 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.67u  
++ W=.68u         
 M_U1_M15         U1_ND8 ENTRADA 0 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=2.55u         
 M_U5_M7         NAND4 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.33u  
++ W=.25u         
 M_U5_M8         NAND4 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.33u  
++ W=.25u         
 M_U5_M12         NAND4 ENTRADA N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.33u  
++ W=.25u         
 M_U5_M9         NAND4 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.33u  
++ W=.25u         
 M_U5_M1         NAND4 N00173 U5_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=.47u         
 M_U5_M10         U5_ND3 N00173 U5_ND4 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=.47u         
 M_U5_M3         U5_ND2 N00173 U5_ND3 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=.47u         
 M_U5_M11         U5_ND4 ENTRADA 0 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=.47u         
 R_R2         NAND2 N00173  1Meg  
 M_U2_M5         NAND2 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.186u  
++ W=.25u         
 M_U2_M6         NAND2 N00173 U2_ND2 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.2u  
++ W=.232u         
 M_U2_M2         U2_ND2 ENTRADA 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.2u  
++ W=.232u         
 M_U2_M4         NAND2 ENTRADA N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.186u  
++ W=.25u         
 R_R6         NAND7 N00173  1Meg  
 M_U3_M5         NEG ENTRADA N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.93u         
 M_U3_M6         NEG ENTRADA 0 0 CMOSN  
-+ L=.18u  
-+ W=.18u         
++ L=.43u  
++ W=.43u         
 M_U7_M1         NAND7 N00173 U7_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=1.92u         
 M_U7_M14         U7_ND7 ENTRADA 0 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=1.92u         
 M_U7_M8         NAND7 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.58u  
++ W=.58u         
 M_U7_M2         U7_ND2 N00173 U7_ND3 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=1.92u         
 M_U7_M3         NAND7 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.58u  
++ W=.58u         
 M_U7_M4         NAND7 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.58u  
++ W=.58u         
 M_U7_M11         NAND7 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.58u  
++ W=.58u         
 M_U7_M7         U7_ND4 N00173 U7_ND5 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=1.92u         
 M_U7_M9         NAND7 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.58u  
++ W=.58u         
 M_U7_M6         U7_ND3 N00173 U7_ND4 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=1.92u         
 M_U7_M12         NAND7 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.58u  
++ W=.58u         
 M_U7_M5         NAND7 ENTRADA N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.58u  
++ W=.58u         
 M_U7_M10         U7_ND5 N00173 U7_ND6 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=1.92u         
 M_U7_M13         U7_ND6 N00173 U7_ND7 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=1.92u         
 V_VDD         N00173 0 3.3
 M_U6_M4         NAND5 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.41u  
++ W=.44u         
 M_U6_M9         NAND5 ENTRADA N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.41u  
++ W=.44u         
 M_U6_M7         U6_ND4 N00173 U6_ND5 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=1.042u         
 M_U6_M10         U6_ND5 ENTRADA 0 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=1.042u         
 M_U6_M5         NAND5 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.41u  
++ W=.44u         
 M_U6_M8         NAND5 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.41u  
++ W=.44u         
 M_U6_M1         NAND5 N00173 U6_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=1.042u         
 M_U6_M6         U6_ND3 N00173 U6_ND4 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=1.042u         
 M_U6_M2         U6_ND2 N00173 U6_ND3 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=1.042u         
 M_U6_M3         NAND5 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.41u  
++ W=.44u         
 R_R3         NAND3 N00173  1Meg  
 M_U4_M2         U4_ND2 N00173 U4_ND3 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=.37u         
 M_U4_M3         NAND3 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.26u         
 M_U4_M6         U4_ND3 ENTRADA 0 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=.37u         
 M_U4_M4         NAND3 N00173 N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.26u         
 M_U4_M1         NAND3 N00173 U4_ND2 0 CMOSN  
 + L=.18u  
-+ W=.18u         
++ W=.37u         
 M_U4_M5         NAND3 ENTRADA N00173 N00173 CMOSP  
-+ L=.18u  
-+ W=.2u         
++ L=.25u  
++ W=.26u         
 R_R5         NAND5 N00173  1Meg  
 
 **** RESUMING test.cir ****
@@ -228,10 +228,46 @@ R_R5         NAND5 N00173  1Meg
 Mosfet M_U1_M16, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_U1_M16, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_U1_M16, model CMOSP: Ps = 0 is less than W
+Mosfet M_U5_M7, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U5_M7, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U5_M7, model CMOSP: Ps = 0 is less than W
+Mosfet M_U2_M5, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U2_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U2_M5, model CMOSP: Ps = 0 is less than W
+Mosfet M_U3_M5, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U3_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U3_M5, model CMOSP: Ps = 0 is less than W
+Mosfet M_U7_M8, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U7_M8, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U7_M8, model CMOSP: Ps = 0 is less than W
+Mosfet M_U6_M4, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U6_M4, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U6_M4, model CMOSP: Ps = 0 is less than W
+Mosfet M_U4_M3, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U4_M3, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U4_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_U1_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_U1_M1, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
-**** 04/17/10 18:28:15 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
+Mosfet M_U5_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U5_M1, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U5_M1, model CMOSN: Ps = 0 is less than W
+Mosfet M_U2_M6, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U2_M6, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U2_M6, model CMOSN: Ps = 0 is less than W
+Mosfet M_U3_M6, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U3_M6, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U3_M6, model CMOSN: Ps = 0 is less than W
+Mosfet M_U7_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U7_M1, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U7_M1, model CMOSN: Ps = 0 is less than W
+Mosfet M_U6_M7, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U6_M7, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U6_M7, model CMOSN: Ps = 0 is less than W
+Mosfet M_U4_M2, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U4_M2, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U4_M2, model CMOSN: Ps = 0 is less than W
+**** 08/06/10 18:53:19 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "NANDS-test"  [ D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion-pspicefiles\nands\test.sim ] 
 
@@ -348,10 +384,46 @@ WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
 Mosfet M_U1_M16, model CMOSP: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_U1_M16, model CMOSP: Pd = 0 is less than W
 WARNING -- Mosfet M_U1_M16, model CMOSP: Ps = 0 is less than W
+Mosfet M_U5_M7, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U5_M7, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U5_M7, model CMOSP: Ps = 0 is less than W
+Mosfet M_U2_M5, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U2_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U2_M5, model CMOSP: Ps = 0 is less than W
+Mosfet M_U3_M5, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U3_M5, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U3_M5, model CMOSP: Ps = 0 is less than W
+Mosfet M_U7_M8, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U7_M8, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U7_M8, model CMOSP: Ps = 0 is less than W
+Mosfet M_U6_M4, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U6_M4, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U6_M4, model CMOSP: Ps = 0 is less than W
+Mosfet M_U4_M3, model CMOSP: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U4_M3, model CMOSP: Pd = 0 is less than W
+WARNING -- Mosfet M_U4_M3, model CMOSP: Ps = 0 is less than W
 Mosfet M_U1_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
 WARNING -- Mosfet M_U1_M1, model CMOSN: Pd = 0 is less than W
-WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
-**** 04/17/10 18:28:15 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
+Mosfet M_U5_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U5_M1, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U5_M1, model CMOSN: Ps = 0 is less than W
+Mosfet M_U2_M6, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U2_M6, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U2_M6, model CMOSN: Ps = 0 is less than W
+Mosfet M_U3_M6, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U3_M6, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U3_M6, model CMOSN: Ps = 0 is less than W
+Mosfet M_U7_M1, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U7_M1, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U7_M1, model CMOSN: Ps = 0 is less than W
+Mosfet M_U6_M7, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U6_M7, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U6_M7, model CMOSN: Ps = 0 is less than W
+Mosfet M_U4_M2, model CMOSN: Using BSIM VERSION 3.1 or lower
+WARNING -- Mosfet M_U4_M2, model CMOSN: Pd = 0 is less than W
+WARNING -- Mosfet M_U4_M2, model CMOSN: Ps = 0 is less than W
+**** 08/06/10 18:53:19 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "NANDS-test"  [ D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion-pspicefiles\nands\test.sim ] 
 
@@ -370,17 +442,17 @@ WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
 
 (NAND5)    3.3000  (NAND7)    3.3000  (NAND8)    3.3000  (N00173)    3.3000     
 
-(U1_ND2)    2.7361 (U1_ND3)    2.6961 (U1_ND4)    2.6773 (U1_ND5)    2.6654     
+(U1_ND2)    2.7990 (U1_ND3)    2.7640 (U1_ND4)    2.7480 (U1_ND5)    2.7375     
 
-(U1_ND6)    2.6567 (U1_ND7)    2.6499 (U1_ND8)    2.6444 (U2_ND2)    2.7365     
+(U1_ND6)    2.7299 (U1_ND7)    2.7238 (U1_ND8)    2.7188 (U2_ND2)    2.7916     
 
-(U4_ND2)    2.7367 (U4_ND3)    2.6967 (U5_ND2)    2.7367 (U5_ND3)    2.6967     
+(U4_ND2)    2.7854 (U4_ND3)    2.7482 (U5_ND2)    2.7918 (U5_ND3)    2.7553     
 
-(U5_ND4)    2.6779 (U6_ND2)    2.7366 (U6_ND3)    2.6966 (U6_ND4)    2.6778     
+(U5_ND4)    2.7382 (U6_ND2)    2.7990 (U6_ND3)    2.7637 (U6_ND4)    2.7473     
 
-(U6_ND5)    2.6659 (U7_ND2)    2.7363 (U7_ND3)    2.6963 (U7_ND4)    2.6775     
+(U6_ND5)    2.7368 (U7_ND2)    2.7991 (U7_ND3)    2.7641 (U7_ND4)    2.7479     
 
-(U7_ND5)    2.6656 (U7_ND6)    2.6569 (U7_ND7)    2.6501 (ENTRADA)    0.0000    
+(U7_ND5)    2.7375 (U7_ND6)    2.7298 (U7_ND7)    2.7238 (ENTRADA)    0.0000    
 
 
 
@@ -389,15 +461,15 @@ WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
     NAME         CURRENT
 
     V_V1         0.000E+00
-    V_VDD       -4.530E-09
+    V_VDD       -1.726E-09
 
-    TOTAL POWER DISSIPATION   1.49E-08  WATTS
+    TOTAL POWER DISSIPATION   5.70E-09  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 04/17/10 18:28:15 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
+**** 08/06/10 18:53:19 ******* PSpice 16.0.0 (July 2006) ****** ID# 0 ********
 
  ** Profile: "NANDS-test"  [ D:\Documents\TESIS\fiocs\Design\CARACTERIZACION\caracterizacion-pspicefiles\nands\test.sim ] 
 
@@ -409,5 +481,5 @@ WARNING -- Mosfet M_U1_M1, model CMOSN: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =         .19
+  Total job time (using Solver 1)   =         .31
 

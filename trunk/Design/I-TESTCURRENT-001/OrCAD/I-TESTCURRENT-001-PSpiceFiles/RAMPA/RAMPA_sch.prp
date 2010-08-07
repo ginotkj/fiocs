@@ -56,9 +56,9 @@
         )
     )
     ("instances"
-        ("I2"
+        ("TRAPEZOIDAL"
             ("device_name"	"IPULSE")
-            ("pspice_path"	"I_I2")
+            ("pspice_path"	"I_TRAPEZOIDAL")
             ("level"	"0")
             ("model_params"
                 ("DC"
