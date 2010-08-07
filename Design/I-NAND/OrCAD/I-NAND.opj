@@ -61,20 +61,24 @@
     (Folder "Stimulus Files")
     (Folder "Include Files")
     (Folder "Simulation Profiles"
-      (ActiveProfile ".\i-nand-pspicefiles\nand-prueba\dc sweep.sim")
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\i-nand-pspicefiles\nand-prueba\dc sweep.sim"
         (DisplayName "NAND-PRUEBA-DC Sweep")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\i-nand-pspicefiles\nand-prueba\transient.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\i-nand-pspicefiles\nand-prueba\transient.sim"
+        (DisplayName "NAND-PRUEBA-Transient")
         (Type "PSpice Profile"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
-    (VDC
-      (FullPartName "VDC.Normal")
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
       (LibraryName
          "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
-    (VPULSE
-      (FullPartName "VPULSE.Normal")
+    (VDC
+      (FullPartName "VDC.Normal")
       (LibraryName
          "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
@@ -155,27 +159,17 @@
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn")
       (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-2")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-3")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-4")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-5")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-7")
-      (Path "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-8")
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-PRUEBA")
       (Path "Outputs")
       (Path "PSpice Resources")
       (Path "PSpice Resources" "Model Libraries")
       (Path "PSpice Resources" "Simulation Profiles")
       (Select "Design Resources"
-         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-4"
-         "NAND-4"))
+         "D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\i-nand.dsn" "NAND-PRUEBA"
+         "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 19 837 -11 801"))
+        (Placement "44 0 1 160 953 -8 -30 285 1103 146 958"))
       (Tab 0))))

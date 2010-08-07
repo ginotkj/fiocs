@@ -57,6 +57,11 @@
            "C:\OrCAD\OrCAD_16.0\tools\capture\library\pspice\BREAKOUT.OLB"))))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
     (MbreakN
       (FullPartName "MbreakN.Normal")
       (LibraryName
@@ -157,7 +162,7 @@
          "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn")
       (Path "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
-         "Design Cache")
+         "TEST")
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "PSpice Resources")
@@ -165,7 +170,7 @@
       (Path "PSpice Resources" "Simulation Profiles")
       (Select "Design Resources"
          "D:\Documents\TESIS\fiocs\Design\I-DECODER-001\OrCAD\I-DECODER-6BITS\i-decoder-6bits.dsn"
-         "Design Cache" "S-DECODER_1"))
+         "TEST" "TEST"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")

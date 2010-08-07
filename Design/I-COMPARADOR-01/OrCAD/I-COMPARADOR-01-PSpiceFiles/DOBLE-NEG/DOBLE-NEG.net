@@ -1,10 +1,8 @@
 * source I-COMPARADOR-01
-V_VIN         N186518 N652820 0
+V_VIN         VINNEG N652820 0
 M_M1         NDNEG VINNEG NDBIAS 0 CMOSN  
 + L=10u  
 + W=265u         
-V_V1         VINNEG N186518  
-+PULSE -10m 10m 2u 10p 10p 10u 
 M_M2         NDPOS VINPOS NDBIAS 0 CMOSN  
 + L=10u  
 + W=265u         
@@ -16,7 +14,7 @@ V_VBIAS         VBIAS 0 1
 M_M12         NDOUT NDPOS N64870 N64870 CMOSP  
 + L=10u  
 + W=1120u         
-V_VQ2         N1312720 0 1.315
+V_VQ2         N1312720 0 1.005
 M_M4         NDPOS NDNEG N64870 N64870 CMOSP  
 + L=10u  
 + W=200u         
@@ -26,5 +24,5 @@ M_M13         NDOUT VBIAS 0 0 CMOSN
 M_M5         NDBIAS VBIAS 0 0 CMOSN  
 + L=12.5u  
 + W=65u         
-V_VQ1         N652820 0 1.315
+V_VQ1         N652820 0 1.005
 V_VREF         VINPOS N1312720 0
