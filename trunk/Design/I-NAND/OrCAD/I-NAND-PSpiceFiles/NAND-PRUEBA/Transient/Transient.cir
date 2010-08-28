@@ -1,0 +1,19 @@
+** Profile: "NAND-PRUEBA-Transient"  [ D:\Documents\TESIS\fiocs\Design\I-NAND\OrCAD\I-NAND-PSpiceFiles\NAND-PRUEBA\Transient.sim ] 
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../i-nand-pspicefiles/i-nand.lib" 
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_16.0\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2.5n 1.95n 1p 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\NAND-PRUEBA.net" 
+
+
+.END
