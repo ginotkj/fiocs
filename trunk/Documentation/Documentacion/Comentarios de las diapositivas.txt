@@ -23,6 +23,10 @@ Entramos en la etapa de diseño, en primer lugar vamos a comentar las plataformas
 =============================================================================================
 Diapositiva 22
 ------------------------------------------
+Inyeccion automatica, la realizacion de la campaña de inyección automatica tuvo como objetivo determinar la sensibilidad del dispositivo a los ASETs. Para esto se requeria poder simular y analizar, de una manera rapida, todos los puntos factibles de fallas.
+Para realizar esta campaña fue necesario el desarrollo de una aplicacion que permitiera interactuar entre las diferentes aplicaciones que utlizamos. Esta campaña tiene varias ventajas, entre ellas, disminucion del tiempo por cada simulacion, y disminucion del tiempo total de toda la campaña. Cobertura completa de los nodos sensibles y pre-analisis de los resultados (condicion de falla, amplitudes de tension y duracion de fallas).
+Por otro lado, la configuracion de la aplicacion es una de sus desventajas y el control sobre los parametros es bastante acotado.
+En esta campaña se vieron involucrados los 63 comparadores, se inyecto para cada uno de los 64 niveles de tension definidos. Se inyectaron ambas fallas modeladas, y para mejorar los tiempos de simulacion y analisis se desarrollo un ambiente virtualizado para correr la aplicacion desarrollada.
 
 =============================================================================================
 Diapositiva 23 - 26
