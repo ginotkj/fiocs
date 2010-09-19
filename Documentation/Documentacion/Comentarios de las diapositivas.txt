@@ -29,5 +29,26 @@ Por otro lado, la configuracion de la aplicacion es una de sus desventajas y el 
 En esta campaña se vieron involucrados los 63 comparadores, se inyecto para cada uno de los 64 niveles de tension definidos. Se inyectaron ambas fallas modeladas, y para mejorar los tiempos de simulacion y analisis se desarrollo un ambiente virtualizado para correr la aplicacion desarrollada.
 
 =============================================================================================
-Diapositiva 23 - 26
+Diapositiva 23
 ------------------------------------------
+La campaña de inyección automática constó de 4 etapas. Codificación, Inyección, Simulación, y pre-análisis.
+A su vez, cada una de estas tuvo sub-etapas. Durante la codificación tuvimos que determinar el lenguaje de programación a utilizar, diseñar los algoritmos necesarios e implementar la aplicación. En la inyección se tuvo que determinar los nodos del conversor, (si bien son todos los drenadores de los comparadores a la hora de interpretar el circuito hay que identificar los nodos por sus nombres), y generar las fallas en todoso ellos. En la etapa de simulación, se configuro el ambiente virtualizado, se realizaron las simulaciones propiamente dichas, y se almacenaron los datos en la base de datos. Por ultimo en la etapa de pre-análisis, se determinaron los nodos erroneos, las variaciones de tension y duracion de los errores.
+
+
+=============================================================================================
+Diapositiva 24
+------------------------------------------
+En la primera de ellas, codificación, se desarrollo la aplicación utilizada para generar las inyecconies, las simulaciones, y el pre-analisis. En esta etapa, se analizaron diversos lenguajes de programación a utilizar, se implementaron los algoritmos capaces de entender los archivos descriptores de circuitos, los archivos con los resultados de las simulaciones, y los archivos de tablas de excel.
+=============================================================================================
+Diapositiva 25
+------------------------------------------
+En la etapa de inyección, se determinaron los nodos a inyectar, se generaron los archivos necesarios para la simulacion y se almacenaron los datos en la base de datos. 
+=============================================================================================
+Diapositiva 26
+------------------------------------------
+Luego vino la etapa de simulación, se configuraó el entorno de virtualización, y se configuró la aplicación para ejecutarse en paralelo. En esta etapa, 6 instancias de PSPICE corrián simultaneamente, variando las tension de entrada, y los tipos de fallas para cada uno de los nodos inyectados. 
+
+=============================================================================================
+Diapositiva 27
+------------------------------------------
+Por ultimo, la etapa del pre-análisis, en esta etapa, la aplicación desarrollada descarga los datos de las 56.000 simulaciones, determina la condición de salida, y para las simulaciones con error, calcula la variación de tensión de cada uno de los bits, y la duración del error. Con toda esta información la aplicación genera los archivos para ser cargados en excel y listos para ser analizados.
